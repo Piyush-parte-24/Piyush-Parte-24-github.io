@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discoveries — Pɪʏᴜꜱʜ Pᴀʀᴛᴇ</title>
+<meta name="description" content="Unexplored territory — future projects, experiments and discoveries in progress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-inner" data-root="">
+
+<div class="top-controls">
+  <button id="ambienceToggle" class="ctrl-btn" aria-pressed="false" aria-label="Toggle ambient sound">
+    <span class="ctrl-icon" aria-hidden="true">🔈</span><span class="ctrl-label">AMBIENCE OFF</span>
+  </button>
+</div>
+
+<header class="site-nav solid" id="siteNav">
+  <a href="index.html" class="nav-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
+    <a href="index.html">Home</a><a href="archive.html">Archive</a>
+    <a href="discoveries.html" class="active">Discoveries</a><a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="inner-hero" aria-label="Discoveries">
+  <div class="inner-hero-scene" aria-hidden="true">
+    <div class="layer mountains sm"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice"><path d="M0,300 L0,170 L240,80 L460,190 L680,90 L900,200 L1120,110 L1340,200 L1440,150 L1440,300 Z" fill="#182319"/></svg></div>
+    <div class="ptero-flock" data-depth="0.1"><span class="ptero"></span><span class="ptero"></span></div>
+    <div class="mist mist-1"></div><div class="vignette"></div>
+  </div>
+  <div class="inner-hero-content">
+    <span class="meta-label">UNEXPLORED TERRITORY</span>
+    <h1 class="inner-title">Discoveries</h1>
+    <p class="inner-sub">Sites surveyed but not yet fully excavated. Future projects, experiments and ideas taking shape beneath the surface.</p>
+  </div>
+</section>
+
+<section class="archive-body" aria-label="Discovery records">
+  <div class="wrap"><div class="archive-list" id="discoveryList"></div></div>
+</section>
+
+<section class="finale short" aria-label="End">
+  <div class="finale-content"><p class="finale-sub fade-up">SURVEY ONGOING · CHECK BACK FOR NEW GROUND</p></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</span>
+    <span class="footer-note" data-site="footerNote">The Prehistoric Archive · Field Records</span>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="about.html">About</a></nav>
+  </div>
+</footer>
+
+<div class="page-transition" id="pageTransition" aria-hidden="true"><div class="pt-fog"></div><div class="pt-print"></div></div>
+<audio id="ambienceAudio" loop preload="none"><source src="assets/ambience.mp3" type="audio/mpeg"></audio>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

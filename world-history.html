@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌍 World History — Complete Timeline</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap');
+
+  :root {
+    --bg: #050508;
+    --bg2: #0a0a12;
+    --bg3: #0f0f1a;
+    --card: #111120;
+    --border: #1e1e35;
+    --gold: #ffd700;
+    --gold2: #ffb300;
+    --red: #ff4444;
+    --orange: #ff8c00;
+    --cyan: #00e5ff;
+    --purple: #9c27b0;
+    --purple2: #ce93d8;
+    --green: #00e676;
+    --green2: #69f0ae;
+    --blue: #448aff;
+    --blue2: #82b1ff;
+    --pink: #ff4081;
+    --yellow: #ffff00;
+    --text: #e8e8f0;
+    --text2: #aaa8c0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #050508 0%, #0d0d20 30%, #0a0520 60%, #050508 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(100,50,200,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 52px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffd700, #ff8c00, #ff4081, #9c27b0, #448aff, #00e5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+  .hero-sub {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    color: var(--text2);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,215,0,0.1);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin: 4px;
+  }
+  .stars {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    pointer-events: none;
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+  }
+  @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:1} }
+
+  /* NAV */
+  .nav {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .nav a:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+
+  /* MAIN */
+  .container { max-width: 1300px; margin: 0 auto; padding: 40px 30px; }
+
+  /* SECTION HEADERS */
+  .era-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 60px 0 30px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    border-left: 6px solid;
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 0%, transparent 100%);
+  }
+  .era-icon { font-size: 48px; }
+  .era-title { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700; }
+  .era-dates { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; margin-top: 4px; }
+
+  .era-renaissance { border-color: var(--gold); }
+  .era-renaissance .era-title { color: var(--gold); }
+  .era-reformation { border-color: var(--orange); }
+  .era-reformation .era-title { color: var(--orange); }
+  .era-american { border-color: var(--blue); }
+  .era-american .era-title { color: var(--blue); }
+  .era-french { border-color: var(--red); }
+  .era-french .era-title { color: var(--red); }
+  .era-industrial { border-color: var(--cyan); }
+  .era-industrial .era-title { color: var(--cyan); }
+  .era-imperialism { border-color: var(--purple2); }
+  .era-imperialism .era-title { color: var(--purple2); }
+  .era-unification { border-color: #aaa; }
+  .era-unification .era-title { color: #ccc; }
+  .era-ww1 { border-color: var(--orange); }
+  .era-ww1 .era-title { color: var(--orange); }
+  .era-league { border-color: var(--green); }
+  .era-league .era-title { color: var(--green); }
+  .era-depression { border-color: #888; }
+  .era-depression .era-title { color: #bbb; }
+  .era-nazism { border-color: var(--red); }
+  .era-nazism .era-title { color: var(--red); }
+  .era-ww2 { border-color: var(--pink); }
+  .era-ww2 .era-title { color: var(--pink); }
+  .era-coldwar { border-color: var(--cyan); }
+  .era-coldwar .era-title { color: var(--cyan); }
+  .era-un { border-color: var(--blue2); }
+  .era-un .era-title { color: var(--blue2); }
+  .era-mideast { border-color: var(--gold2); }
+  .era-mideast .era-title { color: var(--gold2); }
+  .era-eu { border-color: var(--blue); }
+  .era-eu .era-title { color: var(--blue); }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding: 20px 0; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold), var(--purple), var(--cyan), var(--green));
+  }
+  .tl-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .tl-dot {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 2px solid;
+    background: var(--bg);
+    z-index: 1;
+    flex-shrink: 0;
+  }
+  .tl-content {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    flex: 1;
+    transition: transform 0.2s;
+  }
+  .tl-content:hover { transform: translateX(4px); }
+  .tl-date { font-family: 'Share Tech Mono', monospace; font-size: 12px; color: var(--gold); margin-bottom: 4px; letter-spacing: 2px; }
+  .tl-text { color: var(--text); font-size: 14px; }
+
+  /* TABLES */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .data-table th {
+    padding: 12px 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .data-table td {
+    padding: 10px 16px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    vertical-align: top;
+  }
+  .data-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+  /* CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .card-title { font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+  .card-body { font-size: 13px; color: var(--text2); line-height: 1.7; }
+
+  .card-gold::before { background: linear-gradient(90deg, var(--gold), var(--orange)); }
+  .card-gold .card-title { color: var(--gold); }
+  .card-blue::before { background: linear-gradient(90deg, var(--blue), var(--cyan)); }
+  .card-blue .card-title { color: var(--blue); }
+  .card-red::before { background: linear-gradient(90deg, var(--red), var(--pink)); }
+  .card-red .card-title { color: var(--red); }
+  .card-green::before { background: linear-gradient(90deg, var(--green), var(--cyan)); }
+  .card-green .card-title { color: var(--green); }
+  .card-purple::before { background: linear-gradient(90deg, var(--purple), var(--pink)); }
+  .card-purple .card-title { color: var(--purple2); }
+  .card-cyan::before { background: linear-gradient(90deg, var(--cyan), var(--blue)); }
+  .card-cyan .card-title { color: var(--cyan); }
+
+  /* INFO BOXES */
+  .info-box {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .info-gold { background: rgba(255,215,0,0.06); border-color: var(--gold); color: var(--gold); }
+  .info-red { background: rgba(255,68,68,0.06); border-color: var(--red); color: #ff8888; }
+  .info-green { background: rgba(0,230,118,0.06); border-color: var(--green); color: var(--green2); }
+  .info-cyan { background: rgba(0,229,255,0.06); border-color: var(--cyan); color: var(--cyan); }
+  .info-purple { background: rgba(156,39,176,0.08); border-color: var(--purple); color: var(--purple2); }
+  .info-orange { background: rgba(255,140,0,0.08); border-color: var(--orange); color: var(--orange); }
+
+  /* SECTION DIVIDER */
+  .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text2);
+    margin: 24px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* FLOWCHART SVG */
+  .flowchart-wrap {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+
+  /* BADGE ROW */
+  .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+  .badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid;
+  }
+
+  /* COMPARISON TABLE */
+  .compare-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  .compare-col { padding: 16px; }
+  .compare-col:first-child { border-right: 1px solid var(--border); }
+  .compare-col-title {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-item {
+    font-size: 13px;
+    padding: 5px 0;
+    color: var(--text2);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* STAT BOXES */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-num { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 900; }
+  .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text2); margin-top: 4px; }
+
+  /* QUOTE */
+  .quote-block {
+    border-left: 4px solid var(--gold);
+    background: rgba(255,215,0,0.05);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+  }
+
+  /* PERIOD DIVIDER */
+  .period-divider {
+    margin: 50px 0 30px;
+    text-align: center;
+    position: relative;
+  }
+  .period-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .period-divider span {
+    position: relative;
+    background: var(--bg);
+    padding: 0 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--bg2);
+    border-top: 2px solid var(--gold);
+    padding: 40px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+  }
+
+  /* MIND MAP TEXT */
+  .mm-section {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+
+  /* TAG CLOUD */
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  .tag {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg2); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+  /* UTILS */
+  .text-gold { color: var(--gold); }
+  .text-red { color: var(--red); }
+  .text-cyan { color: var(--cyan); }
+  .text-green { color: var(--green); }
+  .text-blue { color: var(--blue); }
+  .text-purple { color: var(--purple2); }
+  .text-orange { color: var(--orange); }
+  .text-pink { color: var(--pink); }
+  .bold { font-weight: 700; }
+  .mt-20 { margin-top: 20px; }
+
+  th.gold-th { background: rgba(255,215,0,0.12); color: var(--gold); }
+  th.red-th { background: rgba(255,68,68,0.12); color: var(--red); }
+  th.blue-th { background: rgba(68,138,255,0.12); color: var(--blue); }
+  th.cyan-th { background: rgba(0,229,255,0.12); color: var(--cyan); }
+  th.green-th { background: rgba(0,230,118,0.12); color: var(--green); }
+  th.purple-th { background: rgba(156,39,176,0.12); color: var(--purple2); }
+  th.orange-th { background: rgba(255,140,0,0.12); color: var(--orange); }
+  th.pink-th { background: rgba(255,64,129,0.12); color: var(--pink); }
+
+  /* ===== NEW ENRICHMENTS CSS ===== */
+  .fact-box {
+    background: linear-gradient(135deg, rgba(255,215,0,0.07) 0%, rgba(255,140,0,0.05) 100%);
+    border: 1px solid rgba(255,215,0,0.3);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    position: relative;
+  }
+  .fact-box::before {
+    content: '💡 DID YOU KNOW?';
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .fact-box p { font-size: 13px; color: var(--text); }
+
+  .quote-box {
+    background: rgba(255,255,255,0.02);
+    border-left: 4px solid var(--cyan);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-style: italic;
+  }
+  .quote-box .quote-text { font-size: 15px; color: var(--cyan); margin-bottom: 6px; }
+  .quote-box .quote-attr { font-size: 12px; color: var(--text2); letter-spacing: 1px; }
+
+  .verdict-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .verdict-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    border-top: 3px solid;
+  }
+  .verdict-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; font-weight: 700; }
+  .verdict-text { font-size: 13px; color: var(--text2); }
+
+  .impact-bar { margin: 8px 0; }
+  .impact-bar-label { font-size: 12px; color: var(--text2); margin-bottom: 3px; display: flex; justify-content: space-between; }
+  .impact-bar-track { height: 8px; background: var(--bg3); border-radius: 4px; overflow: hidden; }
+  .impact-bar-fill { height: 100%; border-radius: 4px; transition: width 1.5s ease; }
+
+  .new-section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff4081, #9c27b0);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+
+  .flowchart-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+  }
+  .flowchart-step-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    flex: 1;
+    position: relative;
+  }
+  .flowchart-arrow { color: var(--gold); font-size: 20px; flex-shrink: 0; }
+
+  .war-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .war-stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+  .war-stat-num { font-family: 'Share Tech Mono', monospace; font-size: 22px; font-weight: bold; margin-bottom: 4px; }
+  .war-stat-label { font-size: 11px; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; }
+
+  .persona-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    gap: 14px;
+    margin: 10px 0;
+  }
+  .persona-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    border: 2px solid;
+  }
+  .persona-name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .persona-role { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; opacity: 0.7; }
+  .persona-desc { font-size: 13px; color: var(--text2); }
+
+  .phase-steps {
+    display: flex;
+    gap: 0;
+    margin: 16px 0;
+    overflow-x: auto;
+  }
+  .phase-step {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 12px 8px;
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  .phase-step:not(:first-child) { border-left: none; }
+  .phase-step:first-child { border-radius: 10px 0 0 10px; }
+  .phase-step:last-child { border-radius: 0 10px 10px 0; }
+  .phase-step-num { font-family: 'Share Tech Mono', monospace; font-size: 20px; font-weight: bold; }
+  .phase-step-text { font-size: 11px; color: var(--text2); margin-top: 4px; }
+
+  .side-by-side { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  @media (max-width: 700px) { .side-by-side { grid-template-columns: 1fr; } }
+
+  .enriched-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin: 20px 0 8px;
+    font-weight: 700;
+  }
+
+  .era-napoleon { border-color: #e6b800; }
+  .era-napoleon .era-title { color: #e6b800; }
+  .era-russian { border-color: #c62828; }
+  .era-russian .era-title { color: #ef9a9a; }
+  .era-korea { border-color: #00acc1; }
+  .era-korea .era-title { color: #80deea; }
+  .era-cuba { border-color: #f57f17; }
+  .era-cuba .era-title { color: #ffcc02; }
+  .era-vietnam { border-color: #558b2f; }
+  .era-vietnam .era-title { color: #aed581; }
+  .era-space { border-color: #4527a0; }
+  .era-space .era-title { color: #b39ddb; }
+  .era-soviet-fall { border-color: #bf360c; }
+  .era-soviet-fall .era-title { color: #ff8a65; }
+
+  .counter { font-family: 'Share Tech Mono', monospace; }
+
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+  .gradient-text-warm {
+    background: linear-gradient(135deg, #ffd700, #ff8c00, #ff4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-text-cool {
+    background: linear-gradient(135deg, #00e5ff, #448aff, #9c27b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .neon-border-gold { box-shadow: 0 0 10px rgba(255,215,0,0.3), inset 0 0 10px rgba(255,215,0,0.05); }
+  .neon-border-cyan { box-shadow: 0 0 10px rgba(0,229,255,0.3), inset 0 0 10px rgba(0,229,255,0.05); }
+  .neon-border-red { box-shadow: 0 0 10px rgba(255,68,68,0.3), inset 0 0 10px rgba(255,68,68,0.05); }
+
+  .period-divider { text-align: center; margin: 50px 0 20px; position: relative; }
+  .period-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), var(--cyan), var(--purple), transparent); }
+  .period-divider span { background: var(--bg); padding: 0 20px; position: relative; font-family: 'Cinzel', serif; font-size: 18px; color: var(--gold); letter-spacing: 4px; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .tag { padding: 4px 12px; border-radius: 20px; font-size: 11px; letter-spacing: 1px; border: 1px solid; }
+  .tag-gold { border-color: var(--gold); color: var(--gold); background: rgba(255,215,0,0.08); }
+  .tag-red { border-color: var(--red); color: var(--red); background: rgba(255,68,68,0.08); }
+  .tag-cyan { border-color: var(--cyan); color: var(--cyan); background: rgba(0,229,255,0.08); }
+  .tag-green { border-color: var(--green); color: var(--green); background: rgba(0,230,118,0.08); }
+  .tag-purple { border-color: var(--purple2); color: var(--purple2); background: rgba(156,39,176,0.08); }
+  .tag-blue { border-color: var(--blue); color: var(--blue); background: rgba(68,138,255,0.08); }
+  .tag-pink { border-color: var(--pink); color: var(--pink); background: rgba(255,64,129,0.08); }
+  .tag-orange { border-color: var(--orange); color: var(--orange); background: rgba(255,140,0,0.08); }
+
+  .mm-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 16px 0; }
+  .org-chart { margin: 20px 0; }
+  
+  .highlight-row { background: linear-gradient(90deg, rgba(255,215,0,0.05) 0%, transparent 100%) !important; }
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="stars" id="stars"></div>
+  <div class="hero-title">🗺 WORLD HISTORY</div>
+  <div class="hero-sub">🐲 AUTEUR: <b>PIYUSH  PARTE</b></div>
+  <div>
+    <span class="hero-tag">Renaissance</span>
+    <span class="hero-tag">Reformation</span>
+    <span class="hero-tag">Revolutions</span>
+    <span class="hero-tag">World Wars</span>
+    <span class="hero-tag">Cold War</span>
+    <span class="hero-tag">Middle East</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#eras">📚 Eras</a>
+  <a href="#renaissance">🎨 Renaissance</a>
+  <a href="#reformation">⛪ Reformation</a>
+  <a href="#american">🦅 American Rev</a>
+  <a href="#french">🇫🇷 French Rev</a>
+  <a href="#industrial">🏭 Industrial</a>
+  <a href="#imperialism">🌐 Imperialism</a>
+  <a href="#unification">🇩🇪 Unification</a>
+  <a href="#ww1">💣 WWI</a>
+  <a href="#league">🕊️ League of Nations</a>
+  <a href="#depression">📉 Depression</a>
+  <a href="#nazism">⚡ Nazism</a>
+  <a href="#ww2">🔫 WWII</a>
+  <a href="#coldwar">🥶 Cold War</a>
+  <a href="#un">🌐 United Nations</a>
+  <a href="#mideast">🕌 Middle East</a>
+  <a href="#eu">🇪🇺 EU</a>
+  <a href="#master">📅 Master Dates</a>
+</nav>
+
+<div class="container">
+
+  <!-- QUOTE -->
+  <div class="quote-block">
+    "History is who we are and why we are the way we are." — David McCullough
+  </div>
+
+  <!-- DIVISION OF ERAS -->
+  <div id="eras">
+    <div class="section-label">📚 Division of World History</div>
+
+    <!-- ERA OVERVIEW FLOWCHART -->
+    <div class="flowchart-wrap">
+      <svg viewBox="0 0 1100 180" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#b8860b"/>
+            <stop offset="100%" style="stop-color:#ffd700"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1565c0"/>
+            <stop offset="100%" style="stop-color:#448aff"/>
+          </linearGradient>
+          <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1b5e20"/>
+            <stop offset="100%" style="stop-color:#00e676"/>
+          </linearGradient>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+          </marker>
+        </defs>
+        <!-- Ancient -->
+        <rect x="20" y="40" width="300" height="100" rx="12" fill="url(#g1)" opacity="0.9"/>
+        <text x="170" y="78" text-anchor="middle" fill="#000" font-family="Cinzel,serif" font-size="15" font-weight="bold">🏺 ANCIENT ERA</text>
+        <text x="170" y="98" text-anchor="middle" fill="#000" font-family="Rajdhani,sans-serif" font-size="12">5000 BC – 650 AD</text>
+        <text x="170" y="116" text-anchor="middle" fill="#111" font-family="Rajdhani,sans-serif" font-size="11">Settlements · Bronze/Iron Age · Rome</text>
+        <text x="170" y="132" text-anchor="middle" fill="#111" font-family="Rajdhani,sans-serif" font-size="11">Hinduism · Buddhism · Christianity</text>
+        <!-- Arrow -->
+        <line x1="320" y1="90" x2="372" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+        <!-- Medieval -->
+        <rect x="375" y="40" width="320" height="100" rx="12" fill="url(#g2)" opacity="0.9"/>
+        <text x="535" y="78" text-anchor="middle" fill="#fff" font-family="Cinzel,serif" font-size="15" font-weight="bold">⚔️ MEDIEVAL ERA</text>
+        <text x="535" y="98" text-anchor="middle" fill="#ddd" font-family="Rajdhani,sans-serif" font-size="12">5th Century – 14th/15th Century</text>
+        <text x="535" y="116" text-anchor="middle" fill="#bbb" font-family="Rajdhani,sans-serif" font-size="11">Dark Ages → Scholasticism → Humanism</text>
+        <text x="535" y="132" text-anchor="middle" fill="#bbb" font-family="Rajdhani,sans-serif" font-size="11">Proto-Renaissance · Middle Ages</text>
+        <!-- Arrow -->
+        <line x1="695" y1="90" x2="747" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+        <!-- Modern -->
+        <rect x="750" y="40" width="320" height="100" rx="12" fill="url(#g3)" opacity="0.9"/>
+        <text x="910" y="78" text-anchor="middle" fill="#000" font-family="Cinzel,serif" font-size="15" font-weight="bold">🔭 MODERN ERA</text>
+        <text x="910" y="98" text-anchor="middle" fill="#001" font-family="Rajdhani,sans-serif" font-size="12">15th Century Onwards</text>
+        <text x="910" y="116" text-anchor="middle" fill="#111" font-family="Rajdhani,sans-serif" font-size="11">Fall of Constantinople (1453)</text>
+        <text x="910" y="132" text-anchor="middle" fill="#111" font-family="Rajdhani,sans-serif" font-size="11">Americas (1492) · Printing Press (1440)</text>
+      </svg>
+    </div>
+
+    <div class="info-box info-orange">⚠️ <strong>NOTE:</strong> The exact start of the Modern Era is debated — some scholars mark it from the Fall of Constantinople (1453), some from the Renaissance, others from the Discovery of the Americas (1492).</div>
+  </div>
+
+  <!-- ============== ERA 1: RENAISSANCE ============== -->
+  <div id="renaissance">
+    <div class="era-header era-renaissance">
+      <div class="era-icon">🎨</div>
+      <div>
+        <div class="era-title">ERA 1 — THE RENAISSANCE</div>
+        <div class="era-dates">14th – 17th Century · Italy → Europe</div>
+      </div>
+    </div>
+
+    <div class="section-label">🔑 Core Concepts</div>
+    <div class="card-grid">
+      <div class="card card-gold">
+        <div class="card-title">🌟 What is the Renaissance?</div>
+        <div class="card-body">Renaissance means "Rebirth" in French/Italian. It was a cultural and intellectual revival of classical Greek & Roman knowledge after the Dark Ages. Centered in Italian city-states like Florence and Venice, funded by wealthy merchant patrons like the Medici family.</div>
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">📖 Humanism</div>
+        <div class="card-body">A philosophical movement placing human beings — rather than God or theology — at the center of intellectual life. Promoted logic, reason, and the dignity of mankind. Literature shifted from Latin to vernacular (local) languages, making knowledge accessible to all.</div>
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">🎭 Art Revolution</div>
+        <div class="card-body">Art shifted from Byzantine religious iconography to realistic depictions of the human body and secular subjects. Perspective, anatomy, and light were studied scientifically. Da Vinci, Michelangelo, and Raphael defined the era with masterworks still iconic today.</div>
+      </div>
+      <div class="card card-cyan">
+        <div class="card-title">📐 Scholasticism</div>
+        <div class="card-body">A philosophical method asserting that no single idea holds absolute truth. Every concept must be debated and tested through reason and logic — the forerunner of modern scientific inquiry and critical thinking.</div>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">🖨️ The Printing Press</div>
+        <div class="card-body">Invented by Johannes Gutenberg (~1440), it revolutionized the spread of ideas. Books became affordable; literacy spread. The Protestant Reformation, Scientific Revolution, and Enlightenment were all accelerated by this single invention.</div>
+      </div>
+      <div class="card card-red">
+        <div class="card-title">🌍 Why Italy First?</div>
+        <div class="card-body">Italian city-states (Florence, Venice, Milan) were wealthy trading hubs. Merchant classes became patrons of arts. Byzantine scholars fleeing the Ottoman conquest of Constantinople (1453) brought ancient manuscripts to Italy, igniting the intellectual revival.</div>
+      </div>
+    </div>
+
+    <div class="section-label">📅 Timeline</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">✝️</div>
+        <div class="tl-content">
+          <div class="tl-date">1095 – 1291</div>
+          <div class="tl-text"><strong class="text-gold">The Crusades</strong> — First major contact between isolated Europe and Arab/Middle Eastern civilizations. Sparked an exchange of Mathematics, Science, Medicine, and Philosophy that would ignite the Renaissance.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:#888;color:#888">🏛️</div>
+        <div class="tl-content">
+          <div class="tl-date">5th – 6th Century</div>
+          <div class="tl-text"><strong class="text-gold">Fall of Western Roman Empire</strong> — Europe enters the Dark Ages. The Byzantine (Eastern Roman) Empire preserved Greek-Roman knowledge for centuries, becoming the crucial bridge to the Renaissance.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">🌅</div>
+        <div class="tl-content">
+          <div class="tl-date">14th Century</div>
+          <div class="tl-text"><strong class="text-gold">Renaissance Begins in Italian City-States</strong> — Florence, Venice, and Milan emerge as centers of culture. The Medici banking family of Florence became the most powerful patrons of arts and learning in history.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--red);color:var(--red)">☠️</div>
+        <div class="tl-content">
+          <div class="tl-date">1348</div>
+          <div class="tl-text"><strong class="text-red">Black Death (Bubonic Plague)</strong> — Killed 30–60% of Europe's population. Paradoxically, the labor shortage that followed gave surviving peasants more bargaining power, accelerating the breakdown of feudalism and the rise of the merchant class.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">🕌</div>
+        <div class="tl-content">
+          <div class="tl-date">1453</div>
+          <div class="tl-text"><strong class="text-orange">Fall of Constantinople to Ottoman Turks</strong> — Byzantine scholars fled to Italy carrying ancient Greek manuscripts. This single event dramatically accelerated the Renaissance. It also ended overland trade routes to Asia, motivating European explorers to find sea routes.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">🖨️</div>
+        <div class="tl-content">
+          <div class="tl-date">~1440</div>
+          <div class="tl-text"><strong class="text-cyan">Gutenberg's Printing Press</strong> — One of the most transformative inventions in human history. Books that once took months to copy by hand could now be printed in hours. Within 50 years, over 20 million books were in circulation across Europe.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">⛵</div>
+        <div class="tl-content">
+          <div class="tl-date">1492</div>
+          <div class="tl-text"><strong class="text-blue">Columbus Discovers the Americas</strong> — Sailing under the Spanish flag, Columbus aimed for India but reached the Caribbean. This "Columbian Exchange" transformed both hemispheres: crops, diseases, animals, and peoples crossed the Atlantic for centuries.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--green);color:var(--green)">🗺️</div>
+        <div class="tl-content">
+          <div class="tl-date">1498</div>
+          <div class="tl-text"><strong class="text-green">Vasco da Gama Reaches India</strong> — Sailing around Africa's Cape of Good Hope, he opened a direct sea trade route from Europe to Asia. This bypassed Ottoman-controlled land routes and gave Portugal (and later other Europeans) immense commercial power.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">🎭 Key Figures — Renaissance Masters</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="gold-th">Figure</th>
+          <th class="gold-th">Field</th>
+          <th class="gold-th">Contribution</th>
+          <th class="gold-th">Key Work</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-gold bold">🖌️ Leonardo da Vinci</td>
+          <td>Art, Science, Engineering</td>
+          <td>The ultimate "Renaissance Man" — painter, sculptor, architect, musician, mathematician, engineer, anatomist, inventor. Combined art with scientific observation.</td>
+          <td>Mona Lisa, The Last Supper, Vitruvian Man</td>
+        </tr>
+        <tr>
+          <td class="text-gold bold">🖌️ Michelangelo</td>
+          <td>Sculpture, Painting</td>
+          <td>Portrayed the human body with divine beauty and muscular realism. Painted the Sistine Chapel ceiling while lying on scaffolding for 4 years.</td>
+          <td>David, Sistine Chapel, Pietà</td>
+        </tr>
+        <tr>
+          <td class="text-gold bold">🖌️ Raphael</td>
+          <td>Painting</td>
+          <td>Known for elegant harmony blending classical theology with Renaissance humanism. Died at just 37 yet left an enormous legacy.</td>
+          <td>The School of Athens, Sistine Madonna</td>
+        </tr>
+        <tr>
+          <td class="text-cyan bold">✍️ Dante Alighieri</td>
+          <td>Literature</td>
+          <td>Wrote in Italian vernacular, not Latin — revolutionary at the time. Established Italian as a literary language. Called the "Father of the Italian language."</td>
+          <td>The Divine Comedy (13th C)</td>
+        </tr>
+        <tr>
+          <td class="text-cyan bold">✍️ Niccolò Machiavelli</td>
+          <td>Political Philosophy</td>
+          <td>Pioneered political realism and secular statecraft. Argued rulers must be pragmatic and willing to be feared. Separated politics from morality.</td>
+          <td>The Prince (1513)</td>
+        </tr>
+        <tr>
+          <td class="text-cyan bold">✍️ Petrarch</td>
+          <td>Poetry, Humanism</td>
+          <td>"Father of Humanism." First to use the term "Dark Ages." Wrote love sonnets in vernacular Italian. Laid the philosophical groundwork for the entire Renaissance.</td>
+          <td>Canzoniere</td>
+        </tr>
+        <tr>
+          <td class="text-purple bold">🔭 Galileo Galilei</td>
+          <td>Astronomy, Physics</td>
+          <td>Confirmed heliocentrism through telescope observations. Put on trial by the Inquisition for contradicting Church doctrine. Laid foundations of modern experimental science.</td>
+          <td>Dialogue Concerning Two New Sciences</td>
+        </tr>
+        <tr>
+          <td class="text-purple bold">🔭 Nicolaus Copernicus</td>
+          <td>Astronomy</td>
+          <td>Proposed the heliocentric model (Earth orbits the Sun) — contradicted 1,400 years of Church-approved Ptolemaic geocentrism. The "Copernican Revolution."</td>
+          <td>On the Revolutions of Celestial Spheres (1543)</td>
+        </tr>
+        <tr>
+          <td class="text-purple bold">🔭 Isaac Newton</td>
+          <td>Physics, Mathematics</td>
+          <td>Formulated Laws of Motion and Universal Gravitation. Invented calculus. His work unified terrestrial and celestial mechanics, defining science for 200+ years.</td>
+          <td>Principia Mathematica (1687)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- RENAISSANCE MIND MAP SVG -->
+    <div class="section-label">🧠 Renaissance Mind Map</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <!-- Center -->
+        <ellipse cx="450" cy="250" rx="90" ry="50" fill="#1a1400" stroke="#ffd700" stroke-width="2"/>
+        <text x="450" y="244" text-anchor="middle" fill="#ffd700" font-family="Cinzel,serif" font-size="14" font-weight="bold">RENAISSANCE</text>
+        <text x="450" y="262" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="11">14th–17th C</text>
+
+        <!-- Branches -->
+        <!-- ART -->
+        <line x1="365" y1="218" x2="220" y2="130" stroke="#ff8c00" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="100" y="90" width="130" height="70" rx="8" fill="#1a0a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="165" y="117" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🎨 ART</text>
+        <text x="165" y="135" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Da Vinci · Michelangelo</text>
+        <text x="165" y="150" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Human form · Perspective</text>
+
+        <!-- SCIENCE -->
+        <line x1="362" y1="238" x2="210" y2="250" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="75" y="215" width="140" height="70" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="145" y="243" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🔬 SCIENCE</text>
+        <text x="145" y="261" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Copernicus · Galileo · Newton</text>
+        <text x="145" y="276" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Heliocentrism · Gravity</text>
+
+        <!-- LITERATURE -->
+        <line x1="375" y1="270" x2="220" y2="370" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="95" y="340" width="140" height="70" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="165" y="368" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">📖 LITERATURE</text>
+        <text x="165" y="386" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Dante · Petrarch · Machiavelli</text>
+        <text x="165" y="401" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Vernacular language</text>
+
+        <!-- HUMANISM -->
+        <line x1="540" y1="218" x2="680" y2="130" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="660" y="90" width="140" height="70" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="730" y="117" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🌟 HUMANISM</text>
+        <text x="730" y="135" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Human-centric worldview</text>
+        <text x="730" y="150" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Logic over theology</text>
+
+        <!-- EXPLORATION -->
+        <line x1="540" y1="238" x2="695" y2="250" stroke="#00e676" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="690" y="215" width="150" height="70" rx="8" fill="#001a08" stroke="#00e676" stroke-width="1.5"/>
+        <text x="765" y="243" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">⛵ EXPLORATION</text>
+        <text x="765" y="261" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Columbus 1492 · Vasco 1498</text>
+        <text x="765" y="276" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">New trade routes · Empires</text>
+
+        <!-- PRINTING -->
+        <line x1="530" y1="270" x2="680" y2="370" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="660" y="340" width="140" height="70" rx="8" fill="#150008" stroke="#ff4081" stroke-width="1.5"/>
+        <text x="730" y="368" text-anchor="middle" fill="#ff4081" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🖨️ PRINTING PRESS</text>
+        <text x="730" y="386" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Gutenberg ~1440</text>
+        <text x="730" y="401" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Mass spread of knowledge</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ============== ERA 2: REFORMATION ============== -->
+  <div id="reformation">
+    <div class="era-header era-reformation">
+      <div class="era-icon">⛪</div>
+      <div>
+        <div class="era-title">ERA 2 — THE PROTESTANT REFORMATION</div>
+        <div class="era-dates">16th Century · Germany → Europe</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-orange">1517</div><div class="stat-label">Luther's 95 Theses</div></div>
+      <div class="stat-box"><div class="stat-num text-red">1530s</div><div class="stat-label">Church of England</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">1545–63</div><div class="stat-label">Council of Trent</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">1648</div><div class="stat-label">Peace of Westphalia</div></div>
+      <div class="stat-box"><div class="stat-num text-pink">30 Yrs</div><div class="stat-label">Wars of Religion</div></div>
+    </div>
+
+    <div class="section-label">📅 Timeline</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">📜</div>
+        <div class="tl-content">
+          <div class="tl-date">1517</div>
+          <div class="tl-text"><strong class="text-orange">Martin Luther's 95 Theses</strong> — Posted on the door of Wittenberg's Castle Church, Luther protested the Catholic Church's sale of "indulgences" (paying for forgiveness of sins). The Printing Press spread his ideas across Europe within weeks, making it impossible for the Church to suppress the movement.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--red);color:var(--red)">✋</div>
+        <div class="tl-content">
+          <div class="tl-date">1520s</div>
+          <div class="tl-text"><strong class="text-red">Luther Excommunicated</strong> — Pope Leo X excommunicated Luther, but this only strengthened the movement. Luther translated the Bible into German, enabling ordinary people to read Scripture for themselves — a revolutionary act against Church monopoly on religious interpretation.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">👑</div>
+        <div class="tl-content">
+          <div class="tl-date">1530s</div>
+          <div class="tl-text"><strong class="text-blue">Henry VIII Breaks from Rome</strong> — When Pope Clement VII refused to annul his marriage to Catherine of Aragon, Henry VIII declared himself head of the Church in England. The Anglican Church was born — a political, not just theological, Reformation.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--purple2);color:var(--purple2)">🛡️</div>
+        <div class="tl-content">
+          <div class="tl-date">1534+</div>
+          <div class="tl-text"><strong class="text-purple">John Calvin — Calvinism</strong> — Developed in Geneva, Switzerland. Calvin's doctrine of predestination (God pre-selects who is saved) spread to France (Huguenots), Scotland (Presbyterianism), Netherlands, and later to the Americas through the Puritans.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">⚔️</div>
+        <div class="tl-content">
+          <div class="tl-date">1618 – 1648</div>
+          <div class="tl-text"><strong class="text-gold">Thirty Years' War</strong> — One of the most destructive wars in European history. Protestant vs. Catholic states. Germany lost up to 8 million people — nearly a third of its population. Ended with the <strong>Peace of Westphalia (1648)</strong>, which established the modern concept of sovereign nation-states and religious tolerance. The foundation of modern international law.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">💡 Key Impacts of the Reformation</div>
+    <div class="card-grid">
+      <div class="card card-green"><div class="card-title">📚 Rise of Literacy</div><div class="card-body">Protestants believed every Christian must read the Bible personally. This unprecedented push for mass literacy transformed European society and laid groundwork for modern education systems.</div></div>
+      <div class="card card-blue"><div class="card-title">⚖️ Secularization of Politics</div><div class="card-body">The Reformation ended the Pope's political authority over European monarchs. Religion and state governance gradually separated — a process that ultimately led to modern secular democracy.</div></div>
+      <div class="card card-purple"><div class="card-title">🌍 New Protestant Sects</div><div class="card-body">Lutheranism (Germany/Scandinavia), Calvinism (Switzerland/France/Scotland), Anglicanism (England), Anabaptism (Radical Reformation). Each brought unique theological and social implications.</div></div>
+      <div class="card card-gold"><div class="card-title">💰 Protestant Work Ethic</div><div class="card-body">Max Weber later argued that Calvinist beliefs linking hard work to divine favor created "the Protestant Ethic" — a cultural foundation for the rise of capitalism in Protestant nations.</div></div>
+    </div>
+  </div>
+
+  <!-- ============== ERA 3: AMERICAN REVOLUTION ============== -->
+  <div id="american">
+    <div class="era-header era-american">
+      <div class="era-icon">🦅</div>
+      <div>
+        <div class="era-title">ERA 3 — THE AMERICAN REVOLUTION</div>
+        <div class="era-dates">1775 – 1783 · 13 Colonies → United States of America</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-blue">1776</div><div class="stat-label">Declaration of Independence</div></div>
+      <div class="stat-box"><div class="stat-num text-green">1787</div><div class="stat-label">US Constitution</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">13</div><div class="stat-label">Original Colonies</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">10</div><div class="stat-label">Bill of Rights Amendments</div></div>
+    </div>
+
+    <!-- FLOWCHART -->
+    <div class="section-label">🔄 Causes → Events → Outcomes Flowchart</div>
+    <div class="flowchart-wrap">
+      <svg viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#448aff"/>
+          </marker>
+        </defs>
+        <!-- Box 1 -->
+        <rect x="10" y="70" width="160" height="80" rx="8" fill="#001220" stroke="#448aff" stroke-width="1.5"/>
+        <text x="90" y="100" text-anchor="middle" fill="#448aff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">💰 TAXATION</text>
+        <text x="90" y="118" text-anchor="middle" fill="#8ab" font-family="Rajdhani,sans-serif" font-size="10">No representation</text>
+        <text x="90" y="132" text-anchor="middle" fill="#8ab" font-family="Rajdhani,sans-serif" font-size="10">Stamp Act 1765</text>
+        <line x1="170" y1="110" x2="200" y2="110" stroke="#448aff" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- Box 2 -->
+        <rect x="200" y="70" width="160" height="80" rx="8" fill="#001220" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="280" y="100" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🍵 BOSTON</text>
+        <text x="280" y="118" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Tea Party 1773</text>
+        <text x="280" y="132" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Protests escalate</text>
+        <line x1="360" y1="110" x2="390" y2="110" stroke="#448aff" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- Box 3 -->
+        <rect x="390" y="70" width="160" height="80" rx="8" fill="#150000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="470" y="100" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🔫 WAR</text>
+        <text x="470" y="118" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Lexington &amp; Concord 1775</text>
+        <text x="470" y="132" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">First shots fired</text>
+        <line x1="550" y1="110" x2="580" y2="110" stroke="#448aff" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- Box 4 -->
+        <rect x="580" y="70" width="160" height="80" rx="8" fill="#0d1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="660" y="100" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">📜 DECLARATION</text>
+        <text x="660" y="118" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">July 4, 1776</text>
+        <text x="660" y="132" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Thomas Jefferson</text>
+        <line x1="740" y1="110" x2="770" y2="110" stroke="#448aff" stroke-width="1.5" marker-end="url(#arr2)"/>
+        <!-- Box 5 -->
+        <rect x="770" y="70" width="210" height="80" rx="8" fill="#001a00" stroke="#00e676" stroke-width="1.5"/>
+        <text x="875" y="100" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🕊️ INDEPENDENCE</text>
+        <text x="875" y="118" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Treaty of Paris 1783</text>
+        <text x="875" y="132" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">US Constitution 1787</text>
+      </svg>
+    </div>
+
+    <div class="section-label">📅 Timeline</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">📜</div>
+        <div class="tl-content"><div class="tl-date">1765</div><div class="tl-text"><strong class="text-blue">Stamp Act</strong> — Britain imposed taxes on all printed materials. "No taxation without representation" became the rallying cry, uniting the 13 colonies for the first time.</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">🍵</div>
+        <div class="tl-content"><div class="tl-date">1773</div><div class="tl-text"><strong class="text-cyan">Boston Tea Party</strong> — Colonists dressed as Mohawk Indians dumped 342 chests of British tea into Boston Harbor. Britain responded with the "Intolerable Acts," pushing colonists further toward revolution.</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--red);color:var(--red)">🔫</div>
+        <div class="tl-content"><div class="tl-date">1775</div><div class="tl-text"><strong class="text-red">Battles of Lexington & Concord</strong> — "The shot heard round the world." The first military engagements of the American Revolutionary War. Paul Revere's famous midnight ride warned colonists of British troop movements.</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">🗽</div>
+        <div class="tl-content"><div class="tl-date">July 4, 1776</div><div class="tl-text"><strong class="text-gold">Declaration of Independence</strong> — Drafted primarily by Thomas Jefferson, heavily influenced by Enlightenment philosophers John Locke (natural rights: life, liberty, property), Rousseau (social contract), and Montesquieu (separation of powers).</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--green);color:var(--green)">⚔️</div>
+        <div class="tl-content"><div class="tl-date">1777</div><div class="tl-text"><strong class="text-green">Battle of Saratoga</strong> — The turning point of the war. American victory convinced France to officially ally with the colonists against Britain — transforming what was a colonial rebellion into a global conflict involving Britain, France, Spain, and the Netherlands.</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">🏳️</div>
+        <div class="tl-content"><div class="tl-date">1783</div><div class="tl-text"><strong class="text-blue">Treaty of Paris</strong> — Britain formally recognized American independence. The US gained territory east of the Mississippi River. This was the first successful anti-colonial revolution in modern history — inspiring revolutions worldwide.</div></div>
+      </div>
+    </div>
+
+    <div class="section-label">🌟 Why It Mattered — Legacy</div>
+    <div class="card-grid">
+      <div class="card card-blue"><div class="card-title">🌍 First Modern Democracy</div><div class="card-body">The US Constitution (1787) became the world's first written national constitution. The separation of powers into Executive, Legislative, and Judiciary branches became the global model for democratic governance.</div></div>
+      <div class="card card-gold"><div class="card-title">💡 Enlightenment in Practice</div><div class="card-body">For the first time, Enlightenment principles of liberty, popular sovereignty, and natural rights were embedded into actual governance — turning philosophical ideals into political reality.</div></div>
+      <div class="card card-red"><div class="card-title">🇫🇷 Inspired the French Revolution</div><div class="card-body">French officers like Lafayette who fought in America returned home with revolutionary ideas. The American success directly inspired the 1789 French Revolution, which in turn transformed the entire world.</div></div>
+    </div>
+  </div>
+
+  <!-- ============== ERA 4: FRENCH REVOLUTION ============== -->
+  <div id="french">
+    <div class="era-header era-french">
+      <div class="era-icon">🇫🇷</div>
+      <div>
+        <div class="era-title">ERA 4 — THE FRENCH REVOLUTION</div>
+        <div class="era-dates">1789 – 1799 · France → Global Impact</div>
+      </div>
+    </div>
+
+    <div class="section-label">🔥 The Five Causes</div>
+    <div class="card-grid">
+      <div class="card card-red"><div class="card-title">📉 Financial Crisis</div><div class="card-body">France was nearly bankrupt after supporting the American Revolution, fighting expensive wars, and maintaining an extravagant royal court at Versailles. King Louis XVI's government was 50% of GDP in debt.</div></div>
+      <div class="card card-gold"><div class="card-title">🍞 Food Shortages</div><div class="card-body">Crop failures in 1788 led to bread prices skyrocketing. The average Parisian worker spent 80-90% of their income on bread alone. Starvation was widespread among the Third Estate (98% of the population).</div></div>
+      <div class="card card-blue"><div class="card-title">👑 Absolute Monarchy</div><div class="card-body">Louis XVI had absolute power with no political representation for commoners. The Three Estates system: Clergy (1st), Nobility (2nd), and Commoners (3rd — 98% of population with zero political power).</div></div>
+      <div class="card card-purple"><div class="card-title">📚 Enlightenment Ideas</div><div class="card-body">Voltaire, Rousseau, and Montesquieu had spread ideas of liberty, equality, and social contract. The American Revolution proved these ideals could work in practice, inspiring French commoners to demand change.</div></div>
+      <div class="card card-cyan"><div class="card-title">💸 Tax Inequality</div><div class="card-body">The Clergy and Nobility were exempt from most taxes. The burden fell entirely on the Third Estate — peasants and middle class — who were being taxed into poverty while the privileged elite lived lavishly.</div></div>
+    </div>
+
+    <div class="section-label">📅 Chronological Timeline</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">👑</div><div class="tl-content"><div class="tl-date">May 1789</div><div class="tl-text"><strong class="text-blue">Estates-General Convened</strong> — First time since 1614! The Third Estate was immediately frustrated by voting rules that gave them equal power to clergy and nobles combined. They broke away and declared themselves the <em>National Assembly</em>.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">🎾</div><div class="tl-content"><div class="tl-date">June 1789</div><div class="tl-text"><strong class="text-cyan">Tennis Court Oath</strong> — Locked out of their meeting hall, National Assembly members gathered on a tennis court and swore they would not disband until France had a new constitution. A defining moment of revolutionary defiance.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">🏰</div><div class="tl-content"><div class="tl-date">July 14, 1789</div><div class="tl-text"><strong class="text-red">Storming of the Bastille</strong> — A Paris mob stormed the Bastille fortress-prison, symbol of royal tyranny. Though only 7 prisoners were inside, the symbolic victory launched the Revolution. July 14 remains France's national holiday (Bastille Day).</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">📜</div><div class="tl-content"><div class="tl-date">August 1789</div><div class="tl-text"><strong class="text-gold">Declaration of the Rights of Man and Citizen</strong> — Proclaimed liberty, equality, and fraternity as universal rights. Influenced by the US Declaration of Independence. Became the philosophical foundation for human rights worldwide.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">⚰️</div><div class="tl-content"><div class="tl-date">December 1792</div><div class="tl-text"><strong class="text-orange">Louis XVI Executed</strong> — The King was tried for treason and guillotined in the Place de la Révolution. Queen Marie Antoinette was executed 9 months later. The execution shocked European monarchies and triggered the War of the First Coalition against France.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">😱</div><div class="tl-content"><div class="tl-date">1793–1794</div><div class="tl-text"><strong class="text-red">Reign of Terror</strong> — Under Maximilien Robespierre and the Jacobins, 16,000+ people were officially guillotined and perhaps 40,000 died in total. Anyone suspected of being counter-revolutionary faced execution. The Revolution devoured its own children.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--green);color:var(--green)">🔄</div><div class="tl-content"><div class="tl-date">1794</div><div class="tl-text"><strong class="text-green">Thermidorian Reaction</strong> — Robespierre himself was arrested and guillotined. The radical phase ended. The moderate Thermidorians took power, paving the way for the Directory and eventually Napoleon.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">⚔️</div><div class="tl-content"><div class="tl-date">1799</div><div class="tl-text"><strong class="text-gold">Napoleon's Coup (18 Brumaire)</strong> — Napoleon Bonaparte staged a coup, dissolved the Directory, and declared himself First Consul. By 1804, he crowned himself Emperor — ending the Republic while paradoxically spreading its revolutionary ideals across Europe.</div></div></div>
+    </div>
+
+    <!-- FACTIONS COMPARISON -->
+    <div class="section-label">⚔️ Key Factions</div>
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(0,100,200,0.05)">
+        <div class="compare-col-title text-blue">🕊️ GIRONDINS (Liberals)</div>
+        <div class="compare-item">✦ Moderate; wanted constitutional republic</div>
+        <div class="compare-item">✦ Represented merchant & bourgeois class</div>
+        <div class="compare-item">✦ Controlled provinces outside Paris</div>
+        <div class="compare-item">✦ Wanted to limit the King, not kill him</div>
+        <div class="compare-item">✦ Eventually purged & executed by Jacobins (1793)</div>
+        <div class="compare-item">✦ Leaders: Brissot, Roland, Vergniaud</div>
+      </div>
+      <div class="compare-col" style="background:rgba(200,0,0,0.05)">
+        <div class="compare-col-title text-red">🔴 JACOBINS (Radicals)</div>
+        <div class="compare-item">✦ Extreme; wanted total social revolution</div>
+        <div class="compare-item">✦ Represented artisans, workers, peasants</div>
+        <div class="compare-item">✦ Controlled Paris (sans-culottes support)</div>
+        <div class="compare-item">✦ Led by Robespierre — created the Reign of Terror</div>
+        <div class="compare-item">✦ Abolished slavery in French colonies</div>
+        <div class="compare-item">✦ Destroyed by Thermidorian Reaction (1794)</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============== NAPOLEON SECTION (NEW) ============== -->
+  <div id="napoleon">
+    <div class="era-header era-napoleon" style="border-color:#e6b800">
+      <div class="era-icon">👑</div>
+      <div>
+        <div class="era-title" style="color:#e6b800">ERA 4b — THE NAPOLEONIC ERA<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1799 – 1815 · France Conquers Europe · The Napoleonic Code Changes History</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num" style="color:#e6b800">1804</div><div class="stat-label">Napoleon Becomes Emperor</div></div>
+      <div class="stat-box"><div class="stat-num text-red">70</div><div class="stat-label">Nations affected by Napoleonic Wars</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">3.5M</div><div class="stat-label">Dead in Napoleonic Wars</div></div>
+      <div class="stat-box"><div class="stat-num text-green">1815</div><div class="stat-label">Waterloo — Final Defeat</div></div>
+      <div class="stat-box"><div class="stat-num text-purple">1.86m</div><div class="stat-label">Napoleon's Height (not so short!)</div></div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-text">"Impossible is a word found only in the dictionary of fools."</div>
+      <div class="quote-attr">— Napoleon Bonaparte</div>
+    </div>
+
+    <div class="section-label">🧠 Napoleon Rise to Power — Flowchart</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arrN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#e6b800"/>
+          </marker>
+        </defs>
+        <!-- Step 1 -->
+        <rect x="10" y="120" width="130" height="70" rx="8" fill="#1a1500" stroke="#e6b800" stroke-width="1.5"/>
+        <text x="75" y="147" text-anchor="middle" fill="#e6b800" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🎖️ Military Hero</text>
+        <text x="75" y="163" text-anchor="middle" fill="#cc9" font-family="Rajdhani,sans-serif" font-size="10">Italian Campaign 1796</text>
+        <text x="75" y="178" text-anchor="middle" fill="#cc9" font-family="Rajdhani,sans-serif" font-size="10">Egyptian Expedition 1798</text>
+        <line x1="140" y1="155" x2="165" y2="155" stroke="#e6b800" stroke-width="1.5" marker-end="url(#arrN)"/>
+        <!-- Step 2 -->
+        <rect x="165" y="120" width="130" height="70" rx="8" fill="#150a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="230" y="147" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">⚔️ Coup 1799</text>
+        <text x="230" y="163" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">18th Brumaire Coup</text>
+        <text x="230" y="178" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Directory overthrown</text>
+        <line x1="295" y1="155" x2="320" y2="155" stroke="#e6b800" stroke-width="1.5" marker-end="url(#arrN)"/>
+        <!-- Step 3 -->
+        <rect x="320" y="120" width="130" height="70" rx="8" fill="#0a1500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="385" y="147" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🏛️ First Consul</text>
+        <text x="385" y="163" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">New constitution: 3 Consuls</text>
+        <text x="385" y="178" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Napoleon = absolute power</text>
+        <line x1="450" y1="155" x2="475" y2="155" stroke="#e6b800" stroke-width="1.5" marker-end="url(#arrN)"/>
+        <!-- Step 4 -->
+        <rect x="475" y="120" width="130" height="70" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="540" y="147" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">👑 Emperor 1804</text>
+        <text x="540" y="163" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">99% plebiscite approval</text>
+        <text x="540" y="178" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Crowns himself at Notre Dame</text>
+        <line x1="605" y1="155" x2="630" y2="155" stroke="#e6b800" stroke-width="1.5" marker-end="url(#arrN)"/>
+        <!-- Step 5 -->
+        <rect x="630" y="120" width="130" height="70" rx="8" fill="#150000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="695" y="147" text-anchor="middle" fill="#ff8888" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">💀 Waterloo 1815</text>
+        <text x="695" y="163" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Defeated by Britain+Prussia</text>
+        <text x="695" y="178" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Exiled to St. Helena island</text>
+        <!-- Top labels -->
+        <text x="75" y="100" text-anchor="middle" fill="#777" font-family="Rajdhani,sans-serif" font-size="10">PHASE 1</text>
+        <text x="230" y="100" text-anchor="middle" fill="#777" font-family="Rajdhani,sans-serif" font-size="10">PHASE 2</text>
+        <text x="385" y="100" text-anchor="middle" fill="#777" font-family="Rajdhani,sans-serif" font-size="10">PHASE 3</text>
+        <text x="540" y="100" text-anchor="middle" fill="#777" font-family="Rajdhani,sans-serif" font-size="10">PHASE 4</text>
+        <text x="695" y="100" text-anchor="middle" fill="#777" font-family="Rajdhani,sans-serif" font-size="10">PHASE 5</text>
+        <!-- Timeline line -->
+        <line x1="10" y1="230" x2="880" y2="230" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="60" y="250" text-anchor="middle" fill="#555" font-family="Share Tech Mono,monospace" font-size="9">1796</text>
+        <text x="230" y="250" text-anchor="middle" fill="#555" font-family="Share Tech Mono,monospace" font-size="9">1799</text>
+        <text x="385" y="250" text-anchor="middle" fill="#555" font-family="Share Tech Mono,monospace" font-size="9">1800–03</text>
+        <text x="540" y="250" text-anchor="middle" fill="#555" font-family="Share Tech Mono,monospace" font-size="9">1804–12</text>
+        <text x="695" y="250" text-anchor="middle" fill="#555" font-family="Share Tech Mono,monospace" font-size="9">1813–15</text>
+      </svg>
+    </div>
+
+    <div class="section-label">📜 Napoleon's Key Contributions</div>
+    <div class="card-grid">
+      <div class="card card-gold"><div class="card-title">⚖️ Napoleonic Code (1804)</div><div class="card-body">Revolutionary legal system that codified: equality before law, property rights, freedom of religion, abolition of feudalism. Became basis for legal systems in France, Italy, Spain, Belgium, Quebec, Louisiana and many others. Still influences 40+ countries today.</div></div>
+      <div class="card card-blue"><div class="card-title">🏛️ Administrative Reforms</div><div class="card-body">Centralized French government, created prefectural system, established the Bank of France (1800), reformed education with lycée system (still exists), created merit-based system replacing aristocratic privilege.</div></div>
+      <div class="card card-green"><div class="card-title">🌍 Spread of Revolutionary Ideals</div><div class="card-body">Napoleon's armies carried the principles of the French Revolution — liberty, equality, fraternity — across Europe. Abolished feudalism in occupied territories, sparking nationalist movements that would reshape Europe for decades.</div></div>
+      <div class="card card-red"><div class="card-title">💀 The Human Cost</div><div class="card-body">Napoleonic Wars killed 3.5 million military personnel and up to 2–3 million civilians. France lost 400,000 in the disastrous Russian Campaign (1812) alone. The scale of devastation was unprecedented until WWI.</div></div>
+    </div>
+
+    <div class="section-label">🗺️ Napoleon's Wars at a Glance</div>
+    <table class="data-table">
+      <thead><tr><th class="gold-th">Year</th><th class="gold-th">War / Battle</th><th class="gold-th">Result</th><th class="gold-th">Significance</th></tr></thead>
+      <tbody>
+        <tr><td class="text-gold bold">1799–1802</td><td>War of the Second Coalition</td><td>🟢 France victorious</td><td>Treaty of Amiens — brief European peace</td></tr>
+        <tr><td class="text-gold bold">1805</td><td>Battle of Austerlitz</td><td>🟢 Napoleon's greatest victory</td><td>Defeated Austria + Russia simultaneously; called "The Sun of Austerlitz"</td></tr>
+        <tr><td class="text-gold bold">1805</td><td>Battle of Trafalgar (Naval)</td><td>🔴 France/Spain defeated</td><td>Nelson (Britain) wins; Napoleon never again controls seas</td></tr>
+        <tr><td class="text-gold bold">1806</td><td>Battle of Jena</td><td>🟢 France victorious</td><td>Prussia crushed; Napoleon enters Berlin in triumph</td></tr>
+        <tr><td class="text-gold bold">1807</td><td>Treaty of Tilsit</td><td>🟢 Napoleon at peak power</td><td>Russia (Tsar Alexander) meets Napoleon on a raft mid-river</td></tr>
+        <tr><td class="text-gold bold">1812</td><td>Russian Campaign</td><td>🔴 Catastrophic failure</td><td>600,000 troops entered Russia; ~400,000 never returned. Turning point</td></tr>
+        <tr><td class="text-gold bold">1813</td><td>Battle of Leipzig ("Battle of Nations")</td><td>🔴 France defeated</td><td>Largest battle in European history until WWI; Napoleon abdicated</td></tr>
+        <tr class="highlight-row"><td class="text-gold bold">1815</td><td>⚡ Battle of Waterloo</td><td>🔴 FINAL DEFEAT</td><td>Wellington (Britain) + Blücher (Prussia) end Napoleon forever. Exiled to Saint Helena until death (1821)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="fact-box"><p>Napoleon was not actually short — he was 5'7" (1.70m), average for his time. The "short Napoleon" myth came from British propaganda cartoonists and a misunderstanding: French inches were longer than English inches, making his recorded height of 5'2" in French units actually 5'7" in English units.</p></div>
+
+    <div class="section-label">🌐 Congress of Vienna (1815)</div>
+    <div class="info-box" style="border-color:var(--purple);background:rgba(156,39,176,0.08);">
+      <strong style="color:var(--purple2)">Post-Napoleon Europe Redrawn:</strong> After Napoleon's defeat, the Great Powers (Austria, Britain, Prussia, Russia, France) met at Vienna to restore the pre-revolutionary order. Key decisions: Restored monarchies across Europe · Created a "Concert of Europe" to prevent future conflicts · Established Belgium, Netherlands, and a German Confederation · Gave Austria dominance in Central Europe · The settlement lasted (with modifications) until WWI — a rare achievement of lasting diplomatic peace.
+    </div>
+
+    <div class="tag-row">
+      <span class="tag tag-gold">Napoleonic Code</span>
+      <span class="tag tag-red">Wars of Coalition</span>
+      <span class="tag tag-cyan">Continental System</span>
+      <span class="tag tag-green">Lycée System</span>
+      <span class="tag tag-purple">Bank of France</span>
+      <span class="tag tag-orange">Battle of Waterloo</span>
+      <span class="tag tag-blue">Congress of Vienna</span>
+      <span class="tag tag-pink">Elba & St. Helena</span>
+    </div>
+  </div>
+
+  <!-- ============== ERA 5: INDUSTRIAL REVOLUTION ============== -->
+  <div id="industrial">
+    <div class="era-header era-industrial">
+      <div class="era-icon">🏭</div>
+      <div>
+        <div class="era-title">ERA 5 — THE INDUSTRIAL REVOLUTION</div>
+        <div class="era-dates">1760s – 1840s · Britain → World</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-cyan">1760s</div><div class="stat-label">Revolution Begins</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">1769</div><div class="stat-label">Steam Engine Patent</div></div>
+      <div class="stat-box"><div class="stat-num text-green">1825</div><div class="stat-label">First Railway</div></div>
+      <div class="stat-box"><div class="stat-num text-pink">1848</div><div class="stat-label">Communist Manifesto</div></div>
+    </div>
+
+    <div class="section-label">⚡ Four Dimensions of Impact</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="cyan-th">Dimension</th>
+          <th class="cyan-th">Positive Impacts ✅</th>
+          <th class="cyan-th">Negative Impacts ❌</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-cyan bold">🏛️ POLITICS</td>
+          <td>Rise of Capitalism & Middle Class (doctors, engineers, lawyers). Parliamentary reforms. Trade Union recognition (1825). Chartist Movement for workers' rights.</td>
+          <td>Initial suppression of labor movements. Feudal aristocracy resisted democratic reforms. Child labor legally permitted well into the 19th century.</td>
+        </tr>
+        <tr>
+          <td class="text-gold bold">💰 ECONOMY</td>
+          <td>Mass production. Railways & steam ships linked global markets. Wealth creation at unprecedented scale. New professions and middle class emerged.</td>
+          <td>Workers: 12–15 hour days, inhuman conditions, slums, no healthcare. Cottage industries destroyed. Wealth concentrated in hands of factory owners.</td>
+        </tr>
+        <tr>
+          <td class="text-green bold">🌱 ENVIRONMENT</td>
+          <td>New understanding of natural resources. Later spurred environmental protection movements and international treaties.</td>
+          <td>Deforestation for railways & factories. Chemical waste in rivers. CO₂, SO₂, CFCs → global warming, acid rain. Urban air quality catastrophic (London "smog").</td>
+        </tr>
+        <tr>
+          <td class="text-purple bold">👥 SOCIETY</td>
+          <td>New social classes. Urbanization. Women entered workforce. Mass literacy grew. Communication networks expanded.</td>
+          <td>Class struggle intensified. Child labor epidemic. Overcrowded, disease-ridden slums. Traditional family structures disrupted. Rural communities decimated.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-box info-cyan">📜 <strong>International Environmental Responses:</strong> The environmental damage of industrialization eventually prompted the Kyoto Protocol, Paris Accord (2015), Montreal Protocol (ozone layer), and the Carbon Credit Scheme — all direct legacies of decisions made in the 18th and 19th centuries.</div>
+  </div>
+
+  <!-- ============== ERA 6: IMPERIALISM ============== -->
+  <div id="imperialism">
+    <div class="era-header era-imperialism">
+      <div class="era-icon">🌐</div>
+      <div>
+        <div class="era-title">ERA 6 — IMPERIALISM & COLONIALISM</div>
+        <div class="era-dates">19th Century · Europe → Africa, Asia, Americas</div>
+      </div>
+    </div>
+
+    <div class="section-label">🗺️ Colonial Powers & Their Empires</div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="purple-th">Colonial Power</th>
+          <th class="purple-th">Primary Territories</th>
+          <th class="purple-th">Peak Empire Size</th>
+          <th class="purple-th">Key Resource Extracted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="text-gold bold">🇬🇧 Britain</td><td>India, Australia, Canada, Africa, Middle East, SE Asia</td><td>35.5 million km² — largest empire in history</td><td>Cotton, tea, opium, gold, spices</td></tr>
+        <tr><td class="text-blue bold">🇫🇷 France</td><td>West & North Africa, Indochina, Caribbean</td><td>13.5 million km² — second largest</td><td>Sugar, rubber, oil, phosphates</td></tr>
+        <tr><td class="text-red bold">🇪🇸 Spain</td><td>Latin America, Philippines, Caribbean</td><td>20 million km² at peak (16th–17th C)</td><td>Silver, gold, sugar, tobacco</td></tr>
+        <tr><td class="text-cyan bold">🇳🇱 Netherlands</td><td>Indonesia (Dutch East Indies), Caribbean, South Africa</td><td>4 million km²</td><td>Spices (nutmeg, cloves), rubber</td></tr>
+        <tr><td class="text-orange bold">🇩🇪 Germany</td><td>Namibia, Tanzania, Cameroon, Pacific Islands</td><td>2.9 million km²</td><td>Raw materials, African labor</td></tr>
+        <tr><td class="text-purple bold">🇯🇵 Japan</td><td>Korea, Manchuria, China, Pacific</td><td>7.4 million km²</td><td>Coal, iron ore, food, labor</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box info-purple">⚠️ <strong>Critical Connection:</strong> Ultra-nationalism + military buildup to compete for colonies was a DIRECT cause of World War I. The scramble for Africa and Asia created the rivalries and alliance systems that would explode in 1914.</div>
+  </div>
+
+  <!-- ============== ERA 7: UNIFICATION ============== -->
+  <div id="unification">
+    <div class="era-header era-unification">
+      <div class="era-icon">🇩🇪</div>
+      <div>
+        <div class="era-title">ERA 7 — UNIFICATION OF GERMANY & ITALY</div>
+        <div class="era-dates">1815 – 1871 · Nationalism Reshapes Europe</div>
+      </div>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(180,180,180,0.04)">
+        <div class="compare-col-title" style="color:#ccc">🇩🇪 GERMAN UNIFICATION (1864–1871)</div>
+        <div class="compare-item"><strong style="color:#ffd700">Key Figure:</strong> Otto von Bismarck — "Iron Chancellor" of Prussia. Policy: <em>"Blood and Iron"</em> — force, not speeches, would unite Germany.</div>
+        <div class="compare-item"><strong style="color:#aaa">1864:</strong> Prussia + Austria defeat Denmark → gain Schleswig & Holstein</div>
+        <div class="compare-item"><strong style="color:#aaa">1866:</strong> Austro-Prussian War (7 Weeks War) — Prussia defeats Austria</div>
+        <div class="compare-item"><strong style="color:#aaa">1870:</strong> Ems Telegram — Bismarck edited King's telegram to provoke France</div>
+        <div class="compare-item"><strong style="color:#aaa">1870–71:</strong> Franco-Prussian War — Prussia humiliates France</div>
+        <div class="compare-item"><strong style="color:#ffd700">Jan 18, 1871:</strong> German Empire proclaimed at Palace of Versailles. Kaiser Wilhelm I = Emperor; Bismarck = Chancellor.</div>
+        <div class="compare-item" style="color:#ff8888">⚠️ Legacy: New powerful state at Europe's center → colonial competition → direct cause of WWI</div>
+      </div>
+      <div class="compare-col" style="background:rgba(0,100,200,0.04)">
+        <div class="compare-col-title" style="color:#82b1ff">🇮🇹 ITALIAN UNIFICATION — RISORGIMENTO (1815–1870)</div>
+        <div class="compare-item"><strong style="color:#ffd700">Meaning:</strong> Risorgimento = "Resurgence" — revival of ancient Roman glory.</div>
+        <div class="compare-item"><strong style="color:#82b1ff">Key Figures:</strong> Cavour (Piedmont PM — diplomat), Garibaldi (Red Shirts — military), Mazzini (ideological father — "Young Italy")</div>
+        <div class="compare-item"><strong style="color:#aaa">Geography:</strong> Peninsula surrounded by sea on 3 sides + Alps in north → distinct cultural identity that Mazzini leveraged</div>
+        <div class="compare-item"><strong style="color:#aaa">1861:</strong> Kingdom of Italy proclaimed — Victor Emmanuel II = first King</div>
+        <div class="compare-item"><strong style="color:#aaa">1866:</strong> Venetia added after Austro-Prussian War</div>
+        <div class="compare-item"><strong style="color:#82b1ff">1870:</strong> Rome incorporated — Pope loses temporal power; Italy fully unified</div>
+        <div class="compare-item" style="color:#ff8888">⚠️ Legacy: Rise of nationalism; Mussolini later exploited Italian nationalist sentiment to establish fascism</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== ERA 8: WWI ============== -->
+  <div id="ww1">
+    <div class="era-header era-ww1">
+      <div class="era-icon">💣</div>
+      <div>
+        <div class="era-title">ERA 8 — WORLD WAR I</div>
+        <div class="era-dates">1914 – 1918 · 20 Million Dead · "The War to End All Wars"</div>
+      </div>
+    </div>
+
+    <!-- MAIN CAUSES MIND MAP -->
+    <div class="section-label">🔥 Causes — M.A.I.N. Framework</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <!-- Center -->
+        <ellipse cx="450" cy="200" rx="100" ry="55" fill="#1a0500" stroke="#ff8c00" stroke-width="2"/>
+        <text x="450" y="194" text-anchor="middle" fill="#ff8c00" font-family="Cinzel,serif" font-size="14" font-weight="bold">WORLD WAR I</text>
+        <text x="450" y="212" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="12">Causes: M.A.I.N.</text>
+
+        <!-- M - Militarism -->
+        <line x1="355" y1="175" x2="215" y2="90" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="30" y="40" width="210" height="90" rx="8" fill="#150000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="135" y="68" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">M — MILITARISM 🪖</text>
+        <text x="135" y="87" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Massive army &amp; navy buildups</text>
+        <text x="135" y="103" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">"Prussia doesn't have an army —</text>
+        <text x="135" y="119" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">the army has Prussia"</text>
+
+        <!-- A - Alliances -->
+        <line x1="355" y1="210" x2="215" y2="210" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="30" y="165" width="210" height="90" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="135" y="193" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">A — ALLIANCES 🤝</text>
+        <text x="135" y="212" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Triple Alliance: Germany +</text>
+        <text x="135" y="228" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Austria-Hungary + Italy</text>
+        <text x="135" y="244" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">vs Triple Entente: Fr + Ru + UK</text>
+
+        <!-- I - Imperialism -->
+        <line x1="355" y1="230" x2="215" y2="310" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="30" y="275" width="210" height="90" rx="8" fill="#0f0015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="135" y="303" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">I — IMPERIALISM 🌐</text>
+        <text x="135" y="322" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Competition for colonies</text>
+        <text x="135" y="338" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Africa &amp; Asia powder keg</text>
+        <text x="135" y="354" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Morocco Crises (1905, 1911)</text>
+
+        <!-- N - Nationalism -->
+        <line x1="548" y1="175" x2="680" y2="90" stroke="#00e676" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="660" y="40" width="220" height="90" rx="8" fill="#001a08" stroke="#00e676" stroke-width="1.5"/>
+        <text x="770" y="68" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">N — NATIONALISM 🚩</text>
+        <text x="770" y="87" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Serbian pan-Slavic nationalism</text>
+        <text x="770" y="103" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">threatened Austria-Hungary's</text>
+        <text x="770" y="119" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">multi-ethnic empire</text>
+
+        <!-- Trigger -->
+        <line x1="548" y1="210" x2="680" y2="210" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="660" y="165" width="220" height="90" rx="8" fill="#150010" stroke="#ff4081" stroke-width="1.5"/>
+        <text x="770" y="193" text-anchor="middle" fill="#ff4081" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">💥 THE TRIGGER</text>
+        <text x="770" y="212" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">June 28, 1914: Archduke Franz</text>
+        <text x="770" y="228" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Ferdinand assassinated by</text>
+        <text x="770" y="244" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Gavrilo Princip (Serbian nationalist)</text>
+
+        <!-- Alliance Domino Effect -->
+        <line x1="548" y1="230" x2="680" y2="310" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <rect x="660" y="275" width="220" height="90" rx="8" fill="#001015" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="770" y="303" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">🌊 DOMINO EFFECT</text>
+        <text x="770" y="322" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Alliance system dragged all</text>
+        <text x="770" y="338" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">major powers into war</text>
+        <text x="770" y="354" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">within just 6 weeks</text>
+      </svg>
+    </div>
+
+    <div class="section-label">📅 Key Events Timeline</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--pink);color:var(--pink)">💥</div><div class="tl-content"><div class="tl-date">June 28, 1914</div><div class="tl-text"><strong class="text-pink">Assassination of Archduke Franz Ferdinand</strong> — Heir to Austro-Hungarian throne, shot by 19-year-old Gavrilo Princip in Sarajevo. Austria issued a harsh ultimatum to Serbia, setting the alliance system into motion like dominoes falling.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">🇩🇪</div><div class="tl-content"><div class="tl-date">August 1914</div><div class="tl-text"><strong class="text-red">Germany Invades Belgium (Schlieffen Plan)</strong> — Germany's strategy to quickly knock out France before turning east to fight Russia. Violating Belgian neutrality brought Britain into the war immediately under the Treaty of London (1839).</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">⚔️</div><div class="tl-content"><div class="tl-date">1914–1916</div><div class="tl-text"><strong class="text-orange">Trench Warfare on the Western Front</strong> — The most iconic and horrific aspect of WWI. Men lived in waterlogged trenches for months, suffering poison gas attacks, shell shock (PTSD), and charging into machine gun fire for yards of territory. Millions died in virtual stalemate.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">💀</div><div class="tl-content"><div class="tl-date">1916</div><div class="tl-text"><strong class="text-red">Battle of Somme & Battle of Verdun</strong> — The Somme: 57,470 British casualties on the FIRST DAY (July 1, 1916) alone — the bloodiest day in British military history. Total casualties: 1 million+. Verdun: 700,000+ casualties over 10 months of fighting for a few kilometers.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">🇺🇸</div><div class="tl-content"><div class="tl-date">April 1917</div><div class="tl-text"><strong class="text-blue">USA Enters the War</strong> — Triggered by Germany's unrestricted submarine warfare (sinking American ships) and the Zimmermann Telegram (Germany urged Mexico to attack USA). Fresh American troops tipped the balance decisively toward the Allies.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">🔴</div><div class="tl-content"><div class="tl-date">November 1917</div><div class="tl-text"><strong class="text-red">Russian Revolution</strong> — Bolsheviks (Lenin's communists) overthrew the Tsar and signed the Treaty of Brest-Litovsk, withdrawing Russia from WWI. This freed 1 million German soldiers from the Eastern Front — but America's entry counterbalanced the shift.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--green);color:var(--green)">🕊️</div><div class="tl-content"><div class="tl-date">November 11, 1918</div><div class="tl-text"><strong class="text-green">Armistice — WWI Ends</strong> — At the 11th hour of the 11th day of the 11th month, guns fell silent. 20 million dead. The "war to end all wars" — but the peace terms would directly plant the seeds of WWII.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">📜</div><div class="tl-content"><div class="tl-date">1919</div><div class="tl-text"><strong class="text-gold">Treaty of Versailles</strong> — Germany was forced to: accept sole blame (War Guilt Clause, Article 231), pay £6.6 billion in reparations, lose 13% of territory and all colonies, limit army to 100,000. The humiliation would directly fuel Hitler's rise.</div></div></div>
+    </div>
+  </div>
+
+
+  <!-- ============== RUSSIAN REVOLUTION (NEW) ============== -->
+  <div id="russian-revolution">
+    <div class="era-header era-russian">
+      <div class="era-icon">🔴</div>
+      <div>
+        <div class="era-title">ERA 8b — THE RUSSIAN REVOLUTION<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1917 · February Revolution + October Revolution · Birth of the Soviet Union</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-red">1917</div><div class="stat-label">Year of Revolution</div></div>
+      <div class="stat-box"><div class="stat-num text-orange">300 Yrs</div><div class="stat-label">Romanov Dynasty Ends</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">1922</div><div class="stat-label">USSR Formally Founded</div></div>
+      <div class="stat-box"><div class="stat-num text-pink">10M+</div><div class="stat-label">Dead: Revolution + Civil War</div></div>
+    </div>
+
+    <div class="section-label">📅 Two Revolutions in One Year</div>
+    <div class="side-by-side">
+      <div class="card" style="border-top: 3px solid #ff8c00;">
+        <div class="card-title" style="color:#ff8c00">🌅 FEBRUARY REVOLUTION (March 1917)</div>
+        <div class="card-body">
+          <strong>Trigger:</strong> WWI disasters, food shortages, mass strikes in Petrograd (St. Petersburg)<br><br>
+          <strong>What happened:</strong> Workers & soldiers revolted. Tsar Nicholas II lost army support and abdicated (March 2/15, 1917). After <strong>300 years of Romanov rule</strong>, the dynasty ended.<br><br>
+          <strong>Result:</strong> Provisional Government formed (led by Kerensky) — but fatally chose to continue WWI. This decision would seal their fate.
+        </div>
+      </div>
+      <div class="card" style="border-top: 3px solid #ff4444;">
+        <div class="card-title" style="color:#ff4444">🔴 OCTOBER REVOLUTION (November 1917)</div>
+        <div class="card-body">
+          <strong>Trigger:</strong> Provisional Government's continued war involvement + economic misery<br><br>
+          <strong>What happened:</strong> Lenin's Bolsheviks (with Trotsky leading Red Guard) stormed the Winter Palace on Oct 25/Nov 7, 1917. Provisional Government collapsed overnight.<br><br>
+          <strong>Lenin's Promises:</strong> "Peace, Land, Bread" — immediate appeal to war-weary, starving masses<br><br>
+          <strong>Result:</strong> World's first communist state. <strong>Treaty of Brest-Litovsk (1918)</strong>: Russia exited WWI, ceding massive territory to Germany.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">🧠 Russian Revolution Mind Map</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <!-- Center -->
+        <ellipse cx="450" cy="240" rx="100" ry="55" fill="#1a0000" stroke="#ff4444" stroke-width="2"/>
+        <text x="450" y="234" text-anchor="middle" fill="#ff4444" font-family="Cinzel,serif" font-size="13" font-weight="bold">RUSSIAN</text>
+        <text x="450" y="252" text-anchor="middle" fill="#ff4444" font-family="Cinzel,serif" font-size="13" font-weight="bold">REVOLUTION</text>
+        <text x="450" y="268" text-anchor="middle" fill="#ff8888" font-family="Rajdhani,sans-serif" font-size="10">1917</text>
+
+        <!-- CAUSES left -->
+        <line x1="354" y1="215" x2="215" y2="120" stroke="#ff8c00" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="50" y="70" width="175" height="90" rx="8" fill="#1a0a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="137" y="95" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">⚡ CAUSES</text>
+        <text x="137" y="113" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">WWI catastrophic losses</text>
+        <text x="137" y="129" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Food shortages &amp; poverty</text>
+        <text x="137" y="145" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Tsar's autocratic rule</text>
+
+        <!-- KEY FIGURES -->
+        <line x1="354" y1="240" x2="205" y2="240" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="30" y="200" width="180" height="90" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="120" y="225" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">👤 KEY FIGURES</text>
+        <text x="120" y="243" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Lenin: Bolshevik leader</text>
+        <text x="120" y="259" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Trotsky: Red Army creator</text>
+        <text x="120" y="275" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Stalin: Lenin's successor</text>
+
+        <!-- AFTERMATH -->
+        <line x1="354" y1="265" x2="215" y2="355" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="50" y="320" width="175" height="90" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="137" y="345" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🔴 AFTERMATH</text>
+        <text x="137" y="363" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Civil War 1917–22</text>
+        <text x="137" y="379" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Red vs White armies</text>
+        <text x="137" y="395" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">USSR formed 1922</text>
+
+        <!-- IDEOLOGY right -->
+        <line x1="546" y1="215" x2="680" y2="120" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="665" y="70" width="175" height="90" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="752" y="95" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">📖 IDEOLOGY</text>
+        <text x="752" y="113" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Marxism-Leninism</text>
+        <text x="752" y="129" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Abolish private property</text>
+        <text x="752" y="145" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Proletariat dictatorship</text>
+
+        <!-- GLOBAL IMPACT -->
+        <line x1="546" y1="240" x2="690" y2="240" stroke="#00e676" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="685" y="200" width="185" height="90" rx="8" fill="#001a08" stroke="#00e676" stroke-width="1.5"/>
+        <text x="777" y="225" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🌍 GLOBAL IMPACT</text>
+        <text x="777" y="243" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Fear of communism in West</text>
+        <text x="777" y="259" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Inspired revolutions globally</text>
+        <text x="777" y="275" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Cold War roots planted</text>
+
+        <!-- CIVIL WAR -->
+        <line x1="546" y1="265" x2="680" y2="355" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="665" y="320" width="175" height="90" rx="8" fill="#150010" stroke="#ff4081" stroke-width="1.5"/>
+        <text x="752" y="345" text-anchor="middle" fill="#ff4081" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">⚔️ CIVIL WAR</text>
+        <text x="752" y="363" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Red Army (Bolsheviks)</text>
+        <text x="752" y="379" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">White Army (Anti-communist)</text>
+        <text x="752" y="395" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Reds win by 1922</text>
+      </svg>
+    </div>
+
+    <div class="persona-card">
+      <div class="persona-avatar" style="border-color:#ff4444;background:rgba(255,68,68,0.1)">🔴</div>
+      <div>
+        <div class="persona-name" style="color:#ff8888">Vladimir Lenin (1870–1924)</div>
+        <div class="persona-role" style="color:#ff4444">Leader of Bolshevik Revolution · First Soviet Head of State</div>
+        <div class="persona-desc">Lenin developed Marxism-Leninism — adapting Marx's theories for a largely agrarian Russia. His promise of "Peace, Land, Bread" resonated with exhausted WWI soldiers, starving peasants, and overworked factory workers. After seizing power, he signed the humiliating Treaty of Brest-Litovsk (1918) to end Russian involvement in WWI, surrendering vast territories to Germany — a pragmatic decision he called "obscene peace." His New Economic Policy (NEP, 1921) partially restored capitalism to rescue the economy from collapse. He died in 1924, warning in his testament against Stalin's "coarseness."</div>
+      </div>
+    </div>
+
+    <div class="fact-box"><p>The Romanov family (Tsar Nicholas II, Empress Alexandra, and their 5 children including 13-year-old Alexei and 17-year-old Anastasia) were executed by Bolsheviks in a basement in Yekaterinburg on July 17, 1918. This was kept secret for decades. Their remains were only officially confirmed by DNA testing in 2009.</p></div>
+  </div>
+
+  <!-- ============== ERA 9: LEAGUE OF NATIONS ============== -->
+  <div id="league">
+    <div class="era-header era-league">
+      <div class="era-icon">🕊️</div>
+      <div>
+        <div class="era-title">ERA 9 — LEAGUE OF NATIONS</div>
+        <div class="era-dates">1920 – 1946 · World's First International Peacekeeping Body</div>
+      </div>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(0,200,100,0.04)">
+        <div class="compare-col-title text-green">✅ ACHIEVEMENTS</div>
+        <div class="compare-item">✦ Settled border disputes (Albania-Greece 1921, Memel 1923)</div>
+        <div class="compare-item">✦ Resolved Upper Silesia between Germany & Poland</div>
+        <div class="compare-item">✦ Protected ethnic minorities in new post-war states</div>
+        <div class="compare-item">✦ ILO: established international labor standards</div>
+        <div class="compare-item">✦ Health Organization fought disease pandemics</div>
+        <div class="compare-item">✦ Refugee resettlement after WWI</div>
+        <div class="compare-item">✦ Fought international drug trafficking & slavery</div>
+        <div class="compare-item">✦ Mandated territories supervised (Palestine, Iraq, etc.)</div>
+      </div>
+      <div class="compare-col" style="background:rgba(200,50,50,0.04)">
+        <div class="compare-col-title text-red">❌ FAILURES & REASONS</div>
+        <div class="compare-item">✦ USA never joined (Senate rejected Wilson's vision)</div>
+        <div class="compare-item">✦ No military force to enforce decisions</div>
+        <div class="compare-item">✦ Unanimity rule: one veto killed any resolution</div>
+        <div class="compare-item">✦ Failed to stop Japan in Manchuria (1931)</div>
+        <div class="compare-item">✦ Failed to stop Italy invading Ethiopia (1935)</div>
+        <div class="compare-item">✦ Failed to stop German remilitarization (1936)</div>
+        <div class="compare-item">✦ Appeasement policies undermined collective security</div>
+        <div class="compare-item">✦ Replaced by UN after WWII (1945)</div>
+      </div>
+    </div>
+
+    <div class="info-box info-green">
+      <strong>Structure:</strong> General Assembly (all members, 1 vote each, annual) · Council (4 permanent + 4 non-permanent) · Secretariat · PCIJ (first international court) · ILO · HQ: Geneva, Switzerland · Founded: January 10, 1920 · Brainchild of US President Woodrow Wilson (his 14th Point)
+    </div>
+  </div>
+
+  <!-- ============== ERA 10: GREAT DEPRESSION ============== -->
+  <div id="depression">
+    <div class="era-header era-depression">
+      <div class="era-icon">📉</div>
+      <div>
+        <div class="era-title">ERA 10 — THE GREAT DEPRESSION</div>
+        <div class="era-dates">1929 – 1939 · Wall Street to the World</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-red">25%</div><div class="stat-label">US Unemployment Peak</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#888">-65%</div><div class="stat-label">Global Trade Drop</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">1929</div><div class="stat-label">Black Tuesday Crash</div></div>
+      <div class="stat-box"><div class="stat-num text-blue">$12B</div><div class="stat-label">New Deal Spending</div></div>
+    </div>
+
+    <!-- DEPRESSION FLOWCHART -->
+    <div class="flowchart-wrap">
+      <svg viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+          </marker>
+        </defs>
+        <rect x="10" y="40" width="140" height="70" rx="8" fill="#150000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="80" y="68" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">📉 WALL ST CRASH</text>
+        <text x="80" y="84" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Oct 1929</text>
+        <text x="80" y="98" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Stocks collapse</text>
+        <line x1="150" y1="75" x2="178" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <rect x="180" y="40" width="150" height="70" rx="8" fill="#100010" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="255" y="68" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🏦 BANK FAILURES</text>
+        <text x="255" y="84" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">US calls in global loans</text>
+        <text x="255" y="98" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">European banks collapse</text>
+        <line x1="330" y1="75" x2="358" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <rect x="360" y="40" width="150" height="70" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="435" y="68" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">📦 TRADE COLLAPSE</text>
+        <text x="435" y="84" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Global trade falls 65%</text>
+        <text x="435" y="98" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Mass unemployment</text>
+        <line x1="510" y1="75" x2="538" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <rect x="540" y="40" width="160" height="70" rx="8" fill="#150500" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="620" y="68" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">😡 SOCIAL UNREST</text>
+        <text x="620" y="84" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Germany worst hit</text>
+        <text x="620" y="98" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Fascism rises: Hitler</text>
+        <line x1="700" y1="75" x2="728" y2="75" stroke="#888" stroke-width="1.5" marker-end="url(#arr3)"/>
+        <rect x="730" y="40" width="150" height="70" rx="8" fill="#050010" stroke="#ff4081" stroke-width="1.5"/>
+        <text x="805" y="68" text-anchor="middle" fill="#ff4081" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">💥 WORLD WAR II</text>
+        <text x="805" y="84" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Depression → fascism</text>
+        <text x="805" y="98" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">→ WW2 (1939)</text>
+      </svg>
+    </div>
+  </div>
+    <div class="section-label">🔄 Great Depression — Cause & Effect Flowchart</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+          </marker>
+        </defs>
+        <rect x="20" y="60" width="140" height="70" rx="8" fill="#1a0000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="90" y="85" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">⚡ Wall Street</text>
+        <text x="90" y="102" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Oct 1929 Crash</text>
+        <text x="90" y="118" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">$30B lost in days</text>
+        <line x1="160" y1="95" x2="183" y2="95" stroke="#888" stroke-width="1.5" marker-end="url(#arrD)"/>
+
+        <rect x="183" y="60" width="140" height="70" rx="8" fill="#0a0a00" stroke="#888" stroke-width="1.5"/>
+        <text x="253" y="85" text-anchor="middle" fill="#aaa" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🏦 Banks Fail</text>
+        <text x="253" y="102" text-anchor="middle" fill="#888" font-family="Rajdhani,sans-serif" font-size="10">9,000 banks close</text>
+        <text x="253" y="118" text-anchor="middle" fill="#888" font-family="Rajdhani,sans-serif" font-size="10">Savings wiped out</text>
+        <line x1="323" y1="95" x2="346" y2="95" stroke="#888" stroke-width="1.5" marker-end="url(#arrD)"/>
+
+        <rect x="346" y="60" width="140" height="70" rx="8" fill="#001500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="416" y="85" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🌍 Global Spread</text>
+        <text x="416" y="102" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">US calls in loans</text>
+        <text x="416" y="118" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Europe collapses too</text>
+        <line x1="486" y1="95" x2="509" y2="95" stroke="#888" stroke-width="1.5" marker-end="url(#arrD)"/>
+
+        <rect x="509" y="60" width="140" height="70" rx="8" fill="#1a0800" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="579" y="85" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">📉 Mass Unemployment</text>
+        <text x="579" y="102" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">25% US unemployed</text>
+        <text x="579" y="118" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Poverty · Breadlines</text>
+        <line x1="649" y1="95" x2="672" y2="95" stroke="#888" stroke-width="1.5" marker-end="url(#arrD)"/>
+
+        <rect x="672" y="60" width="140" height="70" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="742" y="85" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🔥 Rise of Extremism</text>
+        <text x="742" y="102" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Hitler (Germany)</text>
+        <text x="742" y="118" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Fascism spreads → WWII</text>
+
+        <!-- Second row effects -->
+        <text x="90" y="175" text-anchor="middle" fill="#666" font-family="Rajdhani,sans-serif" font-size="11">🇺🇸 FDR New Deal</text>
+        <text x="90" y="193" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">1933: Jobs programs</text>
+        <text x="90" y="209" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">Social Security created</text>
+        <line x1="90" y1="130" x2="90" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <text x="253" y="175" text-anchor="middle" fill="#666" font-family="Rajdhani,sans-serif" font-size="11">📜 Smoot-Hawley Tariff</text>
+        <text x="253" y="193" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">1930: Trade barriers</text>
+        <text x="253" y="209" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">Worsened global trade</text>
+        <line x1="253" y1="130" x2="253" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <text x="416" y="175" text-anchor="middle" fill="#666" font-family="Rajdhani,sans-serif" font-size="11">🇯🇵 Japan Militarizes</text>
+        <text x="416" y="193" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">1931 Manchuria invasion</text>
+        <text x="416" y="209" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">Army controls govt</text>
+        <line x1="416" y1="130" x2="416" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <text x="579" y="175" text-anchor="middle" fill="#666" font-family="Rajdhani,sans-serif" font-size="11">🇩🇪 Weimar Fails</text>
+        <text x="579" y="193" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">Nazi votes 2%→37%</text>
+        <text x="579" y="209" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">1928 to 1932</text>
+        <line x1="579" y1="130" x2="579" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <text x="742" y="175" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="11">💀 WORLD WAR II</text>
+        <text x="742" y="193" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Depression's ultimate</text>
+        <text x="742" y="209" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">catastrophic consequence</text>
+        <line x1="742" y1="130" x2="742" y2="165" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+      </svg>
+    </div>
+    <div class="fact-box"><p>The Dust Bowl (1930–1936) compounded the Great Depression in the US: drought + poor farming practices turned Oklahoma, Texas and neighboring states into a barren wasteland. 3.5 million people ("Okies") were displaced — immortalized in John Steinbeck's "The Grapes of Wrath" (1939).</p></div>
+
+
+  <!-- ============== ERA 11: NAZISM ============== -->
+  <div id="nazism">
+    <div class="era-header era-nazism">
+      <div class="era-icon">⚡</div>
+      <div>
+        <div class="era-title">ERA 11 — RISE OF NAZISM & FASCISM</div>
+        <div class="era-dates">1920s – 1930s · Germany & Italy</div>
+      </div>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(150,0,0,0.06)">
+        <div class="compare-col-title text-red">🇩🇪 HITLER & NAZI GERMANY</div>
+        <div class="compare-item"><strong style="color:#ff6666">Born:</strong> April 1889, Braunau am Inn, Austria</div>
+        <div class="compare-item"><strong style="color:#aaa">1914–18:</strong> Served as corporal in WWI German army; awarded Iron Cross. Devastated by Germany's defeat.</div>
+        <div class="compare-item"><strong style="color:#aaa">1920:</strong> Renames party → NSDAP (Nazi Party). Extreme nationalist, anti-Semitic, anti-Marxist agenda.</div>
+        <div class="compare-item"><strong style="color:#aaa">Nov 1923:</strong> Beer Hall Putsch fails — Hitler jailed. Writes <em>Mein Kampf</em> in prison (his autobiographical manifesto).</div>
+        <div class="compare-item"><strong style="color:#aaa">1928:</strong> Nazis get only 2.6% of the vote. Economy recovering under Weimar Republic.</div>
+        <div class="compare-item"><strong style="color:#ff8888">1929:</strong> Great Depression hits → Nazis surge: "Work, Freedom & Bread" slogan resonates.</div>
+        <div class="compare-item"><strong style="color:#ff8888">Jan 30, 1933:</strong> Hitler appointed Chancellor by President Hindenburg.</div>
+        <div class="compare-item"><strong style="color:#ff4444">1933:</strong> Reichstag Fire → Enabling Act → Hitler becomes dictator with full legislative powers.</div>
+        <div class="compare-item"><strong style="color:#ff4444">1935:</strong> Nuremberg Laws — Jews stripped of citizenship and civil rights.</div>
+        <div class="compare-item"><strong style="color:#ff4444">Nov 1938:</strong> Kristallnacht ("Night of Broken Glass") — pogroms against Jews across Germany.</div>
+      </div>
+      <div class="compare-col" style="background:rgba(100,50,0,0.06)">
+        <div class="compare-col-title text-orange">🇮🇹 MUSSOLINI & ITALIAN FASCISM</div>
+        <div class="compare-item"><strong style="color:#ff8c00">Benito Mussolini</strong> founded <em>Fasci di Combattimento</em> in 1919 — the original fascist movement. Word "fascism" comes from <em>fasces</em> (bundle of rods — symbol of Roman strength).</div>
+        <div class="compare-item"><strong style="color:#aaa">1922:</strong> March on Rome — 30,000 blackshirts marched. King Victor Emmanuel III appointed Mussolini PM to avoid civil war.</div>
+        <div class="compare-item"><strong style="color:#aaa">"Il Duce" ("The Leader")</strong> — eliminated all opposition; total control by 1925. State controlled economy, media, education.</div>
+        <div class="compare-item"><strong style="color:#aaa">1935:</strong> Invaded Ethiopia. League of Nations imposed sanctions — too weak to stop him.</div>
+        <div class="compare-item"><strong style="color:#ff8c00">1936:</strong> Rome-Berlin Axis formed with Hitler. 1939: "Pact of Steel" military alliance.</div>
+        <div class="compare-item" style="color:#ffcc88">⚠️ Mussolini's successful coup directly inspired and emboldened Hitler's Beer Hall Putsch attempt in 1923.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== ERA 12: WWII ============== -->
+  <div id="ww2">
+    <div class="era-header era-ww2">
+      <div class="era-icon">🔫</div>
+      <div>
+        <div class="era-title">ERA 12 — WORLD WAR II</div>
+        <div class="era-dates">1939 – 1945 · 70–85 Million Dead · Deadliest Conflict in History</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-red">85M</div><div class="stat-label">Total Deaths</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:#888">6M</div><div class="stat-label">Holocaust Victims</div></div>
+      <div class="stat-box"><div class="stat-num text-orange">30</div><div class="stat-label">Nations Involved</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">1945</div><div class="stat-label">Atomic Bombs Used</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">6 Yrs</div><div class="stat-label">Duration</div></div>
+    </div>
+
+    <div class="section-label">📅 World War II Timeline</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">⚔️</div><div class="tl-content"><div class="tl-date">September 1939</div><div class="tl-text"><strong class="text-red">Germany Invades Poland — Blitzkrieg</strong> — "Lightning war" combined tanks, aircraft, artillery, and motorized infantry in unprecedented coordinated strikes. Poland fell in 35 days. Britain and France declared war, beginning WWII.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">✈️</div><div class="tl-content"><div class="tl-date">July – October 1940</div><div class="tl-text"><strong class="text-blue">Battle of Britain</strong> — The Luftwaffe launched massive air campaigns against British cities. The Royal Air Force, aided by radar technology, repelled the German air force. Churchill's speech: "Never in the field of human conflict was so much owed by so many to so few."</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">🔱</div><div class="tl-content"><div class="tl-date">June 1941</div><div class="tl-text"><strong class="text-orange">Operation Barbarossa</strong> — Germany's 3-million-man invasion of the Soviet Union — the largest military operation in history. Hitler broke the Nazi-Soviet Pact, opening a devastating Eastern Front. Eventually failed due to Russian winter, Soviet resilience, and overextension.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">💣</div><div class="tl-content"><div class="tl-date">December 7, 1941</div><div class="tl-text"><strong class="text-red">Pearl Harbor</strong> — Japan's surprise attack on the US Pacific Fleet in Hawaii. "A date which will live in infamy" (FDR). USA declared war on Japan the next day. Germany and Italy declared war on the USA — bringing the full industrial might of America into the conflict.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">⚔️</div><div class="tl-content"><div class="tl-date">1942–1943</div><div class="tl-text"><strong class="text-gold">Battle of Stalingrad</strong> — The largest and bloodiest battle in history. 2 million total casualties. Germany's defeat here was the decisive turning point of WWII in Europe. Soviet forces encircled and destroyed Germany's 6th Army — the myth of Nazi invincibility shattered forever.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">🛡️</div><div class="tl-content"><div class="tl-date">June 6, 1944</div><div class="tl-text"><strong class="text-cyan">D-Day — Operation Overlord</strong> — The largest amphibious military operation in history. 156,000 Allied troops landed on 5 Normandy beaches simultaneously. Opened the Western Front, liberating France and ultimately defeating Nazi Germany from both East and West.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">☢️</div><div class="tl-content"><div class="tl-date">August 6 & 9, 1945</div><div class="tl-text"><strong class="text-orange">Atomic Bombs on Hiroshima & Nagasaki</strong> — The Manhattan Project's culmination. "Little Boy" (Hiroshima: ~130,000 dead) and "Fat Man" (Nagasaki: ~70,000 dead) changed warfare forever. Japan surrendered September 2, 1945 — ending WWII and beginning the nuclear age.</div></div></div>
+    </div>
+
+    <div class="section-label">⚰️ The Holocaust</div>
+    <div class="info-box info-red">
+      <strong style="font-size:16px;">THE HOLOCAUST — 6 MILLION JEWS SYSTEMATICALLY MURDERED</strong><br><br>
+      The Nazi regime implemented the "Final Solution" — industrial-scale genocide. Death camps at Auschwitz, Treblinka, Sobibor, Belzec, Chelmno, and Majdanek used gas chambers and crematoria. Total victims including Jews, Roma, disabled persons, political prisoners, Slavs, and others: ~11 million.<br><br>
+      <strong>Nuremberg Trials (1945–46):</strong> First international war crimes tribunal. Established that "following orders" is not a defense. Created the legal concept of "crimes against humanity" — the foundation of modern international humanitarian law.
+    </div>
+  </div>
+
+  <!-- ============== ERA 13: COLD WAR ============== -->
+  <div id="coldwar">
+    <div class="era-header era-coldwar">
+      <div class="era-icon">🥶</div>
+      <div>
+        <div class="era-title">ERA 13 — THE COLD WAR</div>
+        <div class="era-dates">1947 – 1991 · USA vs USSR · Capitalism vs Communism</div>
+      </div>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(0,50,150,0.08)">
+        <div class="compare-col-title text-blue">🇺🇸 USA / WESTERN BLOC</div>
+        <div class="compare-item">💡 <strong>Ideology:</strong> Liberal Democracy + Capitalism</div>
+        <div class="compare-item">🤝 <strong>Alliance:</strong> NATO (North Atlantic Treaty Organization — 1949)</div>
+        <div class="compare-item">💰 <strong>Marshall Plan:</strong> $12B to rebuild Western Europe</div>
+        <div class="compare-item">📜 <strong>Truman Doctrine:</strong> Resist communist expansion globally</div>
+        <div class="compare-item">🔵 <strong>Proxy Wars:</strong> Korea, Vietnam, Cuba, Afghanistan, Angola</div>
+        <div class="compare-item">🚀 <strong>Space:</strong> First moon landing (Apollo 11, 1969)</div>
+      </div>
+      <div class="compare-col" style="background:rgba(150,0,0,0.08)">
+        <div class="compare-col-title text-red">🇷🇺 USSR / EASTERN BLOC</div>
+        <div class="compare-item">💡 <strong>Ideology:</strong> Communism (Marxism-Leninism)</div>
+        <div class="compare-item">🤝 <strong>Alliance:</strong> Warsaw Pact (1955)</div>
+        <div class="compare-item">🏭 <strong>COMECON:</strong> Economic cooperation among communist states</div>
+        <div class="compare-item">📜 <strong>Brezhnev Doctrine:</strong> USSR will intervene to protect communist states</div>
+        <div class="compare-item">🔴 <strong>Proxy Wars:</strong> Korea, Vietnam, Cuba, Afghanistan, Angola</div>
+        <div class="compare-item">🚀 <strong>Space:</strong> First satellite (Sputnik 1957), first human in space (Gagarin 1961)</div>
+      </div>
+    </div>
+
+    <div class="section-label">📅 Key Cold War Events</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">📜</div><div class="tl-content"><div class="tl-date">1947</div><div class="tl-text"><strong class="text-blue">Truman Doctrine & Marshall Plan</strong> — The USA committed to resisting communist expansion everywhere. The $12 billion Marshall Plan rebuilt Western Europe, creating economic stability that denied communism a foothold. The Cold War's foundational framework was established.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">✈️</div><div class="tl-content"><div class="tl-date">1948–1949</div><div class="tl-text"><strong class="text-cyan">Berlin Blockade & Airlift</strong> — Stalin blockaded all land routes into West Berlin. The West responded with a massive airlift — 200,000+ flights over 11 months delivering food and supplies to 2 million West Berliners. Stalin backed down. The West's resolve was demonstrated.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">💣</div><div class="tl-content"><div class="tl-date">1949</div><div class="tl-text"><strong class="text-red">USSR Tests Atomic Bomb</strong> — The American nuclear monopoly ended, beginning the terrifying nuclear arms race. Doctrine of MAD (Mutually Assured Destruction): any nuclear first strike would guarantee total annihilation of both sides — making nuclear war "unwinnable" and thus (ironically) deterring it.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--orange);color:var(--orange)">⚔️</div><div class="tl-content"><div class="tl-date">1950–1953</div><div class="tl-text"><strong class="text-orange">Korean War</strong> — North Korea (backed by USSR and China) invaded South Korea (backed by USA/UN). First "hot war" of the Cold War era. Ended in stalemate at the 38th Parallel — the same line as today's North-South Korea border. ~5 million total casualties.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--pink);color:var(--pink)">🧱</div><div class="tl-content"><div class="tl-date">August 1961</div><div class="tl-text"><strong class="text-pink">Berlin Wall Built</strong> — East Germany built the wall overnight to stop the mass exodus of its citizens to West Berlin (3.5 million had fled since 1949). The Wall became the most potent symbol of the Iron Curtain. 171 people died trying to cross it.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">⚡</div><div class="tl-content"><div class="tl-date">October 1962</div><div class="tl-text"><strong class="text-red">Cuban Missile Crisis</strong> — The world came closest to nuclear war. The USA discovered Soviet nuclear missiles being installed in Cuba (90 miles from Florida). For 13 days, Kennedy and Khrushchev stood face-to-face. Resolution: Soviets withdrew missiles; USA secretly withdrew missiles from Turkey.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--green);color:var(--green)">🕊️</div><div class="tl-content"><div class="tl-date">1985</div><div class="tl-text"><strong class="text-green">Gorbachev — Glasnost & Perestroika</strong> — The new Soviet leader introduced unprecedented openness (Glasnost) and economic restructuring (Perestroika). These reforms, meant to save the USSR, inadvertently accelerated its disintegration by loosening the authoritarian control that held it together.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">🧱</div><div class="tl-content"><div class="tl-date">November 9, 1989</div><div class="tl-text"><strong class="text-gold">Berlin Wall Falls</strong> — East Germany announced citizens could cross freely. Crowds demolished the Wall with hammers. The Cold War was symbolically over. German reunification followed in 1990. Eastern European communist regimes fell like dominoes.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">🇷🇺</div><div class="tl-content"><div class="tl-date">December 25, 1991</div><div class="tl-text"><strong class="text-red">USSR Dissolves</strong> — Mikhail Gorbachev resigned as the USSR was dissolved into 15 independent states. Russia, Ukraine, Belarus, Kazakhstan and others emerged as separate nations. The Cold War ended. The USA became the world's sole superpower — a "unipolar moment."</div></div></div>
+    </div>
+
+    <div class="section-label">🌍 Non-Aligned Movement (NAM)</div>
+    <div class="info-box info-purple">
+      <strong>Founded 1961</strong> (precursor: Bandung Conference, Indonesia, 1955) · Key Founders: Nehru (India), Tito (Yugoslavia), Nasser (Egypt), Sukarno (Indonesia), Nkrumah (Ghana). Goal: Independent foreign policy for newly decolonized nations — aligned with neither the US nor USSR bloc. Currently 120 member nations. <em>Criticism: Often non-aligned in name only; many members leaned toward one superpower.</em>
+    </div>
+  </div>
+
+
+  <!-- ============== SPACE RACE (NEW) ============== -->
+  <div id="space-race">
+    <div class="era-header era-space">
+      <div class="era-icon">🚀</div>
+      <div>
+        <div class="era-title" style="color:#b39ddb">ERA 13b — THE SPACE RACE<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1957 – 1969 · USA vs USSR · Beyond the Atmosphere</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-purple">1957</div><div class="stat-label">Sputnik — World's First Satellite</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">1961</div><div class="stat-label">Gagarin — First Human in Space</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">1969</div><div class="stat-label">Moon Landing — USA Wins</div></div>
+      <div class="stat-box"><div class="stat-num text-green">$28B</div><div class="stat-label">Apollo Program Cost</div></div>
+    </div>
+
+    <div class="section-label">🛸 Space Race Timeline</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:#b39ddb;color:#b39ddb">🛰️</div><div class="tl-content"><div class="tl-date">October 4, 1957</div><div class="tl-text"><strong style="color:#b39ddb">Sputnik 1 — USSR launches first satellite</strong> — A shiny metal ball the size of a beach ball, it beeped as it orbited Earth. Americans were shocked and terrified — if Soviets could put a satellite in orbit, they could aim missiles at US cities. The Space Race was born.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:#ff4081;color:#ff4081">🐕</div><div class="tl-content"><div class="tl-date">November 3, 1957</div><div class="tl-text"><strong class="text-pink">Sputnik 2 — Laika the Dog</strong> — First living creature in orbit. There was no plan to bring her back. The world was captivated — and horrified. USSR demonstrated they were leading the Space Race.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:#00e5ff;color:#00e5ff">👨‍🚀</div><div class="tl-content"><div class="tl-date">April 12, 1961</div><div class="tl-text"><strong class="text-cyan">Yuri Gagarin — First Human in Space</strong> — The Soviet cosmonaut completed one orbit of Earth in 108 minutes. He famously reported: "The Earth is blue. How wonderful. It is amazing." The West was stunned. President Kennedy needed a dramatic response.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:#ffd700;color:#ffd700">🌙</div><div class="tl-content"><div class="tl-date">July 20, 1969</div><div class="tl-text"><strong class="text-gold">Apollo 11 — First Moon Landing</strong> — Neil Armstrong became the first human to walk on the Moon. "One small step for [a] man, one giant leap for mankind." USA won the Space Race. 600 million people watched on TV — the largest TV audience in history at that point.</div></div></div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-text">"We choose to go to the Moon in this decade and do the other things — not because they are easy, but because they are hard."</div>
+      <div class="quote-attr">— President John F. Kennedy, Rice University, September 12, 1962</div>
+    </div>
+  </div>
+
+  <!-- ============== KOREAN WAR (NEW) ============== -->
+  <div id="korean-war">
+    <div class="era-header era-korea">
+      <div class="era-icon">🇰🇷</div>
+      <div>
+        <div class="era-title">ERA 13c — THE KOREAN WAR<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1950 – 1953 · "The Forgotten War" · Cold War Turns Hot</div>
+      </div>
+    </div>
+
+    <div class="war-stat-grid">
+      <div class="war-stat"><div class="war-stat-num text-red">36,574</div><div class="war-stat-label">US Troops Killed</div></div>
+      <div class="war-stat"><div class="war-stat-num text-orange">3M+</div><div class="war-stat-label">Total Dead (Military+Civilian)</div></div>
+      <div class="war-stat"><div class="war-stat-num text-cyan">38th</div><div class="war-stat-label">Parallel — Final Boundary</div></div>
+      <div class="war-stat"><div class="war-stat-num text-gold">1953</div><div class="war-stat-label">Armistice (No Peace Treaty!)</div></div>
+    </div>
+
+    <div class="section-label">⚔️ Korean War Flowchart</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arrK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#00acc1"/>
+          </marker>
+        </defs>
+        <rect x="10" y="85" width="140" height="80" rx="8" fill="#001a1a" stroke="#00acc1" stroke-width="1.5"/>
+        <text x="80" y="112" text-anchor="middle" fill="#00acc1" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">⚡ TRIGGER</text>
+        <text x="80" y="128" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">June 25, 1950</text>
+        <text x="80" y="144" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">N.Korea invades S.Korea</text>
+        <text x="80" y="160" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">backed by USSR + China</text>
+        <line x1="150" y1="125" x2="173" y2="125" stroke="#00acc1" stroke-width="1.5" marker-end="url(#arrK)"/>
+
+        <rect x="173" y="85" width="140" height="80" rx="8" fill="#1a0000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="243" y="112" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🇺🇳 UN RESPONDS</text>
+        <text x="243" y="128" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">USA leads UN coalition</text>
+        <text x="243" y="144" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">16 nations send troops</text>
+        <text x="243" y="160" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Gen. MacArthur commands</text>
+        <line x1="313" y1="125" x2="336" y2="125" stroke="#00acc1" stroke-width="1.5" marker-end="url(#arrK)"/>
+
+        <rect x="336" y="85" width="140" height="80" rx="8" fill="#001500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="406" y="112" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">✅ INCHON LANDING</text>
+        <text x="406" y="128" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Sept 1950 — MacArthur's</text>
+        <text x="406" y="144" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">brilliant amphibious assault</text>
+        <text x="406" y="160" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">N.Korea pushed back</text>
+        <line x1="476" y1="125" x2="499" y2="125" stroke="#00acc1" stroke-width="1.5" marker-end="url(#arrK)"/>
+
+        <rect x="499" y="85" width="140" height="80" rx="8" fill="#1a0a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="569" y="112" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🇨🇳 CHINA ENTERS</text>
+        <text x="569" y="128" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Oct 1950 — 300,000</text>
+        <text x="569" y="144" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Chinese troops flood in</text>
+        <text x="569" y="160" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">UN forces retreat south</text>
+        <line x1="639" y1="125" x2="662" y2="125" stroke="#00acc1" stroke-width="1.5" marker-end="url(#arrK)"/>
+
+        <rect x="662" y="85" width="140" height="80" rx="8" fill="#0a0015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="732" y="112" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🤝 STALEMATE</text>
+        <text x="732" y="128" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">38th Parallel restored</text>
+        <text x="732" y="144" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Armistice July 27, 1953</text>
+        <text x="732" y="160" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">No peace treaty signed!</text>
+        <line x1="802" y1="125" x2="825" y2="125" stroke="#00acc1" stroke-width="1.5" marker-end="url(#arrK)"/>
+
+        <rect x="825" y="85" width="80" height="80" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="865" y="112" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">TODAY</text>
+        <text x="865" y="128" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Korea still</text>
+        <text x="865" y="144" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">divided at</text>
+        <text x="865" y="160" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">38th Parallel</text>
+      </svg>
+    </div>
+
+    <div class="info-box" style="border-color:var(--cyan);background:rgba(0,229,255,0.06)">
+      <strong class="text-cyan">Why It's Called "The Forgotten War":</strong> Korean War is sandwiched between the heroic narrative of WWII and the controversial drama of Vietnam, and received little cultural attention in the US despite its massive scale. Unlike WWII, it ended in an ambiguous armistice — not victory. The Korean Peninsula remains technically at war, with the Demilitarized Zone (DMZ) being one of the most heavily fortified borders on Earth. North Korea remains a nuclear-armed rogue state today.
+    </div>
+  </div>
+
+  <!-- ============== CUBAN MISSILE CRISIS (NEW) ============== -->
+  <div id="cuban-crisis">
+    <div class="era-header era-cuba">
+      <div class="era-icon">☢️</div>
+      <div>
+        <div class="era-title" style="color:#ffcc02">ERA 13d — CUBAN MISSILE CRISIS<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">October 16–28, 1962 · 13 Days that Almost Ended Civilization</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-red">13</div><div class="stat-label">Days of Crisis</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">35,000</div><div class="stat-label">Nuclear Warheads at Stake</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">90</div><div class="stat-label">Miles: Cuba to Florida</div></div>
+      <div class="stat-box"><div class="stat-num text-green">1963</div><div class="stat-label">Moscow–Washington Hotline Installed</div></div>
+    </div>
+
+    <div class="section-label">⚡ The 13 Days — Crisis Flowchart</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arrC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#f57f17"/>
+          </marker>
+        </defs>
+        <!-- Background -->
+        <rect x="0" y="0" width="900" height="400" rx="10" fill="#0a0500"/>
+
+        <rect x="20" y="30" width="180" height="80" rx="8" fill="#150500" stroke="#f57f17" stroke-width="1.5"/>
+        <text x="110" y="58" text-anchor="middle" fill="#f57f17" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">1 — DISCOVERY</text>
+        <text x="110" y="76" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Oct 14: U-2 spy plane</text>
+        <text x="110" y="92" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">photographs Soviet missiles</text>
+        <text x="110" y="108" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">in Cuba</text>
+        <line x1="200" y1="70" x2="225" y2="70" stroke="#f57f17" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <rect x="225" y="30" width="180" height="80" rx="8" fill="#1a0000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="315" y="58" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">2 — JFK'S CHOICE</text>
+        <text x="315" y="76" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Advisors split: Invasion?</text>
+        <text x="315" y="92" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Airstrike? Naval blockade?</text>
+        <text x="315" y="108" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Kennedy chooses blockade</text>
+        <line x1="405" y1="70" x2="430" y2="70" stroke="#f57f17" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <rect x="430" y="30" width="180" height="80" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="520" y="58" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">3 — NAVAL BLOCKADE</text>
+        <text x="520" y="76" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Oct 22: JFK addresses nation</text>
+        <text x="520" y="92" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">180 US warships surround Cuba</text>
+        <text x="520" y="108" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Soviet ships approach...</text>
+        <line x1="610" y1="70" x2="635" y2="70" stroke="#f57f17" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <rect x="635" y="30" width="180" height="80" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="725" y="58" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">4 — SOVIET BLINK</text>
+        <text x="725" y="76" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Oct 27: Soviet ships turn back</text>
+        <text x="725" y="92" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Dean Rusk: "We're eyeball</text>
+        <text x="725" y="108" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">to eyeball — they blinked"</text>
+
+        <!-- DOWN ARROWS -->
+        <line x1="110" y1="110" x2="110" y2="160" stroke="#f57f17" stroke-width="1.5" marker-end="url(#arrC)"/>
+        <line x1="725" y1="110" x2="725" y2="160" stroke="#f57f17" stroke-width="1.5" marker-end="url(#arrC)"/>
+
+        <rect x="20" y="160" width="180" height="90" rx="8" fill="#050015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="110" y="185" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">BACKGROUND</text>
+        <text x="110" y="203" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Bay of Pigs (1961) failed</text>
+        <text x="110" y="219" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Cuba: Fidel Castro (1959)</text>
+        <text x="110" y="235" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">USSR put missiles in Cuba</text>
+        <text x="110" y="243" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">as counter to US missiles in Turkey</text>
+
+        <rect x="635" y="160" width="180" height="90" rx="8" fill="#001500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="725" y="185" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">RESOLUTION</text>
+        <text x="725" y="203" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">USSR: Remove Cuba missiles</text>
+        <text x="725" y="219" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">USA (secret): Remove Turkey</text>
+        <text x="725" y="235" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">missiles + no Cuba invasion</text>
+        <text x="725" y="251" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Hotline installed 1963</text>
+
+        <!-- LEGACY BOX -->
+        <rect x="150" y="290" width="600" height="80" rx="8" fill="#0a0a0a" stroke="#555" stroke-width="1"/>
+        <text x="450" y="315" text-anchor="middle" fill="#aaa" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🌍 LEGACY OF THE CUBAN MISSILE CRISIS</text>
+        <text x="450" y="335" text-anchor="middle" fill="#888" font-family="Rajdhani,sans-serif" font-size="10">Moscow–Washington Hotline (1963) · Partial Nuclear Test Ban Treaty (1963)</text>
+        <text x="450" y="353" text-anchor="middle" fill="#888" font-family="Rajdhani,sans-serif" font-size="10">Nuclear Non-Proliferation Treaty (1968) · Beginning of Détente between superpowers</text>
+      </svg>
+    </div>
+
+    <div class="fact-box"><p>On October 27, 1962 (called "Black Saturday"), a Soviet submarine B-59 — cut off from communications and thinking war had begun — almost launched a nuclear torpedo. Only the refusal of Deputy Commander Vasili Arkhipov (who had to give unanimous consent) prevented it. One man's decision may have saved civilization.</p></div>
+
+    <div class="quote-box">
+      <div class="quote-text">"We were eyeball to eyeball, and I think the other fellow just blinked."</div>
+      <div class="quote-attr">— US Secretary of State Dean Rusk, October 28, 1962</div>
+    </div>
+  </div>
+
+  <!-- ============== VIETNAM WAR (NEW) ============== -->
+  <div id="vietnam">
+    <div class="era-header era-vietnam">
+      <div class="era-icon">🌴</div>
+      <div>
+        <div class="era-title" style="color:#aed581">ERA 13e — THE VIETNAM WAR<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1955 – 1975 · America's Most Controversial War · Dominoes Theory in Action</div>
+      </div>
+    </div>
+
+    <div class="war-stat-grid">
+      <div class="war-stat"><div class="war-stat-num text-red">58,220</div><div class="war-stat-label">US Military Dead</div></div>
+      <div class="war-stat"><div class="war-stat-num text-orange">2M+</div><div class="war-stat-label">Vietnamese Civilian Deaths</div></div>
+      <div class="war-stat"><div class="war-stat-num" style="color:#aed581">$843B</div><div class="war-stat-label">Total War Cost (inflation adj.)</div></div>
+      <div class="war-stat"><div class="war-stat-num text-gold">1975</div><div class="war-stat-label">Fall of Saigon</div></div>
+    </div>
+
+    <div class="side-by-side">
+      <div>
+        <div class="section-label">📅 Key Timeline</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-dot" style="border-color:#aed581;color:#aed581" >🔫</div><div class="tl-content"><div class="tl-date">1954</div><div class="tl-text"><strong style="color:#aed581">Geneva Accords</strong> — French defeated at Dien Bien Phu. Vietnam temporarily divided at 17th parallel. North (communist Viet Minh/Ho Chi Minh) vs South (US-backed). Elections promised but never held.</div></div></div>
+          <div class="tl-item"><div class="tl-dot" style="border-color:#00e5ff;color:#00e5ff">🇺🇸</div><div class="tl-content"><div class="tl-date">1964</div><div class="tl-text"><strong class="text-cyan">Gulf of Tonkin Resolution</strong> — After alleged (and disputed) North Vietnamese attack on US ships, Congress gave LBJ unlimited war powers. US escalated massively — 500,000 troops by 1968.</div></div></div>
+          <div class="tl-item"><div class="tl-dot" style="border-color:#ff4444;color:#ff4444">💥</div><div class="tl-content"><div class="tl-date">1968</div><div class="tl-text"><strong class="text-red">Tet Offensive</strong> — North Vietnam's massive surprise attack during Tet (New Year) holiday. Militarily repulsed but psychologically devastating for USA. American public turned against the war.</div></div></div>
+          <div class="tl-item"><div class="tl-dot" style="border-color:#ffd700;color:#ffd700">🕊️</div><div class="tl-content"><div class="tl-date">1973</div><div class="tl-text"><strong class="text-gold">Paris Peace Accords</strong> — Nixon withdraws US troops. "Peace with honor" — but South Vietnam was left vulnerable. North Vietnam continued the war.</div></div></div>
+          <div class="tl-item"><div class="tl-dot" style="border-color:#ff8c00;color:#ff8c00">🚁</div><div class="tl-content"><div class="tl-date">April 30, 1975</div><div class="tl-text"><strong class="text-orange">Fall of Saigon</strong> — Iconic helicopter evacuation from US Embassy rooftop. North Vietnam took Saigon. Vietnam unified under communism. First major US military defeat.</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">💡 Key Concepts</div>
+        <div class="card" style="border-top:3px solid #aed581;margin-bottom:12px">
+          <div class="card-title" style="color:#aed581">🎯 Domino Theory</div>
+          <div class="card-body">Eisenhower's theory: if one Southeast Asian country fell to communism, neighboring countries would follow like falling dominoes. This justified US intervention. The theory proved partially wrong — communist Vietnam did not spread revolution to all neighbors.</div>
+        </div>
+        <div class="card" style="border-top:3px solid #ff8c00;margin-bottom:12px">
+          <div class="card-title" style="color:#ff8c00">⚔️ Guerrilla Warfare</div>
+          <div class="card-body">Viet Cong (South Vietnamese communist guerrillas) used tunnel systems (Cu Chi Tunnels — 250km long!), booby traps, and jungle knowledge to neutralize US conventional military superiority. US used napalm, Agent Orange chemical defoliant.</div>
+        </div>
+        <div class="card" style="border-top:3px solid #ff4444">
+          <div class="card-title" style="color:#ff4444">📺 First TV War</div>
+          <div class="card-body">Vietnam was the first war broadcast live on television nightly. Graphic images of napalm victims (including the iconic "Napalm Girl" photo) turned American public opinion decisively against the war. Media power redefined modern warfare.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box" style="border-color:var(--orange);background:rgba(255,140,0,0.07)">
+      <strong style="color:var(--orange)">Legacy of Vietnam:</strong> The "Vietnam Syndrome" — US public reluctance for foreign military interventions — lasted for decades. The War Powers Act (1973) restricted presidential war powers. Agent Orange caused cancers and birth defects in millions of Vietnamese for generations. 58,000 names on the Vietnam Veterans Memorial Wall in Washington DC. Vietnam is today a thriving market economy — one of Asia's fastest growing — paradoxically one of the US's most popular tourist destinations.
+    </div>
+  </div>
+
+  <!-- ============== SOVIET COLLAPSE (NEW) ============== -->
+  <div id="soviet-collapse">
+    <div class="era-header era-soviet-fall">
+      <div class="era-icon">🏴</div>
+      <div>
+        <div class="era-title" style="color:#ff8a65">ERA 13f — FALL OF THE SOVIET UNION<span class="new-section-badge">NEW</span></div>
+        <div class="era-dates">1985 – 1991 · Gorbachev's Reforms · 15 Nations Born in One Moment</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-orange">1985</div><div class="stat-label">Gorbachev Takes Power</div></div>
+      <div class="stat-box"><div class="stat-num text-red">1989</div><div class="stat-label">Berlin Wall Falls (Nov 9)</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">15</div><div class="stat-label">New Nations Created</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">Dec 25, 1991</div><div class="stat-label">Gorbachev Resigns</div></div>
+    </div>
+
+    <div class="section-label">🔄 Collapse of the USSR — Step by Step</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 350" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <marker id="arrS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff8a65"/>
+          </marker>
+        </defs>
+        <!-- Left column: causes going down -->
+        <text x="200" y="25" text-anchor="middle" fill="#ff8a65" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">GORBACHEV'S REFORMS</text>
+        <rect x="50" y="40" width="300" height="60" rx="8" fill="#1a0800" stroke="#ff8a65" stroke-width="1.5"/>
+        <text x="200" y="65" text-anchor="middle" fill="#ff8a65" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">📖 Glasnost (1985) = Openness</text>
+        <text x="200" y="83" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Freedom of press · Citizens could criticize govt · Exposed Soviet failures</text>
+
+        <line x1="200" y1="100" x2="200" y2="125" stroke="#ff8a65" stroke-width="1.5" marker-end="url(#arrS)"/>
+        <rect x="50" y="125" width="300" height="60" rx="8" fill="#150a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="200" y="150" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🔧 Perestroika (1985) = Restructuring</text>
+        <text x="200" y="168" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Economic liberalization · Partial market reforms · But old system collapsed faster</text>
+
+        <line x1="200" y1="185" x2="200" y2="210" stroke="#ff8a65" stroke-width="1.5" marker-end="url(#arrS)"/>
+        <rect x="50" y="210" width="300" height="60" rx="8" fill="#001500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="200" y="235" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🌍 Non-Intervention Policy</text>
+        <text x="200" y="253" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Withdrew from Afghanistan · Reduced forces in Eastern Europe</text>
+
+        <!-- Right column: results -->
+        <text x="680" y="25" text-anchor="middle" fill="#ff8a65" font-family="Rajdhani,sans-serif" font-size="13" font-weight="bold">CONSEQUENCES</text>
+        <rect x="530" y="40" width="300" height="60" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="680" y="65" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">1989 Revolutions in E.Europe</text>
+        <text x="680" y="83" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Poland · Hungary · E.Germany · Czechoslovakia · Romania fall to democracy</text>
+
+        <line x1="680" y1="100" x2="680" y2="125" stroke="#ff8a65" stroke-width="1.5" marker-end="url(#arrS)"/>
+        <rect x="530" y="125" width="300" height="60" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="680" y="150" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">Nov 9, 1989 — Berlin Wall Falls</text>
+        <text x="680" y="168" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Symbolic end of Cold War · Germany reunified Oct 1990</text>
+
+        <line x1="680" y1="185" x2="680" y2="210" stroke="#ff8a65" stroke-width="1.5" marker-end="url(#arrS)"/>
+        <rect x="530" y="210" width="300" height="60" rx="8" fill="#150000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="680" y="235" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">Aug 1991 Coup Attempt Fails</text>
+        <text x="680" y="253" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">Communist hardliners fail · Yeltsin becomes hero · Republics declare independence</text>
+
+        <!-- Center arrow connecting -->
+        <line x1="350" y1="155" x2="530" y2="155" stroke="#555" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrS)"/>
+        <text x="440" y="148" text-anchor="middle" fill="#555" font-family="Rajdhani,sans-serif" font-size="10">leads to</text>
+
+        <!-- Final outcome -->
+        <rect x="150" y="290" width="600" height="50" rx="8" fill="#0d0500" stroke="#e6b800" stroke-width="2"/>
+        <text x="450" y="312" text-anchor="middle" fill="#e6b800" font-family="Cinzel,serif" font-size="13" font-weight="bold">December 25, 1991 — USSR FORMALLY DISSOLVED</text>
+        <text x="450" y="330" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Gorbachev resigns · Soviet flag lowered over Kremlin · 15 independent nations born overnight</text>
+      </svg>
+    </div>
+
+    <div class="section-label">🌍 The 15 Nations Born from USSR</div>
+    <div class="card-grid">
+      <div class="card card-red"><div class="card-title">🇷🇺 Russia</div><div class="card-body">Inherited USSR's UN Security Council seat, nuclear arsenal, and superpower status. Led by Boris Yeltsin (1991–1999) then Vladimir Putin (1999–present).</div></div>
+      <div class="card card-blue"><div class="card-title">🇺🇦 Ukraine</div><div class="card-body">Europe's largest country by area. Had the world's 3rd-largest nuclear arsenal — voluntarily gave it up under Budapest Memorandum (1994) in exchange for security guarantees. Major geopolitical flashpoint today.</div></div>
+      <div class="card card-gold"><div class="card-title">Baltic States: 🇪🇪🇱🇻🇱🇹</div><div class="card-body">Estonia, Latvia, Lithuania — first to declare independence. All joined NATO and EU by 2004. Considered the most successful post-Soviet transitions.</div></div>
+      <div class="card card-green"><div class="card-title">Central Asian States</div><div class="card-body">Kazakhstan, Uzbekistan, Turkmenistan, Tajikistan, Kyrgyzstan — resource-rich (oil, gas, minerals) but struggled with authoritarian rule and economic development.</div></div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-text">"The greatest geopolitical catastrophe of the 20th century."</div>
+      <div class="quote-attr">— Vladimir Putin on the collapse of the Soviet Union (2005)</div>
+    </div>
+
+    <div class="fact-box"><p>When Gorbachev resigned on Christmas Day 1991, he handed the nuclear launch codes to Boris Yeltsin — but Yeltsin was reportedly drunk. The nuclear briefcase ("Cheget") changed hands in what witnesses described as a chaotic handover. The transfer of one of history's most dangerous weapons happened informally, in real time, on live television.</p></div>
+  </div>
+
+  <!-- ============== ERA 14: UNITED NATIONS ============== -->
+  <div id="un">
+    <div class="era-header era-un">
+      <div class="era-icon">🌐</div>
+      <div>
+        <div class="era-title">ERA 14 — THE UNITED NATIONS</div>
+        <div class="era-dates">Founded October 24, 1945 · 193 Member States</div>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-num text-blue">193</div><div class="stat-label">Member States</div></div>
+      <div class="stat-box"><div class="stat-num text-gold">5</div><div class="stat-label">P5 Veto Powers</div></div>
+      <div class="stat-box"><div class="stat-num text-green">6</div><div class="stat-label">Principal Organs</div></div>
+      <div class="stat-box"><div class="stat-num text-cyan">30</div><div class="stat-label">Rights in UDHR</div></div>
+      <div class="stat-box"><div class="stat-num text-orange">1945</div><div class="stat-label">Year Founded</div></div>
+    </div>
+
+    <div class="section-label">🏛️ UN Structure</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <!-- Center -->
+        <rect x="350" y="110" width="200" height="60" rx="10" fill="#001220" stroke="#448aff" stroke-width="2"/>
+        <text x="450" y="138" text-anchor="middle" fill="#448aff" font-family="Cinzel,serif" font-size="14" font-weight="bold">🌐 UNITED NATIONS</text>
+        <text x="450" y="158" text-anchor="middle" fill="#82b1ff" font-family="Rajdhani,sans-serif" font-size="11">New York City · Est. 1945</text>
+        <!-- Lines -->
+        <line x1="360" y1="120" x2="230" y2="60" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <line x1="440" y1="110" x2="440" y2="60" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <line x1="540" y1="120" x2="680" y2="60" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <line x1="360" y1="158" x2="230" y2="220" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <line x1="440" y1="170" x2="440" y2="220" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <line x1="540" y1="158" x2="680" y2="220" stroke="#448aff" stroke-width="1" opacity="0.5"/>
+        <!-- Top boxes -->
+        <rect x="130" y="20" width="170" height="50" rx="8" fill="#001a00" stroke="#00e676" stroke-width="1.5"/>
+        <text x="215" y="42" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🏛️ GENERAL ASSEMBLY</text>
+        <text x="215" y="58" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">All 193 members · 1 vote each</text>
+        <rect x="355" y="20" width="165" height="50" rx="8" fill="#1a0000" stroke="#ff4444" stroke-width="1.5"/>
+        <text x="437" y="42" text-anchor="middle" fill="#ff4444" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🔒 SECURITY COUNCIL</text>
+        <text x="437" y="58" text-anchor="middle" fill="#d88" font-family="Rajdhani,sans-serif" font-size="10">P5 veto · 15 members total</text>
+        <rect x="580" y="20" width="170" height="50" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="665" y="42" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🏢 SECRETARIAT</text>
+        <text x="665" y="58" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Secretary-General leads</text>
+        <!-- Bottom boxes -->
+        <rect x="130" y="200" width="170" height="50" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="215" y="222" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">⚖️ ICJ</text>
+        <text x="215" y="238" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">International Court of Justice</text>
+        <rect x="355" y="200" width="165" height="50" rx="8" fill="#100015" stroke="#9c27b0" stroke-width="1.5"/>
+        <text x="437" y="222" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">📊 ECOSOC</text>
+        <text x="437" y="238" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Economic &amp; Social Council</text>
+        <rect x="580" y="200" width="170" height="50" rx="8" fill="#001500" stroke="#00e676" stroke-width="1.5"/>
+        <text x="665" y="222" text-anchor="middle" fill="#00e676" font-family="Rajdhani,sans-serif" font-size="11" font-weight="bold">🛡️ TRUSTEESHIP</text>
+        <text x="665" y="238" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Council (now inactive)</text>
+      </svg>
+    </div>
+
+    <div class="section-label">🔑 P5 — The Five Permanent Members with Veto Power</div>
+    <div class="badge-row">
+      <span class="badge" style="background:rgba(0,50,150,0.2);border-color:#448aff;color:#82b1ff">🇺🇸 United States</span>
+      <span class="badge" style="background:rgba(150,0,0,0.2);border-color:#ff4444;color:#ff8888">🇷🇺 Russia</span>
+      <span class="badge" style="background:rgba(150,30,0,0.2);border-color:#ff8c00;color:#ffbb44">🇨🇳 China</span>
+      <span class="badge" style="background:rgba(50,50,150,0.2);border-color:#7986cb;color:#c5cae9">🇬🇧 United Kingdom</span>
+      <span class="badge" style="background:rgba(0,80,0,0.2);border-color:#4caf50;color:#a5d6a7">🇫🇷 France</span>
+    </div>
+  </div>
+
+
+    <div class="section-label">🌍 Non-Aligned Movement (NAM) Mind Map</div>
+    <div class="mm-section">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <ellipse cx="440" cy="200" rx="95" ry="50" fill="#0a1500" stroke="#00e676" stroke-width="2"/>
+        <text x="440" y="194" text-anchor="middle" fill="#00e676" font-family="Cinzel,serif" font-size="12" font-weight="bold">NON-ALIGNED</text>
+        <text x="440" y="210" text-anchor="middle" fill="#00e676" font-family="Cinzel,serif" font-size="12" font-weight="bold">MOVEMENT (NAM)</text>
+        <text x="440" y="226" text-anchor="middle" fill="#8db" font-family="Rajdhani,sans-serif" font-size="10">Founded 1961 · 120 members</text>
+
+        <line x1="350" y1="175" x2="210" y2="100" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="40" y="50" width="185" height="90" rx="8" fill="#1a1400" stroke="#ffd700" stroke-width="1.5"/>
+        <text x="132" y="75" text-anchor="middle" fill="#ffd700" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🏛️ FOUNDERS</text>
+        <text x="132" y="93" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Nehru (India) · Tito (Yugoslavia)</text>
+        <text x="132" y="109" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Nasser (Egypt) · Sukarno (Indonesia)</text>
+        <text x="132" y="125" text-anchor="middle" fill="#cc8" font-family="Rajdhani,sans-serif" font-size="10">Nkrumah (Ghana) · 1955 Bandung</text>
+
+        <line x1="350" y1="200" x2="210" y2="200" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="30" y="165" width="185" height="70" rx="8" fill="#001a1a" stroke="#00e5ff" stroke-width="1.5"/>
+        <text x="122" y="190" text-anchor="middle" fill="#00e5ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🎯 PRINCIPLES</text>
+        <text x="122" y="208" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Neither US nor USSR bloc</text>
+        <text x="122" y="224" text-anchor="middle" fill="#8dd" font-family="Rajdhani,sans-serif" font-size="10">Independent foreign policy</text>
+
+        <line x1="350" y1="225" x2="210" y2="305" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="40" y="270" width="185" height="70" rx="8" fill="#150010" stroke="#ff4081" stroke-width="1.5"/>
+        <text x="132" y="295" text-anchor="middle" fill="#ff4081" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">⚠️ CRITICISM</text>
+        <text x="132" y="313" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">Many members leaned one side</text>
+        <text x="132" y="329" text-anchor="middle" fill="#d8a" font-family="Rajdhani,sans-serif" font-size="10">"Non-aligned in name only"</text>
+
+        <line x1="530" y1="175" x2="665" y2="100" stroke="#ff8c00" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="655" y="50" width="185" height="90" rx="8" fill="#1a0a00" stroke="#ff8c00" stroke-width="1.5"/>
+        <text x="747" y="75" text-anchor="middle" fill="#ff8c00" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🌏 CONTEXT</text>
+        <text x="747" y="93" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Newly decolonised nations</text>
+        <text x="747" y="109" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">Didn't want a new master</text>
+        <text x="747" y="125" text-anchor="middle" fill="#daa" font-family="Rajdhani,sans-serif" font-size="10">After colonial era ended</text>
+
+        <line x1="530" y1="200" x2="665" y2="200" stroke="#ce93d8" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="655" y="165" width="185" height="70" rx="8" fill="#100015" stroke="#ce93d8" stroke-width="1.5"/>
+        <text x="747" y="190" text-anchor="middle" fill="#ce93d8" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">📅 SUMMITS</text>
+        <text x="747" y="208" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">Belgrade 1961 (1st) · Cairo 1964</text>
+        <text x="747" y="224" text-anchor="middle" fill="#c8b" font-family="Rajdhani,sans-serif" font-size="10">India hosted 1983 · Now 120 members</text>
+
+        <line x1="530" y1="225" x2="665" y2="305" stroke="#82b1ff" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <rect x="655" y="270" width="185" height="70" rx="8" fill="#001020" stroke="#82b1ff" stroke-width="1.5"/>
+        <text x="747" y="295" text-anchor="middle" fill="#82b1ff" font-family="Rajdhani,sans-serif" font-size="12" font-weight="bold">🇮🇳 INDIA'S ROLE</text>
+        <text x="747" y="313" text-anchor="middle" fill="#8ab" font-family="Rajdhani,sans-serif" font-size="10">Nehru = founding architect</text>
+        <text x="747" y="329" text-anchor="middle" fill="#8ab" font-family="Rajdhani,sans-serif" font-size="10">Panchsheel Agreement 1954</text>
+      </svg>
+    </div>
+
+  <!-- ============== ERA 15: MIDDLE EAST ============== -->
+  <div id="mideast">
+    <div class="era-header era-mideast">
+      <div class="era-icon">🕌</div>
+      <div>
+        <div class="era-title">ERA 15 — MIDDLE EAST CRISIS & ARAB-ISRAELI CONFLICT</div>
+        <div class="era-dates">1948 – Present · One of History's Most Enduring Conflicts</div>
+      </div>
+    </div>
+
+    <div class="section-label">🕍 Creation of Israel — Background</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">📌</div><div class="tl-content"><div class="tl-date">Late 19th Century</div><div class="tl-text"><strong class="text-gold">Zionism Movement</strong> — Theodor Herzl founded modern Zionism in 1897: Jewish nationalism calling for establishment of a Jewish homeland. The Jews had been without a homeland since the Roman destruction of Jerusalem (70 AD) — nearly 2,000 years of diaspora.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">📜</div><div class="tl-content"><div class="tl-date">1917</div><div class="tl-text"><strong class="text-blue">Balfour Declaration</strong> — Britain's Foreign Secretary Arthur Balfour issued a letter supporting "the establishment in Palestine of a national home for the Jewish people" while protecting existing non-Jewish communities' rights. This single document set the stage for decades of conflict.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">💀</div><div class="tl-content"><div class="tl-date">1933–1945</div><div class="tl-text"><strong class="text-red">The Holocaust Accelerates Migration</strong> — Mass persecution and murder of European Jews created an urgent demand for a safe homeland. Jewish immigration to Palestine increased dramatically. Arab-Jewish tensions in the region escalated simultaneously.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">🗺️</div><div class="tl-content"><div class="tl-date">1947</div><div class="tl-text"><strong class="text-gold">UN Partition Plan</strong> — UN Resolution 181 proposed dividing British Mandatory Palestine into separate Jewish and Arab states, with Jerusalem under international control. Jewish leadership accepted; Arab states rejected it entirely.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">🇮🇱</div><div class="tl-content"><div class="tl-date">May 14, 1948</div><div class="tl-text"><strong class="text-blue">State of Israel Proclaimed</strong> — David Ben-Gurion declared independence. Within hours, Egypt, Jordan, Syria, Iraq, and Lebanon invaded. In the 1st Arab-Israeli War, Israel not only survived but expanded beyond the UN partition borders. ~700,000 Palestinians were displaced — what Palestinians call the <em>Nakba</em> ("The Catastrophe").</div></div></div>
+    </div>
+
+    <div class="section-label">⚔️ The Six-Day War (June 5–10, 1967)</div>
+    <table class="data-table">
+      <thead>
+        <tr><th class="gold-th">Aspect</th><th class="gold-th">Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="text-gold bold">Duration</td><td>Only 6 days — June 5 to 10, 1967 — among the shortest wars in history</td></tr>
+        <tr><td class="text-gold bold">Parties</td><td>🇮🇱 Israel vs. 🇪🇬 Egypt + 🇸🇾 Syria + 🇯🇴 Jordan (+ support from Iraq, Saudi Arabia)</td></tr>
+        <tr><td class="text-gold bold">Trigger</td><td>Egypt blockaded the Gulf of Aqaba (Israel's only southern sea outlet) and massed troops at the border. Syria and Jordan mobilized. Israel faced potential encirclement.</td></tr>
+        <tr><td class="text-gold bold">Israeli Strategy</td><td>Pre-emptive strike — on the first morning (June 5), Israel destroyed ~90% of Arab air forces on the ground in 3 hours. Air supremacy decided the war within the first day.</td></tr>
+        <tr><td class="text-gold bold">Territorial Gains</td><td>Israel captured: <strong>Sinai Peninsula + Gaza Strip</strong> (from Egypt) · <strong>West Bank</strong> (from Jordan) · <strong>Golan Heights</strong> (from Syria). Israel's territory tripled in size.</td></tr>
+        <tr><td class="text-gold bold">Arab Response</td><td>Khartoum Resolution (August 1967): "Three NOs" — No peace with Israel, No recognition of Israel, No negotiations with Israel. A defining moment of Arab intransigence.</td></tr>
+        <tr><td class="text-gold bold">Legacy</td><td>Israel established as the undisputed regional military superpower. The occupied territories became the core issue in all subsequent Arab-Israeli peace negotiations.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">⚔️ Yom Kippur War (October 1973)</div>
+    <table class="data-table">
+      <thead>
+        <tr><th class="orange-th">Aspect</th><th class="orange-th">Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="text-orange bold">Date & Name</td><td>October 6, 1973 — on Yom Kippur (holiest Jewish day). Also: Ramadan War, October War, 4th Arab-Israeli War.</td></tr>
+        <tr><td class="text-orange bold">Attackers</td><td>Egypt (Operation Badr) + Syria launched a coordinated surprise attack with forces 10x Israel's initial defenders. Initial Arab advances shocked Israel and the world.</td></tr>
+        <tr><td class="text-orange bold">Result</td><td>Israel recovered and counterattacked, crossing the Suez Canal into Egypt and encircling the Egyptian 3rd Army. Another Israeli military victory, but at far greater cost than 1967.</td></tr>
+        <tr><td class="text-orange bold">US-USSR Dimension</td><td>Both superpowers airlifted supplies to their respective sides. The first post-Cuban Missile Crisis moment where direct US-USSR military confrontation nearly materialized. Global nuclear alert raised.</td></tr>
+        <tr><td class="text-orange bold">Oil Embargo Consequence</td><td>Arab OPEC members imposed an oil embargo against USA and other Israel-supporting nations. Oil prices quadrupled, causing the 1973 energy crisis and global recession — demonstrating oil's geopolitical power.</td></tr>
+        <tr><td class="text-orange bold">Long-term Outcome</td><td>Led to the 1978 Camp David Accords (Carter brokered): Egypt signed peace with Israel, becoming the first Arab nation to recognize it. Israel returned the Sinai Peninsula. Egypt's Sadat and Israel's Begin shared the Nobel Peace Prize.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="compare-table">
+      <div class="compare-col" style="background:rgba(0,100,200,0.05)">
+        <div class="compare-col-title text-blue">🕊️ PLO / FATAH (Yasser Arafat)</div>
+        <div class="compare-item">Founded 1964 (PLO) / 1959 (Fatah)</div>
+        <div class="compare-item">Originally pursued armed struggle; later negotiated</div>
+        <div class="compare-item">Recognized Israel's right to exist (Oslo Accords 1993)</div>
+        <div class="compare-item">Arafat: Nobel Peace Prize 1994 (shared)</div>
+        <div class="compare-item">Controls Palestinian Authority (West Bank)</div>
+        <div class="compare-item">Secular nationalist ideology</div>
+      </div>
+      <div class="compare-col" style="background:rgba(150,50,0,0.05)">
+        <div class="compare-col-title text-orange">💥 HAMAS (Islamic Resistance Movement)</div>
+        <div class="compare-item">Founded 1987 (first Intifada)</div>
+        <div class="compare-item">Rejects recognition of Israel</div>
+        <div class="compare-item">Goal: Islamic state through armed resistance</div>
+        <div class="compare-item">Designated terrorist organization by USA, EU, UK</div>
+        <div class="compare-item">Controls Gaza Strip (since 2007 coup)</div>
+        <div class="compare-item">Muslim Brotherhood ideology</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== ERA 16: EU ============== -->
+  <div id="eu">
+    <div class="era-header era-eu">
+      <div class="era-icon">🇪🇺</div>
+      <div>
+        <div class="era-title">ERA 16 — THE EUROPEAN UNION</div>
+        <div class="era-dates">1951 – Present · 27 Member States · Longest Peace in European History</div>
+      </div>
+    </div>
+
+    <div class="section-label">📅 EU Evolution Timeline</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);color:var(--blue)">⚙️</div><div class="tl-content"><div class="tl-date">1951</div><div class="tl-text"><strong class="text-blue">European Coal & Steel Community</strong> — France, Germany, Italy, Belgium, Netherlands, Luxembourg. Radical idea: make war materially impossible by integrating the industries (coal and steel) that manufacture weapons. Germany and France — twice at war in 30 years — became partners.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--cyan);color:var(--cyan)">🤝</div><div class="tl-content"><div class="tl-date">1957</div><div class="tl-text"><strong class="text-cyan">Treaty of Rome — European Economic Community (EEC)</strong> — The "Common Market" born. Six founding nations agreed to remove trade barriers and coordinate economic policy. The foundation of what would become the EU.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--gold);color:var(--gold)">📋</div><div class="tl-content"><div class="tl-date">1992</div><div class="tl-text"><strong class="text-gold">Maastricht Treaty — EU Officially Founded</strong> — Transformed the EEC into the European Union. Established the "Four Freedoms": free movement of goods, services, capital, and people. Created EU citizenship. Committed to a common currency.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--green);color:var(--green)">💶</div><div class="tl-content"><div class="tl-date">1999/2002</div><div class="tl-text"><strong class="text-green">The Euro</strong> — Common currency introduced (electronic 1999, physical notes/coins Jan 1, 2002). Now used by 20 of 27 EU members. The world's second-most-traded currency after the US dollar.</div></div></div>
+      <div class="tl-item"><div class="tl-dot" style="border-color:var(--red);color:var(--red)">🇬🇧</div><div class="tl-content"><div class="tl-date">2016</div><div class="tl-text"><strong class="text-red">Brexit</strong> — UK voted 52%-48% to leave the EU in a historic referendum. After years of complex negotiations, the UK formally left January 31, 2020. The first member state ever to leave — a watershed moment for European integration.</div></div></div>
+    </div>
+  </div>
+
+  <!-- ============== MASTER DATES TABLE ============== -->
+  <div id="master">
+    <div class="period-divider"><span>⚡ QUICK REVISION — MASTER DATES TABLE ⚡</span></div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th class="gold-th">📅 Date</th>
+          <th class="gold-th">🎯 Event</th>
+          <th class="gold-th">📌 Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="text-gold bold">14th–17th C</td><td>🎨 Renaissance</td><td>Rebirth of art, science & humanism; ended Dark Ages thinking</td></tr>
+        <tr><td class="text-gold bold">1348</td><td>☠️ Black Death</td><td>Killed 30–60% of Europe; accelerated breakdown of feudalism</td></tr>
+        <tr><td class="text-gold bold">1453</td><td>🕌 Fall of Constantinople</td><td>Byzantine scholars flee to Italy; triggered Age of Exploration</td></tr>
+        <tr><td class="text-cyan bold">~1440</td><td>🖨️ Printing Press (Gutenberg)</td><td>Mass knowledge dissemination; accelerated Reformation and Science</td></tr>
+        <tr><td class="text-blue bold">1492</td><td>⛵ Columbus discovers Americas</td><td>Start of European colonisation of New World; Columbian Exchange</td></tr>
+        <tr><td class="text-green bold">1498</td><td>🗺️ Vasco da Gama reaches India</td><td>Sea trade route to Asia; bypassed Ottoman land routes</td></tr>
+        <tr><td class="text-orange bold">16th Century</td><td>⛪ Protestant Reformation</td><td>Church authority challenged; rise of Protestantism; nation-states</td></tr>
+        <tr><td class="text-blue bold">1776</td><td>🦅 US Declaration of Independence</td><td>First modern democratic republic; Enlightenment in practice</td></tr>
+        <tr><td class="text-red bold">1789</td><td>🇫🇷 French Revolution</td><td>Ended feudalism; spread liberty, equality, fraternity globally</td></tr>
+        <tr><td class="text-gold bold">1804</td><td>👑 Napoleon becomes Emperor</td><td>Spread Napoleonic Code; reshaped European borders and law</td></tr>
+        <tr><td class="text-purple bold">1848</td><td>📖 Communist Manifesto</td><td>Marxism born; class struggle ideology spreads globally</td></tr>
+        <tr><td class="text-gold bold">1864–1871</td><td>🇩🇪 German Unification</td><td>New power center in Europe; direct cause of WWI</td></tr>
+        <tr><td class="text-blue bold">1861–1870</td><td>🇮🇹 Italian Unification</td><td>Risorgimento complete; rise of European nationalism</td></tr>
+        <tr><td class="text-red bold">June 28, 1914</td><td>💥 WWI Trigger</td><td>Archduke Franz Ferdinand assassinated; alliance dominoes fall</td></tr>
+        <tr><td class="text-orange bold">1914–1918</td><td>💣 World War I</td><td>20 million dead; empires fall; modern geopolitics born</td></tr>
+        <tr><td class="text-red bold">November 1917</td><td>🔴 Russian Revolution</td><td>Bolsheviks take power; world's first communist state founded</td></tr>
+        <tr><td class="text-green bold">January 1920</td><td>🕊️ League of Nations founded</td><td>First global peacekeeping body; failed without USA</td></tr>
+        <tr><td class="text-red bold">October 1929</td><td>📉 Wall Street Crash</td><td>Great Depression begins; global economic collapse</td></tr>
+        <tr><td class="text-red bold">January 1933</td><td>⚡ Hitler becomes Chancellor</td><td>Nazi Germany rises; WWII set in motion</td></tr>
+        <tr><td class="text-pink bold">September 1939</td><td>🔫 WWII begins</td><td>Germany invades Poland; Britain & France declare war</td></tr>
+        <tr><td class="text-red bold">1939–1945</td><td>💀 World War II</td><td>70–85 million dead; Holocaust; atomic bombs; new world order</td></tr>
+        <tr><td class="text-blue bold">October 1945</td><td>🌐 UN founded</td><td>Replaced League; 193 members; 5 permanent UNSC veto powers</td></tr>
+        <tr><td class="text-cyan bold">1945–1991</td><td>🥶 Cold War</td><td>US vs USSR — proxy wars; nuclear arms race; Space Race</td></tr>
+        <tr><td class="text-blue bold">1947</td><td>📜 Truman Doctrine + Marshall Plan</td><td>USA commits to containing communism; rebuilds Western Europe</td></tr>
+        <tr><td class="text-red bold">October 1962</td><td>⚡ Cuban Missile Crisis</td><td>World's closest brush with nuclear war; resolved diplomatically</td></tr>
+        <tr><td class="text-gold bold">1948</td><td>🇮🇱 State of Israel</td><td>Proclaimed; immediate Arab-Israeli conflict; Nakba begins</td></tr>
+        <tr><td class="text-gold bold">June 1967</td><td>✈️ Six-Day War</td><td>Israel tripled territory; West Bank, Gaza, Sinai, Golan captured</td></tr>
+        <tr><td class="text-orange bold">October 1973</td><td>⚔️ Yom Kippur War</td><td>Last major Arab military attempt; led to Egypt-Israel peace (1979)</td></tr>
+        <tr><td class="text-gold bold">November 9, 1989</td><td>🧱 Berlin Wall falls</td><td>Cold War symbolically over; German reunification follows</td></tr>
+        <tr><td class="text-red bold">December 1991</td><td>🇷🇺 USSR dissolves</td><td>Cold War ends; US-led unipolar world order begins</td></tr>
+        <tr><td class="text-blue bold">1992</td><td>🇪🇺 Maastricht Treaty</td><td>European Union officially formed; four freedoms; path to Euro</td></tr>
+        <tr><td class="text-green bold">2016</td><td>🇬🇧 Brexit</td><td>UK votes to leave EU; first member state exit in EU history</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  🌍 WORLD HISTORY <br>
+  <span style="color:var(--gold);letter-spacing:4px;">⚡  AUTEUR: <b>PIYUSH  PARTE </b> ⚡</span><br>
+  <span style="color:var(--cyan)">NEW: Napoleon · Russian Revolution · Space Race · Korean War · Cuban Missile Crisis · Vietnam · USSR Collapse</span><br>
+  <span style="font-size:11px;color:#555">Tables · Mind Maps · Flowcharts · Personas · Fact Boxes · Comparative Analysis · Animated SVGs · 16+ Eras</span>
+<br><span style="color:var(--gold);letter-spacing:4px;"><h2>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h2></span><br>
+</div>
+
+<script>
+  // Starfield
+  const stars = document.getElementById('stars');
+  for(let i=0;i<80;i++){
+    const s=document.createElement('div');
+    s.className='star';
+    const sz=Math.random()*2+0.5;
+    s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${2+Math.random()*3}s`;
+    stars.appendChild(s);
+  }
+</script>
+</body>
+</html>

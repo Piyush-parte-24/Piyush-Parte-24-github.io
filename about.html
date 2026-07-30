@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Pɪʏᴜꜱʜ Pᴀʀᴛᴇ</title>
+<meta name="description" content="About Piyush Parte and the purpose of the Prehistoric Archive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-inner" data-root="">
+
+<div class="top-controls">
+  <button id="ambienceToggle" class="ctrl-btn" aria-pressed="false" aria-label="Toggle ambient sound">
+    <span class="ctrl-icon" aria-hidden="true">🔈</span><span class="ctrl-label">AMBIENCE OFF</span>
+  </button>
+</div>
+
+<header class="site-nav solid" id="siteNav">
+  <a href="index.html" class="nav-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
+    <a href="index.html">Home</a><a href="archive.html">Archive</a>
+    <a href="discoveries.html">Discoveries</a><a href="about.html" class="active">About</a>
+  </nav>
+</header>
+
+<section class="inner-hero" aria-label="About">
+  <div class="inner-hero-scene" aria-hidden="true">
+    <div class="layer jungle-mid sm"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice"><path d="M0,300 L0,200 Q120,140 240,200 Q360,130 480,210 Q620,140 760,210 Q900,150 1040,210 Q1180,140 1320,210 L1440,200 L1440,300 Z" fill="#0e1a13"/></svg></div>
+    <div class="dino raptor sm" data-depth="0.06"><svg viewBox="0 0 160 120"><path d="M10,110 L30,80 L28,60 C40,50 55,48 70,54 L95,40 C100,30 112,28 118,36 L110,50 L128,44 C124,56 112,60 100,60 L82,72 L96,110 L84,110 L74,80 L58,80 L52,110 L40,110 L44,80 L30,88 L24,110 Z"/></svg></div>
+    <div class="mist mist-2"></div><div class="vignette"></div>
+  </div>
+  <div class="inner-hero-content">
+    <span class="meta-label">FIELD RESEARCHER</span>
+    <h1 class="inner-title" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</h1>
+    <p class="inner-sub" data-site="aboutRole">Student • Observer • Learner</p>
+  </div>
+</section>
+
+<section class="about-body">
+  <div class="wrap about-grid">
+    <div class="about-main" id="aboutMain"></div>
+    <aside class="about-side fade-up">
+      <div class="field-card">
+        <span class="meta-label">FIELD RECORD</span>
+        <ul class="field-list">
+          <li><span>Researcher</span><strong data-site="name">Pɪʏᴜꜱʜ Pᴀʀᴛᴇ</strong></li>
+          <li><span>Focus</span><strong>History · Philosophy</strong></li>
+          <li><span>Method</span><strong>Notes &amp; Fieldwork</strong></li>
+          <li><span>Status</span><strong><span class="pulse-dot"></span> Active</strong></li>
+        </ul>
+      </div>
+      <a href="archive.html" class="ghost-btn full" data-transition>ENTER THE ARCHIVE →</a>
+    </aside>
+  </div>
+</section>
+
+<section class="finale short" aria-label="End">
+  <div class="finale-content"><p class="finale-sub fade-up">THE EXPEDITION CONTINUES · KEEP EXPLORING</p></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</span>
+    <span class="footer-note" data-site="footerNote">The Prehistoric Archive · Field Records</span>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="about.html">About</a></nav>
+  </div>
+</footer>
+
+<div class="page-transition" id="pageTransition" aria-hidden="true"><div class="pt-fog"></div><div class="pt-print"></div></div>
+<audio id="ambienceAudio" loop preload="none"><source src="assets/ambience.mp3" type="audio/mpeg"></audio>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

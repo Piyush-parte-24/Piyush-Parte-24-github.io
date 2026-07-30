@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pɪʏᴜꜱʜ Pᴀʀᴛᴇ — The Prehistoric Archive</title>
+<meta name="description" content="The personal knowledge archive of Piyush Parte — notes, ideas and discoveries, preserved like fossils.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-home" data-root="">
+
+<div class="top-controls">
+  <button id="ambienceToggle" class="ctrl-btn" aria-pressed="false" aria-label="Toggle ambient sound">
+    <span class="ctrl-icon" aria-hidden="true">🔈</span><span class="ctrl-label">AMBIENCE OFF</span>
+  </button>
+</div>
+
+<header class="site-nav" id="siteNav">
+  <a href="index.html" class="nav-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
+    <a href="index.html" class="active">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="discoveries.html">Discoveries</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero" aria-label="Arrival">
+  <div class="hero-scene" aria-hidden="true">
+    <div class="layer sky"></div><div class="sun"></div><div class="clouds"></div>
+    <div class="layer mountains">
+      <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice">
+        <path d="M0,500 L0,300 L180,180 L320,280 L470,150 L560,230 L720,90 L860,240 L1000,160 L1180,270 L1300,190 L1440,300 L1440,500 Z" fill="#1a2a22"/>
+        <path d="M600,120 L700,120 L760,90 Q720,60 680,90 Z" fill="#3a2418"/>
+      </svg>
+    </div>
+    <div class="dino brachiosaurus" data-depth="0.04"><svg viewBox="0 0 240 200"><path d="M20,190 C20,150 40,140 55,140 L60,120 C50,90 48,55 62,38 C70,28 84,26 90,40 C96,54 88,74 82,96 L90,140 C120,138 150,150 165,175 L175,190 L155,190 L150,175 C140,168 120,162 100,164 L104,190 L88,190 L86,164 L60,164 L58,190 Z"/></svg></div>
+    <div class="layer jungle-mid">
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice"><path d="M0,400 L0,240 Q60,180 120,240 Q180,160 260,240 Q340,150 420,250 Q520,170 600,250 Q700,160 800,250 Q900,180 1000,250 Q1120,160 1220,250 Q1320,190 1440,250 L1440,400 Z" fill="#0e1a13"/></svg>
+    </div>
+    <div class="dino raptor" data-depth="0.08"><svg viewBox="0 0 160 120"><path d="M10,110 L30,80 L28,60 C40,50 55,48 70,54 L95,40 C100,30 112,28 118,36 L110,50 L128,44 C124,56 112,60 100,60 L82,72 L96,110 L84,110 L74,80 L58,80 L52,110 L40,110 L44,80 L30,88 L24,110 Z"/></svg></div>
+    <div class="dino trex" data-depth="0.06"><svg viewBox="0 0 300 260"><path d="M40,250 L70,150 C62,120 66,80 92,60 C120,40 168,42 196,68 C214,84 220,104 216,120 L240,116 C232,132 214,136 200,132 L188,150 C196,180 190,220 176,250 L152,250 L160,200 L120,210 L128,250 L108,250 L100,205 C88,195 80,175 82,155 L60,250 Z"/></svg></div>
+    <div class="ptero-flock" data-depth="0.12"><span class="ptero"></span><span class="ptero"></span><span class="ptero"></span></div>
+    <div class="layer jungle-fore">
+      <svg viewBox="0 0 1440 460" preserveAspectRatio="xMidYMax slice">
+        <path d="M0,460 L0,180 Q40,120 70,200 Q90,110 130,210 Q160,140 200,230 L0,460 Z" fill="#060d09"/>
+        <path d="M1440,460 L1440,160 Q1400,100 1370,190 Q1350,110 1310,210 Q1280,140 1240,230 L1440,460 Z" fill="#060d09"/>
+        <path d="M0,460 L0,320 Q120,260 220,330 Q300,270 420,340 L420,460 Z" fill="#040805"/>
+        <path d="M1440,460 L1440,320 Q1320,260 1220,330 Q1140,270 1020,340 L1020,460 Z" fill="#040805"/>
+      </svg>
+      <div class="fern fern-l"></div><div class="fern fern-r"></div>
+    </div>
+    <div class="mist mist-1"></div><div class="mist mist-2"></div>
+    <div class="particles" id="particles"></div><div class="rain" id="rain"></div>
+    <div class="vignette"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal r1" data-site="subtitle">THE PREHISTORIC ARCHIVE</p>
+    <h1 class="hero-name reveal r2" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</h1>
+    <p class="hero-tagline reveal r3" data-site="tagline">NOTES • IDEAS • DISCOVERIES</p>
+    <a href="archive.html" class="enter-btn reveal r4" data-transition>
+      <span data-site="cta">ENTER THE EXPEDITION</span><span class="enter-arrow" aria-hidden="true">↓</span>
+    </a>
+  </div>
+  <div class="scroll-hint reveal r4" aria-hidden="true"><span></span></div>
+</section>
+
+<section class="creed" aria-label="Purpose">
+  <div class="wrap">
+    <p class="creed-line fade-up">Learning is an expedition.</p>
+    <p class="creed-line fade-up">Every note is a discovery.</p>
+    <p class="creed-line fade-up">Every idea is a fossil worth preserving.</p>
+  </div>
+</section>
+
+<section class="trail-section" aria-label="The trail">
+  <div class="wrap">
+    <div class="footprint-trail" id="footprintTrail" aria-hidden="true"></div>
+    <div class="trail-copy fade-up">
+      <span class="meta-label">FIELD LOG · ENTRY 001</span>
+      <h2 class="section-title">Follow the tracks<br>into the archive.</h2>
+      <p class="section-text">Somewhere beneath the canopy, in layered earth and quiet stone, a collection of records has been preserved. Histories. Philosophies. Half-formed ideas waiting to be uncovered. This is where they rest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="featured" aria-label="Featured expeditions">
+  <div class="wrap">
+    <div class="featured-head fade-up">
+      <span class="meta-label">CATALOGUED SPECIMENS</span>
+      <h2 class="section-title">Recent Discoveries</h2>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+    <div class="featured-cta fade-up"><a href="archive.html" class="ghost-btn" data-transition>VIEW FULL ARCHIVE →</a></div>
+  </div>
+</section>
+
+<section class="warning" aria-label="Expedition status">
+  <div class="warning-scene" aria-hidden="true">
+    <div class="mist mist-1"></div>
+    <div class="dino brachiosaurus far" data-depth="0.03"><svg viewBox="0 0 240 200"><path d="M20,190 C20,150 40,140 55,140 L60,120 C50,90 48,55 62,38 C70,28 84,26 90,40 C96,54 88,74 82,96 L90,140 C120,138 150,150 165,175 L175,190 L155,190 L150,175 C140,168 120,162 100,164 L104,190 L88,190 L86,164 L60,164 L58,190 Z"/></svg></div>
+  </div>
+  <div class="wrap warning-inner">
+    <div class="warn-tag fade-up">⚠ UNKNOWN TERRITORY</div>
+    <h2 class="warn-title fade-up">PROCEED WITH CURIOSITY.</h2>
+    <p class="warn-status fade-up">EXPEDITION STATUS: <span class="pulse-dot"></span> ACTIVE</p>
+  </div>
+</section>
+
+<section class="finale" aria-label="The expedition continues">
+  <div class="finale-scene" aria-hidden="true">
+    <div class="layer f-sky"></div><div class="f-sun"></div>
+    <div class="layer f-mountains"><svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice"><path d="M0,400 L0,260 L200,150 L380,250 L560,120 L760,240 L980,140 L1200,250 L1440,180 L1440,400 Z" fill="#241611"/></svg></div>
+    <div class="dino f-dino" data-depth="0.05"><svg viewBox="0 0 300 260"><path d="M40,250 L70,150 C62,120 66,80 92,60 C120,40 168,42 196,68 C214,84 220,104 216,120 L240,116 C232,132 214,136 200,132 L188,150 C196,180 190,220 176,250 L152,250 L160,200 L120,210 L128,250 L108,250 L100,205 C88,195 80,175 82,155 L60,250 Z"/></svg></div>
+    <div class="mist mist-2"></div><div class="vignette"></div>
+  </div>
+  <div class="finale-content">
+    <h2 class="finale-title fade-up">THE EXPEDITION CONTINUES.</h2>
+    <p class="finale-name fade-up" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</p>
+    <p class="finale-sub fade-up">KEEP EXPLORING.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</span>
+    <span class="footer-note" data-site="footerNote">The Prehistoric Archive · Field Records</span>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="about.html">About</a></nav>
+  </div>
+</footer>
+
+<div class="page-transition" id="pageTransition" aria-hidden="true"><div class="pt-fog"></div><div class="pt-print"></div></div>
+<audio id="ambienceAudio" loop preload="none"><source src="assets/ambience.mp3" type="audio/mpeg"></audio>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

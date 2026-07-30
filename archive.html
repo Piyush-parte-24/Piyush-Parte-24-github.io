@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedition Archive — Pɪʏᴜꜱʜ Pᴀʀᴛᴇ</title>
+<meta name="description" content="The expedition archive: a catalogue of documented field notes and discoveries by Piyush Parte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-inner" data-root="">
+
+<div class="top-controls">
+  <button id="ambienceToggle" class="ctrl-btn" aria-pressed="false" aria-label="Toggle ambient sound">
+    <span class="ctrl-icon" aria-hidden="true">🔈</span><span class="ctrl-label">AMBIENCE OFF</span>
+  </button>
+</div>
+
+<header class="site-nav solid" id="siteNav">
+  <a href="index.html" class="nav-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
+    <a href="index.html">Home</a><a href="archive.html" class="active">Archive</a>
+    <a href="discoveries.html">Discoveries</a><a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="inner-hero" aria-label="Expedition archive">
+  <div class="inner-hero-scene" aria-hidden="true">
+    <div class="layer mountains sm"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice"><path d="M0,300 L0,180 L220,90 L420,190 L620,70 L840,200 L1060,110 L1280,210 L1440,140 L1440,300 Z" fill="#182319"/></svg></div>
+    <div class="dino trex sm" data-depth="0.05"><svg viewBox="0 0 300 260"><path d="M40,250 L70,150 C62,120 66,80 92,60 C120,40 168,42 196,68 C214,84 220,104 216,120 L240,116 C232,132 214,136 200,132 L188,150 C196,180 190,220 176,250 L152,250 L160,200 L120,210 L128,250 L108,250 L100,205 C88,195 80,175 82,155 L60,250 Z"/></svg></div>
+    <div class="mist mist-1"></div><div class="vignette"></div>
+  </div>
+  <div class="inner-hero-content">
+    <span class="meta-label">EXPEDITION HEADQUARTERS</span>
+    <h1 class="inner-title">Expedition Archive</h1>
+    <p class="inner-sub">Every specimen below has been recovered, catalogued and preserved. Choose an expedition to examine the field notes.</p>
+  </div>
+</section>
+
+<section class="archive-controls" aria-label="Filter specimens">
+  <div class="wrap archive-controls-inner">
+    <div class="filter-row" id="filterRow" role="group" aria-label="Filter by classification"></div>
+    <div class="count-tag"><span id="specimenCount">0</span> SPECIMENS CATALOGUED</div>
+  </div>
+</section>
+
+<section class="archive-body" aria-label="Specimen records">
+  <div class="wrap"><div class="archive-list" id="archiveList"></div></div>
+</section>
+
+<section class="finale short" aria-label="End of records">
+  <div class="finale-content"><p class="finale-sub fade-up">END OF CATALOGUED RECORDS · MORE UNEARTHED SOON</p></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand" data-site="name">Pɪʏᴜꜱʜ&nbsp;Pᴀʀᴛᴇ</span>
+    <span class="footer-note" data-site="footerNote">The Prehistoric Archive · Field Records</span>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="about.html">About</a></nav>
+  </div>
+</footer>
+
+<div class="page-transition" id="pageTransition" aria-hidden="true"><div class="pt-fog"></div><div class="pt-print"></div></div>
+<audio id="ambienceAudio" loop preload="none"><source src="assets/ambience.mp3" type="audio/mpeg"></audio>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

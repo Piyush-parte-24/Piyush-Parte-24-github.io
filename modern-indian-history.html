@@ -1,0 +1,2961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Indian History — Super Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a0a00;
+    --parchment: #fdf6e3;
+    --saffron: #ff6b00;
+    --saffron2: #ffab40;
+    --green: #2e7d32;
+    --green2: #66bb6a;
+    --navy: #0d2137;
+    --navy2: #1a3a5c;
+    --crimson: #b71c1c;
+    --crimson2: #ef5350;
+    --gold: #f9a825;
+    --gold2: #ffe082;
+    --teal: #00695c;
+    --teal2: #4db6ac;
+    --purple: #4a148c;
+    --purple2: #9c27b0;
+    --gray: #546e7a;
+    --gray2: #b0bec5;
+    --white: #ffffff;
+    --card-bg: rgba(255,255,255,0.06);
+    --glow-saffron: 0 0 24px rgba(255,107,0,0.35);
+    --glow-gold: 0 0 24px rgba(249,168,37,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--navy);
+    color: var(--parchment);
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d2137 0%, #1a1a2e 40%, #16213e 70%, #0f3460 100%);
+    border-bottom: 4px solid var(--saffron);
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(255,107,0,0.15) 0%, transparent 60%);
+  }
+  .hero-flag {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    width: 160px;
+    height: 32px;
+    margin: 0 auto 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .flag-s { flex: 1; }
+  .flag-s:nth-child(1) { background: #FF9933; }
+  .flag-s:nth-child(2) { background: white; position: relative; }
+  .flag-s:nth-child(2)::after {
+    content: '⊙';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    color: #000080;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .flag-s:nth-child(3) { background: #138808; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    text-shadow: none;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--gray2);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .hero-tag {
+    background: rgba(255,107,0,0.15);
+    border: 1px solid rgba(255,107,0,0.4);
+    color: var(--saffron2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  /* NAV */
+  .toc {
+    background: rgba(13,33,55,0.95);
+    border-bottom: 2px solid rgba(255,107,0,0.3);
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .toc a {
+    color: var(--gray2);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-family: 'Space Mono', monospace;
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .toc a:hover {
+    background: rgba(255,107,0,0.2);
+    color: var(--saffron2);
+    border-color: var(--saffron);
+  }
+
+  /* LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* CHAPTER HEADERS */
+  .chapter {
+    margin: 50px 0 30px;
+    padding: 32px 0 20px;
+    position: relative;
+  }
+  .chapter-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .chapter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .chapter-divider {
+    height: 3px;
+    width: 80px;
+    border-radius: 2px;
+    margin-top: 14px;
+  }
+
+  /* COLOR THEMES */
+  .theme-saffron .chapter-label { color: var(--saffron); }
+  .theme-saffron h2 { color: var(--saffron2); }
+  .theme-saffron .chapter-divider { background: linear-gradient(90deg, var(--saffron), var(--saffron2)); }
+
+  .theme-green .chapter-label { color: var(--green2); }
+  .theme-green h2 { color: var(--green2); }
+  .theme-green .chapter-divider { background: linear-gradient(90deg, var(--green), var(--green2)); }
+
+  .theme-crimson .chapter-label { color: var(--crimson2); }
+  .theme-crimson h2 { color: var(--crimson2); }
+  .theme-crimson .chapter-divider { background: linear-gradient(90deg, var(--crimson), var(--crimson2)); }
+
+  .theme-gold .chapter-label { color: var(--gold); }
+  .theme-gold h2 { color: var(--gold2); }
+  .theme-gold .chapter-divider { background: linear-gradient(90deg, var(--gold), var(--gold2)); }
+
+  .theme-teal .chapter-label { color: var(--teal2); }
+  .theme-teal h2 { color: var(--teal2); }
+  .theme-teal .chapter-divider { background: linear-gradient(90deg, var(--teal), var(--teal2)); }
+
+  .theme-purple .chapter-label { color: var(--purple2); }
+  .theme-purple h2 { color: var(--purple2); }
+  .theme-purple .chapter-divider { background: linear-gradient(90deg, var(--purple), var(--purple2)); }
+
+  /* CARDS GRID */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 22px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .card-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--gold2);
+  }
+  .card p { font-size: 0.95rem; color: var(--gray2); line-height: 1.6; }
+  .card ul { list-style: none; padding: 0; }
+  .card ul li {
+    font-size: 0.92rem;
+    color: var(--parchment);
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .card ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--saffron);
+  }
+  .card.highlight-saffron { border-color: rgba(255,107,0,0.4); background: rgba(255,107,0,0.06); }
+  .card.highlight-green { border-color: rgba(46,125,50,0.4); background: rgba(46,125,50,0.06); }
+  .card.highlight-crimson { border-color: rgba(183,28,28,0.4); background: rgba(183,28,28,0.06); }
+  .card.highlight-gold { border-color: rgba(249,168,37,0.4); background: rgba(249,168,37,0.06); }
+  .card.highlight-teal { border-color: rgba(0,105,92,0.4); background: rgba(0,105,92,0.06); }
+  .card.highlight-purple { border-color: rgba(74,20,140,0.4); background: rgba(74,20,140,0.06); }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding: 10px 0; margin: 24px 0; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--saffron), var(--gold), var(--green2));
+    border-radius: 2px;
+  }
+  .tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+    padding-left: 0;
+  }
+  .tl-dot {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-align: center;
+    line-height: 1.2;
+    color: white;
+    box-shadow: 0 0 0 4px var(--navy);
+    z-index: 1;
+  }
+  .tl-dot.saffron { background: var(--saffron); }
+  .tl-dot.gold { background: var(--gold); color: var(--ink); }
+  .tl-dot.green { background: var(--green); }
+  .tl-dot.crimson { background: var(--crimson); }
+  .tl-dot.teal { background: var(--teal); }
+  .tl-dot.purple { background: var(--purple); }
+  .tl-dot.navy { background: var(--navy2); border: 2px solid var(--gold); }
+  .tl-content {
+    flex: 1;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 16px 20px;
+    border-left: 3px solid var(--saffron);
+    margin-bottom: 4px;
+  }
+  .tl-year {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--saffron2);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .tl-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold2);
+    margin-bottom: 6px;
+  }
+  .tl-desc { font-size: 0.93rem; color: var(--gray2); line-height: 1.6; }
+  .tl-content.green-border { border-left-color: var(--green2); }
+  .tl-content.crimson-border { border-left-color: var(--crimson2); }
+  .tl-content.gold-border { border-left-color: var(--gold); }
+  .tl-content.teal-border { border-left-color: var(--teal2); }
+  .tl-content.purple-border { border-left-color: var(--purple2); }
+
+  /* FLOWCHART */
+  .flowchart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 28px 0;
+  }
+  .fc-box {
+    background: rgba(255,255,255,0.06);
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 130px;
+    max-width: 180px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+  .fc-box .emoji { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+  .fc-box .label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+  .fc-box .date { font-size: 0.8rem; opacity: 0.75; }
+  .fc-arrow {
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: bold;
+  }
+  .fc-box.fc-saffron { border-color: var(--saffron); color: var(--saffron2); }
+  .fc-box.fc-green { border-color: var(--green2); color: var(--green2); }
+  .fc-box.fc-crimson { border-color: var(--crimson2); color: var(--crimson2); }
+  .fc-box.fc-gold { border-color: var(--gold); color: var(--gold2); }
+  .fc-box.fc-teal { border-color: var(--teal2); color: var(--teal2); }
+  .fc-box.fc-purple { border-color: var(--purple2); color: var(--purple2); }
+  .fc-box.fc-navy { border-color: var(--gray); color: var(--gray2); }
+
+  /* MINDMAP */
+  .mindmap-wrap {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin: 28px 0;
+  }
+  .mm-center {
+    background: linear-gradient(135deg, var(--saffron), var(--gold));
+    color: var(--ink);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 24px;
+    box-shadow: var(--glow-saffron);
+  }
+  .mm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .mm-branch {
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 14px;
+    border-top: 3px solid;
+  }
+  .mm-branch h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .mm-branch ul { list-style: none; padding: 0; }
+  .mm-branch ul li {
+    font-size: 0.85rem;
+    color: var(--gray2);
+    padding: 2px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .mm-branch ul li::before { content: '•'; position: absolute; left: 0; }
+  .mm-branch.mm-saffron { border-top-color: var(--saffron); }
+  .mm-branch.mm-saffron h4 { color: var(--saffron2); }
+  .mm-branch.mm-saffron ul li::before { color: var(--saffron); }
+  .mm-branch.mm-green { border-top-color: var(--green2); }
+  .mm-branch.mm-green h4 { color: var(--green2); }
+  .mm-branch.mm-green ul li::before { color: var(--green2); }
+  .mm-branch.mm-crimson { border-top-color: var(--crimson2); }
+  .mm-branch.mm-crimson h4 { color: var(--crimson2); }
+  .mm-branch.mm-crimson ul li::before { color: var(--crimson2); }
+  .mm-branch.mm-gold { border-top-color: var(--gold); }
+  .mm-branch.mm-gold h4 { color: var(--gold2); }
+  .mm-branch.mm-gold ul li::before { color: var(--gold); }
+  .mm-branch.mm-teal { border-top-color: var(--teal2); }
+  .mm-branch.mm-teal h4 { color: var(--teal2); }
+  .mm-branch.mm-teal ul li::before { color: var(--teal2); }
+  .mm-branch.mm-purple { border-top-color: var(--purple2); }
+  .mm-branch.mm-purple h4 { color: var(--purple2); }
+  .mm-branch.mm-purple ul li::before { color: var(--purple2); }
+
+  /* STAT BARS */
+  .stat-row { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
+  .stat-item { display: flex; align-items: center; gap: 14px; }
+  .stat-label { width: 220px; font-size: 0.88rem; color: var(--parchment); flex-shrink: 0; }
+  .stat-bar-wrap { flex: 1; background: rgba(255,255,255,0.08); border-radius: 4px; height: 10px; overflow: hidden; }
+  .stat-bar { height: 100%; border-radius: 4px; }
+  .stat-val { width: 50px; font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--gold2); text-align: right; }
+
+  /* QUOTE BLOCK */
+  .quote-block {
+    border-left: 4px solid var(--saffron);
+    padding: 18px 24px;
+    background: rgba(255,107,0,0.07);
+    border-radius: 0 10px 10px 0;
+    margin: 28px 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--parchment);
+  }
+  .quote-block cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--saffron2);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .highlight-box.hb-saffron { border-color: rgba(255,107,0,0.5); background: rgba(255,107,0,0.08); }
+  .highlight-box.hb-gold { border-color: rgba(249,168,37,0.5); background: rgba(249,168,37,0.06); }
+  .highlight-box.hb-green { border-color: rgba(46,125,50,0.5); background: rgba(46,125,50,0.06); }
+  .highlight-box.hb-crimson { border-color: rgba(183,28,28,0.5); background: rgba(183,28,28,0.06); }
+  .highlight-box h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  .highlight-box.hb-saffron h3 { color: var(--saffron2); }
+  .highlight-box.hb-gold h3 { color: var(--gold2); }
+  .highlight-box.hb-green h3 { color: var(--green2); }
+  .highlight-box.hb-crimson h3 { color: var(--crimson2); }
+
+  /* BULLET LIST STYLED */
+  .bullet-list { list-style: none; padding: 0; margin: 12px 0; }
+  .bullet-list li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--parchment);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.5;
+  }
+  .bullet-list li:last-child { border-bottom: none; }
+  .bullet-list li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 1rem;
+  }
+  .bl-star li::before { content: '⭐'; }
+  .bl-fire li::before { content: '🔥'; }
+  .bl-check li::before { content: '✅'; }
+  .bl-sword li::before { content: '⚔️'; }
+  .bl-scroll li::before { content: '📜'; }
+  .bl-arrow li::before { content: '➤'; color: var(--saffron); font-size: 0.8rem; top: 10px; }
+  .bl-diamond li::before { content: '◆'; color: var(--gold); font-size: 0.7rem; top: 11px; }
+
+  /* TABLE */
+  .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.9rem; }
+  .data-table th {
+    background: rgba(255,107,0,0.2);
+    color: var(--saffron2);
+    padding: 12px 16px;
+    text-align: left;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255,107,0,0.4);
+  }
+  .data-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: var(--parchment);
+    vertical-align: top;
+  }
+  .data-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .data-table .year-cell {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gold2);
+    white-space: nowrap;
+  }
+
+  /* BAR CHART */
+  .bar-chart { margin: 28px 0; }
+  .bar-chart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold2);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .bc-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+  .bc-label { width: 180px; font-size: 0.85rem; color: var(--parchment); text-align: right; flex-shrink: 0; }
+  .bc-bar-outer { flex: 1; background: rgba(255,255,255,0.06); border-radius: 4px; height: 28px; position: relative; overflow: hidden; }
+  .bc-bar-inner {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: white;
+    font-weight: 700;
+    transition: width 1s ease;
+  }
+
+  /* TWO COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 20px 0; }
+  @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+  /* THREE COL */
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 20px 0; }
+  @media (max-width: 800px) { .three-col { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .three-col { grid-template-columns: 1fr; } }
+
+  /* INFO BADGE */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 2px;
+    text-transform: uppercase;
+  }
+  .badge-saffron { background: rgba(255,107,0,0.25); color: var(--saffron2); border: 1px solid rgba(255,107,0,0.4); }
+  .badge-green { background: rgba(46,125,50,0.25); color: var(--green2); border: 1px solid rgba(46,125,50,0.4); }
+  .badge-crimson { background: rgba(183,28,28,0.25); color: var(--crimson2); border: 1px solid rgba(183,28,28,0.4); }
+  .badge-gold { background: rgba(249,168,37,0.2); color: var(--gold2); border: 1px solid rgba(249,168,37,0.4); }
+  .badge-teal { background: rgba(0,105,92,0.25); color: var(--teal2); border: 1px solid rgba(0,105,92,0.4); }
+
+  /* PERSON CARD */
+  .person-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .person-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .person-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold2);
+    margin-bottom: 4px;
+  }
+  .person-card .role {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--saffron2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .person-card p { font-size: 0.83rem; color: var(--gray2); line-height: 1.5; }
+
+  /* SECTION DIVIDER */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,107,0,0.4), transparent);
+    margin: 40px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.3);
+    border-top: 2px solid rgba(255,107,0,0.2);
+    margin-top: 60px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray);
+    letter-spacing: 2px;
+  }
+
+  /* PHASE INDICATORS */
+  .phase-strip {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 24px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .phase-seg {
+    flex: 1;
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .phase-seg .year { font-size: 1rem; display: block; font-weight: 700; margin-bottom: 3px; }
+
+  /* KEY FACTS */
+  .key-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .kf-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .kf-text { flex: 1; }
+  .kf-text strong { color: var(--gold2); font-family: 'Playfair Display', serif; font-size: 1rem; display: block; margin-bottom: 4px; }
+  .kf-text span { font-size: 0.9rem; color: var(--gray2); }
+
+  /* NUMBER HIGHLIGHT */
+  .number-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+    justify-content: center;
+  }
+  .number-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+    min-width: 130px;
+  }
+  .number-box .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .number-box .num-label { font-size: 0.75rem; color: var(--gray2); line-height: 1.3; }
+
+  /* ANIMATED PULSE DOT */
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+  /* STICKY ANCHOR */
+  .anchor { display: block; position: relative; top: -70px; visibility: hidden; }
+
+  /* ===== ENRICHMENT CSS ===== */
+  .new-badge {
+    display:inline-block;background:linear-gradient(135deg,#b71c1c,#9c27b0);
+    color:#fff;font-size:0.6rem;letter-spacing:2px;padding:2px 8px;
+    border-radius:10px;margin-left:8px;vertical-align:middle;text-transform:uppercase;
+    font-family:'Space Mono',monospace;
+  }
+  .insight-box {
+    border-radius:12px;padding:18px 22px;margin:18px 0;
+    border-left:5px solid;position:relative;
+  }
+  .insight-box::before {
+    content:'💡 INSIGHT';font-family:'Space Mono',monospace;font-size:0.6rem;
+    letter-spacing:3px;display:block;margin-bottom:6px;opacity:0.7;
+  }
+  .insight-box.ib-saffron{border-color:var(--saffron);background:rgba(255,107,0,0.07);}
+  .insight-box.ib-saffron::before{color:var(--saffron2);}
+  .insight-box.ib-gold{border-color:var(--gold);background:rgba(249,168,37,0.07);}
+  .insight-box.ib-gold::before{color:var(--gold2);}
+  .insight-box.ib-green{border-color:var(--green2);background:rgba(46,125,50,0.07);}
+  .insight-box.ib-green::before{color:var(--green2);}
+  .insight-box.ib-crimson{border-color:var(--crimson2);background:rgba(183,28,28,0.07);}
+  .insight-box.ib-crimson::before{color:var(--crimson2);}
+  .insight-box.ib-teal{border-color:var(--teal2);background:rgba(0,105,92,0.07);}
+  .insight-box.ib-teal::before{color:var(--teal2);}
+  .insight-box.ib-purple{border-color:var(--purple2);background:rgba(74,20,140,0.07);}
+  .insight-box.ib-purple::before{color:var(--purple2);}
+
+  .svg-mindmap{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+    border-radius:16px;padding:24px;margin:24px 0;}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0;}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr;}}
+  .compare-panel{border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.1);}
+  .compare-panel h3{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:12px;}
+
+  .fc-vertical{display:flex;flex-direction:column;align-items:center;gap:6px;margin:24px 0;}
+  .fc-v-box{width:100%;max-width:700px;background:rgba(255,255,255,0.05);
+    border:2px solid;border-radius:10px;padding:14px 20px;text-align:center;}
+  .fc-v-arrow{color:var(--gold);font-size:1.8rem;line-height:1;}
+
+  .person-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:20px 0;}
+  .person-mini{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+    border-radius:10px;padding:16px;border-top:3px solid;}
+  .person-mini h4{font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:4px;}
+  .person-mini .yr{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:1px;opacity:0.7;margin-bottom:6px;}
+  .person-mini p{font-size:0.82rem;color:var(--gray2);}
+
+  .battle-table th{background:rgba(183,28,28,0.25);color:var(--crimson2);}
+  .act-table th{background:rgba(0,105,92,0.25);color:var(--teal2);}
+  .gold-table th{background:rgba(249,168,37,0.2);color:var(--gold2);}
+  .purple-table th{background:rgba(74,20,140,0.3);color:var(--purple2);}
+
+  .phase-bar{display:flex;border-radius:8px;overflow:hidden;height:44px;margin:20px 0;
+    box-shadow:0 4px 16px rgba(0,0,0,0.3);}
+  .pb-seg{flex:1;display:flex;align-items:center;justify-content:center;
+    font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.5px;
+    text-transform:uppercase;text-align:center;padding:4px;color:#fff;}
+  .stats-row{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0;justify-content:center;}
+  .stat-pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+    border-radius:10px;padding:14px 20px;text-align:center;min-width:120px;}
+  .stat-pill .sp-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;
+    display:block;line-height:1;margin-bottom:4px;}
+  .stat-pill .sp-lbl{font-size:0.72rem;color:var(--gray2);font-family:'Space Mono',monospace;}
+
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+  .tag{padding:4px 12px;border-radius:20px;font-size:0.7rem;font-family:'Space Mono',monospace;
+    letter-spacing:0.5px;border:1px solid;}
+  .tag-s{border-color:rgba(255,107,0,0.4);color:var(--saffron2);background:rgba(255,107,0,0.08);}
+  .tag-g{border-color:rgba(46,125,50,0.4);color:var(--green2);background:rgba(46,125,50,0.08);}
+  .tag-c{border-color:rgba(183,28,28,0.4);color:var(--crimson2);background:rgba(183,28,28,0.08);}
+  .tag-t{border-color:rgba(0,105,92,0.4);color:var(--teal2);background:rgba(0,105,92,0.08);}
+  .tag-p{border-color:rgba(74,20,140,0.4);color:var(--purple2);background:rgba(74,20,140,0.08);}
+  .tag-gold{border-color:rgba(249,168,37,0.4);color:var(--gold2);background:rgba(249,168,37,0.08);}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-flag"><div class="flag-s"></div><div class="flag-s"></div><div class="flag-s"></div></div>
+  <h1>Modern Indian History</h1>
+  <p class="hero-sub">🐲 AUTEUR: <b>PIYUSH  PARTE</b> &nbsp;|&nbsp; European Advent → Independence</p>
+  <div class="hero-tags">
+    <span class="hero-tag">🇵🇹 Europeans in India</span>
+    <span class="hero-tag">⚔️ Battles & Wars</span>
+    <span class="hero-tag">🏛️ British Governance</span>
+    <span class="hero-tag">🔥 Freedom Struggle</span>
+    <span class="hero-tag">📜 1857 Revolt</span>
+    <span class="hero-tag">🕊️ Gandhi Era</span>
+    <span class="hero-tag">👩 Women Leaders</span>
+    <span class="hero-tag">🧭 Social Movements</span>
+    <span class="hero-tag">🐯 Mysore Wars</span>
+    <span class="hero-tag">💰 Drain Theory</span>
+    <span class="hero-tag">🧂 Dandi March</span>
+    <span class="hero-tag">⚡ Revolutionaries</span>
+    <span class="hero-tag">📜 Constitutional Acts</span>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="toc">
+  <a href="#europeans">⚓ Europeans</a>
+  <a href="#portuguese">🇵🇹 Portuguese</a>
+  <a href="#english">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English EIC</a>
+  <a href="#plassey">⚔️ Plassey & Buxar</a>
+  <a href="#marathas">🐎 Marathas</a>
+  <a href="#governors">👑 Governors</a>
+  <a href="#revolt1857">🔥 1857</a>
+  <a href="#congress">🏛️ INC</a>
+  <a href="#gandhi">🕊️ Gandhi</a>
+  <a href="#movements">✊ Movements</a>
+  <a href="#women">👩 Women</a>
+  <a href="#regional-powers">🏰 Regional Powers</a>
+  <a href="#economic-impact">💰 Economic Drain</a>
+  <a href="#social-reform">🌅 Social Reform</a>
+  <a href="#ncm">✊ NCM 1920</a>
+  <a href="#cdm">🧂 CDM 1930</a>
+  <a href="#qim">🔥 Quit India</a>
+  <a href="#constitutional">📜 Const. Acts</a>
+  <a href="#mysore-wars">⚔️ Mysore Wars</a>
+</nav>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PART A: FREEDOM STRUGGLE TIMELINE OVERVIEW                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<a class="anchor" id="europeans"></a>
+<div class="chapter theme-saffron">
+  <div class="chapter-label">📚 Part A — Chapter 1</div>
+  <h2>🌊 Why Did Europeans Come to India?</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<!-- PHASE STRIP -->
+<div class="phase-strip">
+  <div class="phase-seg" style="background:linear-gradient(135deg,#4a148c,#6a1b9a)"><span class="year">1453</span>Ottoman Turks capture Constantinople</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#0d47a1,#1565c0)"><span class="year">1492</span>Columbus reaches America</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#004d40,#00695c)"><span class="year">1498</span>Vasco da Gama reaches India</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#bf360c,#e64a19)"><span class="year">1600</span>English EIC Founded</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)"><span class="year">1664</span>French EIC Founded</div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-gold">
+    <span class="card-icon">🗺️</span>
+    <h3>Old Trade Routes</h3>
+    <ul>
+      <li>India ↔ Europe traded since ancient times</li>
+      <li>Indian cotton, silk, spices were in high demand</li>
+      <li>Arab merchants controlled Asian trade routes</li>
+      <li>Italians (Venice/Genoa) controlled Mediterranean</li>
+      <li>Trade passed through Constantinople (Istanbul)</li>
+    </ul>
+  </div>
+  <div class="card highlight-crimson">
+    <span class="card-icon">🏰</span>
+    <h3>Ottoman Disruption (1453)</h3>
+    <ul>
+      <li>Ottoman Turks captured Constantinople in 1453</li>
+      <li>Old East-West trade routes fell under their control</li>
+      <li>Venice & Genoa merchants established monopoly</li>
+      <li>New European nation-states excluded from trade</li>
+      <li>West Europeans searched for new sea routes</li>
+    </ul>
+  </div>
+  <div class="card highlight-saffron">
+    <span class="card-icon">⛵</span>
+    <h3>European Response</h3>
+    <ul>
+      <li>Portugal & Spain sponsored merchant sea voyages</li>
+      <li>Scientific breakthroughs: marine compass invented</li>
+      <li>Long-distance ships developed</li>
+      <li>1492: Columbus reached America (searching for India)</li>
+      <li>1498: Vasco da Gama discovered Cape of Good Hope route</li>
+    </ul>
+  </div>
+</div>
+
+<!-- EUROPEAN COMPANIES FLOWCHART -->
+<div class="chapter theme-saffron" style="margin-top:40px">
+  <div class="chapter-label">📊 Flowchart</div>
+  <h2>🚢 European Trading Companies in India</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="flowchart">
+  <div class="fc-box fc-saffron"><span class="emoji">🇵🇹</span><span class="label">Portuguese</span><span class="date">1498 — First</span></div>
+  <div class="fc-arrow">→</div>
+  <div class="fc-box fc-gold"><span class="emoji">🇳🇱</span><span class="label">Dutch (VOC)</span><span class="date">1602</span></div>
+  <div class="fc-arrow">→</div>
+  <div class="fc-box fc-crimson"><span class="emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="label">English EIC</span><span class="date">1600 (Charter)</span></div>
+  <div class="fc-arrow">→</div>
+  <div class="fc-box fc-teal"><span class="emoji">🇩🇰</span><span class="label">Danish</span><span class="date">1616</span></div>
+  <div class="fc-arrow">→</div>
+  <div class="fc-box fc-purple"><span class="emoji">🇫🇷</span><span class="label">French</span><span class="date">1664 — Last</span></div>
+</div>
+
+<!-- ═══════════════════════════ PORTUGUESE ════════════════════ -->
+<a class="anchor" id="portuguese"></a>
+<div class="chapter theme-saffron">
+  <div class="chapter-label">🏛️ Chapter 2</div>
+  <h2>🇵🇹 Portuguese in India</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot saffron">1498</div>
+    <div class="tl-content">
+      <div class="tl-year">📅 20 May 1498</div>
+      <div class="tl-title">🚢 Vasco da Gama Arrives at Calicut</div>
+      <div class="tl-desc">Arrived at Calicut (SW India's important seaport). King Zamorin welcomed him & granted trade privileges. After 3 months, returned with rich cargo — earning 60× the voyage cost!</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1501</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 1501 AD</div>
+      <div class="tl-title">🏭 Trading Factory at Cannore</div>
+      <div class="tl-desc">Vasco da Gama returns, sets up trading factory at Cannore. Beginning of India-Portugal trade links. Calicut, Cannore & Cochin became important Portuguese trading centers.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot crimson">1505</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">📅 1505 AD</div>
+      <div class="tl-title">👑 First Portuguese Governor: Francisco de Almeida</div>
+      <div class="tl-desc">Famous for the <strong>Blue Water Policy (Cartaz System)</strong> — a naval trade license system. Ships without cartaz had their cargo seized. Maintained military ships alongside trading ships.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot saffron">1510</div>
+    <div class="tl-content">
+      <div class="tl-year">📅 1510 AD</div>
+      <div class="tl-title">🏯 Albuquerque Captures Goa</div>
+      <div class="tl-desc">Alfonso de Albuquerque (replaced Almeida in 1509) captured Goa from Bijapur's Sultan. Also captured Malacca & Ceylon. Built a fort at Calicut. <span class="badge badge-gold">Real Founder of Portuguese Power in India</span></div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot teal">1530</div>
+    <div class="tl-content teal-border">
+      <div class="tl-year">📅 1530 AD</div>
+      <div class="tl-title">🏙️ Capital Shifted to Goa</div>
+      <div class="tl-desc">Governor Nino da Cunha shifted Indian capital from Cochin to Goa. In 1534 acquired Diu & Bassein from Bahadur Shah of Gujarat. 1559: Daman also acquired.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot crimson">1831</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">📅 Portuguese Decline</div>
+      <div class="tl-title">📉 Decline of Portuguese Power</div>
+      <div class="tl-desc">1631: Lost Hooghly to Mughal Emperor Shahjahan's noble Qasim Khan. 1661: King of Portugal gifted Bombay as dowry to England's Charles II. 1739: Marathas captured Salsette & Bassein. <strong>Goa, Diu & Daman remained until 1961!</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- Portuguese Gifts to India -->
+<div class="highlight-box hb-green">
+  <h3>🎁 Portuguese Gifts to India</h3>
+  <div class="three-col">
+    <div class="key-fact">
+      <div class="kf-icon">🌶️</div>
+      <div class="kf-text"><strong>New Crops</strong><span>Introduced Tobacco, Tomato, Potato & Chillies to India</span></div>
+    </div>
+    <div class="key-fact">
+      <div class="kf-icon">📰</div>
+      <div class="kf-text"><strong>First Printing Press</strong><span>Established India's first printing press in Goa in 1556 AD</span></div>
+    </div>
+    <div class="key-fact">
+      <div class="kf-icon">⛪</div>
+      <div class="kf-text"><strong>Christianity</strong><span>Jesuit Saint Francis Xavier arrived in 1542. Still revered by Indian Catholics</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ DUTCH ═══════════════════════════ -->
+<div class="chapter theme-gold">
+  <div class="chapter-label">🏛️ Chapter 3</div>
+  <h2>🇳🇱 Dutch East India Company (VOC)</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="number-row">
+  <div class="number-box"><span class="num" style="color:var(--gold2)">1602</span><span class="num-label">VOC Founded<br>by Dutch Parliament</span></div>
+  <div class="number-box"><span class="num" style="color:var(--teal2)">1605</span><span class="num-label">First Factory<br>Masulipatnam (AP)</span></div>
+  <div class="number-box"><span class="num" style="color:var(--saffron2)">21</span><span class="num-label">Years exclusive<br>trade rights granted</span></div>
+  <div class="number-box"><span class="num" style="color:var(--crimson2)">1798</span><span class="num-label">VOC Liquidated<br>End of Dutch power</span></div>
+</div>
+
+<div class="highlight-box hb-gold">
+  <h3>🏭 Key Dutch Factories in India</h3>
+  <table class="data-table">
+    <thead><tr><th>Year</th><th>Location</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td class="year-cell">1605</td><td>Masulipatnam (AP)</td><td>First factory</td></tr>
+      <tr><td class="year-cell">1610</td><td>Pulicat (Tamil Nadu)</td><td>🏢 Headquarters</td></tr>
+      <tr><td class="year-cell">1616</td><td>Surat</td><td>—</td></tr>
+      <tr><td class="year-cell">1653</td><td>Chinsurah (Bengal)</td><td>—</td></tr>
+      <tr><td class="year-cell">1659</td><td>Patna, Balasore, Nagapatnam</td><td>Multiple locations</td></tr>
+      <tr><td class="year-cell">1663</td><td>Cochin</td><td>Captured from Portuguese</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.88rem;color:var(--gray2);margin-top:10px">⚔️ <strong>Battle of Bedara (1759)</strong> — Also called Battle of Chinsurah/Hooghly. English defeated Dutch on East Coast. Dutch power declined completely.</p>
+</div>
+
+<!-- ═══════════════════════════ ENGLISH EIC ════════════════════ -->
+<a class="anchor" id="english"></a>
+<div class="chapter theme-crimson">
+  <div class="chapter-label">🏛️ Chapter 4</div>
+  <h2>🏴󠁧󠁢󠁥󠁮󠁧󠁿 English East India Company</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="mindmap-wrap">
+  <div class="mm-center">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English EIC — Key Facts</div>
+  <div class="mm-grid">
+    <div class="mm-branch mm-saffron">
+      <h4>🏛️ Foundation</h4>
+      <ul>
+        <li>Founded 1599 by "Merchant Adventurers"</li>
+        <li>Full name: Governor & Company of Merchants Trading into the East Indies</li>
+        <li>Charter granted 31 Dec 1600 by Queen Elizabeth I</li>
+        <li>15-year monopoly on Eastern trade</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-gold">
+      <h4>👑 Mughal Connection</h4>
+      <ul>
+        <li>1608: Capt. William Hawkins sent to Jahangir's court</li>
+        <li>Portugese interference prevented factory at Surat</li>
+        <li>1611: Defeated Portuguese at Battle of Swally Hole</li>
+        <li>1613: Jahangir granted factory rights on West Coast</li>
+        <li>1615: Sir Thomas Roe sent by James I → Royal Charter</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-crimson">
+      <h4>🏯 Key Forts & Settlements</h4>
+      <ul>
+        <li>1639: Leased Madras → Fort St. George built</li>
+        <li>1668: Charles II gave Bombay on lease</li>
+        <li>1698: Calcutta zamindari — Fort William (1700)</li>
+        <li>Agra, Ahmedabad, Orissa (Balasore, Hariharpur)</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-teal">
+      <h4>📜 Farrukhsiyar Farman (1717)</h4>
+      <ul>
+        <li>Called Company's "Magna Carta"</li>
+        <li>Duty-free trade in Bengal (₹3000 annual tax only)</li>
+        <li>Permission to buy land near Calcutta</li>
+        <li>Company's Bombay coins valid across Mughal empire</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ FRENCH ══════════════════════════ -->
+<div class="chapter theme-purple">
+  <div class="chapter-label">🏛️ Chapter 5</div>
+  <h2>🇫🇷 French East India Company & Carnatic Wars</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot purple">1664</div>
+    <div class="tl-content purple-border">
+      <div class="tl-year">📅 1664 AD</div>
+      <div class="tl-title">🇫🇷 French EIC Founded</div>
+      <div class="tl-desc">La Campagnie des Indes Orientales founded by Colbert (minister of Louis XIV). First factory at Surat (1668), Masulipatnam (1669).</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1673</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 1673 AD</div>
+      <div class="tl-title">🏙️ Pondicherry Founded</div>
+      <div class="tl-desc">Director Francis Martin obtained village "Poducherry" from Sher Khan Lodhi (Nawab of Valikondapuram). Later became famous as Pondicherry!</div>
+    </div>
+  </div>
+</div>
+
+<div class="highlight-box hb-crimson">
+  <h3>⚔️ Three Carnatic Wars — Anglo-French Rivalry</h3>
+  <table class="data-table">
+    <thead><tr><th>War</th><th>Period</th><th>Cause</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-saffron">1st</span></td>
+        <td class="year-cell">1746–1748</td>
+        <td>Austrian War of Succession in Europe spreads to India</td>
+        <td>Treaty of Aix-la-Chapelle. Inconclusive</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-gold">2nd</span></td>
+        <td class="year-cell">1750–1754</td>
+        <td>Succession disputes in Hyderabad & Carnatic</td>
+        <td>French under Dupleix, English under Clive. French recalled Dupleix → English advantage</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-crimson">3rd</span></td>
+        <td class="year-cell">1758–1763</td>
+        <td>Seven Years' War in Europe (1756)</td>
+        <td>🏆 <strong>Battle of Wandiwash (Jan 22, 1760)</strong> — Sir Eyre Coote crushed French. Pondicherry surrendered Jan 16, 1761. Treaty of Paris (1763) ended French political ambition in India</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- WHY ENGLISH WON -->
+<div class="highlight-box hb-saffron">
+  <h3>🏆 Why English Won Over French — Key Reasons</h3>
+  <div class="two-col">
+    <ul class="bullet-list bl-check">
+      <li><strong>Private company</strong> — less govt control, more enthusiasm & speed in decisions</li>
+      <li><strong>Superior Navy</strong> — won all major sea battles, controlled Indian coasts</li>
+      <li><strong>Controlled major cities</strong> — Calcutta, Bombay, Madras vs French only Pondicherry</li>
+    </ul>
+    <ul class="bullet-list bl-check">
+      <li><strong>Strong funding</strong> — Bengal revenues after Plassey boosted war chest</li>
+      <li><strong>Better commanders</strong> — Sir Eyre Coote, Robert Clive, Major Stringer Lawrence</li>
+      <li><strong>French neglected commerce</strong> for political ambition — ran out of funds</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ PLASSEY & BUXAR ════════════════ -->
+<a class="anchor" id="plassey"></a>
+<div class="chapter theme-crimson">
+  <div class="chapter-label">⚔️ Chapter 6 — Game-Changing Battles</div>
+  <h2>🔥 Battle of Plassey (1757) & Buxar (1764)</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block">
+  "Plassey was not really a battle — it was a conspiracy. Fewer than 50 English soldiers died while Nawab lost ~500 men. Mir Jafar's treachery changed the course of Indian history."
+  <cite>— From the transcript: Background to Battle of Plassey</cite>
+</div>
+
+<div class="two-col">
+  <div>
+    <h3 style="color:var(--saffron2);font-family:'Playfair Display',serif;margin-bottom:16px">🗺️ Background to Plassey</h3>
+    <ul class="bullet-list bl-arrow">
+      <li>Bengal: richest province (today's Bangladesh + Bihar + Odisha)</li>
+      <li>1717: Farrukhsiyar granted duty-free trade to EIC in Bengal</li>
+      <li>1696–1706: Fort William (named after King William III) constructed</li>
+      <li>1756: Nawab Alivardi Khan died → Sirajuddaula became Nawab</li>
+      <li>EIC misused "dastak" (free passes) for private trade</li>
+      <li>EIC fortified Fort William against Nawab's wishes</li>
+      <li>Nawab captured Fort William on <strong>20 June 1756</strong></li>
+      <li><em>Black Hole of Calcutta incident (allegedly in Fort William)</em></li>
+    </ul>
+  </div>
+  <div>
+    <h3 style="color:var(--crimson2);font-family:'Playfair Display',serif;margin-bottom:16px">🗡️ The Conspiracy</h3>
+    <ul class="bullet-list bl-arrow">
+      <li>Clive bribed Manikchand → recovered Calcutta (Jan 2, 1757)</li>
+      <li>Treaty of Alinagar (Feb 1757) — Nawab restored old privileges</li>
+      <li>EIC joined conspiracy to replace Sirajuddaula</li>
+      <li>Conspirators: Mir Jafar (Mir Bakshi), Manikchand, Amichand, Jagat Seth (biggest banker of Bengal), Khadim Khan</li>
+      <li>Plan: Replace Sirajuddaula with Mir Jafar as Nawab</li>
+      <li>EIC placed impossible demands on Nawab to provoke war</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box hb-crimson">
+  <h3>⚔️ Battle of Plassey — 23 June 1757</h3>
+  <div class="number-row">
+    <div class="number-box"><span class="num" style="color:var(--crimson2)">&lt;50</span><span class="num-label">English soldiers killed</span></div>
+    <div class="number-box"><span class="num" style="color:var(--gold2)">~500</span><span class="num-label">Nawab's soldiers killed</span></div>
+    <div class="number-box"><span class="num" style="color:var(--saffron2)">24</span><span class="num-label">Parganas given to EIC as reward</span></div>
+    <div class="number-box"><span class="num" style="color:var(--teal2)">₹1.77 Cr</span><span class="num-label">Compensation paid to EIC</span></div>
+    <div class="number-box"><span class="num" style="color:var(--purple2)">₹2M+</span><span class="num-label">Clive's personal reward</span></div>
+  </div>
+  <p style="font-size:0.9rem;color:var(--gray2);margin-top:10px">Mir Jafar & Rai Durlabh's forces (major part of Nawab's army) didn't fight. Only Mir Madan & Mohanlal fought bravely. Mir Miran (Mir Jafar's son) killed Sirajuddaula on the way to Murshidabad.</p>
+</div>
+
+<!-- BUXAR -->
+<div class="timeline" style="margin-top:30px">
+  <div class="tl-item">
+    <div class="tl-dot crimson">1764</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">📅 22 October 1764</div>
+      <div class="tl-title">⚔️ Battle of Buxar — The Real Victory</div>
+      <div class="tl-desc">
+        <strong>Alliance against EIC:</strong> Mir Qasim (replaced Mir Jafar) + Shuja-ud-Daula (Nawab of Awadh) + Mughal Emperor Shah Alam II joined forces.<br><br>
+        <strong>Why Mir Qasim rebelled:</strong> He was an able, efficient ruler who wanted freedom from foreign control. He abolished all inland duties to create level playing field. EIC took this as provocation.<br><br>
+        <strong>Result:</strong> EIC (under Major Hector Munro) decisively defeated the combined forces. <span class="badge badge-crimson">Most decisive battle establishing British supremacy</span>
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1765</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 1765 AD</div>
+      <div class="tl-title">📜 Treaty of Allahabad & Diwani Rights</div>
+      <div class="tl-desc">
+        Clive (returned as Governor) signed Treaty of Allahabad. <strong>Diwani Rights (revenue collection) of Bengal, Bihar & Orissa</strong> granted to EIC. This was the foundation of British territorial empire in India.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════ MARATHAS ════════════════════════ -->
+<a class="anchor" id="marathas"></a>
+<div class="chapter theme-green">
+  <div class="chapter-label">🐎 Chapter 7</div>
+  <h2>🐎 Anglo-Maratha Wars</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="phase-strip">
+  <div class="phase-seg" style="background:linear-gradient(135deg,#bf360c,#e64a19)"><span class="year">1st War</span>1775–1782 Treaty of Salbai</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)"><span class="year">2nd War</span>1803–1805 Subsidiary Alliance</div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#0d47a1,#1565c0)"><span class="year">3rd War</span>1817–1819 End of Maratha Empire</div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-saffron">
+    <span class="card-icon">⚔️</span>
+    <h3>1st Anglo-Maratha War (1775–1782)</h3>
+    <ul>
+      <li>Ragoba (Raghunathrao) deposed Peshwa asked EIC for help</li>
+      <li>Treaty of Surat (1775) — Ragoba promised territories</li>
+      <li>Treaty of Salbai (1782) — Status quo maintained</li>
+      <li>EIC gained 20 years of peace with Marathas</li>
+    </ul>
+  </div>
+  <div class="card highlight-gold">
+    <span class="card-icon">🏛️</span>
+    <h3>2nd Anglo-Maratha War (1803–1805)</h3>
+    <ul>
+      <li>Peshwa Baji Rao II defeated by Holkar, sought British protection</li>
+      <li>Treaty of Bassein (1802) — Subsidiary Alliance signed</li>
+      <li>Scindia & Bhonsle opposed British → defeated by Wellesley</li>
+      <li>Treaty of Deogaon (Bhonsle) & Surji-Anjangaon (Scindia)</li>
+    </ul>
+  </div>
+  <div class="card highlight-crimson">
+    <span class="card-icon">💥</span>
+    <h3>3rd Anglo-Maratha War (1817–1819)</h3>
+    <ul>
+      <li>Pindaris (Maratha irregular cavalry) began looting EIC territories</li>
+      <li>Governor-General Hastings attacked Pindaris in 1817</li>
+      <li>Peshwa Baji Rao II, Holkar & Bhonsle II formed united front</li>
+      <li>British won → Peshwa pensioned off to Bithoor (Kanpur)</li>
+      <li>Maratha territories became Bombay Presidency</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box hb-gold">
+  <h3>📉 Reasons for Maratha Defeat</h3>
+  <div class="two-col">
+    <ul class="bullet-list bl-diamond">
+      <li>Lack of unity among Maratha chiefs</li>
+      <li>No good relations with any other Indian state</li>
+      <li>Marathas collected "Chauth" (protection tax) — created enemies everywhere</li>
+    </ul>
+    <ul class="bullet-list bl-diamond">
+      <li>Fell for British diplomatic traps (treaties) repeatedly</li>
+      <li>Excellent in guerrilla warfare but weak in open battle</li>
+      <li>British superior diplomacy isolated Marathas from Hyderabad, Mysore etc.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ GOVERNORS ═══════════════════════ -->
+<a class="anchor" id="governors"></a>
+<div class="chapter theme-gold">
+  <div class="chapter-label">👑 Chapter 8</div>
+  <h2>👑 Important Governor-Generals of British India</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot saffron">1772</div>
+    <div class="tl-content">
+      <div class="tl-year">1772–1785</div>
+      <div class="tl-title">🏛️ Warren Hastings — First Governor-General</div>
+      <div class="tl-desc">
+        <span class="badge badge-saffron">FIRST</span> Governor-General of Bengal<br>
+        • Revenue collection shifted from Calcutta to district level<br>
+        • Rohilla War (1773-74) against Rohillas<br>
+        • First Anglo-Maratha War<br>
+        • Regulating Act (1773) — Parliament's first step to control EIC<br>
+        • Pitt's India Act (1784) — Board of Control set up<br>
+        • Faced impeachment charges (acquitted)
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1786</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">1786–1793</div>
+      <div class="tl-title">🏛️ Lord Cornwallis — "Father of Civil Services"</div>
+      <div class="tl-desc">
+        • Permanent Settlement (Zamindari System) — 1793 in Bengal<br>
+        • Fixed land revenue permanently with zamindars<br>
+        • Separated judiciary from executive<br>
+        • 3rd Anglo-Mysore War — Treaty of Seringapatam (1792)<br>
+        • Cornwallis Code — codified laws<br>
+        • Prohibited Indians from higher posts (his biggest fault)
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot teal">1798</div>
+    <div class="tl-content teal-border">
+      <div class="tl-year">1798–1805</div>
+      <div class="tl-title">🏛️ Lord Wellesley — "Subsidiary Alliance" Architect</div>
+      <div class="tl-desc">
+        • <strong>Subsidiary Alliance Policy</strong> — Indian rulers maintain British troops at their own expense; British protect them; no independent foreign policy<br>
+        • 4th Anglo-Mysore War (1799) — Tipu Sultan defeated & killed at Seringapatam<br>
+        • 2nd Anglo-Maratha War (1803-05)<br>
+        • Made EIC India's supreme military authority<br>
+        • Founded Fort William College (1800) for training officers
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot crimson">1813</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">1813–1823</div>
+      <div class="tl-title">🏛️ Lord Hastings — British Paramountcy Established</div>
+      <div class="tl-desc">
+        • Anglo-Nepal War (1814-16) → Treaty of Sagauli (1816)<br>
+        • Garhwal, Kumaon districts surrendered by Gurkhas<br>
+        • Shimla, Mussoorie, Ranikhet became British hill stations!<br>
+        • Gurkhas recruited into British army<br>
+        • 3rd Anglo-Maratha War (1817-18) — ended Maratha power<br>
+        • Ryotwari system (Madras) & Mahalwari system (NW) introduced
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot purple">1828</div>
+    <div class="tl-content purple-border">
+      <div class="tl-year">1828–1835</div>
+      <div class="tl-title">🏛️ Lord William Bentinck — "Father of Reform"</div>
+      <div class="tl-desc">
+        • Abolished <strong>Sati (1829)</strong> — declaring it illegal<br>
+        • Suppressed Thuggee (Thagi) with Colonel Sleeman's help<br>
+        • English made medium of higher education (Macaulay Minute 1835)<br>
+        • Service open to Indians regardless of religion/caste<br>
+        • Charter Act 1833 — removed EIC's trading monopoly<br>
+        • Revenue reforms: introduced Mahalwari settlement
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1848</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">1848–1856</div>
+      <div class="tl-title">🏛️ Lord Dalhousie — "Doctrine of Lapse"</div>
+      <div class="tl-desc">
+        • <strong>Doctrine of Lapse</strong>: States without natural heir annexed<br>
+        • Annexed: Satara (1848), Jaitpur & Sambhalpur (1849), Udaipur (1852), Jhansi (1853), Nagpur (1854)<br>
+        • Also annexed Punjab (1849) after Anglo-Sikh Wars & Burma (1852)<br>
+        • Annexation of Awadh (1856) — "misgovernance"<br>
+        • Railways (1853), Telegraph (1851), Post Office Act<br>
+        • Widow Remarriage Act prepared (passed under Canning)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════ 1857 ═════════════════════════════ -->
+<a class="anchor" id="revolt1857"></a>
+<div class="chapter theme-crimson">
+  <div class="chapter-label">🔥 Chapter 9 — Great Uprising</div>
+  <h2>🔥 Revolt of 1857 — First War of Independence</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="mindmap-wrap">
+  <div class="mm-center">🔥 1857 REVOLT — CAUSES</div>
+  <div class="mm-grid">
+    <div class="mm-branch mm-crimson">
+      <h4>⚔️ Military Causes</h4>
+      <ul>
+        <li>Greased cartridges (cow & pig fat) — Enfield Rifle</li>
+        <li>General Service Enlistment Act — cross seas</li>
+        <li>Low pay compared to British officers</li>
+        <li>Racial discrimination in promotions</li>
+        <li>Loss of foreign allowance (bhatta) in Sindh</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-gold">
+      <h4>💰 Economic Causes</h4>
+      <ul>
+        <li>Drain of wealth from India to Britain</li>
+        <li>Destruction of Indian handicrafts & textile industries</li>
+        <li>Permanent Settlement impoverished peasants</li>
+        <li>Heavy taxation policies by British</li>
+        <li>Moneylenders exploiting farmers</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-saffron">
+      <h4>🏛️ Political Causes</h4>
+      <ul>
+        <li>Doctrine of Lapse — annexation of princely states</li>
+        <li>Annexation of Awadh (1856) shocked ruling class</li>
+        <li>Removal of Mughal Emperor's title</li>
+        <li>Displacement of traditional rulers</li>
+        <li>Nana Sahib's pension stopped</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-teal">
+      <h4>🙏 Socio-Religious Causes</h4>
+      <ul>
+        <li>Missionary activities — threat to religion</li>
+        <li>Religious Disabilities Act (1850)</li>
+        <li>Western education threatening culture</li>
+        <li>Sati abolition seen as religious interference</li>
+        <li>Widow Remarriage Act (1856)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 1857 TIMELINE -->
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot crimson">Jan</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">📅 January 1857</div>
+      <div class="tl-title">🎯 The Spark — Greased Cartridges</div>
+      <div class="tl-desc">New Enfield Rifles introduced. Cartridges rumoured to be greased with cow & pig fat. Soldiers had to bite cartridges before loading — unacceptable to both Hindus & Muslims.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">29 Mar</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 29 March 1857</div>
+      <div class="tl-title">🔫 Mangal Pandey — First Act of Rebellion</div>
+      <div class="tl-desc">Sepoy Mangal Pandey of 34th Bengal Infantry at Barrackpore attacked British officers. Executed on April 8, 1857. <span class="badge badge-crimson">First Martyr of 1857</span></div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot saffron">10 May</div>
+    <div class="tl-content">
+      <div class="tl-year">📅 10 May 1857 — THE OUTBREAK</div>
+      <div class="tl-title">💥 Meerut Mutiny — Revolt Begins!</div>
+      <div class="tl-desc">85 soldiers of 3rd Cavalry refused greased cartridges → sentenced to 10 years. Next day fellow soldiers rose in revolt, freed prisoners, killed British officers & marched to Delhi!</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">11 May</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 11 May 1857</div>
+      <div class="tl-title">👑 Bahadur Shah Zafar — Symbolic Leader</div>
+      <div class="tl-desc">Rebels reached Delhi, proclaimed last Mughal Emperor Bahadur Shah Zafar as the leader of the revolt. Delhi became the center of the uprising.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CENTERS & LEADERS -->
+<div class="highlight-box hb-saffron">
+  <h3>🗺️ Major Centers of 1857 Revolt & Their Heroes</h3>
+  <table class="data-table">
+    <thead><tr><th>Center</th><th>Indian Leader</th><th>British Suppressor</th><th>Key Fact</th></tr></thead>
+    <tbody>
+      <tr><td>🏰 Delhi</td><td>Bahadur Shah Zafar, General Bakht Khan</td><td>John Nicholson, Colonel Campbell</td><td>Final Mughal stronghold; fell Sept 1857</td></tr>
+      <tr><td>🏯 Kanpur</td><td>Nana Sahib, Tantia Tope</td><td>General Havelock, Campbell</td><td>Tantia Tope escaped; fought till 1859</td></tr>
+      <tr><td>⚔️ Jhansi</td><td><strong>Rani Lakshmi Bai</strong></td><td>General Hugh Rose</td><td>"Best & Bravest" — General Rose; died fighting June 1858</td></tr>
+      <tr><td>🏛️ Lucknow</td><td>Begum Hazrat Mahal, Birjis Qadir</td><td>Henry Lawrence (died), Campbell</td><td>Siege & Relief of Lucknow</td></tr>
+      <tr><td>🌳 Bareilly</td><td>Khan Bahadur Khan</td><td>—</td><td>Northern UP center</td></tr>
+      <tr><td>🏝️ Bihar</td><td>Kunwar Singh (80+ years old!)</td><td>—</td><td>Fought brilliantly despite old age; inspirational</td></tr>
+      <tr><td>🌊 Assam</td><td>Kandarpeswar Singh</td><td>—</td><td>Northeast uprising</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="two-col">
+  <div class="highlight-box hb-green">
+    <h3>✅ Why Revolt Succeeded Initially</h3>
+    <ul class="bullet-list bl-check">
+      <li>Widespread civilian support especially in Awadh</li>
+      <li>Coordination between sepoys & local rulers</li>
+      <li>Spiritual symbol — Bahadur Shah Zafar united diverse groups</li>
+      <li>Surprise element caught British off-guard initially</li>
+    </ul>
+  </div>
+  <div class="highlight-box hb-crimson">
+    <h3>❌ Why Revolt Ultimately Failed</h3>
+    <ul class="bullet-list bl-arrow">
+      <li>No unified national leadership or coordination</li>
+      <li>Many Indian princes remained loyal to British (Scindia, Holkar)</li>
+      <li>British had superior communication (telegraph)</li>
+      <li>Gurkha, Sikh & Pathan soldiers sided with British</li>
+      <li>No ideological clarity — mostly negative (anti-British)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box hb-gold">
+  <h3>🏛️ After 1857 — Crown Rule Begins</h3>
+  <ul class="bullet-list bl-star">
+    <li><strong>Government of India Act 1858</strong> — EIC abolished; Crown took direct control</li>
+    <li>Governor-General became Viceroy</li>
+    <li>Lord Canning became first Viceroy</li>
+    <li>Queen Victoria's Proclamation (1858) — promised equal rights to all subjects regardless of race/religion</li>
+    <li>Indian Civil Services opened to Indians (though age limit manipulated)</li>
+    <li>Army reorganized — increased European component in Indian army</li>
+  </ul>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════ CONGRESS ════════════════════════ -->
+<a class="anchor" id="congress"></a>
+<div class="chapter theme-teal">
+  <div class="chapter-label">🏛️ Chapter 10</div>
+  <h2>🏛️ Indian National Congress — Formation & Phases</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot teal">1885</div>
+    <div class="tl-content teal-border">
+      <div class="tl-year">📅 28 December 1885</div>
+      <div class="tl-title">🏛️ INC Founded — Bombay</div>
+      <div class="tl-desc">
+        A.O. Hume (retired British civil servant) + 72 delegates. First session presided by <strong>W.C. Bonerjee</strong>.<br>
+        <span class="badge badge-teal">Safety Valve Theory</span> — Hume saw it as safety valve for Indian discontent to prevent another 1857. But Bipin Chandra argues this is British propaganda; Indian leaders were genuinely nationalist.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASES OF INC -->
+<div class="phase-strip">
+  <div class="phase-seg" style="background:linear-gradient(135deg,#00695c,#00897b)">
+    <span class="year">1885–1905</span>Moderate Phase<br>Petition, prayer, protest<br>Gokhale, Dadabhai
+  </div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+    <span class="year">1905–1919</span>Extremist/Assertive Phase<br>Swaraj, Boycott<br>Bal, Pal, Lal
+  </div>
+  <div class="phase-seg" style="background:linear-gradient(135deg,#f57f17,#f9a825)">
+    <span class="year">1919–1947</span>Gandhian Phase<br>Mass movements<br>Non-cooperation, Civil Disobedience
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-teal">
+    <span class="card-icon">🕊️</span>
+    <h3>Moderate Phase (1885–1905)</h3>
+    <ul>
+      <li>Constitutional methods: petitions, resolutions, delegations</li>
+      <li>Believed in British sense of justice</li>
+      <li>Dadabhai Naoroji: "Drain of Wealth" theory</li>
+      <li>Key figures: Gopal Krishna Gokhale, Surendranath Banerjee, Pherozeshah Mehta</li>
+      <li>Demands: Indianization of civil services, reduction of military expenditure</li>
+    </ul>
+  </div>
+  <div class="card highlight-crimson">
+    <span class="card-icon">🔥</span>
+    <h3>Extremist Phase (1905–1919)</h3>
+    <ul>
+      <li>Partition of Bengal (1905) ignited Swadeshi Movement</li>
+      <li><strong>Lal-Bal-Pal</strong> — Lala Lajpat Rai, Bal Gangadhar Tilak, Bipin Chandra Pal</li>
+      <li>Tilak: "Swaraj is my birthright and I shall have it!"</li>
+      <li>Boycott of British goods, national education, swadeshi</li>
+      <li>Surat Split (1907) — Moderates vs Extremists</li>
+      <li>Tilak arrested (1908), sentenced to 6 years in Burma</li>
+    </ul>
+  </div>
+  <div class="card highlight-saffron">
+    <span class="card-icon">✊</span>
+    <h3>Gandhian Phase (1919–1947)</h3>
+    <ul>
+      <li>Mass participation — peasants, workers, women all joined</li>
+      <li>Ahimsa & Satyagraha as tools</li>
+      <li>Non-Cooperation Movement (1920-22)</li>
+      <li>Civil Disobedience Movement (1930)</li>
+      <li>Quit India Movement (1942)</li>
+      <li>India achieved independence on <strong>15 August 1947</strong></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ GANDHI ERA ══════════════════════ -->
+<a class="anchor" id="gandhi"></a>
+<div class="chapter theme-saffron">
+  <div class="chapter-label">🕊️ Chapter 11</div>
+  <h2>🕊️ Gandhi's Major Movements</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="mindmap-wrap">
+  <div class="mm-center">🕊️ MAHATMA GANDHI — Key Movements</div>
+  <div class="mm-grid">
+    <div class="mm-branch mm-saffron">
+      <h4>🌾 Champaran (1917)</h4>
+      <ul>
+        <li>Bihar's indigo farmers exploited under "tinkathia" system</li>
+        <li>Farmers forced to grow indigo on 3/20 of their land</li>
+        <li>Gandhi's first Satyagraha in India</li>
+        <li>Investigation ordered by Lt. Governor</li>
+        <li>Champaran Agrarian Act (1918) passed</li>
+        <li>Abolished tinkathia system</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-gold">
+      <h4>⚙️ Kheda (1918)</h4>
+      <ul>
+        <li>Gujarat farmers hit by famine & plague (1918)</li>
+        <li>Revenue demand despite crop failure</li>
+        <li>Gandhi supported no-tax campaign</li>
+        <li>Revenue remitted for poorest</li>
+        <li>Gandhi's power grew in Gujarat</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-crimson">
+      <h4>🏭 Ahmedabad Mill Strike (1918)</h4>
+      <ul>
+        <li>Cotton mill workers demanded 50% wage hike</li>
+        <li>Millowners offered only 20%</li>
+        <li>Gandhi undertook fast → first fast in India</li>
+        <li>Mill owners agreed to 35% hike</li>
+        <li>Arbitration accepted</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-teal">
+      <h4>📜 Rowlatt Satyagraha (1919)</h4>
+      <ul>
+        <li>Rowlatt Act: imprisonment without trial</li>
+        <li>Called "Black Act" by Indians</li>
+        <li>Hartal (shutdown) on 6 April 1919</li>
+        <li>Jallianwala Bagh Massacre (13 April 1919)</li>
+        <li>General Dyer's inhuman firing: 379+ killed officially</li>
+        <li>Shook entire India's conscience</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-purple">
+      <h4>✊ Non-Cooperation (1920–1922)</h4>
+      <ul>
+        <li>Return of titles, honorary offices</li>
+        <li>Boycott of govt schools & colleges</li>
+        <li>Boycott of courts, elections, foreign cloth</li>
+        <li>Chauri Chaura (Feb 1922) — mob burned police station</li>
+        <li>Gandhi called off movement → criticized by Subhas, Nehru etc.</li>
+        <li>22 policemen died in Chauri Chaura incident</li>
+      </ul>
+    </div>
+    <div class="mm-branch mm-green">
+      <h4>🧂 Civil Disobedience / Salt March (1930)</h4>
+      <ul>
+        <li>Dandi March: 12 March – 6 April 1930 (240 miles)</li>
+        <li>Gandhi broke salt laws at Dandi coast (Gujarat)</li>
+        <li>Massive civil disobedience spread nationwide</li>
+        <li>Gandhi-Irwin Pact (1931) — CDM suspended</li>
+        <li>Round Table Conferences (1930, 1931, 1932)</li>
+        <li>Poona Pact (1932) — Gandhi & Ambedkar</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- QUIT INDIA -->
+<div class="highlight-box hb-crimson" style="margin-top:24px">
+  <h3>✊ Quit India Movement (1942) — "Do or Die"</h3>
+  <div class="two-col">
+    <div>
+      <ul class="bullet-list bl-fire">
+        <li><strong>August 8, 1942</strong> — Bombay Session of INC passed Quit India Resolution</li>
+        <li>Gandhi gave the slogan <em>"Do or Die"</em></li>
+        <li>All top Congress leaders arrested immediately on Aug 9</li>
+        <li>Aruna Asaf Ali hoisted Congress flag at Gowalia Tank, Bombay</li>
+        <li>Underground movement led by Jayaprakash Narayan, Aruna Asaf Ali</li>
+        <li>Usha Mehta ran secret "Voice of Freedom" radio transmitter</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="bullet-list bl-fire">
+        <li>Parallel govts established: Satara (Maharashtra), Ballia (UP), Midnapur (Bengal)</li>
+        <li>Sucheta Kripalani led non-violent resistance</li>
+        <li>Cripps Mission (1942) had already failed</li>
+        <li>British response: brutal repression — 100,000+ arrested</li>
+        <li>This was truly a people's movement — no central leadership</li>
+        <li>Subhas Chandra Bose simultaneously formed INA (1943)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════ MOVEMENTS ══════════════════════ -->
+<a class="anchor" id="movements"></a>
+<div class="chapter theme-purple">
+  <div class="chapter-label">✊ Chapter 12</div>
+  <h2>✊ Parallel & Social Movements</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-saffron">
+    <span class="card-icon">🌾</span>
+    <h3>Peasant Movements</h3>
+    <ul>
+      <li><strong>Indigo Revolt (1859-60)</strong> — Bengal; forced by blue rebellion of farmers</li>
+      <li><strong>Deccan Riots (1875)</strong> — Maharashtra farmers vs moneylenders</li>
+      <li><strong>Eka Movement (1921)</strong> — UP: Madari Pasi; against exploitative zamindars</li>
+      <li><strong>Moplah Rebellion (1921)</strong> — Malabar; anti-landlord & anti-British</li>
+    </ul>
+  </div>
+  <div class="card highlight-gold">
+    <span class="card-icon">⚒️</span>
+    <h3>Tribal & Worker Movements</h3>
+    <ul>
+      <li><strong>Birsa Munda Revolt (1895-1900)</strong> — Jharkhand; "Ulgulan" movement; against land alienation</li>
+      <li><strong>Santhal Rebellion (1855-56)</strong> — Bengal/Bihar</li>
+      <li><strong>Munda Uprising</strong> — against missionaries & landlords</li>
+      <li><strong>Ahmedabad Mill Strike (1918)</strong> — Gandhi's first industrial Satyagraha</li>
+    </ul>
+  </div>
+  <div class="card highlight-green">
+    <span class="card-icon">🙏</span>
+    <h3>Social Reform Movements</h3>
+    <ul>
+      <li><strong>Brahmo Samaj (1828)</strong> — Raja Ram Mohan Roy; monotheism, anti-sati</li>
+      <li><strong>Arya Samaj (1875)</strong> — Dayanand Saraswati; "Back to Vedas"</li>
+      <li><strong>Prarthana Samaj</strong> — Maharashtra; MG Ranade</li>
+      <li><strong>Theosophical Society</strong> — Annie Besant; supported Indian culture</li>
+    </ul>
+  </div>
+  <div class="card highlight-crimson">
+    <span class="card-icon">⚡</span>
+    <h3>Revolutionary Movements</h3>
+    <ul>
+      <li><strong>Bal Gangadhar Tilak</strong> — Ganesh Utsav, Shivaji Utsav for mass mobilization</li>
+      <li><strong>Aurobindo Ghosh</strong> — Secret society Anushilan Samiti</li>
+      <li><strong>Bhagat Singh, Chandrashekhar Azad</strong> — HSRA (1928)</li>
+      <li><strong>Chittagong Armoury Raid (1930)</strong> — Surya Sen; Kalpana Dutta, Pritilata Waddedar</li>
+    </ul>
+  </div>
+  <div class="card highlight-teal">
+    <span class="card-icon">⚖️</span>
+    <h3>Lower Caste Movements</h3>
+    <ul>
+      <li><strong>Jyotirao Phule (1873)</strong> — Satyashodhak Samaj; Maharashtra</li>
+      <li><strong>Narayana Guru</strong> — Ezhava community uplift in Kerala; "One caste, one religion, one God"</li>
+      <li><strong>Periyar (EV Ramasamy Nayakar)</strong> — Self-Respect Movement (1925); anti-Brahmin</li>
+      <li><strong>Justice Party (1916)</strong> — Non-Brahmin movement in Madras; later became DMK</li>
+    </ul>
+  </div>
+  <div class="card highlight-purple">
+    <span class="card-icon">📚</span>
+    <h3>Dr. B.R. Ambedkar & Dalits</h3>
+    <ul>
+      <li>Born 1891 in untouchable caste; faced severe discrimination</li>
+      <li>PhD from Columbia University, USA</li>
+      <li>Founded Bahishkrit Hitakarini Sabha (1924)</li>
+      <li>Mahad Satyagraha (1927) — right to use public wells</li>
+      <li>Poona Pact (1932) — reserved seats for Scheduled Castes</li>
+      <li>Chief architect of Indian Constitution</li>
+      <li>Converted to Buddhism (1950) with followers</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ WOMEN IN FREEDOM STRUGGLE ══════ -->
+<a class="anchor" id="women"></a>
+<div class="chapter theme-purple">
+  <div class="chapter-label">👩 Chapter 13</div>
+  <h2>👩‍🦱 Women in Indian Freedom Struggle</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block">
+  "Not a single front of the Indian Freedom Struggle was without women's participation. On every front, Indian women offered their lives in the yagna of freedom."
+  <cite>— From the transcript</cite>
+</div>
+
+<!-- MAJOR WOMEN LEADERS -->
+<div class="three-col" style="margin:24px 0">
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--saffron),var(--gold))">🦁</div>
+    <h4>Rani Lakshmibai</h4>
+    <div class="role">Queen of Jhansi</div>
+    <p>Fought in 1857 revolt. Died fighting General Hugh Rose. Called "best and bravest" by the British general himself.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--teal),var(--teal2))">🕊️</div>
+    <h4>Sarojini Naidu</h4>
+    <div class="role">Nightingale of India</div>
+    <p>Accompanied Gandhi on Dandi March. First Indian woman to be President of INC (1925). First woman Governor after independence.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--purple),var(--purple2))">⚡</div>
+    <h4>Aruna Asaf Ali</h4>
+    <div class="role">Grand Old Lady of Independence</div>
+    <p>Hoisted Congress flag at Gowalia Tank, Bombay on August 9, 1942. Led underground revolutionary activities during Quit India.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--crimson),var(--crimson2))">📻</div>
+    <h4>Usha Mehta</h4>
+    <div class="role">Voice of Freedom</div>
+    <p>Set up secret "Voice of Freedom" radio transmitter during Quit India (1942). Broadcast Congress news, Gandhi's "Do or Die" message nationwide.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--green),var(--green2))">🌏</div>
+    <h4>Madame Bhikaji Cama</h4>
+    <div class="role">Mother of Indian Revolution</div>
+    <p>Unfurled India's flag at Stuttgart World Socialist Conference (1907) — first time Indian flag was raised abroad. Worked for independence from Europe.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--navy2),var(--teal))">☘️</div>
+    <h4>Annie Besant</h4>
+    <div class="role">Irish Leader for India</div>
+    <p>Founded Theosophical Society in India. Started Home Rule League (1916). Elected Congress President (1917) — first woman president of INC.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--gold),var(--saffron2))">🏴</div>
+    <h4>Kamladevi Chattopadhyay</h4>
+    <div class="role">Tiranga Defender</div>
+    <p>During protests, police beat her but she clung to the national flag refusing to let go despite bleeding. Symbol of immense courage and patriotism.</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--crimson),var(--purple2))">💪</div>
+    <h4>Rani Gaidinliu</h4>
+    <div class="role">Rani of the Nagas</div>
+    <p>Led Naga nationalist struggle in Manipur against British. Arrested 1932. Released after independence. Nehru gave her the title "Rani of Nagas".</p>
+  </div>
+  <div class="person-card">
+    <div class="person-avatar" style="background:linear-gradient(135deg,var(--teal),var(--green2))">🌿</div>
+    <h4>Sister Nivedita</h4>
+    <div class="role">Irish-Born Indian Patriot</div>
+    <p>Born Margaret Noble; came to India Jan 1898, became disciple of Vivekananda. Attended Banaras Congress session (1905). Supported Swadeshi movement.</p>
+  </div>
+</div>
+
+<!-- WOMEN'S CONTRIBUTION CHART -->
+<div class="bar-chart">
+  <div class="bar-chart-title">⚡ Spectrum of Women's Participation in Freedom Struggle</div>
+  <div class="bc-row"><div class="bc-label">Non-Cooperation (1920)</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:90%;background:linear-gradient(90deg,var(--teal),var(--teal2))">Massive participation</div></div></div>
+  <div class="bc-row"><div class="bc-label">Civil Disobedience (1930)</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:85%;background:linear-gradient(90deg,var(--saffron),var(--saffron2))">Salt Satyagraha marches</div></div></div>
+  <div class="bc-row"><div class="bc-label">Quit India (1942)</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:95%;background:linear-gradient(90deg,var(--crimson),var(--crimson2))">Revolutionary peak</div></div></div>
+  <div class="bc-row"><div class="bc-label">INA (Rani Lakshmibai Regiment)</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:70%;background:linear-gradient(90deg,var(--purple),var(--purple2))">~15,000 women enrolled</div></div></div>
+  <div class="bc-row"><div class="bc-label">Revolutionary Activities</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:65%;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--ink)">Active combat & support</div></div></div>
+  <div class="bc-row"><div class="bc-label">Social Reform Movements</div><div class="bc-bar-outer"><div class="bc-bar-inner" style="width:80%;background:linear-gradient(90deg,var(--green),var(--green2))">Organization & awareness</div></div></div>
+</div>
+
+<div class="highlight-box hb-saffron">
+  <h3>🏴 Women's Key Organizations & Contributions</h3>
+  <div class="two-col">
+    <div>
+      <strong style="color:var(--gold2)">Organizations:</strong>
+      <ul class="bullet-list bl-arrow" style="margin-top:8px">
+        <li>Nari Satyagraha Committee</li>
+        <li>Mahila Rashtriya Sangh</li>
+        <li>Ladies Picketing Board</li>
+        <li>Rashtriya Stree Sangha</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="color:var(--gold2)">Revolutionary Women:</strong>
+      <ul class="bullet-list bl-arrow" style="margin-top:8px">
+        <li>Kalpana Dutta & Pritilata Waddedar — Chittagong Raid (1930)</li>
+        <li>Shanti Ghosh & Suniti Chowdhury — Shot DM of Comilla (1931)</li>
+        <li>Bina Das — Shot at Bengal Governor during Convocation (1932) — only 21 years old!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FOREIGN WOMEN -->
+<div class="highlight-box hb-green">
+  <h3>🌍 Foreign Women Who Fought for India's Freedom</h3>
+  <div class="cards" style="margin:16px 0">
+    <div class="card highlight-teal">
+      <span class="card-icon">☘️</span>
+      <h3>Annie Besant (Ireland)</h3>
+      <p>Founded Theosophical Society. Started Home Rule League (1916). INC President (1917). "Though not India's citizen, she was Indian at heart."</p>
+    </div>
+    <div class="card highlight-purple">
+      <span class="card-icon">⚜️</span>
+      <h3>Sister Nivedita (Ireland)</h3>
+      <p>Born Margaret Noble. Vivekananda's disciple. Attended Banaras Congress (1905). Supported Swadeshi Movement vigorously.</p>
+    </div>
+    <div class="card highlight-gold">
+      <span class="card-icon">🌹</span>
+      <h3>Mira Alphonse "The Mother" (France)</h3>
+      <p>Born in Paris, came to India 1914, met Sri Aurobindo. Inspired founding of Auroville (international township near Pondicherry). Enriched India's heritage.</p>
+    </div>
+    <div class="card highlight-saffron">
+      <span class="card-icon">🕊️</span>
+      <h3>Mira Ben (England)</h3>
+      <p>Real name: Madeleine Slade. Close associate of Gandhi. Accompanied him to Round Table Conference. Worked for rural social reforms.</p>
+    </div>
+    <div class="card highlight-green">
+      <span class="card-icon">🌿</span>
+      <h3>Sarla Ben (England)</h3>
+      <p>Real name: Catherine Mary Heilman. Given Indian name by Gandhi. Established ashram in Kausani, Uttarakhand. Helped families of political prisoners.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- INA & SUBHAS -->
+<div class="chapter theme-crimson">
+  <div class="chapter-label">🎖️ Chapter 14</div>
+  <h2>⚔️ Indian National Army (INA) — Subhas Chandra Bose</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot crimson">1941</div>
+    <div class="tl-content crimson-border">
+      <div class="tl-year">📅 1941</div>
+      <div class="tl-title">🏃 Subhas's Great Escape</div>
+      <div class="tl-desc">Subhas Chandra Bose escaped from house arrest in Calcutta. Travelled incognito via Afghanistan to Germany. Met Hitler. Later travelled by submarine to Japan.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1943</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 1943</div>
+      <div class="tl-title">🎖️ INA Formed & Azad Hind Government</div>
+      <div class="tl-desc">
+        <strong>Indian National Army (Azad Hind Fauj)</strong> formed in Singapore (1943) from Indian POWs in Southeast Asia.<br>
+        • <strong>Rani Lakshmibai Regiment</strong> — Women's regiment named after the 1857 heroine; ~15,000 women enrolled<br>
+        • Full military training given; deployed in Imphal Campaign (1945)<br>
+        • Azad Hind Government declared — recognized by several countries<br>
+        • Slogan: <em>"Dilli Chalo" (March to Delhi)</em>
+      </div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot saffron">1945</div>
+    <div class="tl-content">
+      <div class="tl-year">📅 1945</div>
+      <div class="tl-title">📢 INA Trials — National Outrage</div>
+      <div class="tl-desc">After war ended, British put INA officers on trial at Red Fort, Delhi. This created massive public outrage. Naval Mutiny (1946) partly inspired by INA. British realized their position was untenable.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL SECTION: ROAD TO INDEPENDENCE -->
+<div class="chapter theme-green">
+  <div class="chapter-label">🏆 Final Chapter</div>
+  <h2>🇮🇳 Road to Independence (1945–1947)</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-dot teal">1945</div>
+    <div class="tl-content teal-border">
+      <div class="tl-year">📅 1945</div>
+      <div class="tl-title">🏛️ Simla Conference — Failed</div>
+      <div class="tl-desc">Viceroy Wavell's initiative. Congress & Muslim League failed to agree on composition of Executive Council. Jinnah insisted on all Muslim League members representing Muslims only.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold">1946</div>
+    <div class="tl-content gold-border">
+      <div class="tl-year">📅 Feb 1946</div>
+      <div class="tl-title">⚓ Royal Indian Navy Mutiny</div>
+      <div class="tl-desc">Indian sailors in Bombay revolted. Quickly spread to other ports. Demonstrated that British could no longer rely on Indian military loyalty. Hastened independence.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot saffron">1946</div>
+    <div class="tl-content">
+      <div class="tl-year">📅 1946</div>
+      <div class="tl-title">📜 Cabinet Mission Plan</div>
+      <div class="tl-desc">Three-tier federal structure proposed. Constituent Assembly to be formed. Interim government to be formed. Congress accepted; League initially accepted but later rejected.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot green">1947</div>
+    <div class="tl-content green-border">
+      <div class="tl-year">📅 3 June 1947</div>
+      <div class="tl-title">✂️ Mountbatten Plan (Partition Plan)</div>
+      <div class="tl-desc">Partition of India accepted. Bengal & Punjab to be partitioned based on religious majority. Princely states given choice. Two dominions: India & Pakistan to be created.</div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-dot gold" style="background:linear-gradient(135deg,var(--saffron),var(--gold));font-size:1.2rem">🇮🇳</div>
+    <div class="tl-content" style="border-left-color:var(--gold);background:rgba(249,168,37,0.08)">
+      <div class="tl-year" style="color:var(--gold)">📅 15 AUGUST 1947 — THE DAY OF FREEDOM</div>
+      <div class="tl-title" style="color:var(--gold2);font-size:1.3rem">🎉 India Becomes Independent!</div>
+      <div class="tl-desc">After ~200 years of British rule, India gained independence. Jawaharlal Nehru delivered his iconic <em>"Tryst with Destiny"</em> speech at midnight. The Indian tricolor was hoisted at Red Fort. <strong>A nation of dreams was born.</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- KEY FACTS SUMMARY -->
+<div class="highlight-box hb-gold" style="margin:40px 0">
+  <h3>⭐ Super Quick Revision — Essential Facts</h3>
+  <div class="three-col" style="margin-top:16px">
+    <div>
+      <strong style="color:var(--saffron2)">📅 Key Dates to Remember:</strong>
+      <ul class="bullet-list bl-diamond" style="margin-top:8px">
+        <li>1498 — Vasco da Gama at Calicut</li>
+        <li>1600 — English EIC Charter (Elizabeth I)</li>
+        <li>1757 — Battle of Plassey (June 23)</li>
+        <li>1764 — Battle of Buxar (Oct 22)</li>
+        <li>1857 — Great Revolt (May 10, Meerut)</li>
+        <li>1885 — INC Founded (Dec 28)</li>
+        <li>1919 — Jallianwala Bagh (Apr 13)</li>
+        <li>1930 — Dandi March (Mar 12)</li>
+        <li>1942 — Quit India (Aug 8/9)</li>
+        <li>1947 — Independence (Aug 15)</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="color:var(--green2)">🏛️ Key Acts & Policies:</strong>
+      <ul class="bullet-list bl-diamond" style="margin-top:8px">
+        <li>Cartaz System — Portuguese naval control</li>
+        <li>Subsidiary Alliance — Wellesley (1798)</li>
+        <li>Doctrine of Lapse — Dalhousie</li>
+        <li>Permanent Settlement (1793) — Cornwallis</li>
+        <li>Ryotwari System — Munro/Hastings</li>
+        <li>Regulating Act (1773)</li>
+        <li>Pitt's India Act (1784)</li>
+        <li>Charter Act 1833 — trade monopoly gone</li>
+        <li>Govt of India Act 1858 — Crown rule</li>
+        <li>Morley-Minto Reforms (1909)</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="color:var(--crimson2)">⚔️ Key Battles:</strong>
+      <ul class="bullet-list bl-diamond" style="margin-top:8px">
+        <li>Battle of Swally Hole (1611) — English vs Portuguese</li>
+        <li>Battle of Bedara (1759) — English vs Dutch</li>
+        <li>Battle of Wandiwash (1760) — English vs French</li>
+        <li>Battle of Plassey (1757) — EIC vs Bengal</li>
+        <li>Battle of Buxar (1764) — EIC vs coalition</li>
+        <li>Battle of Panipat III (1761) — Marathas vs Afghans</li>
+        <li>Battle of Seringapatam (1799) — Tipu Sultan killed</li>
+        <li>Battle of Sagauli (1816) — vs Gurkhas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- REGIONAL POWERS — NEW SECTION FROM TRANSCRIPT              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="regional-powers"></a>
+<div class="chapter theme-gold">
+  <div class="chapter-label">🏰 New Chapter — Regional Successor States<span class="new-badge">NEW</span></div>
+  <h2>🏰 Rise of Regional Powers After Mughal Decline</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block" style="border-left-color:var(--gold)">
+  "After Aurangzeb's death (1707), Mughal authority crumbled. Into this vacuum rose powerful regional successor states — Hyderabad, Mysore, Bengal, Awadh, Kerala — which the British cleverly exploited one by one."
+  <cite>— From the transcript: Regional States & Their Rise</cite>
+</div>
+
+<!-- HYDERABAD -->
+<div class="chapter theme-gold" style="margin-top:28px;">
+  <div class="chapter-label">📅 Hyderabad State</div>
+  <h2 style="font-size:1.6rem">🕌 Hyderabad — Nizam ul-Mulk (Asaf Jah)</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="two-col">
+  <div>
+    <ul class="bullet-list bl-arrow">
+      <li>Founded by <strong>Nizam ul-Mulk (Asaf Jah I)</strong> in 1724, also known as <strong>Kilich Khan</strong></li>
+      <li>Was one of the leading nobles of post-Aurangzeb era</li>
+      <li>Received Deccan Viceroyalty in 1720; defeated all rivals 1720–22</li>
+      <li>Served as Mughal Wazir 1722–24, frustrated by Emperor Muhammad Shah's incapacity</li>
+      <li>Returned to Deccan and founded Hyderabad — <em>never openly declared independence</em></li>
+      <li>Adopted tolerant policy toward Hindus; appointed <strong>Puran Chand</strong> (Hindu) as Dewan</li>
+      <li>Implemented Mughal-style jagirdari system with orderly administration</li>
+      <li>Kept powerful Marathas outside his dominion</li>
+      <li>After his death (1748) — Hyderabad began to disintegrate</li>
+    </ul>
+  </div>
+  <div class="svg-mindmap" style="padding:16px">
+    <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" width="100%">
+      <ellipse cx="210" cy="130" rx="75" ry="40" fill="#1a1200" stroke="#f9a825" stroke-width="2"/>
+      <text x="210" y="124" text-anchor="middle" fill="#f9a825" font-family="Playfair Display,serif" font-size="13" font-weight="bold">HYDERABAD</text>
+      <text x="210" y="142" text-anchor="middle" fill="#ffe082" font-family="Space Mono,monospace" font-size="9">Founded 1724</text>
+
+      <line x1="142" y1="115" x2="85" y2="65" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="5" y="30" width="120" height="60" rx="7" fill="#12100a" stroke="#f9a825" stroke-width="1.2"/>
+      <text x="65" y="52" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🏛️ GOVERNANCE</text>
+      <text x="65" y="67" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Jagirdari system</text>
+      <text x="65" y="80" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Hindu-Muslim unity</text>
+
+      <line x1="142" y1="140" x2="75" y2="155" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="5" y="130" width="120" height="60" rx="7" fill="#12100a" stroke="#66bb6a" stroke-width="1.2"/>
+      <text x="65" y="152" text-anchor="middle" fill="#66bb6a" font-family="Space Mono,monospace" font-size="9" font-weight="bold">✅ LEGACY</text>
+      <text x="65" y="167" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Longest lasting</text>
+      <text x="65" y="180" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">regional state</text>
+
+      <line x1="278" y1="115" x2="335" y2="65" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="295" y="30" width="120" height="60" rx="7" fill="#12100a" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="355" y="52" text-anchor="middle" fill="#ef5350" font-family="Space Mono,monospace" font-size="9" font-weight="bold">⚠️ DECLINE</text>
+      <text x="355" y="67" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">1748: Nizam dies</text>
+      <text x="355" y="80" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Succession wars</text>
+
+      <line x1="278" y1="140" x2="335" y2="155" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="295" y="130" width="120" height="60" rx="7" fill="#12100a" stroke="#00acc1" stroke-width="1.2"/>
+      <text x="355" y="152" text-anchor="middle" fill="#00acc1" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🔗 EIC LINK</text>
+      <text x="355" y="167" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Carnatic was</text>
+      <text x="355" y="180" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Hyderabad's sub-state</text>
+
+      <line x1="210" y1="90" x2="210" y2="48" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+      <rect x="150" y="14" width="120" height="38" rx="7" fill="#1a1200" stroke="#ffab40" stroke-width="1.2"/>
+      <text x="210" y="33" text-anchor="middle" fill="#ffab40" font-family="Space Mono,monospace" font-size="9" font-weight="bold">1720 — Power Rise</text>
+      <text x="210" y="47" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Defeated all Deccan rivals</text>
+    </svg>
+  </div>
+</div>
+
+<!-- MYSORE -->
+<a class="anchor" id="mysore-wars"></a>
+<div class="chapter theme-crimson" style="margin-top:32px;">
+  <div class="chapter-label">⚔️ Mysore Kingdom</div>
+  <h2 style="font-size:1.6rem">🐯 Mysore — Hyder Ali & Tipu Sultan</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="two-col">
+  <div class="person-mini" style="border-top-color:var(--crimson2);padding:20px">
+    <div style="font-size:2.4rem;margin-bottom:8px">🦁</div>
+    <h4 style="color:var(--crimson2);font-size:1.1rem">Hyder Ali (1721–1782)</h4>
+    <div class="yr">Commander → King of Mysore</div>
+    <ul class="bullet-list bl-arrow" style="margin-top:8px">
+      <li>Started career as small officer in Mysore army</li>
+      <li>Recognized importance of Western military training — applied it to troops</li>
+      <li>Overthrew King Nanjraj (Wadiya Dynasty) in 1761; established authority</li>
+      <li>Captured: Bednur, Sunda, Sera, Canara, Malabar</li>
+      <li>Adopted policy of religious tolerance</li>
+      <li>Constantly fought Maratha sardars, Nizam, British</li>
+      <li>Died 1782; succeeded by son <strong>Tipu Sultan</strong></li>
+    </ul>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--saffron);padding:20px">
+    <div style="font-size:2.4rem;margin-bottom:8px">🐯</div>
+    <h4 style="color:var(--saffron2);font-size:1.1rem">Tipu Sultan (1750–1799)</h4>
+    <div class="yr">"Tiger of Mysore"</div>
+    <ul class="bullet-list bl-arrow" style="margin-top:8px">
+      <li>Introduced new calendar, coin system, weights & measures</li>
+      <li>Army used muskets & bayonets made in European fashion — <em>manufactured in Mysore itself</em></li>
+      <li>1796: Attempted to build a modern navy</li>
+      <li>Sent ambassadors to France seeking alliance against British</li>
+      <li>Used iron-cased rockets in warfare — world's first modern rocket artillery</li>
+      <li>Planted "Tree of Liberty" at Seringapatam, called himself <em>"Citizen Tipu"</em></li>
+      <li>Died fighting at Seringapatam — <strong>4th Anglo-Mysore War (1799)</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box hb-saffron">
+  <h3>⚔️ Four Anglo-Mysore Wars at a Glance</h3>
+  <table class="data-table battle-table">
+    <thead><tr><th>War</th><th>Year</th><th>Cause</th><th>Result</th><th>Key Outcome</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-saffron">1st</span></td>
+        <td class="year-cell">1767–1769</td>
+        <td>EIC allied with Nizam & Marathas against Hyder Ali</td>
+        <td>🤝 <strong>Hyder Ali won</strong> — Treaty of Madras</td>
+        <td>Mutual defence pact; EIC humiliated</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-crimson">2nd</span></td>
+        <td class="year-cell">1780–1784</td>
+        <td>EIC broke Treaty of Madras; supported Marathas against Hyder Ali</td>
+        <td>⚖️ <strong>Stalemate</strong> — Treaty of Mangalore (1784)</td>
+        <td>Status quo restored; Hyder Ali died (1782); Tipu took over</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-gold">3rd</span></td>
+        <td class="year-cell">1790–1792</td>
+        <td>Tipu attacked Travancore (EIC ally); Cornwallis responded</td>
+        <td>🏆 <strong>EIC won</strong> — Treaty of Seringapatam (1792)</td>
+        <td>Tipu lost half his kingdom; gave two sons as hostages; paid £3.3M</td>
+      </tr>
+      <tr style="background:rgba(183,28,28,0.1)">
+        <td><span class="badge badge-crimson">4th</span></td>
+        <td class="year-cell">1799</td>
+        <td>Wellesley's Subsidiary Alliance; Tipu refused; French alliance suspected</td>
+        <td>💀 <strong>TIPU KILLED</strong> at Seringapatam (4 May 1799)</td>
+        <td>Mysore restored to Wadiya dynasty; major British victory in South India</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="insight-box ib-gold">
+  Tipu Sultan's rockets were so advanced that the British captured them and sent them to Woolwich Arsenal in England for study. These inspired William Congreve's Congreve Rockets, later used in Napoleonic Wars. The NASA historian Frank Winter called Tipu's rockets "the most sophisticated in 18th century Asia."
+</div>
+
+<!-- AWADH KINGDOM -->
+<div class="chapter theme-teal" style="margin-top:32px;">
+  <div class="chapter-label">🏛️ Awadh (Oudh)</div>
+  <h2 style="font-size:1.6rem">🌺 Kingdom of Awadh</h2>
+  <div class="chapter-divider"></div>
+</div>
+<div class="two-col">
+  <div>
+    <ul class="bullet-list bl-arrow">
+      <li>Founded by <strong>Saadat Khan Burhan ul-Mulk</strong> as an independent principality</li>
+      <li>1723: Introduced new revenue settlement — equitable land revenue system</li>
+      <li>Protected peasants from exploitation by big zamindars</li>
+      <li>No discrimination between Hindus & Muslims (like Hyderabad)</li>
+      <li><strong>Safdar Jung</strong> (successor): Mughal Wazir 1748; Alliance with Maratha sardars; established equitable justice</li>
+      <li>Awadh's tragedy: Nawabs were short-sighted — underestimated EIC threat</li>
+      <li>1856: <strong>Lord Dalhousie annexed Awadh</strong> on "misgovernance" pretext — this enraged soldiers (from Awadh!) who triggered 1857 revolt</li>
+    </ul>
+  </div>
+  <div>
+    <div class="highlight-box hb-crimson">
+      <h3>💥 Awadh's Role in 1857</h3>
+      <ul class="bullet-list bl-check">
+        <li>Majority of Bengal Army sepoys were from Awadh</li>
+        <li>Annexation of their homeland in 1856 deeply enraged soldiers</li>
+        <li>Begum Hazrat Mahal led revolt from Lucknow</li>
+        <li>Most intense fighting was in Awadh — "Siege & Relief of Lucknow" lasted months</li>
+        <li>This is why British called it the "Sepoy Mutiny" but historians say "National Uprising"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- KERALA -->
+<div class="highlight-box hb-green" style="margin-top:20px">
+  <h3>🌿 Kerala (Travancore Kingdom)</h3>
+  <div class="two-col">
+    <ul class="bullet-list bl-arrow">
+      <li>In early 18th C, Kerala divided among large number of feudal chiefs</li>
+      <li><strong>King Martanda Varma</strong> established Travancore Kingdom after 1729</li>
+      <li>His empire extended from Kanyakumari to Cochin</li>
+      <li>Organized strong army on Western model with modern weapons</li>
+      <li>Built irrigation works, roads, canals for communications</li>
+      <li>Actively encouraged foreign trade</li>
+    </ul>
+    <ul class="bullet-list bl-arrow">
+      <li>Battle of Colachel (1741): <strong>Travancore defeated Dutch</strong> — only Asian power to defeat Europeans in a pitched battle in 18th century!</li>
+      <li>Dutch commander De Lannoy was captured; later trained Travancore army</li>
+      <li>Successors: Rama Varma (Dharma Raja) further modernized state</li>
+      <li>1795: Travancore became British subsidiary state</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ECONOMIC IMPACT — NEW SECTION FROM TRANSCRIPT              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="economic-impact"></a>
+<div class="chapter theme-crimson">
+  <div class="chapter-label">💰 Economic Impact of British Rule<span class="new-badge">NEW</span></div>
+  <h2>💰 Drain of Wealth — De-Industrialisation — Land Revenue</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block" style="border-left-color:var(--gold)">
+  "The economic bleeding of India was not accidental — it was the deliberate policy of a colonial power. India went from having 27% of global GDP in 1700 to just 3% by 1950."
+  <cite>— Dadabhai Naoroji's "Drain of Wealth" Theory (Poverty and Un-British Rule in India, 1901)</cite>
+</div>
+
+<div class="stats-row">
+  <div class="stat-pill"><span class="sp-num" style="color:var(--gold2)">27%</span><span class="sp-lbl">India's share of global GDP (1700)</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--crimson2)">3%</span><span class="sp-lbl">India's share of global GDP (1950)</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--saffron2)">₹100 Cr</span><span class="sp-lbl">Annual drain estimated by Naoroji</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--green2)">45M</span><span class="sp-lbl">Weavers displaced from Indian textile trade</span></div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-crimson">
+    <span class="card-icon">🕳️</span>
+    <h3>Drain of Wealth Theory</h3>
+    <ul>
+      <li><strong>Dadabhai Naoroji</strong> — first to systematically analyze economic drain</li>
+      <li>Drain = excess of exports over imports WITHOUT any return benefit to India</li>
+      <li>Forms: Home Charges (salaries, pensions, debt interest paid to UK), profit remittances, raw material exports at low price, finished goods imports at high price</li>
+      <li>RCDutt, GVJoshi also contributed to this analysis</li>
+      <li>Naoroji called it "Un-British Rule" — unconscious bleeding of India</li>
+    </ul>
+  </div>
+  <div class="card highlight-gold">
+    <span class="card-icon">🏭</span>
+    <h3>De-Industrialisation</h3>
+    <ul>
+      <li>Indian handicrafts (especially textiles) destroyed by cheap British machine-made goods</li>
+      <li>Dhaka muslin — finest cloth in world — production collapsed; weavers starved</li>
+      <li>Legendary: British cut off thumbs of Dhaka weavers (disputed but symbolic of destruction)</li>
+      <li>Industrial policy: India became raw material supplier + market for British goods</li>
+      <li>No Industrial Revolution in colonial India — deliberately prevented</li>
+    </ul>
+  </div>
+  <div class="card highlight-saffron">
+    <span class="card-icon">🌾</span>
+    <h3>Land Revenue Systems</h3>
+    <ul>
+      <li><strong>Permanent Settlement (1793)</strong> — Cornwallis; Bengal, Bihar, Orissa; Zamindars fixed tax forever; peasants had no rights</li>
+      <li><strong>Ryotwari System</strong> — Munro; Madras Presidency; direct settlement with ryots (farmers); high assessments caused distress</li>
+      <li><strong>Mahalwari System</strong> — village/mahal unit; North India; collective responsibility for revenue</li>
+      <li>All systems resulted in: high taxation, no investment in agriculture, impoverishment of peasants</li>
+    </ul>
+  </div>
+</div>
+
+<div class="svg-mindmap">
+  <svg viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg" width="100%">
+    <!-- Title -->
+    <text x="430" y="28" text-anchor="middle" fill="#f9a825" font-family="Playfair Display,serif" font-size="15" font-weight="bold">🇮🇳 HOW BRITISH EXPLOITED INDIA'S ECONOMY</text>
+    <!-- Center -->
+    <ellipse cx="430" cy="185" rx="80" ry="42" fill="#1a0800" stroke="#ff6b00" stroke-width="2"/>
+    <text x="430" y="179" text-anchor="middle" fill="#ff6b00" font-family="Space Mono,monospace" font-size="10" font-weight="bold">COLONIAL</text>
+    <text x="430" y="195" text-anchor="middle" fill="#ff6b00" font-family="Space Mono,monospace" font-size="10" font-weight="bold">EXPLOITATION</text>
+
+    <!-- Branch 1: Drain -->
+    <line x1="355" y1="163" x2="210" y2="90" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="50" y="48" width="175" height="78" rx="8" fill="#1a1200" stroke="#f9a825" stroke-width="1.5"/>
+    <text x="137" y="70" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="10" font-weight="bold">💸 REVENUE DRAIN</text>
+    <text x="137" y="86" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Home Charges to UK</text>
+    <text x="137" y="100" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Profits remitted abroad</text>
+    <text x="137" y="114" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Debt interest payments</text>
+
+    <!-- Branch 2: Trade -->
+    <line x1="350" y1="190" x2="195" y2="185" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="25" y="155" width="175" height="78" rx="8" fill="#150000" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="112" y="176" text-anchor="middle" fill="#ef5350" font-family="Space Mono,monospace" font-size="10" font-weight="bold">🔄 UNFAIR TRADE</text>
+    <text x="112" y="192" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">Raw materials → cheap export</text>
+    <text x="112" y="206" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">Finished goods → costly import</text>
+    <text x="112" y="220" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">Indian market forced open</text>
+
+    <!-- Branch 3: De-industrialization -->
+    <line x1="360" y1="213" x2="210" y2="278" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="50" y="248" width="175" height="65" rx="8" fill="#0f0015" stroke="#9c27b0" stroke-width="1.5"/>
+    <text x="137" y="270" text-anchor="middle" fill="#ce93d8" font-family="Space Mono,monospace" font-size="10" font-weight="bold">🏭 DE-INDUSTRY</text>
+    <text x="137" y="286" text-anchor="middle" fill="#c8b" font-family="Space Mono,monospace" font-size="8">Textile handloom destroyed</text>
+    <text x="137" y="300" text-anchor="middle" fill="#c8b" font-family="Space Mono,monospace" font-size="8">No industrial revolution</text>
+
+    <!-- Branch 4: Land -->
+    <line x1="505" y1="163" x2="638" y2="90" stroke="#66bb6a" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="635" y="48" width="175" height="78" rx="8" fill="#0a1500" stroke="#66bb6a" stroke-width="1.5"/>
+    <text x="722" y="70" text-anchor="middle" fill="#66bb6a" font-family="Space Mono,monospace" font-size="10" font-weight="bold">🌾 LAND REVENUE</text>
+    <text x="722" y="86" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">Permanent Settlement</text>
+    <text x="722" y="100" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">Ryotwari System</text>
+    <text x="722" y="114" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">Mahalwari System</text>
+
+    <!-- Branch 5: Debt -->
+    <line x1="510" y1="190" x2="660" y2="185" stroke="#00acc1" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="655" y="155" width="175" height="65" rx="8" fill="#001a1a" stroke="#00acc1" stroke-width="1.5"/>
+    <text x="742" y="176" text-anchor="middle" fill="#00acc1" font-family="Space Mono,monospace" font-size="10" font-weight="bold">💳 PUBLIC DEBT</text>
+    <text x="742" y="192" text-anchor="middle" fill="#8dd" font-family="Space Mono,monospace" font-size="8">Wars financed by India</text>
+    <text x="742" y="206" text-anchor="middle" fill="#8dd" font-family="Space Mono,monospace" font-size="8">Railways built for trade</text>
+
+    <!-- Branch 6: Famine -->
+    <line x1="495" y1="213" x2="640" y2="278" stroke="#ffab40" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="635" y="248" width="175" height="65" rx="8" fill="#1a0800" stroke="#ffab40" stroke-width="1.5"/>
+    <text x="722" y="270" text-anchor="middle" fill="#ffab40" font-family="Space Mono,monospace" font-size="10" font-weight="bold">☠️ FAMINES</text>
+    <text x="722" y="286" text-anchor="middle" fill="#daa" font-family="Space Mono,monospace" font-size="8">30+ famines 1757–1947</text>
+    <text x="722" y="300" text-anchor="middle" fill="#daa" font-family="Space Mono,monospace" font-size="8">12–29 million deaths</text>
+  </svg>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- SOCIAL REFORM MOVEMENTS — NEW SECTION                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="social-reform"></a>
+<div class="chapter theme-teal">
+  <div class="chapter-label">🌅 19th Century Reform Movements<span class="new-badge">NEW</span></div>
+  <h2>🌅 Social & Religious Reform Movements</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block" style="border-left-color:var(--teal2)">
+  "The 19th century reformers were India's social revolutionaries. Without their work — abolishing sati, promoting widow remarriage, fighting caste discrimination — India could never have built a democratic republic."
+  <cite>— From the transcript: Social Reform Background</cite>
+</div>
+
+<div class="phase-bar">
+  <div class="pb-seg" style="background:linear-gradient(135deg,#0d47a1,#1565c0)">🌅 Brahmo Samaj<br>1828</div>
+  <div class="pb-seg" style="background:linear-gradient(135deg,#00695c,#00897b)">🙏 Prarthana Samaj<br>1867</div>
+  <div class="pb-seg" style="background:linear-gradient(135deg,#f57f17,#f9a825)">🐄 Arya Samaj<br>1875</div>
+  <div class="pb-seg" style="background:linear-gradient(135deg,#4a148c,#6a1b9a)">🕉️ Theosophical<br>1875</div>
+  <div class="pb-seg" style="background:linear-gradient(135deg,#b71c1c,#c62828)">⚙️ Satyashodhak<br>1873</div>
+  <div class="pb-seg" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">💪 Self-Respect<br>1925</div>
+</div>
+
+<div class="person-grid">
+  <div class="person-mini" style="border-top-color:var(--teal2)">
+    <div style="font-size:2rem;margin-bottom:6px">📖</div>
+    <h4 style="color:var(--teal2)">Raja Ram Mohan Roy</h4>
+    <div class="yr">1772–1833 | Brahmo Samaj (1828)</div>
+    <p>Father of Indian Renaissance. Fought against Sati, child marriage, purdah. Promoted English education, women's rights, rational thinking. Founded Brahmo Samaj. Collaborated with Bentinck to abolish Sati (1829).</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--gold2)">
+    <div style="font-size:2rem;margin-bottom:6px">🌺</div>
+    <h4 style="color:var(--gold2)">Debendranath Tagore</h4>
+    <div class="yr">1817–1905 | Brahmo Samaj</div>
+    <p>Father of Rabindranath Tagore. Revived Brahmo Samaj after Roy's death. Opposed idol worship, promoted monotheism and rational Hinduism. Founded Tattvabodhini Sabha (1839).</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--saffron2)">
+    <div style="font-size:2rem;margin-bottom:6px">⚡</div>
+    <h4 style="color:var(--saffron2)">Keshab Chandra Sen</h4>
+    <div class="yr">1838–1884 | Brahmo Samaj of India</div>
+    <p>Dynamic leader who popularized Brahmo Samaj across India. Advocated women's education, inter-caste marriage, age of consent laws. Split with Debendranath over conservatism.</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--crimson2)">
+    <div style="font-size:2rem;margin-bottom:6px">🐄</div>
+    <h4 style="color:var(--crimson2)">Swami Dayananda Saraswati</h4>
+    <div class="yr">1824–1883 | Arya Samaj (1875)</div>
+    <p>Founded Arya Samaj in Bombay. Slogan: "Back to the Vedas." Fought caste system, child marriage, women's exclusion from education. Started Shuddhi movement for re-conversion. Wrote "Satyartha Prakash."</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--purple2)">
+    <div style="font-size:2rem;margin-bottom:6px">🕉️</div>
+    <h4 style="color:var(--purple2)">Swami Vivekananda</h4>
+    <div class="yr">1863–1902 | Ramakrishna Mission (1897)</div>
+    <p>Disciple of Ramakrishna Paramahamsa. 1893 Chicago World Parliament of Religions — introduced Hinduism to the West. "Each soul is potentially divine." Social service = worship of God. Inspired nationalist youth.</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--green2)">
+    <div style="font-size:2rem;margin-bottom:6px">⚖️</div>
+    <h4 style="color:var(--green2)">Jyotirao Phule</h4>
+    <div class="yr">1827–1890 | Satyashodhak Samaj (1873)</div>
+    <p>Pioneer of lower-caste upliftment in Maharashtra. Opened first school for girls (1848) and untouchables. Founded Satyashodhak Samaj — "Truth Seekers Society." Wife Savitribai Phule was India's first woman teacher. Title "Mahatma" given before Gandhi.</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--teal2)">
+    <div style="font-size:2rem;margin-bottom:6px">🌊</div>
+    <h4 style="color:var(--teal2)">Narayana Guru</h4>
+    <div class="yr">1856–1928 | Kerala Reform</div>
+    <p>Ezhava community upliftment in Kerala. Built temples open to all castes. Famous quote: "One Caste, One Religion, One God for Man." Founded Sree Narayana Dharma Paripalana Yogam (SNDP). Challenged caste hierarchy through spiritual revolution.</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--crimson)">
+    <div style="font-size:2rem;margin-bottom:6px">✊</div>
+    <h4 style="color:var(--crimson2)">Periyar (E.V. Ramasamy)</h4>
+    <div class="yr">1879–1973 | Self-Respect Movement (1925)</div>
+    <p>Anti-caste, anti-Brahmin movement in Tamil Nadu. Called himself "Periyar" (great person). Self-Respect Movement: rational thinking, rejection of religious superstition. Founded Dravidar Kazhagam. Inspiration for Dravidian politics; root of DMK ideology.</p>
+  </div>
+  <div class="person-mini" style="border-top-color:var(--purple)">
+    <div style="font-size:2rem;margin-bottom:6px">📜</div>
+    <h4 style="color:var(--purple2)">Dr. B.R. Ambedkar</h4>
+    <div class="yr">1891–1956 | Dalit Emancipation</div>
+    <p>Born untouchable; first Indian to earn economics doctorate from Columbia & LSE. Mahad Satyagraha 1927 — right to public water. Burned Manusmriti 1927. Poona Pact 1932 with Gandhi. Chief architect Indian Constitution. Converted to Buddhism 1956 with 500,000 followers.</p>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- NON-COOPERATION MOVEMENT 1920 — NEW SECTION                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="ncm"></a>
+<div class="chapter theme-saffron">
+  <div class="chapter-label">✊ Chapter 11b — First Mass Movement<span class="new-badge">NEW</span></div>
+  <h2>✊ Non-Cooperation Movement (1920–1922)</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block">
+  "The Non-Cooperation Movement was Gandhi's first all-India mass movement. For the first time, the Freedom Struggle became truly a MASS movement — reaching every village, every class, every community."
+  <cite>— From the transcript: NCM Analysis</cite>
+</div>
+
+<div class="stats-row">
+  <div class="stat-pill"><span class="sp-num" style="color:var(--saffron2)">1920</span><span class="sp-lbl">September — NCM Launched</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--crimson2)">1922</span><span class="sp-lbl">February — Called Off</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--gold2)">30,000</span><span class="sp-lbl">Arrested during movement</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--green2)">2</span><span class="sp-lbl">Triggers: Khilafat + Jallianwala</span></div>
+</div>
+
+<div class="cards">
+  <div class="card highlight-crimson">
+    <span class="card-icon">🔥</span>
+    <h3>Causes / Background</h3>
+    <ul>
+      <li><strong>Jallianwala Bagh massacre (April 13, 1919)</strong> — General Dyer ordered firing on peaceful crowd; 379+ killed, 1200+ wounded</li>
+      <li><strong>Rowlatt Act (1919)</strong> — Detention without trial; "No appeal, no vakil, no dalil"</li>
+      <li><strong>Khilafat Movement</strong> — Muslims upset about Ottoman Caliph's fate post-WWI; Gandhi allied with Ali Brothers (Mohammad & Shaukat Ali)</li>
+      <li>Montagu-Chelmsford Reforms disappointed nationalists</li>
+    </ul>
+  </div>
+  <div class="card highlight-saffron">
+    <span class="card-icon">📋</span>
+    <h3>Programme of NCM</h3>
+    <ul>
+      <li>Surrender of titles & honorary posts</li>
+      <li>Resignation from nominated posts in local bodies</li>
+      <li>Boycott of government schools & colleges</li>
+      <li>Boycott of law courts — lawyers to work in panchayat courts</li>
+      <li>Boycott of foreign goods; promote Swadeshi</li>
+      <li>Boycott of elections under Montagu-Chelmsford reforms</li>
+      <li>Civil disobedience if above programme successful</li>
+    </ul>
+  </div>
+  <div class="card highlight-green">
+    <span class="card-icon">✅</span>
+    <h3>Mass Response</h3>
+    <ul>
+      <li>Students left government colleges in thousands</li>
+      <li>Lawyers like Motilal Nehru, CR Das gave up lucrative practices</li>
+      <li>Khadi became national symbol; charkha (spinning wheel) Gandhi's tool</li>
+      <li>Boycott of foreign cloth caused massive economic impact</li>
+      <li>Hindu-Muslim unity at peak — Khilafat-Congress cooperation</li>
+      <li>Thousands of national schools established across India</li>
+    </ul>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="highlight-box hb-crimson">
+    <h3>💥 Chauri Chaura Incident (Feb 5, 1922)</h3>
+    <ul class="bullet-list bl-fire">
+      <li>Chauri Chaura village, Gorakhpur (UP) — police fired on protesters</li>
+      <li>Enraged crowd set police station on fire — 22 policemen killed</li>
+      <li>Gandhi was horrified by violence</li>
+      <li>Immediately called off the entire NCM on Feb 12, 1922</li>
+      <li>Gandhi said: "We must purify ourselves before we can purify India"</li>
+    </ul>
+  </div>
+  <div class="highlight-box hb-gold">
+    <h3>📊 Evaluation of NCM</h3>
+    <ul class="bullet-list bl-diamond">
+      <li>✅ First genuine mass movement — millions mobilized</li>
+      <li>✅ Ended British confidence in Indians' submission</li>
+      <li>✅ INC became mass organization (not just elite lawyers)</li>
+      <li>✅ Hindi as national language promoted; Indian education spread</li>
+      <li>❌ Movement called off at its peak — opportunistic for British</li>
+      <li>❌ Hindu-Muslim unity eroded after Khilafat ended (1924)</li>
+    </ul>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CIVIL DISOBEDIENCE MOVEMENT 1930 — NEW SECTION              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="cdm"></a>
+<div class="chapter theme-gold">
+  <div class="chapter-label">🧂 Chapter 11c — Dandi March<span class="new-badge">NEW</span></div>
+  <h2>🧂 Civil Disobedience Movement (1930) — Dandi March</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block" style="border-left-color:var(--gold)">
+  "With this, I am shaking the foundations of the British Empire." — Mahatma Gandhi, picking up salt at Dandi beach, April 6, 1930
+  <cite>— From the transcript: Dandi March significance</cite>
+</div>
+
+<!-- DANDI MARCH SVG FLOWCHART -->
+<div class="svg-mindmap">
+  <svg viewBox="0 0 820 200" xmlns="http://www.w3.org/2000/svg" width="100%">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#f9a825"/>
+      </marker>
+    </defs>
+    <!-- Step 1 -->
+    <rect x="8" y="60" width="120" height="70" rx="8" fill="#1a1200" stroke="#f9a825" stroke-width="1.5"/>
+    <text x="68" y="85" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">📋 LAHORE</text>
+    <text x="68" y="99" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">SESSION</text>
+    <text x="68" y="115" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Dec 1929</text>
+    <text x="68" y="126" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Purna Swaraj demand</text>
+    <line x1="128" y1="95" x2="148" y2="95" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Step 2 -->
+    <rect x="148" y="60" width="120" height="70" rx="8" fill="#1a0800" stroke="#ff6b00" stroke-width="1.5"/>
+    <text x="208" y="85" text-anchor="middle" fill="#ff6b00" font-family="Space Mono,monospace" font-size="9" font-weight="bold">📅 JAN 26</text>
+    <text x="208" y="99" text-anchor="middle" fill="#ff6b00" font-family="Space Mono,monospace" font-size="9" font-weight="bold">1930</text>
+    <text x="208" y="115" text-anchor="middle" fill="#daa" font-family="Space Mono,monospace" font-size="8">Independence Day</text>
+    <text x="208" y="126" text-anchor="middle" fill="#daa" font-family="Space Mono,monospace" font-size="8">Pledge taken nationwide</text>
+    <line x1="268" y1="95" x2="288" y2="95" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Step 3 -->
+    <rect x="288" y="60" width="120" height="70" rx="8" fill="#001500" stroke="#66bb6a" stroke-width="1.5"/>
+    <text x="348" y="85" text-anchor="middle" fill="#66bb6a" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🚶 DANDI</text>
+    <text x="348" y="99" text-anchor="middle" fill="#66bb6a" font-family="Space Mono,monospace" font-size="9" font-weight="bold">MARCH</text>
+    <text x="348" y="115" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">Mar 12 — Apr 6</text>
+    <text x="348" y="126" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">240 miles, 78 satyagrahis</text>
+    <line x1="408" y1="95" x2="428" y2="95" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Step 4 -->
+    <rect x="428" y="60" width="120" height="70" rx="8" fill="#1a1200" stroke="#f9a825" stroke-width="1.5"/>
+    <text x="488" y="85" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🧂 SALT LAW</text>
+    <text x="488" y="99" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">BROKEN</text>
+    <text x="488" y="115" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">April 6, 1930</text>
+    <text x="488" y="126" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">Gandhi picks up salt</text>
+    <line x1="548" y1="95" x2="568" y2="95" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Step 5 -->
+    <rect x="568" y="60" width="120" height="70" rx="8" fill="#150000" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="628" y="85" text-anchor="middle" fill="#ef5350" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🌊 DHARASANA</text>
+    <text x="628" y="99" text-anchor="middle" fill="#ef5350" font-family="Space Mono,monospace" font-size="9" font-weight="bold">RAID</text>
+    <text x="628" y="115" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">May 21, 1930</text>
+    <text x="628" y="126" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">Sarojini Naidu leads raid</text>
+    <line x1="688" y1="95" x2="708" y2="95" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- Step 6 -->
+    <rect x="708" y="60" width="108" height="70" rx="8" fill="#001a08" stroke="#00e676" stroke-width="1.5"/>
+    <text x="762" y="85" text-anchor="middle" fill="#00e676" font-family="Space Mono,monospace" font-size="9" font-weight="bold">🤝 GANDHI-</text>
+    <text x="762" y="99" text-anchor="middle" fill="#00e676" font-family="Space Mono,monospace" font-size="9" font-weight="bold">IRWIN PACT</text>
+    <text x="762" y="115" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">March 5, 1931</text>
+    <text x="762" y="126" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">CDM suspended</text>
+  </svg>
+</div>
+
+<div class="two-col">
+  <div>
+    <div class="highlight-box hb-gold">
+      <h3>🎯 Why SALT as the Issue?</h3>
+      <ul class="bullet-list bl-star">
+        <li>Salt — the most universal necessity — rich, poor, Hindu, Muslim ALL need it</li>
+        <li>Salt Tax was most unjust — taxing a basic survival necessity</li>
+        <li>Visible, symbolic, easily understood by masses</li>
+        <li>Easy to participate — anyone could make salt on any coast</li>
+        <li>No violence required — just law-breaking</li>
+        <li>Could not be countered without extreme repression (bad PR for British)</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="highlight-box hb-saffron">
+      <h3>📊 Mass Participation in CDM</h3>
+      <ul class="bullet-list bl-check">
+        <li>🚺 <strong>Women</strong>: Massive participation — first time in this scale; picketing shops</li>
+        <li>👨‍🎓 <strong>Students & Youth</strong>: Left schools, joined marches</li>
+        <li>🏕️ <strong>Tribes</strong>: Central Provinces, Maharashtra, Karnataka</li>
+        <li>👷 <strong>Workers</strong>: Bombay, Calcutta, Madras, Sholapur</li>
+        <li>🌾 <strong>Peasants</strong>: UP, Bihar, Gujarat — No Revenue Campaign</li>
+        <li>🕌 <strong>Muslims</strong>: Less than NCM (Muslim League advised against)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="highlight-box hb-green">
+  <h3>📜 Gandhi-Irwin Pact (5 March 1931) — Terms</h3>
+  <div class="two-col">
+    <div>
+      <strong style="color:var(--green2)">British Concessions:</strong>
+      <ul class="bullet-list bl-check">
+        <li>All non-violent political prisoners released</li>
+        <li>Fines not yet collected — remitted</li>
+        <li>Confiscated land not yet sold — returned</li>
+        <li>Government servants who resigned — lenient treatment</li>
+        <li>Coastal villagers allowed to make salt for domestic use</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="color:var(--crimson2)">Congress Concessions:</strong>
+      <ul class="bullet-list bl-arrow">
+        <li>Suspend Civil Disobedience Movement</li>
+        <li>Participate in Round Table Conference (2nd)</li>
+        <li>No demand for inquiry into police excesses</li>
+      </ul>
+      <div class="insight-box ib-crimson" style="margin-top:12px">
+        Critics: Gandhi gave up too much. Bhagat Singh, Rajguru, Sukhdev executed March 23, 1931 despite Pact — Gandhi could not save them.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- QUIT INDIA MOVEMENT 1942 — NEW SECTION                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="qim"></a>
+<div class="chapter theme-crimson">
+  <div class="chapter-label">🔥 Chapter 14b — Final Mass Movement<span class="new-badge">NEW</span></div>
+  <h2>🔥 Quit India Movement (1942) — "Do or Die"</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block">
+  "Here is a mantra, a short one, that I give you. You may imprint it on your hearts and let every breath of yours give expression to it. The mantra is: 'Do or Die.' We shall either free India or die in the attempt."
+  <cite>— Mahatma Gandhi, August 8, 1942 — Gowalia Tank, Bombay</cite>
+</div>
+
+<div class="stats-row">
+  <div class="stat-pill"><span class="sp-num" style="color:var(--saffron2)">Aug 8, 1942</span><span class="sp-lbl">Resolution passed</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--crimson2)">Aug 9</span><span class="sp-lbl">Gandhi arrested</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--gold2)">60,000+</span><span class="sp-lbl">Arrested nationwide</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--green2)">1,000+</span><span class="sp-lbl">Killed in police firing</span></div>
+  <div class="stat-pill"><span class="sp-num" style="color:var(--teal2)">6 wks</span><span class="sp-lbl">Movement lasted underground</span></div>
+</div>
+
+<div class="two-col">
+  <div>
+    <div class="mindmap-wrap">
+      <div class="mm-center">🔥 QUIT INDIA — BACKGROUND</div>
+      <div class="mm-grid">
+        <div class="mm-branch mm-crimson">
+          <h4>💥 Why 1942?</h4>
+          <ul>
+            <li>WWII going badly for Britain</li>
+            <li>Japan reached India's borders (Burma fell)</li>
+            <li>Cripps Mission (1942) failed — "Post-dated cheque on crashing bank" (Gandhi)</li>
+            <li>Indians unwilling to cooperate with war effort without freedom</li>
+          </ul>
+        </div>
+        <div class="mm-branch mm-saffron">
+          <h4>📋 Cripps Mission (1942)</h4>
+          <ul>
+            <li>Stafford Cripps sent by Churchill</li>
+            <li>Offered Dominion status AFTER war</li>
+            <li>Provinces could opt out (implied Pakistan)</li>
+            <li>Congress rejected: no immediate power transfer</li>
+            <li>Gandhi's comment: "A post-dated cheque on a crashing bank"</li>
+          </ul>
+        </div>
+        <div class="mm-branch mm-green">
+          <h4>🎯 Resolution</h4>
+          <ul>
+            <li>August 8, 1942 — AICC Bombay</li>
+            <li>Called for immediate end to British rule</li>
+            <li>If British left, independent India would join Allies</li>
+            <li>Gandhi gave "Do or Die" mantra</li>
+          </ul>
+        </div>
+        <div class="mm-branch mm-gold">
+          <h4>🚨 British Response</h4>
+          <ul>
+            <li>Gandhi, entire Working Committee arrested on Aug 9</li>
+            <li>All INC leaders jailed — but movement continued!</li>
+            <li>Underground networks: Jayaprakash Narayan, Ram Manohar Lohia</li>
+            <li>Usha Mehta's secret radio transmitter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="highlight-box hb-saffron">
+      <h3>🌊 Spread of the Movement</h3>
+      <ul class="bullet-list bl-fire">
+        <li><strong>Bombay</strong>: Mass strikes, Aruna Asaf Ali hoisted INC flag at Gowalia Tank</li>
+        <li><strong>Satara (Maharashtra)</strong>: Nana Patil established Parallel Government ("Prati Sarkar")</li>
+        <li><strong>Ballia (UP)</strong>: Chittu Pandey briefly established parallel government</li>
+        <li><strong>Midnapore (Bengal)</strong>: Tamluk & Contai — Jatiya Sarkar (Parallel Govt) formed</li>
+        <li><strong>Usha Mehta</strong>: Secret "Congress Radio" broadcast from Bombay</li>
+        <li><strong>JP Narayan</strong>: Escaped from Hazaribagh jail; led underground movement</li>
+      </ul>
+    </div>
+    <div class="highlight-box hb-crimson" style="margin-top:16px">
+      <h3>📊 Significance of QIM</h3>
+      <ul class="bullet-list bl-diamond">
+        <li>First truly leaderless mass movement — cadres acted independently</li>
+        <li>Last major mass movement before independence</li>
+        <li>Demonstrated India's determination — British began thinking of exit</li>
+        <li>Parallel governments showed Indians could self-govern</li>
+        <li>Hindu-Muslim divisions widened (Muslim League didn't join)</li>
+        <li>British Viceroy Linlithgow called it "most serious since 1857"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CONSTITUTIONAL ACTS — NEW SECTION FROM TRANSCRIPT           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<a class="anchor" id="constitutional"></a>
+<div class="chapter theme-teal">
+  <div class="chapter-label">📜 British Constitutional Acts<span class="new-badge">NEW</span></div>
+  <h2>📜 Evolution of Constitutional Governance 1773–1947</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="svg-mindmap">
+  <svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg" width="100%">
+    <text x="430" y="24" text-anchor="middle" fill="#4db6ac" font-family="Playfair Display,serif" font-size="15" font-weight="bold">📜 CONSTITUTIONAL EVOLUTION OF BRITISH INDIA</text>
+    <!-- Vertical timeline line -->
+    <line x1="430" y1="40" x2="430" y2="500" stroke="rgba(77,182,172,0.3)" stroke-width="2" stroke-dasharray="6,3"/>
+
+    <!-- 1773 -->
+    <circle cx="430" cy="60" r="14" fill="#004d40" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="65" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1773</text>
+    <rect x="8" y="44" width="390" height="46" rx="8" fill="#041a17" stroke="#4db6ac" stroke-width="1.2"/>
+    <text x="200" y="62" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="9" font-weight="bold">REGULATING ACT 1773</text>
+    <text x="200" y="78" text-anchor="middle" fill="#8dd" font-family="Space Mono,monospace" font-size="8">Parliament's FIRST control over EIC · Governor of Bengal = Governor-General · Supreme Court set up at Calcutta</text>
+
+    <!-- 1784 -->
+    <circle cx="430" cy="120" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="125" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1784</text>
+    <rect x="462" y="104" width="390" height="46" rx="8" fill="#041a17" stroke="#ffab40" stroke-width="1.2"/>
+    <text x="657" y="122" text-anchor="middle" fill="#ffab40" font-family="Space Mono,monospace" font-size="9" font-weight="bold">PITT'S INDIA ACT 1784</text>
+    <text x="657" y="138" text-anchor="middle" fill="#daa" font-family="Space Mono,monospace" font-size="8">Board of Control set up (6 members) · DIRECT British govt control over EIC · Calcutta = capital of India</text>
+
+    <!-- 1813 -->
+    <circle cx="430" cy="180" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="185" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1813</text>
+    <rect x="8" y="164" width="390" height="46" rx="8" fill="#041a17" stroke="#9c27b0" stroke-width="1.2"/>
+    <text x="200" y="182" text-anchor="middle" fill="#ce93d8" font-family="Space Mono,monospace" font-size="9" font-weight="bold">CHARTER ACT 1813</text>
+    <text x="200" y="198" text-anchor="middle" fill="#c8b" font-family="Space Mono,monospace" font-size="8">EIC trade monopoly ENDED (except China &amp; tea) · Christian missionaries allowed in India · ₹1L for education</text>
+
+    <!-- 1833 -->
+    <circle cx="430" cy="240" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="245" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1833</text>
+    <rect x="462" y="224" width="390" height="46" rx="8" fill="#041a17" stroke="#f9a825" stroke-width="1.2"/>
+    <text x="657" y="242" text-anchor="middle" fill="#f9a825" font-family="Space Mono,monospace" font-size="9" font-weight="bold">CHARTER ACT 1833</text>
+    <text x="657" y="258" text-anchor="middle" fill="#cca" font-family="Space Mono,monospace" font-size="8">EIC ALL trading monopoly ended · Governor-General of India title created · Law Commission (Macaulay)</text>
+
+    <!-- 1853 -->
+    <circle cx="430" cy="300" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="305" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1853</text>
+    <rect x="8" y="284" width="390" height="46" rx="8" fill="#041a17" stroke="#66bb6a" stroke-width="1.2"/>
+    <text x="200" y="302" text-anchor="middle" fill="#66bb6a" font-family="Space Mono,monospace" font-size="9" font-weight="bold">CHARTER ACT 1853</text>
+    <text x="200" y="318" text-anchor="middle" fill="#8db" font-family="Space Mono,monospace" font-size="8">EIC charter extended indefinitely · ICS open to ALL British subjects · Legislative &amp; Executive separated</text>
+
+    <!-- 1858 -->
+    <circle cx="430" cy="360" r="18" fill="#4a148c" stroke="#9c27b0" stroke-width="2.5"/>
+    <text x="430" y="365" text-anchor="middle" fill="#fff" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1858</text>
+    <rect x="462" y="344" width="390" height="46" rx="8" fill="#110020" stroke="#9c27b0" stroke-width="2"/>
+    <text x="657" y="362" text-anchor="middle" fill="#ce93d8" font-family="Space Mono,monospace" font-size="10" font-weight="bold">⭐ GOVT OF INDIA ACT 1858</text>
+    <text x="657" y="378" text-anchor="middle" fill="#c8b" font-family="Space Mono,monospace" font-size="8">EIC ABOLISHED · Crown Rule begins · Secretary of State for India · GG becomes Viceroy · Lord Canning = 1st Viceroy</text>
+
+    <!-- 1909 -->
+    <circle cx="430" cy="420" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="425" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1909</text>
+    <rect x="8" y="404" width="390" height="46" rx="8" fill="#041a17" stroke="#ef5350" stroke-width="1.2"/>
+    <text x="200" y="422" text-anchor="middle" fill="#ef5350" font-family="Space Mono,monospace" font-size="9" font-weight="bold">MORLEY-MINTO REFORMS 1909</text>
+    <text x="200" y="438" text-anchor="middle" fill="#d88" font-family="Space Mono,monospace" font-size="8">Separate electorate for Muslims (COMMUNAL REPRESENTATION begins) · Indians in councils · Imperial Leg. Council expanded</text>
+
+    <!-- 1919 -->
+    <circle cx="430" cy="478" r="14" fill="#006064" stroke="#4db6ac" stroke-width="2"/>
+    <text x="430" y="483" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="8" font-weight="bold">1919</text>
+    <rect x="462" y="462" width="390" height="46" rx="8" fill="#041a17" stroke="#4db6ac" stroke-width="1.2"/>
+    <text x="657" y="480" text-anchor="middle" fill="#4db6ac" font-family="Space Mono,monospace" font-size="9" font-weight="bold">MONTAGU-CHELMSFORD REFORMS 1919</text>
+    <text x="657" y="496" text-anchor="middle" fill="#8dd" font-family="Space Mono,monospace" font-size="8">Dyarchy in provinces · Bicameral legislature at centre · Communal electorates extended · Rowlatt Act 1919 (repressive)</text>
+  </svg>
+</div>
+
+<!-- GOI 1935 -->
+<div class="highlight-box hb-gold" style="margin-top:20px">
+  <h3>⭐ Government of India Act 1935 — Most Important Pre-Independence Act</h3>
+  <div class="two-col">
+    <ul class="bullet-list bl-star">
+      <li>Provincial Autonomy introduced — provinces got full responsible govt</li>
+      <li>All-India Federation proposed (never implemented due to Princely States)</li>
+      <li>Dyarchy abolished in provinces; introduced at Centre</li>
+      <li>Bicameral legislatures in 6 provinces</li>
+      <li>Federal Court established (1937)</li>
+      <li>Reserve Bank of India established under this act</li>
+    </ul>
+    <ul class="bullet-list bl-star">
+      <li>Separate electorates extended to more communities</li>
+      <li>Burma separated from India</li>
+      <li>Election of 1937: Congress won majority in 8 of 11 provinces</li>
+      <li>This act became basis of Indian Constitution (significant parts adopted)</li>
+      <li><span class="badge badge-crimson">REJECTED</span> by Congress — "machine with strong brakes but no engine"</li>
+      <li>Foundation on which independent India's Constitution was built</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- REVOLUTIONARY MOVEMENTS — EXPANDED SECTION                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="chapter theme-crimson" style="margin-top:30px">
+  <div class="chapter-label">⚡ Revolutionary Nationalists<span class="new-badge">EXPANDED</span></div>
+  <h2>⚡ The Revolutionaries — Bhagat Singh & Others</h2>
+  <div class="chapter-divider"></div>
+</div>
+
+<div class="quote-block">
+  "They may kill me, but they cannot kill my ideas. They can crush my body, but they will not be able to crush my spirit."
+  <cite>— Bhagat Singh (1907–1931) — executed March 23, 1931</cite>
+</div>
+
+<div class="two-col">
+  <div class="person-mini" style="border-top-color:var(--crimson2);padding:20px">
+    <div style="font-size:2.4rem;margin-bottom:8px">⚡</div>
+    <h4 style="color:var(--crimson2);font-size:1.15rem">Bhagat Singh (1907–1931)</h4>
+    <div class="yr">HSRA · "Inquilab Zindabad!"</div>
+    <ul class="bullet-list bl-fire">
+      <li>Co-founded <strong>Hindustan Socialist Republican Association (HSRA)</strong> with Chandrashekhar Azad, Sukhdev (1928)</li>
+      <li>Killed British officer Saunders (1928) — revenge for Lala Lajpat Rai's death</li>
+      <li>1929: Threw smoke bombs in Central Legislative Assembly — "to make the deaf hear" — courted arrest deliberately</li>
+      <li>Hunger strike in prison (64 days) demanding political prisoner rights</li>
+      <li>Read Marx, Lenin in jail — developed socialist ideology</li>
+      <li>Executed March 23, 1931 — remains most popular freedom fighter in Punjab, HP</li>
+    </ul>
+  </div>
+  <div>
+    <div class="cards">
+      <div class="card highlight-crimson">
+        <span class="card-icon">🗡️</span>
+        <h3>Chandrashekhar Azad (1906–1931)</h3>
+        <ul>
+          <li>"Azad" — vowed never to be captured alive</li>
+          <li>Led HSRA after Bhagat Singh's arrest</li>
+          <li>Alfred Park, Allahabad — February 27, 1931: surrounded by police, shot himself — true to his name "Azad" (free)</li>
+        </ul>
+      </div>
+      <div class="card highlight-gold">
+        <span class="card-icon">💣</span>
+        <h3>Kakori Conspiracy (1925)</h3>
+        <ul>
+          <li>Ram Prasad Bismil, Ashfaqullah Khan led</li>
+          <li>Looted British treasury train at Kakori</li>
+          <li>Bismil & Ashfaqullah executed (1927)</li>
+          <li>Memorable: Bismil's "Sarfaroshi ki tamanna ab hamare dil mein hai"</li>
+        </ul>
+      </div>
+      <div class="card highlight-saffron">
+        <span class="card-icon">🏴</span>
+        <h3>Chittagong Armoury Raid (1930)</h3>
+        <ul>
+          <li>Surya Sen ("Masterda") led 65 revolutionaries</li>
+          <li>Captured Chittagong armoury on April 18, 1930</li>
+          <li>Women: Kalpana Dutta, Pritilata Waddedar participated</li>
+          <li>Surya Sen executed 1934</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tag-cloud">
+  <span class="tag tag-c">HSRA (1928)</span>
+  <span class="tag tag-s">Anushilan Samiti</span>
+  <span class="tag tag-g">Yugantar Group</span>
+  <span class="tag tag-t">Abhinav Bharat (Savarkar)</span>
+  <span class="tag tag-p">Ghadar Party (USA/Canada)</span>
+  <span class="tag tag-gold">Berlin India Committee</span>
+  <span class="tag tag-c">Kakori Conspiracy 1925</span>
+  <span class="tag tag-s">Chittagong Raid 1930</span>
+</div>
+<div class="section-divider"></div>
+
+</div><!-- /container -->
+
+<footer>
+  <div><h2>AUTEAR - <b>Pɪʏᴜꜱʜ Pᴀʀᴛᴇ</b></h2></div>
+  <div style="margin-top:8px;opacity:0.5">Part A: Freedom Struggle &nbsp;•&nbsp; Part B: British Governance &nbsp;•&nbsp; Part C: Parallel Movements</div>
+  <div style="margin-top:8px;color:var(--saffron2)">NEW: Regional Powers · Mysore Wars · Economic Drain · Social Reform · NCM · CDM · Quit India · Constitutional Acts · Revolutionaries</div>
+  <div style="margin-top:8px">🇮🇳 SATYAMEVA JAYATE 🇮🇳</div>
+ <div style="margin-top:8px;color:var(--saffron2)"><h1>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h1></div>
+
+</footer>
+
+</body>
+</html>
