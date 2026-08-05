@@ -90,11 +90,11 @@ const archiveEntries = [
     icon: "🌹",
     image: "",
     featured: true
-   },
+  } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "04",
+    number: "05",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
