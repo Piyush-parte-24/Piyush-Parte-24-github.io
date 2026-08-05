@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>👑 Conservatism — The Ultra-Expanded Master Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* ============ ROOT & RESET ============ */
+  :root {
+    --bg-primary: #0c0a08;
+    --bg-secondary: #1a1410;
+    --bg-card: rgba(32, 24, 18, 0.7);
+    --bg-glass: rgba(45, 32, 22, 0.4);
+    --text-primary: #ede4d3;
+    --text-soft: #d4c5a9;
+    --text-muted: #a89882;
+    --accent-gold: #d4af37;
+    --accent-bronze: #cd7f32;
+    --accent-burgundy: #800020;
+    --accent-crimson: #960018;
+    --accent-emerald: #50c878;
+    --accent-royal: #4169e1;
+    --accent-amber: #fbbf24;
+    --accent-ivory: #f5deb3;
+    --authoritarian: #8b0000;
+    --traditional: #b8860b;
+    --paternalistic: #4682b4;
+    --liberal: #cd853f;
+    --neocon: #800020;
+    --border-glow: rgba(212, 175, 55, 0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* ============ ANIMATED BACKGROUND ============ */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(150, 0, 24, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 50% 80%, rgba(205, 127, 50, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 90%, rgba(128, 0, 32, 0.10) 0%, transparent 40%);
+    z-index: -2;
+    animation: bgShift 25s ease-in-out infinite alternate;
+  }
+
+  @keyframes bgShift {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.15) rotate(2deg); }
+  }
+
+  /* Floating gold particles like candlelight */
+  .particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(60px); opacity: 0; }
+  }
+
+  /* Subtle parchment texture overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(212, 175, 55, 0.008) 2px,
+        rgba(212, 175, 55, 0.008) 4px
+      );
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* ============ CONTAINER ============ */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    position: relative;
+  }
+
+  /* ============ HERO TITLE ============ */
+  .hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    position: relative;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    background:
+      radial-gradient(ellipse at top, rgba(212, 175, 55, 0.25), transparent 70%),
+      linear-gradient(135deg, rgba(26, 20, 16, 0.7), rgba(45, 25, 20, 0.5));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.7),
+                inset 0 0 80px rgba(212, 175, 55, 0.05);
+  }
+
+  /* Ornamental corners */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg,
+      transparent, rgba(212,175,55,0.15), transparent,
+      rgba(150,0,24,0.12), transparent,
+      rgba(205,127,50,0.13), transparent);
+    animation: rotate 28s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes rotate {
+    100% { transform: rotate(360deg); }
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  /* Ornamental flourishes */
+  .hero-ornament {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    opacity: 0.7;
+    margin: 10px 0;
+  }
+
+  .hero-emoji {
+    font-size: 4.8rem;
+    display: inline-block;
+    animation: crown-glow 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.7));
+  }
+
+  @keyframes crown-glow {
+    0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.7)); }
+    50% { transform: translateY(-10px) scale(1.05); filter: drop-shadow(0 0 40px rgba(212, 175, 55, 1)); }
+  }
+
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 900;
+    margin: 20px 0;
+    background: linear-gradient(135deg,
+      #d4af37 0%, #f5deb3 15%, #cd7f32 30%, #d4af37 45%,
+      #960018 60%, #d4af37 75%, #f5deb3 90%, #d4af37 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 10s ease infinite;
+    letter-spacing: 4px;
+    text-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+    cursor: default;
+    transition: all 0.5s ease;
+    display: inline-block;
+  }
+
+  .hero h1:hover {
+    transform: scale(1.06);
+    letter-spacing: 7px;
+    filter: brightness(1.3) drop-shadow(0 0 30px rgba(212, 175, 55, 0.6));
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--accent-ivory);
+    margin-top: 15px;
+    letter-spacing: 2px;
+  }
+
+  .hero-tagline {
+    margin-top: 28px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .hero-tagline span {
+    padding: 7px 18px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 0;
+    background: rgba(212, 175, 55, 0.06);
+    transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .hero-tagline span:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    border-color: var(--accent-gold);
+  }
+
+  /* ============ TOC ============ */
+  .toc {
+    background: var(--bg-glass);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    position: relative;
+  }
+
+  .toc::before, .toc::after {
+    content: '❦';
+    position: absolute;
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    opacity: 0.5;
+  }
+  .toc::before { top: 10px; left: 20px; }
+  .toc::after { top: 10px; right: 20px; }
+
+  .toc h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .toc-grid a {
+    color: var(--text-soft);
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .toc-grid a:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-left-color: var(--accent-gold);
+    transform: translateX(8px);
+    color: var(--accent-ivory);
+  }
+
+  /* ============ SECTION ============ */
+  section {
+    margin-bottom: 60px;
+    padding: 45px;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: linear-gradient(180deg, var(--accent-gold), var(--accent-burgundy));
+    opacity: 0.8;
+  }
+
+  section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+
+  h2.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    background: linear-gradient(90deg, #d4af37, #cd7f32, #960018, #d4af37);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    animation: titleShimmer 6s linear infinite;
+  }
+
+  @keyframes titleShimmer {
+    to { background-position: 200% center; }
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--accent-amber);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 30px 0 15px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent-gold);
+    letter-spacing: 1px;
+  }
+
+  h4 {
+    color: var(--accent-ivory);
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    color: var(--text-soft);
+    margin-bottom: 14px;
+    font-size: 1.02rem;
+    line-height: 1.85;
+  }
+
+  strong {
+    color: var(--accent-ivory);
+    font-weight: 600;
+  }
+
+  em {
+    color: var(--accent-gold);
+    font-style: italic;
+  }
+
+  ul, ol {
+    margin: 15px 0 15px 20px;
+    color: var(--text-soft);
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    padding-left: 8px;
+    transition: all 0.2s ease;
+  }
+
+  ul li::marker { color: var(--accent-gold); }
+  ol li::marker { color: var(--accent-burgundy); font-weight: bold; }
+
+  li:hover {
+    color: var(--accent-ivory);
+    transform: translateX(4px);
+  }
+
+  /* ============ CARDS ============ */
+  .card {
+    background: linear-gradient(135deg, rgba(45, 32, 22, 0.6), rgba(26, 20, 16, 0.4));
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 20px 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.12), transparent);
+    transition: left 0.7s ease;
+  }
+
+  .card:hover::before { left: 100%; }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: var(--accent-gold);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+  }
+
+  .card h4 { margin-top: 0; }
+
+  .card-burgundy { border-color: rgba(128, 0, 32, 0.4); }
+  .card-burgundy:hover { box-shadow: 0 15px 40px rgba(128, 0, 32, 0.3); border-color: var(--accent-burgundy); }
+
+  .card-gold { border-color: rgba(212, 175, 55, 0.35); }
+  .card-gold:hover { box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); border-color: var(--accent-gold); }
+
+  .card-bronze { border-color: rgba(205, 127, 50, 0.35); }
+  .card-bronze:hover { box-shadow: 0 15px 40px rgba(205, 127, 50, 0.3); border-color: var(--accent-bronze); }
+
+  /* ============ QUOTE ============ */
+  .quote {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(128, 0, 32, 0.08));
+    border-left: 5px solid var(--accent-gold);
+    padding: 22px 28px;
+    margin: 22px 0;
+    border-radius: 0 12px 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--accent-ivory);
+    position: relative;
+    transition: all 0.3s ease;
+    line-height: 1.7;
+  }
+
+  .quote:hover {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(128, 0, 32, 0.15));
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+
+  .quote::before {
+    content: '"';
+    position: absolute;
+    top: -15px; left: 12px;
+    font-size: 5rem;
+    color: var(--accent-gold);
+    opacity: 0.4;
+    font-family: 'Cinzel', serif;
+    line-height: 1;
+  }
+
+  .quote-author {
+    display: block;
+    margin-top: 12px;
+    text-align: right;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  /* ============ TABLE ============ */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(20, 14, 10, 0.7);
+    font-size: 0.95rem;
+  }
+
+  thead {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(128, 0, 32, 0.2));
+  }
+
+  th {
+    padding: 15px 18px;
+    text-align: left;
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  td {
+    padding: 14px 18px;
+    color: var(--text-soft);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    transition: background 0.2s ease;
+  }
+
+  tbody tr:hover td {
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--accent-ivory);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* ============ PILLAR GRID ============ */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+  }
+
+  .pillar {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(128, 0, 32, 0.05));
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .pillar:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(128, 0, 32, 0.1));
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    border-color: var(--accent-gold);
+  }
+
+  .pillar-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.5));
+  }
+
+  .pillar-title {
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.5px;
+  }
+
+  .pillar-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* ============ FLOW DIAGRAM ============ */
+  .flow {
+    background: rgba(15, 11, 8, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 35px;
+    margin: 25px 0;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    overflow-x: auto;
+  }
+
+  .flow-node {
+    display: inline-block;
+    padding: 14px 24px;
+    margin: 8px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(128, 0, 32, 0.2));
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 12px;
+    color: var(--accent-ivory);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: default;
+    font-size: 0.95rem;
+  }
+
+  .flow-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(128, 0, 32, 0.35));
+  }
+
+  .flow-arrow {
+    color: var(--accent-gold);
+    font-size: 1.6rem;
+    margin: 5px;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .flow-branch {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 18px 0;
+  }
+
+  /* ============ THINKER BOX ============ */
+  .thinker {
+    background: linear-gradient(135deg, rgba(128, 0, 32, 0.1), rgba(212, 175, 55, 0.08));
+    border-left: 4px solid var(--accent-burgundy);
+    border-radius: 0 14px 14px 0;
+    padding: 22px 26px;
+    margin: 18px 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .thinker::before {
+    content: '⚜';
+    position: absolute;
+    top: 18px; right: 22px;
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    opacity: 0.4;
+  }
+
+  .thinker:hover {
+    background: linear-gradient(135deg, rgba(128, 0, 32, 0.18), rgba(212, 175, 55, 0.15));
+    border-left-width: 8px;
+    padding-left: 30px;
+    transform: translateX(3px);
+  }
+
+  .thinker-name {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.5px;
+  }
+
+  .thinker-dates {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-left: 8px;
+  }
+
+  .thinker-title {
+    color: var(--accent-bronze);
+    font-style: italic;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+  }
+
+  /* ============ KEY HIGHLIGHT ============ */
+  .key {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(128, 0, 32, 0.1));
+    border: 1px dashed rgba(212, 175, 55, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 18px 0;
+    transition: all 0.3s ease;
+  }
+
+  .key:hover {
+    border-style: solid;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(128, 0, 32, 0.18));
+  }
+
+  /* ============ TAGS ============ */
+  .tag {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 5px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 20px;
+    color: var(--accent-ivory);
+    font-size: 0.92rem;
+    transition: all 0.3s ease;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  .tag:hover {
+    background: rgba(212, 175, 55, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  }
+
+  /* ============ TYPES OF CONSERVATISM BOXES ============ */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+  }
+
+  .type-card {
+    padding: 28px;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(30, 22, 16, 0.7), rgba(20, 14, 10, 0.5));
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .type-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--accent-gold);
+    transition: height 0.4s ease;
+  }
+
+  .type-card:hover::before {
+    height: 100%;
+    opacity: 0.1;
+  }
+
+  .type-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  .type-card.type-auth::before { background: linear-gradient(180deg, #8b0000, #4a0000); }
+  .type-card.type-trad::before { background: linear-gradient(180deg, #b8860b, #d4af37); }
+  .type-card.type-pat::before { background: linear-gradient(180deg, #4682b4, #5f9ea0); }
+  .type-card.type-lib::before { background: linear-gradient(180deg, #cd853f, #cd7f32); }
+  .type-card.type-neo::before { background: linear-gradient(180deg, #800020, #960018); }
+
+  .type-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    opacity: 0.4;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .type-card h4 {
+    color: var(--accent-amber);
+    font-size: 1.35rem;
+    margin: 5px 0 15px;
+  }
+
+  /* ============ CLOSING ============ */
+  .closing {
+    text-align: center;
+    padding: 70px 35px;
+    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.2), transparent 70%);
+    border-radius: 24px;
+    margin-top: 60px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+  }
+
+  .closing::before, .closing::after {
+    content: '⚜';
+    position: absolute;
+    color: var(--accent-gold);
+    font-size: 2rem;
+    opacity: 0.4;
+  }
+  .closing::before { top: 20px; left: 30px; }
+  .closing::after { top: 20px; right: 30px; }
+
+  .closing .final-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    color: var(--accent-gold);
+    margin: 30px 0;
+    line-height: 1.6;
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* ============ BACK TO TOP ============ */
+  .back-top {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 55px; height: 55px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-burgundy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+    transition: all 0.3s ease;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .back-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .back-top:hover {
+    transform: translateY(-5px) scale(1.15) rotate(360deg);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.7);
+  }
+
+  /* Ornamental divider */
+  .divider {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+    opacity: 0.6;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .container { padding: 20px 14px; }
+    section { padding: 28px 20px; }
+    .hero { padding: 55px 15px 45px; }
+    h3 { font-size: 1.35rem; }
+    h2.section-title { font-size: 1.7rem; letter-spacing: 1px; }
+    th, td { padding: 10px; font-size: 0.85rem; }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s forwards;
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="container">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero fade-in">
+    <div class="hero-ornament">🗺</div>
+    <span class="hero-emoji">🛡️</span>
+    <h1>CONSERVATISM</h1>
+    <div class="hero-subtitle">AUTEUR: PIYUSH PARTE</div>
+    <div class="hero-tagline">
+      <span>🕰️ Tradition</span>
+      <span>👤 Human Imperfection</span>
+      <span>🌳 Organic Society</span>
+      <span>⚖️ Hierarchy & Authority</span>
+    </div>
+  </header>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc fade-in">
+    <h2>📖 Table of Contents</h2>
+    <div class="toc-grid">
+      <a href="#s1">📖 1. Introduction</a>
+      <a href="#s2">📜 2. Origin of Conservatism</a>
+      <a href="#s3">🔑 3. Central Themes & Principles</a>
+      <a href="#s4">📚 4. Types of Conservatism</a>
+      <a href="#s5">🧠 5. Important Thinkers</a>
+      <a href="#s6">🆚 6. Conservatism vs Liberalism vs Socialism</a>
+      <a href="#s7">🌍 7. Conservatism in Practice</a>
+      <a href="#s8">🧨 8. Critiques & Debates</a>
+      <a href="#s9">✅ 9. Final Synthesis</a>
+    </div>
+  </nav>
+
+  <!-- ============ SECTION 1 ============ -->
+  <section id="s1">
+    <h2 class="section-title">📖 1. Introduction to Conservatism</h2>
+
+    <div class="card card-gold">
+      <h4>🔤 Term Origin</h4>
+      <p>The word <strong>"Conservatism"</strong> was first used by <strong>François-René de Chateaubriand</strong> in <strong>1818</strong> during the <em>Bourbon Restoration</em> in France. He launched a journal titled <em>Le Conservateur</em> — to intellectually counter the lingering momentum and radical changes brought by the <strong>French Revolution (1789)</strong>.</p>
+    </div>
+
+    <div class="card card-gold">
+      <h4>⚙️ Core Definition</h4>
+      <p>Conservatism is a <strong>political ideology</strong> that seeks to <em>conserve</em> established institutions, traditions, customs, and political systems. It is <strong>deeply skeptical</strong> of rapid, abstract, or untested changes — preferring slow, organic, prudent evolution to revolutionary upheaval.</p>
+    </div>
+
+    <div class="quote">
+      To be conservative is to prefer the familiar to the unknown, to prefer the tried to the untried, fact to mystery, the actual to the possible, the limited to the unbounded, the near to the distant, the sufficient to the superabundant, the convenient to the perfect, present laughter to utopian bliss.
+      <span class="quote-author">— Michael Oakeshott, <em>On Being Conservative</em> (1956)</span>
+    </div>
+
+    <h3>🧬 Foundational Coordinates</h3>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-icon">🌱</span>
+        <div class="pillar-title">Philosophical Root</div>
+        <div class="pillar-desc">Draws from the <em>Hobbesian view</em> — human nature is imperfect, fearful, security-seeking</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">↗️</span>
+        <div class="pillar-title">Political Spectrum</div>
+        <div class="pillar-desc">Historically associated with <em>right-wing</em> politics</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🛡️</span>
+        <div class="pillar-title">Stance</div>
+        <div class="pillar-desc">A philosophy of <em>preservation</em>, not stagnation; prudence, not paralysis</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">⚜️</span>
+        <div class="pillar-title">Disposition</div>
+        <div class="pillar-desc">Not a fixed creed but a <em>temperament</em> — caution, reverence, gratitude</div>
+      </div>
+    </div>
+
+    <h3>🏛️ The Three Core Beliefs</h3>
+    <ol>
+      <li>📜 <strong>Support for Tradition</strong> — the accumulated wisdom of generations is wiser than any single mind.</li>
+      <li>👤 <strong>Belief in Human Imperfection</strong> — humanity is flawed; utopian designs are dangerous.</li>
+      <li>🌳 <strong>Upholding the Organic Structure of Society</strong> — society is a living body, not a machine to be redesigned.</li>
+    </ol>
+
+    <div class="key">
+      💡 <strong>Key Insight:</strong> Conservatism is less a <em>doctrine</em> and more a <em>disposition</em> — a sensibility that respects the inherited, distrusts the speculative, and venerates the bonds of community across generations.
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section id="s2">
+    <h2 class="section-title">📜 2. Origin of Conservatism</h2>
+
+    <div class="card">
+      <h4>🌍 Historical Context</h4>
+      <p>Conservatism developed in <strong>19th century Europe</strong> as a <strong>direct reaction</strong> to two great modern ideologies: <em>Liberalism</em> (which championed individual rights and rationalism) and <em>Socialism</em> (which sought to overturn social hierarchy). It was a defensive philosophy — the voice of <em>throne, altar, and ancestral hearth</em>.</p>
+    </div>
+
+    <h3>⚔️ The Core Challenge — Rejecting the Revolutionary Trinity</h3>
+    <p>Conservatives rejected the French Revolution's celebrated trinity:</p>
+    <div style="margin: 20px 0; text-align: center;">
+      <span class="tag" style="background: rgba(150, 0, 24, 0.2); border-color: var(--accent-burgundy);">❌ Liberty (as abstract right)</span>
+      <span class="tag" style="background: rgba(150, 0, 24, 0.2); border-color: var(--accent-burgundy);">❌ Equality (as flattened sameness)</span>
+      <span class="tag" style="background: rgba(150, 0, 24, 0.2); border-color: var(--accent-burgundy);">❌ Fraternity (as forced universalism)</span>
+    </div>
+    <p>In its place, they defended an <strong>authoritative, traditional, and hierarchical socio-political order</strong> — what Joseph de Maistre summarized as <em>"Throne and Altar."</em></p>
+
+    <h3>👤 Edmund Burke — The Father of Modern Conservatism</h3>
+    <div class="card card-burgundy">
+      <p><strong>Edmund Burke (1729–1797)</strong>, the Irish-born British statesman and philosopher, provided the <strong>foundational modern conservative perspective</strong> in his masterwork <em>Reflections on the Revolution in France</em> (1790).</p>
+      <p>🔄 <strong>Burke's central insight:</strong> Conservatism is <em>NOT</em> blind resistance to change. Rather, it is a <strong>prudent willingness to "change in order to conserve."</strong> Just as a living organism must adapt to survive, so must institutions — but adaptation must respect the wisdom of inheritance, not the arrogance of abstraction.</p>
+      <div class="quote">
+        ‎  <b>"A state without the means of some change is without the means of its conservation."</b><br>[ For a government or society to survive, it must be flexible enough to make necessary reforms. If a state refuses to adapt or changes with the times, it will eventually collapse or be destroyed by revolution,  failing to "conserve" (preserve) itself ]<br>In short: adapt to survive
+        <span class="quote-author">— Edmund Burke, <em>Reflections on the Revolution in France</em> (1790)</span>
+      </div>
+    </div>
+
+    <h3>🌊 The Three Conservative Reactions</h3>
+    <div class="flow">
+      <div class="flow-node">🇫🇷 FRENCH REVOLUTION (1789)<br><small>Trigger event — overthrow of throne, altar, aristocracy</small></div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-branch">
+        <div class="flow-node" style="background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(139, 0, 0, 0.15));">🇫🇷 FRENCH (CONTINENTAL)<br><small>de Maistre, Bonald — reactionary, restore monarchy</small></div>
+        <div class="flow-node" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.15));">🇬🇧 ANGLO-AMERICAN<br><small>Burke — pragmatic, evolutionary</small></div>
+        <div class="flow-node" style="background: linear-gradient(135deg, rgba(128, 0, 32, 0.3), rgba(128, 0, 32, 0.15));">🇩🇪 GERMAN ROMANTIC<br><small>Müller, Savigny — Volksgeist, historical school</small></div>
+      </div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🌍 MODERN CONSERVATISM<br><small>Despite not being progressive, became a major global political trend</small></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section id="s3">
+    <h2 class="section-title">🔑 3. Central Themes & Core Principles</h2>
+
+    <!-- 1. Tradition -->
+    <h3>1️⃣ 🕰️ Tradition — The Backbone of Conservatism</h3>
+    <div class="card card-gold">
+      <ul>
+        <li>🧵 <strong>Central Theme:</strong> The <em>defense of tradition</em> is the very backbone of conservative thought.</li>
+        <li>🙏 <strong>Religious Faith:</strong> The emphasis on tradition often reflects a belief in a divine creator. Traditional customs are seen as <em>"God-given"</em> — sacred inheritances, not human inventions.</li>
+        <li>🧠 <strong>Accumulated Wisdom:</strong> Traditions represent the <strong>tested wisdom of past generations</strong>. Institutions that have survived for centuries did so because <em>they work</em> — there is a Darwinian logic to inheritance.</li>
+        <li>⏳ <strong>Tested by Time:</strong> What has been preserved across generations is fit to be preserved for the living and the unborn.</li>
+        <li>🆔 <strong>Identity & Belonging:</strong> Tradition provides individuals with <em>identity, rootedness, and a sense of place</em> — protection against the modern disease of <em>alienation</em>.</li>
+      </ul>
+    </div>
+
+    <div class="quote">
+      Society is indeed a contract... but the state ought not to be considered as nothing better than a partnership agreement in a trade of pepper and coffee... It is a partnership in all science; a partnership in all art; a partnership in every virtue, and in all perfection. As the ends of such a partnership cannot be obtained in many generations, it becomes a partnership not only between those who are living, but between those who are living, those who are dead, and those who are to be born.
+      <span class="quote-author">— Edmund Burke (Burke's Partnership Metaphor)</span>
+    </div>
+
+    <div class="key">
+      🌳 <strong>The Burkean Trust:</strong> We are not absolute owners of society — we are <em>trustees</em>. We inherit it from the dead, hold it for the living, and bequeath it to the unborn. To rashly redesign it is to break faith with the dead and rob the unborn.
+    </div>
+
+    <!-- 2. Human Imperfection -->
+    <h3>2️⃣ 👤 Human Imperfection — The Hobbesian Foundation</h3>
+    <div class="card card-burgundy">
+      <ul>
+        <li>📚 <strong>O'Sullivan's Famous Phrase:</strong> Noel O'Sullivan called conservatism the <em>"philosophy of human imperfection."</em></li>
+        <li>📖 <strong>Hobbesian Foundation:</strong> Human nature is <em>flawed, fearful, rational-but-limited</em>. We are not angels; we are creatures of passion, self-interest, and shortsightedness.</li>
+        <li>🧐 <strong>Mistrust of Abstract Rationality:</strong> Conservatives place little trust in <em>abstract reason</em> to design perfect societies. The Enlightenment's faith in pure logic to engineer utopia is, to them, dangerous arrogance.</li>
+        <li>🏗️ <strong>Consequence:</strong> Because humans are imperfect, we must rely on <strong>time-tested institutions, customs, and authority</strong> — not on rational blueprints for reform or revolution.</li>
+        <li>⛪ <strong>Theological Echo:</strong> This connects to the Christian doctrine of <em>original sin</em> — humanity is fallen, and any politics that ignores this is doomed to disappointment or tyranny.</li>
+      </ul>
+    </div>
+
+    <div class="quote">
+      What is the use of discussing a man's abstract right to food or to medicine? The question is upon the method of procuring and administering them. In that deliberation I shall always advise to call in the aid of the farmer and the physician, rather than the professor of metaphysics.
+      <span class="quote-author">— Edmund Burke</span>
+    </div>
+
+    <!-- 3. Organic Society -->
+    <h3>3️⃣ 🌳 Organic Society — Doing One's Duty</h3>
+    <div class="card card-bronze">
+      <ul>
+        <li>🤝 <strong>Security-Seeking Beings:</strong> Humans are <em>dependent creatures</em> who cannot exist meaningfully outside society. We are born into webs of relationship, not contracted into them.</li>
+        <li>👨‍👩‍👧‍👦 <strong>Anti-Individualism:</strong> Liberal individualism is, for conservatives, a <em>myth</em>. A person is shaped by — and inseparable from — the social groups that formed them: family, friends, colleagues, community, church, nation.</li>
+        <li>⚖️ <strong>Rights vs. Duties:</strong> A society where people know only their <em>rights</em> (but not their <em>duties</em>) is rootless, atomistic, and ultimately self-destructive.</li>
+        <li>🔗 <strong>The True Glue of Society:</strong> Duty, obligation, loyalty, gratitude — <em>not</em> contracts or rights — hold society together and make true liberty possible.</li>
+        <li>🌿 <strong>The Organic Metaphor:</strong> Society is like a <em>living tree</em>, not a Lego set. You cannot disassemble it and rebuild it without killing it. Its institutions evolved together over centuries; tearing one out wounds the whole.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Hierarchy and Authority -->
+    <h3>4️⃣ ⚖️ Hierarchy & Authority — The Natural Order</h3>
+    <div class="card card-burgundy">
+      <ul>
+        <li>📊 <strong>Natural Hierarchy:</strong> Society is <em>naturally</em> unequal and hierarchical. For conservatives, social equality is both <strong>undesirable</strong> (it flattens excellence) <strong>and unachievable</strong> (it contradicts human nature).</li>
+        <li>🏔️ <strong>Unequal Distribution:</strong> Power, status, talent, and property are — and will always be — <em>unevenly distributed</em>. The wise society channels inequality into responsibility, not resentment.</li>
+        <li>🔗 <strong>Burke on Liberty & Order:</strong>
+          <div class="quote">
+            The only liberty I mean is a liberty connected with order; that not only exists along with order and virtue, but which cannot exist at all without them.
+            <span class="quote-author">— Edmund Burke</span>
+          </div>
+        </li>
+        <li>👑 <strong>Authority Develops Organically:</strong> Legitimate authority is not created by social contracts (as liberals say) — it <em>grows naturally</em> over generations, like the patina on old bronze. Conservatism supports strong, <em>paternalistic</em> authority.</li>
+        <li>👪 <strong>Paternalism Defined:</strong> Exercising power over others with the <em>intention of conferring benefit or preventing harm</em> — like a wise father over his children, or a shepherd over his flock. <em>Noblesse oblige</em>: nobility imposes obligation.</li>
+      </ul>
+    </div>
+
+    <div class="key">
+      ⚜️ <strong>Aristocratic Insight:</strong> "With great power comes great responsibility" is not a Marvel slogan — it is the conservative creed. Hierarchy is justified <em>only</em> when those at the top bear genuine duties toward those below.
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 ============ -->
+  <section id="s4">
+    <h2 class="section-title">📚 4. Types of Conservatism</h2>
+
+    <p>Conservatism is not monolithic. It splits into distinct streams, each responding to different historical moments and threats.</p>
+
+    <div class="type-grid">
+      <!-- 1. Authoritarian -->
+      <div class="type-card type-auth">
+        <div class="type-num">01</div>
+        <h4>👑 Authoritarian Conservatism</h4>
+        <ul>
+          <li>📏 <strong>Definition:</strong> Practice of government <em>"from above"</em> — authority exercised over the population <em>with or without consent</em>.</li>
+          <li>🎯 <strong>Goal:</strong> Restore absolute power to <strong>hereditary monarchy</strong> and traditional clerical authority.</li>
+          <li>🇷🇺 <strong>Classic Example:</strong> <strong>Tsar Nicholas I of Russia</strong> propagated the doctrine of <em>"Orthodoxy, Autocracy, Nationality"</em> as a direct counter to the revolutionary <em>"Liberty, Equality, Fraternity."</em></li>
+          <li>👤 <strong>Key Thinkers:</strong> <em>Joseph de Maistre, António de Oliveira Salazar</em> (Portugal), <em>Engelbert Dollfuss</em> (Austria).</li>
+          <li>⚠️ <strong>Modern Critique:</strong> Often shades into reactionary politics; can be the precursor to fascism if hierarchy is racialized.</li>
+        </ul>
+      </div>
+
+      <!-- 2. Traditional -->
+      <div class="type-card type-trad">
+        <div class="type-num">02</div>
+        <h4>🏛️ Traditional (Classical) Conservatism</h4>
+        <ul>
+          <li>📖 <strong>Definition:</strong> Emphasizes <em>transcendent moral principles</em>, customs, conventions, and lived traditions.</li>
+          <li>🌍 <strong>Focus:</strong> Defends <strong>classical Western civilization</strong> — its philosophy, religion, art, and political wisdom.</li>
+          <li>📏 <strong>Values:</strong> Committed to <em>hierarchical and paternalistic</em> values; respect for inherited institutions.</li>
+          <li>👤 <strong>Key Proponent:</strong> <strong>Michael Oakeshott</strong> — perhaps the most important 20th-century conservative philosopher.</li>
+          <li>✨ <strong>Mood:</strong> Less about politics, more about a <em>disposition</em> — gratitude, reverence, a love of the familiar.</li>
+        </ul>
+      </div>
+
+      <!-- 3. Paternalistic -->
+      <div class="type-card type-pat">
+        <div class="type-num">03</div>
+        <h4>👨‍👧‍👦 Paternalistic Conservatism</h4>
+        <ul>
+          <li>👨‍👦 <strong>Meaning:</strong> From <em>"Pater"</em> (Latin for father) — to act in a <strong>fatherly fashion</strong> toward society.</li>
+          <li>⚙️ <strong>Political Principle:</strong> Exercising power/authority over others to <em>confer benefit</em> or <em>prevent harm</em>.</li>
+          <li>🇬🇧 <strong>British Examples:</strong> "One-Nation" conservatism of <em>Benjamin Disraeli</em>; social welfare policies; laws like compulsory seatbelt wearing, anti-smoking laws.</li>
+          <li>🔄 <strong>Note:</strong> This type accepts a <em>qualified form of social democracy</em> (post-1945) — the state can intervene to maintain social cohesion.</li>
+          <li>🎩 <strong>Famous Doctrine:</strong> Disraeli's <em>"One Nation"</em> — the rich have a duty to the poor; otherwise society fractures into "Two Nations."</li>
+        </ul>
+      </div>
+
+      <!-- 4. Liberal Conservatism / New Right -->
+      <div class="type-card type-lib">
+        <div class="type-num">04</div>
+        <h4>💼 Liberal Conservatism & The New Right</h4>
+        <ul>
+          <li>💡 <strong>Core Belief:</strong> <em>Economic individualism</em> — "get government off the back of business."</li>
+          <li>⚠️ <strong>Cautious on Social Life:</strong> Less willing to extend liberty into <em>social/moral</em> affairs (pessimistic view of human nature persists).</li>
+          <li>💪 <strong>Strong State Required:</strong> To maintain <em>public order</em> and ensure <em>authority is respected</em>. "Free economy, strong state."</li>
+          <li>📈 <strong>Free Markets:</strong> Attracted to free-market theory because it promises social order through self-regulation and reward for virtue.</li>
+          <li>🤝 <strong>The New Right — A Marriage of Two Traditions:</strong>
+            <ol>
+              <li><strong>Classical Liberal Economics</strong> (Adam Smith's free market) → critique of "big government"</li>
+              <li><strong>Traditional Conservatism</strong> → defense of order, authority, discipline, family values</li>
+            </ol>
+          </li>
+          <li>🇬🇧🇺🇸 <strong>Living Examples:</strong> <em>Thatcherism</em> (UK) and <em>Reaganism</em> (USA) — the dominant force from 1979 onward.</li>
+        </ul>
+      </div>
+
+      <!-- 5. Neo-Conservatism -->
+      <div class="type-card type-neo">
+        <div class="type-num">05</div>
+        <h4>🇺🇸 Neo-Conservatism</h4>
+        <ul>
+          <li>📅 <strong>Origin:</strong> Emerged in the <strong>1970s in the USA</strong> — many founders were ex-liberals or ex-Trotskyists "mugged by reality."</li>
+          <li>🧬 <strong>Definition:</strong> A fusion of <em>political individualism</em> + <em>traditional conservatism</em>.</li>
+          <li>📉 <strong>Crisis Diagnosis:</strong> The current crisis of society stems from the <strong>declining influence of culture, religion, and morality</strong> — not economics.</li>
+          <li>☭ <strong>Historical Context:</strong> Originated as a counter to <em>Communism, Stalinism, and 1960s counterculture</em>.</li>
+          <li>🌍 <strong>Foreign Policy:</strong> Activist, often interventionist — promoting democracy and Western values abroad (e.g., Iraq War 2003).</li>
+          <li>👤 <strong>Key Neo-Conservatives:</strong> <em>Irving Kristol</em> (the "Godfather"), <em>Francis Fukuyama</em>, <em>Nathan Glazer</em>, <em>Norman Podhoretz</em>, <em>Leo Strauss</em> (intellectual godfather).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider">⚜ ⚜ ⚜</div>
+
+    <h3>🆚 Quick Comparison Table</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Era</th><th>Key Focus</th><th>State Role</th><th>Icon</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Authoritarian</td><td>19th C</td><td>Restore monarchy</td><td>Absolute</td><td>de Maistre</td></tr>
+          <tr><td>Traditional</td><td>19th–20th C</td><td>Defend Western civ</td><td>Moderate</td><td>Oakeshott</td></tr>
+          <tr><td>Paternalistic</td><td>19th C onward</td><td>Social cohesion</td><td>Interventionist</td><td>Disraeli</td></tr>
+          <tr><td>New Right</td><td>1970s–present</td><td>Free market + strong state</td><td>Strong but limited</td><td>Thatcher/Reagan</td></tr>
+          <tr><td>Neo-Conservative</td><td>1970s–present</td><td>Culture + foreign policy</td><td>Active globally</td><td>Kristol</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 ============ -->
+  <section id="s5">
+    <h2 class="section-title">🧠 5. Important Thinkers — A Deep Dive</h2>
+
+    <!-- 1. de Maistre -->
+    <div class="thinker">
+      <div class="thinker-name">⚔️ Joseph de Maistre <span class="thinker-dates">(1753–1821)</span></div>
+      <div class="thinker-title">The Prophet of Throne and Altar — Extreme / Latin Conservatism</div>
+      <ul>
+        <li>📍 <strong>Type:</strong> Extreme reactionary; <em>"Latin Conservatism"</em> — Catholic, monarchist, anti-Enlightenment.</li>
+        <li>🎯 <strong>Goal:</strong> Restore <em>monarchy</em> and the authority of the <em>Church over the state</em>.</li>
+        <li>📢 <strong>Famous Slogan:</strong> Opposed <em>"Liberty, Equality, Fraternity"</em> → proclaimed <strong>"Throne and Altar"</strong> (Le Trône et l'Autel).</li>
+        <li>🔥 <strong>Key Idea:</strong> The executioner is the <em>foundation</em> of society; political authority rests on the willingness to punish. Famously dark vision of human nature.</li>
+        <li>📖 <strong>Famous Works:</strong> <em>Considerations on France</em> (1796), <em>St. Petersburg Dialogues</em> (1821).</li>
+        <li>💭 <strong>Legacy:</strong> Inspired later authoritarian thinkers across Europe; Isaiah Berlin called him a precursor of 20th-century fascism, though that label is debated.</li>
+      </ul>
+    </div>
+
+    <!-- 2. Burke -->
+    <div class="thinker">
+      <div class="thinker-name">🏛️ Edmund Burke <span class="thinker-dates">(1729–1797)</span></div>
+      <div class="thinker-title">Father of Anglo-American Conservatism & Modern Conservatism</div>
+      <ul>
+        <li>🏆 <strong>Titles:</strong> Father of <em>Anglo-American</em> Conservatism; founder of <em>Modern</em> Conservatism.</li>
+        <li>🇮🇪 <strong>Background:</strong> Irish-born British MP; surprisingly supported the American Revolution (which he saw as defending ancient English liberties) but vehemently opposed the French Revolution (which he saw as destroying everything).</li>
+        <li>🔄 <strong>Key Idea:</strong> Pragmatic willingness to <em>"change in order to conserve."</em> Reform, yes — but with reverence, not arrogance.</li>
+        <li>❌ <strong>Opposed:</strong> The French revolutionary doctrine of <em>"universal rights of man"</em> — for Burke, wisdom resides in <strong>experience, tradition, and history</strong>, not abstract reason.</li>
+        <li>🌳 <strong>The "Little Platoons":</strong> Burke loved the small communities (family, neighborhood, guild) that bind individuals to society. "To love the little platoon we belong to in society is the first principle of public affections."</li>
+        <li>📚 <strong>Important Books:</strong>
+          <ul>
+            <li><em>A Vindication of Natural Society</em> (1756)</li>
+            <li><em>A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful</em> (1757)</li>
+            <li><em>Reflections on the Revolution in France</em> (1790) — <strong>the bible of modern conservatism</strong></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 3. Oakeshott -->
+    <div class="thinker">
+      <div class="thinker-name">📜 Michael Oakeshott <span class="thinker-dates">(1901–1990)</span></div>
+      <div class="thinker-title">The Philosopher of Disposition</div>
+      <ul>
+        <li>🇬🇧 <strong>Background:</strong> British philosopher; professor at the London School of Economics.</li>
+        <li>🚫 <strong>Rejected:</strong> <em>Rationalism in politics</em> — the dangerous belief that society can be redesigned by reason from scratch.</li>
+        <li>✅ <strong>Argued For:</strong> Traditional values, established customs, and a <em>conservative disposition</em> — a temperament, not a program.</li>
+        <li>📜 <strong>Famous Distinction:</strong>
+          <ul>
+            <li><strong>Civil Association</strong> (societas) — citizens bound by shared rules, free to pursue their own ends. ✅ Good.</li>
+            <li><strong>Enterprise Association</strong> (universitas) — society pursued as a single collective project. ❌ Dangerous.</li>
+          </ul>
+        </li>
+        <li>🍳 <strong>The "Cookbook" Critique:</strong> Rationalists treat politics like a cookbook — follow the recipe and you'll bake the perfect society. But politics is more like cuisine — taste, judgment, tradition, and feel matter more than rules.</li>
+        <li>📚 <strong>Important Books:</strong>
+          <ul>
+            <li><em>Rationalism in Politics and Other Essays</em> (1962)</li>
+            <li><em>On Human Conduct</em> (1975)</li>
+            <li><em>On History</em> (1983)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 4. Hayek -->
+    <div class="thinker">
+      <div class="thinker-name">💰 Friedrich von Hayek <span class="thinker-dates">(1899–1992)</span></div>
+      <div class="thinker-title">The Apostle of Spontaneous Order</div>
+      <ul>
+        <li>🇦🇹 <strong>Background:</strong> Austrian-British economist and philosopher; Nobel Prize 1974.</li>
+        <li>📌 <strong>Belief:</strong> Firm believer in <em>individualism</em> and the <em>market order</em>.</li>
+        <li>❌ <strong>Implacable Critic of:</strong> Socialism, central planning, and the welfare state in its expansive forms.</li>
+        <li>🏛️ <strong>"Hayekian Liberalism":</strong> A social system that supports and protects the <em>"Great Society"</em> — an open, abstract, market-based, rule-governed order.</li>
+        <li>⚠️ <strong>Important Note:</strong> Hayek actually rejected being called a "conservative" (see his essay <em>"Why I Am Not a Conservative"</em>) — but his ideas became foundational to the New Right and modern conservatism.</li>
+        <li>💬 <strong>Key Quote:</strong>
+          <div class="quote">
+            Since the development during the last decades has been generally in a socialist direction, it may seem that both conservatives and liberals have been mainly intent on retarding that movement.
+            <span class="quote-author">— F.A. Hayek</span>
+          </div>
+        </li>
+        <li>🌐 <strong>Concept of Spontaneous Order:</strong> Complex social institutions (language, market, common law) emerge from countless individual actions — not from any single designer's mind. Trying to "plan" them destroys them.</li>
+        <li>📚 <strong>Important Books:</strong>
+          <ul>
+            <li><em>The Road to Serfdom</em> (1944) — <strong>most famous</strong>; argued central planning leads to tyranny</li>
+            <li><em>The Constitution of Liberty</em> (1960)</li>
+            <li><em>Law, Legislation and Liberty</em> (3 vols, 1973–1979)</li>
+            <li><em>The Fatal Conceit: The Errors of Socialism</em> (1988)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 5. Kristol -->
+    <div class="thinker">
+      <div class="thinker-name">👑 Irving Kristol <span class="thinker-dates">(1920–2009)</span></div>
+      <div class="thinker-title">Godfather of Neo-Conservatism</div>
+      <ul>
+        <li>🇺🇸 <strong>Background:</strong> American journalist and intellectual; co-founded <em>The Public Interest</em> and <em>The National Interest</em>.</li>
+        <li>🔄 <strong>Journey:</strong> Started as a young Trotskyist → became a liberal → <em>abandoned liberalism in the 1970s</em>. Famously defined a neoconservative as <em>"a liberal who has been mugged by reality."</em></li>
+        <li>❌ <strong>Criticized:</strong> The spread of <em>welfarism</em>, the 1960s <em>counterculture</em>, moral relativism, and the decline of bourgeois virtues.</li>
+        <li>🏆 <strong>Title:</strong> <em>"Godfather of Neo-Conservatism"</em> — shaped a generation of American conservative thought.</li>
+        <li>💼 <strong>"Two Cheers for Capitalism":</strong> Capitalism deserves <em>only</em> two cheers, not three — it is the best system, but it cannot sustain itself without the moral capital of religion, family, and tradition that it tends to erode.</li>
+        <li>📚 <strong>Important Books:</strong>
+          <ul>
+            <li><em>Two Cheers for Capitalism</em> (1978)</li>
+            <li><em>Reflections of a Neo-Conservative</em> (1983)</li>
+            <li><em>Neoconservatism: The Autobiography of an Idea</em> (1995)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h3>🌟 Other Notable Conservative Thinkers</h3>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-icon">🎩</span>
+        <div class="pillar-title">Benjamin Disraeli</div>
+        <div class="pillar-desc">"One Nation" conservatism; PM of UK; <em>Sybil, or The Two Nations</em> (1845)</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🧠</span>
+        <div class="pillar-title">Leo Strauss</div>
+        <div class="pillar-desc">German-American philosopher; intellectual godfather of neoconservatism</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">📖</span>
+        <div class="pillar-title">Russell Kirk</div>
+        <div class="pillar-desc"><em>The Conservative Mind</em> (1953); revived American conservatism</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🎓</span>
+        <div class="pillar-title">Roger Scruton</div>
+        <div class="pillar-desc">British philosopher; <em>How to Be a Conservative</em>; defender of high culture</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🌍</span>
+        <div class="pillar-title">Francis Fukuyama</div>
+        <div class="pillar-desc"><em>The End of History?</em> (1989) — liberal democracy as final form</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">⚓</span>
+        <div class="pillar-title">Samuel Huntington</div>
+        <div class="pillar-desc"><em>Clash of Civilizations</em> (1996); cultural-political conservatism</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 ============ -->
+  <section id="s6">
+    <h2 class="section-title">🆚 6. Conservatism vs Liberalism vs Socialism</h2>
+    <p>To grasp conservatism fully, see it against its great ideological rivals:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Dimension</th><th>👑 Conservatism</th><th>🗽 Liberalism</th><th>☭ Socialism</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Human Nature</strong></td><td>Imperfect, fearful, fallen</td><td>Rational, autonomous</td><td>Social, cooperative</td></tr>
+          <tr><td><strong>Foundation</strong></td><td>Tradition & inheritance</td><td>Individual rights & reason</td><td>Equality & community</td></tr>
+          <tr><td><strong>Society</strong></td><td>Organic whole</td><td>Sum of individuals</td><td>Class-divided organism</td></tr>
+          <tr><td><strong>Change</strong></td><td>Slow, prudent, evolutionary</td><td>Progressive reform</td><td>Revolutionary / radical</td></tr>
+          <tr><td><strong>Equality</strong></td><td>Undesirable & unachievable</td><td>Equal opportunity</td><td>Substantive equality</td></tr>
+          <tr><td><strong>Hierarchy</strong></td><td>Natural & necessary</td><td>Suspicious of</td><td>To be abolished</td></tr>
+          <tr><td><strong>Liberty</strong></td><td>Ordered liberty under authority</td><td>Negative + Positive liberty</td><td>Freedom from exploitation</td></tr>
+          <tr><td><strong>State</strong></td><td>Strong, paternal, traditional</td><td>Limited, constitutional</td><td>Workers' or planning state</td></tr>
+          <tr><td><strong>Property</strong></td><td>Sacred, generational</td><td>Individual right</td><td>Socially owned</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7 ============ -->
+  <section id="s7">
+    <h2 class="section-title">🌍 7. Conservatism in Practice — Global Snapshots</h2>
+
+    <div class="card card-gold">
+      <h4>🇬🇧 British Conservatism</h4>
+      <p>The Conservative Party (Tories) — one of the oldest political parties in the world. Tradition of <em>Disraelian One-Nation</em> conservatism, transformed by <strong>Margaret Thatcher (PM 1979–1990)</strong> into <em>free-market New Right</em> conservatism. Today balances tradition (monarchy, Brexit, Church of England) with markets.</p>
+    </div>
+
+    <div class="card card-gold">
+      <h4>🇺🇸 American Conservatism</h4>
+      <p>A unique fusion: <em>economic libertarianism + religious traditionalism + assertive nationalism</em>. Modern movement built by <strong>William F. Buckley Jr.</strong> (<em>National Review</em>), <strong>Russell Kirk</strong>, and politically realized by <strong>Ronald Reagan (1981–89)</strong>. Today torn between traditional, neoconservative, libertarian, and populist (MAGA) strands.</p>
+    </div>
+
+    <div class="card card-gold">
+      <h4>🇮🇳 Indian Conservatism</h4>
+      <p>India's conservative tradition has multiple strands: <em>cultural conservatism</em> defending Hindu civilizational heritage; <em>Gandhian conservatism</em> emphasizing village community, swadeshi, and moral order; and modern political conservatism associated with the BJP. Thinkers include <strong>Bal Gangadhar Tilak</strong>, <strong>Sri Aurobindo</strong>, and contemporary voices.</p>
+    </div>
+
+    <div class="card card-gold">
+      <h4>🌐 Continental European Conservatism</h4>
+      <p>Christian Democratic parties (Germany's CDU, Italy's former DC) blended Catholic social teaching with market economics and welfare. More state-friendly than Anglo-American conservatism. Currently challenged by both progressive liberalism and right-wing populism.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 8 ============ -->
+  <section id="s8">
+    <h2 class="section-title">🧨 8. Critiques & Contemporary Debates</h2>
+
+    <div class="card card-burgundy">
+      <h4>🗽 Liberal Critique</h4>
+      <ul>
+        <li>Conservatism's defense of "tradition" can preserve <em>unjust hierarchies</em> — slavery, caste, patriarchy were all once "tradition."</li>
+        <li>Skepticism of reason becomes <em>obscurantism</em>; tradition can be a mask for entrenched power.</li>
+        <li>Limits individual autonomy and choice.</li>
+      </ul>
+    </div>
+
+    <div class="card card-burgundy">
+      <h4>☭ Socialist / Marxist Critique</h4>
+      <ul>
+        <li>Conservatism is the <em>ideology of the ruling class</em> — defending inequalities that benefit elites.</li>
+        <li>"Organic society" rhetoric obscures real class conflict.</li>
+        <li>Paternalism is a velvet glove over an iron fist of exploitation.</li>
+      </ul>
+    </div>
+
+    <div class="card card-burgundy">
+      <h4>♀️ Feminist Critique</h4>
+      <ul>
+        <li>The "traditional family" defended by conservatives often <em>imprisons women</em> in patriarchal roles.</li>
+        <li>"Natural hierarchy" historically meant male dominance.</li>
+        <li>Conservative resistance to feminist gains (suffrage, reproductive rights, equal pay) is part of conservatism's record.</li>
+      </ul>
+    </div>
+
+    <div class="card card-burgundy">
+      <h4>🌱 Ecological Critique</h4>
+      <ul>
+        <li>Modern free-market conservatism (New Right) has often resisted environmental regulation.</li>
+        <li>However, some thinkers (Roger Scruton's <em>Green Philosophy</em>) argue conservatism is <em>naturally green</em> — love of homeland, stewardship of inheritance, suspicion of unchecked progress.</li>
+      </ul>
+    </div>
+
+    <h3>🔄 Internal Debates Within Conservatism</h3>
+    <ul>
+      <li>⚔️ <strong>Tradition vs Market:</strong> Free markets often <em>destroy</em> the traditions conservatives love (small towns, family farms, churches). Can you have both?</li>
+      <li>🌍 <strong>National vs Global:</strong> Should conservatives defend national sovereignty (Brexit, MAGA) or embrace globalist trade and alliances?</li>
+      <li>🗽 <strong>Liberty vs Authority:</strong> How strong should the state be? New Right says small in economy, strong in morals — but is that coherent?</li>
+      <li>🎭 <strong>Elite vs Populist:</strong> Is conservatism the philosophy of cultured elites (Burke, Oakeshott) or of "ordinary people" against cosmopolitan elites (modern populism)?</li>
+    </ul>
+  </section>
+
+  <!-- ============ SECTION 9 ============ -->
+  <section id="s9" class="closing">
+    <h2 class="section-title" style="border:none; text-align:center;">✅ 9. Final Synthesis — Key Takeaways</h2>
+
+    <div class="table-wrap" style="text-align: left; margin-top: 30px;">
+      <table>
+        <thead>
+          <tr><th>Concept</th><th>Core Insight</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>🎯 Essence</strong></td><td>Conserve the tested past; be skeptical of the abstract future.</td></tr>
+          <tr><td><strong>👤 Human Nature</strong></td><td>Imperfect, security-seeking, fallible → needs authority and tradition.</td></tr>
+          <tr><td><strong>🌳 Society</strong></td><td>Organic, hierarchical, woven by duty — not constructed by contract.</td></tr>
+          <tr><td><strong>🔄 Change</strong></td><td>Only if prudent — and always to <em>conserve</em> what matters (Burke).</td></tr>
+          <tr><td><strong>⚔️ Main Critics</strong></td><td>Revolutionaries, rationalists, socialists, atomistic liberals, radical feminists.</td></tr>
+          <tr><td><strong>📚 Main Types</strong></td><td>Authoritarian · Traditional · Paternalistic · New Right · Neo-conservatism</td></tr>
+          <tr><td><strong>🌟 Disposition</strong></td><td>Reverence, gratitude, prudence — politics as a humble inheritance, not a project.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider">⚜ ⚜ ⚜</div>
+
+    <div class="final-quote">
+      🔥 "Change in order to conserve." 🔥
+      <br><span style="font-size:1.05rem; color: var(--text-muted); font-style:normal; font-family: 'Inter', sans-serif;">— Edmund Burke</span>
+    </div>
+
+    <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--text-soft); margin-top: 20px; font-size: 1.15rem; line-height: 1.8;">
+      Conservatism asks one quiet but profound question of every reformer: <em>"What of value might we lose if we change this?"</em> It is the philosophy of the gardener — pruning, grafting, weeding — but never uprooting the tree that took centuries to grow. In an age intoxicated with novelty, conservatism remains the calm voice of <strong>memory, gratitude, and prudence</strong>. ⚜
+    </p>
+
+ <br><p><div class="title-sub"><h1><em><b>En Nenjil Kudiyirukkum<br>
+என் நெஞ்சில் குடியிருக்கும்</em></b></h1>
+</div>
+
+  </section>
+
+</div>
+
+<!-- Back to top -->
+<a href="#" class="back-top" id="backTop" title="Back to top">⬆️</a>
+
+<script>
+  // Floating gold candle-flame particles
+  const particles = document.getElementById('particles');
+  for (let i = 0; i < 32; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (18 + Math.random() * 22) + 's';
+    p.style.animationDelay = Math.random() * 18 + 's';
+    p.style.opacity = 0.3 + Math.random() * 0.5;
+    const colors = ['#d4af37', '#cd7f32', '#f5deb3', '#960018', '#fbbf24'];
+    const c = colors[Math.floor(Math.random() * colors.length)];
+    p.style.background = c;
+    p.style.boxShadow = `0 0 8px ${c}`;
+    particles.appendChild(p);
+  }
+
+  // Back to top
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) backTop.classList.add('visible');
+    else backTop.classList.remove('visible');
+  });
+  backTop.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Section fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
