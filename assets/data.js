@@ -102,11 +102,23 @@ const archiveEntries = [
     icon: "☭",
     image: "",
     featured: true
+  },
+  {
+    number: "06",
+    title: "Conservatism",
+    category: "Philosophy",
+    description: "‎A state without the means of some change is without the means of its conservation",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Conservatism 2.0.html",
+    icon: "🛡️",
+    image: "",
+    featured: true
   } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "06",
+    number: "07",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
