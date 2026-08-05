@@ -90,6 +90,7 @@ const archiveEntries = [
     icon: "🌹",
     image: "",
     featured: true
+   },
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
