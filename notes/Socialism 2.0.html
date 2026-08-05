@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 SOCIALISM</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@600;900&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-deep: #0d0612;
+    --bg-mid: #1a0f24;
+    --bg-soft: #241432;
+    --red-revolution: #ef4444;
+    --red-glow: #f87171;
+    --gold: #fbbf24;
+    --gold-soft: #fcd34d;
+    --green-leaf: #86efac;
+    --blue-soft: #93c5fd;
+    --pink-rose: #f9a8d4;
+    --purple-mystic: #c4b5fd;
+    --orange-fire: #fb923c;
+    --cyan-cool: #67e8f9;
+    --text-soft: #e0d8e8;
+    --text-muted: #a89bb5;
+    --hammer: #dc2626;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-soft);
+    line-height: 1.75;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 90% 30%, rgba(251, 191, 36, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 50% 70%, rgba(196, 181, 253, 0.07) 0%, transparent 45%),
+      radial-gradient(circle at 20% 95%, rgba(134, 239, 172, 0.06) 0%, transparent 40%);
+  }
+
+  /* ========= STARS & PARTICLES ========= */
+  .stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle linear infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 0.7; transform: scale(1); }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ========== HERO TITLE ========== */
+  .hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(251, 191, 36, 0.08), rgba(196, 181, 253, 0.1));
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5), inset 0 0 100px rgba(239, 68, 68, 0.05);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(239, 68, 68, 0.15), transparent, rgba(251, 191, 36, 0.15), transparent, rgba(196, 181, 253, 0.15), transparent);
+    animation: rotate-bg 25s linear infinite;
+    z-index: 0;
+  }
+  @keyframes rotate-bg {
+    to { transform: rotate(360deg); }
+  }
+
+  .hero::after {
+    content: '🗺';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    letter-spacing: 15px;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .hero-content { position: relative; z-index: 2; }
+
+  .hammer-sickle {
+    font-size: 4.5rem;
+    display: inline-block;
+    animation: rotate-symbol 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(239, 68, 68, 0.6));
+  }
+  @keyframes rotate-symbol {
+    0%, 100% { transform: rotate(-10deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.1); }
+  }
+
+  .main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #ef4444 0%, #fbbf24 30%, #ffffff 50%, #fbbf24 70%, #ef4444 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 8px;
+    margin: 25px 0 10px;
+    text-shadow: 0 0 90px rgba(239, 68, 68, 0.4);
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  .main-title:hover {
+    transform: scale(1.08) perspective(500px) rotateX(15deg);
+    letter-spacing: 15px;
+    filter: drop-shadow(0 0 40px rgba(239, 68, 68, 0.8));
+  }
+
+  .main-title::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #ef4444, #fbbf24, #ef4444) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .main-title:hover::before { opacity: 1; }
+
+  .subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 2.3rem;
+    color: var(--gold);
+    margin-top: 15px;
+    opacity: 0.95;
+  }
+
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-top: 18px;
+    font-style: italic;
+  }
+
+  .rose-emoji {
+    display: inline-block;
+    animation: bloom 3s ease-in-out infinite;
+    font-size: 1.5rem;
+    margin: 0 8px;
+  }
+  @keyframes bloom {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+  }
+
+  /* ========== PART HEADERS ========== */
+  .part-header {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin: 70px 0 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(251, 191, 36, 0.1));
+    border-top: 3px solid var(--red-revolution);
+    border-bottom: 3px solid var(--gold);
+    border-radius: 15px;
+    position: relative;
+    letter-spacing: 3px;
+    transition: all 0.5s ease;
+    cursor: default;
+  }
+  .part-header:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(239, 68, 68, 0.25);
+    letter-spacing: 5px;
+  }
+
+  .part-header span.part-num {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: var(--gold);
+    letter-spacing: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* ========== SECTION HEADINGS ========== */
+  .section-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7rem;
+    margin: 45px 0 22px;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.18), transparent);
+    border-left: 6px solid var(--red-revolution);
+    border-radius: 8px;
+    color: var(--text-soft);
+    transition: all 0.4s ease;
+  }
+  .section-heading:hover {
+    padding-left: 38px;
+    border-left-width: 14px;
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.28), transparent);
+    letter-spacing: 1.5px;
+  }
+
+  .sub-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin: 30px 0 15px;
+    color: var(--gold);
+    border-bottom: 2px dashed rgba(251, 191, 36, 0.3);
+    padding-bottom: 8px;
+  }
+
+  /* ========== CARDS ========== */
+  .card {
+    background: linear-gradient(135deg, var(--bg-mid), var(--bg-soft));
+    border-radius: 20px;
+    padding: 35px;
+    margin: 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: var(--accent, var(--red-revolution));
+    transition: width 0.4s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 30px var(--accent-glow, rgba(239, 68, 68, 0.3));
+    border-color: var(--accent, var(--red-revolution));
+  }
+  .card:hover::before { width: 8px; }
+
+  .red-card    { --accent: #ef4444; --accent-glow: rgba(239, 68, 68, 0.35); }
+  .gold-card   { --accent: #fbbf24; --accent-glow: rgba(251, 191, 36, 0.35); }
+  .green-card  { --accent: #86efac; --accent-glow: rgba(134, 239, 172, 0.35); }
+  .blue-card   { --accent: #93c5fd; --accent-glow: rgba(147, 197, 253, 0.35); }
+  .pink-card   { --accent: #f9a8d4; --accent-glow: rgba(249, 168, 212, 0.35); }
+  .purple-card { --accent: #c4b5fd; --accent-glow: rgba(196, 181, 253, 0.35); }
+  .orange-card { --accent: #fb923c; --accent-glow: rgba(251, 146, 60, 0.35); }
+  .cyan-card   { --accent: #67e8f9; --accent-glow: rgba(103, 232, 249, 0.35); }
+
+  /* ========== THINKER CARDS ========== */
+  .thinker-card {
+    background: linear-gradient(135deg, var(--bg-mid), rgba(36, 20, 50, 0.9));
+    border-radius: 25px;
+    padding: 40px;
+    margin: 35px 0;
+    border: 2px solid rgba(251, 191, 36, 0.15);
+    position: relative;
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  }
+  .thinker-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    border-color: var(--accent, var(--gold));
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px var(--accent-glow, rgba(251, 191, 36, 0.3));
+  }
+
+  .thinker-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--accent, var(--gold));
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .thinker-dates {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .thinker-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; height: 60px;
+    background: linear-gradient(135deg, var(--accent, var(--gold)), var(--accent-glow, var(--red-glow)));
+    border-radius: 50%;
+    font-size: 1.8rem;
+    box-shadow: 0 0 25px var(--accent-glow, rgba(251, 191, 36, 0.4));
+  }
+
+  /* ========== INFO BOXES ========== */
+  .info-box, .quote-box, .insight-box, .key-box, .belief-box {
+    background: rgba(13, 6, 18, 0.6);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border-left: 4px solid var(--accent, var(--red-revolution));
+    transition: all 0.3s ease;
+  }
+  .info-box:hover, .quote-box:hover, .insight-box:hover, .key-box:hover, .belief-box:hover {
+    background: rgba(13, 6, 18, 0.9);
+    transform: translateX(8px);
+  }
+
+  .label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    background: var(--accent, var(--red-revolution));
+    color: var(--bg-deep);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .insight-box {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(239, 68, 68, 0.05));
+    border-left-color: var(--gold);
+  }
+  .insight-box .label { background: var(--gold); }
+
+  .quote-box {
+    background: linear-gradient(135deg, rgba(196, 181, 253, 0.1), rgba(147, 197, 253, 0.05));
+    border-left: 4px solid var(--purple-mystic);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 25px;
+    color: var(--text-soft);
+    position: relative;
+  }
+  .quote-box::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--purple-mystic);
+    position: absolute;
+    top: -10px; left: 15px;
+    opacity: 0.4;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ========== LISTS ========== */
+  ul.feature-list {
+    list-style: none;
+    padding: 10px 0;
+  }
+  ul.feature-list li {
+    padding: 9px 0 9px 35px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  ul.feature-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 12px;
+    color: var(--accent, var(--gold));
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  ul.feature-list li:hover {
+    color: #ffffff;
+    padding-left: 42px;
+  }
+  ul.feature-list li:hover::before {
+    transform: scale(1.5) rotate(180deg);
+  }
+
+  /* ========== TABLES ========== */
+  .data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    background: rgba(13, 6, 18, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .data-table th {
+    background: linear-gradient(135deg, var(--red-revolution), var(--orange-fire));
+    color: #ffffff;
+    padding: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-align: left;
+  }
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+    vertical-align: top;
+  }
+  .data-table tr:hover td {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ffffff;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .compare-table th:first-child { background: linear-gradient(135deg, #ef4444, #dc2626); }
+  .compare-table th:last-child  { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: var(--bg-deep); }
+
+  /* ========== FLOW DIAGRAM ========== */
+  .flow-diagram {
+    background: linear-gradient(135deg, rgba(196, 181, 253, 0.08), rgba(147, 197, 253, 0.05));
+    border: 1px solid rgba(196, 181, 253, 0.2);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 30px 0;
+    text-align: center;
+  }
+  .flow-step {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--bg-soft), var(--bg-mid));
+    color: var(--text-soft);
+    padding: 14px 28px;
+    border-radius: 50px;
+    margin: 8px;
+    font-weight: 600;
+    border: 2px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(251, 191, 36, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .flow-step:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, var(--gold), var(--orange-fire));
+    color: var(--bg-deep);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.5);
+  }
+  .flow-arrow {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 5px 0;
+    animation: bounce-down 2s ease-in-out infinite;
+  }
+  @keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ========== TIMELINE ========== */
+  .timeline {
+    position: relative;
+    padding: 30px 0;
+    margin: 30px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--red-revolution), var(--gold), var(--purple-mystic));
+    border-radius: 4px;
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 4px solid var(--bg-deep);
+    box-shadow: 0 0 0 3px var(--gold), 0 0 20px var(--gold);
+    transition: all 0.3s ease;
+  }
+  .timeline-item:hover { padding-left: 90px; }
+  .timeline-item:hover::before {
+    transform: scale(1.3);
+    background: var(--red-revolution);
+    box-shadow: 0 0 0 3px var(--red-revolution), 0 0 25px var(--red-revolution);
+  }
+  .timeline-year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ========== STAR QUOTE ========== */
+  .star-quote {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 40px 0;
+    padding: 35px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(251, 191, 36, 0.1));
+    border: 2px dashed var(--gold);
+    border-radius: 20px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    font-style: italic;
+  }
+  .star-quote:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(251, 191, 36, 0.4);
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(251, 191, 36, 0.18));
+  }
+
+  /* ========== REVISION BOX ========== */
+  .revision-box {
+    background: linear-gradient(135deg, #7c2d12, #831843);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 40px 0;
+    text-align: center;
+    border: 2px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+  .revision-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.15), transparent 70%);
+    animation: rotate-bg 20s linear infinite;
+  }
+  .revision-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: var(--text-soft);
+    line-height: 1.9;
+  }
+
+  /* ========== EXAM POINTS ========== */
+  .exam-point {
+    background: linear-gradient(135deg, rgba(134, 239, 172, 0.1), rgba(103, 232, 249, 0.05));
+    border-left: 4px solid var(--green-leaf);
+    padding: 18px 22px;
+    margin: 12px 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .exam-point:hover {
+    background: rgba(134, 239, 172, 0.15);
+    transform: translateX(8px);
+    border-left-color: var(--gold);
+  }
+  .exam-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px; height: 35px;
+    background: var(--green-leaf);
+    color: var(--bg-deep);
+    border-radius: 50%;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    color: var(--text-muted);
+    border-top: 2px solid rgba(251, 191, 36, 0.2);
+  }
+  .footer-emoji {
+    font-size: 2rem;
+    margin: 0 5px;
+    display: inline-block;
+    animation: bloom 3s ease-in-out infinite;
+  }
+
+  /* ========== SCROLL REVEAL ========== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .main-title { letter-spacing: 4px; }
+    .card, .thinker-card { padding: 25px; }
+    .thinker-name { font-size: 1.6rem; }
+    .data-table { font-size: 0.85rem; }
+    .data-table th, .data-table td { padding: 10px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+  <!-- ============ HERO TITLE ============ -->
+  <div class="hero">
+    <div class="hero-content">
+      <span class="hammer-sickle">☭</span>
+      <h1 class="main-title">SOCIALISM</h1>
+      <h2><strong style="color:var(--gold)">AUTEUR: PIYUSH PARTE</strong></h2>
+      <p class="tagline">
+        <span class="rose-emoji">☭</span>
+        <b>From Utopian Dreams to Scientific Revolutions</b>
+        <span class="rose-emoji">☭</span>
+      </p>
+      <p style="margin-top: 22px; color: var(--text-soft); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        ✊ <em>"Workers of the world, unite — you have nothing to lose but your chains"</em> ⚒️
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ PART ONE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART ONE</span>
+    🌱 Foundations of Socialism
+  </h2>
+
+  <!-- INTRODUCTION -->
+  <h3 class="section-heading">📖 Introduction</h3>
+
+  <div class="card red-card reveal">
+    <h4 class="sub-heading">🔍 Definition & Origins</h4>
+    <ul class="feature-list">
+<li>🧩 The word Socialism comes from the Latin word <strong style="color: var(--red-glow);">socius,</strong> meaning <strong style="color: var(--red-glow);">"companion," "associate," or "partner."</strong></li>
+<li>It is derived from the word <strong style="color: var(--red-glow);">"social,"</strong> which relates to society and cooperation.</li>
+<li>💰 <strong>Meaning:</strong> Socialism is an ideology that emphasizes <strong style="color: var(--red-glow);">collective welfare, social equality, & cooperation,</strong> where <strong style="color: var(--red-glow);">resources & wealth</strong> are managed for the <strong style="color: var(--red-glow);">benefit of society as a whole</strong> rather than primarily for private profit.</li>
+     <li>🏭 Socialism evolved as a direct response to the <strong>social and economic conditions</strong> created by <strong style="color: var(--red-glow);">industrial capitalism in 19th century Europe</strong></li>
+      <li>⚔️ <strong>Core identity:</strong> Ideological opposition to capitalism + pursuit of a more <em>humanitarian and socially worthwhile</em> alternative</li>
+      <li>📜 <strong>First use of term:</strong> <strong style="color: var(--gold);">Robert Owen</strong> adopted "Socialist" in his <em>Cooperative Magazine</em> in <strong>1827</strong></li>
+    </ul>
+
+    <div class="insight-box">
+      <span class="label">💎 The Defining Value</span>
+      <p style="font-size: 1.15rem;"><strong style="color: var(--gold);">Equality</strong> — particularly <strong>social equality</strong> — is the <em>basic and defining value</em> of socialism. While liberalism worships liberty, socialism crowns equality. 👑</p>
+    </div>
+
+    <div class="quote-box">
+      🎩 Socialism is like a hat that has lost its shape because everyone wears it 🎩
+    </div>
+    <p style="text-align: center; color: var(--text-muted); font-style: italic;">
+      ➡️ Meaning: There is <strong>no single socialist model</strong> — numerous variations exist across different countries 🌍
+    </p>
+  </div>
+
+  <!-- CENTRAL ARGUMENTS -->
+  <h3 class="section-heading">🎯 Central Arguments of Socialist Ideology</h3>
+
+  <div class="card gold-card reveal">
+    <h4 class="sub-heading">1️⃣ Human Nature Argument 🧬</h4>
+    <div class="quote-box">
+      🌊 No man is an island, each man is a part of a continent 🏝️
+    </div>
+    <ul class="feature-list">
+      <li>🤝 Man is <strong>social by nature</strong> — inherently connected to others</li>
+      <li>🚫 <strong>Rejection of individualism</strong> as a valid starting point for social theory</li>
+      <li>💡 <em>Insight:</em> Unlike liberals (who start with the individual), socialists start with <strong>community</strong> — the "we" before the "I"</li>
+    </ul>
+  </div>
+
+  <div class="card green-card reveal">
+    <h4 class="sub-heading">2️⃣ Organic View of Society 🌳</h4>
+    <ul class="feature-list">
+      <li>❌ Rejects the <strong>aggregative view</strong> (society as mere collection of individuals)</li>
+      <li>✅ Believes society is a <strong>natural organic entity</strong> — like a living body where each part serves the whole 🫀</li>
+      <li>💡 <em>Insight:</em> Just as the heart cannot survive without lungs, the individual cannot flourish without society</li>
+    </ul>
+  </div>
+
+  <div class="card red-card reveal">
+    <h4 class="sub-heading">3️⃣ Critique of Private Property 🏚️</h4>
+    <table class="data-table compare-table">
+      <thead>
+        <tr><th>⚠️ Problem</th><th>💥 Consequence</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🏦 Private ownership of resources</td><td>Creates <strong>class-based inequality</strong></td></tr>
+        <tr><td>💼 <strong>Haves</strong> (Bourgeoisie) vs <strong>Have Nots</strong> (Proletariat)</td><td>Leads to <strong>social exploitation</strong></td></tr>
+        <tr><td>💰 Concentration of wealth in few hands</td><td>Erosion of human dignity & solidarity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card purple-card reveal">
+    <h4 class="sub-heading">4️⃣ Solution Proposed 🛠️</h4>
+    <ul class="feature-list">
+      <li>🌍 Society should be based on <strong>social ownership of resources</strong></li>
+      <li>🤝 <strong>Collective control</strong> replaces private ownership</li>
+      <li>🏭 The means of production belong to the community, not to individuals</li>
+    </ul>
+  </div>
+
+  <div class="card cyan-card reveal">
+    <h4 class="sub-heading">5️⃣ The Ideal Vision ✨</h4>
+    <ul class="feature-list">
+      <li>⚖️ Society where <strong>absolute equality</strong> exists</li>
+      <li>🚫 <strong>No inequality</strong> in income and status</li>
+      <li>🌅 A classless, exploitation-free society — the dream of every socialist</li>
+    </ul>
+  </div>
+
+  <!-- ============ PART TWO ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART TWO</span>
+    🕯️ Early Socialists (Utopian Socialists)
+  </h2>
+
+  <h3 class="section-heading">📅 Historical Context</h3>
+  <div class="card orange-card reveal">
+    <ul class="feature-list">
+      <li>🕰️ <strong>Time period:</strong> Beginning of the <strong>19th century</strong></li>
+      <li>📢 <strong>Nature:</strong> A <em>popular movement</em> emerging as a response to industrial capitalism's plight</li>
+      <li>😤 <strong>Key motivation:</strong> Deep dissatisfaction with the <strong>capitalist pattern of society</strong></li>
+    </ul>
+
+    <div class="insight-box">
+      <span class="label">🏷️ The Label: "Utopian Socialist"</span>
+      <p><strong>Given by:</strong> Karl Marx & Friedrich Engels (in <em>The Communist Manifesto</em>, 1848)</p>
+      <p style="margin-top: 12px;"><strong>Reasons for criticism:</strong></p>
+      <ul class="feature-list">
+        <li>🔬 Lacked <strong>scientific reasoning</strong></li>
+        <li>🛠️ Had <strong>no concrete idea</strong> for bringing social change</li>
+        <li>💭 Dreamed of an ideal society <strong>without a practical revolutionary path</strong></li>
+        <li>🎈 Their vision was beautiful but "floating in air" — disconnected from material conditions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ROBERT OWEN -->
+  <div class="thinker-card red-card reveal" style="--accent: #ef4444; --accent-glow: rgba(239,68,68,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">👨‍🏭</span> Robert Owen</h3>
+    <div class="thinker-dates">📅 1771 – 1858 · 🇬🇧 Welsh Industrialist & Reformer</div>
+
+    <div class="belief-box">
+      <span class="label">🏭 Core Beliefs</span>
+      <table class="data-table">
+        <thead><tr><th>Belief</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>🏗️ Industries & Factories</td><td>Could <strong>liberate mankind</strong> from poverty and ignorance</td></tr>
+          <tr><td>⚙️ Organizing Principle</td><td><strong>Cooperative</strong> rather than competitive principles</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="sub-heading">💡 Key Proposals</h4>
+
+    <div class="info-box">
+      <span class="label">📦 Cooperative Manufacturing</span>
+      <ul class="feature-list">
+        <li>Suggested manufacturing be organized on <strong>cooperative principles</strong></li>
+        <li>Competition rejected as the organizing principle of industry</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🏘️ Villages of Collaboration</span>
+      <ul class="feature-list">
+        <li>Urged public agencies to establish these villages</li>
+        <li><strong>Purpose:</strong> To employ the unemployed 👷</li>
+        <li>Community-based solution to unemployment</li>
+        <li>🌟 <em>His famous experiment:</em> <strong>New Lanark</strong> mills in Scotland & <strong>New Harmony</strong> in Indiana, USA</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">✅ Right to Work</span>
+      <p>Owen was a vocal supporter of the <strong>right to work</strong> — believed employment was a <em>fundamental human right</em>, not a privilege.</p>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">📖 Key Work</span>
+      <p>📕 <strong><em>A New View of Society</em></strong> (1813) — argued character is shaped by environment, so a better environment = better humans</p>
+    </div>
+  </div>
+
+  <!-- CHARLES FOURIER -->
+  <div class="thinker-card gold-card reveal" style="--accent: #fbbf24; --accent-glow: rgba(251,191,36,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🌻</span> Charles Fourier</h3>
+    <div class="thinker-dates">📅 1772 – 1837 · 🇫🇷 French Philosopher</div>
+
+    <div class="belief-box">
+      <span class="label">⚙️ Critique of Division of Labour</span>
+      <ul class="feature-list">
+        <li>Disliked division of labour because it divided work into <strong>minute repetitive activities</strong></li>
+        <li>Viewed this as <strong>dehumanizing and alienating</strong> 🤖</li>
+        <li>Believed in "<strong>attractive labour</strong>" — work should match human passions</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🏭 Contrast with Owen</span>
+      <table class="data-table">
+        <thead><tr><th>Owen 👨‍🏭</th><th>Fourier 🌻</th></tr></thead>
+        <tbody>
+          <tr><td>Supporter of big industries</td><td>Critic of big industries</td></tr>
+          <tr><td>Industrial development as <em>solution</em></td><td>Industrial development as <em>problem</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🌱 Positive Vision: Phalanstères</span>
+      <ul class="feature-list">
+        <li><strong>Community is the way forward</strong></li>
+        <li>Small-scale industries preferred over large industrial complexes</li>
+        <li>Proposed <strong>"Phalanxes"</strong> — self-sufficient communities of ~1,620 people</li>
+      </ul>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">📖 Key Work</span>
+      <p>📕 <strong><em>The New Industrial World</em></strong> (1829-30)</p>
+    </div>
+  </div>
+
+  <!-- SAINT-SIMON -->
+  <div class="thinker-card blue-card reveal" style="--accent: #93c5fd; --accent-glow: rgba(147,197,253,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🔬</span> Henri Saint-Simon</h3>
+    <div class="thinker-dates">📅 1760 – 1825 · 🇫🇷 French Aristocrat-turned-Reformer</div>
+
+    <div class="belief-box">
+      <span class="label">🔬 Distinctive Character</span>
+      <p>In <strong>contrast to Fourier</strong>:</p>
+      <ul class="feature-list">
+        <li>A man of <strong>science, industry, and vast administration</strong></li>
+        <li><strong>Technocratic</strong> orientation rather than anti-industrial</li>
+        <li>Saw industry as the engine of human progress 🚂</li>
+      </ul>
+    </div>
+
+    <div class="quote-box">
+      💼 There is room only for one class in society — that is the workers 💼
+    </div>
+
+    <div class="info-box">
+      <span class="label">💼 The Single Class Theory</span>
+      <p><strong>Implication:</strong> Non-workers are "<em>layouts</em>" (useless/idle parasites) and should be <strong>weeded out</strong> from society.</p>
+      <p style="margin-top: 10px;">⚒️ The productive class includes: industrialists, scientists, engineers, artisans, and workers — anyone who <em>contributes</em> to society.</p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">💰 Wage Theory</span>
+      <ul class="feature-list">
+        <li>Wages should be determined by one's <strong>ability to labour</strong></li>
+        <li><strong>Meritocratic element</strong> within socialist framework</li>
+        <li>"From each according to his capacity, to each according to his works" — later adopted by Marx</li>
+      </ul>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">🏷️ What Made Him a Socialist</span>
+      <p>This radical position — that <strong>only one class (workers)</strong> should exist — qualified him as a socialist thinker, despite his elitist technocratic leanings.</p>
+    </div>
+  </div>
+
+  <!-- PROUDHON -->
+  <div class="thinker-card purple-card reveal" style="--accent: #c4b5fd; --accent-glow: rgba(196,181,253,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🏴</span> Pierre-Joseph Proudhon</h3>
+    <div class="thinker-dates">📅 1809 – 1865 · 🇫🇷 The First Self-Proclaimed Anarchist</div>
+
+    <div class="quote-box" style="font-size: 1.6rem; color: var(--red-glow);">
+      🔥 Property is theft! 🔥
+    </div>
+
+    <div class="info-box">
+      <span class="label">📚 Famous Debate with Marx</span>
+      <table class="data-table">
+        <thead><tr><th>Proudhon 🏴</th><th>Marx ⚒️</th></tr></thead>
+        <tbody>
+          <tr><td><em>The Philosophy of Poverty</em> (1846)</td><td><em>The Poverty of Philosophy</em> (1847) — biting response</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 12px; font-style: italic;">⚔️ This debate marked the historic split between <strong>anarchist</strong> and <strong>Marxist</strong> socialism.</p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🏴 The Social Anarchist</span>
+      <p><strong>Why called "social anarchist":</strong></p>
+      <ul class="feature-list">
+        <li>🚫 Rejected the <strong>centralized structure of state</strong></li>
+        <li>🕸️ Called for a <strong>nationwide network of decentralized worker cooperatives</strong></li>
+        <li>🤝 Cooperatives would bargain for <strong>reciprocal exchange</strong> of products and services (<em>mutualism</em>)</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🤝 Key Difference from Marx</span>
+      <ul class="feature-list">
+        <li>🚫 <strong>No centralized state planning</strong></li>
+        <li>↔️ Emphasis on <strong>mutual exchange</strong> rather than state-controlled distribution</li>
+        <li>🌸 Bottom-up federalism vs Marx's top-down dictatorship of the proletariat</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ PART THREE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART THREE</span>
+    ⚔️ Revolutionary vs Evolutionary Socialism
+  </h2>
+
+  <h3 class="section-heading">📊 The Great Divide — Comparative Analysis</h3>
+
+  <div class="card red-card reveal">
+    <table class="data-table compare-table">
+      <thead>
+        <tr>
+          <th>⚖️ Dimension</th>
+          <th>🔥 Revolutionary Socialism</th>
+          <th>🌱 Evolutionary Socialism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>🕰️ Time of evolution</strong></td>
+          <td>Middle of 19th century</td>
+          <td>Around 1880s in Europe</td>
+        </tr>
+        <tr>
+          <td><strong>⚒️ Method</strong></td>
+          <td>Complete social transformation in a <strong>single stroke</strong></td>
+          <td><strong>Gradual reform</strong> & step-by-step changes</td>
+        </tr>
+        <tr>
+          <td><strong>👥 Class focus</strong></td>
+          <td>Emancipation of <strong>only working class</strong></td>
+          <td>Reconcile working class with other classes (esp. middle class)</td>
+        </tr>
+        <tr>
+          <td><strong>🏷️ Alternative name</strong></td>
+          <td>Marxism / Scientific Socialism</td>
+          <td>Democratic Socialism</td>
+        </tr>
+        <tr>
+          <td><strong>🌟 Key Proponents</strong></td>
+          <td>Marx & Engels, Lenin, Trotsky</td>
+          <td>Bernstein, Fabians, Lassalle</td>
+        </tr>
+        <tr>
+          <td><strong>💣 Means</strong></td>
+          <td>Violent revolution by proletariat</td>
+          <td>Ballot box, trade unions, education</td>
+        </tr>
+        <tr>
+          <td><strong>🏛️ View of State</strong></td>
+          <td>Smash and replace bourgeois state</td>
+          <td>Capture and reform existing state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">💡 The Core Question</span>
+      <p>Both branches agree on the <strong>destination</strong> (a socialist society) but disagree fundamentally on the <strong>road</strong>: bullet 🔫 or ballot 🗳️?</p>
+    </div>
+  </div>
+
+  <!-- ============ PART FOUR ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART FOUR</span>
+    🔄 Types of Evolutionary Socialism
+  </h2>
+
+  <!-- 1. FABIANISM -->
+  <div class="thinker-card green-card reveal" style="--accent: #86efac; --accent-glow: rgba(134,239,172,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🐢</span> 1️⃣ Fabianism</h3>
+    <div class="thinker-dates">🇬🇧 England · Founded 1884</div>
+
+    <div class="belief-box">
+      <span class="label">📍 Origin & Name</span>
+      <ul class="feature-list">
+        <li>🇬🇧 <strong>Developed in:</strong> England</li>
+        <li>🏛️ <strong>Founded:</strong> The Fabian Society (1884)</li>
+        <li>🛡️ <strong>Name origin:</strong> Named after the Roman general <strong>Quintus Fabius Maximus</strong> ("the Delayer") — famous for using patient, wait-and-strike tactics against Hannibal</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🧠 Core Theory</span>
+      <p style="font-size: 1.1rem;">📈 Socialism will emerge <strong>spontaneously in a gradual manner</strong> from liberal capitalism — through <em>permeation</em> (spreading/penetrating) of socialist ideas into mainstream institutions.</p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🌉 The Unique Aspect: Socialism Through the Middle Class</span>
+      <ul class="feature-list">
+        <li>🎓 The <strong>educated section of the middle class</strong> will take responsibility for developing awareness</li>
+        <li>🚫 <strong>Not</strong> worker-led revolution — but <strong>intellectual-led evolution</strong></li>
+        <li>💡 A "trickle-down" socialism via persuasion, not coercion</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">📊 Economic Foundation</span>
+      <table class="data-table">
+        <thead><tr><th>❌ Rejected</th><th>✅ Adopted</th></tr></thead>
+        <tbody>
+          <tr><td>Labour theory of value (Marxian)</td><td><strong>Ricardian law of rent</strong></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 12px;"><em>Why?</em> Ricardo's rent theory could be extended to argue that capitalists earn <strong>unearned income</strong> (like landlords) — justifying taxation and redistribution. 💰</p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">👥 Main Proponents</span>
+      <ul class="feature-list">
+        <li>🎭 <strong>G.B. Shaw</strong> — playwright & wit</li>
+        <li>🧠 <strong>Graham Wallas</strong></li>
+        <li>📚 <strong>Sidney Webb</strong> & <strong>Beatrice Webb</strong> — the legendary couple</li>
+        <li>🏛️ <strong>G.D.H. Cole</strong> (later moved toward Guild Socialism)</li>
+      </ul>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">📖 Key Works</span>
+      <ul class="feature-list">
+        <li>📕 <em>Fabian Essays in Socialism</em> (1889)</li>
+        <li>📕 <em>The History of Trade Unionism</em> (1920) — Beatrice & Sidney Webb</li>
+        <li>📕 <em>Industrial Democracy</em> (1897) — Beatrice & Sidney Webb</li>
+        <li>📕 <em>Soviet Communism: A New Civilisation?</em> (1935) — Beatrice & Sidney Webb</li>
+      </ul>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">🌟 Legacy</span>
+      <p>Fabianism birthed the <strong>British Labour Party</strong> 🌹 and shaped the <strong>welfare state</strong> after WWII. Their slow but steady method <em>worked</em>.</p>
+    </div>
+  </div>
+
+  <!-- 2. GERMAN SOCIAL DEMOCRACY -->
+  <div class="thinker-card gold-card reveal" style="--accent: #fbbf24; --accent-glow: rgba(251,191,36,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🗳️</span> 2️⃣ German Social Democracy</h3>
+    <div class="thinker-dates">🇩🇪 Germany · Founder: Ferdinand Lassalle (1825-1864)</div>
+
+    <div class="belief-box">
+      <span class="label">📍 Origin</span>
+      <ul class="feature-list">
+        <li>🇩🇪 <strong>Country:</strong> Germany</li>
+        <li>🏛️ <strong>Approach:</strong> Constitutional and democratic path for achieving socialism</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔄 Relationship with Marx</span>
+      <table class="data-table">
+        <thead><tr><th>✅ Accepted from Marx</th><th>❌ Rejected from Marx</th></tr></thead>
+        <tbody>
+          <tr><td>Doctrine of <strong>economic interpretation of history</strong></td><td><strong>Bloody revolution</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="sub-heading">🗳️ The Political Strategy (3 Steps)</h4>
+    <div class="flow-diagram">
+      <div class="flow-step">1️⃣ Workers organize into political party 🌹</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-step">2️⃣ Party secures majority in parliament 🏛️</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-step">3️⃣ Use majority to achieve socialist transformation ✊</div>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">🕊️ Final Goal</span>
+      <p><strong>Constitutional and peaceful transition</strong> from a capitalist state to a worker's state — without spilling a drop of blood. 🕊️</p>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">🌟 Historical Impact</span>
+      <p>Lassalle founded the <strong>General German Workers' Association (1863)</strong> — the ancestor of today's <strong>SPD (Social Democratic Party of Germany)</strong>, the world's oldest active political party.</p>
+    </div>
+  </div>
+
+  <!-- 3. SYNDICALISM -->
+  <div class="thinker-card orange-card reveal" style="--accent: #fb923c; --accent-glow: rgba(251,146,60,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">⚒️</span> 3️⃣ Syndicalism</h3>
+    <div class="thinker-dates">🇫🇷 France-rooted · Late 19th – Early 20th century</div>
+
+    <div class="belief-box">
+      <span class="label">📖 Etymology</span>
+      <p>🔤 <strong>Syndicate</strong> = French word for <strong>workers' union</strong></p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🧠 Intellectual Influences</span>
+      <ul class="feature-list">
+        <li>🔥 <strong>Auguste Blanqui</strong> — revolutionary insurrectionist</li>
+        <li>👷 <strong>Fernand Pelloutier</strong> — organizer of French labour</li>
+        <li>📕 <strong>Georges Sorel</strong> — author of <em>Reflections on Violence</em> (1908), advocating the <strong>"general strike"</strong> as a revolutionary myth</li>
+      </ul>
+    </div>
+
+    <div class="quote-box">
+      🏭 Socialization without the State 🏭
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔄 Relationship with Marxism</span>
+      <table class="data-table">
+        <thead><tr><th>✅ Accepted from Marx</th><th>❌ Rejected/Modified</th></tr></thead>
+        <tbody>
+          <tr><td>Class struggle theory</td><td>Need for a political state</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🏛️ The "Economic State" Concept</span>
+      <ul class="feature-list">
+        <li>🚫 <strong>No need for a political state</strong></li>
+        <li>🏭 Only an <strong>economic state</strong> is enough</li>
+        <li>The <strong>economic state = organization of production</strong> by workers themselves</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔗 Labour Union Independence</span>
+      <ul class="feature-list">
+        <li>Demands that labour unions be <strong>completely independent</strong> of political parties</li>
+        <li>Political parties seen as <strong>corrupting or unnecessary</strong> middlemen</li>
+        <li>Direct action ➡️ general strike ➡️ workers' control</li>
+      </ul>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">💪 The Core Belief</span>
+      <p>A <strong>strong, militant labour union</strong> can protect the interests of the working class from capitalist exploitation — without needing politicians, parties, or parliament.</p>
+    </div>
+  </div>
+
+  <!-- 4. REVISIONISM -->
+  <div class="thinker-card pink-card reveal" style="--accent: #f9a8d4; --accent-glow: rgba(249,168,212,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">📝</span> 4️⃣ Revisionism</h3>
+    <div class="thinker-dates">🇩🇪 Germany · Led by Eduard Bernstein (1850-1932)</div>
+
+    <div class="belief-box">
+      <span class="label">📍 Origin</span>
+      <ul class="feature-list">
+        <li>🇩🇪 <strong>Country:</strong> Germany</li>
+        <li>👤 <strong>School led by:</strong> <strong>Eduard Bernstein</strong></li>
+        <li>🎯 <strong>Goal:</strong> "Revise" Marx in light of new social realities</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔥 Core Revisions of Marxism</span>
+      <table class="data-table">
+        <thead><tr><th>Marx's Position</th><th>Bernstein's Revision</th></tr></thead>
+        <tbody>
+          <tr><td>Revolution is <strong>necessary</strong></td><td>Revolution is <strong>neither possible nor needed</strong></td></tr>
+          <tr><td><strong>Materialist</strong> interpretation of history</td><td><strong>Rejected</strong> materialist interpretation of history</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🗳️ The Alternative Path</span>
+      <p style="font-size: 1.1rem;">Working class should adopt the "<strong style="color: var(--gold);">Parliamentary Road to Socialism</strong>" 🏛️</p>
+      <p style="margin-top: 10px;"><strong>Reasoning:</strong> Since workers are in the majority, they can fulfill their interests through <strong>institutional methods</strong> — voting, lobbying, legislation.</p>
+    </div>
+
+    <h4 class="sub-heading">📊 Bernstein's Famous Counter-Arguments</h4>
+    <p style="margin-bottom: 10px;"><em>(From his landmark work </em><strong>Evolutionary Socialism</strong><em>, 1899)</em></p>
+    <table class="data-table">
+      <thead><tr><th>🔮 Marx's Prediction</th><th>👀 Bernstein's Observation</th></tr></thead>
+      <tbody>
+        <tr><td>🌾 Peasants will sink (disappear)</td><td>Peasants <strong>do not</strong> sink</td></tr>
+        <tr><td>💼 Middle class will disappear</td><td>Middle class <strong>does not</strong> disappear</td></tr>
+        <tr><td>📉 Crises will grow ever larger</td><td>Crises <strong>do not</strong> grow even larger</td></tr>
+        <tr><td>😢 Misery and serfdom will increase</td><td>Misery and serfdom <strong>do not</strong> increase</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">🔄 Movement vs Goal — The Revolutionary Insight</span>
+      <p style="font-size: 1.15rem; font-style: italic; color: var(--gold);">
+        "Socialism is a <strong>movement</strong>, not an end goal."
+      </p>
+      <p style="margin-top: 12px;"><strong>Significance:</strong> Shift from <strong>teleological</strong> (end-state focused) thinking to <strong>process-oriented</strong> understanding. The journey itself <em>is</em> socialism. 🛤️</p>
+    </div>
+
+    <div class="insight-box">
+      <span class="label">📖 Key Work</span>
+      <p>📕 <strong><em>Evolutionary Socialism</em></strong> (1899) — also titled <em>The Preconditions of Socialism</em></p>
+    </div>
+  </div>
+
+  <!-- 5. GUILD SOCIALISM -->
+  <div class="thinker-card cyan-card reveal" style="--accent: #67e8f9; --accent-glow: rgba(103,232,249,0.35);">
+    <h3 class="thinker-name"><span class="thinker-avatar">🏛️</span> 5️⃣ Guild Socialism</h3>
+    <div class="thinker-dates">🇬🇧 England · First quarter of 20th century · Champion: G.D.H. Cole</div>
+
+    <div class="belief-box">
+      <span class="label">📍 Origin</span>
+      <ul class="feature-list">
+        <li>🇬🇧 <strong>Country:</strong> England</li>
+        <li>🕰️ <strong>Time:</strong> First quarter of the 20th century</li>
+        <li>👤 <strong>Key Proponent:</strong> <strong>G.D.H. Cole</strong></li>
+        <li>🏰 <strong>Inspiration:</strong> Medieval craft guilds — communities of skilled workers</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">💼 Fundamental Claim</span>
+      <p style="font-size: 1.15rem; font-style: italic;">"The <strong>real interest</strong> is <strong style="color: var(--cyan-cool);">economic interest</strong>."</p>
+      <p style="margin-top: 10px;"><strong>Implication:</strong> Need for <strong>adequate representation of various economic interests</strong> in policy making — not just geographical representation.</p>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔄 Relationship with Marxism</span>
+      <table class="data-table">
+        <thead><tr><th>✅ Shared with Marx</th><th>❌ Rejected from Marx</th></tr></thead>
+        <tbody>
+          <tr><td>Class struggle</td><td>Revolution as necessity</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🔧 Modification of Syndicalism</span>
+      <ul class="feature-list">
+        <li>Emphasized the significance of the <strong>customer</strong> 🛒 along with the <strong>worker</strong> 👷</li>
+        <li>Broader <strong>stakeholder perspective</strong> than pure syndicalism</li>
+        <li>Society = producers + consumers, both must be heard</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      <span class="label">🎯 Key Demands</span>
+      <ul class="feature-list">
+        <li>🚫 <strong>Eradication of the wage system</strong> (workers as partners, not employees)</li>
+        <li>👷 <strong>Worker representation</strong> in industrial management</li>
+        <li>🤝 Industries run by <strong>self-governing guilds</strong></li>
+      </ul>
+    </div>
+
+    <h4 class="sub-heading">🏛️ G.D.H. Cole's Three Famous Proposals</h4>
+    <table class="data-table">
+      <thead><tr><th>Proposal</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>🏛️ Functional Parliament</strong></td><td>Parliament organized by <strong>economic functions</strong>, not geography</td></tr>
+        <tr><td><strong>🗳️ Functional Representation</strong></td><td>Representation based on <strong>economic role</strong> (miner, teacher, farmer, etc.)</td></tr>
+        <tr><td><strong>🏭 Industrial Democracy</strong></td><td><strong>Democratic control</strong> within industry by workers themselves</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">📖 Key Works of G.D.H. Cole</span>
+      <ul class="feature-list">
+        <li>📕 <em>The World of Labour</em> (1913)</li>
+        <li>📕 <em>Guild Socialism</em> (1922)</li>
+        <li>📕 <em>What Marx Really Meant</em> (1934)</li>
+        <li>📕 <em>Socialism in Evolution</em> (1938)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ PART FIVE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART FIVE</span>
+    📚 Important Authors & Their Works
+  </h2>
+
+  <div class="card gold-card reveal">
+    <h3 class="sub-heading">📖 Complete Reference Table</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>✍️ Author</th><th>📕 Key Work(s)</th><th>📅 Year</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Robert Owen</td><td><em>A New View of Society</em></td><td>1813</td></tr>
+        <tr><td>Charles Fourier</td><td><em>The New Industrial World</em></td><td>1829-30</td></tr>
+        <tr><td>P.J. Proudhon</td><td><em>What is Property?</em> / <em>Philosophy of Poverty</em></td><td>1840 / 1846</td></tr>
+        <tr><td>Karl Marx</td><td><em>The Poverty of Philosophy</em> / <em>Das Kapital</em></td><td>1847 / 1867</td></tr>
+        <tr><td>Marx & Engels</td><td><em>The Communist Manifesto</em></td><td>1848</td></tr>
+        <tr><td>Fabian Society</td><td><em>Fabian Essays in Socialism</em></td><td>1889</td></tr>
+        <tr><td>Beatrice & Sidney Webb</td><td><em>Industrial Democracy</em></td><td>1897</td></tr>
+        <tr><td>Eduard Bernstein</td><td><em>Evolutionary Socialism</em></td><td>1899</td></tr>
+        <tr><td>Georges Sorel</td><td><em>Reflections on Violence</em></td><td>1908</td></tr>
+        <tr><td>G.D.H. Cole</td><td><em>The World of Labour</em></td><td>1913</td></tr>
+        <tr><td>R.H. Tawney</td><td><em>The Acquisitive Society</em></td><td>1920</td></tr>
+        <tr><td>Beatrice & Sidney Webb</td><td><em>The History of Trade Unionism</em></td><td>1920</td></tr>
+        <tr><td>G.D.H. Cole</td><td><em>Guild Socialism</em></td><td>1922</td></tr>
+        <tr><td>R.H. Tawney</td><td><em>Equality</em></td><td>1931</td></tr>
+        <tr><td>G.D.H. Cole</td><td><em>What Marx Really Meant</em></td><td>1934</td></tr>
+        <tr><td>Beatrice & Sidney Webb</td><td><em>Soviet Communism: A New Civilisation?</em></td><td>1935</td></tr>
+        <tr><td>Leon Trotsky</td><td><em>The Revolution Betrayed</em></td><td>1936</td></tr>
+        <tr><td>G.D.H. Cole</td><td><em>Socialism in Evolution</em></td><td>1938</td></tr>
+        <tr><td>J.K. Galbraith</td><td><em>American Capitalism</em></td><td>1952</td></tr>
+        <tr><td>Anthony Crosland</td><td><em>The Future of Socialism</em></td><td>1956</td></tr>
+        <tr><td>J.K. Galbraith</td><td><em>The Affluent Society</em></td><td>1958</td></tr>
+        <tr><td>Ralph Miliband</td><td><em>Socialism for a Sceptical Age</em></td><td>1994</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ PART SIX ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART SIX</span>
+    🎓 Key Concepts Glossary
+  </h2>
+
+  <div class="card purple-card reveal">
+    <table class="data-table">
+      <thead><tr><th>📖 Term</th><th>📝 Definition</th></tr></thead>
+      <tbody>
+        <tr><td><strong>🕯️ Utopian Socialism</strong></td><td>Early socialist thought lacking scientific reasoning and a practical revolutionary method (term coined by Marx & Engels)</td></tr>
+        <tr><td><strong>🔬 Scientific Socialism</strong></td><td>Marx & Engels' approach claiming to provide a scientific basis for socialist revolution rooted in historical materialism</td></tr>
+        <tr><td><strong>🤝 Social Ownership</strong></td><td>Collective/community ownership of productive resources instead of private ownership</td></tr>
+        <tr><td><strong>🎩 Bourgeoisie</strong></td><td>The "Haves" — capitalist class owning means of production</td></tr>
+        <tr><td><strong>👷 Proletariat</strong></td><td>The "Have Nots" — working class selling labour for wages</td></tr>
+        <tr><td><strong>🏞️ Ricardian Law of Rent</strong></td><td>Economic theory used by Fabians instead of labour theory of value — argues unearned income should be taxed</td></tr>
+        <tr><td><strong>🏛️ Functional Parliament</strong></td><td>Cole's proposal for parliament organized by economic functions, not geographical constituencies</td></tr>
+        <tr><td><strong>🏭 Industrial Democracy</strong></td><td>Democratic worker control over industrial management — the workplace becomes a polis</td></tr>
+        <tr><td><strong>🗳️ Parliamentary Road</strong></td><td>Achieving socialism through electoral and legislative means — Bernstein's path</td></tr>
+        <tr><td><strong>⚒️ Mutualism</strong></td><td>Proudhon's idea — society based on voluntary reciprocal exchange between worker cooperatives</td></tr>
+        <tr><td><strong>🌹 Democratic Socialism</strong></td><td>Belief that socialism can be achieved through democratic, non-violent, gradual reforms</td></tr>
+        <tr><td><strong>💥 General Strike</strong></td><td>Sorel's syndicalist tool — paralysing capitalism by stopping all work simultaneously</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ PART SEVEN ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART SEVEN</span>
+    💡 Quick Revision Summary
+  </h2>
+
+  <h3 class="section-heading">⏳ Timeline of Socialist Development</h3>
+
+  <div class="card red-card reveal">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1827</div>
+        <p>🖋️ <strong>Robert Owen</strong> coins the term "Socialist" in his Cooperative Magazine</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1820s – 30s</div>
+        <p>🕯️ <strong>Utopian Socialists</strong> emerge: Owen, Fourier, Saint-Simon</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1840s</div>
+        <p>🔥 <strong>Proudhon</strong> proclaims "Property is theft" — anarchist socialism is born</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1848</div>
+        <p>📕 <strong>Marx & Engels</strong> publish <em>The Communist Manifesto</em></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 Mid-19th century</div>
+        <p>⚒️ <strong>Revolutionary Marxism</strong> (Scientific Socialism) takes shape</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1880s</div>
+        <p>🌱 <strong>Evolutionary Socialism</strong> begins to emerge in Europe</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1884</div>
+        <p>🐢 <strong>Fabian Society</strong> founded in London</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1890s</div>
+        <p>📝 <strong>Revisionism</strong> (Bernstein) challenges Marxist orthodoxy</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 Early 20th century</div>
+        <p>🏛️ <strong>Guild Socialism</strong> (Cole) and <strong>Syndicalism</strong> (Sorel) flourish</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1917</div>
+        <p>🚩 <strong>Russian Revolution</strong> — first successful socialist revolution under Lenin</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-heading">🏷️ Quick Thinker Identifiers</h3>
+
+  <div class="card gold-card reveal">
+    <table class="data-table">
+      <thead><tr><th>🧠 Thinker</th><th>⚡ One-Line Identifier</th></tr></thead>
+      <tbody>
+        <tr><td><strong>👨‍🏭 Owen</strong></td><td>Cooperative villages + Right to work</td></tr>
+        <tr><td><strong>🌻 Fourier</strong></td><td>Anti-division of labour + Small-scale communities (Phalanxes)</td></tr>
+        <tr><td><strong>🔬 Saint-Simon</strong></td><td>Only workers' class + Science & industry</td></tr>
+        <tr><td><strong>🏴 Proudhon</strong></td><td>"Property is theft" + Social anarchist + Mutualism</td></tr>
+        <tr><td><strong>⚒️ Marx & Engels</strong></td><td>Scientific socialism + Violent revolution</td></tr>
+        <tr><td><strong>📝 Bernstein</strong></td><td>Evolutionary socialism + Parliamentary road</td></tr>
+        <tr><td><strong>🗳️ Lassalle</strong></td><td>Constitutional transition to worker's state</td></tr>
+        <tr><td><strong>🐢 Webbs / Fabians</strong></td><td>Permeation + Middle-class led socialism</td></tr>
+        <tr><td><strong>⚔️ Sorel</strong></td><td>Syndicalism + General strike + "Reflections on Violence"</td></tr>
+        <tr><td><strong>🏛️ Cole</strong></td><td>Guild socialism + Functional parliament + Industrial democracy</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ FINAL EXAM POINTS ============ -->
+  <h2 class="part-header">
+    <span class="part-num">EXAM CRUNCH</span>
+    ✅ Final Examination Points
+  </h2>
+
+  <div class="card green-card reveal">
+    <div class="exam-point">
+      <span class="exam-num">1</span>
+      <p><strong>Equality</strong> is socialism's defining value — especially <strong>social equality</strong> ⚖️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">2</span>
+      <p><strong>Robert Owen</strong> first used the term "Socialist" in <strong>1827</strong> 📜</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">3</span>
+      <p><strong>Marx & Engels</strong> labeled early socialists "<strong>Utopian</strong>" for lack of scientific method 🕯️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">4</span>
+      <p><strong>Proudhon</strong> uniquely combined socialism with <strong>anarchism</strong> 🏴 — "Property is theft"</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">5</span>
+      <p>Two main branches: <strong>Revolutionary (Marxist)</strong> 🔥 vs <strong>Evolutionary (Democratic)</strong> 🌱</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">6</span>
+      <p>Five evolutionary types: <strong>Fabianism, German Social Democracy, Syndicalism, Revisionism, Guild Socialism</strong> 🌟</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">7</span>
+      <p>Key distinction: <strong>Evolutionary socialism</strong> reconciles working class with <strong>middle class</strong> interests 🤝</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">8</span>
+      <p><strong>Bernstein:</strong> "Socialism is a movement, not an end" — shift from teleological to process thinking 🛤️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">9</span>
+      <p><strong>Cole's trio:</strong> Functional Parliament + Functional Representation + Industrial Democracy 🏛️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">10</span>
+      <p><strong>Famous metaphor:</strong> "Socialism is like a hat that has lost its shape" — no single model 🎩</p>
+    </div>
+  </div>
+
+  <!-- ============ STAR QUOTE ============ -->
+  <div class="star-quote reveal">
+    🌟 "From each according to his ability, to each according to his needs" 🌟
+  </div>
+
+  <!-- ============ REVISION BOX ============ -->
+  <div class="revision-box reveal">
+    <p style="font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 18px; position: relative; z-index: 1;">🏁 ONE-LINE REVISION 🏁</p>
+    <p class="revision-text">
+      👉 Socialism — born as a response to industrial capitalism — defines itself through <strong style="color: var(--gold);">equality</strong> ⚖️, organic society 🌳, and social ownership 🤝.
+      It evolved from <strong style="color: var(--red-glow);">Utopian dreams</strong> (Owen, Fourier, Saint-Simon, Proudhon) 🕯️
+      into a great divide between <strong style="color: var(--red-glow);">Revolutionary Marxism</strong> ⚒️
+      and <strong style="color: var(--green-leaf);">Evolutionary Democracy</strong> 🌱
+      — the latter branching into Fabianism 🐢, German Social Democracy 🗳️, Syndicalism ⚒️, Revisionism 📝, and Guild Socialism 🏛️.
+    </p>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="footer">
+    <p><span class="footer-emoji">☭</span> <strong>SOCIALISM</strong></span></p>
+    <p style="margin-top: 12px; font-style: italic;">"The philosophers have only interpreted the world in various ways; the point is to change it." — Karl Marx ✊</p>
+    <p style="margin-top: 18px; font-size: 0.9rem;">✨ Crafted with revolution in the heart and reform in the mind ✨</p>
+<br><h1><strong style="color:var(--gold)">En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</strong></h1>
+  </div>
+
+</div>
+
+<script>
+  // Generate twinkling stars
+  const starsContainer = document.getElementById('stars');
+  const colors = ['#fbbf24', '#ef4444', '#c4b5fd', '#67e8f9', '#f9a8d4', '#86efac'];
+  for (let i = 0; i < 50; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 3 + 1;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.background = colors[Math.floor(Math.random() * colors.length)];
+    s.style.boxShadow = `0 0 ${size * 3}px ${s.style.background}`;
+    s.style.animationDuration = (Math.random() * 4 + 2) + 's';
+    s.style.animationDelay = Math.random() * 5 + 's';
+    starsContainer.appendChild(s);
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Title click ripple effect
+  document.querySelector('.main-title').addEventListener('click', function() {
+    this.style.animation = 'none';
+    setTimeout(() => { this.style.animation = 'shimmer 4s linear infinite'; }, 10);
+  });
+</script>
+
+</body>
+</html>

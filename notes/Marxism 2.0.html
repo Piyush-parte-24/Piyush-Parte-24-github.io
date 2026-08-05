@@ -1,0 +1,3141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌍 Marxism: The Ultimate Master Theory</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@600;900&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  /* ============ CORE RESET & ROOT ============ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --bg-deep: #0a0612;
+    --bg-soft: #14101f;
+    --bg-card: rgba(28, 22, 45, 0.7);
+    --crimson: #e63946;
+    --crimson-soft: #ff5566;
+    --gold: #ffd166;
+    --gold-soft: #f4c430;
+    --rose: #f72585;
+    --violet: #b5179e;
+    --indigo: #7209b7;
+    --sky: #4cc9f0;
+    --mint: #80ed99;
+    --text-main: #e8e3f0;
+    --text-soft: #b8b0c8;
+    --text-mute: #8a829c;
+    --border-glow: rgba(231, 57, 70, 0.3);
+  }
+  
+  html { scroll-behavior: smooth; }
+  
+  body {
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-main);
+    line-height: 1.75;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* ============ ANIMATED BACKGROUND ============ */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+      radial-gradient(circle at 15% 20%, rgba(231, 57, 70, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 85% 60%, rgba(114, 9, 183, 0.12) 0%, transparent 45%),
+      radial-gradient(circle at 50% 90%, rgba(255, 209, 102, 0.08) 0%, transparent 40%),
+      linear-gradient(180deg, #0a0612 0%, #14101f 50%, #0a0612 100%);
+    z-index: -2;
+    animation: bgPulse 20s ease-in-out infinite;
+  }
+  
+  @keyframes bgPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+  }
+  
+  /* Floating particles */
+  .particles {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .particle {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 15s infinite linear;
+    box-shadow: 0 0 10px var(--gold);
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-10vh) translateX(80px); opacity: 0; }
+  }
+  
+  /* ============ CONTAINER ============ */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  
+  /* ============ 🔥🔥🔥 ENRICHED HERO 🔥🔥🔥 ============ */
+  .hero {
+    text-align: center;
+    padding: 120px 20px 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    background: 
+      radial-gradient(ellipse at center, rgba(231, 57, 70, 0.25) 0%, transparent 70%),
+      linear-gradient(135deg, rgba(20, 16, 31, 0.95) 0%, rgba(40, 20, 30, 0.95) 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 
+      0 0 100px rgba(231, 57, 70, 0.25),
+      inset 0 0 80px rgba(0, 0, 0, 0.5);
+    animation: heroBorderGlow 8s ease-in-out infinite;
+  }
+  
+  @keyframes heroBorderGlow {
+    0%, 100% { box-shadow: 0 0 100px rgba(231, 57, 70, 0.25), inset 0 0 80px rgba(0, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 140px rgba(255, 209, 102, 0.35), 0 0 80px rgba(247, 37, 133, 0.3), inset 0 0 80px rgba(0, 0, 0, 0.5); }
+  }
+  
+  /* Rotating Hammer & Sickle Background */
+  .hero::before {
+    content: '☭';
+    position: absolute;
+    font-size: 700px;
+    opacity: 0.06;
+    color: var(--crimson);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateSlow 60s linear infinite, sickleGlow 6s ease-in-out infinite;
+    z-index: 0;
+    text-shadow: 0 0 60px rgba(231, 57, 70, 0.5);
+  }
+  
+  /* Second rotating star layer */
+  .hero::after {
+    content: '★';
+    position: absolute;
+    font-size: 400px;
+    opacity: 0.03;
+    color: var(--gold);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateReverse 45s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes rotateSlow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  @keyframes rotateReverse {
+    from { transform: translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+  
+  @keyframes sickleGlow {
+    0%, 100% { opacity: 0.04; filter: drop-shadow(0 0 20px var(--crimson)); }
+    50% { opacity: 0.10; filter: drop-shadow(0 0 50px var(--gold)); }
+  }
+  
+  .hero-content { position: relative; z-index: 2; }
+  
+  /* Pre-title flag emojis */
+  .hero-flags {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-flex;
+    gap: 20px;
+    animation: flagsWave 3s ease-in-out infinite;
+  }
+  
+  .hero-flags span {
+    display: inline-block;
+    animation: flagFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(231, 57, 70, 0.6));
+  }
+  
+  .hero-flags span:nth-child(1) { animation-delay: 0s; }
+  .hero-flags span:nth-child(2) { animation-delay: 0.5s; }
+  .hero-flags span:nth-child(3) { animation-delay: 1s; }
+  .hero-flags span:nth-child(4) { animation-delay: 1.5s; }
+  .hero-flags span:nth-child(5) { animation-delay: 2s; }
+  
+  @keyframes flagFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    75% { transform: translateY(-5px) rotate(5deg); }
+  }
+  
+  @keyframes flagsWave {
+    0%, 100% { letter-spacing: 0; }
+    50% { letter-spacing: 8px; }
+  }
+  
+  /* ============ 🌟 MAIN TITLE 🌟 ============ */
+  .hero h1.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #ef4444 0%, #fbbf24 30%, #ffffff 50%, #fbbf24 70%, #ef4444 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 8px;
+    margin: 25px 0 10px;
+    text-shadow: 0 0 90px rgba(239, 68, 68, 0.4);
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+    animation: shimmer 4s linear infinite;
+    line-height: 1.1;
+  }
+  
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+  
+  .hero h1.main-title:hover {
+    transform: scale(1.08) perspective(500px) rotateX(15deg);
+    letter-spacing: 15px;
+    filter: drop-shadow(0 0 40px rgba(239, 68, 68, 0.8));
+  }
+  
+  .hero .title-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    opacity: 0.95;
+    text-transform: uppercase;
+  }
+  
+  .hero-tagline {
+    font-size: 1.05rem;
+    color: var(--crimson-soft);
+    margin-bottom: 16px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.9;
+    animation: taglineGlow 3s ease-in-out infinite;
+  }
+  
+  @keyframes taglineGlow {
+    0%, 100% { text-shadow: 0 0 10px rgba(231, 57, 70, 0.5); letter-spacing: 6px; }
+    50% { text-shadow: 0 0 25px rgba(255, 209, 102, 0.8); letter-spacing: 10px; }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-style: italic;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+  }
+  
+  .hero-subtitle:hover {
+    color: var(--crimson-soft);
+    letter-spacing: 3px;
+    transform: scale(1.03);
+  }
+  
+  .hero-quote {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 28px 32px;
+    background: rgba(0, 0, 0, 0.35);
+    border-left: 4px solid var(--crimson);
+    border-right: 4px solid var(--gold);
+    border-radius: 14px;
+    font-size: 1.15rem;
+    color: var(--text-soft);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-quote::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 102, 0.15), transparent);
+    transition: left 1s ease;
+  }
+  
+  .hero-quote:hover::before { left: 100%; }
+  
+  .hero-quote:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(231, 57, 70, 0.3), 0 0 60px rgba(255, 209, 102, 0.2);
+    border-left-color: var(--gold);
+    border-right-color: var(--crimson);
+    border-left-width: 8px;
+    border-right-width: 8px;
+  }
+  
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+  
+  .badge {
+    padding: 10px 22px;
+    background: rgba(231, 57, 70, 0.15);
+    border: 1px solid var(--crimson);
+    border-radius: 30px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .badge::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    background: radial-gradient(circle, var(--gold), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+  
+  .badge:hover::before {
+    width: 200%; height: 200%;
+  }
+  
+  .badge:hover {
+    background: var(--crimson);
+    transform: translateY(-6px) rotate(-3deg) scale(1.1);
+    box-shadow: 0 15px 35px rgba(231, 57, 70, 0.6), 0 0 30px rgba(255, 209, 102, 0.4);
+    border-color: var(--gold);
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  /* ============ PART HEADERS ============ */
+  .part {
+    margin: 80px 0 40px;
+    position: relative;
+  }
+  
+  .part-header {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    padding: 24px 32px;
+    background: linear-gradient(90deg, rgba(231, 57, 70, 0.2) 0%, rgba(114, 9, 183, 0.15) 50%, transparent 100%);
+    border-left: 6px solid var(--crimson);
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .part-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 102, 0.15), transparent);
+    transition: left 0.8s ease;
+  }
+  
+  .part-header:hover::before { left: 100%; }
+  
+  .part-header:hover {
+    border-left-width: 12px;
+    transform: translateX(8px);
+    box-shadow: 0 10px 40px rgba(231, 57, 70, 0.25);
+  }
+  
+  .part-header span.gradient-text {
+    background: linear-gradient(135deg, var(--crimson-soft), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* ============ SECTION ============ */
+  .section {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 32px;
+    margin: 24px 0;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(180deg, var(--crimson), var(--gold), var(--rose));
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-6px);
+    border-color: rgba(231, 57, 70, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(231, 57, 70, 0.2);
+  }
+  
+  .section:hover::before { transform: scaleY(1); }
+  
+  .section h2 {
+    font-size: 1.7rem;
+    color: var(--gold);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px dashed rgba(255, 209, 102, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .section h3 {
+    font-size: 1.3rem;
+    color: var(--crimson-soft);
+    margin: 24px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .section h4 {
+    font-size: 1.1rem;
+    color: var(--sky);
+    margin: 18px 0 10px;
+  }
+  
+  .section p { color: var(--text-soft); margin-bottom: 14px; }
+  
+  /* ============ DEEP-DIVE STYLES ============ */
+  .deep-dive {
+    background: linear-gradient(135deg, rgba(231, 57, 70, 0.08), rgba(114, 9, 183, 0.08));
+    border: 2px solid var(--crimson);
+    border-radius: 20px;
+    padding: 36px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(231, 57, 70, 0.2);
+  }
+  
+  .deep-dive::before {
+    content: '☭';
+    position: absolute;
+    font-size: 400px;
+    opacity: 0.04;
+    color: var(--crimson);
+    top: 50%; right: -50px;
+    transform: translateY(-50%);
+    animation: rotateSlow 80s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .deep-dive > * { position: relative; z-index: 1; }
+  
+  .deep-dive-title {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--crimson-soft), var(--gold), var(--rose));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 16px;
+    animation: gradientShift 5s ease infinite;
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .deep-dive-quote {
+    text-align: center;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.05rem;
+    margin: 0 auto 30px;
+    padding: 14px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 700px;
+    border-left: 3px solid var(--gold);
+    border-right: 3px solid var(--gold);
+  }
+  
+  .step-card {
+    background: linear-gradient(135deg, rgba(20, 16, 31, 0.8), rgba(40, 20, 50, 0.6));
+    border-left: 4px solid var(--crimson);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 20px 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+  }
+  
+  .step-card:hover {
+    transform: translateX(10px) scale(1.01);
+    border-left-color: var(--gold);
+    border-left-width: 8px;
+    box-shadow: 0 15px 40px rgba(231, 57, 70, 0.2);
+    background: linear-gradient(135deg, rgba(40, 20, 50, 0.9), rgba(60, 30, 60, 0.7));
+  }
+  
+  .step-card .step-title {
+    color: var(--gold);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .step-card .step-num {
+    background: var(--crimson);
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.95rem;
+    box-shadow: 0 0 15px rgba(231, 57, 70, 0.5);
+    flex-shrink: 0;
+  }
+  
+  .callout {
+    background: linear-gradient(135deg, rgba(247, 37, 133, 0.12), rgba(255, 209, 102, 0.08));
+    border: 2px solid var(--gold);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 18px 0;
+    font-size: 1.05rem;
+    color: var(--text-main);
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  
+  .callout:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 209, 102, 0.25);
+    border-color: var(--crimson);
+  }
+  
+  .callout .callout-icon {
+    font-size: 1.4rem;
+    margin-right: 8px;
+  }
+  
+  .visual-pyramid {
+    background: linear-gradient(135deg, #0d0818, #1a0f25);
+    border: 1px solid rgba(255, 209, 102, 0.25);
+    border-radius: 14px;
+    padding: 28px;
+    margin: 24px 0;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    color: var(--mint);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+  }
+  
+  .visual-pyramid:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 40px rgba(255, 209, 102, 0.2), inset 0 0 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .visual-pyramid .top-box, .visual-pyramid .bot-box {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 8px auto;
+    transition: all 0.4s ease;
+  }
+  
+  .visual-pyramid .top-box {
+    border: 2px solid var(--sky);
+    width: 95%;
+    color: var(--sky);
+  }
+  
+  .visual-pyramid .bot-box {
+    border: 2px solid var(--crimson);
+    width: 80%;
+    color: var(--crimson-soft);
+  }
+  
+  .visual-pyramid .top-box:hover, .visual-pyramid .bot-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(231, 57, 70, 0.3);
+  }
+  
+  .visual-pyramid .arrow-up {
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin: 6px 0;
+    animation: arrowPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes arrowPulse {
+    0%, 100% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(-6px); opacity: 1; }
+  }
+  
+  .golden-rule {
+    background: linear-gradient(135deg, #2a1010, #1a1a0a);
+    border: 3px dashed var(--gold);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 28px 0;
+    text-align: center;
+    font-family: 'Cascadia Code', monospace;
+    color: var(--gold);
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .golden-rule::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 209, 102, 0.1), transparent);
+    animation: rotateSlow 8s linear infinite;
+    pointer-events: none;
+  }
+  
+  .golden-rule > * { position: relative; z-index: 1; }
+  
+  .golden-rule:hover {
+    border-style: solid;
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(255, 209, 102, 0.35);
+    background: linear-gradient(135deg, #3a1515, #2a2a0a);
+  }
+  
+  .golden-rule .rule-line {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 10px 0;
+    color: var(--crimson-soft);
+  }
+  
+  .golden-rule .check-line {
+    color: var(--mint);
+    margin: 8px 0;
+  }
+  
+  .golden-rule .cross-line {
+    color: var(--crimson);
+    margin: 8px 0;
+  }
+  
+  /* ============ TABLES ============ */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(10, 6, 18, 0.6);
+    font-size: 0.95rem;
+  }
+  
+  thead {
+    background: linear-gradient(90deg, var(--crimson), var(--violet));
+  }
+  
+  thead th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+  
+  tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  tbody tr:hover {
+    background: linear-gradient(90deg, rgba(231, 57, 70, 0.12), rgba(114, 9, 183, 0.08));
+  }
+  
+  tbody td {
+    padding: 14px 16px;
+    color: var(--text-soft);
+    vertical-align: top;
+  }
+  
+  tbody td:first-child {
+    color: var(--gold-soft);
+    font-weight: 600;
+  }
+  
+  /* ============ ASCII DIAGRAMS / CODE ============ */
+  pre.diagram {
+    background: linear-gradient(135deg, #0d0818 0%, #1a0f25 100%);
+    border: 1px solid rgba(255, 209, 102, 0.2);
+    border-radius: 14px;
+    padding: 30px 24px 24px;
+    overflow-x: auto;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    color: var(--mint);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+  }
+  
+  pre.diagram::before {
+    content: '◉ ◉ ◉';
+    position: absolute;
+    top: 10px; left: 16px;
+    color: var(--crimson);
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+  }
+  
+  pre.diagram:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.15), inset 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* ============ INSIGHT / WARNING / QUOTE BOXES ============ */
+  .insight {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(128, 237, 153, 0.08));
+    border-left: 5px solid var(--sky);
+    padding: 24px 24px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    color: var(--text-main);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .insight::before {
+    content: '💡';
+    position: absolute;
+    top: -10px; left: 20px;
+    background: var(--bg-deep);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+  }
+  
+  .insight:hover {
+    transform: translateX(8px);
+    border-left-width: 10px;
+    box-shadow: 0 10px 30px rgba(76, 201, 240, 0.15);
+  }
+  
+  .warning {
+    background: linear-gradient(135deg, rgba(255, 209, 102, 0.1), rgba(247, 37, 133, 0.05));
+    border-left: 5px solid var(--gold);
+    padding: 24px 24px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .warning::before {
+    content: '⚠️';
+    position: absolute;
+    top: -10px; left: 20px;
+    background: var(--bg-deep);
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+  
+  .quote-block {
+    background: linear-gradient(135deg, rgba(247, 37, 133, 0.08), rgba(114, 9, 183, 0.08));
+    border-left: 5px solid var(--rose);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--text-main);
+    font-size: 1.05rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .quote-block::before {
+    content: '"';
+    position: absolute;
+    top: -20px; left: 15px;
+    font-size: 5rem;
+    color: var(--rose);
+    font-family: Georgia, serif;
+    opacity: 0.5;
+    line-height: 1;
+  }
+  
+  .quote-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(247, 37, 133, 0.15);
+  }
+  
+  /* ============ PYRAMID DIAGRAM ============ */
+  .pyramid-visual {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .pyramid-level {
+    margin: 4px auto;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    cursor: default;
+    position: relative;
+  }
+  
+  .super-level {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.15), rgba(114, 9, 183, 0.2));
+    border: 2px solid var(--sky);
+    width: 95%;
+  }
+  
+  .base-level {
+    background: linear-gradient(135deg, rgba(231, 57, 70, 0.2), rgba(255, 209, 102, 0.15));
+    border: 2px solid var(--crimson);
+    width: 80%;
+  }
+  
+  .pyramid-level:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .pyramid-level .label {
+    font-weight: 800;
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .pyramid-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .pyramid-chip {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .pyramid-chip:hover {
+    background: var(--crimson);
+    transform: scale(1.1);
+  }
+  
+  /* ============ FLOW DIAGRAM ============ */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 30px 0;
+    align-items: center;
+  }
+  
+  .flow-step {
+    background: linear-gradient(135deg, rgba(231, 57, 70, 0.15), rgba(114, 9, 183, 0.1));
+    border: 2px solid var(--crimson);
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+  
+  .flow-step:hover {
+    background: linear-gradient(135deg, rgba(231, 57, 70, 0.3), rgba(247, 37, 133, 0.2));
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(231, 57, 70, 0.3);
+  }
+  
+  .flow-arrow {
+    color: var(--gold);
+    font-size: 1.8rem;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+  
+  /* ============ FORMULA BOX ============ */
+  .formula {
+    background: linear-gradient(135deg, #1a0a1a 0%, #0a1a1a 100%);
+    border: 2px dashed var(--gold);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Cascadia Code', monospace;
+    color: var(--gold);
+    font-size: 1.05rem;
+    margin: 16px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .formula:hover {
+    border-style: solid;
+    background: linear-gradient(135deg, #2a0a2a 0%, #0a2a2a 100%);
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.2);
+  }
+  
+  /* ============ STAGE CARDS ============ */
+  .stage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+  }
+  
+  .stage-card {
+    background: linear-gradient(135deg, rgba(28, 22, 45, 0.9), rgba(40, 20, 50, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 22px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stage-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 80px; height: 80px;
+    background: radial-gradient(circle, rgba(231, 57, 70, 0.2), transparent);
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+    transition: all 0.4s ease;
+  }
+  
+  .stage-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--crimson);
+    box-shadow: 0 20px 50px rgba(231, 57, 70, 0.25);
+  }
+  
+  .stage-card:hover::after {
+    transform: translate(20px, -20px) scale(1.5);
+  }
+  
+  .stage-card .stage-num {
+    display: inline-block;
+    background: var(--crimson);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .stage-card h4 {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  /* ============ 🌿 BRANCH CARD (NEW for Part 7) ============ */
+  .branch-card {
+    background: linear-gradient(135deg, rgba(28, 22, 45, 0.95), rgba(40, 15, 50, 0.85));
+    border: 2px solid rgba(231, 57, 70, 0.3);
+    border-radius: 18px;
+    padding: 28px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px; height: 100%;
+    background: linear-gradient(180deg, var(--crimson), var(--gold), var(--rose));
+  }
+  
+  .branch-card::after {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(231, 57, 70, 0.15), transparent 70%);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .branch-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: var(--gold);
+    box-shadow: 0 25px 60px rgba(231, 57, 70, 0.3), 0 0 40px rgba(255, 209, 102, 0.15);
+  }
+  
+  .branch-card:hover::after {
+    transform: scale(1.5);
+  }
+  
+  .branch-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .branch-emoji {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 12px rgba(255, 209, 102, 0.5));
+    flex-shrink: 0;
+  }
+  
+  .branch-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gold), var(--crimson-soft));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .branch-tag {
+    background: var(--crimson);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  .branch-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 16px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .branch-meta-item {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-left: 3px solid var(--sky);
+    font-size: 0.9rem;
+  }
+  
+  .branch-meta-item .meta-label {
+    color: var(--sky);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .branch-meta-item .meta-value {
+    color: var(--text-main);
+  }
+  
+  .branch-body {
+    color: var(--text-soft);
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .branch-body p { margin-bottom: 12px; }
+  
+  .branch-concepts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0;
+  }
+  
+  .concept-chip {
+    background: rgba(247, 37, 133, 0.15);
+    border: 1px solid var(--rose);
+    color: var(--rose);
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .concept-chip:hover {
+    background: var(--rose);
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(247, 37, 133, 0.4);
+  }
+  
+  /* Timeline for Part 7 */
+  .timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--crimson), var(--gold), var(--rose), var(--sky));
+    border-radius: 3px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding: 12px 0 12px 24px;
+    margin-bottom: 14px;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px; top: 18px;
+    width: 16px; height: 16px;
+    background: var(--gold);
+    border: 3px solid var(--bg-deep);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--gold);
+  }
+  
+  .timeline-year {
+    color: var(--crimson-soft);
+    font-weight: 800;
+    font-size: 1.05rem;
+    margin-right: 10px;
+  }
+  
+  .timeline-text {
+    color: var(--text-soft);
+  }
+  
+  /* ============ TOC ============ */
+  .toc {
+    background: linear-gradient(135deg, rgba(20, 16, 31, 0.95), rgba(40, 20, 30, 0.85));
+    border: 1px solid var(--crimson);
+    border-radius: 18px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 0 40px rgba(231, 57, 70, 0.15);
+  }
+  
+  .toc h2 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  
+  .toc-grid a {
+    display: block;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid var(--crimson);
+    color: var(--text-soft);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .toc-grid a:hover {
+    background: rgba(231, 57, 70, 0.2);
+    border-left-color: var(--gold);
+    border-left-width: 6px;
+    color: var(--gold);
+    transform: translateX(6px);
+  }
+  
+  /* ============ KEY-VALUE LIST ============ */
+  .kv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  
+  .kv-item {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-left: 3px solid var(--violet);
+    transition: all 0.3s ease;
+  }
+  
+  .kv-item:hover {
+    border-left-color: var(--gold);
+    background: rgba(231, 57, 70, 0.08);
+    transform: translateX(6px);
+  }
+  
+  .kv-item .k {
+    font-weight: 700;
+    color: var(--sky);
+    min-width: 140px;
+  }
+  
+  .kv-item .v { color: var(--text-soft); flex: 1; }
+  
+  /* ============ FINAL SYNTHESIS ============ */
+  .synthesis {
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(231, 57, 70, 0.25), transparent 60%),
+      radial-gradient(circle at 70% 70%, rgba(255, 209, 102, 0.2), transparent 60%),
+      linear-gradient(135deg, #1a0a1f, #0f0a1a);
+    border: 2px solid var(--gold);
+    border-radius: 24px;
+    padding: 50px 40px;
+    margin: 60px 0;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(255, 209, 102, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .synthesis::before {
+    content: '✊';
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.05;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .synthesis h2 {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, var(--crimson), var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .synthesis p {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.9;
+    position: relative;
+  }
+  
+  /* ============ MNEMONIC BOX ============ */
+  .mnemonic {
+    background: linear-gradient(135deg, #1f0a1f, #0a1f1a);
+    border: 2px solid var(--rose);
+    border-radius: 16px;
+    padding: 28px;
+    margin: 24px 0;
+    font-family: 'Cascadia Code', monospace;
+    color: var(--mint);
+    font-size: 1rem;
+    line-height: 2;
+    box-shadow: 0 0 30px rgba(247, 37, 133, 0.2);
+  }
+  
+  .mnemonic strong {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-right: 12px;
+  }
+  
+  /* ============ FOOTER ============ */
+  .footer {
+    text-align: center;
+    padding: 60px 20px 40px;
+    color: var(--text-mute);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 80px;
+  }
+  
+  .footer .hammer-sickle {
+    font-size: 3rem;
+    color: var(--crimson);
+    animation: rotateSlow 20s linear infinite;
+    display: inline-block;
+  }
+  
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .container { padding: 20px 14px; }
+    .hero { padding: 70px 20px 60px; }
+    .hero::before { font-size: 400px; }
+    .hero h1.main-title { letter-spacing: 4px; }
+    .section { padding: 22px 18px; }
+    .deep-dive { padding: 24px 18px; }
+    .branch-card { padding: 22px 18px; }
+    .kv-item { flex-direction: column; gap: 4px; }
+    .kv-item .k { min-width: auto; }
+    pre.diagram { font-size: 0.7rem; padding: 30px 14px 14px; }
+    thead th, tbody td { padding: 10px 12px; font-size: 0.85rem; }
+  }
+  
+  /* ============ SCROLL REVEAL (FIXED) ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Fallback: if JS fails or section is too large to trigger observer, show content */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
+  }
+  .no-js .reveal { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="container">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-flags">
+        <span>🗺</span>      </div>
+      <div class="hero-tagline"></div>
+      <h1 class="main-title">☭ MARXISM</h1>
+<p> ‎ ‎ ‎ ‎</p>
+<p> ‎ ‎ ‎ ‎</p>
+      <div class="title-sub"><em><b>AUTEUR: PIYUSH PARTE</em></b>
+</div>
+      <div class="hero-quote">
+        "<b><em>The philosophers have only <strong style="color:var(--crimson-soft)">interpreted</strong> the world, in various ways; the point is to <strong style="color:var(--gold)">change it</em></b></strong>."
+        <br><b>~ <em>Karl Marx, Theses on Feuerbach ☭</b></em>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">📚 Philosophy</span>
+        <span class="badge">💰 Economics</span>
+        <span class="badge">⚖️ Sociology</span>
+        <span class="badge">✊ Strategy</span>
+        <span class="badge">🔄 Dialectics</span>
+        <span class="badge">🏛️ History</span>
+        <span class="badge">🔥 Revolution</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <nav class="toc">
+    <h2>🧭 NAVIGATION MAP</h2>
+    <div class="toc-grid">
+      <a href="#part1">🧠 1. Foundational Layer</a>
+      <a href="#part2">⚙️ 2. Core Framework</a>
+      <a href="#part3">📜 3. Historical Materialism</a>
+      <a href="#part4">🔄 4. Dialectical Materialism</a>
+      <a href="#part5">🔥 5. Revolution Theory</a>
+      <a href="#part6">🏁 6. Dictatorship & Communism</a>
+      <a href="#part7">🌿 7. Branches of Marxism</a>
+      <a href="#part8">👨‍🏫 8. Key Thinkers</a>
+      <a href="#part9">📚 9. Master Book List</a>
+      <a href="#part10">⚠️ 10. Critical Evaluation</a>
+      <a href="#part11">💡 11. Relevance Today</a>
+      <a href="#part12">🎯 12. Exam Revision</a>
+    </div>
+  </nav>
+
+  <!-- ============ PART 1: FOUNDATIONAL LAYER ============ -->
+  <section id="part1" class="part reveal">
+    <h2 class="part-header">🧠 PART 1: <span class="gradient-text">Foundational Layer — The DNA of Marxism</span></h2>
+
+    <div class="section">
+      <h2>🔷 1.1 What is Marxism? (Precise Definition)</h2>
+<p><b>☭ Marx (Karl Marx) + ism (doctrine) = </b><strong style="color:var(--crimson-soft)">"The Doctrine of Marx"</strong></p>
+<p><em>❄️ A theory that history is driven by <b>class struggle</b> between the <b>rich (Bourgeoisie)</b> & <b>workers (proletariat)</b>, Capitalism exploits labor, and the goal is a <b>classless, stateless communist society.</b></em></p>
+<p><em>❄️ Communism is the <b>ultimate goal</b> of Marxism,<br>❄️ Marxism is the overarching <b>political & economic theory</b> developed by Karl Marx,<br>❄️ Communism is the <b>final stage</b> of that theory.</em></p>
+      <p><em>❄️ Marxism is not a single doctrine but a <strong style="color:var(--gold)">scientific synthesis</strong> — at once a philosophy, an economics, a sociology, and a political strategy. It is a theory <em>and</em> a call to action.<em></p>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>🎯 Definition</td><td>A scientific theory of society, economy, and history that explains exploitation, predicts revolution, and prescribes communism</td></tr>
+          <tr><td>🌐 Nature</td><td>Philosophy + Economics + Sociology + Political Strategy</td></tr>
+          <tr><td>❓ Core Question</td><td>Why does inequality exist, and how can it be permanently abolished?</td></tr>
+          <tr><td>🔬 Method</td><td>Dialectical Materialism (analysis through contradictions)</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 1.2 The Three Intellectual Roots (Synthesis Theory)</h2>
+      <pre class="diagram">
+  MARXISM  =  🇩🇪 German Philosophy  +  🇬🇧 British Economics  +  🇫🇷 French Socialism
+
+         ╔══════════════╗      ╔══════════════╗      ╔══════════════╗
+         ║   DIALECTIC  ║  +   ║   LABOR &amp;    ║  +   ║   SOCIALIST  ║
+         ║  MATERIALISM ║      ║ VALUE THEORY ║      ║    VISION    ║
+         ╚══════════════╝      ╚══════════════╝      ╚══════════════╝
+                                       │
+                                       ▼
+                            ⚡ REVOLUTIONARY SCIENCE ⚡
+      </pre>
+
+      <h3>🇩🇪 German Philosophy</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Thinker</th><th>Concept Taken</th><th>How Marx Transformed It</th></tr></thead>
+        <tbody>
+          <tr><td>Hegel</td><td>Dialectics (thesis → antithesis → synthesis)</td><td>Flipped from <strong>IDEALIST</strong> (ideas drive history) to <strong>MATERIALIST</strong> (economics drive history)</td></tr>
+          <tr><td>Feuerbach</td><td>Materialism (reality is physical, not spiritual)</td><td>Extended from religion-critique to society-critique</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>🇬🇧 British Political Economy</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Thinker</th><th>Concept Taken</th><th>Marx's Use</th></tr></thead>
+        <tbody>
+          <tr><td>Adam Smith</td><td>Labor as source of value</td><td>Built Labor Theory of Value</td></tr>
+          <tr><td>David Ricardo</td><td>Value determined by labor time</td><td>Developed Surplus Value theory</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>🇫🇷 French Socialism</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Thinker</th><th>Concept Taken</th></tr></thead>
+        <tbody>
+          <tr><td>Saint-Simon</td><td>Planned economy vision</td></tr>
+          <tr><td>Fourier</td><td>Critique of capitalist inequality</td></tr>
+          <tr><td>Proudhon</td><td>"Property is theft"</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="insight">Marx didn't invent these ideas in isolation — he <strong>synthesized</strong> three streams of European thought into a unified revolutionary science. The genius was in the combination.</div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 1.3 Historical Context — Why Marx Wrote</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Factor</th><th>Reality of 1840s–1860s</th></tr></thead>
+        <tbody>
+          <tr><td>🏭 Industrial Revolution</td><td>Factories replacing workshops</td></tr>
+          <tr><td>⏰ Working Hours</td><td>14–16 hours daily</td></tr>
+          <tr><td>👶 Child Labor</td><td>Children as young as 5 working</td></tr>
+          <tr><td>💰 Wages</td><td>Barely subsistence level</td></tr>
+          <tr><td>🏠 Living Conditions</td><td>Slums, overcrowding, disease</td></tr>
+          <tr><td>⚖️ Legal Rights</td><td>Workers had none; unions were illegal</td></tr>
+        </tbody>
+      </table></div>
+      <div class="insight">Marx wasn't <em>imagining</em> oppression — he was <strong>documenting</strong> it. Engels' <em>Condition of the Working Class in England</em> (1845) is essentially industrial ethnography.</div>
+    </div>
+  </section>
+
+  <!-- ============ PART 2: CORE FRAMEWORK ============ -->
+  <section id="part2" class="part reveal">
+    <h2 class="part-header">⚙️ PART 2: <span class="gradient-text">Core Theoretical Framework</span></h2>
+
+    <div class="section">
+      <h2>🔴 2.1 Base &amp; Superstructure — The Social Pyramid</h2>
+
+      <div class="pyramid-visual">
+        <div class="pyramid-level super-level">
+          <div class="label">🏛️ SUPERSTRUCTURE — Shaped by the Base</div>
+          <div class="pyramid-items">
+            <span class="pyramid-chip">⚖️ Law</span>
+            <span class="pyramid-chip">🏛️ State</span>
+            <span class="pyramid-chip">⛪ Religion</span>
+            <span class="pyramid-chip">🏫 Education</span>
+            <span class="pyramid-chip">🎭 Culture</span>
+            <span class="pyramid-chip">📰 Media</span>
+          </div>
+        </div>
+        <div class="pyramid-level base-level">
+          <div class="label">⚒️ BASE — The Economic Foundation</div>
+          <div class="pyramid-items">
+            <span class="pyramid-chip">🏭 Forces of Production</span>
+            <span class="pyramid-chip">🤝 Relations of Production</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEEP DIVE -->
+      <div class="deep-dive">
+        <h2 class="deep-dive-title">🏛️ BASE &amp; SUPERSTRUCTURE: THE SOCIAL PYRAMID 🏗️</h2>
+        <div class="deep-dive-quote">
+          "It's not the consciousness of men that determines their being, but their social being that determines their consciousness." — <strong style="color:var(--crimson-soft)">Marx</strong>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">1</span>🧱 THE CORE IDEA (ONE SENTENCE)</div>
+          <p style="color:var(--text-main); font-size:1.1rem;">
+            👉 <strong style="color:var(--gold)">The economy (Base) shapes everything else in society (Superstructure).</strong><br>
+            Change the Base → Superstructure changes automatically.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">2</span>📐 VISUAL NOTE (PICTURE IN WORDS)</div>
+          <div class="visual-pyramid">
+            <div class="top-box">
+              🏛️ <strong>SUPERSTRUCTURE</strong><br>
+              ⚖️ Law &nbsp;&nbsp; 🏛️ State &nbsp;&nbsp; ⛪ Religion<br>
+              📚 Education &nbsp;&nbsp; 🎭 Culture &nbsp;&nbsp; 📰 Media
+            </div>
+            <div class="arrow-up">⬆<br>(determined by)<br>⬆</div>
+            <div class="bot-box">
+              🏭 <strong>BASE</strong><br>
+              💰 Ownership + 🛠️ Technology<br>
+              👔 Boss ↔ 👷 Worker relations
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">3</span>🧩 BASE = ECONOMIC FOUNDATION (THE BOTTOM FLOOR)</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Emoji</th><th>Component</th><th>Meaning</th><th>Example in Capitalism</th></tr></thead>
+            <tbody>
+              <tr><td>🛠️</td><td><strong>Forces of Production</strong></td><td>Tools, machines, tech, skills</td><td>AI, robots, factories, computers</td></tr>
+              <tr><td>🤝</td><td><strong>Relations of Production</strong></td><td>Who owns what? Who works for whom?</td><td>👨‍💼 Boss owns → 👷 Worker sells labor</td></tr>
+              <tr><td>💰</td><td><strong>Ownership</strong></td><td>Private vs public</td><td>🏭 Factory owned by capitalist, not workers</td></tr>
+            </tbody>
+          </table></div>
+          <div class="callout">
+            <span class="callout-icon">🔥</span><strong>Base (Foundation) = <strong style="color:var(--gold)">The economic foundation of society :-</strong><br><strong style="color:var(--crimson-soft)"><em>Means/force of production</em></strong> <strong style="color:var(--gold)"><b>+</b></strong> <strong style="color:var(--crimson-soft)"><em>Relations of production</em></strong> <br><strong style="color:var(--crimson-soft)">❄️ Means</strong> - factories, land, tools, labour power, tech, resources <br><strong style="color:var(--crimson-soft)">❄️ Relation</strong> - who owns what, employer-worker relations</br> <br>☣️ Simply: HOW a society produces things & WHO controls it.<br>☣️ How society produces food, clothes, phones — and who owns & control the means of production, who gets the profit.</strong>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">4</span>🏛️ SUPERSTRUCTURE = EVERYTHING ELSE (THE TOP FLOORS)</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Emoji</th><th>Institution</th><th>Its Job in Capitalism</th></tr></thead>
+            <tbody>
+              <tr><td>⚖️</td><td><strong>Law</strong></td><td>Protects private property ("trespassing is crime")</td></tr>
+              <tr><td>🏛️</td><td><strong>State (Govt)</strong></td><td>Makes rules that help bosses (tax breaks for rich)</td></tr>
+              <tr><td>⛪</td><td><strong>Religion</strong></td><td>Says "be poor on Earth, get heaven later"</td></tr>
+              <tr><td>📚</td><td><strong>Education</strong></td><td>Trains obedient workers (follow orders, don't question)</td></tr>
+              <tr><td>🎭</td><td><strong>Culture</strong></td><td>Normalizes greed, competition, "hustle culture"</td></tr>
+              <tr><td>📰</td><td><strong>Media</strong></td><td>Blames poor people for being poor; calls strikes "chaos"</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+<div class="callout">
+            <span class="callout-icon">🔥</span><strong>SUPERSTRUCTURE (Everything built on top) = <strong style="color:var(--gold)">All non-economic institutions that arise from the base:-</strong><br>╰> Law & politics
+<br>╰> Religion & ideology
+<br>╰> Education, art, culture
+<br>╰> Family structures
+</div>
+</div>
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">5</span>🔗 THE GOLDEN RULE (MEMORIZE THIS)</div>
+          <div class="golden-rule">
+            <div class="rule-line">
+              🏭 BASE &nbsp;→→→&nbsp; 🏛️ SUPERSTRUCTURE
+            </div>
+            <div style="color:var(--text-soft); margin: 12px 0;">
+              (economy, work, ownership) &nbsp;<em>determines</em>&nbsp; (laws, ideas, religion, art)
+            </div>
+            <div class="check-line">✅ If Base changes → Superstructure changes automatically.</div>
+            <div class="cross-line">❌ Superstructure CANNOT permanently change Base.</div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">6</span>🌍 REAL-WORLD EXAMPLES (EASY TO REMEMBER)</div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>If Base looks like…</th><th>Superstructure becomes…</th></tr></thead>
+            <tbody>
+              <tr><td>🏰 <strong>Feudalism</strong> (land owned by lords, serfs work)</td><td>⛪ Church says "God chose kings"; ⚖️ Law says "serf can't leave land"</td></tr>
+              <tr><td>🏭 <strong>Capitalism</strong> (factories owned by bosses, workers get wages)</td><td>📰 Media says "anyone can be rich"; 🎓 School teaches "work hard, get ahead"</td></tr>
+              <tr><td>🚩 <strong>Socialism</strong> (factories owned by workers together)</td><td>⚖️ Law protects workers; 🎭 Culture celebrates solidarity, not greed</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">7</span>🧠 DEEP INSIGHT (EXAM SMART)</div>
+          <div class="callout">
+            <span class="callout-icon">💡</span><strong>Superstructure protects Base.</strong><br><br>
+            Religion, law, and media don't just sit there — they <strong style="color:var(--gold)">convince you</strong> that capitalism is natural, fair, and permanent.<br><br>
+            That's why Marx called religion <em style="color:var(--rose)">"opium of the people"</em> — it numbs the pain so you don't fight the system.
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-title"><span class="step-num">8</span>⚡ REVISION CHEAT SHEET (USE BEFORE EXAM)</div>
+          <div class="visual-pyramid">
+            <div class="bot-box" style="border-color: var(--crimson); color: var(--crimson-soft);">
+              🔽 <strong>BASE (bottom)</strong> = 🛠️ Forces + 🤝 Relations + 💰 Ownership
+            </div>
+            <div class="arrow-up">│<br>DETERMINES (like a shadow)<br>▼</div>
+            <div class="top-box" style="border-color: var(--sky); color: var(--sky);">
+              🔼 <strong>SUPERSTRUCTURE (top)</strong> = ⚖️ Law &nbsp; 🏛️ State &nbsp; ⛪ Religion &nbsp; 📚 Edu &nbsp; 🎭 Culture &nbsp; 📰 Media
+            </div>
+          </div>
+          <div class="callout" style="text-align: center; font-size: 1.15rem;">
+            <span class="callout-icon">🎯</span><strong style="color:var(--gold)">One-line takeaway:</strong><br>
+            <em>"How you make your living (Base) decides what you believe (Superstructure)."</em>
+          </div>
+        </div>
+      </div>
+      <!-- END DEEP DIVE -->
+
+      <h3>📖 Detailed Definitions</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>Definition</th><th>Example in Capitalism</th></tr></thead>
+        <tbody>
+          <tr><td>BASE (Infrastructure)</td><td>Economic foundation of society</td><td>Private ownership of factories, banks, land</td></tr>
+          <tr><td>Forces of Production</td><td>Technology, tools, skills, raw materials</td><td>AI, assembly lines, computers, oil</td></tr>
+          <tr><td>Relations of Production</td><td>Social relationships of ownership</td><td>Boss–employee, landlord–tenant, lender–borrower</td></tr>
+          <tr><td>SUPERSTRUCTURE</td><td>Non-economic institutions &amp; ideas</td><td>Courts, parliament, churches, schools, media</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="formula">🔥 THE GOLDEN RULE: BASE → DETERMINES → SUPERSTRUCTURE</div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Economic Base (Capitalism)</th><th>Produces This Superstructure</th></tr></thead>
+        <tbody>
+          <tr><td>Private property</td><td>Laws protecting owners</td></tr>
+<tr><td>Private ownership of factories</td><td>Laws protecting private property</td></tr>
+<tr><td>Profit-driven economy</td><td>Ideology: "Hard work = success"</td></tr>
+<tr><td>Bourgeoisie in control</td><td>State/govt protects ruling class interests</td></tr>
+          <tr><td>Profit motive</td><td>Ideology that "greed is good"</td></tr>
+          <tr><td>Wage labor</td><td>Education producing obedient workers</td></tr>
+          <tr><td>Competition</td><td>Culture of individualism</td></tr>
+        </tbody>
+      </table></div>
+
+<div class="callout" style="text-align: center; font-size: 1.15rem;">
+            <span class="callout-icon">✨</span><strong style="color:var(--gold)">"The base determines the superstructure"</strong><span class="callout-icon">✨</span><br>
+            <em>The economic system shapes and controls all social, political, and cultural life — not the other way around</em>
+          </div>
+
+<div class="callout" style="text-align: center; font-size: 1.15rem;">
+            <span class="callout-icon">☭</span><strong style="color:var(--gold-soft)">"Marx said the superstructure justifies and maintains the base — it makes the existing economic order seem natural and fair, even when it benefits only the ruling class. This is what he called ideology as false consciousness."</strong><span class="callout-icon">☭</span><br>
+            </div>
+
+
+      <h3>💡 How Superstructure Legitimizes Exploitation</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Institution</th><th>Message It Spreads</th><th>True Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>⛪ Religion</td><td>"Rich go to heaven if they're good"</td><td>Keep poor accepting suffering</td></tr>
+          <tr><td>⚖️ Law</td><td>"Contracts are sacred"</td><td>Protect property rights of owners</td></tr>
+          <tr><td>🏫 Education</td><td>"Work hard, you'll succeed"</td><td>Hide structural barriers</td></tr>
+          <tr><td>📰 Media</td><td>"Taxes are theft from job creators"</td><td>Defend capitalist interests</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="warning"><strong>Advanced Nuance:</strong> The relationship is not strictly one-way. The superstructure has <em>relative autonomy</em> — it can sometimes push back on the base (e.g., labor laws, welfare states). But <strong>"in the last instance"</strong> (Engels), the base wins.</div>
+    </div>
+
+    <!-- 2.2 -->
+    <div class="section">
+      <h2>🔴 2.2 Labor Theory of Value &amp; Surplus Value — The Exploitation Mechanism</h2>
+
+      <pre class="diagram">
+   ┌──────────────────────────────────────────────────────────┐
+   │                                                          │
+   │   👷 Worker produces value  →  $100 in 8 hours           │
+   │                                       ↓                  │
+   │   💵 Worker paid wage      →  $40 (subsistence only)     │
+   │                                       ↓                  │
+   │   💰 SURPLUS VALUE         →  $60 (kept by capitalist)   │
+   │                                       ↓                  │
+   │   🎩 Capitalist's profit   →  $60                        │
+   │                                                          │
+   └──────────────────────────────────────────────────────────┘
+      </pre>
+
+      <h3>📖 Definitions</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>Precise Definition</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td>Labor Theory of Value</td><td>The value of a commodity = the socially necessary labor time to produce it</td><td>Value = avg labor hours × social complexity</td></tr>
+          <tr><td>Use Value</td><td>The utility of a thing (what it does)</td><td>Shoes protect feet</td></tr>
+          <tr><td>Exchange Value</td><td>What a thing trades for (price)</td><td>Shoes = $50</td></tr>
+          <tr><td>Surplus Value</td><td>Difference between value workers create and wages they receive</td><td>SV = Created Value − Wage</td></tr>
+          <tr><td>Rate of Exploitation</td><td>Ratio of surplus value to wages</td><td>(SV ÷ Wages) × 100%</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>🔍 How Capitalists Increase Surplus Value</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Method</th><th>Description</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Absolute Surplus Value</td><td>Extend working hours</td><td>10 hrs → 12 hrs</td></tr>
+          <tr><td>Relative Surplus Value</td><td>Increase productivity (same hours, more output)</td><td>Machines produce more per hour</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="insight"><strong>Exploitation is not theft</strong> (illegal taking) — it is <strong>systemic extraction</strong> built into the wage-labor relationship itself. The worker <em>agrees</em> to be exploited because the alternative is starvation. The contract appears free; the underlying compulsion is invisible.</div>
+    </div>
+
+    <!-- 2.3 ALIENATION -->
+    <div class="section">
+      <h2>🔴 2.3 Alienation — The Psychological Damage</h2>
+      <p><strong style="color:var(--gold)">Alienation</strong> is the process by which workers become severed from their human essence (<em>Gattungswesen</em> — species-being) under capitalism.</p>
+
+      <h3>🔗 The 4 Types of Alienation</h3>
+      <div class="stage-grid">
+        <div class="stage-card">
+          <span class="stage-num">TYPE 1</span>
+          <h4>🏭 From the Product</h4>
+          <p>The worker doesn't own what they make. The assembly-line worker never sees the final car they helped build; it belongs to someone else from the moment it exists.</p>
+        </div>
+        <div class="stage-card">
+          <span class="stage-num">TYPE 2</span>
+          <h4>⚙️ From the Process</h4>
+          <p>The worker has no control over <em>how</em> work is done. Told exactly when to press the button, when to take breaks, when to speak.</p>
+        </div>
+        <div class="stage-card">
+          <span class="stage-num">TYPE 3</span>
+          <h4>👥 From Fellow Workers</h4>
+          <p>Competition replaces cooperation. Co-workers fight for shifts, promotions, scraps — turning natural allies into rivals.</p>
+        </div>
+        <div class="stage-card">
+          <span class="stage-num">TYPE 4</span>
+          <h4>🧠 From Self / Human Potential</h4>
+          <p>Work is forced, not creative. "My job doesn't use my brain or passion." The worker becomes less than human <em>at work</em>.</p>
+        </div>
+      </div>
+
+      <h3>🧬 Marx on "Species-Being" (Gattungswesen)</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Human Capacity</th><th>Under Capitalism</th><th>Under Communism</th></tr></thead>
+        <tbody>
+          <tr><td>Creative labor</td><td>Sold as commodity</td><td>Free expression</td></tr>
+          <tr><td>Social cooperation</td><td>Competition</td><td>Solidarity</td></tr>
+          <tr><td>Control over life</td><td>Boss decides</td><td>Collective decides</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="quote-block">The worker feels himself only outside work, and in work he feels outside himself.<br>— <strong>Karl Marx, 1844 Manuscripts</strong></div>
+    </div>
+
+    <!-- 2.4 IDEOLOGY -->
+    <div class="section">
+      <h2>🔴 2.4 Ideology &amp; False Consciousness — The Mind Control</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>Definition</th><th>Mechanism</th></tr></thead>
+        <tbody>
+          <tr><td>Ideology</td><td>A system of ideas that justifies the ruling class's position</td><td>Makes inequality seem natural, inevitable, or divinely ordained</td></tr>
+          <tr><td>False Consciousness</td><td>When the oppressed believe the oppressor's ideology</td><td>Worker thinks "I deserve low wages"</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>🛠️ How Ideology Works — The 4 Mechanisms</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Mechanism</th><th>Description</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>🌿 Naturalization</td><td>Making social arrangements seem natural</td><td>"Rich are smarter, poor are lazier"</td></tr>
+          <tr><td>🌐 Universalization</td><td>Ruling class interests as everyone's interests</td><td>"Tax cuts for billionaires create jobs"</td></tr>
+          <tr><td>⏳ Dehistoricization</td><td>Pretending current system is permanent</td><td>"Capitalism has always existed"</td></tr>
+          <tr><td>🌫️ Mystification</td><td>Hiding real power relations</td><td>"We're all middle class now"</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>⛪ Marx on Religion</h3>
+      <div class="quote-block">Religion is the sigh of the oppressed creature, the heart of a heartless world, and the soul of soulless conditions. It is the opium of the people.<br>— <strong>Karl Marx, Critique of Hegel's Philosophy of Right</strong></div>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Function of Religion</th><th>How It Works</th></tr></thead>
+        <tbody>
+          <tr><td>💊 Pain relief</td><td>Offers heaven to compensate for earthly suffering</td></tr>
+          <tr><td>🌀 Distraction</td><td>Focuses on afterlife, not this-world injustice</td></tr>
+          <tr><td>👑 Legitimation</td><td>"God ordained inequality" (Divine Right of Kings)</td></tr>
+          <tr><td>⛓️ Discipline</td><td>"Work is worship"; "obey your masters"</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ PART 3: HISTORICAL MATERIALISM ============ -->
+  <section id="part3" class="part reveal">
+    <h2 class="part-header">📜 PART 3: <span class="gradient-text">Historical Materialism — The Engine of History</span></h2>
+
+    <div class="section">
+      <h2>🔷 3.1 Definition</h2>
+      <p><strong style="color:var(--gold)">Historical Materialism</strong>: the theory that <em>material conditions</em> (economic factors) are the primary driving force of historical development — not ideas, great leaders, or divine will.</p>
+
+      <h3>📊 Comparison with Other Theories</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Theory</th><th>What Drives History</th><th>Marx's Critique</th></tr></thead>
+        <tbody>
+          <tr><td>Great Man Theory</td><td>Individual heroes</td><td>Ignores material conditions that <em>enable</em> heroes</td></tr>
+          <tr><td>Idealist History</td><td>Ideas, philosophy, religion</td><td>Ideas come <em>from</em> material conditions, not vice versa</td></tr>
+          <tr><td>Providential History</td><td>God's plan</td><td>No evidence; diverts attention from human action</td></tr>
+          <tr><td>✅ Historical Materialism</td><td>Mode of production + class struggle</td><td>Correct approach</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 3.2 Class Struggle — The Motor of History</h2>
+      <div class="quote-block">The history of all hitherto existing society is the history of class struggles.<br>— <strong>Communist Manifesto, 1848</strong></div>
+
+      <h3>⚔️ The Class Struggle Through History</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Mode of Production</th><th>Oppressor Class</th><th>Oppressed Class</th><th>Site of Conflict</th></tr></thead>
+        <tbody>
+          <tr><td>Primitive Communism</td><td>None</td><td>None</td><td>No conflict</td></tr>
+          <tr><td>Slavery</td><td>Slave owners (masters)</td><td>Slaves</td><td>Plantations, mines</td></tr>
+          <tr><td>Feudalism</td><td>Lords (nobles)</td><td>Serfs</td><td>Land</td></tr>
+          <tr><td>Capitalism</td><td>Bourgeoisie</td><td>Proletariat</td><td>Factory, workplace</td></tr>
+          <tr><td>Socialism</td><td>None (transitional)</td><td>None</td><td>State (temporary)</td></tr>
+          <tr><td>Communism</td><td>None</td><td>None</td><td>N/A</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 3.3 The 6 Stages of History</h2>
+
+      <div class="stage-grid">
+        <div class="stage-card">
+          <span class="stage-num">STAGE 1</span>
+          <h4>🦌 Primitive Communism</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Time</span><span class="v">Pre-history; hunter-gatherer</span></div>
+            <div class="kv-item"><span class="k">Property</span><span class="v">Common ownership of resources</span></div>
+            <div class="kv-item"><span class="k">Classes</span><span class="v">None</span></div>
+            <div class="kv-item"><span class="k">Conflict</span><span class="v">Only external (with nature)</span></div>
+            <div class="kv-item"><span class="k">Transition</span><span class="v">Agriculture → surplus → ownership</span></div>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <span class="stage-num">STAGE 2</span>
+          <h4>⛓️ Slave Society</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Time</span><span class="v">Ancient Greece, Rome</span></div>
+            <div class="kv-item"><span class="k">Property</span><span class="v">Masters own slaves AND means of production</span></div>
+            <div class="kv-item"><span class="k">Classes</span><span class="v">Masters vs Slaves</span></div>
+            <div class="kv-item"><span class="k">Conflict</span><span class="v">Slave revolts (Spartacus)</span></div>
+            <div class="kv-item"><span class="k">Contradiction</span><span class="v">Slaves work without incentive → inefficient</span></div>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <span class="stage-num">STAGE 3</span>
+          <h4>🏰 Feudalism</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Time</span><span class="v">Medieval Europe (500–1500 CE)</span></div>
+            <div class="kv-item"><span class="k">Key Resource</span><span class="v">Land</span></div>
+            <div class="kv-item"><span class="k">Classes</span><span class="v">Lords vs Serfs</span></div>
+            <div class="kv-item"><span class="k">Relation</span><span class="v">Serfs owe labor; lord "protects"</span></div>
+            <div class="kv-item"><span class="k">Contradiction</span><span class="v">Towns grow → bourgeoisie emerges within feudalism</span></div>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <span class="stage-num">STAGE 4</span>
+          <h4>🏭 Capitalism</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Time</span><span class="v">1600s – present</span></div>
+            <div class="kv-item"><span class="k">Resource</span><span class="v">Capital (money, factories, machines)</span></div>
+            <div class="kv-item"><span class="k">Classes</span><span class="v">Bourgeoisie vs Proletariat</span></div>
+            <div class="kv-item"><span class="k">Contradictions</span><span class="v">Falling profit · Overproduction · Inequality · Class consciousness</span></div>
+            <div class="kv-item"><span class="k">Inevitability</span><span class="v">Creates its own gravediggers</span></div>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <span class="stage-num">STAGE 5</span>
+          <h4>🚩 Socialism (Transition)</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Definition</span><span class="v">"First phase of communist society"</span></div>
+            <div class="kv-item"><span class="k">Property</span><span class="v">Social ownership of means of production</span></div>
+            <div class="kv-item"><span class="k">State</span><span class="v">Dictatorship of the proletariat (temporary)</span></div>
+            <div class="kv-item"><span class="k">Distribution</span><span class="v">"To each according to their contribution"</span></div>
+            <div class="kv-item"><span class="k">Goal</span><span class="v">Develop productive forces, end scarcity</span></div>
+          </div>
+        </div>
+
+        <div class="stage-card">
+          <span class="stage-num">STAGE 6</span>
+          <h4>☀️ Full Communism</h4>
+          <div class="kv-list">
+            <div class="kv-item"><span class="k">Property</span><span class="v">No private property; common ownership</span></div>
+            <div class="kv-item"><span class="k">State</span><span class="v">Withered away</span></div>
+            <div class="kv-item"><span class="k">Classes</span><span class="v">None</span></div>
+            <div class="kv-item"><span class="k">Distribution</span><span class="v">"From each according to ability, to each according to need"</span></div>
+            <div class="kv-item"><span class="k">Alienation</span><span class="v">Eliminated</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PART 4: DIALECTICAL MATERIALISM ============ -->
+  <section id="part4" class="part reveal">
+    <h2 class="part-header">🔄 PART 4: <span class="gradient-text">Dialectical Materialism — The Method</span></h2>
+
+    <div class="section">
+      <h2>🔷 4.1 Definition</h2>
+      <h4><strong style="color:var(--gold)"><b>Dialectical Materialism:</b></strong> <em>Marx & Engels' general philosophy that everything (nature, thought, AND society) changes through clashes of opposites — small tensions build up until they cause a sudden, big leap forward. E.g., heat water gradually → it suddenly boils into steam (a qualitative jump from a quantitative buildup)</em></h4>
+
+ <h4><strong style="color:var(--gold)">Historical Materialism:</strong> <em>That same logic applied specifically to human history. It says economic conditions (mode of production) drive social change, and society moves through stages (feudalism → capitalism → socialism) because of class conflict. E.g., growing tension between feudal lords and serfs, plus the rise of trade, eventually broke feudalism and gave birth to capitalism.</em</h4>
+
+ <p><strong style="color:var(--gold)">One-line difference:</strong> Dialectical materialism is the general method (how change happens everywhere); historical materialism is that method applied to explain human history specifically.</p>
+
+ <p><strong style="color:var(--gold)">In short:</strong> the application of Hegelian dialectic to materialist philosophy. Reality is understood through the interaction of <em>opposing forces</em>, with contradictions driving change.</p>
+
+
+      <h3>📊 Hegel vs Marx — The Critical Inversion</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Aspect</th><th>Hegel (Idealist)</th><th>Marx (Materialist)</th></tr></thead>
+        <tbody>
+          <tr><td>Subject of change</td><td>Ideas, Spirit (Geist)</td><td>Material conditions, economics</td></tr>
+          <tr><td>Driving force</td><td>Contradictions in thought</td><td>Contradictions in production</td></tr>
+          <tr><td>Direction</td><td>Toward Absolute Knowledge</td><td>Toward communism</td></tr>
+          <tr><td>Method</td><td>Abstract logical progression</td><td>Concrete historical analysis</td></tr>
+        </tbody>
+      </table></div>
+      <div class="insight">Marx famously said he found Hegel "standing on his head" and put him "back on his feet." Same dialectic — flipped from spirit to matter.</div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 4.2 The 3 Laws of Dialectics</h2>
+
+      <h3>📐 LAW 1: Quantity → Quality Change</h3>
+      <p>Gradual quantitative changes accumulate until they produce a <strong>sudden qualitative leap</strong>.</p>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>🌡️ Physics</td><td>Water heated 1° at a time → at 100°C, sudden phase change to steam</td></tr>
+          <tr><td>🏛️ Society</td><td>Wages fall, hours rise → anger builds → REVOLUTION</td></tr>
+          <tr><td>🏭 Capitalism</td><td>More factories, more concentration → monopoly capitalism</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>📐 LAW 2: Unity and Struggle of Opposites</h3>
+      <p>Everything contains <em>internal</em> opposing forces; their struggle drives development.</p>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>Example</td><td>Capitalist and worker exist <em>IN</em> the same system but <em>AGAINST</em> each other</td></tr>
+          <tr><td>Example</td><td>Supply and demand are opposites but together define price</td></tr>
+          <tr><td>Key Insight</td><td>Opposites are <strong>interpenetrating</strong>, not separate</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>📐 LAW 3: Negation of the Negation</h3>
+      <div class="flow">
+        <div class="flow-step">🟢 THESIS: Primitive Communism (common property)</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">🔴 ANTITHESIS: Private Property (capitalism)</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">⭐ SYNTHESIS: Communist Common Property (higher level)</div>
+      </div>
+      <div class="formula">PATTERN: A → Not-A → Not-(Not-A) = Return to A, but at a higher level 🔁</div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 4.3 Dialectical Logic vs Formal Logic</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Formal Logic (Aristotle)</th><th>Dialectical Logic (Marx/Hegel)</th></tr></thead>
+        <tbody>
+          <tr><td>A = A (identity)</td><td>A contains Not-A</td></tr>
+          <tr><td>Contradictions are errors</td><td>Contradictions are real and productive</td></tr>
+          <tr><td>Linear causation</td><td>Circular / interactive causation</td></tr>
+          <tr><td>Either / or</td><td>Both / and</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ PART 5: REVOLUTION THEORY ============ -->
+  <section id="part5" class="part reveal">
+    <h2 class="part-header">🔥 PART 5: <span class="gradient-text">Revolution Theory</span></h2>
+
+    <div class="section">
+      <h2>🔷 5.1 Why Revolution is Necessary</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Reason</th><th>Explanation</th></tr></thead>
+        <tbody>
+          <tr><td>🚫 Capitalism won't reform itself</td><td>Contradictions are structural, not accidental</td></tr>
+          <tr><td>👑 Ruling class won't surrender peacefully</td><td>Power is never voluntarily given up</td></tr>
+          <tr><td>🛡️ State protects capitalists</td><td>Police, courts, military = bourgeois tools</td></tr>
+          <tr><td>📋 Reformism fails</td><td>Welfare state still preserves exploitation</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 5.2 Preconditions for Revolution</h2>
+
+      <h3>🏗️ Objective Conditions (Material)</h3>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>📉 Economic crisis</td><td>Major recession or depression</td></tr>
+          <tr><td>🌊 Class polarization</td><td>Middle class disappears</td></tr>
+          <tr><td>⚠️ State weakness</td><td>Military/police cannot maintain order</td></tr>
+          <tr><td>⚙️ Technology level</td><td>Productive forces ready for socialism</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>🧠 Subjective Conditions (Consciousness)</h3>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>👁️ Class consciousness</td><td>Workers recognize shared interests</td></tr>
+          <tr><td>🏛️ Revolutionary organization</td><td>Party, unions, councils</td></tr>
+          <tr><td>🎯 Leadership</td><td>Theoretical clarity + strategic ability</td></tr>
+          <tr><td>📢 Mass mobilization</td><td>Millions acting collectively</td></tr>
+        </tbody>
+      </table></div>
+      <div class="insight">Lenin's formula: a revolution requires <strong>both</strong> that "the lower classes do not want to live in the old way" AND "the upper classes cannot rule in the old way."</div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 5.3 The Revolutionary Process</h2>
+      <div class="flow">
+        <div class="flow-step">⚡ STAGE 1: Economic Crisis</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">📣 STAGE 2: Spontaneous Protests &amp; Strikes</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">⚖️ STAGE 3: Dual Power (old state vs workers' councils)</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">🚩 STAGE 4: Revolutionary Seizure of State Power</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">✊ STAGE 5: Dictatorship of the Proletariat</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">🏗️ STAGE 6: Socialist Construction</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">☀️ STAGE 7: Withering Away of the State → Communism</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PART 6: DICTATORSHIP & COMMUNISM ============ -->
+  <section id="part6" class="part reveal">
+    <h2 class="part-header">🏁 PART 6: <span class="gradient-text">Dictatorship of the Proletariat &amp; Communism</span></h2>
+
+    <div class="section">
+      <h2>🔷 6.1 Dictatorship of the Proletariat (Most Misunderstood Concept)</h2>
+      <p>This is <strong>not</strong> a dictatorship in the authoritarian sense. It is <strong>class rule</strong> — the working class holding state power and excluding the bourgeoisie from political participation, just as the bourgeoisie currently excludes workers from real power.</p>
+
+      <div class="table-wrap"><table>
+        <thead><tr><th>Feature</th><th>Explanation</th></tr></thead>
+        <tbody>
+          <tr><td>Who rules?</td><td>The proletariat (as a class)</td></tr>
+          <tr><td>Who is excluded?</td><td>The bourgeoisie (former capitalists)</td></tr>
+          <tr><td>Duration</td><td>Temporary — until socialism is secure</td></tr>
+          <tr><td>Form</td><td>Workers' councils, soviets, democratic centralism</td></tr>
+          <tr><td>Purpose</td><td>Suppress counter-revolution, expropriate capitalists, organize production</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>📊 Bourgeois vs Proletarian Dictatorship</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Aspect</th><th>Bourgeois Dictatorship</th><th>Proletarian Dictatorship</th></tr></thead>
+        <tbody>
+          <tr><td>Who rules</td><td>Capitalist class</td><td>Working class</td></tr>
+          <tr><td>Democracy for</td><td>Property owners</td><td>Workers</td></tr>
+          <tr><td>Democracy against</td><td>Workers</td><td>Capitalists</td></tr>
+          <tr><td>State form</td><td>Parliament, courts, police</td><td>Soviets, councils, militia</td></tr>
+          <tr><td>Purpose</td><td>Protect private property</td><td>Abolish private property</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 6.2 The Withering Away of the State</h2>
+      <p>The state, for Marx, is an <strong>instrument of class oppression</strong>. When there are no classes to oppress, the state becomes unnecessary and "withers away."</p>
+      <div class="flow">
+        <div class="flow-step">🏛️ Under Capitalism — State enforces bourgeois rule</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">✊ After Revolution — Dictatorship of proletariat (state still exists)</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">🌅 Socialism — State gradually loses power as classes disappear</div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-step">☀️ Communism — Complete statelessness</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔷 6.3 Full Communism — The End Goal</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Category</th><th>Feature</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>💼 Economy</td><td>Abolition of private property</td><td>Means of production owned collectively</td></tr>
+          <tr><td>💼 Economy</td><td>Abolition of commodity production</td><td>No buying/selling; production for need</td></tr>
+          <tr><td>💼 Economy</td><td>Abolition of money</td><td>Labor vouchers (transition) → no medium</td></tr>
+          <tr><td>⚖️ Class</td><td>No classes</td><td>No bourgeoisie, proletariat, or peasantry</td></tr>
+          <tr><td>🏛️ State</td><td>No state</td><td>No police, military, courts, prisons</td></tr>
+          <tr><td>📜 Law</td><td>No law needed</td><td>No crime (no motive under communism)</td></tr>
+          <tr><td>🛠️ Work</td><td>Creative labor</td><td>Work becomes "first need of life"</td></tr>
+          <tr><td>🤝 Distribution</td><td>Need-based</td><td>"From each according to ability, to each according to need"</td></tr>
+          <tr><td>♀♂ Gender</td><td>Full equality</td><td>Abolition of patriarchal family structure</td></tr>
+          <tr><td>🧠 Alienation</td><td>Eliminated</td><td>Humans express species-being freely</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ 🌿🌿🌿 PART 7: BRANCHES (FULLY ENRICHED) 🌿🌿🌿 ============ -->
+  <section id="part7" class="part reveal">
+    <h2 class="part-header">🌿 PART 7: <span class="gradient-text">Branches &amp; Evolutions of Marxism</span></h2>
+
+    <div class="section">
+      <h2>🌳 7.0 The Family Tree of Marxism — Why So Many Branches?</h2>
+      <p>Marxism is not a frozen doctrine — it is a <strong style="color:var(--gold)">living tradition</strong> that has evolved across <strong style="color:var(--crimson-soft)">175+ years</strong>, three continents, and countless revolutions. Each branch arose from a real historical crisis: a failed revolution, a new form of capitalism, a colonial struggle, or a theoretical impasse. To understand Marxism is to understand its <em>splits, debates, and mutations</em>.</p>
+
+      <pre class="diagram">
+                        🌱 CLASSICAL MARXISM (Marx + Engels, 1840s–1880s)
+                                         │
+                ┌────────────────────────┼─────────────────────────┐
+                │                        │                         │
+        📘 ORTHODOX (2nd Int'l)   🚩 LENINISM           🌹 LUXEMBURGISM
+         Kautsky, Plekhanov       Russia, 1900s          Spontaneity
+                │                        │
+        ┌───────┴───────┐         ┌──────┼───────┬────────┐
+        │               │         │      │       │        │
+   📰 REVISIONISM  ⚙️ AUSTRO-M.  ⚔️ TROTSKY 🇨🇳 MAOISM 🌍 3rd WORLD
+   Bernstein       Bauer          Permanent  Peasant     Castro,
+                                  Revolution Revolution  Guevara,
+                                                         Ho Chi Minh
+                                         │
+        ┌────────────────────────────────┼─────────────────────────────┐
+        │                                │                             │
+   🎭 WESTERN MARXISM              🏗️ STRUCTURAL                🔬 ANALYTICAL
+   Lukács, Gramsci,                Althusser, Poulantzas        G.A. Cohen,
+   Frankfurt School                                             Roemer, Elster
+        │
+   ┌────┼──────┬─────────┬──────────┬──────────┐
+   │    │      │         │          │          │
+  🎨 CULTURAL 🧠 CRITICAL 💚 ECO-M. ♀ MARXIST  🌍 POSTCOLONIAL
+  Marxism   Theory       O'Connor  FEMINISM   Fanon, James,
+            (Adorno,               Federici,  Said, Bhabha
+            Habermas)              Mitchell
+                                                              ↓
+                                              🌐 21st CENTURY MARXISM
+                                              Harvey, Žižek, Wood,
+                                              Wright, Piketty-adjacent
+      </pre>
+
+      <div class="callout"><span class="callout-icon">🎯</span><strong>Big Picture:</strong> Every branch keeps Marx's <em>core</em> (class struggle, materialism, critique of capital) but updates one or more <em>specific</em> elements: the agent of revolution, the role of culture, the meaning of the state, or the path to socialism.</div>
+    </div>
+
+    <!-- ============ TIMELINE ============ -->
+    <div class="section">
+      <h2>📅 7.0.1 Quick Timeline of Marxism's Evolution</h2>
+      <div class="timeline">
+        <div class="timeline-item"><span class="timeline-year">1848</span><span class="timeline-text">📜 <strong>Communist Manifesto</strong> — Marxism is born</span></div>
+        <div class="timeline-item"><span class="timeline-year">1867</span><span class="timeline-text">📕 <strong>Capital Vol. I</strong> — Scientific socialism formalized</span></div>
+        <div class="timeline-item"><span class="timeline-year">1871</span><span class="timeline-text">🚩 <strong>Paris Commune</strong> — First glimpse of workers' state</span></div>
+        <div class="timeline-item"><span class="timeline-year">1889</span><span class="timeline-text">🌐 <strong>2nd International</strong> — Orthodox Marxism dominates Europe</span></div>
+        <div class="timeline-item"><span class="timeline-year">1899</span><span class="timeline-text">📰 <strong>Bernstein's Revisionism</strong> — First major split</span></div>
+        <div class="timeline-item"><span class="timeline-year">1917</span><span class="timeline-text">⚡ <strong>Russian Revolution</strong> — Leninism triumphs</span></div>
+        <div class="timeline-item"><span class="timeline-year">1923</span><span class="timeline-text">🎭 <strong>Western Marxism begins</strong> — Lukács, Korsch, Gramsci</span></div>
+        <div class="timeline-item"><span class="timeline-year">1929–37</span><span class="timeline-text">📓 <strong>Gramsci's Prison Notebooks</strong> — Hegemony theory developed</span></div>
+        <div class="timeline-item"><span class="timeline-year">1937</span><span class="timeline-text">🐉 <strong>Mao's On Contradiction</strong> — Maoism crystallizes</span></div>
+        <div class="timeline-item"><span class="timeline-year">1947</span><span class="timeline-text">🧠 <strong>Frankfurt School: Dialectic of Enlightenment</strong></span></div>
+        <div class="timeline-item"><span class="timeline-year">1949</span><span class="timeline-text">🇨🇳 <strong>Chinese Revolution</strong> — Peasant-based Marxism</span></div>
+        <div class="timeline-item"><span class="timeline-year">1965</span><span class="timeline-text">🏗️ <strong>Althusser's For Marx</strong> — Structural Marxism</span></div>
+        <div class="timeline-item"><span class="timeline-year">1968</span><span class="timeline-text">✊ <strong>May '68, Paris</strong> — New Left explodes</span></div>
+        <div class="timeline-item"><span class="timeline-year">1978</span><span class="timeline-text">🔬 <strong>G.A. Cohen's KMTH</strong> — Analytical Marxism</span></div>
+        <div class="timeline-item"><span class="timeline-year">1991</span><span class="timeline-text">💥 <strong>USSR Collapses</strong> — Marxism enters new phase</span></div>
+        <div class="timeline-item"><span class="timeline-year">2008</span><span class="timeline-text">📉 <strong>Global Financial Crisis</strong> — Marx returns to mainstream</span></div>
+        <div class="timeline-item"><span class="timeline-year">2010s+</span><span class="timeline-text">🌍 <strong>Eco-Marxism, Digital Marxism, Marxist Feminism</strong> rise</span></div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 1: CLASSICAL ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">📕</span>
+        <span class="branch-title">7.1 Classical Marxism ☭</span>
+        <span class="branch-tag">FOUNDATION</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1840s–1890s</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Founders</span><span class="meta-value">Marx, Engels</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">Germany, Britain, France</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Capital, Manifesto, German Ideology</span></div>
+      </div>
+      <div class="branch-body">
+        <p><strong style="color:var(--gold)">The original Marxism</strong> — the philosophy as Marx and Engels themselves built it. It treats history as scientifically explainable through the laws of <em>historical materialism</em> and sees the industrial proletariat of advanced capitalist countries as the revolutionary subject.</p>
+
+<p><strong style="color:var(--gold)">Classical Marxism 📕</strong> — Original Marxism of Karl Marx and Friedrich Engels</p>
+
+<p><strong style="color:var(--gold)">Core Idea 🎯</strong> — 💰 Economy shapes society.<br>⚔️ Class struggle (workers vs capitalists) drives history.<br>🌹 Capitalism will eventually be replaced by socialism.</p>
+
+<p><strong style="color:var(--gold)">Easy Memory 🧠</strong> — 🏠 "The original blueprint."</p> 
+
+        <h4 style="color:var(--sky); margin-top:14px;">🎯 Core Tenets</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Historical Materialism</span>
+          <span class="concept-chip">Labor Theory of Value</span>
+          <span class="concept-chip">Class Struggle</span>
+          <span class="concept-chip">Surplus Value</span>
+          <span class="concept-chip">Proletarian Revolution</span>
+          <span class="concept-chip">Withering of the State</span>
+        </div>
+        <h4 style="color:var(--sky);">💡 Key Insight</h4>
+        <p>Revolution is <strong>inevitable</strong> because capitalism's internal contradictions (falling profit, overproduction, class polarization) cannot be reformed away. The proletariat is capitalism's "gravedigger."</p>
+        <h4 style="color:var(--sky);">⚠️ Limitation</h4>
+        <p>Assumed revolution would happen in the <em>most advanced</em> capitalist countries (Britain, Germany, USA). History proved otherwise — revolutions broke out in <em>backward</em> peripheral countries (Russia, China, Cuba).</p>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 2: ORTHODOX ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">📘</span>
+        <span class="branch-title">7.2 Orthodox Marxism ☭ (Second International)</span>
+        <span class="branch-tag">DETERMINIST</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1889–1914</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Kautsky, Plekhanov, Labriola</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">Germany, Russia, Italy</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">The Class Struggle (Kautsky)</span></div>
+      </div>
+      <div class="branch-body">
+        <p>The Marxism of the <strong style="color:var(--gold)">Second International</strong> (1889–1914) — Marxism as the official doctrine of mass European socialist parties, especially Germany's SPD. It emphasized <strong>economic determinism</strong>: socialism would come automatically as capitalism collapsed.</p>
+
+<p><strong style="color:var(--gold)">Orthodox Marxism 🏭</strong> — Strict followers of classical Marxism.</p>
+
+<p><strong style="color:var(--gold)">Core Idea 🎯</strong> —⚔️ Revolution is necessary.<br>👷 Industrial workers are the main force of change.<br>📈 Capitalism will collapse due to its own contradictions.</p>
+
+<p><strong style="color:var(--gold)">Easy Memory 🧠</strong> —📏 "Marxism without modification.".</p>
+
+        <h4 style="color:var(--sky); margin-top:14px;">🧬 Core Beliefs</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Iron Laws of History</span>
+          <span class="concept-chip">Inevitable Collapse</span>
+          <span class="concept-chip">Mass Party Politics</span>
+          <span class="concept-chip">Scientific Socialism</span>
+          <span class="concept-chip">Productivist Optimism</span>
+        </div>
+        <h4 style="color:var(--sky);">⚔️ The Great Split (1899): Reform vs Revolution</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Position</th><th>Champion</th><th>Argument</th></tr></thead>
+          <tbody>
+            <tr><td>🔧 Revisionism</td><td><strong>Eduard Bernstein</strong></td><td>Capitalism is reforming itself; socialism via the ballot box</td></tr>
+            <tr><td>🌹 Revolution</td><td><strong>Rosa Luxemburg</strong></td><td>Reformism = betrayal; only mass strike can topple capitalism</td></tr>
+            <tr><td>⚖️ Centre</td><td><strong>Karl Kautsky</strong></td><td>Wait for objective conditions; democratic socialism</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><span class="callout-icon">💥</span><strong>The Collapse:</strong> The Second International shattered in <strong>1914</strong> when socialist parties voted to support their own governments in WWI — betraying internationalism. This catastrophic failure paved the way for Leninism.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 3: MARXISM-LENINISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🚩</span>
+        <span class="branch-title">7.3 Marxism–Leninism</span>
+        <span class="branch-tag">REVOLUTIONARY</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1902–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Lenin, Stalin, Bukharin</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">Russia, USSR, global communist movement</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">What is to be Done?, Imperialism, State &amp; Revolution</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Lenin's adaptation of Marxism to <strong style="color:var(--gold)">backward, semi-feudal Russia</strong> — and after 1917, the official doctrine of the world communist movement. It became the most politically influential branch in history.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🔑 Lenin's 5 Key Innovations</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Innovation</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>⚔️ <strong>Vanguard Party</strong></td><td>A disciplined elite of professional revolutionaries leads workers (because workers alone develop only "trade-union consciousness")</td></tr>
+            <tr><td>🌍 <strong>Imperialism</strong></td><td>Capitalism's highest stage — monopolies export capital, exploit colonies, bribe a "labor aristocracy" at home</td></tr>
+            <tr><td>⛓️ <strong>Weakest Link</strong></td><td>Revolution breaks where imperialism's chain is weakest (Russia, not Germany)</td></tr>
+            <tr><td>🗳️ <strong>Democratic Centralism</strong></td><td>Free internal debate, absolute unity in action once decisions are made</td></tr>
+            <tr><td>🤝 <strong>Worker-Peasant Alliance</strong></td><td>In agrarian countries, proletariat must ally with poor peasantry</td></tr>
+          </tbody>
+        </table></div>
+        <h4 style="color:var(--sky);">📜 Stalinist Codification (1924–1953)</h4>
+        <p>After Lenin's death, Stalin codified "Marxism-Leninism" as state ideology with key additions: <strong style="color:var(--rose)">Socialism in One Country</strong> (rejecting permanent revolution), <strong style="color:var(--rose)">Five-Year Plans</strong> (state-led industrialization), forced collectivization of agriculture, and one-party rule. Critics call this <em>Stalinism</em>, a distortion of Lenin.</p>
+        <div class="warning"><strong>The Big Debate:</strong> Was Stalinism a natural outgrowth of Leninism (Trotsky, anarchists) or a betrayal of it (orthodox Leninists, Maoists)? This remains the most charged question in Marxist politics.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 4: TROTSKYISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">⚔️</span>
+        <span class="branch-title">7.4 Trotskyism</span>
+        <span class="branch-tag">INTERNATIONALIST</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1905–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Founder</span><span class="meta-value">Leon Trotsky</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Organization</span><span class="meta-value">Fourth International (1938)</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Text</span><span class="meta-value">The Revolution Betrayed (1936)</span></div>
+      </div>
+      <div class="branch-body">
+        <p>The principled <strong style="color:var(--gold)">anti-Stalinist</strong> wing of revolutionary Marxism. Trotsky was Lenin's co-leader in 1917, lost the power struggle to Stalin, was exiled, then assassinated in Mexico (1940).</p>
+        <h4 style="color:var(--sky); margin-top:14px;">⚡ Core Theses</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Permanent Revolution</span>
+          <span class="concept-chip">Combined &amp; Uneven Development</span>
+          <span class="concept-chip">Degenerated Workers' State</span>
+          <span class="concept-chip">Political Revolution vs Stalinism</span>
+          <span class="concept-chip">World Revolution</span>
+        </div>
+        <p><strong style="color:var(--crimson-soft)">Permanent Revolution:</strong> In backward countries, the bourgeois revolution cannot stop at bourgeois democracy — it must "grow over" into socialist revolution and must spread internationally to survive.</p>
+        <p><strong style="color:var(--crimson-soft)">The USSR Analysis:</strong> Stalin's USSR was a "degenerated workers' state" — socialist property forms exist, but a bureaucratic caste rules. Solution: <em>political revolution</em> by workers to overthrow the bureaucracy without restoring capitalism.</p>
+        <div class="insight">Trotskyism's organizational weakness (small parties) is offset by its theoretical influence: many academic Marxists, the British SWP tradition, and the U.S. ISO/Socialist Alternative drew from Trotsky.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 5: MAOISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🐉</span>
+        <span class="branch-title">7.5 Maoism (Mao Zedong Thought)</span>
+        <span class="branch-tag">PEASANT REVOLUTION</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1927–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Founder</span><span class="meta-value">Mao Zedong</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">China, then Peru, Nepal, India, Philippines</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">On Contradiction, On Practice, Little Red Book</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Marxism adapted to <strong style="color:var(--gold)">agrarian, semi-colonial</strong> China — where industrial workers were a tiny minority. Mao made the <strong style="color:var(--crimson-soft)">peasantry</strong> the engine of revolution, breaking with classical Marxism's urban focus.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🌾 Core Innovations</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Concept</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>🌾 <strong>Peasant Revolution</strong></td><td>Peasants, not just workers, are the main revolutionary force in colonial/semi-colonial nations</td></tr>
+            <tr><td>🏞️ <strong>Protracted People's War</strong></td><td>Rural guerrilla strategy: surround cities from the countryside</td></tr>
+            <tr><td>🔄 <strong>Mass Line</strong></td><td>"From the masses, to the masses" — leadership distills popular wisdom and returns it as policy</td></tr>
+            <tr><td>🎭 <strong>Cultural Revolution</strong></td><td>Class struggle continues under socialism; must permanently revolutionize culture</td></tr>
+            <tr><td>🗡️ <strong>Continuous Revolution</strong></td><td>Even socialist parties can become bureaucratic — must be repeatedly purged</td></tr>
+            <tr><td>⚖️ <strong>Contradiction Analysis</strong></td><td>Distinguish "principal" from "secondary" contradictions; "antagonistic" from "non-antagonistic"</td></tr>
+          </tbody>
+        </table></div>
+        <h4 style="color:var(--sky);">🌍 Global Influence</h4>
+        <p>Maoism inspired the global "Third World" revolutionary movements of the 1960s–80s: the Naxalites in India, Shining Path in Peru, New People's Army in the Philippines, and the Nepali Maoists (who took power 2006). It also shaped Western "New Left" radicalism.</p>
+        <div class="warning"><strong>Critical Note:</strong> The Cultural Revolution (1966–76) caused massive suffering, and the Great Leap Forward (1958–62) produced one of history's deadliest famines. Modern Marxists fiercely debate whether these were errors of Maoism or distortions of it.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 6: WESTERN MARXISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🎭</span>
+        <span class="branch-title">7.6 Western Marxism ☭</span>
+        <span class="branch-tag">CULTURAL TURN</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1923–1970s</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Lukács, Korsch, Gramsci, Frankfurt School</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">Germany, Italy, France</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">History &amp; Class Consciousness; Prison Notebooks</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Born from a <strong style="color:var(--gold)">crisis</strong>: revolutions failed in Germany, Italy, and Hungary (1918–23) despite Marx's prediction. <em>Why did workers not revolt?</em> Western Marxists turned away from economics toward <strong style="color:var(--rose)">culture, ideology, philosophy, and consciousness</strong>.</p>
+
+<p><strong style="color:var(--gold)">Western Marxism 🎭</strong> — Developed mainly in Western Europe after revolutions failed there.</p>
+
+<p><strong style="color:var(--gold)">Core Idea 🎯</strong> — Ideas, culture, media, education, and beliefs matter too.<br>📺 People can be controlled not only by money but also by culture.</p>
+
+<p><strong style="color:var(--gold)">Easy Memory 🧠</strong> — 🎬 "Why don't workers revolt? Look at culture!"</p>
+
+        <h4 style="color:var(--sky); margin-top:14px;">🎨 The Shift</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Reification</span>
+          <span class="concept-chip">Hegemony</span>
+          <span class="concept-chip">Culture Industry</span>
+          <span class="concept-chip">One-Dimensional Man</span>
+          <span class="concept-chip">Class Consciousness</span>
+          <span class="concept-chip">Praxis</span>
+        </div>
+        <h4 style="color:var(--sky);">🌟 Key Figures</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Thinker</th><th>Concept</th><th>Insight</th></tr></thead>
+          <tbody>
+            <tr><td><strong>György Lukács</strong></td><td>Reification</td><td>Capitalism makes humans see social relations as "thing-like" — frozen, natural</td></tr>
+            <tr><td><strong>Antonio Gramsci</strong></td><td>Cultural Hegemony</td><td>Ruling class rules through <em>consent</em>, not just force; capture culture before politics</td></tr>
+            <tr><td><strong>Karl Korsch</strong></td><td>Marxism as Method</td><td>Marxism is not a closed system but a critical method</td></tr>
+            <tr><td><strong>Henri Lefebvre</strong></td><td>Everyday Life</td><td>Alienation extends from work into leisure, urban space, consumption</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 7: FRANKFURT SCHOOL ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🧠</span>
+        <span class="branch-title">7.7 Frankfurt School &amp; Critical Theory</span>
+        <span class="branch-tag">CRITICAL THEORY</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1923–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Adorno, Horkheimer, Marcuse, Benjamin, Fromm, Habermas</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Institution</span><span class="meta-value">Institute for Social Research, Frankfurt</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Dialectic of Enlightenment; One-Dimensional Man</span></div>
+      </div>
+      <div class="branch-body">
+        <p>The most influential branch of Western Marxism. The Frankfurt School fused <strong style="color:var(--gold)">Marx + Freud + Weber</strong> to explain why advanced capitalism was so stable, why fascism happened, and how mass culture pacified resistance.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🔬 Core Concepts</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td>🎬 <strong>Culture Industry</strong></td><td>(Adorno/Horkheimer) Hollywood, pop music, advertising mass-produce passive consumers and ideological conformity</td></tr>
+            <tr><td>📺 <strong>One-Dimensional Man</strong></td><td>(Marcuse) Capitalism integrates dissent into consumerism; workers buy into the system</td></tr>
+            <tr><td>🌪️ <strong>Dialectic of Enlightenment</strong></td><td>Reason itself becomes an instrument of domination (Auschwitz was "rational")</td></tr>
+            <tr><td>🧠 <strong>Authoritarian Personality</strong></td><td>(Fromm/Adorno) Psychological roots of fascism in family + capitalism</td></tr>
+            <tr><td>💬 <strong>Communicative Action</strong></td><td>(Habermas) Emancipation through undistorted communication, not just revolution</td></tr>
+            <tr><td>🌌 <strong>Negative Dialectics</strong></td><td>(Adorno) Reject any closed positive system; thought must remain critical</td></tr>
+          </tbody>
+        </table></div>
+        <div class="insight">The Frankfurt School essentially became the <strong>intellectual backbone</strong> of New Left politics, cultural studies, media theory, and contemporary critical scholarship in universities worldwide.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 8: GRAMSCI ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">📓</span>
+        <span class="branch-title">7.8 Gramscian Marxism</span>
+        <span class="branch-tag">HEGEMONY</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1929–1937 (writings); 1970s+ revival</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinker</span><span class="meta-value">Antonio Gramsci</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Location</span><span class="meta-value">Fascist prison, Italy</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Text</span><span class="meta-value">Prison Notebooks (Quaderni del Carcere)</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Written secretly in Mussolini's prison, Gramsci's <em>Prison Notebooks</em> are perhaps the <strong style="color:var(--gold)">single most important Marxist work of the 20th century</strong>. He shifted focus from <em>state seizure</em> to <em>cultural leadership</em>.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🎯 Core Concepts</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Concept</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>🎭 <strong>Cultural Hegemony</strong></td><td>The ruling class rules not just by force but by making its worldview "common sense"</td></tr>
+            <tr><td>⚔️ <strong>War of Manoeuvre</strong></td><td>Direct assault on the state (e.g., 1917 Russia) — works only in weak states</td></tr>
+            <tr><td>🛡️ <strong>War of Position</strong></td><td>Long-term struggle within civil society — schools, media, unions — needed in advanced democracies</td></tr>
+            <tr><td>🧑‍🏫 <strong>Organic Intellectuals</strong></td><td>Every class produces its own intellectuals; the working class must develop its own</td></tr>
+            <tr><td>🏛️ <strong>Civil Society</strong></td><td>Schools, churches, media, family — the "trenches" of capitalist rule</td></tr>
+            <tr><td>🤝 <strong>Historic Bloc</strong></td><td>Alliance of classes united by a shared worldview, not just economic interest</td></tr>
+            <tr><td>🌀 <strong>Passive Revolution</strong></td><td>Ruling class absorbs reform demands to prevent real change</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><span class="callout-icon">🌍</span><strong>Massive Modern Influence:</strong> Gramsci shaped Cultural Studies (Hall), post-Marxism (Laclau/Mouffe), Eurocommunism, Latin American Pink Tide, and even right-wing thinkers who study how to wage cultural war.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 9: STRUCTURAL MARXISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🏗️</span>
+        <span class="branch-title">7.9 Structural Marxism ☭</span>
+        <span class="branch-tag">SCIENTIFIC</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1960s–1980s</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Althusser, Poulantzas, Balibar</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">France</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">For Marx; Reading Capital</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Louis Althusser fused Marxism with French <strong style="color:var(--gold)">structuralism</strong> (Lévi-Strauss, Lacan) to create a "scientific" Marxism stripped of humanism, alienation, and Hegelian residues. He famously argued for an <em>"epistemological break"</em> between the young (humanist) Marx and the mature (scientific) Marx.</p>
+
+<p><strong style="color:var(--gold)">Structural Marxism 🏗️</strong> — Associated with Louis Althusser</p>
+
+<p><strong style="color:var(--gold)">Core Idea 🎯</strong> — 🏛️ Society is made of structures:-<br>Economy 💰<br>State 🏢<br>Education 🎓<br>Family 👨‍👩‍👧‍👦<br>🐣 These structures shape people's behavior.</p>
+
+<p><strong style="color:var(--gold)">Easy Memory 🧠</strong> — 🏗️ "Structures control people more than individuals do."</p>
+
+        <h4 style="color:var(--sky); margin-top:14px;">🔬 Core Concepts</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td>🚔 <strong>RSAs</strong> (Repressive State Apparatuses)</td><td>Police, military, courts, prisons — rule by force</td></tr>
+            <tr><td>🏫 <strong>ISAs</strong> (Ideological State Apparatuses)</td><td>Schools, churches, family, media — rule by manufacturing belief</td></tr>
+            <tr><td>📢 <strong>Interpellation</strong></td><td>Ideology "hails" you into a subject position ("Hey, you!") — you become who the system needs</td></tr>
+            <tr><td>🌀 <strong>Overdetermination</strong></td><td>Historical events have multiple causes, not a single economic one</td></tr>
+            <tr><td>🌳 <strong>Relative Autonomy</strong></td><td>Superstructure has its own logic; not just reflection of base</td></tr>
+            <tr><td>📐 <strong>Symptomatic Reading</strong></td><td>Read texts for what they cannot say — their gaps reveal their ideology</td></tr>
+          </tbody>
+        </table></div>
+        <h4 style="color:var(--sky);">⚔️ Poulantzas's State Theory</h4>
+        <p>Nicos Poulantzas extended Althusser to political theory: the <em>capitalist state</em> is structurally biased toward capital but maintains "relative autonomy" — it's not a simple tool of the ruling class. This shaped contemporary state theory.</p>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 10: ANALYTICAL MARXISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🔬</span>
+        <span class="branch-title">7.10 Analytical Marxism (Rational-Choice Marxism)</span>
+        <span class="branch-tag">ANGLO-ANALYTIC</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1978–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">G.A. Cohen, Jon Elster, John Roemer, Erik Olin Wright</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">UK, USA — the "September Group"</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Text</span><span class="meta-value">Karl Marx's Theory of History (Cohen, 1978)</span></div>
+      </div>
+      <div class="branch-body">
+        <p>"<strong style="color:var(--gold)">No-Bullshit Marxism</strong>" — applied rigorous analytic philosophy, game theory, and methodological individualism to Marxist claims. Stripped away dialectical mysticism, kept what could survive logical scrutiny.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">⚙️ Key Contributions</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td><strong>G.A. Cohen</strong></td><td>Defended historical materialism with crystalline analytic precision</td></tr>
+            <tr><td><strong>Jon Elster</strong></td><td>Applied game theory and rational choice to class struggle</td></tr>
+            <tr><td><strong>John Roemer</strong></td><td>Rebuilt exploitation theory using mathematical economics</td></tr>
+            <tr><td><strong>Erik Olin Wright</strong></td><td>Mapped contemporary class structures; "real utopias" project</td></tr>
+            <tr><td><strong>Adam Przeworski</strong></td><td>Why social-democratic compromise persists under capitalism</td></tr>
+          </tbody>
+        </table></div>
+        <div class="insight">Critics call it "Marxism with the politics removed." Defenders say it's the only branch that meets contemporary standards of academic rigor.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 11: NEO-MARXISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🌐</span>
+        <span class="branch-title">7.11 Neo-Marxism ☭</span>
+        <span class="branch-tag">SYNTHESIS</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1960s–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Habermas, Marcuse, Offe, Wallerstein, Harvey</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Approach</span><span class="meta-value">Marx + Weber + Freud + Geography + Sociology</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Focus</span><span class="meta-value">Late capitalism, legitimation, globalization</span></div>
+      </div>
+      <div class="branch-body">
+        <p>An umbrella for late-20th-century Marxists who <strong style="color:var(--gold)">broadened</strong> classical Marxism with insights from other social sciences. Less doctrinal, more empirical.</p>
+
+<p><strong style="color:var(--gold)">Neo-Marxism 🌍</strong> — Modernized Marxism</p> 
+
+<p><strong style="color:var(--gold)">Core Idea 🎯</strong> — 💰 Economy is important, but so are:<br>📺 Media
+<br>🎭 Culture
+<br>🌐 Globalization
+<br>👩‍🦰 Gender
+<br>🌱 Environment</p>
+
+<p><strong style="color:var(--gold)">Easy Memory 🧠</strong> — 🔄 "Marxism updated for the modern world."</p>
+
+ <h4 style="color:var(--sky); margin-top:14px;">🚀 One-Line Comparison</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Branches & Evolutions</th><th>‎ </th><th>Core idea</th><th>Ultimate memory</th></tr></thead>
+          <tbody>
+            <tr><td>📕 Classical Marxism</td><td><strong>→</strong></td><td>Original Marx</td><td>Original Book</td></tr>
+<tr><td>📏 Orthodox Marxism</td><td><strong>→</strong></td><td>Follow Marx strictly</td></td><td>Follow Book Exactly</td></tr>
+<tr><td>🎭 Western Marxism</td><td><strong>→</strong></td><td>Focus on culture and ideas</td></td><td>Culture Matters</td></tr>
+<tr><td>🏗️Structural Marxism</td><td><strong>→</strong></td><td>Focus on social structures</td></td><td>Structures Matter</td></tr>
+<tr><td>🌍 Neo-Marxism</td><td><strong>→</strong></td><td>Update Marxism for modern problems</td></td><td>Modern Version of the Book</td></tr>
+                     </tbody>
+        </table></div>
+      </div>
+    </div>
+
+
+        <h4 style="color:var(--sky); margin-top:14px;">🌍 Key Strands</h4>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Sub-Strand</th><th>Thinker</th><th>Contribution</th></tr></thead>
+          <tbody>
+            <tr><td>Legitimation Crisis</td><td><strong>Habermas, Offe</strong></td><td>Late capitalism creates economic, rationality, and motivational crises</td></tr>
+            <tr><td>World-Systems Theory</td><td><strong>Wallerstein</strong></td><td>Capitalism is a single world-system with core, semi-periphery, periphery</td></tr>
+            <tr><td>Dependency Theory</td><td><strong>Frank, Amin</strong></td><td>Third World poverty is caused by First World development</td></tr>
+            <tr><td>Marxist Geography</td><td><strong>David Harvey</strong></td><td>Capital produces space; spatial fix to crises; "accumulation by dispossession"</td></tr>
+            <tr><td>Regulation School</td><td><strong>Aglietta, Boyer</strong></td><td>Capitalism survives through changing "modes of regulation" (Fordism → Post-Fordism)</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 12: MARXIST FEMINISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">♀</span>
+        <span class="branch-title">7.12 Marxist &amp; Socialist Feminism</span>
+        <span class="branch-tag">GENDER + CLASS</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1970s–present (roots in Engels 1884)</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Federici, Mitchell, Hartmann, Vogel, Davis, Fraser</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Issue</span><span class="meta-value">Reproductive labor, patriarchy + capital</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Caliban &amp; the Witch; Capitalist Patriarchy</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Asks the question Marx underdeveloped: <strong style="color:var(--gold)">how does capitalism depend on women's unpaid labor</strong> (childcare, housework, emotional labor)? The "social reproduction" of labor power is invisible in Capital but essential.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🌹 Key Concepts</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Social Reproduction</span>
+          <span class="concept-chip">Wages for Housework</span>
+          <span class="concept-chip">Dual Systems Theory</span>
+          <span class="concept-chip">Primitive Accumulation of Bodies</span>
+          <span class="concept-chip">Reproductive Labor</span>
+          <span class="concept-chip">Care Crisis</span>
+        </div>
+        <h4 style="color:var(--sky);">📚 Pillar Thinkers</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td><strong>Friedrich Engels</strong></td><td><em>Origin of the Family</em> (1884) — patriarchy tied to private property</td></tr>
+            <tr><td><strong>Silvia Federici</strong></td><td><em>Caliban &amp; the Witch</em> — witch-hunts as primitive accumulation that disciplined women's bodies</td></tr>
+            <tr><td><strong>Juliet Mitchell</strong></td><td>Women's oppression has 4 structures: production, reproduction, sexuality, socialization</td></tr>
+            <tr><td><strong>Lise Vogel</strong></td><td>Social Reproduction Theory — women's labor reproduces the working class itself</td></tr>
+            <tr><td><strong>Nancy Fraser</strong></td><td>Capitalism's crises now include care crises, ecological crises, political crises</td></tr>
+            <tr><td><strong>Angela Davis</strong></td><td>Race + gender + class as intersecting axes of capitalist oppression</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 13: POSTCOLONIAL ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🌍</span>
+        <span class="branch-title">7.13 Postcolonial &amp; Black Marxism</span>
+        <span class="branch-tag">RACE + EMPIRE</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1930s–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">C.L.R. James, Fanon, Cabral, Robinson, Du Bois, Hall</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Issue</span><span class="meta-value">Colonialism, race, imperial extraction</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Black Jacobins; Wretched of the Earth; Black Marxism</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Marxists from the Global South and African diaspora pushed Marxism to take <strong style="color:var(--gold)">colonialism and race seriously</strong>, not as side issues but as constitutive of capitalism itself.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🌟 Core Insights</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td><strong>C.L.R. James</strong></td><td><em>The Black Jacobins</em> — Haitian slaves as world-historical revolutionary subject</td></tr>
+            <tr><td><strong>Frantz Fanon</strong></td><td><em>Wretched of the Earth</em> — colonial violence creates "natives"; decolonization is necessarily violent</td></tr>
+            <tr><td><strong>Amílcar Cabral</strong></td><td>National liberation as cultural reconquest; "return to the source"</td></tr>
+            <tr><td><strong>Cedric Robinson</strong></td><td><em>"Racial Capitalism"</em> — capitalism developed THROUGH racial slavery, not despite it</td></tr>
+            <tr><td><strong>W.E.B. Du Bois</strong></td><td>U.S. Civil War as a "general strike" of slaves; abolition democracy</td></tr>
+            <tr><td><strong>Walter Rodney</strong></td><td><em>How Europe Underdeveloped Africa</em> — colonial extraction as the engine of European wealth</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><span class="callout-icon">🔥</span><strong>Big Idea:</strong> "Racial capitalism" (Cedric Robinson) — capitalism has <em>always</em> been racial. Slavery, colonialism, and racism are not historical accidents but structural features of how capital accumulates.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 14: ECO-MARXISM ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">💚</span>
+        <span class="branch-title">7.14 Eco-Marxism (Green Marxism)</span>
+        <span class="branch-tag">CLIMATE + CAPITAL</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1970s–present (booming since 2000s)</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">James O'Connor, Foster, Burkett, Moore, Saito, Malm</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Issue</span><span class="meta-value">Capitalism &amp; ecological catastrophe</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Marx's Ecology; Fossil Capital; Capital in the Anthropocene</span></div>
+      </div>
+      <div class="branch-body">
+        <p>Marxism for the <strong style="color:var(--gold)">climate emergency</strong>. Argues capitalism's infinite growth imperative is fundamentally incompatible with a finite biosphere — and that Marx himself, properly read, was already an ecological thinker.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🌱 Key Concepts</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td>🌊 <strong>Metabolic Rift</strong></td><td>(Foster) Capitalism ruptures the metabolic exchange between humans and nature (soil depletion, climate change)</td></tr>
+            <tr><td>⚡ <strong>Second Contradiction</strong></td><td>(O'Connor) Capitalism undermines its own ecological conditions of production</td></tr>
+            <tr><td>🛢️ <strong>Fossil Capital</strong></td><td>(Malm) Coal/oil wasn't adopted because cheap — it was adopted because it disciplined labor</td></tr>
+            <tr><td>🌍 <strong>Capitalocene</strong></td><td>(Moore) It's not the "Anthropocene" — humans didn't do this; <em>capital</em> did</td></tr>
+            <tr><td>🌳 <strong>Degrowth Communism</strong></td><td>(Kohei Saito) Late Marx was a degrowth communist — sustainability requires shrinking the economy</td></tr>
+          </tbody>
+        </table></div>
+        <div class="insight">Eco-Marxism is arguably the <strong>fastest-growing branch</strong> in the 21st century, as climate crisis forces a reckoning with capitalism's growth imperative.</div>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 15: AUTONOMIST ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🏴</span>
+        <span class="branch-title">7.15 Autonomist Marxism</span>
+        <span class="branch-tag">WORKERS' POWER</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1960s–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Tronti, Negri, Hardt, Bifo, Cleaver</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Geography</span><span class="meta-value">Italy (operaismo movement)</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Workers and Capital; Empire; Multitude</span></div>
+      </div>
+      <div class="branch-body">
+        <p>An Italian current rejecting both Stalinism and reformism. Argued <strong style="color:var(--gold)">workers' struggles drive capitalism's development</strong> — capital is always reacting to worker resistance, not vice versa. Famously inverts the orthodox "base → struggle" sequence.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">⚒️ Key Concepts</h4>
+        <div class="branch-concepts">
+          <span class="concept-chip">Workers' Inquiry</span>
+          <span class="concept-chip">Refusal of Work</span>
+          <span class="concept-chip">Class Composition</span>
+          <span class="concept-chip">Social Factory</span>
+          <span class="concept-chip">Immaterial Labor</span>
+          <span class="concept-chip">Multitude</span>
+          <span class="concept-chip">Empire</span>
+        </div>
+        <p><strong style="color:var(--crimson-soft)">Negri &amp; Hardt's Empire (2000):</strong> Argued capitalism has entered a new stage — "Empire" — a decentered global network of power, opposed by the "Multitude" (a new revolutionary subject beyond the industrial working class).</p>
+      </div>
+    </div>
+
+    <!-- ============ BRANCH 16: POST-MARXISM & 21st C ============ -->
+    <div class="branch-card">
+      <div class="branch-header">
+        <span class="branch-emoji">🚀</span>
+        <span class="branch-title">7.16 Post-Marxism &amp; 21st-Century Marxism</span>
+        <span class="branch-tag">CONTEMPORARY</span>
+      </div>
+      <div class="branch-meta">
+        <div class="branch-meta-item"><span class="meta-label">Era</span><span class="meta-value">1985–present</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Thinkers</span><span class="meta-value">Laclau, Mouffe, Žižek, Badiou, Jameson, Harvey, Wood</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Issue</span><span class="meta-value">Marxism after the Soviet collapse</span></div>
+        <div class="branch-meta-item"><span class="meta-label">Key Texts</span><span class="meta-value">Hegemony &amp; Socialist Strategy; The Sublime Object of Ideology</span></div>
+      </div>
+      <div class="branch-body">
+        <p>How does Marxism survive after 1991? Two paths emerged: <strong style="color:var(--gold)">Post-Marxism</strong> moves <em>beyond</em> Marx's framework, while <strong style="color:var(--gold)">21st-century Marxism</strong> defends a renewed, updated Marxism for the age of neoliberalism and ecological crisis.</p>
+        <h4 style="color:var(--sky); margin-top:14px;">🎭 Post-Marxism (Laclau &amp; Mouffe)</h4>
+        <p>Argued class is just one identity among many; politics is the construction of "chains of equivalence" between diverse struggles (workers + feminists + LGBTQ + greens + anti-racists). Inspired left-populism (Podemos, France Insoumise, Sanders campaign).</p>
+        <h4 style="color:var(--sky);">⚡ Žižek's Lacanian Marxism</h4>
+        <p>Slovenian philosopher Slavoj Žižek revived Marxism through Lacanian psychoanalysis. Ideology isn't false belief — it's what we <em>do</em> while knowing better ("they know not, but they do it"). Hugely influential in cultural theory.</p>
+        <h4 style="color:var(--sky);">🌎 Modern Defenders of Classical Marxism</h4>
+        <div class="table-wrap"><table>
+          <tbody>
+            <tr><td><strong>David Harvey</strong></td><td>The most-read Marxist of our time; geographer of capital, neoliberalism, urbanism</td></tr>
+            <tr><td><strong>Ellen Meiksins Wood</strong></td><td>Political Marxism — capitalism's origins, defending class analysis against post-Marxism</td></tr>
+            <tr><td><strong>Fredric Jameson</strong></td><td>"Postmodernism is the cultural logic of late capitalism"</td></tr>
+            <tr><td><strong>Vivek Chibber</strong></td><td>Defends universalism of capital against postcolonial particularism</td></tr>
+            <tr><td><strong>Wolfgang Streeck</strong></td><td>"How will capitalism end?" — capitalism is unraveling without socialism replacing it</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ============ COMPARISON MEGA-TABLE ============ -->
+    <div class="section">
+      <h2>📊 7.17 MEGA-COMPARISON: All Branches at a Glance</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Branch</th><th>Revolutionary Subject</th><th>Path</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><td>📕 Classical ☭</td><td>Industrial proletariat</td><td>Revolution in advanced capitalism</td><td>Economy, class</td></tr>
+          <tr><td>📘 Orthodox ☭</td><td>Mass workers' party</td><td>Inevitable collapse</td><td>Economic determinism</td></tr>
+          <tr><td>🚩 Marxism-Leninism</td><td>Vanguard + workers</td><td>Insurrection</td><td>State seizure</td></tr>
+          <tr><td>⚔️ Trotskyism</td><td>International proletariat</td><td>Permanent revolution</td><td>Anti-bureaucracy</td></tr>
+          <tr><td>🐉 Maoism</td><td>Peasantry + workers</td><td>People's war</td><td>Cultural revolution</td></tr>
+          <tr><td>🎭 Western Marxism ☭</td><td>Class consciousness</td><td>Cultural transformation</td><td>Ideology, philosophy</td></tr>
+          <tr><td>🧠 Frankfurt School</td><td>(Pessimistic — no clear subject)</td><td>Critical theory</td><td>Mass culture, psyche</td></tr>
+          <tr><td>📓 Gramscian</td><td>Historic bloc</td><td>War of position</td><td>Hegemony, civil society</td></tr>
+          <tr><td>🏗️ Structural ☭</td><td>Structural contradictions</td><td>Scientific analysis</td><td>State apparatuses</td></tr>
+          <tr><td>🔬 Analytical</td><td>Rational actors</td><td>Empirical inquiry</td><td>Logic, game theory</td></tr>
+          <tr><td>♀ Marxist Feminism</td><td>Women + workers</td><td>Joint struggle</td><td>Social reproduction</td></tr>
+          <tr><td>🌍 Postcolonial</td><td>Colonized peoples</td><td>National liberation</td><td>Race, empire</td></tr>
+          <tr><td>💚 Eco-Marxism</td><td>Climate-affected masses</td><td>Degrowth + revolution</td><td>Ecology, metabolism</td></tr>
+          <tr><td>🏴 Autonomist</td><td>Multitude</td><td>Refusal &amp; exodus</td><td>Worker autonomy</td></tr>
+          <tr><td>🚀 Post-Marxism</td><td>Plural identities</td><td>Chains of equivalence</td><td>Discourse, hegemony</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- LENIN/GRAMSCI/ALTHUSSER QUICK-REFERENCE (original content preserved) -->
+    <div class="section">
+      <h2>📖 7.18 Quick Reference — Key Theoretical Innovations</h2>
+
+      <h3>📖 Lenin's Key Contributions</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Concept</th><th>Definition</th></tr></thead>
+        <tbody>
+          <tr><td>🌐 Imperialism</td><td>Monopoly capitalism that exports capital; source of superprofits to bribe labor aristocracy</td></tr>
+          <tr><td>⚔️ Vanguard Party</td><td>Elite revolutionary organization of professional revolutionaries</td></tr>
+          <tr><td>🗳️ Democratic Centralism</td><td>Free debate, unity in action</td></tr>
+          <tr><td>🌍 Uneven Development</td><td>Revolution possible where capitalism is weakest (Russia, not Germany)</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>📖 Gramsci's Hegemony</h3>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>🎭 Hegemony</td><td>Ruling class rules not just by <em>force</em> (coercion) but by <em>consent</em> (persuasion) — making its values seem "common sense"</td></tr>
+          <tr><td>🏛️ War of Position</td><td>Long-term struggle for cultural leadership before revolution</td></tr>
+          <tr><td>🧑‍🏫 Organic Intellectuals</td><td>Intellectuals from working class who articulate class interests</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>📖 Althusser's ISA / RSA Framework</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Apparatus</th><th>Examples</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr><td>🚔 Repressive (RSA)</td><td>Police, military, courts, prisons</td><td>Force</td></tr>
+          <tr><td>🏫 Ideological (ISA)</td><td>Schools, churches, family, media, unions</td><td>Consent</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout"><span class="callout-icon">🏁</span><strong style="color:var(--gold)">One-line takeaway for Part 7:</strong> Marxism is not one thing — it is a <em>family of revolutionary methods</em>, each adapted to the conditions of its time. The thread that unites them all is the critique of capitalism and the belief that another world is possible.</div>
+    </div>
+  </section>
+
+  <!-- ============ PART 8: THINKERS ============ -->
+  <section id="part8" class="part reveal">
+    <h2 class="part-header">👨‍🏫 PART 8: <span class="gradient-text">Key Thinkers &amp; Their Contributions</span></h2>
+
+    <div class="stage-grid">
+      <div class="stage-card">
+        <h4>🧔 Friedrich Engels (1820–1895)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">Condition of the Working Class (1845)</span><span class="v">Empirical documentation of exploitation</span></div>
+          <div class="kv-item"><span class="k">Anti-Dühring (1878)</span><span class="v">Systematic exposition of Marxism</span></div>
+          <div class="kv-item"><span class="k">Dialectics of Nature</span><span class="v">Applies dialectics to natural science</span></div>
+          <div class="kv-item"><span class="k">Origin of the Family (1884)</span><span class="v">Links patriarchy to private property</span></div>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <h4>🎩 Vladimir Lenin (1870–1924)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">What is to be Done? (1902)</span><span class="v">Vanguard party theory</span></div>
+          <div class="kv-item"><span class="k">Imperialism (1917)</span><span class="v">Imperialism as highest stage of capitalism</span></div>
+          <div class="kv-item"><span class="k">State and Revolution (1917)</span><span class="v">Theory of state; withering away</span></div>
+          <div class="kv-item"><span class="k">April Theses (1917)</span><span class="v">"Peace, Land, Bread"; "All Power to the Soviets"</span></div>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <h4>🌹 Rosa Luxemburg (1871–1919)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">Accumulation of Capital</span><span class="v">Capitalism needs non-capitalist markets → imperialism necessary</span></div>
+          <div class="kv-item"><span class="k">Reform or Revolution?</span><span class="v">Against revisionism; spontaneity of masses</span></div>
+          <div class="kv-item"><span class="k">Mass Strike</span><span class="v">Strike as revolutionary, not just economic</span></div>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <h4>⚔️ Leon Trotsky (1879–1940)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">Permanent Revolution</span><span class="v">In backward countries, proletariat must lead — revolution must go international</span></div>
+          <div class="kv-item"><span class="k">Deformed Workers' State</span><span class="v">USSR was degenerated, not socialist</span></div>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <h4>📓 Antonio Gramsci (1891–1937)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">Hegemony</span><span class="v">Cultural leadership before political power</span></div>
+          <div class="kv-item"><span class="k">War of Position</span><span class="v">Long cultural struggle vs direct assault</span></div>
+          <div class="kv-item"><span class="k">Organic Intellectuals</span><span class="v">Every class produces its own thinkers</span></div>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <h4>🏛️ Louis Althusser (1918–1990)</h4>
+        <div class="kv-list">
+          <div class="kv-item"><span class="k">ISAs</span><span class="v">How capitalism reproduces itself through ideology</span></div>
+          <div class="kv-item"><span class="k">Overdetermination</span><span class="v">Multiple contradictions, not one simple cause</span></div>
+          <div class="kv-item"><span class="k">Reading Capital</span><span class="v">Structuralist "symptomatic reading"</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PART 9: BOOK LIST ============ -->
+  <section id="part9" class="part reveal">
+    <h2 class="part-header">📚 PART 9: <span class="gradient-text">Master Book List</span></h2>
+    <div class="section">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Author</th><th>Title</th><th>Year</th><th>Core Thesis</th></tr></thead>
+        <tbody>
+          <tr><td>Marx</td><td>Economic &amp; Philosophic Manuscripts</td><td>1844</td><td>Alienation theory</td></tr>
+          <tr><td>Marx &amp; Engels</td><td>The German Ideology</td><td>1846</td><td>Historical materialism</td></tr>
+          <tr><td>Marx &amp; Engels</td><td>The Communist Manifesto</td><td>1848</td><td>Class struggle; political program</td></tr>
+          <tr><td>Marx</td><td>Critique of Political Economy</td><td>1859</td><td>Base / superstructure</td></tr>
+          <tr><td>Marx</td><td>Capital, Vol. I</td><td>1867</td><td>Labor theory; exploitation</td></tr>
+          <tr><td>Engels</td><td>Anti-Dühring</td><td>1878</td><td>Complete Marxist system</td></tr>
+          <tr><td>Engels</td><td>Origin of the Family</td><td>1884</td><td>Patriarchy &amp; property</td></tr>
+          <tr><td>Lenin</td><td>What is to be Done?</td><td>1902</td><td>Vanguard party</td></tr>
+          <tr><td>Lenin</td><td>Imperialism</td><td>1917</td><td>Monopoly capitalism</td></tr>
+          <tr><td>Luxemburg</td><td>Reform or Revolution</td><td>1900</td><td>Anti-revisionism</td></tr>
+          <tr><td>Lukács</td><td>History and Class Consciousness</td><td>1923</td><td>Reification; class consciousness</td></tr>
+          <tr><td>Gramsci</td><td>Prison Notebooks</td><td>1929–35</td><td>Hegemony</td></tr>
+          <tr><td>Althusser</td><td>Lenin and Philosophy</td><td>1970</td><td>ISAs</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ PART 10: CRITICAL EVALUATION ============ -->
+  <section id="part10" class="part reveal">
+    <h2 class="part-header">⚠️ PART 10: <span class="gradient-text">Critical Evaluation</span></h2>
+
+    <div class="section">
+      <h2>✅ Strengths of Marxism</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Strength</th><th>Explanation</th></tr></thead>
+        <tbody>
+          <tr><td>🔬 Scientific method</td><td>Predicts capitalist crises (2008 crash)</td></tr>
+          <tr><td>🏗️ Structural analysis</td><td>Explains patterns, not just individual actions</td></tr>
+          <tr><td>⚖️ Class perspective</td><td>Reveals hidden power relations</td></tr>
+          <tr><td>🌍 Global scope</td><td>Explains imperialism, North–South inequality</td></tr>
+          <tr><td>✊ Praxis orientation</td><td>Theory for change, not just interpretation</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>❌ Criticisms of Marxism (with Marxist Responses)</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Criticism</th><th>Marxist Response</th></tr></thead>
+        <tbody>
+          <tr><td>Economic determinism</td><td>Engels: "ultimately" determining, not exclusively</td></tr>
+          <tr><td>Ignored non-class oppression</td><td>Feminism, postcolonialism added later layers</td></tr>
+          <tr><td>Failed predictions (no revolution in the West)</td><td>False consciousness; welfare state bought off workers</td></tr>
+          <tr><td>Stalinism / authoritarianism</td><td>Not real Marxism (Trotskyists, left communists argue)</td></tr>
+          <tr><td>No individual agency</td><td>Ongoing structure vs agency debate</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ PART 11: RELEVANCE TODAY ============ -->
+  <section id="part11" class="part reveal">
+    <h2 class="part-header">💡 PART 11: <span class="gradient-text">Relevance Today</span></h2>
+    <div class="section">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Contemporary Issue</th><th>Marxist Analysis</th></tr></thead>
+        <tbody>
+          <tr><td>📈 Income inequality</td><td>Capital concentrates; wages lag productivity</td></tr>
+          <tr><td>🏢 Corporate power</td><td>Bourgeoisie rules through state &amp; media</td></tr>
+          <tr><td>🌍 Globalization</td><td>Imperialism 2.0 — exploitation across borders</td></tr>
+          <tr><td>🤖 Automation</td><td>Reserve army of labor; technological unemployment</td></tr>
+          <tr><td>🌡️ Climate crisis</td><td>Capitalism's growth imperative destroys the planet</td></tr>
+          <tr><td>🏛️ Political crisis</td><td>Legitimation crisis; state serves capital</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- ============ PART 12: EXAM TOOLKIT ============ -->
+  <section id="part12" class="part reveal">
+    <h2 class="part-header">🎯 PART 12: <span class="gradient-text">Exam Revision Toolkit</span></h2>
+
+    <div class="section">
+      <h2>🧠 Ultimate Mnemonic: "BASE-BUSTER"</h2>
+      <div class="mnemonic">
+        <strong>B</strong> – Base determines Superstructure<br>
+        <strong>A</strong> – Alienation (4 types)<br>
+        <strong>S</strong> – Surplus Value (exploitation formula)<br>
+        <strong>E</strong> – Engels (co-founder)<br><br>
+        <strong>B</strong> – Bourgeoisie vs Proletariat<br>
+        <strong>U</strong> – Unity of Opposites (dialectics)<br>
+        <strong>S</strong> – Stages of history (6 stages)<br>
+        <strong>T</strong> – Theory of value (labor theory)<br>
+        <strong>E</strong> – Exploitation (systemic)<br>
+        <strong>R</strong> – Revolution (necessary)
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧮 Essential Formulas</h2>
+      <div class="formula">📐 SV = V − W &nbsp;&nbsp;|&nbsp;&nbsp; Surplus Value = Value created − Wages paid</div>
+      <div class="formula">📐 RoE = SV ÷ W &nbsp;&nbsp;|&nbsp;&nbsp; Rate of Exploitation</div>
+      <div class="formula">📐 C → C′ → C″ &nbsp;&nbsp;|&nbsp;&nbsp; Capital self-expansion</div>
+      <div class="formula">📐 M → C → M′ &nbsp;&nbsp;|&nbsp;&nbsp; Money → Commodity → More Money</div>
+    </div>
+
+    <div class="section">
+      <h2>📅 Key Dates</h2>
+      <div class="table-wrap"><table>
+        <tbody>
+          <tr><td>1848</td><td>Communist Manifesto</td></tr>
+          <tr><td>1867</td><td>Capital, Vol I</td></tr>
+          <tr><td>1917</td><td>Russian Revolution</td></tr>
+          <tr><td>1923</td><td>Lukács / Gramsci era</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="section">
+      <h2>💬 10 Essential Quotes</h2>
+      <div class="quote-block">Workers of the world, unite!<br>— <strong>Communist Manifesto</strong></div>
+      <div class="quote-block">The history of all hitherto existing society is the history of class struggles.<br>— <strong>Communist Manifesto</strong></div>
+      <div class="quote-block">Religion is the opium of the people.<br>— <strong>Critique of Hegel's Philosophy of Right</strong></div>
+      <div class="quote-block">From each according to his ability, to each according to his needs!<br>— <strong>Critique of the Gotha Program</strong></div>
+      <div class="quote-block">The philosophers have only interpreted the world… the point is to change it.<br>— <strong>Theses on Feuerbach</strong></div>
+      <div class="quote-block">Capital is dead labor which, vampire-like, lives only by sucking living labor.<br>— <strong>Capital, Vol I</strong></div>
+      <div class="quote-block">The executive of the modern state is but a committee for managing the common affairs of the whole bourgeoisie.<br>— <strong>Communist Manifesto</strong></div>
+      <div class="quote-block">The proletarians have nothing to lose but their chains.<br>— <strong>Communist Manifesto</strong></div>
+      <div class="quote-block">The production of too many useful things results in too many useless people.<br>— <em>(Attributed)</em></div>
+      <div class="quote-block">Necessity is blind until it becomes conscious.<br>— <strong>Capital, Vol III</strong></div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL SYNTHESIS ============ -->
+  <section class="synthesis reveal">
+    <h2>🏆 FINAL SYNTHESIS</h2>
+    <p>
+      <strong style="color:var(--gold)">Marxism</strong> is the scientific theory that the <strong style="color:var(--crimson-soft)">economic base</strong> determines the social superstructure, that <strong style="color:var(--sky)">contradictions</strong> drive historical change through <strong style="color:var(--rose)">class struggle</strong>, that <strong style="color:var(--gold)">exploitation</strong> is built into wage labor through the extraction of <strong style="color:var(--crimson-soft)">surplus value</strong>, and that only a <strong style="color:var(--mint)">proletarian revolution</strong> abolishing private property can achieve true human freedom in a classless, stateless, communist society.
+    </p>
+    <p style="margin-top:24px; font-size:1.4rem; color:var(--gold); font-style:italic;">✊ Workers of the world, unite — you have nothing to lose but your chains. ✊</p>
+  </section>
+
+  <div class="footer">
+    <div class="hammer-sickle">☭</div>
+    <p style="margin-top:20px;"><b> Religion  Is  The  Opium  Of  The  People  </b></p>
+    <p style="margin-top:8px; font-size:0.9rem;"><b>~‎ ‎  Ｋａｒｌ‎‎ ‎ ‎ Ｍａｒｘ‎ ‎ ‎  </b></p>
+ <br><p><h1><b>En Nenjil Kudiyirukkum<br>
+என் நெஞ்சில் குடியிருக்கும்</b></h1>
+  </div>
+
+</div>
+
+<script>
+  // ============ PARTICLES ============
+  const particles = document.getElementById('particles');
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (10 + Math.random() * 20) + 's';
+    p.style.animationDelay = Math.random() * 15 + 's';
+    const colors = ['#ffd166', '#e63946', '#f72585', '#4cc9f0'];
+    const c = colors[Math.floor(Math.random() * colors.length)];
+    p.style.background = c;
+    p.style.boxShadow = '0 0 8px ' + c;
+    particles.appendChild(p);
+  }
+
+  // ============ SCROLL REVEAL (FIXED) ============
+  // Use rootMargin so large sections trigger as soon as ANY part enters viewport.
+  // Threshold 0 = fires as soon as even 1px is visible — critical for tall sections like Part 2 & Part 7.
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('active');
+        observer.unobserve(e.target); // stop observing once revealed (performance)
+      }
+    });
+  }, { 
+    threshold: 0,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // SAFETY FALLBACK: force-reveal any section still hidden after 2 seconds
+  // (covers edge cases: JS errors, browsers without IntersectionObserver, anchor jumps)
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.active)').forEach(el => {
+      el.classList.add('active');
+    });
+  }, 2000);
+
+  // ALSO: when user clicks a TOC anchor link, immediately reveal the target section
+  document.querySelectorAll('.toc-grid a').forEach(link => {
+    link.addEventListener('click', () => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      const target = document.getElementById(targetId);
+      if (target && target.classList.contains('reveal')) {
+        target.classList.add('active');
+      }
+    });
+  });
+
+  // ============ TITLE CLICK RIPPLE ============
+  const mainTitle = document.querySelector('.hero h1.main-title');
+  if (mainTitle) {
+    mainTitle.addEventListener('click', function() {
+      this.style.animation = 'none';
+      setTimeout(() => { this.style.animation = 'shimmer 4s linear infinite'; }, 10);
+    });
+  }
+</script>
+
+</body>
+</html>
