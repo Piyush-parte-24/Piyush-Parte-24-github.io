@@ -79,18 +79,6 @@ const archiveEntries = [
     image: "",
     featured: true
   },
-   {
-    number: "04",
-    title: "Socialism",
-    category: "Philosophy",
-    description: "From Utopian Dreams to Scientific Revolutions",
-    status: "Documented",
-    date: "FIELD SEASON I",
-    file: "Socialism 2.0.html",
-    icon: "🌹",
-    image: "",
-    featured: true
-  } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
