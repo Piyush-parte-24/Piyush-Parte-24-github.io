@@ -79,10 +79,34 @@ const archiveEntries = [
     image: "",
     featured: true
   },
+  {
+    number: "04",
+    title: "Socialism",
+    category: "Philosophy",
+    description: "From Utopian Dreams to Scientific Revolutions ",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Socialism 2.0.html",
+    icon: "🌹",
+    image: "",
+    featured: true
+  },
+  {
+    number: "05",
+    title: "Marxism",
+    category: "Philosophy",
+    description: "The philosophers have only interpreted the world, in various ways; the point is to change it",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Marxism 2.0.html",
+    icon: "☭",
+    image: "",
+    featured: true
+  } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "05",
+    number: "06",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
