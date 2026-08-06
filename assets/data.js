@@ -116,7 +116,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "08",
+    number: "09",
     title: "Chronicles of the British Rule",
     category: "Political Science",
     description: "Governors-General & Viceroys of British India — The Raj's Twilight",
@@ -128,7 +128,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "09",
+    number: "10",
     title: "The Royal Ledger of Bhārat",
     category: "Political Science",
     description: "Presidents & Prime Ministers of India — From the Raj's Twilight to the Republic's Dawn",
@@ -140,7 +140,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "10",
+    number: "11",
     title: "POLITICAL ‎ SCIENCE",
     category: "Political Science",
     description: "Political Science - Definition, nature & scope",
@@ -154,7 +154,7 @@ const archiveEntries = [
   {
     number: "07",
     title: "LIBERALISM",
-    category: "Political Science",
+    category: "Philosophy",
     description: "The Philosophy of Freedom — Where the Individual Becomes Sovereign",
     status: "Documented",
     date: "FIELD SEASON I",
@@ -164,7 +164,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "11",
+    number: "12",
     title: "CITIZENSHIP RIGHTS",
     category: "Political Science",
     description: "Rights • Duties • DPSP • Human Rights • Union of Trinity",
@@ -174,11 +174,23 @@ const archiveEntries = [
     icon: "🛂",
     image: "",
     featured: true
+  },
+  {
+    number: "08",
+    title: "GANDHISM",
+    category: "Philosophy",
+    description: "Truth · Non-Violence · Self-Rule · Universal Uplift",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Gandhism 3.0.html",
+    icon: "𓀗",
+    image: "",
+    featured: true
   } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "12",
+    number: "13",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
