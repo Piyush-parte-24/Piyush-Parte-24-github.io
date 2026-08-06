@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🕉️ Gandhism 3.0 — The Complete Codex of Gandhian Political Thought (Enriched & Expanded Edition)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== ROOT VARIABLES — COLOR PHILOSOPHY ===== */
+  :root {
+    --bg-deep: #0a0612;
+    --bg-mid: #120a1f;
+    --bg-soft: #1a1030;
+    --bg-card: rgba(25, 18, 45, 0.65);
+    --text-primary: #e8e3f0;
+    --text-soft: #c4bdd4;
+    --text-muted: #8e87a3;
+
+    --saffron: #ff9933;
+    --saffron-glow: #ffb866;
+    --saffron-bg: rgba(255, 153, 51, 0.08);
+
+    --blue: #4a8eff;
+    --blue-glow: #7eb0ff;
+    --blue-bg: rgba(74, 142, 255, 0.08);
+
+    --green: #4ade80;
+    --green-glow: #86efac;
+    --green-bg: rgba(74, 222, 128, 0.08);
+
+    --red: #ff6b8a;
+    --red-glow: #ff9bb0;
+    --red-bg: rgba(255, 107, 138, 0.08);
+
+    --purple: #c084fc;
+    --purple-glow: #d8b4fe;
+    --purple-bg: rgba(192, 132, 252, 0.08);
+
+    --brown: #d4a574;
+    --brown-glow: #e8c39e;
+    --brown-bg: rgba(212, 165, 116, 0.08);
+
+    --teal: #2dd4bf;
+    --teal-glow: #5eead4;
+    --teal-bg: rgba(45, 212, 191, 0.08);
+
+    --crimson: #f43f5e;
+    --crimson-glow: #fb7185;
+    --crimson-bg: rgba(244, 63, 94, 0.08);
+
+    --gold: #ffd700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    line-height: 1.75;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(192, 132, 252, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(74, 142, 255, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  /* ===== ANIMATED STARFIELD ===== */
+  .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .stars::before, .stars::after {
+    content: ''; position: absolute; width: 2px; height: 2px; background: white; border-radius: 50%;
+    box-shadow:
+      120px 80px white, 250px 200px white, 380px 50px #ffd700,
+      500px 300px white, 700px 150px #c084fc, 850px 250px white,
+      1000px 400px #ff9933, 200px 500px white, 600px 600px white,
+      900px 700px #4a8eff, 1200px 100px white, 1400px 350px white,
+      1100px 550px #4ade80, 400px 750px white, 800px 850px #ffd700,
+      150px 350px white, 1300px 800px white, 50px 650px #c084fc;
+    animation: twinkle 4s infinite alternate;
+  }
+  .stars::after { animation-delay: 2s; opacity: 0.6; }
+  @keyframes twinkle { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 24px; position: relative; z-index: 1; }
+
+  /* ===== HERO TITLE ===== */
+  .hero {
+    text-align: center; padding: 80px 20px 60px; position: relative; border-radius: 30px; margin-bottom: 60px;
+    background: linear-gradient(135deg, rgba(255,153,51,0.08) 0%, rgba(192,132,252,0.08) 50%, rgba(74,142,255,0.08) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.15); overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 0 60px rgba(255,153,51,0.04);
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(255,153,51,0.15) 60deg, transparent 120deg,
+      rgba(192,132,252,0.15) 180deg, transparent 240deg, rgba(74,222,128,0.15) 300deg, transparent 360deg);
+    animation: rotate 20s linear infinite; z-index: 0;
+  }
+  @keyframes rotate { to { transform: rotate(360deg); } }
+  .hero > * { position: relative; z-index: 1; }
+  .om-symbol {
+    font-size: 100px; display: inline-block;
+    background: linear-gradient(135deg, #ff9933, #ffd700, #ff6b8a);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(255, 153, 51, 0.6));
+    animation: float 4s ease-in-out infinite; cursor: pointer;
+    transition: transform 0.6s cubic-bezier(.34,1.56,.64,1);
+  }
+  .om-symbol:hover { transform: scale(1.3) rotate(360deg); filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.9)); }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+  .hero h1 {
+    font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 800; letter-spacing: 4px; margin: 20px 0;
+    background: linear-gradient(90deg, #ff9933 0%, #ffd700 25%, #c084fc 50%, #4a8eff 75%, #4ade80 100%);
+    background-size: 300% 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease infinite; cursor: default; transition: letter-spacing 0.5s, text-shadow 0.5s;
+    text-shadow: 0 0 60px rgba(255, 153, 51, 0.3);
+  }
+  .hero h1:hover { letter-spacing: 8px; text-shadow: 0 0 80px rgba(255, 215, 0, 0.6); }
+  @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .hero .subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.6rem); color: var(--text-soft); margin-top: 24px; letter-spacing: 1px; }
+  .hero .quote {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.4rem); color: var(--gold); margin-top: 30px;
+    padding: 20px 30px; border-left: 3px solid var(--saffron); border-right: 3px solid var(--purple); display: inline-block;
+    background: rgba(0, 0, 0, 0.3); border-radius: 12px; backdrop-filter: blur(10px); transition: all 0.4s;
+  }
+  .hero .quote:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2); }
+  .hero .author { display: block; margin-top: 12px; font-size: 0.9em; color: var(--saffron-glow); font-style: normal; letter-spacing: 3px; }
+
+  .petals { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+  .petal { position: absolute; font-size: 24px; opacity: 0.3; animation: drift 15s linear infinite; }
+  .petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .petal:nth-child(2) { left: 30%; animation-delay: 3s; font-size: 18px;}
+  .petal:nth-child(3) { left: 60%; animation-delay: 6s; font-size: 28px;}
+  .petal:nth-child(4) { left: 80%; animation-delay: 9s; }
+  .petal:nth-child(5) { left: 45%; animation-delay: 12s; font-size: 20px;}
+  @keyframes drift { 0% { transform: translateY(-50px) rotate(0deg); opacity: 0; } 10% { opacity: 0.4; } 90% { opacity: 0.4; } 100% { transform: translateY(800px) rotate(360deg); opacity: 0; } }
+
+  /* ===== SECTION STYLING ===== */
+  section {
+    margin: 60px 0; padding: 40px; background: var(--bg-card); border-radius: 24px; backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative; overflow: hidden; transition: transform 0.4s, box-shadow 0.4s;
+  }
+  section:hover { transform: translateY(-4px); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); }
+  section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--saffron), var(--gold), var(--purple)); opacity: 0.7; }
+  section.saffron::before { background: linear-gradient(90deg, var(--saffron), var(--saffron-glow)); }
+  section.blue::before { background: linear-gradient(90deg, var(--blue), var(--blue-glow)); }
+  section.green::before { background: linear-gradient(90deg, var(--green), var(--green-glow)); }
+  section.red::before { background: linear-gradient(90deg, var(--red), var(--red-glow)); }
+  section.purple::before { background: linear-gradient(90deg, var(--purple), var(--purple-glow)); }
+  section.brown::before { background: linear-gradient(90deg, var(--brown), var(--brown-glow)); }
+  section.teal::before { background: linear-gradient(90deg, var(--teal), var(--teal-glow)); }
+  section.crimson::before { background: linear-gradient(90deg, var(--crimson), var(--crimson-glow)); }
+  section.gold::before { background: linear-gradient(90deg, var(--gold), var(--saffron), var(--gold)); }
+
+  h2 {
+    font-family: 'Cinzel', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 24px; padding-bottom: 16px;
+    border-bottom: 2px dashed rgba(255, 215, 0, 0.2); letter-spacing: 1.5px; transition: all 0.4s;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  section.saffron h2 { color: var(--saffron-glow); text-shadow: 0 0 20px rgba(255,153,51,0.3);}
+  section.blue h2 { color: var(--blue-glow); text-shadow: 0 0 20px rgba(74,142,255,0.3);}
+  section.green h2 { color: var(--green-glow); text-shadow: 0 0 20px rgba(74,222,128,0.3);}
+  section.red h2 { color: var(--red-glow); text-shadow: 0 0 20px rgba(255,107,138,0.3);}
+  section.purple h2 { color: var(--purple-glow); text-shadow: 0 0 20px rgba(192,132,252,0.3);}
+  section.brown h2 { color: var(--brown-glow); text-shadow: 0 0 20px rgba(212,165,116,0.3);}
+  section.teal h2 { color: var(--teal-glow); text-shadow: 0 0 20px rgba(45,212,191,0.3);}
+  section.crimson h2 { color: var(--crimson-glow); text-shadow: 0 0 20px rgba(244,63,94,0.3);}
+  section.gold h2 { color: var(--gold); text-shadow: 0 0 25px rgba(255,215,0,0.4);}
+  h2:hover { letter-spacing: 3px; }
+
+  h3 { font-family: 'Cinzel', serif; font-size: 1.4rem; margin: 30px 0 16px; color: var(--text-primary); display: flex; align-items: center; gap: 10px; padding-left: 16px; border-left: 4px solid var(--gold); transition: all 0.3s; }
+  h3:hover { padding-left: 24px; border-left-color: var(--saffron); }
+  h4 { font-size: 1.15rem; margin: 20px 0 12px; color: var(--saffron-glow); font-weight: 600; }
+  p { margin-bottom: 14px; color: var(--text-soft); }
+
+  blockquote {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; padding: 20px 28px; margin: 20px 0;
+    background: linear-gradient(135deg, rgba(255,215,0,0.04), rgba(255,153,51,0.04)); border-left: 4px solid var(--gold);
+    border-radius: 0 16px 16px 0; color: #f5e9c8; position: relative; transition: all 0.4s;
+  }
+  blockquote:hover { transform: translateX(6px); background: linear-gradient(135deg, rgba(255,215,0,0.08), rgba(255,153,51,0.08)); box-shadow: 0 10px 30px rgba(255, 215, 0, 0.15); }
+  blockquote::before { content: '"'; font-size: 4rem; position: absolute; top: -10px; left: 10px; color: rgba(255, 215, 0, 0.2); font-family: serif; }
+
+  ul, ol { padding-left: 28px; margin: 14px 0; }
+  li { margin: 10px 0; color: var(--text-soft); transition: all 0.3s; padding-left: 6px; }
+  li:hover { color: var(--text-primary); transform: translateX(4px); }
+  ul li::marker { color: var(--saffron); }
+  ol li::marker { color: var(--gold); font-weight: 700; }
+  strong { color: var(--saffron-glow); font-weight: 600; }
+
+  code, .term {
+    font-family: 'JetBrains Mono', monospace; background: rgba(255, 153, 51, 0.12); color: var(--saffron-glow);
+    padding: 2px 8px; border-radius: 6px; font-size: 0.92em; border: 1px solid rgba(255, 153, 51, 0.2); transition: all 0.3s;
+  }
+  code:hover, .term:hover { background: rgba(255, 153, 51, 0.2); box-shadow: 0 0 12px rgba(255, 153, 51, 0.3); }
+
+  /* ===== LEGEND ===== */
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 30px 0; }
+  .legend-card { padding: 22px; border-radius: 18px; background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(.34,1.56,.64,1); cursor: pointer; position: relative; overflow: hidden; }
+  .legend-card::before { content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--card-color, var(--saffron)); transition: width 0.4s; }
+  .legend-card:hover::before { width: 100%; opacity: 0.1; }
+  .legend-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 50px rgba(0,0,0,0.4); border-color: var(--card-color); }
+  .legend-card .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: var(--card-color); box-shadow: 0 0 12px var(--card-color); margin-right: 10px; vertical-align: middle; }
+  .legend-card h4 { color: var(--card-color); font-size: 1.2rem; margin: 8px 0; }
+  .legend-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0;}
+
+  /* ===== TABLES ===== */
+  .table-wrap { overflow-x: auto; border-radius: 16px; margin: 24px 0; border: 1px solid rgba(255,255,255,0.08); background: rgba(0,0,0,0.2); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th { background: linear-gradient(135deg, rgba(255,153,51,0.15), rgba(192,132,252,0.15)); color: var(--gold); padding: 16px; text-align: left; font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 1px; border-bottom: 2px solid rgba(255,215,0,0.3); }
+  td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text-soft); vertical-align: top; }
+  tr { transition: background 0.3s; }
+  tr:hover td { background: rgba(255, 215, 0, 0.04); color: var(--text-primary); }
+
+  /* ===== CONCEPT CARDS ===== */
+  .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin: 26px 0; }
+  .concept-card { padding: 24px; border-radius: 18px; background: linear-gradient(145deg, rgba(30,20,50,0.7), rgba(20,12,35,0.7)); border: 1px solid var(--card-border, rgba(255,255,255,0.08)); transition: all 0.5s cubic-bezier(.34,1.56,.64,1); position: relative; overflow: hidden; }
+  .concept-card::after { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, var(--card-glow, rgba(255,153,51,0.1)) 0%, transparent 60%); opacity: 0; transition: opacity 0.5s; pointer-events: none; }
+  .concept-card:hover::after { opacity: 1; }
+  .concept-card:hover { transform: translateY(-6px); border-color: var(--card-border-hover, var(--saffron)); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+  .concept-card h4 { font-size: 1.3rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+
+  /* ===== VOWS GRID ===== */
+  .vows-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0; }
+  .vow { background: linear-gradient(135deg, rgba(212, 165, 116, 0.08), rgba(160, 82, 45, 0.05)); padding: 20px; border-radius: 14px; border-left: 4px solid var(--brown); transition: all 0.4s; cursor: pointer; position: relative; }
+  .vow .num { position: absolute; top: 14px; right: 16px; font-family: 'Cinzel', serif; font-size: 2rem; color: rgba(212, 165, 116, 0.3); font-weight: 800; }
+  .vow:hover { transform: translateX(8px) translateY(-4px); background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(160, 82, 45, 0.08)); box-shadow: 0 15px 35px rgba(212, 165, 116, 0.2); border-left-width: 8px; }
+  .vow h4 { color: var(--brown-glow); margin-bottom: 6px; font-size: 1.1rem;}
+  .vow .sanskrit { font-style: italic; color: var(--gold); font-size: 0.92rem;}
+  .vow p { font-size: 0.92rem; margin-top: 8px; color: var(--text-muted);}
+
+  /* ===== LADDER ===== */
+  .ladder { position: relative; padding: 20px 0; margin: 30px 0; }
+  .ladder::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--blue), var(--purple)); border-radius: 3px; }
+  .step { position: relative; padding-left: 80px; margin: 24px 0; transition: all 0.4s; }
+  .step::before { content: attr(data-num); position: absolute; left: 12px; top: 0; width: 40px; height: 40px; background: linear-gradient(135deg, var(--blue), var(--purple)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-family: 'Cinzel', serif; box-shadow: 0 0 20px rgba(74, 142, 255, 0.5); transition: all 0.4s; }
+  .step:hover { transform: translateX(10px); }
+  .step:hover::before { transform: scale(1.2) rotate(360deg); }
+  .step h4 { color: var(--blue-glow); margin-bottom: 6px;}
+
+  /* ===== LIFE TIMELINE ===== */
+  .life-timeline { position: relative; padding: 20px 0; margin: 30px 0; }
+  .life-timeline::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--saffron), var(--gold), var(--purple), var(--blue)); border-radius: 3px; }
+  .life-event { position: relative; padding-left: 56px; margin: 20px 0; transition: all 0.35s; }
+  .life-event::before { content: ''; position: absolute; left: 10px; top: 6px; width: 18px; height: 18px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 14px var(--gold); border: 3px solid var(--bg-deep); transition: all 0.35s; }
+  .life-event:hover { transform: translateX(8px); }
+  .life-event:hover::before { transform: scale(1.4); background: var(--saffron); }
+  .life-event .yr { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-weight: 600; font-size: 0.95rem; margin-right: 8px; }
+  .life-event .ev-title { color: var(--saffron-glow); font-weight: 600; }
+  .life-event p { font-size: 0.92rem; margin: 4px 0 0; color: var(--text-muted); }
+
+  /* ===== MERMAID ===== */
+  .mermaid-wrap { background: rgba(0, 0, 0, 0.4); padding: 30px; border-radius: 18px; margin: 30px 0; border: 1px solid rgba(255, 215, 0, 0.15); overflow-x: auto; text-align: center; }
+
+  /* ===== TACTIC BOX ===== */
+  .tactic-box { background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 153, 51, 0.05)); border: 1px solid rgba(255, 215, 0, 0.25); padding: 24px; border-radius: 16px; margin: 20px 0; transition: all 0.4s; }
+  .tactic-box:hover { border-color: var(--gold); box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15); transform: translateY(-3px); }
+  .tactic-box h4 { color: var(--gold); display: flex; align-items: center; gap: 10px; }
+
+  /* ===== QUOTE WALL ===== */
+  .quote-wall { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 26px 0; }
+  .quote-chip { padding: 22px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(192,132,252,0.05)); border: 1px solid rgba(255,215,0,0.15); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.12rem; color: #f5e9c8; transition: all 0.4s; position: relative; }
+  .quote-chip:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 40px rgba(255,215,0,0.15); border-color: var(--gold); }
+  .quote-chip span { display: block; margin-top: 10px; font-style: normal; font-size: 0.82rem; letter-spacing: 2px; color: var(--saffron-glow); }
+
+  /* ===== NAV ===== */
+  .nav-pill { position: fixed; top: 20px; right: 20px; z-index: 100; display: flex; gap: 6px; flex-wrap: wrap; max-width: 90vw; justify-content: flex-end; background: rgba(10, 6, 18, 0.85); padding: 10px; border-radius: 50px; backdrop-filter: blur(20px); border: 1px solid rgba(255, 215, 0, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  .nav-pill a { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; font-size: 17px; transition: all 0.3s; background: transparent; }
+  .nav-pill a:hover { transform: scale(1.3) rotate(15deg); background: rgba(255, 215, 0, 0.15); }
+
+  @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  section { animation: slideUp 0.8s ease-out backwards; }
+  section:nth-of-type(1) { animation-delay: 0.1s; }
+  section:nth-of-type(2) { animation-delay: 0.2s; }
+  section:nth-of-type(3) { animation-delay: 0.3s; }
+  section:nth-of-type(4) { animation-delay: 0.4s; }
+
+  /* ===== INSIGHT / DEEPDIVE / SOURCEBOX ===== */
+  .insight { background: linear-gradient(135deg, rgba(192, 132, 252, 0.08), rgba(74, 142, 255, 0.05)); border-left: 4px solid var(--purple); padding: 18px 22px; border-radius: 0 14px 14px 0; margin: 18px 0; transition: all 0.4s; }
+  .insight:hover { transform: translateX(6px); border-left-color: var(--purple-glow); box-shadow: 0 10px 25px rgba(192, 132, 252, 0.15); }
+  .insight strong { color: var(--purple-glow); }
+
+  .deepdive { background: linear-gradient(135deg, rgba(45,212,191,0.07), rgba(74,142,255,0.05)); border-left: 4px solid var(--teal); padding: 18px 22px; border-radius: 0 14px 14px 0; margin: 18px 0; transition: all 0.4s; }
+  .deepdive:hover { transform: translateX(6px); border-left-color: var(--teal-glow); box-shadow: 0 10px 25px rgba(45,212,191,0.15); }
+  .deepdive strong { color: var(--teal-glow); }
+
+  .sourcebox { background: linear-gradient(135deg, rgba(244,63,94,0.07), rgba(255,153,51,0.05)); border-left: 4px solid var(--crimson); padding: 18px 22px; border-radius: 0 14px 14px 0; margin: 18px 0; transition: all 0.4s; }
+  .sourcebox:hover { transform: translateX(6px); border-left-color: var(--crimson-glow); box-shadow: 0 10px 25px rgba(244,63,94,0.15); }
+  .sourcebox strong { color: var(--crimson-glow); }
+
+  .badge-new { font-size: 0.6em; color: var(--gold); border: 1px solid rgba(255,215,0,0.4); border-radius: 20px; padding: 2px 10px; letter-spacing: 1px; vertical-align: middle; background: rgba(255,215,0,0.06); }
+  .badge-img { font-size: 0.55em; color: var(--crimson-glow); border: 1px solid rgba(244,63,94,0.4); border-radius: 20px; padding: 2px 10px; letter-spacing: 1px; vertical-align: middle; background: rgba(244,63,94,0.06); }
+
+  footer { text-align: center; padding: 60px 20px 40px; color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-style: italic; border-top: 1px solid rgba(255, 215, 0, 0.15); margin-top: 60px; }
+  footer .om { font-size: 40px; background: linear-gradient(135deg, var(--saffron), var(--gold)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: block; margin-bottom: 12px; animation: float 4s ease-in-out infinite; }
+
+  @media (max-width: 768px) {
+    .container { padding: 20px 14px; }
+    section { padding: 24px 18px; }
+    .nav-pill { right: 10px; top: 10px; padding: 6px;}
+    .nav-pill a { width: 28px; height: 28px; font-size: 13px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<nav class="nav-pill">
+  <a href="#hero" title="Top">🌼</a>
+  <a href="#legend" title="Legend">🎨</a>
+  <a href="#life" title="Life Timeline">🛤️</a>
+  <a href="#influences" title="Influences">📚</a>
+  <a href="#foundations" title="Foundations">🏛️</a>
+  <a href="#gita" title="Gita / Anasakti">🪔</a>
+  <a href="#political" title="Political">⚔️</a>
+  <a href="#prvss" title="Passive Resistance vs Satyagraha">🆚</a>
+  <a href="#meansends" title="Means & Ends">🌱</a>
+  <a href="#democracy" title="Oceanic Circle & Democracy">⭕</a>
+  <a href="#earlysat" title="Early Satyagrahas">🌾</a>
+  <a href="#economic" title="Economic">💰</a>
+  <a href="#vows" title="11 Vows">📜</a>
+  <a href="#sins" title="7 Social Sins">⚠️</a>
+  <a href="#social" title="Social">⚖️</a>
+  <a href="#debates" title="Key Debates">⚡</a>
+  <a href="#orgs" title="Orgs & Works">🏢</a>
+  <a href="#critique" title="Critique">🔴</a>
+  <a href="#relevance" title="Relevance">✅</a>
+  <a href="#glossary" title="Glossary">🛞</a>
+</nav>
+
+<div class="container">
+
+  <!-- ====================== HERO ====================== -->
+  <header class="hero" id="hero">
+    <div class="petals">
+      <span class="petal">🪷</span><span class="petal">🌸</span><span class="petal">🪷</span><span class="petal">🌼</span><span class="petal">🪷</span>
+    </div>
+    <div class="om-symbol">𓀗</div>
+    <h1>GANDHISM 🕊</h1>
+    <p class="subtitle"><b>AUTEUR: PIYUSH PARTE</b></p>
+    <p class="subtitle" style="margin-top:8px;font-size:0.95em;">Truth · Non-Violence · Self-Rule · Universal Uplift</p>
+    <p class="subtitle" style="margin-top:6px;font-size:0.8em;letter-spacing:2px;color:var(--saffron-glow);"><b>✦ MOHANDAS KARAMCHAND GANDHI (1869–1948) ✦</b></p>
+ <p class="subtitle" style="margin-top:6px;font-size:0.8em;letter-spacing:2px;color:var(--saffron-glow);"><em>MAN OF THE MASSES</em></p>
+    <div class="quote">
+      "Be the change that you wish to see in the world."
+      <span class="author">— M. K. GANDHI</span>
+    </div>
+  </header>
+
+  <!-- ====================== LEGEND ====================== -->
+  <section class="gold" id="legend">
+    <h2>🎨 Master Color Coding & Symbolic Legend</h2>
+    <p>A chromatic philosophy — every color is a doorway to a domain of Gandhian thought. Hover each card to feel its hue.</p>
+    <div class="legend-grid">
+      <div class="legend-card" style="--card-color: #ff9933;"><h4><span class="dot"></span>🟠 SAFFRON</h4><p><strong>Metaphysical & Moral Core</strong> — Truth (Satya), Non-Violence (Ahimsa), Spirituality, God, Character. The very soul of Gandhism.</p></div>
+      <div class="legend-card" style="--card-color: #4a8eff;"><h4><span class="dot"></span>🔵 BLUE</h4><p><strong>Political & Strategic Tools</strong> — Satyagraha, Swaraj, Civil Disobedience, Non-Cooperation, Salt March. Weapons of the weak made mighty.</p></div>
+      <div class="legend-card" style="--card-color: #4ade80;"><h4><span class="dot"></span>🟢 GREEN</h4><p><strong>Socio-Economic Constructs</strong> — Trusteeship, Sarvodaya, Antyodaya, Swadeshi, Khadi, Village Republics. The blueprint of a just society.</p></div>
+      <div class="legend-card" style="--card-color: #ff6b8a;"><h4><span class="dot"></span>🔴 RED</h4><p><strong>Critical Analysis & Dialectics</strong> — Critiques by Ambedkar, Marx, Nehru, Tagore. Paradoxes & Limitations. The counter-arguments.</p></div>
+      <div class="legend-card" style="--card-color: #c084fc;"><h4><span class="dot"></span>🟣 PURPLE</h4><p><strong>Visionary End-State</strong> — Ram Rajya, Stateless Democracy, Perfect Social Order. The horizon of Gandhi's dream.</p></div>
+      <div class="legend-card" style="--card-color: #d4a574;"><h4><span class="dot"></span>🟤 BROWN</h4><p><strong>Applied Institutions & Reforms</strong> — Nai Talim, Caste reform, Women's Role, Eleven Vows. Practical implementation on the ground.</p></div>
+      <div class="legend-card" style="--card-color: #2dd4bf;"><h4><span class="dot"></span>🟦 TEAL</h4><p><strong>Biography, Sources & Deep Dives</strong> — Life timeline, intellectual lineage (his "gurus"), the Gita, the Seven Social Sins, the living glossary. The roots that fed the tree.</p></div>
+      <div class="legend-card" style="--card-color: #f43f5e;"><h4><span class="dot"></span>🟥 CRIMSON</h4><p><strong>Textbook-Sourced Additions</strong> — Passive Resistance vs Satyagraha, Means & Ends, the Oceanic Circle, Key Debates, Organizations, Ashrams & Works. Directly integrated from the printed chapter.</p></div>
+    </div>
+  </section>
+
+  <!-- ====================== BIOGRAPHICAL TIMELINE ====================== -->
+  <section class="teal" id="life">
+    <h2>🛤️ A. The Arc of a Life — From Mohandas to Mahatma</h2>
+    <blockquote>To understand Gandhism, one must understand the man who lived it. His ideas were never armchair abstractions — each was forged in the crucible of an experience, a failure, a fast, a prison cell. "My life is my message," he said, and meant it literally.</blockquote>
+
+    <div class="life-timeline">
+      <div class="life-event"><span class="yr">1869</span><span class="ev-title">Birth at Porbandar</span><p>Mohandas Karamchand Gandhi born 2 October in coastal Gujarat to Karamchand (Diwan of Porbandar) and the devoutly religious Putlibai. The Vaishnava-Jain milieu of Kathiawar planted early seeds of vegetarianism and ahimsa.</p></div>
+      <div class="life-event"><span class="yr">1883</span><span class="ev-title">Child Marriage to Kasturba</span><p>Married Kasturbai Makhanji at age 13 — an experience that later made him a lifelong critic of child marriage and a champion of Brahmacharya.</p></div>
+      <div class="life-event"><span class="yr">1888–91</span><span class="ev-title">Law Studies in London</span><p>Studied at the Inner Temple. Encountered the Theosophists, read the <em>Bhagavad Gita</em> (in Edwin Arnold's <em>The Song Celestial</em>) and the <em>Bible</em> for the first time — discovering his own heritage through Western eyes.</p></div>
+      <div class="life-event"><span class="yr">1893</span><span class="ev-title">The Pietermaritzburg Awakening</span><p>Thrown off a train at Pietermaritzburg for refusing to leave a first-class carriage despite a valid ticket. This humiliation is widely cited as the moment his political consciousness was born.</p></div>
+      <div class="life-event"><span class="yr">1894</span><span class="ev-title">Natal Indian Congress Founded <span class="badge-img">SOURCE</span></span><p>On 22 August 1894 Gandhi founded the <strong>Natal Indian Congress</strong> to fight colour prejudice against Indians in South Africa — his first formal political organisation.</p></div>
+      <div class="life-event"><span class="yr">1904</span><span class="ev-title">Phoenix Settlement Founded</span><p>After reading Ruskin's <em>Unto This Last</em> overnight on a train, Gandhi established his first communitarian ashram near Durban, Natal (Nov–Dec 1904) — considered the <strong>birthplace of Satyagraha</strong> and the laboratory of "bread labour" and simple living.</p></div>
+      <div class="life-event"><span class="yr">1906</span><span class="ev-title">Satyagraha Born</span><p>In September 1906 in Johannesburg, against the Transvaal Asiatic ordinance ("Black Act") constituted against local Indians, Gandhi launched the first mass resistance and coined <em>Satyagraha</em>, decisively breaking from "passive resistance."</p></div>
+      <div class="life-event"><span class="yr">1909</span><span class="ev-title">Hind Swaraj Written</span><p>Composed in 9 days aboard the SS Kildonan Castle — his foundational manifesto critiquing modern civilisation and defining true Swaraj.</p></div>
+      <div class="life-event"><span class="yr">1910</span><span class="ev-title">Tolstoy Farm</span><p>The second ashram, co-founded with architect Hermann Kallenbach near Johannesburg, named for Leo Tolstoy, with whom Gandhi corresponded — a self-sufficient, multi-faith communal experiment.</p></div>
+      <div class="life-event"><span class="yr">1915</span><span class="ev-title">Return to India · Kochrab Ashram</span><p>Returned 9 January (now Pravasi Bharatiya Divas). On Gokhale's advice, spent a year travelling India to "know" it. Founded <strong>Kochrab Ashram</strong> in Ahmedabad.</p></div>
+      <div class="life-event"><span class="yr">1917</span><span class="ev-title">Champaran — First Indian Satyagraha · Sabarmati Ashram</span><p>Defended indigo cultivators of Bihar against the oppressive <em>tinkathia</em> system — his first mass victory on Indian soil. Kochrab Ashram was shifted to the bank of the Sabarmati river and renamed <strong>Sabarmati Ashram</strong>.</p></div>
+      <div class="life-event"><span class="yr">1918</span><span class="ev-title">Ahmedabad & Kheda</span><p>His first fast as a weapon (Ahmedabad mill strike, Feb–March) and his first tax-refusal campaign (Kheda peasants from 11 March, led on the ground by Sardar Vallabhbhai Patel, against revenue collection despite famine, cholera & plague).</p></div>
+      <div class="life-event"><span class="yr">1919</span><span class="ev-title">Rowlatt Satyagraha</span><p>On 6 April 1919 Gandhi launched a nationwide non-violent Satyagraha against the unjust Rowlatt Act passed by the British government.</p></div>
+      <div class="life-event"><span class="yr">1920–22</span><span class="ev-title">Khilafat & Non-Cooperation Movement</span><p>The first nationwide mass movement; called off after the Chauri Chaura violence (Feb 1922) — a defining demonstration that for Gandhi, means could never be compromised for ends.</p></div>
+      <div class="life-event"><span class="yr">1930</span><span class="ev-title">Civil Disobedience · The Dandi Salt March</span><p>The 240-mile (≈386 km) march from Sabarmati to Dandi to break the Salt Law — the global apex of symbolic civil disobedience.</p></div>
+      <div class="life-event"><span class="yr">1932</span><span class="ev-title">Poona Pact & Harijan Campaign</span><p>"Epic fast" at Yeravda against separate electorates for Depressed Classes, leading to the Poona Pact with Ambedkar; launched intensive anti-untouchability work via the Harijan Sevak Sangh.</p></div>
+      <div class="life-event"><span class="yr">1942</span><span class="ev-title">Quit India — "Do or Die"</span><p>Launched 8 August in Bombay; his final and most uncompromising mass call for British withdrawal.</p></div>
+      <div class="life-event"><span class="yr">1947</span><span class="ev-title">Independence amid Ashes · Noakhali Satyagraha</span><p>India became free on 15 August — but Gandhi, anguished by Partition violence, was absent from celebrations, instead conducting the <strong>Noakhali Satyagraha</strong>, walking through riot-torn Bengal as a "one-man peace army."</p></div>
+      <div class="life-event"><span class="yr">1948</span><span class="ev-title">Martyrdom</span><p>Assassinated 30 January at Birla House, Delhi. His last word, reportedly, "Hé Rām." Einstein's tribute: "Generations to come will scarce believe that such a one as this ever in flesh and blood walked upon this earth."</p></div>
+    </div>
+
+    <div class="deepdive">
+      <strong>🔎 Deep Dive — Why the Biography Matters Philosophically:</strong> Gandhi insisted he was no "ism." "There is no such thing as Gandhism," he wrote, "and I do not want to leave any sect after me." What we call Gandhism is the distilled pattern of <em>experiments</em> — each principle is the residue of a tested experience. This is why his thought resists systematisation: it is fundamentally <em>empirical and provisional</em>, always "open to correction."
+    </div>
+  </section>
+
+  <!-- ====================== INFLUENCES ====================== -->
+  <section class="teal" id="influences">
+    <h2>📚 B. The Intellectual Lineage — Gandhi's "Gurus" & Sources</h2>
+    <blockquote>Gandhism is a confluence of rivers — ancient Indian spirituality, Western Christian and humanist conscience, and the lived ethics of the Sermon on the Mount. Gandhi was a magnificent synthesiser who Indianised foreign ideas and universalised Indian ones.</blockquote>
+
+    <h3>🕉️ B.1 The Indian Wellsprings</h3>
+    <div class="concept-grid">
+      <div class="concept-card" style="--card-border-hover:#ff9933;"><h4>📖 Bhagavad Gita</h4><p>His "spiritual dictionary" and "mother." Source of <em>nishkama karma</em> (desireless action) and <em>anasakti</em> (non-attachment). He turned to it in every crisis.</p></div>
+      <div class="concept-card" style="--card-border-hover:#ffb866;"><h4>🪶 Jainism</h4><p>From his Gujarati milieu: rigorous <em>ahimsa</em>, <em>aparigraha</em> (non-possession), and <em>anekantavada</em> (many-sidedness of truth) — the philosophical root of his epistemic humility.</p></div>
+      <div class="concept-card" style="--card-border-hover:#86efac;"><h4>🌼 Vaishnava Bhakti</h4><p>His mother Putlibai's devotionalism and the hymn <em>Vaishnava Jana To</em> (by Narsinh Mehta) — defining the true devotee as one who feels others' pain.</p></div>
+      <div class="concept-card" style="--card-border-hover:#d8b4fe;"><h4>🧘 Shrimad Rajchandra</h4><p>The Jain poet-philosopher whom Gandhi called his closest spiritual guide in matters of religion, alongside Tolstoy and Ruskin.</p></div>
+    </div>
+
+    <h3>🌍 B.2 The Personalities & Influences — The Complete Source Table <span class="badge-img">SOURCE-ENRICHED</span></h3>
+    <p>The printed chapter lists Gandhi's most important influences. The five textbook entries are integrated below alongside the great Western moderns.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>S.No.</th><th>Personality</th><th>Ideas / Books</th><th>What Gandhi Took</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Leo Tolstoy</strong></td><td><em>The Kingdom of God Is Within You</em> &amp; <em>A Letter to a Hindu</em></td><td>The simplicity of life and purity of purpose; truth and non-violence; Christian anarchism, rejection of state violence, "non-resistance to evil by force" reinterpreted as active love. They exchanged letters; Tolstoy Farm bears his name.</td></tr>
+          <tr><td>2</td><td><strong>John Ruskin</strong></td><td><em>Unto This Last</em></td><td>Socialism / the idea of <strong>Sarvodaya</strong>: the good of the individual lies in the good of all; dignity of manual labour; a life of handicraft is worth living. Gandhi translated it into Gujarati.</td></tr>
+          <tr><td>3</td><td><strong>Henry David Thoreau</strong></td><td><em>Essays on Civil Disobedience</em></td><td>The moral duty to disobey unjust laws; the conscience of the individual as a higher authority than the state. Gandhi adopted the very term "civil disobedience."</td></tr>
+          <tr><td>4</td><td><strong>Gopal Krishna Gokhale</strong></td><td>—</td><td>He was the <strong>political mentor (Guru)</strong> of M. K. Gandhi. On Gokhale's advice, Gandhi spent his first year back in India travelling to "know" the country before entering politics.</td></tr>
+          <tr><td>5</td><td><strong>Edward Carpenter</strong></td><td><em>Civilisation: Its Cause and Cure</em></td><td>Criticism of modern medicine and its effect on human health; reinforced Gandhi's critique of modern "civilisation" in <em>Hind Swaraj</em>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>✝️ B.3 The Sermon on the Mount</h3>
+    <p>Gandhi said the Sermon on the Mount — "resist not evil," "turn the other cheek," "love your enemies" — "went straight to my heart" and resonated profoundly with the Gita's teaching. He read the New Testament as a moral, not doctrinal, document, and held Jesus among the greatest exemplars of non-violence.</p>
+
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart TD
+    G["🟠 GANDHIAN SYNTHESIS"]
+    subgraph IND ["🪷 Indian Sources"]
+        GITA["Bhagavad Gita<br/>(nishkama karma)"]
+        JAIN["Jainism<br/>(ahimsa · anekantavada)"]
+        BHAK["Vaishnava Bhakti<br/>(compassion)"]
+        RAJ["Shrimad Rajchandra"]
+        GOK["Gokhale<br/>(political mentor)"]
+    end
+    subgraph WEST ["🌍 Western Sources"]
+        TOL["Tolstoy<br/>(Christian anarchism)"]
+        RUS["Ruskin<br/>(dignity of labour)"]
+        THO["Thoreau<br/>(civil disobedience)"]
+        CAR["Carpenter<br/>(critique of modern medicine)"]
+        SER["Sermon on the Mount<br/>(love thy enemy)"]
+    end
+    GITA --> G
+    JAIN --> G
+    BHAK --> G
+    RAJ --> G
+    GOK --> G
+    TOL --> G
+    RUS --> G
+    THO --> G
+    CAR --> G
+    SER --> G
+    style G fill:#2a1f0a,stroke:#ff9933,stroke-width:4px,color:#ffd700
+    style IND fill:#2a1f10,stroke:#d4a574,stroke-width:2px,color:#e8c39e
+    style WEST fill:#0f2a26,stroke:#2dd4bf,stroke-width:2px,color:#5eead4
+      </pre>
+    </div>
+
+    <div class="deepdive">
+      <strong>🔎 Deep Dive — Anekantavada, the Hidden Keystone:</strong> The Jain doctrine of <em>anekantavada</em> (the manifold, many-sided nature of reality) is the quiet engine of Gandhian non-violence. If no single viewpoint can capture the whole truth, then dogmatic certainty is itself a form of violence. Gandhi's famous parable of the blind men and the elephant flows from this: my opponent holds a fragment of truth I cannot see — therefore I must persuade, never destroy, him.
+    </div>
+  </section>
+
+  <!-- ====================== 1. FOUNDATIONS ====================== -->
+  <section class="saffron" id="foundations">
+    <h2>🏛️ 1. Philosophical Foundations — The Twin Pillars 🟠</h2>
+    <blockquote>Gandhism is not a system of philosophy frozen in dogma — it is a living, breathing experiment with Truth, carried out at the cost of life itself.</blockquote>
+
+    <h3>📜 1.1 Satya (Truth) — The Absolute & The Relative</h3>
+    <blockquote>"Truth is God" — not "God is Truth." Even an atheist seeking truth is, by Gandhi's reckoning, a seeker of God.</blockquote>
+    <p><strong>🔱 Definition & Scope</strong> — For Gandhi, <span class="term">Satya</span> derives from <em>Sat</em> (that which <em>is</em>, being itself). Truth is not mere factual accuracy but the <strong>Absolute Reality (God)</strong> — universal, eternal, and unchanging. It is the very purpose of human existence.</p>
+    <div class="concept-grid">
+      <div class="concept-card" style="--card-border-hover: #ff9933;"><h4>🌅 Absolute Truth</h4><p>Unattainable in entirety by any human being — it is the <em>divine ideal</em>, the infinite horizon. Like the sun, we can see by its light but cannot touch it.</p></div>
+      <div class="concept-card" style="--card-border-hover: #ffb866;"><h4>🪞 Relative Truth</h4><p>The best approximation an individual can realize at a given moment. Must be constantly tested, open to correction, demanding humility. This is the truth of every <span class="term">Satyagrahi</span>.</p></div>
+    </div>
+    <div class="insight"><strong>💡 Profound Insight:</strong> Because no human possesses Absolute Truth, no one has the right to inflict violence in the name of truth. The relativity of human knowledge is the philosophical bedrock of non-violence.</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — "Truth is God" reversed:</strong> Gandhi deliberately inverted the conventional "God is Truth" because the latter presumes belief in God as a precondition. By placing Truth first, he made the moral quest accessible to <em>everyone</em> — theist, agnostic, atheist alike. The seeker of truth, whatever their creed, is already on the path to the divine. This rhetorical move is the secret of Gandhi's universal, inter-faith appeal.</div>
+
+    <h4>🔗 Truth & Ahimsa — Two Sides of the Same Coin</h4>
+    <p>The pursuit of Truth cannot be violent, because violence distorts perception and forces falsehood upon the opponent. Thus, <strong>Ahimsa is the necessary means</strong> to reach Truth (the end). Coin metaphor: Truth = obverse; Ahimsa = reverse — inseparable.</p>
+    <h4>🎯 Practical Implication</h4>
+    <ul>
+      <li>One's life must be an "Experiment with Truth" — the very title of his autobiography.</li>
+      <li>Alignment of <strong>thought, word, and deed</strong> (Trikarana Shuddhi).</li>
+      <li>Truth in public life: no secret diplomacy, no deception of opponents — Gandhi announced every move of the Salt March publicly to the Viceroy.</li>
+    </ul>
+
+    <h3>🕊️ 1.2 Ahimsa (Non-Violence) — The Active Force of Love</h3>
+    <blockquote>"Non-violence is the greatest force at the disposal of mankind. It is mightier than the mightiest weapon of destruction devised by the ingenuity of man."</blockquote>
+    <h4>⚠️ Misconception Clarified</h4>
+    <p>Ahimsa is <strong>not passive non-resistance, not cowardice, not meekness</strong>. It is the most active, militant form of resistance rooted in <em>Atma-Bal</em> (Soul-Force). Gandhi was emphatic: <em>"Where there is only a choice between cowardice and violence, I would advise violence."</em> The coward who flees commits violence against his own soul.</p>
+    <h4>🌐 Scope of Application</h4>
+    <div class="concept-grid">
+      <div class="concept-card"><h4>🤝 Against Opponents</h4><p>Love and sympathy for the enemy. Aim: <strong>conversion</strong>, not coercion or destruction. "Hate the sin, love the sinner."</p></div>
+      <div class="concept-card"><h4>🌿 Against Nature</h4><p>Extends to all living beings — implies vegetarianism, animal welfare, and ecological reverence. Anticipates modern eco-philosophy.</p></div>
+      <div class="concept-card"><h4>⚖️ Against Social Evils</h4><p>The tool against casteism, communalism, untouchability, and economic exploitation. Inner reform precedes outer protest.</p></div>
+    </div>
+    <h4>🪜 Hierarchy of Non-Violence</h4>
+    <ol>
+      <li><strong>Non-violence of the Brave (Strongest)</strong> — born of soul-force; conquers the opponent through love.</li>
+      <li><strong>Non-violence of the Weak (Policy)</strong> — chosen for lack of means; acceptable but inferior.</li>
+      <li><strong>Passive Resistance</strong> — may carry hatred; Gandhi distinguished Satyagraha from this.</li>
+      <li><strong>Cowardice</strong> — worst of all; not non-violence at all.</li>
+    </ol>
+    <div class="deepdive"><strong>🔎 Deep Dive — Ahimsa as <em>positive</em> force:</strong> The Sanskrit "a-himsa" is grammatically a negation ("non-harm"), but Gandhi insisted its true meaning is positive — <em>"the largest love, the greatest charity."</em> In its highest sense, ahimsa is not the absence of violence but the active presence of compassion (<em>daya</em>, <em>prema</em>, <em>karuna</em>). To merely refrain from killing while harbouring hatred is, for Gandhi, the violence of the heart — the deepest <em>himsa</em> of all.</div>
+
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart TD
+    subgraph CORE ["🟠 THE METAPHYSICAL CORE"]
+        T["🟠 SATYA — Truth<br/>The End / God"]
+        A["🟠 AHIMSA — Non-Violence<br/>The Means / The Law"]
+    end
+    T <-->|Inseparable| A
+    A -->|Active Force of Love| SA["🔵 SATYAGRAHA"]
+    A -->|Foundation of Social Order| SW["🔵 SWARAJ"]
+    A -->|Economic Justice| TR["🟢 TRUSTEESHIP"]
+    A -->|Ideal Polity| RR["🟣 RAM RAJYA"]
+    style CORE fill:#2a1f0a,stroke:#ff9933,stroke-width:3px,color:#ffd700
+    style T fill:#1a237e,stroke:#FFFFFF,stroke-width:2px,color:#ffffff
+    style A fill:#1a237e,stroke:#FFFFFF,stroke-width:2px,color:#ffffff
+    style SA fill:#1a3a6e,stroke:#4a8eff,stroke-width:2px,color:#fff
+    style SW fill:#1a3a6e,stroke:#4a8eff,stroke-width:2px,color:#fff
+    style TR fill:#1a4d2e,stroke:#4ade80,stroke-width:2px,color:#fff
+    style RR fill:#4a1d5e,stroke:#c084fc,stroke-width:2px,color:#fff
+      </pre>
+    </div>
+  </section>
+
+  <!-- ====================== THE GITA / ANASAKTI ====================== -->
+  <section class="teal" id="gita">
+    <h2>🪔 C. The Gita & Anasakti Yoga — Gandhi's Spiritual Engine</h2>
+    <blockquote>"When doubts haunt me, when disappointments stare me in the face, and I see not one ray of hope on the horizon, I turn to the Bhagavad Gita and find a verse to comfort me." — M. K. Gandhi</blockquote>
+    <p>Over a decade (1920s), Gandhi translated and interpreted the Gita in Gujarati, publishing it as <strong>Anasakti Yoga</strong> ("The Yoga of Non-Attachment") in 1929–30. This was not scholarship but a battle-tested ethic of action.</p>
+    <h3>🌀 C.1 The Core Reading</h3>
+    <p>Gandhi controversially read the Gita's battlefield (Kurukshetra) as an <strong>allegory</strong> — the eternal war between good and evil <em>within the human soul</em>, not a literal endorsement of warfare. From this allegory he drew his master-principle: <span class="term">Nishkama Karma</span> — action performed as duty, with full effort but <strong>complete detachment from its fruits</strong>.</p>
+    <div class="concept-grid">
+      <div class="concept-card" style="--card-border-hover:#2dd4bf;"><h4>🎯 Act Without Attachment</h4><p>Do your duty (<em>karma</em>) with total dedication, surrendering all craving for personal reward. This frees action from ego and fear — the very temperament of the Satyagrahi.</p></div>
+      <div class="concept-card" style="--card-border-hover:#5eead4;"><h4>🧘 Equanimity (Samatva)</h4><p>The yogi remains even-minded in success and failure, praise and blame. This is the inner discipline that lets a Satyagrahi accept beatings and imprisonment with serenity.</p></div>
+      <div class="concept-card" style="--card-border-hover:#86efac;"><h4>🪷 The Sthitaprajna Ideal</h4><p>The "person of steady wisdom" of Gita Chapter 2 became Gandhi's blueprint for the ideal human — and, by extension, the ideal citizen of Ram Rajya.</p></div>
+    </div>
+    <h3>🔗 C.2 How the Gita Powers Gandhism</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gita Principle</th><th>Gandhian Outcome</th></tr></thead>
+        <tbody>
+          <tr><td>Nishkama Karma (desireless action)</td><td>Satyagraha as duty, indifferent to victory or defeat</td></tr>
+          <tr><td>Anasakti (non-attachment)</td><td>Aparigraha — non-possession and voluntary poverty</td></tr>
+          <tr><td>Samatva (equanimity)</td><td>Fearlessness (<em>abhaya</em>) and serene self-suffering</td></tr>
+          <tr><td>Yajna (sacrifice / service)</td><td>Constructive Programme, bread labour, service of the poor</td></tr>
+          <tr><td>Allegorical inner battle</td><td>Reconciling the Gita's "war" with absolute Ahimsa</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Boldest Reinterpretation:</strong> Critics (and many orthodox scholars) objected that the Gita plainly urges Arjuna to <em>fight</em> a real war. Gandhi's allegorical reading — fight the war <em>within</em> — is a striking example of his method: he subordinated even scripture to the supreme test of Truth and Ahimsa. For Gandhi, no text, however sacred, could license cruelty; if it appeared to, it must be read anew.</div>
+  </section>
+
+  <!-- ====================== 2. POLITICAL ====================== -->
+  <section class="blue" id="political">
+    <h2>⚔️ 2. Political Strategies & Core Concepts 🔵</h2>
+
+    <h3>🪷 2.1 Satyagraha — The Insistent Force of Truth</h3>
+    <blockquote>Coined in 1906 in South Africa during the struggle against the Asiatic Registration Act. Gandhi rejected "passive resistance" through a public competition won by Maganlal Gandhi with the term <em>Sadagraha</em>, which he refined to <em>Satyagraha</em>.</blockquote>
+    <p><strong>🔤 Etymology</strong>: <span class="term">Satya</span> (Truth) + <span class="term">Agraha</span> (Firm grasp / Holding onto). Literally: "Holding firmly to the truth" — or, as the source text puts it, <em>"firmness to truth."</em> It is active, militant, and unyielding — never passive.</p>
+
+    <div class="sourcebox">
+      <strong>📘 From the Source Text — The Nature & Method of Satyagraha:</strong> For Gandhi, Satyagraha (firmness to truth) is the <strong>only way to achieve Swaraj</strong>, and it means <em>"to win over one's enemy."</em> It is a time-taking but very effective way to make the opponent realize his mistake. Not only during his lifetime but also after his death, Satyagraha has emerged as the cherished way to fight forces of evil — whether the <strong>Black Rights Movement in the US</strong> or the <strong>Forest Rights Movement in India</strong>.
+    </div>
+
+    <h4>🔄 The "Struggle–Truce–Struggle" Method <span class="badge-img">SOURCE</span></h4>
+    <p>Gandhi followed the <strong>"Struggle–Truce–Struggle" (S-T-S) Method</strong> of Satyagraha. Under this method:</p>
+    <ul>
+      <li>He would <strong>suspend movements</strong> once they take more than the speculated time — because, according to Gandhi, people may resort to violence if the struggle goes on too long.</li>
+      <li>In between the phases of struggle, he used to do <strong>constructive work</strong> — such as working for the abolition of untouchability, promoting khadi, and Hindu-Muslim unity.</li>
+      <li>The "truce" is therefore not surrender but a strategic, conscience-building pause — and a safeguard for non-violence.</li>
+    </ul>
+
+    <h4>🛠️ Methods / Stages of Mass Satyagraha</h4>
+    <ol>
+      <li><strong>Civil Disobedience</strong> — public, deliberate, non-violent breaking of an unjust law, accepting punishment willingly (e.g., <strong>Salt Satyagraha, 1930</strong>).</li>
+      <li><strong>Non-Cooperation</strong> — withdrawal of support from the state's institutions — courts, schools, titles, councils (e.g., <strong>Non-Cooperation Movement 1920–22</strong>).</li>
+      <li><strong>Hijrat</strong> — voluntary mass migration from a place of oppression as protest.</li>
+      <li><strong>Hartal</strong> — total cessation of work and economic activity.</li>
+      <li><strong>Fasting (Anshan)</strong> — self-suffering of the highest order; used by Gandhi 17+ times.</li>
+      <li><strong>Picketing & Boycott</strong> — non-violent obstruction of unjust commerce.</li>
+    </ol>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Ethics of the Fast:</strong> Gandhi drew a sharp line between a <em>fast as self-purification / appeal to conscience</em> (legitimate) and a <em>fast as coercion / blackmail</em> (illegitimate). The fast must be directed only at those who love you, to awaken their dormant conscience — never at an enemy to extract a concession by emotional force. His critics (notably Ambedkar regarding the 1932 fast) argued the line was thinner in practice than in theory.</div>
+
+    <h4>🪜 The Ladder of Progressive Action</h4>
+    <div class="ladder">
+      <div class="step" data-num="1"><h4>Personal Purification</h4><p>Negotiation, arbitration, prayer, fasting, self-examination. The Satyagrahi begins with the self.</p></div>
+      <div class="step" data-num="2"><h4>Institutional Withdrawal</h4><p>Boycott of foreign goods, government schools, courts, legislative councils, and imperial titles.</p></div>
+      <div class="step" data-num="3"><h4>Economic Non-Payment</h4><p>Refusal to pay taxes, land revenue, or salt tax — striking at the financial sinews of the unjust state.</p></div>
+      <div class="step" data-num="4"><h4>Mass Civil Disobedience</h4><p>Nationwide direct action — the Dandi March (1930), 240-mile walk to break the Salt Law and ignite a continent.</p></div>
+    </div>
+    <h4>🔥 The Role of Self-Suffering (Tapasya)</h4>
+    <p>The Satyagrahi <strong>invites suffering upon themselves, never upon the opponent</strong>. Imprisonment, beatings, even death are accepted with serenity. This voluntary suffering generates a moral force that pierces the conscience of the oppressor — provoking what Gandhi called a <em>"change of heart" (hriday-parivartan)</em>.</p>
+    <div class="insight"><strong>💡 Three Conditions for Genuine Satyagraha</strong> (Gandhi, Young India): (i) the cause must be just and the truth verified; (ii) all other peaceful means must be exhausted; (iii) the Satyagrahi must be willing to suffer without retaliation.</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Code of the Satyagrahi:</strong> Gandhi laid down a strict discipline for satyagrahis: harbour no anger; suffer the opponent's anger; never retaliate to assaults; voluntarily submit to arrest and the confiscation of property; if a trustee, surrender entrusted property even at the cost of life; protect opponents from insult or attack even at the risk of life. The Satyagrahi is thus simultaneously the most disciplined soldier and the most gentle servant — "saint and soldier" fused.</div>
+
+    <h3>🏛️ 2.2 Swaraj — Beyond Political Independence</h3>
+    <blockquote>"Real Swaraj will come, not by the acquisition of authority by a few, but by the acquisition of the capacity by all to resist authority when abused." — Hind Swaraj</blockquote>
+    <p>The word <span class="term">Swaraj</span> is Vedic — <em>Swa</em> (self) + <em>Raj</em> (rule) — meaning self-rule, self-restraint, and self-mastery. It is a layered concept, not a single demand.</p>
+
+    <div class="sourcebox">
+      <strong>📘 From the Source Text — Idea of Swaraj:</strong> In <em>Hind Swaraj (1909)</em>, Gandhi spelt out his understanding of "true freedom." Unlike the common understanding of freedom as merely freedom from the yoke of British colonialism, <strong>Gandhi's Swaraj has two meanings</strong>: (i) <strong>to get political, economic, and spiritual freedom from British rule</strong>; and (ii) to establish <strong>"rule over ourselves."</strong> "Rule over ourselves" means to limit our needs and to progress towards the path of <em>Satya</em> (Truth) and <em>Ahimsa</em> (Non-violence). <strong>Gram Swaraj</strong> was an inalienable part of his idea of Swaraj. According to Gandhi, <em>"the soul of India lives in its villages and these villages are self-dependent."</em> He advocated a <strong>village-led development model with minimum reliance on cities</strong>, and was always a great advocate of <strong>cooperatives</strong>.
+    </div>
+
+    <h4>🏔️ Hierarchy of Meaning</h4>
+    <div class="concept-grid">
+      <div class="concept-card"><h4>👤 Internal Swaraj (Primary)</h4><p>Self-rule over one's desires, passions, ego, and weaknesses. Mastery of the self. <strong>Without this, external Swaraj is hollow.</strong></p></div>
+      <div class="concept-card"><h4>🏛️ Political Swaraj (Secondary)</h4><p>Independence from foreign rule. Necessary, but only the outer shell of true freedom.</p></div>
+      <div class="concept-card"><h4>💰 Economic Swaraj</h4><p>Freedom from economic dependence — through Khadi, Swadeshi, and village self-sufficiency.</p></div>
+      <div class="concept-card"><h4>🏘️ Gram Swaraj (Structural)</h4><p>Village republics as the foundational political unit — decentralized, self-governing, self-sufficient.</p></div>
+    </div>
+    <h4>📖 Hind Swaraj (1909) — The Foundational Text</h4>
+    <p>Written in Gujarati aboard the SS Kildonan Castle in just 9 days. A radical critique of <strong>modern civilization</strong>:</p>
+    <ul>
+      <li>Railways spread famines and plague faster.</li>
+      <li>Lawyers thrive on disputes and enslave their countrymen.</li>
+      <li>Doctors encourage indulgence rather than self-restraint.</li>
+      <li>Parliaments are "sterile women and prostitutes" — changing masters but never the system.</li>
+      <li>Modern civilization is a "Satanic civilization" worshipping bodily comfort over moral progress.</li>
+    </ul>
+    <div class="insight"><strong>🌱 The Constructive Vision:</strong> Swaraj is <em>not</em> Westminster-style parliamentary democracy. It is a <strong>decentralized non-violent order</strong> (Gram Swaraj) where power flows <em>bottom-up</em> from autonomous village panchayats — an inverted pyramid of governance.</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The "Dialogue" Form of Hind Swaraj:</strong> The text is written as a Socratic dialogue between an "Editor" (Gandhi) and a "Reader" (representing the impatient, violence-tempted young revolutionary of the day). This form was deliberate: Gandhi wanted to <em>persuade</em>, not lecture — modelling in the book's very structure his belief that truth emerges through patient, non-coercive dialogue.</div>
+
+    <h3>🌿 2.3 Sarvodaya & Antyodaya — Welfare for Whom? 🟢</h3>
+    <h4>☀️ Sarvodaya — Universal Uplift</h4>
+    <p>The supreme social goal of Gandhian politics. It rejects <strong>Utilitarianism</strong>'s "greatest good of the greatest number" because that doctrine sanctions the misery of the minority. Sarvodaya demands the welfare of <strong>ALL</strong> — every single member of society — with no one left behind.</p>
+    <h4>🌑 Antyodaya — Uplift of the Last Person</h4>
+    <p>The operational principle of Sarvodaya. Social progress is measured by the well-being of the <strong>poorest, weakest, most marginalized</strong>. Gandhi's famous "Talisman":</p>
+    <blockquote>"Whenever you are in doubt... recall the face of the poorest and the weakest man whom you may have seen, and ask yourself if the step you contemplate is going to be of any use to him. Will he gain anything by it? Will it restore him to a control over his own life and destiny?"</blockquote>
+    <h4>📚 Intellectual Source</h4>
+    <p>Gandhi was transformed in 1904 by John Ruskin's <em>Unto This Last</em> (read overnight on a train in South Africa). He translated it into Gujarati as <strong>"Sarvodaya"</strong>. The book's three lessons that shaped him: (i) the good of the individual lies in the good of all; (ii) a barber's work is as valuable as a lawyer's; (iii) a life of labor — tilling soil, handicraft — is the life worth living.</p>
+    <div class="deepdive"><strong>🔎 Deep Dive — From Sarvodaya to Vinoba:</strong> After Gandhi's death, his spiritual heir <strong>Vinoba Bhave</strong> carried Sarvodaya forward into the <em>Bhoodan</em> (land-gift) and <em>Gramdan</em> (village-gift) movements (from 1951). <strong>Jayaprakash Narayan (JP)</strong> later channelled the Sarvodaya spirit into the "Total Revolution" of the 1970s. Gandhism, in this sense, never died with Gandhi.</div>
+  </section>
+
+  <!-- ====================== NEW (SOURCE): PASSIVE RESISTANCE vs SATYAGRAHA ====================== -->
+  <section class="crimson" id="prvss">
+    <h2>🆚 D. Passive Resistance vs. Satyagraha — The Decisive Distinction <span class="badge-img">FROM SOURCE</span></h2>
+    <blockquote>Gandhi was emphatic that Satyagraha is <em>not</em> mere passive resistance. The two differ not in tactics but in soul. The printed chapter sets the contrast out point by point — reproduced and enriched below.</blockquote>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Passive Resistance</th><th>Satyagraha</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Use of Violence</strong></td><td>Violence is <em>not used because it may not be appropriate</em> to use violence in the given context. If situations favour, violence can be used.</td><td><strong>Complete rejection of violence.</strong> Satyagraha is <em>deontological</em> — it is an article of faith in <em>Ahimsa</em>.</td></tr>
+          <tr><td><strong>Weapon of</strong></td><td>Weapon of the weak.</td><td>Weapon of the strong.</td></tr>
+          <tr><td><strong>Attitude to Opponent</strong></td><td>There is a feeling of <strong>enmity</strong> towards other people.</td><td>There is <strong>no evil feeling against the evil-doer</strong>, but only against the evil. The purpose of Satyagraha is to help the evil-doer become a better person.</td></tr>
+          <tr><td><strong>Aim</strong></td><td>Aims to harass the opponent into submission.</td><td>Aims to <strong>convert</strong> the opponent through love and self-suffering.</td></tr>
+          <tr><td><strong>Nature</strong></td><td>A political tactic, expedient and reversible.</td><td>A spiritual and moral way of life — irreversible commitment.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="insight"><strong>💡 The One-Line Memory Hook:</strong> Passive resistance withholds violence <em>conditionally</em> (out of expediency, with enmity intact); Satyagraha rejects violence <em>absolutely</em> (out of faith, with love for the wrongdoer). The first wants to <em>defeat</em> the opponent; the second wants to <em>redeem</em> him.</div>
+  </section>
+
+  <!-- ====================== NEW (SOURCE): MEANS & ENDS ====================== -->
+  <section class="crimson" id="meansends">
+    <h2>🌱 E. Unity of Means and Ends — The Seed & The Tree <span class="badge-img">FROM SOURCE</span></h2>
+    <blockquote>Unlike Machiavelli's crude realism — "ends justify the means" — Gandhi believed that <em>both the ends and the means</em> to achieve those ends should be justifiable.</blockquote>
+    <div class="sourcebox">
+      <strong>📘 From the Source Text:</strong> Gandhi famously said that <em>"we cannot expect the smell of roses if we have grown a <strong>babool</strong> (thorny acacia) seed."</em> Similarly, he supported the relevance of <strong>ethics and religion in the conduct of politics</strong>. According to him, <em>"without religion and ethics, politics is a devil's misadventure."</em>
+    </div>
+    <h3>🌳 The Organic Connection</h3>
+    <p>For Gandhi there was <strong>"no wall of separation between means and end."</strong> The means is the seed; the end is the tree. There is the same inviolable connection between means and end as there is between seed and tree. As he put it: <em>"Means and end are convertible terms in my philosophy of life"</em> and <em>"They say 'means are after all means.' I would say 'means are after all everything.' As the means, so the end."</em></p>
+    <div class="concept-grid">
+      <div class="concept-card" style="--card-border-hover:#f43f5e;"><h4>🪓 Machiavelli's Realism</h4><p>"The ends justify the means." Power and outcome are supreme; the morality of method is secondary, settled by expediency. A bad seed may yield a good tree if it serves the goal.</p></div>
+      <div class="concept-card" style="--card-border-hover:#fb7185;"><h4>🌹 Gandhi's Idealism</h4><p>Means and ends are organically one. Impure means must yield an impure end. You cannot reach Truth through untruth, justice through injustice, or freedom through tyranny. Sow a babool seed, reap thorns — never roses.</p></div>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Karma Logic:</strong> Gandhi grounded this in the law of <em>karma</em> — ethical causation. Because "we reap exactly what we sow," a violent revolution can never deliver a non-violent society, no matter how noble its goal. This is precisely why he called off the Non-Cooperation Movement after Chauri Chaura: a victory won by violence would already be a defeat of the cause. The means-ends doctrine is therefore not idealistic naivety but the iron core of his political method.</div>
+  </section>
+
+  <!-- ====================== NEW (SOURCE): OCEANIC CIRCLE & DEMOCRACY ====================== -->
+  <section class="crimson" id="democracy">
+    <h2>⭕ F. The Oceanic Circle, Trusteeship & Views on Democracy <span class="badge-img">FROM SOURCE</span></h2>
+
+    <h3>🏦 F.1 Trusteeship & Class Cooperation — The Source View</h3>
+    <div class="sourcebox">
+      <strong>📘 From the Source Text:</strong> For Gandhi, economic inequalities and the backwardness of certain sections of society are a harsh reality of India. He <strong>prioritized the need for reducing poverty more than the need for Independence</strong> from British rule. He was strictly against the accumulation of property and resources — <em>but his way forward was very different from Marxist prescriptions.</em> According to Gandhi, we need not to abolish private property but judiciously use it for the benefit of common people. He advocated for <strong>class cooperation</strong> instead of the Marxist version of <strong>class antagonism</strong>. He advised a system of <strong>"benevolent capitalism"</strong> — or what he calls, <strong>trusteeship</strong>. According to this principle, all possession of capitalists is the common-wealth of society, and these capitalists are acting just as the <strong>"trustees"</strong> of that property. A capitalist should keep the amount he thinks is necessary to run the industry; the rest of the amount should be given for the well-being of the workers and society.
+    </div>
+
+    <h3>⭕ F.2 The Oceanic Circle & Critique of Parliamentary Democracy</h3>
+    <div class="sourcebox">
+      <strong>📘 From the Source Text:</strong> Gandhi was a <strong>fierce critic of parliamentary democracy and political parties</strong> because, according to him, they are not truly representative. Parliamentary democracy works on the principle of <strong>centralization</strong> and <strong>"Pyramid Structure,"</strong> where the vast population at the base is represented and governed by a chosen few. Gandhi's alternative was a <strong>decentralized governance system, based on the principle of oceanic circles.</strong> It simply means to advocate a public administration rooted in <strong>grassroots democracy where the centre of the circle is always people.</strong>
+    </div>
+    <div class="insight"><strong>💡 Pyramid vs. Oceanic Circle:</strong> The conventional state is a <em>pyramid</em> — power at the apex, sustained (and burdened) by the base. Gandhi's <em>oceanic circle</em> inverts the logic: the individual is the centre, surrounded by ever-widening, never-ascending rings of voluntary community. No ring dominates; none is subordinate. It is federalism without hierarchy.</div>
+
+    <h3>🔬 F.3 Views on Science</h3>
+    <div class="sourcebox">
+      <strong>📘 From the Source Text:</strong> Though initially Gandhi was very critical of western civilization and science — in <em>Hind Swaraj</em>, he called science and the growth of industrialization as <strong>"satanic"</strong> because they will ruin the village handicrafts and cottage industry. However, in later periods of his life, he <strong>emphasized the humane aspects of science and advocated its use for the progress of humanity.</strong>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — Not Anti-Science, but Pro-Humanity:</strong> Gandhi's evolution mirrors his deepest principle — that no domain (science included) is morally neutral. Science wielded for human dignity is welcome; science that displaces labour, concentrates wealth, and dehumanises is "satanic." This is the exact logic of his Seven Social Sin "Science without Humanity" — eerily prescient of the nuclear and AI ages.</div>
+  </section>
+
+  <!-- ====================== EARLY SATYAGRAHAS ====================== -->
+  <section class="blue" id="earlysat">
+    <h2>🌾 G. The Living Laboratory — Gandhi's Satyagrahas in Practice</h2>
+    <blockquote>Theory is one thing; a peasant's empty granary another. These campaigns are where Gandhian principle met Indian soil — and proved it could move millions.</blockquote>
+
+    <h3>🌱 G.1 The Three Early Satyagrahas (1917–18) — The Trinity of Beginnings</h3>
+    <div class="concept-grid">
+      <div class="concept-card" style="--card-border-hover:#4a8eff;"><h4>🌿 Champaran (April 1917)</h4><p><strong>First Indian Satyagraha.</strong> Bihar indigo planters forced cultivators into the exploitative <em>tinkathia</em> system. Gandhi defied an order to leave, conducted a meticulous inquiry, and won relief through a government commission.</p></div>
+      <div class="concept-card" style="--card-border-hover:#7eb0ff;"><h4>🏭 Ahmedabad Mill Strike (Feb–March 1918)</h4><p><strong>First fast as a weapon.</strong> Textile workers demanded higher wages amid a plague-bonus dispute. Gandhi undertook his first public <em>fast</em> to keep workers steadfast and non-violent; arbitration secured a wage rise.</p></div>
+      <div class="concept-card" style="--card-border-hover:#86efac;"><h4>🌾 Kheda (11 March 1918)</h4><p><strong>First tax-refusal (no-revenue) campaign.</strong> Though Gandhi was its spiritual head, Kheda Satyagraha was <strong>principally led by Sardar Vallabhbhai Patel</strong> after the region was hit by famine, cholera and plague, destroying the agrarian economy. The government quietly suspended collection from the poorest.</p></div>
+    </div>
+
+    <h3>🧂 G.2 The Great Mass Movements — A Comparative View</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Movement</th><th>Year</th><th>Trigger / Demand</th><th>Signature Method</th><th>Outcome / Significance</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Rowlatt Satyagraha</strong></td><td>6 Apr 1919</td><td>Against the unjust Rowlatt Act</td><td>Nationwide non-violent Satyagraha &amp; hartal</td><td>First all-India agitation under Gandhi; preceded Jallianwala Bagh</td></tr>
+          <tr><td><strong>Khilafat &amp; Non-Cooperation</strong></td><td>1920–22</td><td>Khilafat + Jallianwala Bagh + Swaraj</td><td>Boycott of titles, schools, courts, councils, foreign cloth</td><td>First nationwide mass awakening; called off after Chauri Chaura violence</td></tr>
+          <tr><td><strong>Civil Disobedience / Salt Satyagraha</strong></td><td>March 1930</td><td>Salt tax &amp; full independence (Purna Swaraj)</td><td>Dandi March; mass law-breaking; Dharasana raid</td><td>Global moral spectacle; Gandhi-Irwin Pact; Round Table Conference</td></tr>
+          <tr><td><strong>Individual Satyagraha</strong></td><td>1940–41</td><td>Right to free speech against war</td><td>Selected individuals court arrest (Vinoba first; Nehru second)</td><td>Kept the movement alive without mass disorder during WWII</td></tr>
+          <tr><td><strong>Quit India / August Movement</strong></td><td>8 Aug 1942</td><td>Immediate British withdrawal</td><td>"Do or Die"; mass defiance</td><td>Most intense uprising; entire leadership jailed; made independence inevitable</td></tr>
+          <tr><td><strong>Noakhali Satyagraha</strong></td><td>1946–47</td><td>Communal peace amid Partition violence</td><td>One-man peace march through riot-torn Bengal</td><td>Gandhi's lonely moral stand for Hindu-Muslim harmony</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🚶 G.3 The Salt March (Dandi) — Anatomy of a Masterpiece</h3>
+    <p>Why salt? Because the British monopoly taxed an item every Indian — rich and poor, Hindu and Muslim — needed daily. Gandhi turned a humble commodity into a universal symbol of injustice. The march (12 March – 6 April 1930) covered ~240 miles over 24 days, gathering thousands. On reaching the sea, Gandhi raised a fistful of natural salt and declared he was "shaking the foundations of the British Empire."</p>
+    <div class="insight"><strong>💡 Strategic Genius:</strong> The Salt March fused all Gandhian elements — it was <em>symbolic</em>, <em>universal</em>, <em>non-violent</em>, <em>self-suffering</em>, and <em>moral</em> (it exposed the cruelty of empire to the global conscience, especially via the American press).</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — Chauri Chaura, the Hardest Lesson:</strong> In February 1922, a mob burned a police station at Chauri Chaura, killing 22 policemen. Gandhi, though Non-Cooperation was at its peak, abruptly <em>called it off</em> and undertook a penitential fast. For Gandhi, a movement tainted by violence had already failed, regardless of political gain — the supreme demonstration of his absolute refusal to separate means from ends.</div>
+  </section>
+
+  <!-- ====================== 3. ECONOMIC ====================== -->
+  <section class="green" id="economic">
+    <h2>💰 3. Socio-Economic Thought — The Constructive Programme 🟢</h2>
+    <blockquote>"The core of Gandhian economic thought is the protection of the dignity of the human person — not mere material prosperity." Economics divorced from ethics is, for Gandhi, sin.</blockquote>
+
+    <h3>🤝 3.1 Trusteeship — A Non-Violent Answer to Capitalism</h3>
+    <h4>⚡ The Central Dilemma</h4>
+    <p>Gandhi did <strong>not</strong> advocate abolition of private property (unlike Communism), but he was deeply opposed to the exploitation it enables. How to humanize wealth without violent revolution? His answer: <strong>Trusteeship</strong> (also called "benevolent capitalism") — advocating <strong>class cooperation</strong> over class antagonism.</p>
+    <h4>🔑 Core Principles of Trusteeship</h4>
+    <ul>
+      <li>The wealthy are <strong>trustees</strong>, not absolute owners — they hold riches on behalf of society, especially the poor.</li>
+      <li>They retain a right to a <strong>fair, dignified share</strong> ("reasonable needs") for their family and to run the industry.</li>
+      <li>The <strong>surplus must be used for community welfare</strong> and the well-being of workers and society.</li>
+      <li>Conversion happens through <strong>moral persuasion and change of heart</strong>, never through class war.</li>
+      <li>Property rights are <strong>conditional</strong> upon social responsibility.</li>
+      <li>If the wealthy refuse, society may resort to <strong>non-violent non-cooperation</strong> (strikes, boycotts) — but never violence.</li>
+    </ul>
+    <h4>🧭 Six Tenets of Trusteeship (formulated 1942)</h4>
+    <ol>
+      <li>It is a means of transforming capitalism into an egalitarian order.</li>
+      <li>It does not recognize the right of private ownership of property except as permitted by society.</li>
+      <li>It does not exclude legislative regulation of property and income.</li>
+      <li>Under state-regulated trusteeship, minimum and maximum incomes will be fixed.</li>
+      <li>Production will be determined by social necessity, not personal whim.</li>
+      <li>The character of production will be guided by social needs, not by greed.</li>
+    </ol>
+    <h4>⚖️ Trusteeship — Comparative Analysis</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Feature</th><th>🏦 Capitalism</th><th>☭ Communism</th><th>🌿 Gandhian Trusteeship</th></tr></thead>
+        <tbody>
+          <tr><td>Property Owner</td><td>Private Individual</td><td>State (Collective)</td><td>Society (Trustee holds for it)</td></tr>
+          <tr><td>Goal</td><td>Maximize Profit</td><td>Abolish Class & State</td><td>Human Dignity & Welfare</td></tr>
+          <tr><td>Method of Change</td><td>Competition, Laissez-Faire</td><td>Violent Revolution</td><td>Non-Violent Moral Conversion</td></tr>
+          <tr><td>View of Conflict</td><td>Productive & Inevitable</td><td>Necessary Dialectic (class antagonism)</td><td>Unnecessary; resolved by conscience (class cooperation)</td></tr>
+          <tr><td>Role of State</td><td>Minimal (Night-watchman)</td><td>Total (then withers)</td><td>Minimal; replaced by village republics</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — Is Trusteeship Realistic? The CSR Echo:</strong> Critics dismissed Trusteeship as a "pious wish." Yet its DNA survives in modern <em>Corporate Social Responsibility (CSR)</em>, in philanthropic foundations (Tata, Gates), and in India's pioneering <em>mandatory 2% CSR spend</em> under the Companies Act, 2013 — arguably a "state-regulated trusteeship" of exactly the kind Gandhi's sixth tenet envisaged.</div>
+
+    <h3>🏭 3.2 Swadeshi & Khadi — The Economics of Self-Reliance</h3>
+    <blockquote>"Swadeshi is that spirit in us which restricts us to the use and service of our immediate surroundings to the exclusion of the more remote."</blockquote>
+    <h4>🌍 Definition & Scope</h4>
+    <p>Swadeshi is the principle of <strong>localism</strong> — a moral duty to use goods and services produced within one's own community (neighborhood → district → region → nation) before considering those from afar. It is <strong>not xenophobia</strong> nor a blanket rejection of all foreign things, but a graduated preference radiating outward from the local.</p>
+    <h4>🧶 The Charkha (Spinning Wheel) — The Many-Splendored Symbol</h4>
+    <div class="concept-grid">
+      <div class="concept-card"><h4>💵 Economic Dimension</h4><p>Supplementary income for landless villagers, especially women — addressing rural underemployment during agricultural off-seasons.</p></div>
+      <div class="concept-card"><h4>🇮🇳 Political Dimension</h4><p>Boycott of British-made cloth (Manchester textiles) directly undermined a pillar of imperial revenue.</p></div>
+      <div class="concept-card"><h4>🧘 Moral Dimension</h4><p>Symbol of self-reliance (<span class="term">Atma-Nirbharta</span>), dignity of labor, and the rhythm of meditation through repetitive work.</p></div>
+      <div class="concept-card"><h4>🤝 Unifying Dimension</h4><p>Bridged Hindu-Muslim, rich-poor, urban-rural divides — anyone could spin, and Gandhi spun every day until his death.</p></div>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Charkha on the Flag:</strong> The spinning wheel occupied the centre of the Indian National Congress flag (the Swaraj flag of 1921). In 1947 the charkha was replaced by the <em>Ashoka Chakra</em> — but the philosophical lineage is direct. Khadi remains legally the only fabric permitted for the Indian national flag.</div>
+    <h4>🏗️ Gandhi on Industrialization — Nuanced, Not Luddite</h4>
+    <p>Gandhi was <strong>not anti-machine</strong> per se. He famously said the Singer sewing machine was one of the "few useful things ever invented." He opposed <strong>machinery that displaces labor and concentrates wealth</strong>. He favored small-scale, labor-intensive technology; decentralized cottage industries; and tools that <strong>aid</strong> human labor, not replace it. He opposed large-scale industrialism because it creates unemployment, urban slums, ecological devastation, and moral degradation.</p>
+    <div class="insight"><strong>💡 The "Production by the Masses" Insight:</strong> Gandhi favoured <em>"production by the masses, not mass production."</em> Technology should be in the hands of the many, scaled to the human and the village, not concentrated in the hands of the few.</div>
+
+    <h3>🧍‍♂️ 3.3 Bread Labour (Sharira Shrama) — The Dignity of Work 🟤</h3>
+    <p>Drawn from Tolstoy and the Bible ("In the sweat of thy brow shalt thou eat bread"), and from the Bhagavad Gita's emphasis on <em>karma</em>.</p>
+    <ul>
+      <li><strong>Concept</strong> — every able-bodied person must earn their bread through physical labor.</li>
+      <li><strong>Purpose</strong> — abolish the artificial divide between mental and manual work; destroy stigma against "low" occupations; foster human equality.</li>
+      <li><strong>Practice</strong> — Gandhi himself cleaned latrines, spun cotton, taught carpentry, and made all ashram members do the same — including upper-caste Brahmins.</li>
+    </ul>
+
+    <h3>🏘️ 3.4 Gram Swaraj — The Village Republic (Visionary Polity) 🟣</h3>
+    <div class="insight"><strong>🌾 Gandhi's Famous Sketch (1946):</strong> "Independence must begin at the bottom. Thus, every village will be a republic or panchayat having full powers... In this structure composed of innumerable villages, there will be ever-widening, never-ascending circles. Life will not be a pyramid with the apex sustained by the bottom. But it will be an oceanic circle whose centre will be the individual."</div>
+    <p>Features of an ideal Gandhian village: self-sufficient in food and clothing; cooperative farming; village industries; basic education through Nai Talim; panchayat with executive, legislative, judicial powers; non-violent self-defense; equal opportunity for all (no untouchability); harmony of religions.</p>
+    <div class="deepdive"><strong>🔎 Deep Dive — The "Oceanic Circle" vs. the Pyramid:</strong> Conventional states are <em>pyramids</em> — power concentrated at the apex. Gandhi's <em>oceanic circle</em> inverts the logic entirely: the individual is the centre, surrounded by ever-widening rings of voluntary community, none dominating, none subordinate. It is a vision of <em>federalism without hierarchy</em> — anarchist in the philosophical (non-coercive) sense.</div>
+
+    <h3>👑 3.5 Ram Rajya — A Stateless Democracy 🟣</h3>
+    <blockquote>"By Ramarajya I do not mean Hindu Raj. I mean by Ramarajya Divine Raj, the Kingdom of God... the ancient ideal of Ramarajya is undoubtedly one of true democracy."</blockquote>
+    <h4>🚫 Gandhi's Anti-Statism</h4>
+    <p>He called the state a <strong>"soulless machine"</strong> and <strong>"organized violence in concentrated form."</strong> Because the state operates through coercion, it is fundamentally incompatible with pure non-violence.</p>
+    <h4>🌅 The Ideal of Ram Rajya</h4>
+    <ul>
+      <li>Not a literal Hindu kingdom — a <strong>metaphor</strong> for the perfect moral polity.</li>
+      <li>Decentralized, <strong>stateless</strong>, egalitarian, non-violent.</li>
+      <li>Governance through <strong>voluntary cooperation</strong> of village panchayats.</li>
+      <li>Sovereignty rests in moral law (dharma), not coercive law.</li>
+      <li>Truth and Ahimsa are its constitution.</li>
+    </ul>
+    <h4>🔄 Gandhi vs. Marx on the Stateless Society</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Aspect</th><th>Marx</th><th>Gandhi</th></tr></thead>
+        <tbody>
+          <tr><td>End-State</td><td>Classless, stateless communism</td><td>Stateless Ram Rajya</td></tr>
+          <tr><td>Path</td><td>Class war, violent revolution, dictatorship of proletariat</td><td>Moral conversion, decentralization, non-violence</td></tr>
+          <tr><td>Driver</td><td>Material conditions (dialectical materialism)</td><td>Spiritual transformation</td></tr>
+          <tr><td>Unit</td><td>Class</td><td>Individual & Village</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — "Enlightened Anarchy":</strong> Gandhi explicitly described his ideal as <em>"enlightened anarchy"</em> — "a state of enlightened anarchy, where everyone is his own ruler... There is no political power because there is no State." But he conceded that until human nature is perfected, <em>some</em> state is necessary, and the best practical state is the one that governs least. Ram Rajya is therefore an <em>asymptotic ideal</em>.</div>
+  </section>
+
+  <!-- ====================== 4. ELEVEN VOWS ====================== -->
+  <section class="brown" id="vows">
+    <h2>📜 4. The Eleven Vows (Ekadash Vrat) — Ethical Code of a Satyagrahi 🟤</h2>
+    <blockquote>Given to inmates of Sabarmati Ashram (founded 1915 as Satyagraha/Kochrab Ashram). These vows form the <em>moral skeleton</em> of Gandhism — without them, Satyagraha collapses into mere tactics. Recited daily after morning prayer.</blockquote>
+    <div class="vows-grid">
+      <div class="vow"><span class="num">1</span><h4>🌅 Satya</h4><p class="sanskrit">Truth</p><p>Not just not lying — a relentless, lifelong search for ultimate Reality. Truth in thought, word, and deed.</p></div>
+      <div class="vow"><span class="num">2</span><h4>🕊️ Ahimsa</h4><p class="sanskrit">Non-Violence</p><p>Active love. Refraining from harm by thought, word, or deed — even toward the most evil person.</p></div>
+      <div class="vow"><span class="num">3</span><h4>🔥 Brahmacharya</h4><p class="sanskrit">Celibacy / Sense-Control</p><p>Not just sexual restraint — channeling all senses and energies toward spiritual and constructive ends.</p></div>
+      <div class="vow"><span class="num">4</span><h4>🚫 Asteya</h4><p class="sanskrit">Non-Stealing</p><p>Avoiding theft of objects, time, credit, or even unspoken ideas. Taking what you don't need IS stealing.</p></div>
+      <div class="vow"><span class="num">5</span><h4>🎒 Aparigraha</h4><p class="sanskrit">Non-Possession</p><p>Detachment from material goods. Owning only what is necessary — for excess is theft from the needy.</p></div>
+      <div class="vow"><span class="num">6</span><h4>🛠️ Sharir Shrama</h4><p class="sanskrit">Bread Labour</p><p>Physical labor for one's sustenance — abolishing the divide between mental and manual workers.</p></div>
+      <div class="vow"><span class="num">7</span><h4>🥗 Asvada</h4><p class="sanskrit">Control of Palate</p><p>Eat for health, not pleasure. Food as medicine. Essential prerequisite for Brahmacharya.</p></div>
+      <div class="vow"><span class="num">8</span><h4>🕉️ Sarva Dharma Samabhava</h4><p class="sanskrit">Equal Respect for All Religions</p><p>Active belief that all religions are paths to the same God. Not mere tolerance — positive acceptance.</p></div>
+      <div class="vow"><span class="num">9</span><h4>🦁 Abhaya</h4><p class="sanskrit">Fearlessness</p><p>Freedom from fear — of death, public opinion, the state, bodily harm. Essential for truth-seeking.</p></div>
+      <div class="vow"><span class="num">10</span><h4>🤲 Asparshyata Nivaran</h4><p class="sanskrit">Removal of Untouchability</p><p>Eradication of untouchability from society and from one's own heart. All humans are equal.</p></div>
+      <div class="vow"><span class="num">11</span><h4>🏘️ Swadeshi</h4><p class="sanskrit">Localism</p><p>Duty to use local goods and services — a vow of economic self-restraint and community solidarity.</p></div>
+    </div>
+    <div class="insight"><strong>💡 Structural Insight:</strong> The vows form an <strong>interlocking ethical system</strong>. Asvada supports Brahmacharya; Aparigraha enables Asteya; Abhaya makes Satyagraha possible. Together they sculpt the Satyagrahi as both saint and soldier.</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Sanskrit Couplet & the Yamas:</strong> The vows' architecture borrows directly from the <em>yamas</em> and <em>niyamas</em> of Patanjali's Yoga Sutras — but Gandhi <em>socialised</em> them. Classical yoga aimed these vows at individual liberation (<em>moksha</em>); Gandhi added Bread Labour, Removal of Untouchability, and Swadeshi to make them instruments of <em>social</em> transformation.</div>
+  </section>
+
+  <!-- ====================== SEVEN SOCIAL SINS ====================== -->
+  <section class="teal" id="sins">
+    <h2>⚠️ H. The Seven Social Sins — Gandhi's Moral Diagnostic</h2>
+    <blockquote>Published in <em>Young India</em> on 22 October 1925 (drawn from a sermon by the Anglican clergyman Frederick Lewis Donaldson). Each "sin" pairs a worldly good with the moral anchor it has lost.</blockquote>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>The Sin</th><th>The Meaning — Why It Corrupts</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Wealth without Work</strong></td><td>Riches gained without labour sever wealth from its only moral justification — service and effort.</td></tr>
+          <tr><td>2</td><td><strong>Pleasure without Conscience</strong></td><td>Enjoyment heedless of its effect on others breeds indulgence and decay.</td></tr>
+          <tr><td>3</td><td><strong>Knowledge without Character</strong></td><td>Learning divorced from ethics produces clever rogues; education must build the person, not just the mind.</td></tr>
+          <tr><td>4</td><td><strong>Commerce without Morality</strong></td><td>Trade that ignores fairness and honesty becomes organised plunder.</td></tr>
+          <tr><td>5</td><td><strong>Science without Humanity</strong></td><td>Technical progress unmoored from compassion gives us weapons and dehumanisation (prescient of the nuclear age and, today, of AI ethics).</td></tr>
+          <tr><td>6</td><td><strong>Religion without Sacrifice</strong></td><td>Worship without self-giving and service is empty ritual and hypocrisy.</td></tr>
+          <tr><td>7</td><td><strong>Politics without Principle</strong></td><td>Power-seeking detached from ethics is the root of all public corruption.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Unifying Logic:</strong> Read together, the seven sins reveal a single Gandhian thesis: <em>every domain of human activity is incomplete and dangerous without a moral counterweight.</em> For Gandhi, ethics is not a department of life but the air all departments must breathe. A century on (the list turned 100 in October 2025), it reads less like a sermon and more like a prophecy.</div>
+  </section>
+
+  <!-- ====================== 5. SOCIAL ====================== -->
+  <section class="brown" id="social">
+    <h2>⚖️ 5. Gandhi on Major Social Institutions 🟤</h2>
+
+    <h3>🏷️ 5.1 Caste — From Varna to Harijan</h3>
+    <h4>⛔ Against Untouchability — Unequivocal</h4>
+    <p>Gandhi declared untouchability a <strong>"sin and a blot on Hinduism."</strong> He renamed untouchables as <span class="term">Harijans</span> — "Children of God." He fasted unto death against the practice (Yeravda/Poona Pact, 1932). He brought a Harijan family to live in Sabarmati Ashram, scandalizing donors.</p>
+    <h4>📊 Evolution on the Varna System</h4>
+    <ul>
+      <li><strong>Early Phase (pre-1930)</strong> — defended the <em>ideal</em> of Varnashrama as a non-hierarchical division of labor based on birth.</li>
+      <li><strong>Middle Phase (1930s)</strong> — increasingly rejected birth-based caste; emphasized Varna by <em>guna</em> (qualities) and <em>karma</em> (actions).</li>
+      <li><strong>Late Phase (1945–46)</strong> — declared bluntly: <em>"Caste has to go."</em> Supported inter-caste marriages and inter-dining.</li>
+    </ul>
+    <div class="insight"><strong>⚡ Ambedkar's Position:</strong> Gandhi's reform was cosmetic, not structural. By preserving Varna (even idealized), Gandhi kept the scaffolding of hierarchy intact. Ambedkar demanded <strong>"Annihilation of Caste"</strong> — inter-caste marriage, conversion if necessary, and constitutional safeguards (reservations) backed by state power.</div>
+    <div class="deepdive"><strong>🔎 Deep Dive — Even the term "Harijan" was contested:</strong> Ambedkar and many Dalit leaders rejected "Harijan" as <em>patronising</em> — it framed the oppressed as objects of upper-caste benevolence. The modern self-chosen term <em>Dalit</em> reflects the agency Ambedkar championed: <em>reform from above through conscience</em> versus <em>emancipation from below through rights and power.</em></div>
+
+    <h3>👩 5.2 Women — Beyond Domesticity to Soul-Force</h3>
+    <h4>⚖️ On Equality</h4>
+    <p>Gandhi professed uncompromising belief in the <strong>spiritual and moral equality</strong> of men and women. "Woman is the companion of man, gifted with equal mental capacities."</p>
+    <h4>🌸 On Role — Complementary, Not Identical</h4>
+    <p>He often defined this equality in <strong>complementary terms</strong>: women as natural embodiments of Ahimsa, sacrifice, patience, and endurance — therefore, in his view, <em>more</em> suited to non-violent struggle than men.</p>
+    <h4>✊ In the Freedom Struggle — Unprecedented Mobilization</h4>
+    <ul>
+      <li>Brought women out of <strong>purdah</strong> into mass politics for the first time in Indian history.</li>
+      <li>Mobilized millions: <strong>Sarojini Naidu, Kasturba Gandhi, Kamaladevi Chattopadhyay, Aruna Asaf Ali, Sucheta Kripalani, Usha Mehta</strong>.</li>
+      <li>Women picketed liquor shops, foreign-cloth shops, spun khadi, courted arrest.</li>
+    </ul>
+    <h4>🚺 Feminist Critique</h4>
+    <p>Modern critics argue Gandhi's idealization of woman as <strong>Sita</strong> reinforces patriarchal stereotypes and confines female agency to traditional spheres.</p>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Paradox of Gandhian Feminism:</strong> His mass mobilisation of women was <em>revolutionary</em> — yet his idiom (woman as self-sacrificing Sita) could re-inscribe the very domesticity it seemed to transcend. The honest verdict: he widened the door dramatically while leaving the frame of the doorway largely intact.</div>
+
+    <h3>📚 5.3 Education — Nai Talim (The New Education)</h3>
+    <blockquote>"By education I mean an all-round drawing out of the best in child and man — body, mind and spirit." — Gandhi at Wardha, 1937</blockquote>
+    <h4>🌟 Core Philosophy</h4>
+    <p>Education must be <strong>"by the hand, for the heart, for the head"</strong> — integrating <em>physical labor, moral character, and intellectual development</em>. Learning by doing.</p>
+    <h4>🪡 The Craft-Centred Curriculum</h4>
+    <p>A productive craft — spinning, weaving, agriculture, carpentry — becomes the <strong>medium</strong> through which all subjects are taught.</p>
+    <h4>💰 Self-Supporting Education</h4>
+    <p>Schools should be self-financing through the <strong>sale of products</strong> made by students — universal education without bankrupting a poor state, plus dignity for manual labor.</p>
+    <h4>🎯 Objectives of Nai Talim</h4>
+    <ol>
+      <li>Create independent, self-reliant citizens — not clerks for the colonial bureaucracy.</li>
+      <li>Bridge the chasm between intellectuals and the masses.</li>
+      <li>Integrate physical, mental, and moral development holistically.</li>
+      <li>Use the mother tongue as medium of instruction.</li>
+      <li>Make education <strong>rooted in the rural reality</strong> of India.</li>
+    </ol>
+    <h4>🌐 Contemporary Relevance</h4>
+    <ul>
+      <li>Aligns with experiential learning, project-based learning, and socio-emotional learning.</li>
+      <li><strong>NEP 2020</strong> echoes Nai Talim — vocational education from Class 6, mother-tongue instruction, holistic development.</li>
+      <li>Schemes like <strong>Samagra Shiksha</strong> incorporate work-based learning.</li>
+    </ul>
+
+    <h3>🕌 5.4 Religion, Communal Harmony & Sarva Dharma Samabhava</h3>
+    <p>For Gandhi, religion and politics were inseparable — but his "religion" was the universal moral law underlying all faiths. He held that <strong>all religions are true (and all imperfect)</strong>. His daily multi-faith prayer meetings recited from the Gita, the Quran, and the Bible alike.</p>
+    <ul>
+      <li><strong>Sarva Dharma Samabhava</strong> — equal respect (not mere tolerance) for all religions; he opposed conversion-by-inducement.</li>
+      <li><strong>The cost of conviction</strong> — Gandhi's last great campaigns (1946–48) were his lonely walks through Noakhali and Calcutta to quell Hindu-Muslim violence.</li>
+      <li><strong>The ultimate price</strong> — his assassin acted precisely because Gandhi's insistence on protecting Muslims was deemed "appeasement." Gandhi died, literally, for communal harmony.</li>
+    </ul>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Secularism Debate:</strong> Critics argued that Gandhi's saturation of politics with religious idiom inadvertently coded Indian nationalism in Hindu terms. Defenders reply that his religiosity was ecumenical and inter-faith — which is exactly why he was killed by a Hindu extremist. The tension is one of the great debates in modern Indian political thought.</div>
+  </section>
+
+  <!-- ====================== NEW (SOURCE): KEY DEBATES ====================== -->
+  <section class="crimson" id="debates">
+    <h2>⚡ I. Key Debates — Gandhi vs. His Great Contemporaries <span class="badge-img">FROM SOURCE</span></h2>
+
+    <h3>🟣 I.1 M. K. Gandhi vs. Dr. B. R. Ambedkar</h3>
+    <div class="sourcebox">
+      <strong>📘 From the Source Text:</strong> Though both were great patriots and lawyers by profession, their views clashed on many points. One such clash was the <strong>Second Round Table Conference (1931)</strong>, in which <strong>Dr. B. R. Ambedkar demanded a Separate Electorate for Dalits</strong>, whereas Gandhi opposed the demand, referring to it as a <em>divisive policy</em>. However, the then British Prime Minister <strong>Ramsay MacDonald accepted the demand</strong> for a separate electorate in his infamous <strong>"Communal Award" of 1931</strong>. Against the move, Gandhi sat on an indefinite hunger strike in Yerwada Jail. At last, Gandhi prevailed over Dr. B. R. Ambedkar in the famous <strong>Poona Pact of 1932</strong>.
+    </div>
+    <h4>Other Flashpoints Between the Two:</h4>
+    <ul>
+      <li><strong>Dr. B. R. Ambedkar</strong> was an advocate of western education and parliamentary democracy.</li>
+      <li><strong>Gandhi</strong> supported education in the mother tongue and was a fierce critic of parliamentary democracy.</li>
+      <li><strong>Gandhi</strong> called villages the <em>"soul of India,"</em> whereas <strong>Ambedkar</strong> called them <em>"a sink of localism, a den of ignorance and narrow-mindedness."</em></li>
+    </ul>
+    <div class="insight"><strong>💡 The Heart of the Divide:</strong> Gandhi sought reform of the village and Hinduism <em>from within</em> through conscience; Ambedkar sought the <em>annihilation</em> of caste and the empowerment of Dalits through the modern state, constitutional rights, and urban industrial society. The romantic idealisation of the village by one was precisely the object of the other's deepest suspicion.</div>
+
+    <h3>⚖️ I.2 Unity of Means and Ends (vs. Machiavelli)</h3>
+    <p>As detailed in Section E above: unlike Machiavelli's crude realism where "ends justify the means," Gandhi believed <strong>both</strong> the ends and the means should be justifiable — <em>"we cannot expect the smell of roses if we have grown a babool seed."</em> Without religion and ethics, politics is "a devil's misadventure."</p>
+
+    <h3>☭ I.3 M. K. Gandhi vs. Karl Marx — The Six-Point Comparison</h3>
+    <p><em>(D) denotes differences and (S) denotes similarities between the two.</em></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>S.No.</th><th>Issue</th><th>M. K. Gandhi</th><th>Karl Marx</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Philosophical Basis <strong>(D)</strong></td><td>Spiritualism and Moral Individualism</td><td>Materialism and Scientific Socialism</td></tr>
+          <tr><td>2</td><td>Attitude towards Religion <strong>(D)</strong></td><td>Positive: all religions are equal and have a constructive role to play in political life</td><td>Negative: religion is the "opium of the masses"</td></tr>
+          <tr><td>3</td><td>Class Division <strong>(S)</strong></td><td>Exists: because of the existence of a false mentality of considering manual labour as a sin</td><td>Exists: because of the concentration of forces of production in the hands of the capitalists</td></tr>
+          <tr><td>4</td><td>Recommended relation between the classes <strong>(D)</strong></td><td>Class Cooperation</td><td>Class Struggle</td></tr>
+          <tr><td>5</td><td>Classless Society <strong>(S)</strong></td><td>Based on respect for "dignity of labour" and the importance of "Bread Labour"</td><td>Through abolishing capitalism and establishing common ownership over means of production</td></tr>
+          <tr><td>6</td><td>Stateless Society <strong>(S)</strong></td><td>Establishment of <em>Ramrajya</em> through decentralised <em>Gram Swaraj</em> and order based on non-violence</td><td>Establishment of Communism through proletariat revolution</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Striking Convergence:</strong> Note that three of the six points are <em>similarities</em> (S): both Gandhi and Marx acknowledge class division, both envision a classless society, and both dream of a stateless society. The chasm lies in <em>why</em> classes exist (false mentality vs. ownership of production), <em>how</em> classes should relate (cooperation vs. struggle), and the <em>route</em> to the stateless ideal (non-violent Gram Swaraj vs. violent proletarian revolution). They share the destination but split utterly on the road.</div>
+  </section>
+
+  <!-- ====================== NEW (SOURCE): ORGANIZATIONS, ASHRAMS & WORKS ====================== -->
+  <section class="crimson" id="orgs">
+    <h2>🏢 J. Organizations, Ashrams, Famous Satyagrahas & Works <span class="badge-img">FROM SOURCE</span></h2>
+
+    <h3>🏛️ J.1 Important Organizations & Ashrams Established by M. K. Gandhi</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>S.No.</th><th>Year</th><th>Organization / Ashram</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>22 Aug 1894</td><td><strong>Natal Indian Congress</strong></td><td>Founded to fight colour prejudice in South Africa.</td></tr>
+          <tr><td>2</td><td>1903</td><td><strong>Transvaal British India Association</strong></td><td>Founded to organise Indians in the Transvaal.</td></tr>
+          <tr><td>3</td><td>Nov–Dec 1904</td><td><strong>Phoenix Settlement (Phoenix Farm)</strong></td><td>In Natal near Durban — considered the <strong>birthplace of Satyagraha</strong>.</td></tr>
+          <tr><td>4</td><td>1910</td><td><strong>Tolstoy Farm</strong></td><td>The second ashram, initiated during the South African Movement.</td></tr>
+          <tr><td>5</td><td>1915</td><td><strong>Kochrab Ashram</strong></td><td>Established in Ahmedabad on return to India.</td></tr>
+          <tr><td>6</td><td>1916</td><td><strong>Mazoor-Mahajan Sabha (Textile Labour Association)</strong></td><td>Formed by Gandhi with <strong>Anasuya Sarabhai</strong> in a mill at Ahmedabad (Gujarat) as a model trade union.</td></tr>
+          <tr><td>7</td><td>1917</td><td><strong>Sabarmati Ashram</strong></td><td>Kochrab Ashram was shifted to the bank of the Sabarmati river and renamed.</td></tr>
+          <tr><td>8</td><td>1925</td><td><strong>All India Spinners Association</strong></td><td>Launched for the propagation, production and selling of khadi.</td></tr>
+          <tr><td>9</td><td>1932</td><td><strong>Harijan Sevak Sangh</strong></td><td>A non-profit organisation founded to eradicate untouchability in India. Initially known as the <strong>Anti-Untouchability League</strong>.</td></tr>
+          <tr><td>10</td><td>1934</td><td><strong>All India Village Industries Association</strong></td><td>Founded to promote village and cottage industries.</td></tr>
+          <tr><td>11</td><td>1936</td><td><strong>Sevagram Ashram</strong></td><td>Founded at Wardha (Maharashtra).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>✊ J.2 Famous Satyagrahas by M. K. Gandhi</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Satyagraha / Movement</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>September 1906</td><td><strong>First Satyagraha (Transvaal)</strong></td><td>Organised to protest against the Transvaal Asiatic ordinance constituted against the local Indians.</td></tr>
+          <tr><td>April 1917</td><td><strong>Champaran Satyagraha</strong></td><td>In Bihar — first Satyagraha on Indian soil.</td></tr>
+          <tr><td>Feb–March 1918</td><td><strong>Ahmedabad Mill Strike</strong></td><td>Gandhi's first fast as a weapon.</td></tr>
+          <tr><td>11 March 1918</td><td><strong>Kheda Satyagraha</strong></td><td>Gandhi was its spiritual head; principally led by <strong>Sardar Vallabhbhai Patel</strong> after famine, cholera & plague hit the region.</td></tr>
+          <tr><td>6 April 1919</td><td><strong>Rowlatt Satyagraha</strong></td><td>Non-violent Satyagraha against the unjust Rowlatt Act.</td></tr>
+          <tr><td>1920–21</td><td><strong>Khilafat & Non-Cooperation Movement</strong></td><td>First nationwide mass movement.</td></tr>
+          <tr><td>March 1930</td><td><strong>Civil Disobedience Movement</strong></td><td>Started with the Salt Satyagraha / Dandi March.</td></tr>
+          <tr><td>8 August 1942</td><td><strong>Quit India Movement / August Movement</strong></td><td>"Do or Die" — final mass call for British withdrawal.</td></tr>
+          <tr><td>15 August 1947</td><td><strong>Noakhali Satyagraha</strong></td><td>Gandhi's lonely peace march amid Partition violence.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>📖 J.3 Works of M. K. Gandhi</h3>
+    <h4>📚 Books</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Book</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>1909</td><td><strong>Hind Swaraj</strong></td><td>Expresses his views on Swaraj, mechanization and modern civilization.</td></tr>
+          <tr><td>1921</td><td><strong>Swaraj in One Year</strong></td><td>—</td></tr>
+          <tr><td>1927</td><td><strong>The Story of My Experiments with Truth</strong></td><td>An autobiography describing his struggle against racism, violence, and colonialism — a window to the evolution of his ideas over a period.</td></tr>
+          <tr><td>1928</td><td><strong>Satyagraha in South Africa</strong></td><td>—</td></tr>
+          <tr><td>1941</td><td><strong>Constructive Programme: Its Meaning and Place</strong></td><td>—</td></tr>
+          <tr><td>1947</td><td><strong>India of My Dreams</strong></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>🗞️ Magazines</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Year</th><th>Magazine</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>1903</td><td><strong>Indian Opinion</strong></td><td>Founded by Gandhi in South Africa.</td></tr>
+          <tr><td>1919–32</td><td><strong>Young India</strong></td><td>English weekly. The journal was reprinted in the US by the India Home Rule League of America by <strong>Lala Lajpat Rai</strong>.</td></tr>
+          <tr><td>1933</td><td><strong>Harijan</strong> (English), <strong>Harijan Bandhu</strong> (Gujarati), <strong>Harijan Sevak</strong> (Hindi)</td><td>The trio of Harijan journals.</td></tr>
+          <tr><td>1947</td><td><strong>Navjivan</strong></td><td>Founded by Gandhi and <strong>J. L. Nehru</strong>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The Institutional Genius:</strong> Note how Gandhi never separated <em>thought</em> from <em>institution</em>. Every idea had an organisation (Trusteeship → Textile Labour Association; Khadi → All India Spinners Association; anti-untouchability → Harijan Sevak Sangh; village economy → All India Village Industries Association) and a publication to carry it (Indian Opinion, Young India, Harijan, Navjivan). This is the hallmark of his "Constructive Programme" — philosophy embodied in living institutions, not left as abstract doctrine.</div>
+  </section>
+
+  <!-- ====================== 6. CRITIQUE ====================== -->
+  <section class="red" id="critique">
+    <h2>🔴 6. Comprehensive Criticisms & Comparisons</h2>
+    <h3>📣 6.1 Detailed Criticisms of Gandhism</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Critic</th><th>Core Argument</th><th>Exam Evaluation</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🟣 Dr. B. R. Ambedkar</strong></td><td><strong>Pro-Caste & Pro-Capitalist:</strong> Defense of Varna and Trusteeship preserves hierarchy. Trusteeship is a "pious wish." Annihilation of caste demands state action, not moral persuasion. Called the village "a sink of localism, a den of ignorance and narrow-mindedness."</td><td><strong>Most Powerful Critique</strong> — exposes the structural limits of moral reform.</td></tr>
+          <tr><td><strong>☭ Marxist (M. N. Roy, R. P. Dutt)</strong></td><td><strong>Reactionary Utopian:</strong> Idealization of village = romanticizing pre-capitalist poverty. Anti-industrialism = stagnation. Trusteeship = trick to preserve class rule. Non-violence disarms the oppressed.</td><td><strong>Structural Economic Critique</strong> — shows Gandhi's vision would not lead to development.</td></tr>
+          <tr><td><strong>🏭 Jawaharlal Nehru</strong></td><td><strong>Scientifically Regressive:</strong> India needs heavy industry, dams ("temples of modern India"), scientific agriculture — not charkhas and bullock carts.</td><td><strong>Modernization Critique</strong> — tension between Gandhian idealism and building a modern state.</td></tr>
+          <tr><td><strong>📚 Rabindranath Tagore</strong></td><td><strong>Spiritual Fanaticism & Anti-Intellectual:</strong> Obsession with poverty becomes a "cult of negation." Criticised the burning of foreign cloth and the "blind" mass discipline of charkha-spinning.</td><td><strong>Cultural-Educational Critique</strong> — warns against rejection of reason and universalism.</td></tr>
+          <tr><td><strong>👥 M. N. Roy (Radical Humanist)</strong></td><td><strong>Anti-Rational:</strong> Gandhi sacrifices reason at the altar of faith. Mass mobilization through religious idiom bred communal consciousness.</td><td><strong>Secular-Rationalist Critique</strong> — dangers of mixing religion with politics.</td></tr>
+          <tr><td><strong>🔗 Modern Liberal & Feminist Critics</strong></td><td><strong>Authoritarian Communitarianism:</strong> The 11 vows are personal tyranny. Sita ideal is patriarchal.</td><td><strong>Individual Rights Critique</strong> — Gandhian communities can be as oppressive as states.</td></tr>
+          <tr><td><strong>🇵🇰 Jinnah & Muslim League</strong></td><td><strong>Hindu-Coded Politics:</strong> Use of Hindu symbols (Ram Rajya, cow protection, charkha) made Muslims feel excluded.</td><td><strong>Communal Critique</strong> — raises questions about pluralism in Gandhi's idiom.</td></tr>
+          <tr><td><strong>🇮🇳 Subhas Chandra Bose</strong></td><td><strong>Tactically Naïve:</strong> Non-violence cannot defeat a brutal colonial state. Independence requires armed struggle.</td><td><strong>Realist Critique</strong> — questions the universal applicability of Satyagraha.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="deepdive"><strong>🔎 Deep Dive — The "Would Satyagraha Have Worked Against Hitler?" Question:</strong> The sharpest realist challenge is whether non-violence can work against a genocidal regime that controls the press. Critics call this the moral blind-spot of absolute ahimsa: Satyagraha depends on the oppressor possessing a conscience to awaken. Defenders counter that armed resistance also failed to prevent the Holocaust. The debate remains genuinely open.</div>
+
+    <h3>🧭 6.2 Comparative Matrix — Gandhi vs. Key Thinkers</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Dimension</th><th>🟠 Gandhi</th><th>☭ Marx</th><th>🟣 Ambedkar</th><th>⚖️ Rousseau</th><th>📖 J. S. Mill</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ultimate Goal</strong></td><td>Ram Rajya (stateless moral order)</td><td>Communism (classless, stateless)</td><td>Annihilation of Caste + Constitutional Democracy</td><td>General Will + Direct Democracy</td><td>Individual Liberty + Representative Democracy</td></tr>
+          <tr><td><strong>View of State</strong></td><td>Negative — "soulless machine"; village republics</td><td>Negative — instrument of class oppression</td><td>Positive — tool for dismantling caste</td><td>Ambivalent — sovereign General Will</td><td>Positive but limited — protects from harm</td></tr>
+          <tr><td><strong>Attitude to Violence</strong></td><td>Absolute Rejection</td><td>Instrumental — revolutionary violence progressive</td><td>Contextual — state's legitimate force</td><td>Conditional — to enforce General Will</td><td>Conditional — state monopoly to uphold law</td></tr>
+          <tr><td><strong>Economic Model</strong></td><td>Decentralized, agrarian, small-scale</td><td>Centralized, industrial, state-planned</td><td>Mixed — state-led industrialization</td><td>Small independent producers</td><td>Laissez-faire capitalism</td></tr>
+          <tr><td><strong>View of Religion</strong></td><td>Central — foundation of ethics & politics</td><td>Rejection — "opium of the masses"</td><td>Reformist instrument</td><td>Civic religion</td><td>Private matter — separation</td></tr>
+          <tr><td><strong>Unit of Analysis</strong></td><td>Individual & Village</td><td>Class</td><td>Caste & Individual Citizen</td><td>Community (General Will)</td><td>Individual</td></tr>
+          <tr><td><strong>Method of Change</strong></td><td>Satyagraha — moral conversion</td><td>Class struggle, revolution</td><td>Constitutional law, education, conversion</td><td>Social Contract</td><td>Gradual reform, free discussion</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>⚠️ 6.3 Internal Paradoxes within Gandhism</h3>
+    <ul>
+      <li><strong>Spiritual Politics vs. Secular State</strong> — His religious idiom in politics complicated India's secular project.</li>
+      <li><strong>Equality vs. Hierarchy</strong> — Affirmed human equality yet defended idealized Varna for decades.</li>
+      <li><strong>Freedom vs. Discipline</strong> — Championed Swaraj but demanded near-monastic self-restraint.</li>
+      <li><strong>Anti-State Stance vs. Mass Movement</strong> — Sought stateless order yet led mobilizations that produced the modern Indian state.</li>
+      <li><strong>Universalism vs. Indianness</strong> — Spoke for humanity yet grounded in deeply Indian (Hindu-Jain) categories.</li>
+      <li><strong>Means-Ends Absolutism vs. Political Effectiveness</strong> — His refusal to compromise non-violence (Chauri Chaura) was morally pure but sometimes sacrificed political momentum.</li>
+    </ul>
+    <div class="insight"><strong>💡 The Generous Reading of the Paradoxes:</strong> Many of these tensions are not failures of logic but the inevitable friction of a man holding the <em>ideal</em> and the <em>real</em> in the same hands. Gandhi never claimed consistency — "My aim is not to be consistent with my previous statements... but with truth as it may present itself to me at a given moment."</div>
+  </section>
+
+  <!-- ====================== 7. RELEVANCE ====================== -->
+  <section class="purple" id="relevance">
+    <h2>✅ 7. Relevance & Contemporary Applications 🟣</h2>
+    <div class="concept-grid">
+      <div class="concept-card"><h4>🌍 Environmentalism</h4><p><strong>Swadeshi & Aparigraha</strong> critique consumerism, fast fashion, globalized supply chains. <em>"The world has enough for everyone's need but not for everyone's greed."</em></p></div>
+      <div class="concept-card"><h4>🕊️ Global Non-Violent Movements</h4><p>Satyagraha inspired <strong>Martin Luther King Jr., Nelson Mandela, Aung San Suu Kyi, Cesar Chavez, Lech Wałęsa</strong>. UN observes <strong>October 2 as International Day of Non-Violence</strong>.</p></div>
+      <div class="concept-card"><h4>🏘️ Panchayati Raj</h4><p>The <strong>73rd Constitutional Amendment (1992)</strong> establishing three-tier Panchayati Raj is the structural realization of Gram Swaraj. Over <strong>3 million elected representatives</strong> at local level.</p></div>
+      <div class="concept-card"><h4>🩺 Welfare & Anti-Poverty Schemes</h4><p><strong>Antyodaya Anna Yojana, MGNREGA, PM Awas Yojana, Swachh Bharat</strong> — all trace lineage to Antyodaya and Bread Labour.</p></div>
+      <div class="concept-card"><h4>🏭 Atmanirbhar Bharat</h4><p>The <strong>"Self-Reliant India"</strong> initiative directly echoes Swadeshi — local manufacturing, Khadi revival, "Vocal for Local."</p></div>
+      <div class="concept-card"><h4>🤝 Conflict Resolution & Peace Studies</h4><p>Gandhian methods are core curriculum in <strong>peace studies</strong> globally. Gene Sharp's 198 methods of non-violent action are the intellectual descendant.</p></div>
+      <div class="concept-card"><h4>📚 Education Reform</h4><p><strong>NEP 2020</strong> echoes Nai Talim — vocational integration from Class 6, mother-tongue instruction, head-heart-hand.</p></div>
+      <div class="concept-card"><h4>🧘 Wellness & Mindful Living</h4><p>The 11 vows — Aparigraha (minimalism), Asvada (mindful eating) — resonate with wellness, slow living, mindfulness.</p></div>
+      <div class="concept-card"><h4>🤖 AI & Tech Ethics</h4><p>"Science without Humanity" and "production by the masses" anticipate debates on automation, surveillance, and human-centred technology.</p></div>
+      <div class="concept-card"><h4>🏛️ Corporate Responsibility</h4><p>India's <strong>mandatory 2% CSR</strong> (Companies Act, 2013), stakeholder capitalism, and ESG are descendants of <strong>Trusteeship</strong>.</p></div>
+      <div class="concept-card"><h4>🛒 Ethical Consumption</h4><p><strong>Swadeshi & Aparigraha</strong> live on in fair-trade, locavore, minimalism, and the anti-fast-fashion movement.</p></div>
+      <div class="concept-card"><h4>📡 Digital Satyagraha</h4><p>Hashtag activism, online boycotts, and transparent non-violent mobilisation extend Satyagraha into the networked age.</p></div>
+    </div>
+    <div class="insight"><strong>🌟 Enduring Significance:</strong> In an age of climate crisis, polarization, automation-driven unemployment, and resurgent authoritarianism, the Gandhian framework offers an <em>ethical compass</em> for civilizational choices. He may have been wrong on specifics; he was profoundly right on principles.</div>
+  </section>
+
+  <!-- ====================== 8. MIND MAP ====================== -->
+  <section class="gold">
+    <h2>🗺️ 8. Master Mind Map — Memory Palace</h2>
+    <p><b>🦅 A single bird's-eye view that links every concept</b></p>
+    <div class="mermaid-wrap">
+      <pre class="mermaid">
+flowchart LR
+    subgraph SRC ["🟦 SOURCES"]
+        GI["Gita · Jainism"]
+        WT["Tolstoy · Ruskin · Thoreau · Gokhale · Carpenter"]
+    end
+    subgraph CORE ["🟠 CORE PHILOSOPHY"]
+        T["SATYA<br/>(Truth) — END"]
+        A["AHIMSA<br/>(Non-Violence) — MEANS"]
+    end
+    subgraph POL ["🔵 POLITICAL METHODS"]
+        SG["Satyagraha<br/>(Struggle-Truce-Struggle)"] --> CD["Civil Disobedience"]
+        SG --> NC["Non-Cooperation"]
+        SW["Swaraj"] --> GR["Gram Swaraj"]
+    end
+    subgraph ECO ["🟢 ECONOMIC VISION"]
+        TP["Trusteeship<br/>(Class Cooperation)"] --> EE["Economic Equality"]
+        SD["Swadeshi"] --> KH["Khadi/Charkha"]
+        SV["Sarvodaya"] --> AN["Antyodaya"]
+    end
+    subgraph SOC ["🟤 SOCIAL REFORMS"]
+        NT["Nai Talim"] --> EH["Edu via Craft"]
+        CV["Caste Reform"] --> HJ["Harijan Uplift"]
+        WM["Women"] --> NF["Non-Violent Power"]
+        VW["11 Vows"] --> ET["Ethical Code"]
+    end
+    subgraph CR ["🔴 CRITIQUES"]
+        AM["Ambedkar: Pro-Caste"]
+        MX["Marxist: Utopian"]
+        NH["Nehru: Anti-Modern"]
+        TG["Tagore: Anti-Reason"]
+    end
+    subgraph ID ["🟣 IDEAL STATE"]
+        RR["Ram Rajya<br/>(Oceanic Circle)"] --> SS["Stateless Democracy"]
+    end
+
+    SRC --> CORE
+    CORE --> POL
+    CORE --> ECO
+    CORE --> SOC
+    POL --> ID
+    ECO --> ID
+    SOC --> ID
+    CR -.->|tests| ID
+
+    style SRC fill:#0f2a26,stroke:#2dd4bf,stroke-width:3px,color:#5eead4
+    style CORE fill:#2a1f0a,stroke:#ff9933,stroke-width:3px,color:#ffd700
+    style POL fill:#0f1f3d,stroke:#4a8eff,stroke-width:3px,color:#7eb0ff
+    style ECO fill:#0f2a1a,stroke:#4ade80,stroke-width:3px,color:#86efac
+    style SOC fill:#2a1f10,stroke:#d4a574,stroke-width:3px,color:#e8c39e
+    style CR fill:#2a0f15,stroke:#ff6b8a,stroke-width:3px,color:#ff9bb0
+    style ID fill:#2a0f3a,stroke:#c084fc,stroke-width:4px,color:#d8b4fe
+</pre>
+    </div>
+  </section>
+
+  <!-- ====================== QUOTE WALL ====================== -->
+  <section class="gold">
+    <h2>💬 9. The Voice of the Mahatma — A Wall of Wisdom</h2>
+    <p>Quotations are the spice of a Gandhian answer — they signal mastery and lend lyrical authority.</p>
+    <div class="quote-wall">
+      <div class="quote-chip">"Be the change that you wish to see in the world."<span>— ON SELF-TRANSFORMATION</span></div>
+      <div class="quote-chip">"An eye for an eye only ends up making the whole world blind."<span>— ON NON-VIOLENCE (attributed)</span></div>
+      <div class="quote-chip">"The world has enough for everyone's need, but not for everyone's greed."<span>— ON ENVIRONMENT & ECONOMY</span></div>
+      <div class="quote-chip">"We cannot expect the smell of roses if we have grown a babool seed."<span>— ON MEANS & ENDS</span></div>
+      <div class="quote-chip">"Without religion and ethics, politics is a devil's misadventure."<span>— ON ETHICS IN POLITICS</span></div>
+      <div class="quote-chip">"My life is my message."<span>— ON INTEGRITY</span></div>
+      <div class="quote-chip">"The soul of India lives in its villages."<span>— ON GRAM SWARAJ</span></div>
+      <div class="quote-chip">"In a gentle way, you can shake the world."<span>— ON NON-VIOLENT POWER</span></div>
+      <div class="quote-chip">"There is no path to peace. Peace is the path."<span>— ON MEANS & ENDS</span></div>
+      <div class="quote-chip">"Satyagraha is the only way to achieve Swaraj — it is to win over one's enemy."<span>— ON SATYAGRAHA</span></div>
+    </div>
+  </section>
+
+  <!-- ====================== EXAM TACTICS ====================== -->
+  <section class="gold">
+    <h2>📝 10. Exam Tactics — How to Score Highest</h2>
+    <div class="tactic-box"><h4>📖 On a "Definition" Question</h4><p>Open with a direct Gandhi quote → break down Sanskrit etymology → unfold three levels of application (individual / social / political) → close with a contemporary illustration.</p></div>
+    <div class="tactic-box"><h4>💰 On "Features of Gandhian Economic Thought"</h4><p>Begin with the moral core: <strong>Sarvodaya & Antyodaya</strong>. Then layer: <strong>Trusteeship (benevolent capitalism, class cooperation) → Swadeshi/Khadi → Bread Labour → Decentralized Village Economy</strong>. Close with a sharp contrast against both Capitalism and Communism.</p></div>
+    <div class="tactic-box"><h4>⚖️ On "Critically Evaluate"</h4><p>Three-part architecture: <strong>Part 1 — Exposition</strong>; <strong>Part 2 — Critique</strong> (Ambedkar, Marxist, Nehru, Tagore); <strong>Part 3 — Synthesis</strong> (enduring moral relevance despite practical limitations).</p></div>
+    <div class="tactic-box"><h4>🔗 On "Compare with Another Thinker"</h4><p>Use a matrix. For <strong>Gandhi vs Marx</strong>, remember the source's 6 points and mark each (D) or (S): Philosophical Basis (D), Religion (D), Class Division (S), Class Relation (D), Classless Society (S), Stateless Society (S).</p></div>
+    <div class="tactic-box"><h4>🆚 On "Passive Resistance vs Satyagraha" <span class="badge-new">SOURCE</span></h4><p>Contrast on: use of violence (conditional vs absolute rejection / deontological), weapon of the weak vs strong, enmity vs no evil feeling toward the doer, and aim (harass vs convert/redeem).</p></div>
+    <div class="tactic-box"><h4>⚡ On "Gandhi vs Ambedkar" <span class="badge-new">SOURCE</span></h4><p>Anchor with the <strong>Communal Award (1931) → Yerwada fast → Poona Pact (1932)</strong> sequence. Add: mother-tongue vs western education, and the "soul of India" vs "sink of localism" clash over villages.</p></div>
+    <div class="tactic-box"><h4>⭕ On "Gandhi's Views on Democracy" <span class="badge-new">SOURCE</span></h4><p>Critique of parliamentary democracy as <strong>centralized "Pyramid Structure"</strong>; offer the alternative — decentralized <strong>oceanic circles</strong> rooted in grassroots democracy where "the centre of the circle is always people."</p></div>
+    <div class="tactic-box"><h4>🌍 On "Contemporary Relevance"</h4><p>Cite concrete applications: <strong>73rd Amendment, MGNREGA, Antyodaya Anna Yojana, NEP 2020, Atmanirbhar Bharat, International Day of Non-Violence, Swachh Bharat, CSR mandate</strong>.</p></div>
+    <div class="tactic-box"><h4>🏢 On "Works & Organizations" <span class="badge-new">SOURCE</span></h4><p>Memorise the dated chain: Natal Indian Congress (1894), Phoenix (1904), Tolstoy Farm (1910), Sabarmati (1917), Harijan Sevak Sangh (1932), Sevagram (1936); and books — Hind Swaraj (1909), My Experiments with Truth (1927).</p></div>
+    <div class="tactic-box"><h4>✨ Pro-Tip — Use Mahatma's Voice</h4><p>Pepper your answer with 2–3 short Gandhi quotations. Examples: <em>"Truth is God" / "babool seed → no roses" / "the soul of India lives in its villages."</em></p></div>
+  </section>
+
+  <!-- ====================== GLOSSARY ====================== -->
+  <section class="brown" id="glossary">
+    <h2>🔤 11. The Living Glossary — Key Sanskrit & Gandhian Terms</h2>
+    <p>A quick-reference lexicon — every essential term in one place, for instant recall.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Term</th><th>Literal Meaning</th><th>Gandhian Sense</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Satya</strong></td><td>Truth / Being</td><td>Absolute Reality (God); the goal of life</td></tr>
+          <tr><td><strong>Ahimsa</strong></td><td>Non-harm</td><td>Active love; the supreme means to Truth</td></tr>
+          <tr><td><strong>Satyagraha</strong></td><td>Holding firmly to truth / firmness to truth</td><td>Non-violent resistance based on soul-force; "to win over one's enemy"</td></tr>
+          <tr><td><strong>Atma-Bal</strong></td><td>Soul-force</td><td>Inner moral power, opposite of brute force</td></tr>
+          <tr><td><strong>Swaraj</strong></td><td>Self-rule</td><td>Self-mastery + political/economic/spiritual independence + "rule over ourselves"</td></tr>
+          <tr><td><strong>Swadeshi</strong></td><td>Of one's own country</td><td>Moral preference for the local</td></tr>
+          <tr><td><strong>Sarvodaya</strong></td><td>Rise/welfare of all</td><td>Upliftment of every member of society (from Ruskin)</td></tr>
+          <tr><td><strong>Antyodaya</strong></td><td>Rise of the last</td><td>Priority to the poorest & weakest</td></tr>
+          <tr><td><strong>Aparigraha</strong></td><td>Non-possession</td><td>Voluntary simplicity; owning only what you need</td></tr>
+          <tr><td><strong>Asteya</strong></td><td>Non-stealing</td><td>Taking nothing beyond genuine need</td></tr>
+          <tr><td><strong>Brahmacharya</strong></td><td>Conduct toward Brahman</td><td>Self-control of all senses & energies</td></tr>
+          <tr><td><strong>Abhaya</strong></td><td>Fearlessness</td><td>Freedom from all fear; prerequisite of truth</td></tr>
+          <tr><td><strong>Sharira Shrama</strong></td><td>Body-labour</td><td>Earning bread by physical work; bread labour</td></tr>
+          <tr><td><strong>Nishkama Karma</strong></td><td>Desireless action</td><td>Duty done without craving its fruits (from the Gita)</td></tr>
+          <tr><td><strong>Anasakti</strong></td><td>Non-attachment</td><td>Gandhi's title & reading of the Bhagavad Gita</td></tr>
+          <tr><td><strong>Trusteeship</strong></td><td>Holding in trust</td><td>"Benevolent capitalism" — capitalists as trustees of social wealth; class cooperation</td></tr>
+          <tr><td><strong>Hriday-Parivartan</strong></td><td>Change of heart</td><td>The conversion of the opponent — Satyagraha's aim</td></tr>
+          <tr><td><strong>Tapasya</strong></td><td>Austerity / penance</td><td>Voluntary self-suffering that generates moral force</td></tr>
+          <tr><td><strong>Gram Swaraj</strong></td><td>Village self-rule</td><td>Self-sufficient, self-governing village republic; "soul of India"</td></tr>
+          <tr><td><strong>Oceanic Circle</strong></td><td>Ever-widening rings</td><td>Decentralized polity with the individual at the centre — opposite of the pyramid</td></tr>
+          <tr><td><strong>Ram Rajya</strong></td><td>Rule of Rama</td><td>Ideal stateless, moral, divine democracy</td></tr>
+          <tr><td><strong>Harijan</strong></td><td>Children of God</td><td>Gandhi's (contested) name for the oppressed castes</td></tr>
+          <tr><td><strong>Nai Talim</strong></td><td>New education</td><td>Craft-centred, self-supporting holistic learning</td></tr>
+          <tr><td><strong>Sarva Dharma Samabhava</strong></td><td>Equal-mindedness to all faiths</td><td>Equal respect for all religions</td></tr>
+          <tr><td><strong>Babool seed</strong></td><td>Thorny acacia seed</td><td>Gandhi's metaphor: impure means cannot yield a pure end</td></tr>
+          <tr><td><strong>Charkha / Khadi</strong></td><td>Spinning wheel / hand-spun cloth</td><td>Symbol & instrument of self-reliance and unity</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <h1>🕊️</h1>
+    <p><b>"My life is my message"</b></p>
+    <p style="margin-top: 10px; font-size: 0.9em;">— Compiled with reverence, designed with love · Gandhism 2.0 · Enriched & Expanded Edition —</p>
+    <p style="margin-top: 18px;">🪷 Satya · Ahimsa · Swaraj · Sarvodaya 🪷</p>
+    <p style="margin-top: 10px; font-size: 0.8em; color: var(--text-muted);">Mohandas Karamchand Gandhi · 2 October 1869 — 30 January 1948</p>
+ <br><p class="subtitle"><b><h1>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h1></b></p>
+  </footer>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose',
+    themeVariables: {
+      darkMode: true,
+      background: '#0a0612',
+      primaryColor: '#1a1030',
+      primaryTextColor: '#e8e3f0',
+      primaryBorderColor: '#ffd700',
+      lineColor: '#c4bdd4',
+      fontFamily: 'Inter, sans-serif'
+    },
+    flowchart: { curve: 'basis', padding: 20 }
+  });
+
+  // Render all .mermaid blocks after the module (and DOM) are ready
+  await mermaid.run({ querySelector: '.mermaid' });
+</script>
+
+<script>
+  document.querySelectorAll('.nav-pill a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  });
+
+  const heroTitle = document.querySelector('.hero h1');
+  document.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 10;
+    const y = (e.clientY / window.innerHeight - 0.5) * 10;
+    if (heroTitle) heroTitle.style.transform = `translate(${x}px, ${y}px)`;
+  });
+</script>
+
+</body>
+</html>
