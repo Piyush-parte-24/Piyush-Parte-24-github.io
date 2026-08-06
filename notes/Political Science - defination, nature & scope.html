@@ -1,0 +1,1788 @@
+f<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏛️ Political Science</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<style>
+/* ===== GLOBAL RESET & VARIABLES ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-deep: #0a0e27;
+  --bg-mid: #131838;
+  --bg-card: #1a1f3a;
+  --bg-card-hover: #232a4d;
+  --text-primary: #e8ecf7;
+  --text-secondary: #b8bfd9;
+  --text-muted: #8891b3;
+  --accent-red: #ff6b8a;
+  --accent-green: #5eead4;
+  --accent-blue: #7dd3fc;
+  --accent-yellow: #fcd34d;
+  --accent-purple: #c4b5fd;
+  --accent-orange: #fdba74;
+  --accent-pink: #f0abfc;
+  --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-gold: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  --shadow-glow: 0 0 30px rgba(124, 58, 237, 0.3);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 70%);
+  z-index: -2;
+  animation: bgShift 20s ease-in-out infinite;
+}
+
+@keyframes bgShift {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+}
+
+/* Floating particles */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: rgba(196, 181, 253, 0.5);
+  border-radius: 50%;
+  animation: floatUp 15s linear infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+}
+
+/* ===== HERO TITLE ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: conic-gradient(from 0deg, #667eea, #f093fb, #4facfe, #43e97b, #fa709a, #667eea);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: spin 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 25px;
+  background: rgba(196, 181, 253, 0.1);
+  border: 1px solid rgba(196, 181, 253, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  color: var(--accent-purple);
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(196, 181, 253, 0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(196, 181, 253, 0); }
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 30%, #f0abfc 60%, #fcd34d 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+  cursor: default;
+  transition: all 0.5s;
+  display: inline-block;
+}
+
+.hero h1:hover {
+  transform: scale(1.05) rotateX(10deg);
+  filter: drop-shadow(0 10px 30px rgba(196, 181, 253, 0.5));
+  letter-spacing: 2px;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero h1 .icon {
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+  -webkit-text-fill-color: initial;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.hero p.subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.stat {
+  padding: 20px 30px;
+  background: rgba(26, 31, 58, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.stat:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--accent-purple);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+}
+
+.stat .num {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--gradient-3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat .label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ===== SECTION ===== */
+.section {
+  margin: 80px 0;
+  position: relative;
+  animation: fadeInUp 0.8s ease backwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, transparent, var(--accent-purple), transparent) 1;
+  position: relative;
+}
+
+.section-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
+  text-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+  transition: transform 0.4s;
+}
+
+.section-number:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.section-title .highlight {
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== SUB SECTIONS ===== */
+h3.sub-head {
+  font-size: 1.5rem;
+  margin: 35px 0 20px;
+  padding: 12px 20px;
+  border-left: 5px solid var(--accent-purple);
+  background: linear-gradient(90deg, rgba(196, 181, 253, 0.12), transparent);
+  border-radius: 0 12px 12px 0;
+  transition: all 0.3s;
+}
+
+h3.sub-head:hover {
+  border-left-width: 10px;
+  background: linear-gradient(90deg, rgba(196, 181, 253, 0.25), transparent);
+  transform: translateX(5px);
+}
+
+h4.mini-head {
+  font-size: 1.15rem;
+  margin: 25px 0 12px;
+  color: var(--accent-yellow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-mid) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--shadow-card);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: var(--gradient-1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(196, 181, 253, 0.4);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);
+}
+
+.card:hover::before { transform: scaleX(1); }
+
+.card.red::before { background: var(--gradient-2); }
+.card.green::before { background: var(--gradient-4); }
+.card.blue::before { background: var(--gradient-3); }
+.card.yellow::before { background: var(--gradient-gold); }
+.card.purple::before { background: var(--gradient-1); }
+.card.orange::before { background: var(--gradient-5); }
+
+/* ===== COLOR-LEGEND CARDS GRID ===== */
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.legend-item {
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.legend-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.legend-item:hover { transform: translateY(-8px) rotate(-2deg); }
+.legend-item:hover::after { opacity: 1; }
+
+.legend-item .emoji { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+.legend-item .name { font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
+.legend-item .use { font-size: 0.85rem; opacity: 0.85; }
+
+.lg-red    { background: linear-gradient(135deg, #7f1d3a, #4a0e1f); color: #ffd0dc; }
+.lg-green  { background: linear-gradient(135deg, #0d4f47, #052e29); color: #b8f5e9; }
+.lg-blue   { background: linear-gradient(135deg, #1e3a8a, #0c1e4d); color: #c5dfff; }
+.lg-yellow { background: linear-gradient(135deg, #78481a, #3d2509); color: #ffe9b8; }
+.lg-purple { background: linear-gradient(135deg, #4c1d95, #260d4a); color: #dccdff; }
+.lg-orange { background: linear-gradient(135deg, #7c3413, #3d1707); color: #ffd5b8; }
+.lg-black  { background: linear-gradient(135deg, #1f2937, #0a0e1a); color: #d1d5db; }
+
+/* ===== TABLES ===== */
+.table-wrap {
+  overflow-x: auto;
+  margin: 25px 0;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+table thead {
+  background: var(--gradient-1);
+}
+
+table th {
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-secondary);
+  transition: all 0.3s;
+}
+
+table tbody tr {
+  transition: all 0.3s;
+}
+
+table tbody tr:hover {
+  background: rgba(196, 181, 253, 0.08);
+  transform: scale(1.01);
+}
+
+table tbody tr:hover td {
+  color: var(--text-primary);
+}
+
+table td strong {
+  color: var(--accent-yellow);
+  font-weight: 700;
+}
+
+/* ===== LISTS ===== */
+ul.fancy, ol.fancy {
+  list-style: none;
+  padding: 10px 0;
+}
+
+ul.fancy li, ol.fancy li {
+  padding: 10px 15px 10px 40px;
+  margin: 8px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+
+ul.fancy li::before {
+  content: '▸';
+  position: absolute;
+  left: 15px;
+  color: var(--accent-purple);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+ol.fancy { counter-reset: item; }
+ol.fancy li::before {
+  counter-increment: item;
+  content: counter(item);
+  position: absolute;
+  left: 10px;
+  width: 22px; height: 22px;
+  background: var(--gradient-1);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  top: 11px;
+}
+
+ul.fancy li:hover, ol.fancy li:hover {
+  background: rgba(196, 181, 253, 0.1);
+  border-left-color: var(--accent-purple);
+  transform: translateX(8px);
+}
+
+ul.fancy li:hover::before { transform: translateX(3px); }
+
+/* ===== FLOWCHART CONTAINER ===== */
+.mermaid-box {
+  background: linear-gradient(135deg, #11152e 0%, #1a1f3a 100%);
+  border: 1px solid rgba(196, 181, 253, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px 0;
+  overflow-x: auto;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.mermaid-box::before {
+  content: '🌊 INTERACTIVE FLOW';
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--accent-purple);
+  background: rgba(196, 181, 253, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.mermaid-box:hover {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 40px rgba(196, 181, 253, 0.2);
+}
+
+.mermaid { display: flex; justify-content: center; }
+
+/* ===== HIGHLIGHT BOXES ===== */
+.callout {
+  padding: 20px 25px;
+  border-radius: 14px;
+  margin: 20px 0;
+  border-left: 5px solid;
+  position: relative;
+  background: rgba(26, 31, 58, 0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.callout:hover {
+  transform: translateX(5px);
+  box-shadow: -8px 8px 25px rgba(0,0,0,0.3);
+}
+
+.callout.tip { border-color: var(--accent-purple); background: linear-gradient(90deg, rgba(196,181,253,0.15), transparent); }
+.callout.warn { border-color: var(--accent-orange); background: linear-gradient(90deg, rgba(253,186,116,0.15), transparent); }
+.callout.info { border-color: var(--accent-blue); background: linear-gradient(90deg, rgba(125,211,252,0.15), transparent); }
+.callout.success { border-color: var(--accent-green); background: linear-gradient(90deg, rgba(94,234,212,0.15), transparent); }
+.callout.critical { border-color: var(--accent-red); background: linear-gradient(90deg, rgba(255,107,138,0.15), transparent); }
+
+.callout-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== THINKER CARDS GRID ===== */
+.thinker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.thinker {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-mid));
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thinker::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent, var(--accent-purple), transparent 30%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  animation: spin 4s linear infinite;
+}
+
+.thinker:hover { transform: translateY(-12px) scale(1.03); }
+.thinker:hover::before { opacity: 0.2; }
+
+.thinker-inner {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.thinker .avatar {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: inline-block;
+  transition: transform 0.4s;
+}
+
+.thinker:hover .avatar { transform: scale(1.3) rotate(15deg); }
+
+.thinker .name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+  margin-bottom: 5px;
+}
+
+.thinker .era {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.thinker .quote {
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  border-left: 3px solid var(--accent-purple);
+  padding-left: 12px;
+}
+
+/* ===== TOC / FLOATING NAV ===== */
+.toc {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc a {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.toc a:hover {
+  background: var(--accent-purple);
+  transform: scale(1.5);
+}
+
+.toc a::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border: 1px solid var(--accent-purple);
+}
+
+.toc a:hover::before { opacity: 1; }
+
+@media (max-width: 768px) { .toc { display: none; } }
+
+/* ===== KEY CONCEPT BOX ===== */
+.key-concept {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(56, 189, 248, 0.1));
+  border: 2px dashed var(--accent-purple);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+  position: relative;
+}
+
+.key-concept::before {
+  content: '🔑';
+  position: absolute;
+  top: -15px; left: 20px;
+  background: var(--bg-deep);
+  padding: 0 10px;
+  font-size: 1.3rem;
+}
+
+.key-concept .term {
+  color: var(--accent-yellow);
+  font-weight: 800;
+}
+
+/* ===== TWO COLUMN COMPARE ===== */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+@media (max-width: 700px) { .compare { grid-template-columns: 1fr; } }
+
+.compare-col {
+  padding: 22px;
+  border-radius: 16px;
+  transition: all 0.4s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.compare-col.pro {
+  background: linear-gradient(135deg, rgba(94,234,212,0.1), rgba(94,234,212,0.02));
+  border-color: rgba(94,234,212,0.3);
+}
+
+.compare-col.con {
+  background: linear-gradient(135deg, rgba(255,107,138,0.1), rgba(255,107,138,0.02));
+  border-color: rgba(255,107,138,0.3);
+}
+
+.compare-col:hover { transform: scale(1.02); }
+
+.compare-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.compare-col.pro h4 { color: var(--accent-green); }
+.compare-col.con h4 { color: var(--accent-red); }
+
+/* ===== MNEMONIC BOX ===== */
+.mnemonic {
+  background: linear-gradient(135deg, #2a1a4d, #1a0d2e);
+  border: 1px solid var(--accent-pink);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 18px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mnemonic::before {
+  content: '🧠';
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  font-size: 4rem;
+  opacity: 0.15;
+}
+
+.mnemonic .formula {
+  font-family: 'Courier New', monospace;
+  background: rgba(0,0,0,0.3);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  color: var(--accent-yellow);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===== QUIZ BOX ===== */
+.quiz {
+  background: linear-gradient(135deg, #1a3a2a, #0d2418);
+  border-left: 5px solid var(--accent-green);
+  padding: 20px 25px;
+  border-radius: 14px;
+  margin: 20px 0;
+}
+
+.quiz .q { font-weight: 700; color: var(--accent-blue); margin-bottom: 10px; }
+.quiz .opts { padding-left: 20px; color: var(--text-secondary); margin: 8px 0; }
+.quiz .a { color: var(--accent-green); font-weight: 700; margin-top: 10px; }
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 80px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4));
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.footer p { color: var(--text-muted); margin: 8px 0; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { 
+  background: var(--gradient-1); 
+  border-radius: 10px;
+  border: 2px solid var(--bg-deep);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gradient-2); }
+
+/* ===== UTILITIES ===== */
+.emoji-lg { font-size: 1.5rem; }
+.text-gold { color: var(--accent-yellow); font-weight: 700; }
+.text-pink { color: var(--accent-pink); font-weight: 700; }
+.text-blue { color: var(--accent-blue); font-weight: 700; }
+.text-green { color: var(--accent-green); font-weight: 700; }
+.text-purple { color: var(--accent-purple); font-weight: 700; }
+.text-orange { color: var(--accent-orange); font-weight: 700; }
+
+p { margin: 12px 0; color: var(--text-secondary); }
+
+/* Pillar Cards for Scope */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 25px 0;
+}
+
+.pillar {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-mid));
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--gradient-1);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+
+.pillar:hover { transform: translateY(-10px) rotate(2deg); }
+.pillar:hover::before { opacity: 0.15; }
+
+.pillar > * { position: relative; z-index: 1; }
+
+.pillar .p-icon { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+.pillar .p-title { font-weight: 700; color: var(--accent-yellow); margin-bottom: 5px; }
+.pillar .p-desc { font-size: 0.85rem; color: var(--text-muted); }
+
+</style>
+</head>
+<body>
+
+<!-- Floating Particles -->
+<div class="particles">
+  <div class="particle" style="left:5%; animation-delay:0s;"></div>
+  <div class="particle" style="left:15%; animation-delay:3s;"></div>
+  <div class="particle" style="left:25%; animation-delay:6s;"></div>
+  <div class="particle" style="left:40%; animation-delay:2s;"></div>
+  <div class="particle" style="left:55%; animation-delay:7s;"></div>
+  <div class="particle" style="left:70%; animation-delay:4s;"></div>
+  <div class="particle" style="left:85%; animation-delay:1s;"></div>
+  <div class="particle" style="left:95%; animation-delay:5s;"></div>
+</div>
+
+<!-- Floating TOC -->
+<nav class="toc">
+  <a href="#hero" data-label="🏠 Top"></a>
+  <a href="#definition" data-label="📜 DEFINATION"></a>
+  <a href="#nature" data-label="⚖️ NATURE"></a>
+  <a href="#scope" data-label="🗺️ SCOPE"></a>
+  <a href="#approaches" data-label="🧭 Approaches"></a>
+  <a href="#interdisciplinary" data-label="🔗 Links"></a>
+  <a href="#importance" data-label="🌟 Importance"></a>
+  <a href="#summary" data-label="📋 Summary"></a>
+  <a href="#tips" data-label="⚡ Exam Tips"></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-badge"><h2>🗺</h2></div>
+  <h1>
+    <span class="icon">📜</span> POLITICAL ‎ SCIENCE
+  </h1>
+
+  <br><p><h2 class="section-title"><span class="highlight">AUTEUR: PIYUSH PARTE</h2></b></span></h2>
+
+
+  <div class="hero-stats">
+    <div class="stat"><div class="num">📜 3</div><div class="label">Core Pillars</div></div>
+    <div class="stat"><div class="num">🧠 20+</div><div class="label">Key Thinkers</div></div>
+    <div class="stat"><div class="num">🗺️ 7</div><div class="label">Scope Areas</div></div>
+    <div class="stat"><div class="num">📚</div><div class="label">Exam Tips</div></div>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- COLOR LEGEND -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-number">🎨</div>
+    <h2 class="section-title">Color <span class="highlight">Coding Legend</span></h2>
+  </div>
+  <p>This color system runs through the entire notes — train your eyes to spot patterns quickly during revision!</p>
+  <div class="legend-grid">
+    <div class="legend-item lg-red"><span class="emoji">📜</span><div class="name">RED</div><div class="use">Thinkers, Definitions, Key Terms</div></div>
+    <div class="legend-item lg-green"><span class="emoji">⚖️</span><div class="name">GREEN</div><div class="use">Nature – Science vs Art</div></div>
+    <div class="legend-item lg-blue"><span class="emoji">🗺️</span><div class="name">BLUE</div><div class="use">Scope & Approaches</div></div>
+    <div class="legend-item lg-yellow"><span class="emoji">💡</span><div class="name">YELLOW</div><div class="use">Modern / Post-modern Views</div></div>
+    <div class="legend-item lg-purple"><span class="emoji">🎯</span><div class="name">PURPLE</div><div class="use">Exam Tips, MP Varg 1 Focus</div></div>
+    <div class="legend-item lg-orange"><span class="emoji">🔗</span><div class="name">ORANGE</div><div class="use">Interdisciplinary Links</div></div>
+    <div class="legend-item lg-black"><span class="emoji">⚔️</span><div class="name">BLACK</div><div class="use">Critical Debates</div></div>
+  </div>
+</section>
+
+<!-- INTRO FLOWCHART -->
+<div class="mermaid-box">
+<div class="mermaid">
+flowchart LR
+    A[🏛️ POLITICAL SCIENCE] --> B[📜 DEFINITION]
+    A --> C[⚖️ NATURE]
+    A --> D[🗺️ SCOPE]
+    B --> B1[Traditional]
+    B --> B2[Modern]
+    C --> C1[Science vs Art]
+    C --> C2[Behavioralism]
+    D --> D1[Traditional Scope]
+    D --> D2[Modern Scope]
+    D --> D3[Approaches]
+</div>
+</div>
+
+<!-- ============ SECTION 1: DEFINITION ============ -->
+<section class="section" id="definition">
+  <div class="section-header">
+    <div class="section-number">1️⃣</div>
+    <h2 class="section-title">📜 Definition of <span class="highlight">Political Science</span></h2>
+  </div>
+
+  <h3 class="sub-head">🔴 Etymology & Core Idea</h3>
+  <div class="card red">
+    <p>🌐 <strong class="text-gold">Polis</strong> (Greek: <em>city-state</em>) + <strong class="text-gold">Scire</strong> (Latin: <em>to know</em>) = <span class="text-pink">"Knowledge of the State"</span></p>
+    <p>👑 <strong class="text-gold">Aristotle</strong> called it the <strong class="text-pink">"Master Science"</strong> because every other science requires a stable political community to flourish. He famously declared man a <em class="text-purple">"Zoon Politikon"</em> — a political animal — meaning humans only fulfill their nature inside the polis.</p>
+    <p>💎 The discipline historically grew out of <strong>moral philosophy</strong> (Plato, Aristotle) and later separated as an independent science in the late 19th century (founding of the American Political Science Association, 1903).</p>
+  </div>
+
+  <h3 class="sub-head">📜 Traditional Definitions (State-Centric)</h3>
+  <p>Traditional thinkers viewed Political Science as <strong>essentially the study of the State</strong> — its origin, evolution, structure, and ends. The state was the alpha and omega of all political enquiry.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>🧠 Thinker</th><th>📖 Definition</th><th>💡 Key Insight</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Aristotle</strong> (384-322 BCE)</td><td>"The study of the State (Polis) aimed at the highest human good — happiness (Eudaimonia)."</td><td>State is a natural institution; man is a political animal.</td></tr>
+        <tr><td><strong>Paul Janet</strong> 🇫🇷</td><td>"That part of social science which treats of the foundations of the State and the principles of government."</td><td>Foundations & Principles.</td></tr>
+        <tr><td><strong>John W. Burgess</strong> 🇺🇸</td><td>"The study of the State in the past, present, and future — its organization, powers, and purposes."</td><td>Historical + Structural lens.</td></tr>
+        <tr><td><strong>James W. Garner</strong> ⭐</td><td>"Political Science begins and ends with the State."</td><td>The PUREST State-centric definition (most quoted in exams).</td></tr>
+        <tr><td><strong>Stephen Leacock</strong> 🇨🇦</td><td>"The study of government and the State — how men rule and are ruled."</td><td>Practical & dynamic flavour.</td></tr>
+        <tr><td><strong>Bluntschli</strong> 🇩🇪</td><td>"The science concerned with the State, which endeavours to understand it in its essential nature, forms, and development."</td><td>Organic / evolutionary view of the State.</td></tr>
+        <tr><td><strong>R.G. Gettell</strong></td><td>"Political Science is the study of the State in its past, present and future, of political organisation, of political functions and of political theories."</td><td>Holistic state focus.</td></tr>
+        <tr><td><strong>Sir Frederick Pollock</strong></td><td>Divided it into <em>theoretical</em> (state & sovereignty) and <em>practical</em> (govt & legislation) politics.</td><td>Theory + Practice split.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub-head">💡 Modern Definitions (Power & Decision-Centric)</h3>
+  <p>Post-1945, scholars began arguing the State was too narrow a unit. They redefined Political Science around <strong>power, authority, decision-making and the allocation of values</strong> — making it more empirical and behavioural.</p>
+
+  <div class="thinker-grid">
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🎁</span>
+      <div class="name">Harold D. Lasswell (1936)</div>
+      <div class="era">American Political Scientist</div>
+      <div class="quote">"Politics is — Who gets what, when, how." Politics = struggle over scarce <strong>values</strong> (wealth, status, safety).</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">📦</span>
+      <div class="name">David Easton (1953)</div>
+      <div class="era">Father of Systems Theory</div>
+      <div class="quote">"The authoritative allocation of values for a society." Government distributes scarce resources with legitimacy.</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚡</span>
+      <div class="name">Robert A. Dahl</div>
+      <div class="era">Pluralist Democrat</div>
+      <div class="quote">"Any persistent pattern of human relationships involving power, rule, or authority."</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">💪</span>
+      <div class="name">Max Weber</div>
+      <div class="era">German Sociologist</div>
+      <div class="quote">"A state is a human community that successfully claims the monopoly of the legitimate use of physical force within a territory."</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🌐</span>
+      <div class="name">Vernon Van Dyke</div>
+      <div class="era">Modernist</div>
+      <div class="quote">"The study of the shaping and sharing of power." Shaping = influence, sharing = distribution.</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚔️</span>
+      <div class="name">Hans J. Morgenthau</div>
+      <div class="era">Father of Classical Realism (IR)</div>
+      <div class="quote">"Politics is a struggle for power." National interest defined in terms of power.</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🏛️</span>
+      <div class="name">Aristotle</div>
+      <div class="era">384-322 BCE | Lyceum</div>
+      <div class="quote">"Political Science is the Master Science — the supreme art which orders the use of all other arts for the good of the polis."</div>
+    </div></div>
+
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🎭</span>
+      <div class="name">Hannah Arendt</div>
+      <div class="era">20th Century Philosopher</div>
+      <div class="quote">"Politics is the public realm of action, where free citizens debate and decide common matters."</div>
+    </div></div>
+  </div>
+
+  <h3 class="sub-head">🔄 Evolution of the Definition</h3>
+  <div class="mermaid-box">
+  <div class="mermaid">
+graph TD
+    A[🏛️ Ancient: Aristotle<br>Master Science / Polis] --> B[📜 19th C: Garner & Burgess<br>State-Only Definition]
+    B --> C[💡 Mid-20th: Lasswell & Easton<br>Values & Allocation]
+    C --> D[⚡ Late-20th: Dahl & Weber<br>Power + Legitimacy]
+    D --> E[🌟 21st C: Integrated<br>State + Power + Decisions + Behavior + Global]
+    style A fill:#7f1d3a,stroke:#ffd0dc,color:#fff
+    style B fill:#1e3a8a,stroke:#c5dfff,color:#fff
+    style C fill:#78481a,stroke:#ffe9b8,color:#fff
+    style D fill:#0d4f47,stroke:#b8f5e9,color:#fff
+    style E fill:#4c1d95,stroke:#dccdff,color:#fff
+  </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">🎯 INTEGRATED DEFINITION (Copy this in Exam!)</div>
+    <p><strong>Political Science</strong> is the systematic study of the <span class="text-gold">State</span>, <span class="text-gold">Government</span>, <span class="text-gold">Power</span>, <span class="text-gold">Authority</span>, and <span class="text-gold">Decision-making processes</span> that allocate scarce values in society — using <em>scientific methods</em> combined with <em>philosophical insight</em>.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: NATURE ============ -->
+<section class="section" id="nature">
+  <div class="section-header">
+    <div class="section-number">2️⃣</div>
+    <h2 class="section-title">⚖️ Nature of <span class="highlight">Political Science</span></h2>
+  </div>
+
+  <p>The biggest <strong class="text-pink">academic battle</strong> in this field has been: <em>"Is Political Science truly a SCIENCE, or merely an ART?"</em> Let's dissect both sides scientifically. 🔬</p>
+
+  <h3 class="sub-head">🟢 The Great Debate Visualised</h3>
+  <div class="mermaid-box">
+  <div class="mermaid">
+graph LR
+    subgraph FOR[🔬 FOR SCIENCE]
+        A1[Systematic study] --> A2[Cause-effect patterns]
+        A2 --> A3[Observation & data]
+        A3 --> A4[Prediction possible<br>e.g. voting behavior]
+    end
+    subgraph AGAINST[🎨 AGAINST SCIENCE]
+        B1[Human will is free] --> B2[No laboratory]
+        B2 --> B3[No universal laws<br>like gravity]
+        B3 --> B4[Values cannot<br>be measured]
+    end
+    A4 -.Verdict.-> C[⚖️ FINAL: Science OF Politics<br>Not an EXACT science]
+    B4 -.Verdict.-> C
+    style FOR fill:#0d4f47,color:#fff
+    style AGAINST fill:#7f1d3a,color:#fff
+    style C fill:#4c1d95,color:#fff
+  </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-col pro">
+      <h4>🔬 FOR — It IS a Science</h4>
+      <ul class="fancy">
+        <li><strong>Empirical Observation</strong> — Elections, parliaments, wars are observable. (<em>Bryce</em>)</li>
+        <li><strong>Formulation of Laws</strong> — Michels' <em>Iron Law of Oligarchy</em>, Duverger's Law (electoral), Parkinson's Law, Acton's Law.</li>
+        <li><strong>Comparative Method</strong> — Compare democracies vs dictatorships scientifically. (<em>Almond & Powell</em>)</li>
+        <li><strong>Prediction</strong> — Opinion polls & psephology forecast election results.</li>
+        <li><strong>Quantitative Tools</strong> — Statistics, game theory, median voter theorem (<em>Anthony Downs</em>).</li>
+        <li><strong>Systematic Body of Knowledge</strong> — Has cumulative theories and verifiable hypotheses.</li>
+      </ul>
+    </div>
+    <div class="compare-col con">
+      <h4>🎨 AGAINST — It's NOT a Science</h4>
+      <ul class="fancy">
+        <li><strong>Human Behaviour is Unpredictable</strong> — Revolutions are spontaneous; minds change.</li>
+        <li><strong>No Laboratory</strong> — Cannot isolate variables like physics or chemistry.</li>
+        <li><strong>Value-Laden</strong> — Researchers' ideology colors conclusions.</li>
+        <li><strong>No Universal Laws</strong> — "Sovereignty" itself is fluid in a globalised world.</li>
+        <li><strong>Comte, Maitland, Buckle, Mosca</strong> argued politics lacks exactness, measurement and certainty.</li>
+        <li><strong>Ethical & Normative</strong> — Concerns "ought" not just "is".</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout success">
+    <div class="callout-title">✅ Modern Consensus (Resolution)</div>
+    <p><strong class="text-blue">David Easton</strong>: Political Science is a <em>"Science of Politics"</em> — systematic, empirical, methodical — but a <strong>human science (Geisteswissenschaft)</strong>, not a natural one.</p>
+    <p><strong class="text-blue">Robert Dahl</strong>: "It is a science in the sense that it is a systematic, empirical, and verifiable study."</p>
+    <p>👉 So the final answer: <strong class="text-gold">Political Science is a SOCIAL SCIENCE</strong> — scientific in <em>method</em>, artistic in <em>subject matter</em>.</p>
+  </div>
+
+  <h3 class="sub-head">⚙️ The Behavioural Revolution (1950s)</h3>
+  <div class="card yellow">
+    <p>🌪️ Born from frustration with the dry <strong>legal-formal approach</strong> (which only studied constitutions). After WWII, American scholars demanded the study of <strong>actual human political behaviour</strong> — how voters vote, how legislators legislate, how leaders lead.</p>
+    <p>📚 <strong class="text-gold">Founding text:</strong> David Easton's <em>"The Political System"</em> (1953). Key contributors: Charles Merriam (the "Chicago School" pioneer), Lasswell, Almond, Dahl, Kaplan.</p>
+  </div>
+
+  <h4 class="mini-head">🎯 Easton's 8 Characteristics of Behavioralism (the "Intellectual Foundation Stones")</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>🔑 Pillar</th><th>📖 Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>Regularities</strong></td><td>Discover uniformities/patterns in political behaviour that allow generalisation.</td></tr>
+        <tr><td>2</td><td><strong>Verification</strong></td><td>Validity of theories must be testable by empirical evidence.</td></tr>
+        <tr><td>3</td><td><strong>Techniques</strong></td><td>Use sophisticated tools — surveys, sampling, interviewing, content analysis.</td></tr>
+        <tr><td>4</td><td><strong>Quantification</strong></td><td>Measure political phenomena (power index, voting %, GINI of representation).</td></tr>
+        <tr><td>5</td><td><strong>Values</strong></td><td>Maintain ethical neutrality — separate facts from values (value-free research).</td></tr>
+        <tr><td>6</td><td><strong>Systematization</strong></td><td>Connect theory and research systematically — no isolated facts.</td></tr>
+        <tr><td>7</td><td><strong>Pure Science</strong></td><td>Knowledge for its own sake first; application later.</td></tr>
+        <tr><td>8</td><td><strong>Integration</strong></td><td>Merge with sociology, psychology, economics, anthropology.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub-head">🔄 Post-Behavioralism (1969 onwards)</h3>
+  <div class="card orange">
+    <p>Behavioralism became <strong>over-quantified, narrow, and detached</strong> from real-world crises — Vietnam War, racial unrest, poverty. David Easton himself launched the corrective movement with his <strong>1969 APSA Presidential Address</strong>.</p>
+    <p>🔥 <strong class="text-orange">Slogan:</strong> <em>"Relevance over Rigour"</em> — politics must speak to urgent human issues.</p>
+    <p>📜 <strong>Easton's "Credo of Relevance" — 7 Tenets:</strong></p>
+    <ol class="fancy">
+      <li><strong>Substance over technique</strong> — meaningful research over precise methods.</li>
+      <li><strong>Social change</strong> over preservation of status quo.</li>
+      <li><strong>Contact with brute realities</strong> of politics.</li>
+      <li><strong>Values</strong> are essential — cannot be evaded.</li>
+      <li><strong>Protection of humane values</strong> is duty of intellectuals.</li>
+      <li><strong>Action-oriented research</strong>.</li>
+      <li><strong>Politicization of professions</strong> — scholars must engage with society.</li>
+    </ol>
+  </div>
+
+  <h3 class="sub-head">⚖️ Final Verdict — Balanced Table</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Aspect</th><th>Type</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Methodology</strong></td><td>🔬 Scientific</td><td>Systematic, empirical, verifiable</td></tr>
+        <tr><td><strong>Subject Matter</strong></td><td>🎨 Artistic</td><td>Deals with human behaviour, values, judgement</td></tr>
+        <tr><td><strong>Goal</strong></td><td>🤝 Both</td><td>Describe (science) + Prescribe (art)</td></tr>
+        <tr><td><strong>Status</strong></td><td>🌐 Social Science</td><td>Distinct from natural sciences, but scientific nonetheless</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">🎯 Exam Tip</div>
+    <p>If asked <em>"Is Political Science a science?"</em> — Answer: It is a <strong class="text-gold">social science</strong> — it uses scientific methods to study political behaviour but cannot claim the exactness of physics. <strong>Accept both science and art aspects</strong>; that's the safest, fullest answer.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 3: SCOPE ============ -->
+<section class="section" id="scope">
+  <div class="section-header">
+    <div class="section-number">3️⃣</div>
+    <h2 class="section-title">🗺️ Scope of <span class="highlight">Political Science</span></h2>
+  </div>
+
+  <p>The <strong>scope</strong> answers — <em>"What all does Political Science study?"</em> It has expanded massively from the State-only focus of the 19th century to the multi-dimensional discipline of today.</p>
+
+  <h3 class="sub-head">🌟 UNESCO Classification (1948, Paris) — Landmark Moment</h3>
+  <div class="card blue">
+    <p>The UNESCO conference of <strong>1948 in Paris</strong> formally recognised Political Science as an autonomous discipline and divided its scope into 4 broad areas:</p>
+    <ol class="fancy">
+      <li><strong>Political Theory</strong> — concepts, ideas, history of political thought.</li>
+      <li><strong>Political Institutions</strong> — constitution, government, comparative institutions.</li>
+      <li><strong>Parties, Groups & Public Opinion</strong> — political dynamics.</li>
+      <li><strong>International Relations</strong> — IR, IL, international organisations.</li>
+    </ol>
+  </div>
+
+  <h3 class="sub-head">📊 Master Scope — 7 Pillars (Modern View)</h3>
+  <div class="pillars">
+    <div class="pillar"><span class="p-icon">📜</span><div class="p-title">Political Theory</div><div class="p-desc">Normative + Empirical + Analytical</div></div>
+    <div class="pillar"><span class="p-icon">🏛️</span><div class="p-title">Institutions</div><div class="p-desc">State, Govt, Constitution</div></div>
+    <div class="pillar"><span class="p-icon">⚡</span><div class="p-title">Dynamics</div><div class="p-desc">Parties, Groups, Elections</div></div>
+    <div class="pillar"><span class="p-icon">🌍</span><div class="p-title">International Relations</div><div class="p-desc">Diplomacy, Wars, Global Order</div></div>
+    <div class="pillar"><span class="p-icon">⚖️</span><div class="p-title">Public Admin</div><div class="p-desc">Bureaucracy & Policy</div></div>
+    <div class="pillar"><span class="p-icon">📊</span><div class="p-title">Comparative Politics</div><div class="p-desc">Cross-system analysis</div></div>
+    <div class="pillar"><span class="p-icon">🧠</span><div class="p-title">Methodology</div><div class="p-desc">Quant + Qual + Digital</div></div>
+  </div>
+
+  <div class="mermaid-box">
+  <div class="mermaid">
+mindmap
+  root((🏛️ SCOPE OF POLITICAL SCIENCE))
+    📜 POLITICAL THEORY
+      Normative
+        Justice, Liberty, Equality
+        Plato to Rawls
+      Empirical
+        Systems, Power, Game
+        Easton, Almond, Downs
+      Analytical
+        Berlin, Arendt
+    🏛️ INSTITUTIONS
+      State & Sovereignty
+      Legislature
+      Executive
+      Judiciary
+      Constitution
+    ⚡ DYNAMICS
+      Parties
+      Pressure Groups
+      Public Opinion
+      Elections
+      Communication
+    🌍 IR
+      Foreign Policy
+      UN / IGOs
+      Global Governance
+      Conflict & Peace
+    ⚖️ PUBLIC ADMIN
+      Bureaucracy
+      Policy
+      Development
+    📊 COMPARATIVE
+      Cross-system study
+      Mills Methods
+    🧠 METHODOLOGY
+      Quantitative
+      Qualitative
+      Game Theory
+      Digital / Big Data
+  </div>
+  </div>
+
+  <!-- 3.1 Political Theory -->
+  <h3 class="sub-head">📜 1. Political Theory — The Backbone</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Branch</th><th>Focus</th><th>Key Concepts</th><th>Thinkers</th></tr></thead>
+      <tbody>
+        <tr><td><strong class="text-gold">Normative</strong></td><td>What <em>ought</em> to be (values/data)</td><td>Justice, Equality, Liberty, Rights, Democracy</td><td>Plato, Aristotle, Rousseau, Marx, Rawls</td></tr>
+        <tr><td><strong class="text-gold">Empirical</strong></td><td>What <em>is</em> (facts/data)</td><td>Power, Authority, Legitimacy, Decisions</td><td>Lasswell, Easton, Dahl, Weber</td></tr>
+        <tr><td><strong class="text-gold">Analytical</strong></td><td>Clarity of concepts, what words mean (logic/concepts)</td><td>"Political", "Freedom", "Two Concepts of Liberty"</td><td>Isaiah Berlin, Hannah Arendt</td></tr>
+        <tr><td><strong class="text-gold">Critical</strong></td><td>Emancipatory critique, how power oppresses (freedom/change)</td><td>Power-knowledge, hegemony, ideology</td><td>Frankfurt School, Foucault, Gramsci</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="key-concept">
+    <p><span class="term">🔑 POWER</span> — A's ability to make B do what B would not otherwise do. (<em>Dahl</em>)</p>
+    <p><span class="term">🔑 AUTHORITY</span> — Legitimate power, accepted by subjects. (<em>Weber</em>)</p>
+    <p><span class="term">🔑 LEGITIMACY</span> — Belief that rule is rightful. Weber's 3 types:</p>
+    <ul class="fancy" style="margin-left:15px;">
+      <li>👴 <strong>Traditional</strong> — custom, heredity (monarchy)</li>
+      <li>⭐ <strong>Charismatic</strong> — personality magnetism (Gandhi, Napoleon)</li>
+      <li>📜 <strong>Legal-Rational</strong> — rules, constitution (modern democracies)</li>
+    </ul>
+    <p><span class="term">🔑 SOVEREIGNTY</span> — Supreme power of the State. <em>Internal</em> (over people) + <em>External</em> (independence). Thinkers: <strong>Jean Bodin</strong> (originator, 1576), <strong>John Austin</strong> (Monistic), <strong>Harold Laski</strong> (Pluralist critique).</p>
+  </div>
+
+  <!-- 3.2 State & Govt -->
+  <h3 class="sub-head">🏛️ 2. Study of State & Government</h3>
+  <div class="card purple">
+    <p>🧱 <strong class="text-gold">Four Elements of State</strong> (P-GST mnemonic):</p>
+    <ol class="fancy">
+      <li><strong>P</strong>opulation — the people</li>
+      <li><strong>T</strong>erritory — defined geographical area</li>
+      <li><strong>G</strong>overnment — agency of authority</li>
+      <li><strong>S</strong>overeignty — supreme power, internal + external</li>
+    </ol>
+  </div>
+
+  <h4 class="mini-head">⚡ Theories of Origin of State</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Theory</th><th>Idea</th><th>Champions</th></tr></thead>
+      <tbody>
+        <tr><td>🙏 <strong>Divine Origin</strong></td><td>God created the State; king is God's agent.</td><td>Manu, James I, Bossuet</td></tr>
+        <tr><td>⚔️ <strong>Force Theory</strong></td><td>"War begat the king" — State born from conquest.</td><td>Treitschke, Bernhardi, Nietzsche</td></tr>
+        <tr><td>👨‍👩‍👧 <strong>Patriarchal/Matriarchal</strong></td><td>Expansion of family → tribe → state.</td><td>Sir Henry Maine, McLennan</td></tr>
+        <tr><td>📜 <strong>Social Contract</strong> ⭐</td><td>State formed by an agreement among individuals to escape state of nature.</td><td><strong>Hobbes</strong> (Leviathan), <strong>Locke</strong> (Limited govt), <strong>Rousseau</strong> (General Will)</td></tr>
+        <tr><td>🧬 <strong>Historical/Evolutionary</strong></td><td>State evolved through kinship, religion, war, property, political consciousness.</td><td>R.M. MacIver, Garner, Burgess</td></tr>
+        <tr><td>💰 <strong>Marxist</strong></td><td>State is an instrument of class oppression — emerged with private property.</td><td>Marx, Engels, Lenin</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4 class="mini-head">⚙️ Functions of State (Spectrum)</h4>
+  <ul class="fancy">
+    <li>🌙 <strong>Minimal / Nightwatchman State</strong> — Only defence, law & order (Adam Smith, Spencer).</li>
+    <li>💚 <strong>Welfare State</strong> — Education, health, social security (Keynesian model).</li>
+    <li>⛓️ <strong>Totalitarian State</strong> — Controls all aspects of life (Nazi Germany, USSR).</li>
+    <li>🌱 <strong>Developmental State</strong> — Steers economy for growth (Japan, Korea, India).</li>
+  </ul>
+
+  <h4 class="mini-head">🏛️ Organs of Government (Montesquieu's Separation of Powers)</h4>
+  <div class="thinker-grid">
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">📜</span>
+      <div class="name">Legislature</div>
+      <div class="quote">Makes laws. Parliament / Vidhan Sabha. Bicameral or Unicameral.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚙️</span>
+      <div class="name">Executive</div>
+      <div class="quote">Implements laws. President, PM, Cabinet, Civil Services.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚖️</span>
+      <div class="name">Judiciary</div>
+      <div class="quote">Interprets laws & guards Constitution. Independent courts.</div>
+    </div></div>
+  </div>
+
+  <!-- 3.3 Dynamics -->
+  <h3 class="sub-head">⚡ 3. Political Dynamics (The Living Politics)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Sub-topic</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td><strong>🎗️ Political Parties</strong></td><td>Functions — interest aggregation, election contest, recruitment, political socialization. Types — cadre vs mass; one-party (China), two-party (USA, UK), multi-party (India).</td></tr>
+        <tr><td><strong>🤝 Pressure / Interest Groups</strong></td><td>Seek to influence policy <em>without</em> contesting elections. Eg: FICCI, CII, trade unions, RSS, farmers' unions. (Almond's classification: institutional, associational, non-associational, anomic.)</td></tr>
+        <tr><td><strong>🗣️ Public Opinion</strong></td><td>Aggregate of attitudes on public issues. Measured by polls, social media analytics, focus groups.</td></tr>
+        <tr><td><strong>🗳️ Elections</strong></td><td>Types: Direct/Indirect; FPTP (UK, India), Proportional Representation (Germany, Israel), Mixed (Germany). Role of Election Commission.</td></tr>
+        <tr><td><strong>👶 Political Socialization</strong></td><td>How people acquire political values. Agents: family 👨‍👩‍👧, school 🏫, religion ⛪, peers 👬, media 📺.</td></tr>
+        <tr><td><strong>✊ Political Participation</strong></td><td>Voting, protests, campaigns, party membership, NGOs, online activism.</td></tr>
+        <tr><td><strong>🎭 Political Culture</strong></td><td>Almond & Verba's <em>Civic Culture</em> (1963): Parochial, Subject, Participant.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3.4 IR -->
+  <h3 class="sub-head">🌍 4. International Relations (IR)</h3>
+  <div class="thinker-grid">
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚔️</span>
+      <div class="name">Realism</div>
+      <div class="era">Morgenthau, Waltz</div>
+      <div class="quote">Anarchic world; power politics; national interest is supreme.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🕊️</span>
+      <div class="name">Liberalism / Idealism</div>
+      <div class="era">Wilson, Keohane</div>
+      <div class="quote">Cooperation through international law, democracy, trade & IGOs.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">⚒️</span>
+      <div class="name">Marxism</div>
+      <div class="era">Lenin, Wallerstein</div>
+      <div class="quote">Global class struggle, imperialism, world-systems theory.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">💭</span>
+      <div class="name">Constructivism</div>
+      <div class="era">Alexander Wendt</div>
+      <div class="quote">"Anarchy is what states make of it" — ideas & identities shape politics.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">♀️</span>
+      <div class="name">Feminist IR</div>
+      <div class="era">Cynthia Enloe, J. Tickner</div>
+      <div class="quote">Gender lens on war, security & diplomacy.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🌐</span>
+      <div class="name">Post-colonial</div>
+      <div class="era">Said, Spivak</div>
+      <div class="quote">Critique of western dominance and Orientalism.</div>
+    </div></div>
+  </div>
+  <p>🌐 <strong>Key Actors:</strong> States, IGOs (UN, WTO, EU, AU, ASEAN, SAARC), NGOs (Amnesty, Greenpeace), MNCs, terrorist groups, individuals.</p>
+  <p>🔥 <strong>Contemporary Global Issues:</strong> war & peace, terrorism, climate diplomacy, human rights, trade wars, cybersecurity, pandemics, AI governance, migration.</p>
+
+  <!-- 3.5 Public Admin -->
+  <h3 class="sub-head">⚖️ 5. Public Administration</h3>
+  <div class="card green">
+    <p>🏢 <strong>Definition:</strong> The implementation of government policies — "Public Administration is detailed and systematic application of law." (<em>Woodrow Wilson</em>, 1887, <em>"The Study of Administration"</em>).</p>
+    <p>🧠 <strong>Wilson's Politics-Administration Dichotomy:</strong> Politics decides; administration implements. (Now challenged — they overlap.)</p>
+    <p>📜 <strong>Max Weber's Ideal Bureaucracy:</strong> Hierarchy, Division of labour, Rules, Impersonality, Merit-based recruitment, Career service, Documentation.</p>
+    <p>🚀 <strong>New Public Management (NPM)</strong> — 1980s: Market-oriented reforms; "Steering not rowing" (Osborne & Gaebler, <em>Reinventing Government</em>).</p>
+    <p>🌱 <strong>Development Administration</strong> — Riggs, Weidner: Administration as engine of nation-building in the Third World.</p>
+    <p>🤝 <strong>New Public Service (NPS)</strong> — Denhardt: Citizens are not customers but partners; democratic ethos.</p>
+  </div>
+
+  <!-- 3.6 Comparative -->
+  <h3 class="sub-head">📊 6. Comparative Politics</h3>
+  <div class="card blue">
+    <p>📈 <strong>Old vs New:</strong> Traditional "Comparative Government" only studied European constitutions; modern <strong>Comparative Politics</strong> studies <em>all</em> systems — Asian, African, Latin American, micro-states, traditional societies.</p>
+    <p>🔬 <strong>Methods:</strong> Mill's Methods (Most Similar / Most Different Systems Design), Case studies, Statistical analysis, Process tracing.</p>
+    <p>📚 <strong>Landmark works:</strong> Almond & Verba — <em>The Civic Culture</em> (1963); Almond & Powell — <em>Comparative Politics: A Developmental Approach</em>; Lijphart — <em>Patterns of Democracy</em>.</p>
+  </div>
+
+  <!-- 3.7 Methodology -->
+  <h3 class="sub-head">🧠 7. Political Methodology</h3>
+  <div class="compare">
+    <div class="compare-col pro">
+      <h4>📊 Quantitative</h4>
+      <p>Surveys 📋, experiments 🧪, statistical inference 📈 (regression, factor analysis), simulations, large-N studies.</p>
+    </div>
+    <div class="compare-col con" style="background: linear-gradient(135deg, rgba(125,211,252,0.1), rgba(125,211,252,0.02)); border-color: rgba(125,211,252,0.3);">
+      <h4 style="color: var(--accent-blue);">📝 Qualitative</h4>
+      <p>Process tracing 🔍, interviews 🎙️, discourse analysis 💬, ethnography, case studies, archival research.</p>
+    </div>
+  </div>
+  <p>🎲 <strong>Game Theory:</strong> Rational choice models — Prisoner's Dilemma applied to arms races, Chicken Game, Nash equilibrium.</p>
+  <p>💻 <strong>Digital Methods:</strong> Social media analysis (X/Twitter sentiment), big data, NLP, text mining, network analysis of political alliances.</p>
+</section>
+
+<!-- ============ SECTION 4: APPROACHES ============ -->
+<section class="section" id="approaches">
+  <div class="section-header">
+    <div class="section-number">🧭</div>
+    <h2 class="section-title">Approaches to Studying <span class="highlight">Political Science</span></h2>
+  </div>
+
+  <p>An <strong>approach</strong> is the <em>lens</em> through which we examine political phenomena. Each approach has its own assumptions, methods, and goals.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Approach</th><th>Key Features</th><th>Representative Thinkers</th></tr></thead>
+      <tbody>
+        <tr><td>💭 <strong>Philosophical</strong></td><td>Normative, values, ethics, "ought" questions</td><td>Plato, Aristotle, Rousseau, Kant</td></tr>
+        <tr><td>📜 <strong>Historical</strong></td><td>Study political events through historical method</td><td>Tocqueville, Sabine, Sir John Seeley</td></tr>
+        <tr><td>⚖️ <strong>Legal-Institutional</strong></td><td>Constitution, laws, formal structures</td><td>Garner, Burgess, Bluntschli, Dicey</td></tr>
+        <tr><td>👥 <strong>Sociological</strong></td><td>Society-politics interaction; elites & masses</td><td>Weber, Durkheim, Pareto, Mosca</td></tr>
+        <tr><td>🧠 <strong>Psychological</strong></td><td>Personality, attitudes, motivation, propaganda</td><td>Lasswell (psychoanalysis), Wallas, Erikson</td></tr>
+        <tr><td>📊 <strong>Behavioral</strong></td><td>Observed behaviour, quantification, empirical</td><td>Easton, Dahl, Almond, Lasswell</td></tr>
+        <tr><td>🔥 <strong>Post-Behavioral</strong></td><td>"Relevance over rigour"; values back in</td><td>Easton (1969), Christian Bay</td></tr>
+        <tr><td>⚒️ <strong>Marxist</strong></td><td>Class struggle, economic base, dialectics</td><td>Marx, Engels, Lenin, Gramsci, Althusser</td></tr>
+        <tr><td>🔄 <strong>Systems Theory</strong></td><td>Input → Conversion → Output → Feedback loop</td><td>David Easton ⭐</td></tr>
+        <tr><td>🧩 <strong>Structural-Functional</strong></td><td>Structures perform functions; system equilibrium</td><td>Gabriel Almond, Talcott Parsons</td></tr>
+        <tr><td>💰 <strong>Rational Choice</strong></td><td>Individuals as rational utility-maximisers</td><td>Anthony Downs, Buchanan, Olson, Riker</td></tr>
+        <tr><td>♀️ <strong>Feminist</strong></td><td>Gender, patriarchy, "personal is political"</td><td>Carol Pateman, Judith Butler, Wollstonecraft</td></tr>
+        <tr><td>🌍 <strong>Post-modern</strong></td><td>Deconstruction, discourse, power-knowledge</td><td>Foucault, Derrida, Lyotard</td></tr>
+        <tr><td>🌐 <strong>Post-colonial</strong></td><td>Critique of Western dominance, subaltern voices</td><td>Edward Said, Gayatri Spivak, Frantz Fanon</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">🔄 David Easton's Systems Theory (Most Asked!)</div>
+    <p>Political system receives <strong class="text-blue">INPUTS</strong> (demands + supports from society) → undergoes <strong class="text-gold">CONVERSION</strong> inside the "black box" of government → produces <strong class="text-green">OUTPUTS</strong> (policies, laws) → which generate <strong class="text-pink">FEEDBACK</strong> that becomes new inputs. The system constantly adapts to maintain equilibrium.</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 5: INTERDISCIPLINARY ============ -->
+<section class="section" id="interdisciplinary">
+  <div class="section-header">
+    <div class="section-number">🔗</div>
+    <h2 class="section-title">Interdisciplinary <span class="highlight">Links</span></h2>
+  </div>
+
+  <p>No discipline is an island. Political Science <strong>borrows from and lends to</strong> nearly every social science.</p>
+
+  <div class="mermaid-box">
+  <div class="mermaid">
+graph TD
+    PS[🏛️ POLITICAL<br>SCIENCE]
+    PS --> Eco[📈 ECONOMICS<br>Public finance, Political economy]
+    PS --> Soc[👥 SOCIOLOGY<br>Political sociology, Elites]
+    PS --> Psy[🧠 PSYCHOLOGY<br>Voting behaviour, Leadership]
+    PS --> Law[⚖️ LAW<br>Constitution, Human rights]
+    PS --> Hist[📜 HISTORY<br>Political evolution]
+    PS --> Geo[🌍 GEOGRAPHY<br>Geopolitics, Electoral geography]
+    PS --> Phil[💭 PHILOSOPHY<br>Ethics, Political theory]
+    PS --> Anth[🗿 ANTHROPOLOGY<br>Tribal politics, Culture]
+    PS --> Eth[⚔️ ETHICS<br>Moral basis of politics]
+    style PS fill:#4c1d95,color:#fff,stroke:#dccdff,stroke-width:3px
+  </div>
+  </div>
+
+  <div class="thinker-grid">
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">📈</span>
+      <div class="name">Political Economy</div>
+      <div class="quote">Politics + Economics → Adam Smith, Marx, Keynes, Amartya Sen.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🌍</span>
+      <div class="name">Geopolitics</div>
+      <div class="quote">Politics + Geography → Mackinder's Heartland, Spykman's Rimland.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">👥</span>
+      <div class="name">Political Sociology</div>
+      <div class="quote">Politics + Sociology → Weber, S.M. Lipset, Bottomore.</div>
+    </div></div>
+    <div class="thinker"><div class="thinker-inner">
+      <span class="avatar">🧠</span>
+      <div class="name">Political Psychology</div>
+      <div class="quote">Politics + Psychology → Lasswell, Adorno (Authoritarian Personality).</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6: IMPORTANCE ============ -->
+<section class="section" id="importance">
+  <div class="section-header">
+    <div class="section-number">🌟</div>
+    <h2 class="section-title">Importance of <span class="highlight">Studying Political Science</span></h2>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Reason</th><th>Explanation</th></tr></thead>
+      <tbody>
+        <tr><td>🗳️ <strong>Informed Citizenship</strong></td><td>Understand rights, duties, voting, constitution, democratic ethos.</td></tr>
+        <tr><td>🏛️ <strong>Better Governance</strong></td><td>Trains future administrators, policymakers, civil servants, teachers.</td></tr>
+        <tr><td>🤔 <strong>Critical Thinking</strong></td><td>Evaluate policies, leaders, ideologies with objectivity.</td></tr>
+        <tr><td>🌐 <strong>Global Awareness</strong></td><td>Understand wars, trade, climate diplomacy, international institutions.</td></tr>
+        <tr><td>✊ <strong>Social Change</strong></td><td>Power literacy is essential to fight injustice and inequality.</td></tr>
+        <tr><td>🎓 <strong>Career Opportunities</strong></td><td>Civil services, diplomacy, law, journalism, academia, NGOs.</td></tr>
+        <tr><td>🕊️ <strong>Conflict Resolution</strong></td><td>Mediation, negotiation, peace-building skills.</td></tr>
+        <tr><td>🧭 <strong>Value Formation</strong></td><td>Cultivates respect for democracy, secularism, pluralism, rule of law.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">🎯 MP-Specific Insight</div>
+    <p>Madhya Pradesh has a rich political tapestry — from the <strong>Gond kingdoms</strong> of Garha-Mandla and Rani Durgavati's resistance, to the <strong>Bhopal Nawabs</strong>, princely Indore (Holkars), Gwalior (Scindias), to modern <strong>Vidhan Sabha politics</strong>. As an scholar/mentor, you'll be teaching the next generation about <strong>Panchayati Raj (73rd Amendment)</strong>, MP's <strong>"Adhyaksh Pradhan" tribal panchayat system</strong>, and the state's constitutional framework. Political Science is your superpower!</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 7: SUMMARY TABLES ============ -->
+<section class="section" id="summary">
+  <div class="section-header">
+    <div class="section-number">📋</div>
+    <h2 class="section-title">Ultimate <span class="highlight">Revision Tables</span></h2>
+  </div>
+
+  <h3 class="sub-head">📚 Table 1: Definition — Thinker Quick Recall</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Thinker</th><th>Signature Phrase</th><th>Memory Hook</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Garner</strong></td><td>"Begins and ends with the State"</td><td>🏛️ Pure State</td></tr>
+        <tr><td><strong>Lasswell</strong></td><td>"Who gets what, when, how"</td><td>🎁 Gift Distribution</td></tr>
+        <tr><td><strong>Easton</strong></td><td>"Authoritative allocation of values"</td><td>📦 Value Box</td></tr>
+        <tr><td><strong>Weber</strong></td><td>"Monopoly of legitimate force"</td><td>💪 Iron Fist</td></tr>
+        <tr><td><strong>Dahl</strong></td><td>"Patterns of power, rule, authority"</td><td>⚡ Power Flow</td></tr>
+        <tr><td><strong>Van Dyke</strong></td><td>"Shaping and sharing of power"</td><td>🤝 Share-Shape</td></tr>
+        <tr><td><strong>Aristotle</strong></td><td>"Master science; Zoon Politikon"</td><td>🐺 Political Animal</td></tr>
+        <tr><td><strong>Morgenthau</strong></td><td>"Struggle for power" (IR)</td><td>⚔️ War Game</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub-head">⚖️ Table 2: Nature — Scientific Status</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+      <tbody>
+        <tr><td>Is it a natural science like physics?</td><td>❌ No</td></tr>
+        <tr><td>Is it a social science?</td><td>✅ Yes</td></tr>
+        <tr><td>Does it use empirical methods?</td><td>✅ Yes</td></tr>
+        <tr><td>Can it be fully value-free?</td><td>❌ No (Post-behavioralists prefer value-<em>neutral</em>, not value-free)</td></tr>
+        <tr><td>Current accepted status?</td><td>🌟 <strong>Science of Politics</strong> (Dahl) / <strong>Social Science</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub-head">🗺️ Table 3: Traditional vs Modern Scope</h3>
+  <div class="compare">
+    <div class="compare-col con">
+      <h4>🏛️ Traditional (19th Century)</h4>
+      <ul class="fancy">
+        <li>Only State & Government</li>
+        <li>Legal-formal approach</li>
+        <li>Western, Euro-centric focus</li>
+        <li>Descriptive — "what is the law?"</li>
+        <li>Static, normative</li>
+        <li>Philosophical & historical methods</li>
+      </ul>
+    </div>
+    <div class="compare-col pro">
+      <h4>🚀 Modern (20th-21st Century)</h4>
+      <ul class="fancy">
+        <li>+ Political behavior, IR, Methodology</li>
+        <li>Empirical, comparative, behavioural</li>
+        <li>+ Global South, indigenous politics</li>
+        <li>Explanatory + predictive</li>
+        <li>Dynamic, value-neutral (then value-relevant)</li>
+        <li>+ Quantitative, game theory, digital methods</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 8: EXAM TIPS ============ -->
+<section class="section" id="tips">
+  <div class="section-header">
+    <div class="section-number">⚡</div>
+    <h2 class="section-title">Notion — <span class="highlight">Exam Tips & Tricks</span></h2>
+  </div>
+
+  <h3 class="sub-head">🎯 Most Repeated Topics (Pattern Analysis)</h3>
+  <ol class="fancy">
+    <li><strong>Definitions of Lasswell & Easton</strong> — 2-3 MCQs nearly every year.</li>
+    <li><strong>Nature debate</strong> — "Political Science as a Science" (short note).</li>
+    <li><strong>Behavioralism vs Post-Behavioralism</strong> — Easton's 8 characteristics + 7 tenets of relevance.</li>
+    <li><strong>Scope: Traditional vs Modern</strong> — comparative question.</li>
+    <li><strong>Power, Authority, Legitimacy</strong> — Weber's 3 types of authority.</li>
+    <li><strong>State vs Government</strong> — clear difference question.</li>
+    <li><strong>Thinker-Definition Matching</strong> — almost guaranteed MCQ.</li>
+    <li><strong>UNESCO 1948 classification</strong> — often asked.</li>
+    <li><strong>Easton's Systems Theory</strong> — diagram + concept.</li>
+  </ol>
+
+  <h3 class="sub-head">🧠 Mnemonics — Memory Magic</h3>
+  <div class="mnemonic">
+    <p><strong class="text-pink">📌 Nature of Political Science:</strong></p>
+    <div class="formula">A.S.S. →  Art + Social Science + Systematic</div>
+  </div>
+
+  <div class="mnemonic">
+    <p><strong class="text-pink">📌 Easton's 8 Behavioralism Features:</strong></p>
+    <div class="formula">"VVIP QT RS" — Values, Verification, Integration, Pure Science, Quantification, Techniques, Regularities, Systematization</div>
+  </div>
+
+  <div class="mnemonic">
+    <p><strong class="text-pink">📌 4 Elements of State:</strong></p>
+    <div class="formula">P-GST → Population, Territory, Government, Sovereignty</div>
+  </div>
+
+  <div class="mnemonic">
+    <p><strong class="text-pink">📌 Weber's 3 Authorities:</strong></p>
+    <div class="formula">"TCL" — Traditional, Charismatic, Legal-Rational</div>
+  </div>
+
+  <div class="mnemonic">
+    <p><strong class="text-pink">📌 Easton's 7 Tenets of Relevance:</strong></p>
+    <div class="formula">"SSP ACP V" — Substance over technique, Social change over state quo, Politicization of profession, Action-orieted research, Contact with brute realities, Protection of human values, Values are essential</div>
+  </div>
+
+  <h3 class="sub-head">📝 Sample MCQs</h3>
+
+  <div class="quiz">
+    <div class="q">Q1. Who defined Political Science as "the authoritative allocation of values for a society"?</div>
+    <div class="opts">(A) Garner &nbsp; (B) Lasswell &nbsp; (C) David Easton &nbsp; (D) Max Weber</div>
+    <div class="a">✅ Answer: (C) David Easton</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q2. The famous statement "Political Science begins and ends with the State" was made by —</div>
+    <div class="opts">(A) Aristotle &nbsp; (B) Garner &nbsp; (C) Bluntschli &nbsp; (D) Leacock</div>
+    <div class="a">✅ Answer: (B) Garner</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q3. Which approach emphasizes the study of political behaviour through quantitative methods?</div>
+    <div class="opts">(A) Philosophical &nbsp; (B) Legal-Institutional &nbsp; (C) Behavioral &nbsp; (D) Historical</div>
+    <div class="a">✅ Answer: (C) Behavioral</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q4. Who gave the slogan "Relevance over Rigour"?</div>
+    <div class="opts">(A) Lasswell &nbsp; (B) Dahl &nbsp; (C) David Easton (1969) &nbsp; (D) Almond</div>
+    <div class="a">✅ Answer: (C) David Easton, 1969 APSA Address</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q5. The UNESCO classification of Political Science scope was made in —</div>
+    <div class="opts">(A) 1945 New York &nbsp; (B) 1948 Paris &nbsp; (C) 1950 Geneva &nbsp; (D) 1953 London</div>
+    <div class="a">✅ Answer: (B) 1948 Paris</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q6. "Who gets what, when, how" — was given by —</div>
+    <div class="opts">(A) Dahl &nbsp; (B) Lasswell &nbsp; (C) Weber &nbsp; (D) Easton</div>
+    <div class="a">✅ Answer: (B) Harold D. Lasswell (1936)</div>
+  </div>
+
+  <div class="quiz">
+    <div class="q">Q7. Weber's three types of authority are —</div>
+    <div class="opts">(A) Democratic, Monarchical, Aristocratic &nbsp; (B) Traditional, Charismatic, Legal-Rational &nbsp; (C) Sacred, Profane, Mixed &nbsp; (D) None</div>
+    <div class="a">✅ Answer: (B) Traditional, Charismatic, Legal-Rational</div>
+  </div>
+</section>
+
+<!-- ============ FINAL FLOWCHART ============ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-number">🧠</div>
+    <h2 class="section-title">The <span class="highlight">Complete Picture</span> — Final Flow</h2>
+  </div>
+
+  <div class="mermaid-box">
+  <div class="mermaid">
+flowchart TD
+    A[🏛️ POLITICAL SCIENCE] --> B{WHAT IS IT?}
+    B --> C[📜 DEFINITION<br>Study of State, Power, Values]
+    B --> D[⚖️ NATURE<br>Social Science: Empirical + Normative]
+    B --> E[🗺️ SCOPE: 7 Pillars]
+    E --> E1[📜 Political Theory]
+    E --> E2[🏛️ Institutions]
+    E --> E3[⚡ Dynamics]
+    E --> E4[🌍 IR]
+    E --> E5[⚖️ Public Admin]
+    E --> E6[📊 Comparative]
+    E --> E7[🧠 Methodology]
+    C --> C1[Traditional<br>Garner, Aristotle, Burgess]
+    C --> C2[Modern<br>Lasswell, Easton, Dahl, Weber]
+    D --> D1[🔬 Science? Yes<br>Systematic methods]
+    D --> D2[🎨 Art? Yes<br>Practical wisdom]
+    D --> D3[📊 Behavioralism<br>Easton's 8 features]
+    D --> D4[🔥 Post-Behavioralism<br>Relevance over Rigour]
+    style A fill:#4c1d95,color:#fff,stroke:#dccdff,stroke-width:4px
+    style B fill:#7c3413,color:#fff
+    style C fill:#7f1d3a,color:#fff
+    style D fill:#0d4f47,color:#fff
+    style E fill:#1e3a8a,color:#fff
+  </div>
+  </div>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <h2>⚖️ Political Science - Definition, nature & scope 🧾</h2>
+    <p style="margin-top:20px; font-size:0.85rem;"><h2>🏛️</h2> <em><h3><b>"Man is by nature a Political Animal"</em> — Aristotle</b></h3></p>
+ <br><p><h1><strong style="color:var(--crimson)">En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</strong></h1>
+</footer>
+
+<script>
+  mermaid.initialize({ 
+    startOnLoad: true, 
+    theme: 'dark',
+    securityLevel: 'loose',
+    themeVariables: {
+      primaryColor: '#4c1d95',
+      primaryTextColor: '#fff',
+      primaryBorderColor: '#c4b5fd',
+      lineColor: '#c4b5fd',
+      secondaryColor: '#1e3a8a',
+      tertiaryColor: '#1a1f3a',
+      background: '#0a0e27',
+      mainBkg: '#1a1f3a',
+      secondBkg: '#131838',
+      fontFamily: 'Segoe UI, sans-serif'
+    },
+    flowchart: { curve: 'basis', padding: 20 }
+  });
+
+  // Smooth fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section').forEach((sec, i) => {
+    sec.style.opacity = '0';
+    sec.style.transform = 'translateY(30px)';
+    sec.style.transition = `opacity 0.8s ease ${i*0.05}s, transform 0.8s ease ${i*0.05}s`;
+    observer.observe(sec);
+  });
+</script>
+
+</body>
+</html>

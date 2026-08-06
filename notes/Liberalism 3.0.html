@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚜️ LIBERALISM — The Philosophy of Freedom</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Orbitron:wght@600;900&family=Caveat:wght@600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-deep: #050b1a;
+    --bg-mid: #0c1530;
+    --bg-soft: #142042;
+    --azure: #4fc3f7;
+    --azure-glow: #7dd3fc;
+    --gold: #f5c842;
+    --gold-soft: #ffd866;
+    --emerald: #4ade80;
+    --crimson: #ff5c8a;
+    --violet: #b388ff;
+    --amber: #ffa726;
+    --rose: #ff7eb3;
+    --cyan: #67e8f9;
+    --text-soft: #d8e4f5;
+    --text-muted: #8a9bbf;
+    --enlightenment: #fbbf24;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-soft);
+    line-height: 1.75;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(79, 195, 247, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 30%, rgba(245, 200, 66, 0.10) 0%, transparent 40%),
+      radial-gradient(circle at 50% 70%, rgba(179, 136, 255, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 20% 95%, rgba(74, 222, 128, 0.07) 0%, transparent 40%);
+  }
+
+  /* ========= STARS & PARTICLES ========= */
+  .stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle linear infinite;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 0.8; transform: scale(1); }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ========== HERO TITLE ========== */
+  .hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.12), rgba(245, 200, 66, 0.10), rgba(179, 136, 255, 0.10));
+    border: 1px solid rgba(245, 200, 66, 0.25);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5), inset 0 0 100px rgba(79, 195, 247, 0.05);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(79, 195, 247, 0.18), transparent, rgba(245, 200, 66, 0.18), transparent, rgba(179, 136, 255, 0.18), transparent);
+    animation: rotate-bg 25s linear infinite;
+    z-index: 0;
+  }
+  @keyframes rotate-bg {
+    to { transform: rotate(360deg); }
+  }
+
+  .hero::after {
+    content: '🗺';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    letter-spacing: 15px;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .hero-content { position: relative; z-index: 2; }
+
+  .torch-symbol {
+    font-size: 4.5rem;
+    display: inline-block;
+    animation: flame-flicker 2.5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 25px rgba(245, 200, 66, 0.7));
+  }
+  @keyframes flame-flicker {
+    0% { transform: scale(1) rotate(-4deg); filter: drop-shadow(0 0 18px rgba(245, 200, 66, 0.6)); }
+    100% { transform: scale(1.12) rotate(4deg); filter: drop-shadow(0 0 35px rgba(255, 167, 38, 0.9)); }
+  }
+
+  .main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 900;
+    background: linear-gradient(90deg, #4fc3f7 0%, #f5c842 30%, #ffffff 50%, #f5c842 70%, #4fc3f7 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 8px;
+    margin: 25px 0 10px;
+    text-shadow: 0 0 90px rgba(79, 195, 247, 0.4);
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+
+  .main-title:hover {
+    transform: scale(1.08) perspective(500px) rotateX(15deg);
+    letter-spacing: 15px;
+    filter: drop-shadow(0 0 40px rgba(245, 200, 66, 0.8));
+  }
+
+  .main-title::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #4fc3f7, #f5c842, #4fc3f7) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .main-title:hover::before { opacity: 1; }
+
+  .subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 2.3rem;
+    color: var(--gold);
+    margin-top: 15px;
+    opacity: 0.95;
+  }
+
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-top: 18px;
+    font-style: italic;
+  }
+
+  .feather-emoji {
+    display: inline-block;
+    animation: bloom 3s ease-in-out infinite;
+    font-size: 1.5rem;
+    margin: 0 8px;
+  }
+  @keyframes bloom {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+  }
+
+  /* ========== PART HEADERS ========== */
+  .part-header {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin: 70px 0 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.15), rgba(245, 200, 66, 0.10));
+    border-top: 3px solid var(--azure);
+    border-bottom: 3px solid var(--gold);
+    border-radius: 15px;
+    position: relative;
+    letter-spacing: 3px;
+    transition: all 0.5s ease;
+    cursor: default;
+  }
+  .part-header:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(79, 195, 247, 0.25);
+    letter-spacing: 5px;
+  }
+
+  .part-header span.part-num {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: var(--gold);
+    letter-spacing: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* ========== SECTION HEADINGS ========== */
+  .section-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7rem;
+    margin: 45px 0 22px;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, rgba(79, 195, 247, 0.18), transparent);
+    border-left: 6px solid var(--azure);
+    border-radius: 8px;
+    color: var(--text-soft);
+    transition: all 0.4s ease;
+  }
+  .section-heading:hover {
+    padding-left: 38px;
+    border-left-width: 14px;
+    background: linear-gradient(90deg, rgba(79, 195, 247, 0.28), transparent);
+    letter-spacing: 1.5px;
+  }
+
+  .sub-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin: 30px 0 15px;
+    color: var(--gold);
+    border-bottom: 2px dashed rgba(245, 200, 66, 0.3);
+    padding-bottom: 8px;
+  }
+
+  .mini-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    color: var(--azure-glow);
+    margin: 20px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mini-heading::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 0.9rem;
+  }
+
+  /* ========== CARDS ========== */
+  .card {
+    background: linear-gradient(135deg, var(--bg-mid), var(--bg-soft));
+    border-radius: 20px;
+    padding: 35px;
+    margin: 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: var(--accent, var(--azure));
+    transition: width 0.4s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 30px var(--accent-glow, rgba(79, 195, 247, 0.3));
+    border-color: var(--accent, var(--azure));
+  }
+  .card:hover::before { width: 8px; }
+
+  .azure-card   { --accent: #4fc3f7; --accent-glow: rgba(79, 195, 247, 0.35); }
+  .gold-card    { --accent: #f5c842; --accent-glow: rgba(245, 200, 66, 0.35); }
+  .emerald-card { --accent: #4ade80; --accent-glow: rgba(74, 222, 128, 0.35); }
+  .violet-card  { --accent: #b388ff; --accent-glow: rgba(179, 136, 255, 0.35); }
+  .crimson-card { --accent: #ff5c8a; --accent-glow: rgba(255, 92, 138, 0.35); }
+  .amber-card   { --accent: #ffa726; --accent-glow: rgba(255, 167, 38, 0.35); }
+  .cyan-card    { --accent: #67e8f9; --accent-glow: rgba(103, 232, 249, 0.35); }
+  .rose-card    { --accent: #ff7eb3; --accent-glow: rgba(255, 126, 179, 0.35); }
+
+  /* ========== THINKER CARDS (TYPE CARDS) ========== */
+  .type-card {
+    background: linear-gradient(135deg, var(--bg-mid), rgba(20, 32, 66, 0.9));
+    border-radius: 25px;
+    padding: 40px;
+    margin: 35px 0;
+    border: 2px solid rgba(245, 200, 66, 0.15);
+    position: relative;
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  }
+  .type-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    border-color: var(--accent, var(--gold));
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px var(--accent-glow, rgba(245, 200, 66, 0.3));
+  }
+
+  .type-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--accent, var(--gold));
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .type-period {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .type-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; height: 60px;
+    background: linear-gradient(135deg, var(--accent, var(--gold)), var(--accent-glow, var(--azure)));
+    border-radius: 50%;
+    font-size: 1.8rem;
+    box-shadow: 0 0 25px var(--accent-glow, rgba(245, 200, 66, 0.4));
+  }
+
+  /* ========== INFO BOXES ========== */
+  .info-box, .quote-box, .insight-box, .key-box, .belief-box, .critique-box {
+    background: rgba(5, 11, 26, 0.6);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border-left: 4px solid var(--accent, var(--azure));
+    transition: all 0.3s ease;
+  }
+  .info-box:hover, .quote-box:hover, .insight-box:hover, .key-box:hover, .belief-box:hover, .critique-box:hover {
+    background: rgba(5, 11, 26, 0.9);
+    transform: translateX(8px);
+  }
+
+  .label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    background: var(--accent, var(--azure));
+    color: var(--bg-deep);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .insight-box {
+    background: linear-gradient(135deg, rgba(179, 136, 255, 0.12), rgba(79, 195, 247, 0.05));
+    border-left-color: var(--violet);
+  }
+  .insight-box .label { background: var(--violet); color: var(--bg-deep); }
+
+  .critique-box {
+    background: linear-gradient(135deg, rgba(255, 92, 138, 0.10), rgba(255, 167, 38, 0.05));
+    border-left-color: var(--crimson);
+  }
+  .critique-box .label { background: var(--crimson); color: #fff; }
+
+  .quote-box {
+    background: linear-gradient(135deg, rgba(245, 200, 66, 0.12), rgba(255, 167, 38, 0.05));
+    border-left: 4px solid var(--gold);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 28px;
+    color: var(--text-soft);
+    position: relative;
+  }
+  .quote-box::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--gold);
+    position: absolute;
+    top: -10px; left: 15px;
+    opacity: 0.4;
+    font-family: 'Playfair Display', serif;
+  }
+  .quote-author {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--gold-soft);
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .quote-author::before { content: '— '; }
+
+  /* ========== LISTS ========== */
+  ul.feature-list {
+    list-style: none;
+    padding: 10px 0;
+  }
+  ul.feature-list li {
+    padding: 9px 0 9px 35px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  ul.feature-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 12px;
+    color: var(--accent, var(--gold));
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  ul.feature-list li:hover {
+    color: #ffffff;
+    padding-left: 42px;
+  }
+  ul.feature-list li:hover::before {
+    transform: scale(1.5) rotate(180deg);
+  }
+
+  ul.check-list li::before { content: '✅'; left: 5px; font-size: 0.95rem; }
+  ul.cross-list li::before { content: '❌'; left: 5px; font-size: 0.95rem; }
+  ul.fire-list li::before  { content: '🔥'; left: 5px; font-size: 0.95rem; }
+
+  /* ========== TABLES ========== */
+  .data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    background: rgba(5, 11, 26, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .data-table th {
+    background: linear-gradient(135deg, var(--azure), var(--gold));
+    color: var(--bg-deep);
+    padding: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-align: left;
+  }
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+    vertical-align: top;
+  }
+  .data-table tr:hover td {
+    background: rgba(79, 195, 247, 0.10);
+    color: #ffffff;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td strong { color: var(--gold-soft); }
+
+  .compare-table th:first-child { background: linear-gradient(135deg, #ff5c8a, #f87171); color: #fff; }
+  .compare-table th:last-child  { background: linear-gradient(135deg, #4ade80, #67e8f9); color: var(--bg-deep); }
+
+  /* ========== FLOW DIAGRAM ========== */
+  .flow-diagram {
+    background: linear-gradient(135deg, rgba(179, 136, 255, 0.08), rgba(79, 195, 247, 0.05));
+    border: 1px solid rgba(179, 136, 255, 0.2);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 30px 0;
+    text-align: center;
+  }
+  .flow-step {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--bg-soft), var(--bg-mid));
+    color: var(--text-soft);
+    padding: 14px 28px;
+    border-radius: 50px;
+    margin: 8px;
+    font-weight: 600;
+    border: 2px solid var(--gold);
+    box-shadow: 0 5px 20px rgba(245, 200, 66, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .flow-step:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, var(--gold), var(--amber));
+    color: var(--bg-deep);
+    box-shadow: 0 10px 30px rgba(245, 200, 66, 0.5);
+  }
+  .flow-arrow {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin: 5px 0;
+    animation: bounce-down 2s ease-in-out infinite;
+  }
+  @keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ========== TWO COLUMN ========== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin: 22px 0;
+  }
+  .col-card {
+    padding: 25px;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+  }
+  .col-card.neg {
+    background: linear-gradient(135deg, rgba(255, 92, 138, 0.1), rgba(255, 167, 38, 0.06));
+    border: 1px solid rgba(255, 92, 138, 0.3);
+  }
+  .col-card.pos {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(79, 195, 247, 0.06));
+    border: 1px solid rgba(74, 222, 128, 0.3);
+  }
+  .col-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  }
+  .col-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-soft);
+  }
+  @media (max-width: 720px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* ========== TYPE BADGES ========== */
+  .type-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 4px 6px 4px 0;
+  }
+  .badge-classical { background: rgba(245, 200, 66, 0.2); color: var(--gold-soft); border: 1px solid var(--gold); }
+  .badge-modern    { background: rgba(74, 222, 128, 0.2); color: var(--emerald); border: 1px solid var(--emerald); }
+  .badge-libertarian { background: rgba(255, 92, 138, 0.2); color: var(--crimson); border: 1px solid var(--crimson); }
+  .badge-neo       { background: rgba(179, 136, 255, 0.2); color: var(--violet); border: 1px solid var(--violet); }
+
+  /* ========== TIMELINE ========== */
+  .timeline {
+    position: relative;
+    padding: 30px 0;
+    margin: 30px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--azure), var(--gold), var(--violet));
+    border-radius: 4px;
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 4px solid var(--bg-deep);
+    box-shadow: 0 0 0 3px var(--gold), 0 0 20px var(--gold);
+    transition: all 0.3s ease;
+  }
+  .timeline-item:hover { padding-left: 90px; }
+  .timeline-item:hover::before {
+    transform: scale(1.3);
+    background: var(--azure);
+    box-shadow: 0 0 0 3px var(--azure), 0 0 25px var(--azure);
+  }
+  .timeline-year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ========== STAR QUOTE ========== */
+  .star-quote {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 40px 0;
+    padding: 35px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.15), rgba(245, 200, 66, 0.10));
+    border: 2px dashed var(--gold);
+    border-radius: 20px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    font-style: italic;
+  }
+  .star-quote:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(245, 200, 66, 0.4);
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.25), rgba(245, 200, 66, 0.18));
+  }
+
+  /* ========== REVISION BOX ========== */
+  .revision-box {
+    background: linear-gradient(135deg, #1e3a5f, #3b1c5a);
+    border-radius: 20px;
+    padding: 35px;
+    margin: 40px 0;
+    text-align: center;
+    border: 2px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+  .revision-box::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(245, 200, 66, 0.15), transparent 70%);
+    animation: rotate-bg 20s linear infinite;
+  }
+  .revision-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: var(--text-soft);
+    line-height: 1.9;
+  }
+
+  /* ========== EXAM POINTS ========== */
+  .exam-point {
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(103, 232, 249, 0.05));
+    border-left: 4px solid var(--emerald);
+    padding: 18px 22px;
+    margin: 12px 0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .exam-point:hover {
+    background: rgba(74, 222, 128, 0.15);
+    transform: translateX(8px);
+    border-left-color: var(--gold);
+  }
+  .exam-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px; height: 35px;
+    background: var(--emerald);
+    color: var(--bg-deep);
+    border-radius: 50%;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  /* ========== CONCLUSION ========== */
+  .conclusion {
+    background: linear-gradient(135deg, var(--gold), var(--azure) 50%, var(--violet));
+    padding: 3px;
+    border-radius: 22px;
+    margin: 55px 0 35px;
+    animation: glow-conclusion 5s ease-in-out infinite;
+  }
+  @keyframes glow-conclusion {
+    0%, 100% { box-shadow: 0 0 30px rgba(245, 200, 66, 0.3); }
+    50% { box-shadow: 0 0 60px rgba(79, 195, 247, 0.5); }
+  }
+  .conclusion-inner {
+    background: var(--bg-deep);
+    border-radius: 19px;
+    padding: 40px;
+    text-align: center;
+  }
+  .conclusion h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--gold-soft);
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+  }
+  .conclusion p {
+    font-size: 1.12rem;
+    color: var(--text-soft);
+    line-height: 1.95;
+  }
+
+  /* ========== DIVIDER ========== */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--azure), var(--gold), transparent);
+    margin: 50px 0;
+    opacity: 0.5;
+  }
+
+  /* ========== HIGHLIGHTS ========== */
+  .gold-text { color: var(--gold-soft); font-weight: 700; }
+  .azure-text { color: var(--azure-glow); font-weight: 600; }
+  .crimson-text { color: var(--crimson); font-weight: 600; }
+  .emerald-text { color: var(--emerald); font-weight: 600; }
+  .violet-text { color: var(--violet); font-weight: 600; }
+  .amber-text { color: var(--amber); font-weight: 600; }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    color: var(--text-muted);
+    border-top: 2px solid rgba(245, 200, 66, 0.2);
+  }
+  .footer-emoji {
+    font-size: 2rem;
+    margin: 0 5px;
+    display: inline-block;
+    animation: bloom 3s ease-in-out infinite;
+  }
+
+  /* ========== SCROLL REVEAL ========== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .main-title { letter-spacing: 4px; }
+    .card, .type-card { padding: 25px; }
+    .type-title { font-size: 1.6rem; }
+    .data-table { font-size: 0.85rem; }
+    .data-table th, .data-table td { padding: 10px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+  <!-- ============ HERO TITLE ============ -->
+  <div class="hero">
+    <div class="hero-content">
+      <span class="torch-symbol">🗽</span>
+      <h1 class="main-title">LIBERALISM</h1>      
+<h1><strong style="color:var(--crimson-soft)"><b>AUTEUR: PIYUSH PARTE</b></strong></h1>
+
+      <p class="tagline">
+        <span class="feather-emoji">⛓️‍💥</span>
+        <b>The Philosophy of Freedom — Where the Individual Becomes Sovereign</b>
+        <span class="feather-emoji">⚖️</span>
+      </p>
+      <p style="margin-top: 22px; color: var(--text-soft); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <em><b>🕊️ "Over himself, over his own body & mind, the individual is sovereign" 🦚<br>~  ‎J.S. Mill</b></em>
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ PART ONE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART ONE</span>
+    🌟 Introduction
+  </h2>
+
+  <div class="card azure-card reveal">
+    <p style="font-size: 1.08rem;">Liberalism is <strong class="gold-text">not merely a political ideology</strong>; it is a <em>philosophical commitment to individual freedom</em>. At its core, liberalism envisions a society where <span class="azure-text">the state exists for the individual, not the individual for the state</span> 🗽</p>
+
+ <br><p style="font-size: 1.08rem;"><span class="azure-text">🗽 LIBERTY : </span>The actual <strong class="gold-text">condition of being free</strong> <em>[The freedom to act, speak, & choose without unfair control]</em></p>
+
+<br><p style="font-size: 1.08rem;"><span class="azure-text">🗽 LIBERALISM : </span> It is the <strong class="gold-text"> political ideology or philosophy </strong><em> built on protecting & promoting that liberty through laws, government, & societial structure</em></p>
+
+<br><p style="font-size: 1.08rem;"><strong class="gold-text"><em>🗽 In short: </em></strong>Liberty is the <span class="azure-text">freedom itself; </span>liberalism is the <span class="azure-text">political system designed to protect it</span></p>
+  </div>
+
+  <h3 class="section-heading">🧠 Core Values of Liberalism</h3>
+
+  <div class="card gold-card reveal">
+    <ul class="feature-list">
+      <li>🗽 <strong class="gold-text">Individual Liberty</strong> — The supreme end of political life; freedom is the highest political good.</li>
+      <li>🧠 <strong class="gold-text">Human Rationality</strong> — Humans are capable of self-governance and moral judgment; reason replaces revelation [act of revealing]<br>      ╰>  Reason - derives knowledge from natural faculties, logical deduction, empirical observation, and     critical reflection<br>‎      ╰>  Revelation - represents knowledge or authority derived from an external, divine source, often    mediated through scripture, prophets, or religious institutions</li>
+      <li>📜 <strong class="gold-text">Constitutional Government</strong> — Power is limited by law; no ruler stands above the constitution.</li>
+      <li>🤝 <strong class="gold-text">Consent-Based Governance</strong> — Authority derives from the people, not from divine right, tradition, or force.</li>
+      <li>⚖️ <strong class="gold-text">Equality of Opportunity</strong> — Every individual deserves a fair starting line in the race of life.</li>
+      <li>🌱 <strong class="gold-text">Tolerance & Pluralism</strong> — Diverse beliefs and lifestyles must coexist peacefully.</li>
+      <li>🔄 <strong class="gold-text">Progressivism</strong> — Society can and should improve through reform, reason, and education.</li>
+    </ul>
+
+    <div class="insight-box">
+      <span class="label">💡 Deep Insight</span>
+      <p>✨ The beauty of liberalism lies in its <span class="gold-text">evolution</span> — while its <em>soul</em> (liberty 🕊️) remains intact, its <em>body</em> (role of state 🏛️, economy 💰, welfare ❤️) has transformed across centuries. It is a chameleon ideology that adapts without losing identity.</p>
+    </div>
+  </div>
+
+  <!-- ============ PART TWO ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART TWO</span>
+    ⚖️ The Great Divide — Positive vs Negative Liberty
+  </h2>
+
+  <div class="card violet-card reveal">
+    <p style="font-size: 1.05rem;">This distinction — articulated most famously by <span class="gold-text">Isaiah Berlin</span> in his 1958 essay <em>"Two Concepts of Liberty"</em> — is the <strong>philosophical backbone</strong> of all liberal thought. Every liberal debate reduces, ultimately, to which concept of liberty one accepts. 🧭</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>🔍 Aspect</th>
+          <th>🚫 Negative Liberty</th>
+          <th>✅ Positive Liberty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Core Question</strong></td><td>"What area can I act in <em>without interference</em>?"</td><td>"<em>Who governs me?</em> What is the source of control?"</td></tr>
+        <tr><td><strong>Meaning</strong></td><td>Freedom <em>from</em> external constraints</td><td>Freedom <em>to</em> achieve self-realization & mastery</td></tr>
+        <tr><td><strong>State Role</strong></td><td>Minimal state (night-watchman 🌃)</td><td>Enabling state (creates conditions for growth 🌱)</td></tr>
+        <tr><td><strong>Associated With</strong></td><td>Classical Liberalism, Libertarianism</td><td>Modern Liberalism (Social Liberalism)</td></tr>
+        <tr><td><strong>Key Thinkers</strong></td><td>Locke, Mill, Hayek, Nozick</td><td>T.H. Green, Hobhouse, Rawls, Sen</td></tr>
+        <tr><td><strong>Key Risk</strong></td><td>Can justify inequality & exploitation</td><td>Can justify state overreach & paternalism</td></tr>
+        <tr><td><strong>Metaphor</strong></td><td>🚪 Open doors (no one stops you)</td><td>🦅 Real wings (you can actually fly)</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="mini-heading">🔍 Deep Dive: Negative Liberty</h4>
+    <ul class="feature-list">
+      <li>You are <span class="gold-text">free</span> if no one prevents you from acting — liberty is the <em>silence of the laws</em>.</li>
+      <li>The state is a <span class="crimson-text">potential threat</span> to freedom; it must be caged by constitutions.</li>
+      <li>Liberty is about <strong>opportunities</strong>, not abilities or outcomes.</li>
+    </ul>
+
+    <div class="quote-box">
+      The only purpose for which power can be rightfully exercised over any member of a civilized community, against his will, is to prevent harm to others.
+      <span class="quote-author">J.S. Mill, <em>On Liberty</em> (1859) — The Harm Principle</span>
+    </div>
+
+    <h4 class="mini-heading">🔍 Deep Dive: Positive Liberty</h4>
+    <ul class="feature-list">
+      <li>You are free only if you are <span class="gold-text">master of yourself</span> — not enslaved by ignorance, poverty, addiction, or fear.</li>
+      <li>The state can <span class="emerald-text">actively help</span> you become free — through education 📚, healthcare 🏥, minimum wage 💵.</li>
+      <li>A starving man with the "right" to choose any job has <em>formal</em> but not <em>real</em> freedom.</li>
+    </ul>
+
+    <div class="critique-box">
+      <span class="label">⚠️ Critique</span>
+      <p>⛓️ Positive liberty can slide into <strong>authoritarianism</strong>. Berlin warned: if the state decides what your "true self" wants, it can justify forcing you to obey. Rousseau's chilling phrase — <em>"You will be forced to be free"</em> — captures this danger perfectly.</p>
+    </div>
+
+    <div class="flow-diagram">
+      <span class="flow-step">🚫 Negative Liberty</span>
+      <span class="flow-step">+</span>
+      <span class="flow-step">✅ Positive Liberty</span>
+      <span class="flow-arrow">⬇️</span>
+      <span class="flow-step" style="background:linear-gradient(135deg,var(--gold),var(--emerald)); color:var(--bg-deep); font-weight:800;">🗽 Complete Human Freedom</span>
+    </div>
+  </div>
+
+  <!-- ============ PART THREE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART THREE</span>
+    📜 Origin of Liberalism — Born in Revolt
+  </h2>
+
+  <div class="card amber-card reveal">
+    <h4 class="mini-heading">🕰️ Historical Context (17th Century Europe)</h4>
+
+    <div class="two-col">
+      <div class="col-card neg">
+        <h4>⚔️ AGAINST</h4>
+        <ul class="cross-list">
+          <li>👑 Absolute monarchy</li>
+          <li>✝️ Divine right of kings</li>
+          <li>🏰 Feudal economy</li>
+          <li>📿 Religious dogmatism</li>
+          <li>🩸 Hereditary privilege</li>
+        </ul>
+      </div>
+      <div class="col-card pos">
+        <h4>🌟 FOR</h4>
+        <ul class="check-list">
+          <li>🧠 Reason & Enlightenment</li>
+          <li>🏆 Merit-based society</li>
+          <li>🏗️ Individual achievement</li>
+          <li>📜 Constitutional limits</li>
+          <li>🤝 Civil liberties</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="mini-heading">👥 Founding Thinkers</h4>
+    <table class="data-table">
+      <thead>
+        <tr><th>🎓 Thinker</th><th>📚 Contribution</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🇬🇧 <strong>John Locke</strong> (1632–1704)</td><td>Social contract, natural rights, fiduciary state — "Father of Liberalism"</td></tr>
+        <tr><td>🇫🇷 <strong>Montesquieu</strong> (1689–1755)</td><td>Separation of powers — checks and balances</td></tr>
+        <tr><td>🇫🇷 <strong>Voltaire</strong> (1694–1778)</td><td>Freedom of speech, religion, and tolerance</td></tr>
+        <tr><td>🇬🇧 <strong>Thomas Hobbes</strong> (1588–1679)</td><td>Pre-liberal contractualism — laid the groundwork</td></tr>
+        <tr><td>🇬🇧 <strong>J.S. Mill</strong> (1806–1873)</td><td>Liberty principle, women's rights, utilitarian liberalism</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">💡 Insight</span>
+      <p>Liberalism became a <span class="gold-text">full-fledged ideology</span> in the 18th–19th centuries, fueled by <span class="azure-text">Enlightenment optimism</span> 💡 and <span class="amber-text">bourgeois revolutions</span>:</p>
+      <ul class="feature-list" style="margin-top:10px;">
+        <li>🇺🇸 <strong>American Revolution (1776)</strong> — first liberal republic</li>
+        <li>🇫🇷 <strong>French Revolution (1789)</strong> — Liberté, Égalité, Fraternité</li>
+        <li>🇬🇧 <strong>Glorious Revolution (1688)</strong> — birth of constitutional monarchy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ PART FOUR ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART FOUR</span>
+    🧍 Individualism — The Metaphysical Core
+  </h2>
+
+  <div class="card crimson-card reveal">
+    <h4 class="mini-heading">📖 Definition</h4>
+    <div class="info-box">
+      <span class="label">🧍 Core Idea</span>
+      <p><strong>Individualism</strong> holds that each person is the <span class="gold-text">primary unit of reality and value</span>. Society is an <em>aggregate of individuals</em>, not an organic whole. The individual <strong>precedes</strong> the community in moral and political importance.</p>
+    </div>
+
+    <h4 class="mini-heading">🎯 Why Individualism Emerged</h4>
+    <p>In feudal society, the individual was crushed by collective identity (caste, guild, church). Liberalism rose as a rebellion of <em>self</em> against <em>system</em>:</p>
+    <ul class="cross-list">
+      <li>No merit-based opportunity — your birth decided your fate</li>
+      <li>Property determined by lineage, not effort</li>
+      <li>No space for personal development or self-fashioning</li>
+      <li>Identity dictated by guild, church, and lord</li>
+    </ul>
+
+    <div class="quote-box">
+      Over himself, over his own body and mind, the individual is sovereign.
+      <span class="quote-author">J.S. Mill, <em>On Liberty</em> (1859)</span>
+    </div>
+
+    <h4 class="mini-heading">🔥 C.B. Macpherson's Critique: Possessive Individualism</h4>
+    <p>In <em>The Political Theory of Possessive Individualism</em> (1962), Canadian thinker <span class="gold-text">C.B. Macpherson</span> exposed the dark underside of classical liberalism:</p>
+    <ul class="fire-list">
+      <li>You <strong>own</strong> your talents, capabilities, and even your personhood — as if they were property</li>
+      <li>You owe <span class="crimson-text">nothing</span> to society — no debt, no obligation</li>
+      <li>Human relations become <strong>market relations</strong> 💱 — everything (including labor and love) becomes a commodity</li>
+      <li>Society = a collection of self-interested traders</li>
+    </ul>
+
+    <div class="critique-box">
+      <span class="label">⚠️ Critique</span>
+      <p>This leads to a <strong>cold, atomized, hyper-competitive society</strong> where the vulnerable (sick, elderly, disabled, poor) are abandoned to the "free market." Solidarity dies; loneliness rises. The price of freedom becomes alienation.</p>
+    </div>
+
+    <div class="flow-diagram">
+      <span class="flow-step">🧍 Individual</span>
+      <span class="flow-arrow">⬇️</span>
+      <span class="flow-step">🏷️ Self-Ownership</span>
+      <span class="flow-arrow">⬇️</span>
+      <span class="flow-step">💱 Market Relations</span>
+      <span class="flow-arrow">⬇️</span>
+      <span class="flow-step" style="background:linear-gradient(135deg,var(--crimson),var(--amber)); color:#fff;">⚠️ Possessive Society</span>
+    </div>
+  </div>
+
+  <!-- ============ PART FIVE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART FIVE</span>
+    🤝 Contract Philosophy — The State as a Fiduciary
+  </h2>
+
+  <div class="card emerald-card reveal">
+    <h4 class="mini-heading">🏛️ John Locke's Social Contract</h4>
+    <p>Locke's <em>Two Treatises of Government</em> (1689) revolutionized political thought by reimagining the origin of political authority.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>🎬 Stage</th><th>📍 Condition</th><th>📜 Rights</th><th>⚠️ Problem</th><th>💡 Solution</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>State of Nature</strong></td><td>Pre-political 🌳</td><td>Natural rights: <span class="gold-text">Life, Liberty, Property</span></td><td>Insecure protection (no impartial judge)</td><td>Create civil society via consent</td></tr>
+        <tr><td><strong>Civil Society</strong></td><td>With state 🏛️</td><td>Same natural rights + legal enforcement</td><td>State might abuse power</td><td>Limited government + ongoing consent</td></tr>
+        <tr><td><strong>Purpose of State</strong></td><td>To protect natural rights</td><td>—</td><td>—</td><td>If state fails → <span class="crimson-text">right of revolution</span> 🔥</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">🔑 The Fiduciary Trust</span>
+      <p>The state is not the <em>owner</em> of power — it is a <strong>trustee</strong>, holding power on behalf of the people. The people are the <em>beneficiaries</em>. If the trustee betrays the trust (violates rights), the contract is dissolved, and citizens may legitimately overthrow the government. This idea inspired the American Declaration of Independence (1776).</p>
+    </div>
+
+    <h4 class="mini-heading">⚖️ Rule of Law & Limited Government</h4>
+    <ul class="feature-list">
+      <li>📿 <strong>Divine Theory of State</strong> (medieval) — kings ruled by God's mandate → REPLACED by</li>
+      <li>📜 <strong>Social Contract Theory</strong> — kings rule by people's consent</li>
+      <li>⚖️ <strong>Rule of Law</strong> — everyone, <em>including rulers</em>, is subject to the law</li>
+      <li>🏛️ <strong>Constitutionalism</strong> — written or unwritten limits on state power</li>
+      <li>🔄 <strong>Separation of Powers</strong> — Legislature, Executive, Judiciary act as mutual checks</li>
+    </ul>
+
+    <div class="flow-diagram">
+      <span class="flow-step">🌳 State of Nature</span>
+      <span class="flow-arrow">⬇️ consent</span>
+      <span class="flow-step">🤝 Social Contract</span>
+      <span class="flow-arrow">⬇️</span>
+      <span class="flow-step">🏛️ Limited Government</span>
+      <span class="flow-arrow">⬇️ if betrayed</span>
+      <span class="flow-step" style="background:linear-gradient(135deg,var(--crimson),var(--amber)); color:#fff;">🔥 Right to Revolution</span>
+    </div>
+  </div>
+
+  <!-- ============ PART SIX ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART SIX</span>
+    🗺️ Types of Liberalism — A Family Tree
+  </h2>
+
+  <div class="card violet-card reveal">
+    <p style="font-size: 1.05rem;">Liberalism is <strong class="gold-text">not monolithic</strong>. Like a great river, it branches as it flows through history — each branch responding to new challenges, new injustices, new dreams. Below are the four major branches that shape modern political discourse. 🌳</p>
+  </div>
+
+  <!-- ============ 1. CLASSICAL LIBERALISM ============ -->
+  <div class="type-card gold-card reveal" style="--accent: #f5c842; --accent-glow: rgba(245,200,66,0.35);">
+    <h3 class="type-title"><span class="type-avatar">🏛️</span> 1️⃣ Classical Liberalism</h3>
+    <div class="type-period">📅 17th–19th Century · The Original Liberal Revolt</div>
+
+    <div style="margin-bottom: 18px;">
+      <span class="type-badge badge-classical">17th–19th Century</span>
+      <span class="type-badge badge-classical">Negative Liberty</span>
+      <span class="type-badge badge-classical">Laissez-Faire</span>
+    </div>
+
+    <div class="belief-box">
+      <span class="label">📌 Core Idea</span>
+      <p><span class="gold-text">Negative liberty</span> + <span class="gold-text">Minimal state</span> + <span class="gold-text">Laissez-faire economy</span> = The individual freed from monarchy, church, and tradition.</p>
+    </div>
+
+    <h4 class="mini-heading">🧠 Key Thinkers</h4>
+    <p>John Locke 🇬🇧, Adam Smith 🇬🇧, Montesquieu 🇫🇷, Voltaire 🇫🇷, Thomas Paine 🇺🇸, David Ricardo 🇬🇧, Alexis de Tocqueville 🇫🇷, Benjamin Constant 🇫🇷.</p>
+
+    <h4 class="mini-heading">📖 Defining Features</h4>
+    <ul class="feature-list">
+      <li>📜 <strong>Natural rights are pre-political</strong> — they exist before the state and cannot be created or destroyed by it</li>
+      <li>⚠️ <strong>State = necessary evil</strong> — bad but unavoidable (Thomas Paine's phrase) <br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎[Government is bad because it limits our freedom but we must tolerate it because the alternative (total lawlessness) is much worse]</li>
+      <li>💰 <strong>Free market economy</strong> — Adam Smith's "invisible hand" 🤲 coordinates self-interest into collective good<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎[Private greed naturally turns into public benefits through a free market]<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎╰>  ‎ ‎ ‎ ‎In a free market people pursuing self-interest/profit unintentionally create jobs, goods, services, innovation, & economic growth, benefiting society</li>
+      <li>🌃 <strong>Night-watchman state</strong> — defense, courts, basic order — nothing more</li>
+      <li>🗳️ <strong>Limited franchise</strong> initially (property-owning males) — democracy came later</li>
+      <li>🎩 <strong>Bourgeois liberalism</strong> — championed by the rising middle class against aristocracy</li>
+    </ul>
+
+    <div class="insight-box">
+      <span class="label">💡 Deep Insight</span>
+      <p>Classical liberalism was a <span class="gold-text">revolutionary ideology</span> against three towering tyrannies: ✝️ Theocracy (church rule), 👑 Monarchy (absolute kings), and 🏰 Feudalism (birth-based hierarchy). It sought to liberate the <em>energetic, rational, productive</em> individual from centuries of suffocating tradition. It was, in its day, the most radical philosophy in the world.</p>
+    </div>
+
+    <div class="critique-box">
+      <span class="label">⚠️ Critique</span>
+      <p><strong>Major Weakness</strong>: It ignored <em>structural inequalities</em>. The "free" worker starving because no one will hire him is not truly free. Formal equality on paper meant little to those crushed by industrial capitalism. The factory replaced the lord; the wage became the new chain. This blind spot opened the door to Marxism — and to Modern Liberalism.</p>
+    </div>
+  </div>
+
+  <!-- ============ 2. MODERN LIBERALISM ============ -->
+  <div class="type-card emerald-card reveal" style="--accent: #4ade80; --accent-glow: rgba(74,222,128,0.35);">
+    <h3 class="type-title"><span class="type-avatar">❤️</span> 2️⃣ Modern Liberalism</h3>
+    <div class="type-period">📅 20th Century · Social · Welfare · New Liberalism</div>
+
+    <div style="margin-bottom: 18px;">
+      <span class="type-badge badge-modern">20th Century</span>
+      <span class="type-badge badge-modern">Positive Liberty</span>
+      <span class="type-badge badge-modern">Welfare State</span>
+    </div>
+
+    <div class="belief-box">
+      <span class="label">📌 Core Idea</span>
+      <p><span class="gold-text">Positive liberty</span> + <span class="gold-text">Enabling state</span> + <span class="gold-text">Social welfare</span> = The individual <em>empowered</em>, not just left alone.</p>
+    </div>
+
+    <h4 class="mini-heading">🧠 Key Thinkers</h4>
+    <p>T.H. Green 🇬🇧, L.T. Hobhouse 🇬🇧, J.A. Hobson 🇬🇧, John Maynard Keynes 🇬🇧, John Rawls 🇺🇸, Ronald Dworkin 🇺🇸, Amartya Sen 🇮🇳, Martha Nussbaum 🇺🇸.</p>
+
+    <h4 class="mini-heading">📖 Defining Features</h4>
+    <ul class="feature-list">
+      <li>🦅 <strong>Liberty = capacity, not just absence of constraint</strong> — freedom requires <em>real options</em></li>
+      <li>🏥 <strong>State as enabler</strong> — must create socio-economic conditions for liberty (education, healthcare, unemployment insurance, housing)</li>
+      <li>📊 <strong>Managed capitalism</strong> — inspired by <span class="gold-text">J.M. Keynes</span> — state intervenes to smooth booms & busts</li>
+      <li>💰 <strong>Progressive taxation</strong> — redistribute to ensure dignity (The rate of tax increases with an increase in income)</li>
+      <li>⚖️ <strong>Substantive equality</strong>, not merely formal equality (Treating people differently by recognizing their diverse backgrounds &‎ disadvantages to achieve truly equal  outcomes, rather than just treating everyone the same)</li>
+      <li>🛡️ <strong>Social safety net</strong> — protection against accidents of birth and fortune (Government services like welfare, free healthcare, & unemployment benefits - that prevents poor or vulnerable people from falling into severe poverty)</li>
+    </ul>
+
+    <div class="insight-box">
+      <span class="label">💡 Deep Insight</span>
+      <p>Modern liberals saw the cruel joke of classical liberalism: <em>formal equality</em> (everyone <strong>can</strong> buy a mansion) is meaningless without <em>substantive equality</em> (only billionaires <strong>actually can</strong>). They introduced progressive taxation 💰, public goods 🏞️, and social safety nets 🛡️ — transforming liberalism from an ideology of <span class="azure-text">freedom for the strong</span> into one of <span class="emerald-text">freedom for all</span>.</p>
+    </div>
+
+    <h4 class="mini-heading">⚖️ The Great Shift</h4>
+    <div class="two-col">
+      <div class="col-card neg">
+        <h4>⏮️ FROM (Classical)</h4>
+        <ul class="feature-list">
+          <li>🚧 State as threat</li>
+          <li>💼 Laissez-faire</li>
+          <li>🚫 Negative liberty</li>
+          <li>🧍 Atomistic individual</li>
+        </ul>
+      </div>
+      <div class="col-card pos">
+        <h4>⏭️ TO (Modern)</h4>
+        <ul class="feature-list">
+          <li>🤝 State as enabler</li>
+          <li>📊 Economic management</li>
+          <li>✅ Positive liberty</li>
+          <li>🌍 Social individual</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="mini-heading">📚 John Rawls' Contribution — <em>A Theory of Justice</em> (1971)</h4>
+    <ul class="feature-list">
+      <li>🕶️ <strong>Veil of Ignorance</strong> — design society without knowing your future position in it</li>
+      <li>⚖️ <strong>Difference Principle</strong> — social and economic inequalities are allowed <em>only if</em> they benefit the least advantaged</li>
+      <li>🤝 <strong>Overlapping Consensus</strong> — in a pluralistic society, people with different worldviews can agree on basic political justice</li>
+      <li>📐 <strong>Justice as Fairness</strong> — Rawls' famous formulation</li>
+    </ul>
+
+    <div class="quote-box">
+      Each person possesses an inviolability founded on justice that even the welfare of society as a whole cannot override.<br>[Every single human being has basic rights that can never be taken away, not even for the "greater good" of society]</br>
+      <span class="quote-author">John Rawls, <em>A Theory of Justice</em> (1971)</span>
+    </div>
+  </div>
+
+  <!-- ============ 3. LIBERTARIANISM ============ -->
+  <div class="type-card crimson-card reveal" style="--accent: #ff5c8a; --accent-glow: rgba(255,92,138,0.35);">
+    <h3 class="type-title"><span class="type-avatar">⚡</span> 3️⃣ Libertarianism</h3>
+    <div class="type-period">📅 20th Century Revival · Radical Negative Liberty</div>
+
+    <div style="margin-bottom: 18px;">
+      <span class="type-badge badge-libertarian">20th Century Revival</span>
+      <span class="type-badge badge-libertarian">Radical Negative Liberty</span>
+      <span class="type-badge badge-libertarian">Minimal/No State</span>
+    </div>
+
+    <div class="belief-box">
+      <span class="label">📌 Core Idea</span>
+      <p><span class="gold-text">Radical negative liberty</span> + <span class="gold-text">Minimal (or no) state</span> + <span class="gold-text">Absolute property rights</span> = A passionate rebellion against modern welfare liberalism.</p>
+    </div>
+
+    <h4 class="mini-heading">🧠 Key Thinkers</h4>
+    <p>Ludwig von Mises 🇦🇹, Friedrich Hayek 🇦🇹, Milton Friedman 🇺🇸, Murray Rothbard 🇺🇸, Robert Nozick 🇺🇸, David Friedman 🇺🇸, Ayn Rand 🇺🇸 (philosophical inspiration).</p>
+
+    <h4 class="mini-heading">📖 Defining Features</h4>
+    <ul class="feature-list">
+      <li>🚨 A <strong>critique of modern liberalism</strong> — welfare state = "creeping serfdom"</li>
+      <li>👋 The state should <strong>leave people alone</strong> — personal responsibility leads to success or failure</li>
+      <li>🏠 <strong>Property rights are nearly absolute</strong> — Nozick's famous slogan: <em>"Taxation is on a par with forced labor"</em></li>
+      <li>💱 <strong>Spontaneous order</strong> — markets coordinate better than any central planner</li>
+      <li>🧬 <strong>Self-ownership</strong> — your body, talents, and labor are yours alone</li>
+    </ul>
+
+    <h4 class="mini-heading">🔥 The Extreme: Anarcho-Capitalism</h4>
+    <p>Pushed to its logical extreme by <span class="gold-text">Murray Rothbard</span> and <span class="gold-text">David Friedman</span>: even the minimal state is unjust. <em>All</em> services — police 🚓, courts ⚖️, defense 🛡️, roads 🛣️ — should be private.</p>
+
+    <h4 class="mini-heading">🆚 Classical Liberalism vs. Libertarianism</h4>
+    <table class="data-table compare-table">
+      <thead>
+        <tr><th>Aspect</th><th>🏛️ Classical Liberalism</th><th>⚡ Libertarianism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Born against</strong></td><td>Monarchy, feudalism, theocracy</td><td>Welfare state, modern liberalism</td></tr>
+        <tr><td><strong>View of state</strong></td><td>Necessary evil</td><td>Evil (sometimes <em>unnecessary</em>)</td></tr>
+        <tr><td><strong>Economic stance</strong></td><td>Laissez-faire [ tiny govt ]</td><td>Radical free market [ no govt ]</td></tr>
+        <tr><td><strong>Era</strong></td><td>Pre-industrial revolt</td><td>Post-industrial counter-revolt</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="mini-heading">⚠️ Hayek's Warning: <em>The Road to Serfdom</em> (1944)</h4>
+    <div class="quote-box">
+      Any centralized planning, even for good ends, leads inevitably to totalitarianism — because it concentrates the power to decide how all of society's resources will be used. The road to hell is paved with welfare schemes.
+      <span class="quote-author">Friedrich Hayek (paraphrased)</span>
+    </div>
+
+    <h4 class="mini-heading">📕 Robert Nozick's <em>Anarchy, State, and Utopia</em> (1974)</h4>
+    <p>Nozick's <span class="gold-text">Entitlement Theory of Justice</span> argues that a distribution is just if it arises from:</p>
+    <ul class="check-list">
+      <li><strong>Just acquisition</strong> (you didn't steal it)</li>
+      <li><strong>Just transfer</strong> (you got it through voluntary exchange or gift)</li>
+      <li><strong>Rectification</strong> of past injustices</li>
+    </ul>
+    <p>Redistribution by the state violates these principles — it is, in Nozick's view, <em>forced labor</em>.</p>
+
+    <div class="critique-box">
+      <span class="label">⚠️ Critique</span>
+      <ul class="feature-list" style="margin-top:8px;">
+        <li>Ignores <em>systemic disadvantage</em> — disability, geography, historical oppression (slavery, colonialism)</li>
+        <li>"Free contracts" can still be <em>coercive</em> — a desperate worker accepting sweatshop wages isn't truly choosing</li>
+        <li>Treats existing property distributions as natural, ignoring their often violent origins</li>
+        <li>Romanticizes the market while ignoring market failures (monopolies, externalities, pollution)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ 4. NEO-LIBERALISM ============ -->
+  <div class="type-card violet-card reveal" style="--accent: #b388ff; --accent-glow: rgba(179,136,255,0.35);">
+    <h3 class="type-title"><span class="type-avatar">🌍</span> 4️⃣ Neo-Liberalism</h3>
+    <div class="type-period">📅 Late 20th–21st Century · Globalized · Market-Led</div>
+
+    <div style="margin-bottom: 18px;">
+      <span class="type-badge badge-neo">Late 20th–21st Century</span>
+      <span class="type-badge badge-neo">Globalized</span>
+      <span class="type-badge badge-neo">Market-Led Reform</span>
+    </div>
+
+    <div class="belief-box">
+      <span class="label">📌 Core Idea</span>
+      <p>Revived <span class="gold-text">classical/libertarian principles</span> + <span class="gold-text">State-led market reforms</span> + <span class="gold-text">Global economic integration</span> = Libertarianism with a pragmatic, governing face.</p>
+    </div>
+
+    <h4 class="mini-heading">🧠 Key Political Figures & Thinkers</h4>
+    <ul class="feature-list">
+      <li>👩‍💼 <strong>Margaret Thatcher</strong> 🇬🇧 (PM 1979–1990) — privatization, deregulation</li>
+      <li>👨‍💼 <strong>Ronald Reagan</strong> 🇺🇸 (Pres. 1981–1989) — tax cuts, supply-side economics ("Reaganomics")</li>
+      <li>🎓 <strong>Milton Friedman</strong> — intellectual architect (Chicago School)</li>
+      <li>🌐 <strong>Washington Consensus</strong> (1989) — IMF, World Bank, US Treasury policy package</li>
+    </ul>
+
+    <h4 class="mini-heading">📖 Defining Features</h4>
+    <ul class="feature-list">
+      <li>📉 <strong>Minimal state in economy</strong> — privatization, deregulation, tax cuts</li>
+      <li>🌐 <strong>Free trade globally</strong> — open borders for capital and goods</li>
+      <li>🔄 <strong>Paradox</strong>: the state leads the reform process — <em>the state shrinks the state</em></li>
+      <li>🛡️ <strong>Not completely anti-welfare</strong> — accepts a minimal safety net for basic dignity</li>
+      <li>📊 <strong>Financialization</strong> — finance becomes the dominant economic sector</li>
+      <li>🏢 <strong>Public-private partnerships</strong> replace pure state provision</li>
+    </ul>
+
+    <h4 class="mini-heading">📍 Real-World Example: India 1991</h4>
+    <p>India's <span class="gold-text">New Economic Policy (NEP)</span> under PM P.V. Narasimha Rao & FM Manmohan Singh embodied neo-liberalism:</p>
+    <ul class="feature-list">
+      <li>🔓 <strong>L</strong>iberalization — abolished License Raj</li>
+      <li>🏢 <strong>P</strong>rivatization — disinvestment of PSUs</li>
+      <li>🌍 <strong>G</strong>lobalization — opened to foreign investment & trade</li>
+    </ul>
+    <p>Result: shifted from <em>state-led development</em> (Nehruvian socialism) to <em>market-led growth</em>.</p>
+
+    <h4 class="mini-heading">🆚 Neo-Liberalism vs. Libertarianism</h4>
+    <table class="data-table compare-table">
+      <thead>
+        <tr><th>Aspect</th><th>🌍 Neo-Liberalism</th><th>⚡ Libertarianism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>State role</strong></td><td>Enabler of market reforms</td><td>Minimal, ideally none</td></tr>
+        <tr><td><strong>Welfare</strong></td><td>Minimal (basic dignity)</td><td>None or hostile</td></tr>
+        <tr><td><strong>Global reach</strong></td><td>Hegemonic global ideology</td><td>Less focused on global governance</td></tr>
+        <tr><td><strong>Practical politics</strong></td><td>Governing philosophy (Thatcher, Reagan)</td><td>Mostly oppositional/academic</td></tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      <span class="label">🔍 Deep Insight</span>
+      <p>Neo-liberalism is <strong>libertarianism with a realistic face</strong> — it accepts that <em>states must orchestrate their own obsolescence</em>. The state is used to dismantle the state's role in the economy. It is the politically viable cousin of the philosophically pure libertarian dream.</p>
+    </div>
+
+    <div class="critique-box">
+      <span class="label">⚠️ Critique</span>
+      <ul class="feature-list" style="margin-top:8px;">
+        <li>📈 Increases <em>inequality</em> — creates winners and losers on a massive scale (Piketty's data)</li>
+        <li>🗳️ Undermines <em>democratic sovereignty</em> — markets dictate policy (bond market vetoes elected governments)</li>
+        <li>💥 <strong>2008 financial crisis</strong> exposed the risks of unbridled deregulation</li>
+        <li>🌡️ Treats climate change as an externality — accelerates ecological collapse</li>
+        <li>🏥 Erodes public goods (healthcare, education) by marketizing them</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ PART SEVEN ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART SEVEN</span>
+    📊 Thinkers, Concepts & Books
+  </h2>
+
+  <div class="card gold-card reveal">
+    <table class="data-table">
+      <thead>
+        <tr><th>🎓 Thinker</th><th>💡 Key Concept</th><th>📕 Famous Book</th><th>✨ Unique Insight</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🇬🇧 <strong>John Locke</strong></td><td>Government as Fiduciary Trust</td><td><em>Two Treatises of Government</em> (1689)</td><td>State has no right to violate natural rights</td></tr>
+        <tr><td>🇫🇷 <strong>Montesquieu</strong></td><td>Separation of Powers</td><td><em>The Spirit of the Laws</em> (1748)</td><td>Power must check power</td></tr>
+        <tr><td>🇫🇷 <strong>Voltaire</strong></td><td>Freedom of Religion & Speech</td><td><em>Treatise on Tolerance</em> (1763)</td><td>"I disapprove of what you say, but will defend to the death your right to say it"</td></tr>
+        <tr><td>🇬🇧 <strong>Adam Smith</strong></td><td>Laissez-faire, Invisible Hand</td><td><em>Wealth of Nations</em> (1776)</td><td>Self-interest can produce collective good</td></tr>
+        <tr><td>🇺🇸 <strong>Thomas Paine</strong></td><td>"State is a necessary evil"</td><td><em>Rights of Man</em> (1791)</td><td>Revolution against unjust authority is legitimate</td></tr>
+        <tr><td>🇬🇧 <strong>David Ricardo</strong></td><td>Comparative Advantage</td><td><em>Principles of Political Economy</em> (1817)</td><td>Free trade benefits all nations</td></tr>
+        <tr><td>🇫🇷 <strong>Benjamin Constant</strong></td><td>Ancient vs. Modern Liberty</td><td><em>The Liberty of Ancients…</em> (1819)</td><td>Modern liberty is private autonomy, not public participation</td></tr>
+        <tr><td>🇬🇧 <strong>J.S. Mill</strong></td><td>Harm Principle</td><td><em>On Liberty</em> (1859)</td><td>Only harm to others justifies intervention</td></tr>
+        <tr><td>🇬🇧 <strong>T.H. Green</strong></td><td>Social / Positive Liberty</td><td><em>Prolegomena to Ethics</em> (1883)</td><td>State enables freedom through education & laws</td></tr>
+        <tr><td>🇬🇧 <strong>L.T. Hobhouse</strong></td><td>Liberalism as social cooperation</td><td><em>Liberalism</em> (1911)</td><td>Liberty is harmonious with social welfare</td></tr>
+        <tr><td>🇦🇹 <strong>Ludwig von Mises</strong></td><td>Critique of Central Planning</td><td><em>Human Action</em> (1949)</td><td>Prices are essential for rational calculation</td></tr>
+        <tr><td>🇦🇹 <strong>Friedrich Hayek</strong></td><td>Free Market Capitalism</td><td><em>The Road to Serfdom</em> (1944)</td><td>Planning leads to tyranny</td></tr>
+        <tr><td>🇺🇸 <strong>Milton Friedman</strong></td><td>Monetarism, Chicago School</td><td><em>Capitalism and Freedom</em> (1962)</td><td>Economic freedom is prerequisite for political freedom</td></tr>
+        <tr><td>🇺🇸 <strong>Murray Rothbard</strong></td><td>Anarcho-capitalism</td><td><em>Man, Economy, and State</em> (1962)</td><td>Even roads, courts, defense can be private</td></tr>
+        <tr><td>🇺🇸 <strong>John Rawls</strong></td><td>Difference Principle, Veil of Ignorance</td><td><em>A Theory of Justice</em> (1971)</td><td>Justice is fairness; inequalities must help the worst-off</td></tr>
+        <tr><td>🇺🇸 <strong>Robert Nozick</strong></td><td>Entitlement Theory</td><td><em>Anarchy, State, and Utopia</em> (1974)</td><td>Taxation = forced labor; only minimal state is just</td></tr>
+        <tr><td>🇮🇳 <strong>Amartya Sen</strong></td><td>Capability Approach</td><td><em>Development as Freedom</em> (1999)</td><td>Freedom = real capabilities, not just rights on paper</td></tr>
+        <tr><td>🇱🇻 <strong>Isaiah Berlin</strong></td><td>Two Concepts of Liberty</td><td><em>Two Concepts of Liberty</em> (1958)</td><td>Negative and positive liberty are deeply different</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ PART EIGHT ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART EIGHT</span>
+    🧠 Final Comparative Summary — 4 Faces of Liberalism
+  </h2>
+
+  <div class="card cyan-card reveal">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>🔍 Feature</th>
+          <th>🏛️ Classical</th>
+          <th>❤️ Modern</th>
+          <th>⚡ Libertarian</th>
+          <th>🌍 Neo-Liberal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>⏳ Time</strong></td><td>17th–19th c.</td><td>20th c.</td><td>20th c.</td><td>Late 20th–21st c.</td></tr>
+        <tr><td><strong>🗽 Liberty Type</strong></td><td>Negative</td><td>Positive</td><td>Radical Negative</td><td>Negative</td></tr>
+        <tr><td><strong>🏛️ State Role</strong></td><td>Minimal (night-watchman)</td><td>Enabling / Welfare</td><td>Minimal to none</td><td>Enabler of markets</td></tr>
+        <tr><td><strong>💰 Economic Model</strong></td><td>Laissez-faire</td><td>Keynesian management</td><td>Radical free market</td><td>Globalized, deregulated</td></tr>
+        <tr><td><strong>⚔️ Main Enemy</strong></td><td>Monarchy, feudalism</td><td>Poverty, inequality</td><td>Welfare state</td><td>Bureaucracy, public sector</td></tr>
+        <tr><td><strong>🌟 Hero</strong></td><td>The rational entrepreneur</td><td>The empowered citizen</td><td>The sovereign individual</td><td>The global investor</td></tr>
+        <tr><td><strong>⚠️ Key Risk</strong></td><td>Inequality, exploitation</td><td>State overreach, paternalism</td><td>Social Darwinism</td><td>Financial crises, inequality</td></tr>
+        <tr><td><strong>👤 Iconic Thinker</strong></td><td>Locke / Smith</td><td>Rawls / Green</td><td>Nozick / Hayek</td><td>Friedman / Thatcher</td></tr>
+      </tbody>
+    </table>
+
+    <div class="flow-diagram">
+      <span class="flow-step">🏛️ Classical (17th c.)</span>
+      <span class="flow-arrow">⬇️ industrial crisis</span>
+      <span class="flow-step">❤️ Modern (20th c.)</span>
+      <span class="flow-arrow">⬇️ welfare backlash</span>
+      <span class="flow-step">⚡ Libertarian</span>
+      <span class="flow-arrow">⬇️ practical politics</span>
+      <span class="flow-step" style="background:linear-gradient(135deg,var(--violet),var(--azure)); color:#fff;">🌍 Neo-Liberal (today)</span>
+    </div>
+  </div>
+
+  <!-- ============ PART NINE — TIMELINE ============ -->
+  <h2 class="part-header">
+    <span class="part-num">PART NINE</span>
+    ⏳ Timeline of Liberal Thought
+  </h2>
+
+  <div class="card azure-card reveal">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1688</div>
+        <p>🇬🇧 <strong>Glorious Revolution</strong> — birth of constitutional monarchy in England</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1689</div>
+        <p>📕 <strong>John Locke</strong> publishes <em>Two Treatises of Government</em> — foundation of liberal theory</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1748</div>
+        <p>📕 <strong>Montesquieu</strong> publishes <em>The Spirit of the Laws</em> — separation of powers</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1776</div>
+        <p>🇺🇸 <strong>American Revolution</strong> + 📕 <strong>Adam Smith's</strong> <em>Wealth of Nations</em></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1789</div>
+        <p>🇫🇷 <strong>French Revolution</strong> — Liberté, Égalité, Fraternité</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1859</div>
+        <p>📕 <strong>J.S. Mill</strong> publishes <em>On Liberty</em> — the Harm Principle</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1883</div>
+        <p>📕 <strong>T.H. Green</strong> develops positive liberty in <em>Prolegomena to Ethics</em></p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1944</div>
+        <p>📕 <strong>Hayek</strong> publishes <em>The Road to Serfdom</em> — libertarian counterattack</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1958</div>
+        <p>📕 <strong>Isaiah Berlin's</strong> <em>Two Concepts of Liberty</em> — the great divide formalized</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1971</div>
+        <p>📕 <strong>John Rawls</strong> publishes <em>A Theory of Justice</em> — modern liberalism's masterpiece</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1974</div>
+        <p>📕 <strong>Robert Nozick</strong> publishes <em>Anarchy, State, and Utopia</em> — libertarian response</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1979–89</div>
+        <p>🌍 <strong>Thatcher–Reagan era</strong> — neo-liberalism becomes dominant global ideology</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1991</div>
+        <p>🇮🇳 <strong>India's New Economic Policy</strong> — neo-liberal reforms (LPG)</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 1999</div>
+        <p>📕 <strong>Amartya Sen's</strong> <em>Development as Freedom</em> — capability approach</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">📅 2008</div>
+        <p>💥 <strong>Global Financial Crisis</strong> exposes neo-liberalism's contradictions</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ============ CONCLUSION SECTION ============ -->
+  <h2 class="part-header">
+    <span class="part-num">CONCLUSION</span>
+    🎯 Why Liberalism Still Matters
+  </h2>
+
+  <div class="card emerald-card reveal">
+    <p style="font-size:1.08rem;">Liberalism is <strong class="gold-text">not a static doctrine</strong> but a <em>living argument</em> 💬 about the relationship between the individual and power. Its tensions —</p>
+    <ul class="feature-list">
+      <li>🚫 Negative vs. ✅ Positive liberty</li>
+      <li>🏛️ State vs. 💱 Market</li>
+      <li>⚖️ Equality vs. 🗽 Freedom</li>
+      <li>🧍 Individual vs. 🌍 Community</li>
+      <li>🏠 Local sovereignty vs. 🌐 Global integration</li>
+    </ul>
+    <p>— are <strong class="azure-text">the very questions that define modern politics</strong>. Every election, every protest, every policy debate is an echo of arguments first articulated by Locke, Mill, Rawls, and Nozick.</p>
+
+    <div class="insight-box">
+      <span class="label">💡 Final Insight</span>
+      <p>To understand liberalism is to understand the <span class="gold-text">DNA of modern democratic societies</span> 🧬 — their glories (human rights, rule of law, prosperity), their contradictions (freedom alongside vast inequality), and their unfinished struggles (climate justice, AI governance, global migration). Liberalism is not just history — it is the <em>operating system</em> of the modern world, perpetually being patched and updated.</p>
+    </div>
+  </div>
+
+  <!-- ============ EXAM POINTS ============ -->
+  <h2 class="part-header">
+    <span class="part-num">EXAM CRUNCH</span>
+    ✅ Final Examination Points
+  </h2>
+
+  <div class="card emerald-card reveal">
+    <div class="exam-point">
+      <span class="exam-num">1</span>
+      <p><strong>Individual Liberty</strong> is liberalism's defining value — freedom is the highest political good 🗽</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">2</span>
+      <p><strong>Isaiah Berlin (1958)</strong> articulated the great divide: <strong>Negative</strong> vs <strong>Positive</strong> liberty ⚖️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">3</span>
+      <p><strong>John Locke</strong> is the "Father of Liberalism" — social contract + natural rights (Life, Liberty, Property) 📜</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">4</span>
+      <p><strong>J.S. Mill's Harm Principle</strong> — state can only restrict liberty to prevent harm to others 🚧</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">5</span>
+      <p>Four branches: <strong>Classical, Modern, Libertarian, Neo-Liberal</strong> — each a response to its era 🌳</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">6</span>
+      <p><strong>Rawls (1971)</strong> — Veil of Ignorance + Difference Principle = Justice as Fairness 🕶️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">7</span>
+      <p><strong>Nozick (1974)</strong> — Entitlement Theory: "Taxation = forced labor" ⚡</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">8</span>
+      <p><strong>Hayek (1944)</strong> — <em>Road to Serfdom</em> warns: central planning leads to tyranny ⚠️</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">9</span>
+      <p><strong>Macpherson's "Possessive Individualism"</strong> — critique of liberal atomism 🔥</p>
+    </div>
+    <div class="exam-point">
+      <span class="exam-num">10</span>
+      <p><strong>India 1991 LPG reforms</strong> — Liberalization, Privatization, Globalization = neo-liberal turn 🇮🇳</p>
+    </div>
+  </div>
+
+  <!-- ============ STAR QUOTE ============ -->
+  <div class="star-quote reveal">
+    🌟 "Sapere Aude — Dare to Know" — Immanuel Kant, Motto of the Enlightenment 🌟
+  </div>
+
+  <!-- ============ REVISION BOX ============ -->
+  <div class="revision-box reveal">
+    <p style="font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 18px; position: relative; z-index: 1;">🏁 ONE-LINE REVISION 🏁</p>
+    <p class="revision-text">
+      <b>Liberalism — born in revolt against <strong style="color: var(--crimson);">kings, church, and feudalism</strong> 👑 — defines itself through <strong style="color: var(--gold);">individual liberty</strong> 🗽, rationality 🧠, consent 🤝, and rule of law ⚖️.
+      It evolved from <strong style="color: var(--gold-soft);">Classical Liberalism</strong> (Locke, Smith) 🏛️
+      into <strong style="color: var(--emerald);">Modern Liberalism</strong> (Green, Rawls) ❤️ —
+      then split into a great debate between <strong style="color: var(--crimson);">Libertarianism</strong> (Hayek, Nozick) ⚡
+      and <strong style="color: var(--violet);">Neo-Liberalism</strong> (Friedman, Thatcher) 🌍 —
+      shaping the operating system of every modern democracy</b>
+    </p>
+  </div>
+
+  <!-- ============ FINAL VERDICT ============ -->
+  <div class="conclusion reveal">
+    <div class="conclusion-inner">
+      <h3>📌 ONE-LINE MASTER VERDICT</h3>
+      <p>
+        <b>"Liberalism is the philosophy of the <span class="gold-text">free individual</span> — born in revolt against kings, refined in the fight against poverty, defended against tyranny, and now challenged to answer the great questions of <span class="azure-text">our own century</b></span>." 🗽✨
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <div class="footer">
+    <p><span class="footer-emoji">⛓️‍💥</span> <strong><b>LIBERALISM</b></strong> <span class="footer-emoji">🗽</span></p>
+    <p style="margin-top: 12px; font-style: italic;"><b>"Give me liberty, or give me death!" — Patrick Henry 🔥</b></p>
+<br><p><h1><strong style="color:var(--gold)"><b>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</b></strong></h1>
+  </div>
+
+</div>
+
+<script>
+  // Generate twinkling stars
+  const starsContainer = document.getElementById('stars');
+  const colors = ['#f5c842', '#4fc3f7', '#b388ff', '#67e8f9', '#ff7eb3', '#4ade80'];
+  for (let i = 0; i < 50; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 3 + 1;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.background = colors[Math.floor(Math.random() * colors.length)];
+    s.style.boxShadow = `0 0 ${size * 3}px ${s.style.background}`;
+    s.style.animationDuration = (Math.random() * 4 + 2) + 's';
+    s.style.animationDelay = Math.random() * 5 + 's';
+    starsContainer.appendChild(s);
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Title click ripple effect
+  document.querySelector('.main-title').addEventListener('click', function() {
+    this.style.animation = 'none';
+    setTimeout(() => { this.style.animation = 'shimmer 4s linear infinite'; }, 10);
+  });
+</script>
+
+</body>
+</html>
