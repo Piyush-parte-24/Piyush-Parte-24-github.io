@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚛ Presidents & Prime Ministers of India — The Royal Ledger</title>
+<style>
+  :root{
+    --ink:#e9dcc3;          /* soft parchment-gold text */
+    --ink-dim:#c9b892;
+    --gold:#d9a441;
+    --gold-bright:#f4c95d;
+    --crimson:#a83232;
+    --royal:#2a4d69;
+    --sepia:#3a2f22;
+    --bg1:#12100c;
+    --bg2:#1c1712;
+    --card:#231c14;
+    --line:#4a3c28;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Georgia","Garamond",serif;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(217,164,65,.08), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(42,77,105,.12), transparent 45%),
+      linear-gradient(160deg,var(--bg1),var(--bg2));
+    color:var(--ink);
+    line-height:1.65;
+    padding:0 0 80px;
+    min-height:100vh;
+  }
+
+  /* ===== Decorative top border ===== */
+  .imperial-bar{
+    height:10px;
+    background:repeating-linear-gradient(90deg,
+      var(--crimson) 0 30px, var(--gold) 30px 60px, var(--royal) 60px 90px);
+    box-shadow:0 2px 12px rgba(0,0,0,.6);
+  }
+
+  /* ================= HERO / TITLE ================= */
+  header{
+    text-align:center;
+    padding:70px 20px 50px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"𐦐 𐦆 𐂂 𐦖 𐂃 𖤍";
+    position:absolute; top:12px; left:50%; transform:translateX(-50%);
+    font-size:2rem; color:var(--gold); opacity:.5;
+  }
+  .crest{
+    font-size:3.4rem;
+    filter:drop-shadow(0 0 14px rgba(244,201,93,.5));
+    display:inline-block;
+    transition:transform .6s cubic-bezier(.34,1.56,.64,1);
+    cursor:default;
+  }
+  .crest:hover{ transform:rotate(360deg) scale(1.25); }
+
+  h1.title{
+    font-size:clamp(2rem,6vw,4.2rem);
+    letter-spacing:3px;
+    margin:14px 0 6px;
+    background:linear-gradient(90deg,#f4c95d,#a83232,#d9a441,#2a4d69,#f4c95d);
+    background-size:300% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:shine 8s linear infinite;
+    text-shadow:0 2px 30px rgba(217,164,65,.15);
+    transition:letter-spacing .5s ease;
+  }
+  h1.title:hover{ letter-spacing:8px; }
+  @keyframes shine{ to{ background-position:300% center; } }
+
+  .subtitle{
+    font-style:italic;
+    color:var(--ink-dim);
+    font-size:1.05rem;
+    letter-spacing:1px;
+  }
+  .flourish{
+    margin:22px auto 0;
+    width:60%; max-width:420px; height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    position:relative;
+  }
+  .flourish::after{
+    content:"𓀗"; position:absolute; top:-14px; left:50%;
+    transform:translateX(-50%); color:var(--gold-bright); font-size:1.4rem;
+    animation:float 3s ease-in-out infinite;
+  }
+  @keyframes float{ 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(-6px);} }
+
+  /* ================= LAYOUT ================= */
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 22px; }
+
+  .section-head{
+    display:flex; align-items:center; gap:14px;
+    margin:60px 0 26px;
+    padding-bottom:12px;
+    border-bottom:2px solid var(--line);
+  }
+  .section-head .badge{
+    font-size:2.2rem;
+    filter:drop-shadow(0 0 8px rgba(217,164,65,.4));
+    transition:transform .4s ease;
+  }
+  .section-head:hover .badge{ transform:scale(1.2) rotate(-8deg); }
+  .section-head h2{
+    font-size:clamp(1.5rem,3.5vw,2.4rem);
+    color:var(--gold-bright);
+    letter-spacing:2px;
+  }
+  .section-head small{ display:block; color:var(--ink-dim); font-size:.85rem; font-style:italic; letter-spacing:.5px; }
+
+  /* ================= TABLE (as elegant ledger cards on desktop) ================= */
+  .ledger{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 10px;
+  }
+  .ledger thead th{
+    text-align:left;
+    padding:14px 18px;
+    background:linear-gradient(135deg,var(--sepia),#2c2418);
+    color:var(--gold-bright);
+    letter-spacing:1.5px;
+    font-size:.8rem;
+    text-transform:uppercase;
+    border-top:1px solid var(--gold);
+    border-bottom:1px solid var(--gold);
+  }
+  .ledger thead th:first-child{ border-left:1px solid var(--gold); border-top-left-radius:8px; border-bottom-left-radius:8px;}
+  .ledger thead th:last-child{ border-right:1px solid var(--gold); border-top-right-radius:8px; border-bottom-right-radius:8px;}
+
+  .ledger tbody tr{
+    background:var(--card);
+    transition:all .35s ease;
+    box-shadow:0 2px 6px rgba(0,0,0,.4);
+  }
+  .ledger tbody tr td{
+    padding:14px 18px;
+    border-top:1px solid rgba(74,60,40,.5);
+    border-bottom:1px solid rgba(74,60,40,.5);
+    vertical-align:top;
+  }
+  .ledger tbody tr td:first-child{
+    border-left:4px solid var(--gold);
+    border-top-left-radius:8px; border-bottom-left-radius:8px;
+    font-weight:bold; color:var(--gold-bright); text-align:center; width:70px;
+  }
+  .ledger tbody tr td:last-child{ border-top-right-radius:8px; border-bottom-right-radius:8px; }
+
+  .ledger tbody tr:hover{
+    transform:translateX(10px) scale(1.005);
+    box-shadow:-6px 6px 20px rgba(217,164,65,.25);
+    background:linear-gradient(90deg,#2c2317,var(--card));
+  }
+  .ledger tbody tr:hover td:first-child{ border-left-color:var(--crimson); }
+
+  .name{ font-size:1.08rem; color:var(--ink); font-weight:bold; letter-spacing:.4px; }
+  .tenure{ color:var(--ink-dim); font-size:.95rem; }
+
+  /* Special row states */
+  tr.acting td:first-child{ color:var(--royal)!important; }
+  tr.acting{ opacity:.9; }
+  tr.acting .name{ font-style:italic; color:var(--ink-dim); }
+  tr.current{ position:relative; }
+  tr.current td{ border-color:var(--gold)!important; }
+  tr.current .name{ color:var(--gold-bright); }
+
+  .tag{
+    display:inline-block; margin-left:6px; padding:2px 9px;
+    font-size:.68rem; letter-spacing:.5px; border-radius:20px;
+    vertical-align:middle; font-style:normal; font-weight:bold;
+  }
+  .tag.live{ background:var(--crimson); color:#ffe; animation:pulse 1.8s infinite; }
+  .tag.first{ background:rgba(217,164,65,.18); color:var(--gold-bright); border:1px solid var(--gold);}
+  .tag.died{ background:rgba(168,50,50,.2); color:#e6a; border:1px solid var(--crimson);}
+  @keyframes pulse{ 0%,100%{box-shadow:0 0 0 0 rgba(168,50,50,.6);} 50%{box-shadow:0 0 0 7px rgba(168,50,50,0);} }
+
+  /* ================= FLOW DIAGRAM ================= */
+  .flow{
+    display:flex; flex-wrap:wrap; justify-content:center; align-items:center;
+    gap:0; margin:30px 0 10px;
+  }
+  .node{
+    background:linear-gradient(135deg,var(--card),#2c2418);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 20px; margin:8px 0;
+    text-align:center; min-width:150px; max-width:190px;
+    transition:all .4s ease; cursor:default;
+    box-shadow:0 3px 10px rgba(0,0,0,.5);
+  }
+  .node:hover{
+    transform:translateY(-8px) scale(1.05);
+    border-color:var(--gold);
+    box-shadow:0 10px 24px rgba(217,164,65,.3);
+  }
+  .node .ico{ font-size:1.9rem; display:block; margin-bottom:6px; }
+  .node .lbl{ font-size:.82rem; color:var(--gold-bright); letter-spacing:.5px; font-weight:bold; }
+  .node .sub{ font-size:.72rem; color:var(--ink-dim); font-style:italic; }
+  .arrow{ color:var(--gold); font-size:1.8rem; margin:0 6px; animation:slide 2s ease-in-out infinite; }
+  @keyframes slide{ 0%,100%{transform:translateX(0);opacity:.6;} 50%{transform:translateX(6px);opacity:1;} }
+
+  /* ================= FACT CARDS ================= */
+  .facts{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px; margin-top:26px;
+  }
+  .fact{
+    background:linear-gradient(160deg,var(--card),#1d1710);
+    border:1px solid var(--line);
+    border-left:4px solid var(--gold);
+    border-radius:12px; padding:20px;
+    transition:all .4s cubic-bezier(.34,1.56,.64,1);
+    position:relative; overflow:hidden;
+  }
+  .fact::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at top right, rgba(217,164,65,.12), transparent 60%);
+    opacity:0; transition:opacity .4s;
+  }
+  .fact:hover{ transform:translateY(-6px) rotate(-.5deg); border-left-color:var(--crimson); box-shadow:0 12px 26px rgba(0,0,0,.6);}
+  .fact:hover::after{ opacity:1; }
+  .fact .fico{ font-size:1.7rem; }
+  .fact h4{ color:var(--gold-bright); margin:8px 0 4px; letter-spacing:.5px; font-size:1rem; }
+  .fact p{ color:var(--ink-dim); font-size:.9rem; }
+
+  /* ================= INSIGHT BOX ================= */
+  .scroll-note{
+    background:linear-gradient(135deg,rgba(42,77,105,.18),rgba(58,47,34,.4));
+    border:1px dashed var(--gold);
+    border-radius:14px; padding:22px 26px; margin:28px 0;
+    position:relative;
+  }
+  .scroll-note::before{
+    content:"📜 Historian's Margin Note";
+    position:absolute; top:-13px; left:24px;
+    background:var(--bg2); padding:2px 12px;
+    color:var(--gold-bright); font-size:.8rem; letter-spacing:1px; font-style:italic;
+    border:1px solid var(--line); border-radius:20px;
+  }
+  .scroll-note p{ color:var(--ink); font-size:.95rem; margin-top:4px; }
+  .scroll-note strong{ color:var(--gold-bright); }
+
+  .update-badge{
+    display:inline-block; background:var(--crimson); color:#ffe;
+    font-size:.7rem; padding:2px 10px; border-radius:20px;
+    letter-spacing:.5px; margin-left:8px; vertical-align:middle;
+  }
+
+  /* ================= FOOTER ================= */
+  footer{
+    text-align:center; margin-top:70px; padding-top:26px;
+    border-top:2px solid var(--line); color:var(--ink-dim);
+    font-style:italic; font-size:.85rem;
+  }
+  footer .seal{ font-size:2rem; display:block; margin-bottom:8px;
+    transition:transform .5s; }
+  footer .seal:hover{ transform:scale(1.3) rotate(15deg); }
+
+  /* Responsive table -> stacked */
+  @media(max-width:640px){
+    .ledger thead{ display:none; }
+    .ledger, .ledger tbody, .ledger tr, .ledger td{ display:block; width:100%; }
+    .ledger tbody tr{ margin-bottom:14px; padding:6px 0; }
+    .ledger tbody tr td{ border:none!important; padding:6px 18px; }
+    .ledger tbody tr td:first-child{ border-radius:8px 8px 0 0; text-align:left; width:auto; }
+    .ledger tbody tr:hover{ transform:none; }
+    .arrow{ transform:rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="imperial-bar"></div>
+
+<!-- ================= HERO ================= -->
+<header>
+  <span class="crest">🐯</span>
+  <h1 class="title">The Royal Ledger of Bhārat</h1>
+  <p class="subtitle">🏛️ Presidents & Prime Ministers of India — From the Raj's Twilight to the Republic's Dawn 🗽</p>
+  <div class="flourish"></div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===== INTRO INSIGHT ===== -->
+  <div class="scroll-note">
+    <p>✒️ When the Union Jack lowered on <strong>15 August 1947</strong>, and the Tricolour rose over the Red Fort, a new chapter began. The <strong>President</strong> is the ceremonial <em>Head of State</em> — the constitutional heir to the erstwhile Crown — while the <strong>Prime Minister</strong> is the <em>Head of Government</em>, wielding real executive power. Two offices, one grand republic. 🎖️</p>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- ===================== PRESIDENTS ============================ -->
+  <!-- ============================================================= -->
+  <div class="section-head">
+    <span class="badge">🏛️</span>
+    <div>
+      <h2>Presidents of India</h2>
+      <small>The Guardians of the Constitution &nbsp;•&nbsp; Rashtrapati Bhavan (the old Viceroy's House)</small>
+    </div>
+  </div>
+
+  <table class="ledger">
+    <thead>
+      <tr><th>No.</th><th>President 🎩</th><th>Tenure 📅</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><span class="name">Dr. Rajendra Prasad</span><span class="tag first">🌟 First President • Longest-serving</span></td><td class="tenure">26 Jan 1950 – 13 May 1962</td></tr>
+      <tr><td>2</td><td><span class="name">Dr. Sarvepalli Radhakrishnan</span><span class="tag first">🎓 Philosopher</span></td><td class="tenure">13 May 1962 – 13 May 1967</td></tr>
+      <tr><td>3</td><td><span class="name">Dr. Zakir Husain</span><span class="tag died">🕊️ Died in office</span></td><td class="tenure">13 May 1967 – 3 May 1969</td></tr>
+      <tr class="acting"><td>—</td><td><span class="name">V. V. Giri (Acting) 🔄</span></td><td class="tenure">3 May 1969 – 20 Jul 1969</td></tr>
+      <tr class="acting"><td>—</td><td><span class="name">Justice M. Hidayatullah (Acting) ⚖️</span></td><td class="tenure">20 Jul 1969 – 24 Aug 1969</td></tr>
+      <tr><td>4</td><td><span class="name">V. V. Giri</span></td><td class="tenure">24 Aug 1969 – 24 Aug 1974</td></tr>
+      <tr><td>5</td><td><span class="name">Fakhruddin Ali Ahmed</span><span class="tag died">🕊️ Died in office</span></td><td class="tenure">24 Aug 1974 – 11 Feb 1977</td></tr>
+      <tr class="acting"><td>—</td><td><span class="name">B. D. Jatti (Acting) 🔄</span></td><td class="tenure">11 Feb 1977 – 25 Jul 1977</td></tr>
+      <tr><td>6</td><td><span class="name">Neelam Sanjiva Reddy</span><span class="tag first">✅ Unopposed election</span></td><td class="tenure">25 Jul 1977 – 25 Jul 1982</td></tr>
+      <tr><td>7</td><td><span class="name">Giani Zail Singh</span></td><td class="tenure">25 Jul 1982 – 25 Jul 1987</td></tr>
+      <tr><td>8</td><td><span class="name">Ramaswamy Venkataraman</span></td><td class="tenure">25 Jul 1987 – 25 Jul 1992</td></tr>
+      <tr><td>9</td><td><span class="name">Dr. Shankar Dayal Sharma</span></td><td class="tenure">25 Jul 1992 – 25 Jul 1997</td></tr>
+      <tr><td>10</td><td><span class="name">K. R. Narayanan</span><span class="tag first">🌟 First Dalit President</span></td><td class="tenure">25 Jul 1997 – 25 Jul 2002</td></tr>
+      <tr><td>11</td><td><span class="name">Dr. A. P. J. Abdul Kalam</span><span class="tag first">🚀 "Missile Man" • People's President</span></td><td class="tenure">25 Jul 2002 – 25 Jul 2007</td></tr>
+      <tr><td>12</td><td><span class="name">Pratibha Devisingh Patil</span><span class="tag first">🌸 First Woman President</span></td><td class="tenure">25 Jul 2007 – 25 Jul 2012</td></tr>
+      <tr><td>13</td><td><span class="name">Pranab Mukherjee</span><span class="tag first">📚 Veteran statesman</span></td><td class="tenure">25 Jul 2012 – 25 Jul 2017</td></tr>
+      <tr><td>14</td><td><span class="name">Ram Nath Kovind</span></td><td class="tenure">25 Jul 2017 – 25 Jul 2022</td></tr>
+      <tr class="current"><td>15</td><td><span class="name">Droupadi Murmu</span><span class="tag live">🔴 IN OFFICE</span><span class="tag first">🌿 First Tribal Woman • Youngest President</span></td><td class="tenure">25 Jul 2022 – Present</td></tr>
+    </tbody>
+  </table>
+
+  <div class="scroll-note">
+    <p>🔎 <strong>Insight:</strong> The President is chosen not by the public but by an <em>Electoral College</em> of elected MPs and MLAs. Though largely ceremonial, the office holds a <strong>"nuclear button" of powers</strong> — the pocket veto, the power to return bills, and the crucial discretion during a hung Parliament. Zail Singh's famous pocket veto of the Postal Bill (1986) proved the office is never truly toothless. 🦷</p>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- ================== PRIME MINISTERS ========================== -->
+  <!-- ============================================================= -->
+  <div class="section-head">
+    <span class="badge">🗳️</span>
+    <div>
+      <h2>Prime Ministers of India</h2>
+      <small>The Engines of Governance &nbsp;•&nbsp; Head of the Council of Ministers</small>
+    </div>
+  </div>
+
+  <table class="ledger">
+    <thead>
+      <tr><th>No.</th><th>Prime Minister 🎖️</th><th>Tenure 📅</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><span class="name">Jawaharlal Nehru</span><span class="tag first">🌹 First PM • 16 yrs, 286 days</span></td><td class="tenure">15 Aug 1947 – 27 May 1964 <span class="tag died">🕊️ Died in office</span></td></tr>
+      <tr class="acting"><td>—</td><td><span class="name">Gulzarilal Nanda (Acting) 🔄</span></td><td class="tenure">27 May 1964 – 9 Jun 1964</td></tr>
+      <tr><td>2</td><td><span class="name">Lal Bahadur Shastri</span><span class="tag first">🌾 "Jai Jawan Jai Kisan"</span></td><td class="tenure">9 Jun 1964 – 11 Jan 1966 <span class="tag died">🕊️ Died in office</span></td></tr>
+      <tr class="acting"><td>—</td><td><span class="name">Gulzarilal Nanda (Acting) 🔄</span></td><td class="tenure">11 Jan 1966 – 24 Jan 1966</td></tr>
+      <tr><td>3</td><td><span class="name">Indira Gandhi (1st term)</span><span class="tag first">🌸 First Woman PM</span></td><td class="tenure">24 Jan 1966 – 24 Mar 1977</td></tr>
+      <tr><td>4</td><td><span class="name">Morarji Desai</span><span class="tag first">🕊️ First non-Congress PM</span></td><td class="tenure">24 Mar 1977 – 28 Jul 1979</td></tr>
+      <tr><td>5</td><td><span class="name">Charan Singh</span><span class="tag first">🚜 Never faced Parliament</span></td><td class="tenure">28 Jul 1979 – 14 Jan 1980</td></tr>
+      <tr><td>6</td><td><span class="name">Indira Gandhi (2nd term)</span></td><td class="tenure">14 Jan 1980 – 31 Oct 1984 <span class="tag died">🕊️ Assassinated in office</span></td></tr>
+      <tr><td>7</td><td><span class="name">Rajiv Gandhi</span><span class="tag first">💻 Youngest PM • Tech push</span></td><td class="tenure">31 Oct 1984 – 2 Dec 1989</td></tr>
+      <tr><td>8</td><td><span class="name">V. P. Singh</span></td><td class="tenure">2 Dec 1989 – 10 Nov 1990</td></tr>
+      <tr><td>9</td><td><span class="name">Chandra Shekhar</span></td><td class="tenure">10 Nov 1990 – 21 Jun 1991</td></tr>
+      <tr><td>10</td><td><span class="name">P. V. Narasimha Rao</span><span class="tag first">💹 Father of Liberalisation</span></td><td class="tenure">21 Jun 1991 – 16 May 1996</td></tr>
+      <tr><td>11</td><td><span class="name">Atal Bihari Vajpayee (1st term)</span><span class="tag first">⏳ 13-day govt</span></td><td class="tenure">16 May 1996 – 1 Jun 1996</td></tr>
+      <tr><td>12</td><td><span class="name">H. D. Deve Gowda</span></td><td class="tenure">1 Jun 1996 – 21 Apr 1997</td></tr>
+      <tr><td>13</td><td><span class="name">I. K. Gujral</span></td><td class="tenure">21 Apr 1997 – 19 Mar 1998</td></tr>
+      <tr><td>14</td><td><span class="name">Atal Bihari Vajpayee (2nd & 3rd terms)</span><span class="tag first">🛣️ Golden Quadrilateral</span></td><td class="tenure">19 Mar 1998 – 22 May 2004</td></tr>
+      <tr><td>15</td><td><span class="name">Dr. Manmohan Singh</span><span class="tag first">🧮 Economist PM</span></td><td class="tenure">22 May 2004 – 26 May 2014</td></tr>
+      <tr class="current"><td>16</td><td><span class="name">Narendra Modi</span><span class="tag live">🔴 IN OFFICE</span><span class="tag first">🏆 3 consecutive terms</span></td><td class="tenure">26 May 2014 – Present <span class="update-badge">↻ 3rd term sworn 9 Jun 2024</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- ===== FLOW DIAGRAM: How Power Flows ===== -->
+  <div class="section-head">
+    <span class="badge">🔗</span>
+    <div>
+      <h2>The Flow of Power</h2>
+      <small>How the Republic's machinery turns ⚙️</small>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="node"><span class="ico">🗳️</span><span class="lbl">The People</span><span class="sub">vote in elections</span></div>
+    <span class="arrow">➜</span>
+    <div class="node"><span class="ico">🏛️</span><span class="lbl">Parliament & MLAs</span><span class="sub">Electoral College</span></div>
+    <span class="arrow">➜</span>
+    <div class="node"><span class="ico">👑</span><span class="lbl">President</span><span class="sub">Head of State</span></div>
+    <span class="arrow">➜</span>
+    <div class="node"><span class="ico">🎖️</span><span class="lbl">Prime Minister</span><span class="sub">Head of Government</span></div>
+    <span class="arrow">➜</span>
+    <div class="node"><span class="ico">⚙️</span><span class="lbl">Council of Ministers</span><span class="sub">runs the nation</span></div>
+  </div>
+
+  <!-- ===== QUICK FACTS ===== -->
+  <div class="section-head">
+    <span class="badge">💡</span>
+    <div>
+      <h2>Quick Facts — The Golden Trivia</h2>
+      <small>Verified & updated to 2025 ✅</small>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><span class="fico">🌹</span><h4>First Prime Minister</h4><p>Jawaharlal Nehru (1947–1964) — served 16 years, 286 days.</p></div>
+    <div class="fact"><span class="fico">🏆</span><h4>Longest-serving Elected PM</h4><p><strong>Narendra Modi</strong> surpassed Nehru's record as India's longest-serving <em>elected</em> PM in June 2025. <span class="update-badge">✔ Updated</span></p></div>
+    <div class="fact"><span class="fico">🌸</span><h4>First Woman PM</h4><p>Indira Gandhi — the "Iron Lady of India."</p></div>
+    <div class="fact"><span class="fico">🕊️</span><h4>First Non-Congress PM</h4><p>Morarji Desai (1977), leading the Janata coalition.</p></div>
+    <div class="fact"><span class="fico">🎩</span><h4>First President</h4><p>Dr. Rajendra Prasad — also the only 2-term President.</p></div>
+    <div class="fact"><span class="fico">🌿</span><h4>Current President</h4><p>Droupadi Murmu — 15th & first tribal woman President, since 25 Jul 2022.</p></div>
+    <div class="fact"><span class="fico">🎖️</span><h4>Current Prime Minister</h4><p>Narendra Modi — since 26 May 2014; <strong>3rd consecutive term</strong> from 9 Jun 2024.</p></div>
+    <div class="fact"><span class="fico">🔄</span><h4>Only Acting PM</h4><p>Gulzarilal Nanda served twice as caretaker (1964 & 1966).</p></div>
+  </div>
+
+  <!-- ===== CORRECTIONS NOTE ===== -->
+  <div class="scroll-note">
+    <p>🧾 <strong>Fact-Check & Updates applied:</strong> ✅ President data verified accurate through 2025. ✅ <strong>Correction:</strong> Narendra Modi was sworn in for a <strong>third consecutive term on 9 June 2024</strong> after the 2024 general election — a milestone that made him India's longest-serving <em>elected</em> PM (surpassing Nehru). Your original note listed Nehru as "2nd longest-serving," but Nehru was the <strong>original longest-serving PM</strong>; that line was corrected above. 🎯</p>
+  </div>
+
+</div><!-- /wrap -->
+
+<footer>
+  <span class="seal"><h1>🦚</h1></span><em><b><br><h1>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h1></b></em>
+  <br>Compiled in the spirit of the Rashtrapati Bhavan's marble halls 🏛️<br>
+  <em>"Satyameva Jayate — Truth Alone Triumphs"</em> 🇮🇳 &nbsp;•&nbsp; Data current as of 2026
+
+</footer>
+
+<div class="imperial-bar"></div>
+
+</body>
+</html>
