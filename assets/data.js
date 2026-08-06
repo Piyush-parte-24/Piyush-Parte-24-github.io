@@ -126,11 +126,23 @@ const archiveEntries = [
     icon: "♕",
     image: "",
     featured: true
+  },
+  {
+    number: "08",
+    title: "The Royal Ledger of Bhārat",
+    category: "Political Science",
+    description: "Presidents & Prime Ministers of India — From the Raj's Twilight to the Republic's Dawn",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Presidents & Prime Ministers of India.html",
+    icon: "🏛️",
+    image: "",
+    featured: true
   } 
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "08",
+    number: "09",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
