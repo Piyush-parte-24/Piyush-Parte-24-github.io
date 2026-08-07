@@ -33,7 +33,7 @@ const SITE = {
   tagline:     "NOTES • IDEAS • DISCOVERIES",
   cta:         "ENTER THE EXPEDITION",
   footerNote:  "The Prehistoric Archive · Field Records",
-  aboutRole:   "Student • Observer • Learner",
+  aboutRole:   "Student • Observer • Learner • Explorer",
   aboutText: [
     "This archive is a record of an ongoing expedition — not through jungle and stone, but through history, philosophy and ideas.",
     "I keep notes the way a field researcher keeps a journal: carefully, curiously, and with the belief that anything worth understanding is worth preserving. Some entries are histories of the world and of India. Others reach toward older, quieter questions about the self and reality.",
