@@ -116,6 +116,30 @@ const archiveEntries = [
     featured: true
   },
   {
+    number: "07",
+    title: "LIBERALISM",
+    category: "Philosophy",
+    description: "The Philosophy of Freedom — Where the Individual Becomes Sovereign",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Liberalism 3.0.html",
+    icon: "🗽",
+    image: "",
+    featured: true
+  },
+  {
+    number: "08",
+    title: "GANDHISM",
+    category: "Philosophy",
+    description: "Truth · Non-Violence · Self-Rule · Universal Uplift",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Gandhism 3.0.html",
+    icon: "𓀗",
+    image: "",
+    featured: true
+  }, 
+  {
     number: "09",
     title: "Chronicles of the British Rule",
     category: "Political Science",
@@ -151,18 +175,7 @@ const archiveEntries = [
     image: "",
     featured: true
   },
-  {
-    number: "07",
-    title: "LIBERALISM",
-    category: "Philosophy",
-    description: "The Philosophy of Freedom — Where the Individual Becomes Sovereign",
-    status: "Documented",
-    date: "FIELD SEASON I",
-    file: "Liberalism 3.0.html",
-    icon: "🗽",
-    image: "",
-    featured: true
-  },
+  
   {
     number: "12",
     title: "CITIZENSHIP RIGHTS",
@@ -174,19 +187,8 @@ const archiveEntries = [
     icon: "🛂",
     image: "",
     featured: true
-  },
-  {
-    number: "08",
-    title: "GANDHISM",
-    category: "Philosophy",
-    description: "Truth · Non-Violence · Self-Rule · Universal Uplift",
-    status: "Documented",
-    date: "FIELD SEASON I",
-    file: "Gandhism 3.0.html",
-    icon: "𓀗",
-    image: "",
-    featured: true
-  } 
+  }
+   
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
