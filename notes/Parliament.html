@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏛️ THE PARLIAMENT OF INDIA — Cinematic Master Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   🎬 CINEMATIC DESIGN SYSTEM — "SANSAD NOIR / SAFFRON GOLD"
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --ink:#05070f;
+  --ink2:#0a0f1d;
+  --ink3:#111a2e;
+  --gold:#f4c869;
+  --gold-deep:#d9a441;
+  --gold-glow:rgba(244,200,105,.55);
+  --saffron:#ff9a3c;
+  --saffron-soft:#ffb86b;
+  --green:#4fd6a0;
+  --green-soft:#8ff0c8;
+  --azure:#6fb7ff;
+  --azure-soft:#a9d6ff;
+  --violet:#b79cff;
+  --rose:#ff8fb1;
+  --cyan:#63e6e2;
+  --amber:#ffd27a;
+  --txt:#e8eef8;
+  --txt-soft:#c3ccdd;
+  --txt-dim:#95a1b8;
+  --line:rgba(244,200,105,.18);
+  --glass:rgba(255,255,255,.045);
+  --glass2:rgba(255,255,255,.07);
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+  --r:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--ink);
+  color:var(--txt-soft);
+  line-height:1.85;
+  overflow-x:hidden;
+  font-size:16.5px;
+  letter-spacing:.1px;
+}
+
+/* ───────── 🌌 CINEMATIC BACKGROUND LAYERS ───────── */
+.bg-cinema{position:fixed;inset:0;z-index:-5;overflow:hidden;background:
+  radial-gradient(1200px 700px at 12% 8%, #16203a 0%, transparent 60%),
+  radial-gradient(1100px 800px at 88% 18%, #2a1a2f 0%, transparent 62%),
+  radial-gradient(1300px 900px at 50% 105%, #1b2415 0%, transparent 65%),
+  linear-gradient(180deg,#05070f 0%,#080c18 40%,#05070f 100%);}
+.bg-cinema::after{content:"";position:absolute;inset:-30%;
+  background:conic-gradient(from 0deg at 50% 50%,
+    rgba(255,154,60,.10),rgba(79,214,160,.08),rgba(111,183,255,.10),
+    rgba(183,156,255,.09),rgba(255,154,60,.10));
+  filter:blur(120px);animation:swirl 46s linear infinite;}
+@keyframes swirl{to{transform:rotate(360deg);}}
+
+.bg-grid{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(244,200,105,.055) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(244,200,105,.055) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 40%,#000 20%,transparent 85%);
+  animation:gridDrift 30s linear infinite;}
+@keyframes gridDrift{to{background-position:64px 64px,64px 64px;}}
+
+.bg-rays{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.5;
+  background:repeating-conic-gradient(from 200deg at 70% -10%,
+    rgba(255,200,120,.055) 0deg 3deg, transparent 3deg 12deg);
+  animation:rays 90s linear infinite;}
+@keyframes rays{to{transform:rotate(360deg);}}
+
+.bg-dust{position:fixed;inset:0;z-index:-2;pointer-events:none;}
+.mote{position:absolute;border-radius:50%;background:var(--gold);
+  filter:blur(.5px);opacity:0;animation:rise linear infinite;}
+@keyframes rise{
+  0%{transform:translateY(0) translateX(0) scale(.6);opacity:0;}
+  12%{opacity:.75;}
+  85%{opacity:.35;}
+  100%{transform:translateY(-115vh) translateX(45px) scale(1.1);opacity:0;}
+}
+.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55) 100%);}
+.grain{position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grainShift .6s steps(2) infinite;}
+@keyframes grainShift{0%{transform:translate(0,0)}50%{transform:translate(-3px,2px)}100%{transform:translate(2px,-2px)}}
+
+/* ───────── 📊 SCROLL PROGRESS + NAV ───────── */
+#progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:1000;
+  background:linear-gradient(90deg,var(--saffron),var(--gold),var(--green),var(--azure));
+  box-shadow:0 0 18px var(--gold-glow);transition:width .1s linear;}
+.topnav{position:fixed;top:4px;left:0;right:0;z-index:998;
+  backdrop-filter:blur(18px) saturate(140%);
+  background:linear-gradient(180deg,rgba(6,9,18,.92),rgba(6,9,18,.55));
+  border-bottom:1px solid var(--line);}
+.topnav-inner{max-width:1280px;margin:auto;display:flex;gap:6px;align-items:center;
+  padding:8px 14px;overflow-x:auto;scrollbar-width:none;}
+.topnav-inner::-webkit-scrollbar{display:none;}
+.brand{font-family:'Cinzel',serif;font-weight:900;color:var(--gold);
+  white-space:nowrap;letter-spacing:1.4px;font-size:.82rem;margin-right:10px;
+  text-shadow:0 0 14px var(--gold-glow);}
+.topnav a{color:var(--txt-dim);text-decoration:none;font-size:.74rem;font-weight:600;
+  padding:6px 11px;border-radius:999px;white-space:nowrap;letter-spacing:.6px;
+  border:1px solid transparent;transition:.32s cubic-bezier(.2,.8,.2,1);}
+.topnav a:hover{color:var(--ink);background:linear-gradient(135deg,var(--gold),var(--saffron));
+  border-color:var(--gold);transform:translateY(-2px) scale(1.06);
+  box-shadow:0 8px 22px rgba(244,200,105,.35);}
+
+/* ───────── 🎭 HERO / TITLE MAGIC ───────── */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;padding:120px 20px 60px;perspective:1400px;}
+.hero-halo{position:absolute;width:min(88vw,900px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,154,60,.20),rgba(244,200,105,.08) 40%,transparent 70%);
+  filter:blur(30px);animation:halo 8s ease-in-out infinite;}
+@keyframes halo{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.14);opacity:1}}
+
+.emblem{font-size:5.2rem;line-height:1;filter:drop-shadow(0 0 34px var(--gold-glow));
+  animation:floaty 5.5s ease-in-out infinite;cursor:pointer;transition:.6s;}
+.emblem:hover{transform:rotateY(360deg) scale(1.22);filter:drop-shadow(0 0 60px var(--saffron));}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+
+.kicker{font-family:'Marcellus',serif;letter-spacing:9px;font-size:.8rem;
+  color:var(--gold-deep);text-transform:uppercase;margin:18px 0 6px;opacity:0;
+  animation:fadeUp 1s .3s forwards;}
+.title-wrap{position:relative;display:inline-block;transform-style:preserve-3d;}
+h1.mega{
+  font-family:'Cinzel',serif;font-weight:900;
+  font-size:clamp(2.5rem,8.4vw,6.6rem);line-height:1.02;letter-spacing:2px;
+  background:linear-gradient(100deg,#fff3d6 0%,var(--gold) 18%,var(--saffron) 34%,
+    #fff 48%,var(--green-soft) 62%,var(--azure) 76%,var(--gold) 92%,#fff3d6 100%);
+  background-size:280% auto;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:shine 9s linear infinite, fadeUp 1.2s .1s backwards;
+  filter:drop-shadow(0 6px 30px rgba(244,200,105,.30));
+  transition:.5s;cursor:default;}
+@keyframes shine{to{background-position:280% center;}}
+.title-wrap:hover h1.mega{letter-spacing:6px;filter:drop-shadow(0 10px 46px rgba(255,154,60,.65));
+  transform:rotateX(8deg) scale(1.03);}
+.title-wrap::before,.title-wrap::after{content:"";position:absolute;left:6%;right:6%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--saffron),var(--gold),transparent);
+  opacity:0;transition:.55s;}
+.title-wrap::before{top:-14px;transform:scaleX(.2);}
+.title-wrap::after{bottom:-14px;transform:scaleX(.2);}
+.title-wrap:hover::before,.title-wrap:hover::after{opacity:1;transform:scaleX(1);
+  box-shadow:0 0 22px var(--gold-glow);}
+.subtitle{font-family:'Marcellus',serif;font-size:clamp(1rem,2.4vw,1.5rem);
+  color:var(--txt);margin-top:22px;letter-spacing:3px;opacity:0;animation:fadeUp 1s .6s forwards;}
+.tagline{max-width:760px;margin:16px auto 0;color:var(--txt-dim);font-size:.98rem;
+  font-style:italic;opacity:0;animation:fadeUp 1s .85s forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+.hero-chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:34px;
+  opacity:0;animation:fadeUp 1s 1.1s forwards;}
+.chip{padding:9px 18px;border-radius:999px;font-size:.79rem;font-weight:700;letter-spacing:.7px;
+  background:var(--glass);border:1px solid var(--line);color:var(--gold);
+  backdrop-filter:blur(10px);transition:.4s cubic-bezier(.2,.8,.2,1);cursor:default;}
+.chip:hover{transform:translateY(-6px) scale(1.09) rotate(-1.5deg);
+  background:linear-gradient(135deg,rgba(255,154,60,.24),rgba(244,200,105,.14));
+  color:#fff;box-shadow:0 14px 34px rgba(255,154,60,.28);border-color:var(--saffron);}
+
+.tricolor-bar{width:min(560px,86vw);height:6px;border-radius:99px;margin:38px auto 0;
+  background:linear-gradient(90deg,#ff9933 0%,#ff9933 33%,#ffffff 33%,#ffffff 66%,#138808 66%,#138808 100%);
+  box-shadow:0 0 30px rgba(255,255,255,.28);opacity:0;animation:fadeUp 1s 1.3s forwards;
+  position:relative;overflow:hidden;}
+.tricolor-bar::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);
+  transform:translateX(-100%);animation:sweep 3.4s ease-in-out infinite 1.6s;}
+@keyframes sweep{to{transform:translateX(100%);}}
+
+.scroll-cue{margin-top:44px;font-size:1.7rem;animation:bob 2s ease-in-out infinite;opacity:.75;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
+
+/* ───────── 📦 LAYOUT ───────── */
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px 120px;}
+.part{margin:96px 0;opacity:0;transform:translateY(46px);transition:1s cubic-bezier(.16,1,.3,1);}
+.part.in{opacity:1;transform:none;}
+
+/* PART HEADERS — color graded */
+.part-head{position:relative;padding:30px 30px 30px 34px;border-radius:var(--r);
+  background:linear-gradient(120deg,rgba(255,255,255,.07),rgba(255,255,255,.015));
+  border:1px solid var(--line);overflow:hidden;margin-bottom:32px;
+  backdrop-filter:blur(14px);box-shadow:var(--shadow);transition:.5s;}
+.part-head::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;
+  background:var(--accent,var(--gold));box-shadow:0 0 26px var(--accent,var(--gold));}
+.part-head::after{content:"";position:absolute;inset:0;opacity:0;transition:.6s;
+  background:radial-gradient(700px 220px at 0% 50%,var(--accentSoft,rgba(244,200,105,.14)),transparent 70%);}
+.part-head:hover{transform:translateX(9px);border-color:var(--accent,var(--gold));}
+.part-head:hover::after{opacity:1;}
+.part-tag{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:4px;
+  color:var(--accent,var(--gold));text-transform:uppercase;opacity:.9;}
+.part-head h2{font-family:'Cinzel',serif;font-size:clamp(1.4rem,3.6vw,2.4rem);
+  color:#fff;margin-top:8px;letter-spacing:1px;font-weight:700;
+  text-shadow:0 0 26px rgba(0,0,0,.7);}
+.part-head p.lede{color:var(--txt-dim);margin-top:10px;font-size:.94rem;font-style:italic;}
+
+/* Accent themes */
+.A{--accent:var(--green);--accentSoft:rgba(79,214,160,.15);}
+.B{--accent:var(--gold);--accentSoft:rgba(244,200,105,.15);}
+.C{--accent:var(--azure);--accentSoft:rgba(111,183,255,.15);}
+.D{--accent:var(--violet);--accentSoft:rgba(183,156,255,.15);}
+.E{--accent:var(--saffron);--accentSoft:rgba(255,154,60,.15);}
+.F{--accent:var(--cyan);--accentSoft:rgba(99,230,226,.15);}
+.G{--accent:var(--rose);--accentSoft:rgba(255,143,177,.15);}
+.H{--accent:var(--amber);--accentSoft:rgba(255,210,122,.15);}
+.I{--accent:#9be15d;--accentSoft:rgba(155,225,93,.15);}
+.J{--accent:#ffa9f0;--accentSoft:rgba(255,169,240,.15);}
+.K{--accent:#7ef9d0;--accentSoft:rgba(126,249,208,.15);}
+.L{--accent:#ffd166;--accentSoft:rgba(255,209,102,.15);}
+.M{--accent:#8fd3ff;--accentSoft:rgba(143,211,255,.15);}
+
+h3.sec{font-family:'Cinzel',serif;font-size:1.28rem;color:var(--accent,var(--gold));
+  margin:44px 0 16px;letter-spacing:.8px;display:flex;align-items:center;gap:12px;
+  padding-bottom:10px;border-bottom:1px dashed rgba(244,200,105,.22);transition:.4s;}
+h3.sec:hover{letter-spacing:2px;color:#fff;border-bottom-color:var(--accent);}
+h4.sub{font-family:'Inter',sans-serif;font-weight:800;font-size:1.03rem;color:var(--amber);
+  margin:26px 0 10px;letter-spacing:.4px;}
+
+/* ───────── 🃏 CARDS ───────── */
+.card{background:var(--glass);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);
+  padding:24px 26px;margin:20px 0;backdrop-filter:blur(12px);position:relative;overflow:hidden;
+  transition:.45s cubic-bezier(.2,.8,.2,1);box-shadow:0 10px 30px rgba(0,0,0,.35);}
+.card::before{content:"";position:absolute;inset:0;border-radius:var(--r);padding:1px;
+  background:linear-gradient(135deg,var(--accent,var(--gold)),transparent 42%,transparent 60%,var(--accent,var(--gold)));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.45s;}
+.card:hover{transform:translateY(-8px);background:var(--glass2);
+  box-shadow:0 26px 60px rgba(0,0,0,.55),0 0 0 1px var(--accent,var(--gold));}
+.card:hover::before{opacity:1;}
+.card p{margin:9px 0;}
+
+.grid{display:grid;gap:18px;}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+.g4{grid-template-columns:repeat(auto-fit,minmax(196px,1fr));}
+
+.tile{background:linear-gradient(150deg,rgba(255,255,255,.075),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;
+  transition:.42s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden;}
+.tile::after{content:"";position:absolute;width:150%;height:150%;top:-25%;left:-150%;
+  background:linear-gradient(75deg,transparent,rgba(255,255,255,.13),transparent);
+  transition:.75s;}
+.tile:hover{transform:translateY(-9px) scale(1.025) rotate(-.4deg);
+  border-color:var(--accent,var(--gold));
+  box-shadow:0 22px 48px rgba(0,0,0,.55),0 0 34px -12px var(--accent,var(--gold));}
+.tile:hover::after{left:120%;}
+.tile .ico{font-size:2rem;display:block;margin-bottom:8px;transition:.45s;}
+.tile:hover .ico{transform:scale(1.32) rotate(9deg);filter:drop-shadow(0 0 16px var(--accent,var(--gold)));}
+.tile b{color:#fff;display:block;margin-bottom:4px;font-size:1rem;letter-spacing:.3px;}
+.tile small{color:var(--txt-dim);font-size:.87rem;line-height:1.7;display:block;}
+
+/* Numbered characteristic cards */
+.char{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  border:1px solid rgba(255,255,255,.09);border-left:5px solid var(--c,var(--saffron));
+  border-radius:16px;padding:22px 24px 22px 26px;margin:18px 0;position:relative;
+  transition:.45s cubic-bezier(.2,.8,.2,1);overflow:hidden;}
+.char::before{content:attr(data-n);position:absolute;right:16px;top:2px;
+  font-family:'Cinzel',serif;font-size:4.6rem;font-weight:900;color:var(--c,var(--saffron));
+  opacity:.11;line-height:1;transition:.5s;}
+.char:hover{transform:translateX(12px);background:rgba(255,255,255,.085);
+  box-shadow:-10px 18px 46px rgba(0,0,0,.5),0 0 30px -14px var(--c,var(--saffron));}
+.char:hover::before{opacity:.26;transform:scale(1.16) rotate(-7deg);}
+.char h4{font-size:1.1rem;color:#fff;margin-bottom:8px;letter-spacing:.4px;font-weight:800;}
+.char h4 span.num{color:var(--c,var(--saffron));font-family:'JetBrains Mono',monospace;
+  margin-right:8px;text-shadow:0 0 14px var(--c);}
+
+/* ───────── 📋 TABLES ───────── */
+.tbox{overflow-x:auto;border-radius:16px;border:1px solid var(--line);margin:20px 0;
+  background:rgba(6,10,20,.55);backdrop-filter:blur(10px);box-shadow:var(--shadow);}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:520px;}
+thead th{background:linear-gradient(135deg,rgba(244,200,105,.20),rgba(255,154,60,.10));
+  color:var(--gold);font-family:'Cinzel',serif;font-weight:700;letter-spacing:1px;
+  padding:14px 16px;text-align:left;border-bottom:2px solid rgba(244,200,105,.35);
+  position:sticky;top:0;backdrop-filter:blur(10px);font-size:.86rem;}
+tbody td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.06);
+  color:var(--txt-soft);vertical-align:top;transition:.28s;}
+tbody tr{transition:.3s;}
+tbody tr:hover{background:linear-gradient(90deg,rgba(244,200,105,.11),rgba(255,154,60,.045));
+  transform:scale(1.006);}
+tbody tr:hover td{color:#fff;}
+tbody tr:hover td:first-child{color:var(--gold);text-shadow:0 0 12px var(--gold-glow);}
+tbody td:first-child{font-weight:700;color:var(--amber);white-space:nowrap;}
+table.wide td:first-child{white-space:normal;}
+
+/* ───────── 🖥️ DIAGRAM / PRE ───────── */
+.diagram{background:linear-gradient(160deg,rgba(2,6,14,.92),rgba(8,14,26,.86));
+  border:1px solid rgba(244,200,105,.24);border-radius:16px;padding:22px;margin:22px 0;
+  overflow-x:auto;position:relative;box-shadow:inset 0 0 60px rgba(0,0,0,.6),var(--shadow);
+  transition:.5s;}
+.diagram:hover{border-color:var(--accent,var(--gold));
+  box-shadow:inset 0 0 60px rgba(0,0,0,.6),0 0 44px -14px var(--accent,var(--gold));}
+.diagram::before{content:"⚡ FLOW DIAGRAM";position:absolute;top:9px;right:16px;
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2.4px;
+  color:var(--accent,var(--gold));opacity:.5;}
+.diagram pre{font-family:'JetBrains Mono',monospace;font-size:.79rem;line-height:1.62;
+  color:var(--green-soft);white-space:pre;text-shadow:0 0 12px rgba(79,214,160,.28);}
+.diagram.gold pre{color:var(--amber);text-shadow:0 0 12px rgba(255,210,122,.28);}
+.diagram.blue pre{color:var(--azure-soft);text-shadow:0 0 12px rgba(111,183,255,.3);}
+.diagram.rose pre{color:#ffc2d6;text-shadow:0 0 12px rgba(255,143,177,.3);}
+.diagram.violet pre{color:#d9ccff;text-shadow:0 0 12px rgba(183,156,255,.3);}
+
+/* ───────── 💬 CALLOUTS ───────── */
+.call{border-radius:14px;padding:17px 20px 17px 22px;margin:18px 0;position:relative;
+  border-left:5px solid var(--cc);background:var(--cbg);transition:.4s;
+  backdrop-filter:blur(8px);}
+.call:hover{transform:translateX(10px);box-shadow:-8px 14px 34px rgba(0,0,0,.45),0 0 26px -12px var(--cc);}
+.call b{color:var(--cc);}
+.gold-c{--cc:var(--gold);--cbg:linear-gradient(100deg,rgba(244,200,105,.13),rgba(244,200,105,.03));}
+.warn-c{--cc:#ff8b6b;--cbg:linear-gradient(100deg,rgba(255,139,107,.13),rgba(255,139,107,.03));}
+.tip-c{--cc:var(--green);--cbg:linear-gradient(100deg,rgba(79,214,160,.13),rgba(79,214,160,.03));}
+.info-c{--cc:var(--azure);--cbg:linear-gradient(100deg,rgba(111,183,255,.13),rgba(111,183,255,.03));}
+.mem-c{--cc:var(--violet);--cbg:linear-gradient(100deg,rgba(183,156,255,.14),rgba(183,156,255,.03));}
+.new-c{--cc:var(--rose);--cbg:linear-gradient(100deg,rgba(255,143,177,.14),rgba(255,143,177,.03));}
+
+blockquote.quote{margin:24px 0;padding:26px 30px;border-radius:18px;position:relative;
+  background:linear-gradient(135deg,rgba(244,200,105,.10),rgba(255,255,255,.02));
+  border:1px solid rgba(244,200,105,.24);font-family:'Marcellus',serif;
+  font-size:1.06rem;color:#fff5e2;line-height:1.9;transition:.5s;}
+blockquote.quote::before{content:"❝";position:absolute;left:12px;top:-12px;font-size:3.6rem;
+  color:var(--gold);opacity:.28;font-family:Georgia,serif;transition:.5s;}
+blockquote.quote:hover{transform:scale(1.015);border-color:var(--gold);
+  box-shadow:0 22px 54px rgba(0,0,0,.5),0 0 40px -16px var(--gold);}
+blockquote.quote:hover::before{opacity:.6;transform:scale(1.16) rotate(-8deg);}
+blockquote.quote cite{display:block;margin-top:12px;font-size:.85rem;color:var(--gold-deep);
+  font-style:normal;letter-spacing:1.4px;text-transform:uppercase;}
+
+/* ───────── 🏷️ INLINE ELEMENTS ───────── */
+.k{color:var(--gold);font-weight:700;}
+.kk{color:var(--saffron);font-weight:800;}
+.g{color:var(--green-soft);font-weight:700;}
+.b{color:var(--azure-soft);font-weight:700;}
+.v{color:var(--violet);font-weight:700;}
+.r{color:var(--rose);font-weight:700;}
+.w{color:#fff;font-weight:700;}
+.art{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.78rem;
+  background:linear-gradient(135deg,rgba(111,183,255,.22),rgba(111,183,255,.08));
+  color:var(--azure-soft);border:1px solid rgba(111,183,255,.38);
+  padding:1px 9px;border-radius:7px;font-weight:700;margin:0 1px;transition:.3s;}
+.art:hover{background:var(--azure);color:var(--ink);transform:translateY(-2px) scale(1.09);
+  box-shadow:0 6px 18px rgba(111,183,255,.45);}
+.pill{display:inline-block;padding:2px 11px;border-radius:999px;font-size:.74rem;
+  font-weight:800;letter-spacing:.6px;margin:2px 3px;transition:.3s;border:1px solid;}
+.pill:hover{transform:translateY(-3px) scale(1.07);}
+.p-gold{background:rgba(244,200,105,.15);color:var(--gold);border-color:rgba(244,200,105,.4);}
+.p-green{background:rgba(79,214,160,.15);color:var(--green-soft);border-color:rgba(79,214,160,.4);}
+.p-red{background:rgba(255,120,120,.15);color:#ff9d9d;border-color:rgba(255,120,120,.4);}
+.p-blue{background:rgba(111,183,255,.15);color:var(--azure-soft);border-color:rgba(111,183,255,.4);}
+.p-violet{background:rgba(183,156,255,.15);color:var(--violet);border-color:rgba(183,156,255,.4);}
+mark{background:linear-gradient(180deg,transparent 55%,rgba(255,154,60,.45) 55%);
+  color:#fff;padding:0 3px;border-radius:3px;font-weight:600;}
+ul.nice{list-style:none;padding-left:2px;margin:10px 0;}
+ul.nice li{padding:5px 0 5px 28px;position:relative;transition:.3s;}
+ul.nice li::before{content:"▸";position:absolute;left:6px;color:var(--accent,var(--gold));
+  font-weight:900;transition:.3s;}
+ul.nice li:hover{color:#fff;transform:translateX(8px);}
+ul.nice li:hover::before{transform:scale(1.5);color:var(--saffron);}
+ol.nice{padding-left:24px;margin:10px 0;}
+ol.nice li{padding:5px 0;transition:.3s;}
+ol.nice li::marker{color:var(--gold);font-weight:800;}
+ol.nice li:hover{color:#fff;transform:translateX(7px);}
+
+/* ───────── 🆕 NEW-2026 BADGE ───────── */
+.badge-new{display:inline-block;font-size:.6rem;font-weight:900;letter-spacing:1.6px;
+  background:linear-gradient(135deg,#ff5f8d,#ff9a3c);color:#180a12;padding:2px 8px;
+  border-radius:6px;vertical-align:middle;margin-left:6px;
+  box-shadow:0 0 16px rgba(255,95,141,.55);animation:pulseB 2.2s ease-in-out infinite;}
+@keyframes pulseB{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.09);opacity:.85}}
+
+/* ───────── 🎴 FLIP CARDS ───────── */
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;margin:20px 0;}
+.flip{perspective:1100px;height:172px;}
+.flip-in{position:relative;width:100%;height:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1);
+  transform-style:preserve-3d;}
+.flip:hover .flip-in{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:16px;text-align:center;border:1px solid rgba(255,255,255,.12);}
+.front{background:linear-gradient(150deg,rgba(255,255,255,.09),rgba(255,255,255,.02));}
+.front .em{font-size:2.3rem;margin-bottom:8px;}
+.front b{color:#fff;font-size:.98rem;}
+.back{transform:rotateY(180deg);background:linear-gradient(150deg,rgba(255,154,60,.20),rgba(244,200,105,.07));
+  border-color:var(--gold);color:var(--txt);font-size:.83rem;line-height:1.65;}
+
+/* ───────── ⏳ TIMELINE ───────── */
+.tl{position:relative;padding-left:44px;margin:26px 0;}
+.tl::before{content:"";position:absolute;left:14px;top:6px;bottom:6px;width:3px;
+  background:linear-gradient(180deg,var(--saffron),var(--gold),var(--green),var(--azure),var(--violet));
+  border-radius:9px;box-shadow:0 0 22px var(--gold-glow);}
+.tl-item{position:relative;margin-bottom:18px;padding:15px 20px;border-radius:14px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  transition:.42s cubic-bezier(.2,.8,.2,1);}
+.tl-item::before{content:"";position:absolute;left:-37px;top:22px;width:15px;height:15px;
+  border-radius:50%;background:var(--ink);border:3px solid var(--gold);transition:.4s;z-index:2;}
+.tl-item:hover{transform:translateX(13px);background:rgba(244,200,105,.10);
+  border-color:var(--gold);box-shadow:-8px 14px 36px rgba(0,0,0,.45);}
+.tl-item:hover::before{background:var(--saffron);border-color:#fff;
+  transform:scale(1.5);box-shadow:0 0 22px var(--saffron);}
+.tl-year{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--gold);
+  font-size:.86rem;letter-spacing:1.4px;}
+.tl-item p{margin-top:4px;font-size:.93rem;}
+
+/* ───────── 🎯 VS BOARD ───────── */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin:22px 0;}
+.vs-side{border-radius:18px;padding:22px;border:1px solid;transition:.45s;}
+.vs-l{background:linear-gradient(150deg,rgba(111,183,255,.14),rgba(111,183,255,.03));border-color:rgba(111,183,255,.35);}
+.vs-r{background:linear-gradient(150deg,rgba(255,154,60,.14),rgba(255,154,60,.03));border-color:rgba(255,154,60,.35);}
+.vs-side:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 22px 48px rgba(0,0,0,.5);}
+.vs-mid{display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;
+  font-weight:900;font-size:1.5rem;color:var(--gold);text-shadow:0 0 22px var(--gold-glow);
+  animation:pulseB 2.6s ease-in-out infinite;}
+.vs-side h5{font-family:'Cinzel',serif;font-size:1.05rem;color:#fff;margin-bottom:10px;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}.vs-mid{padding:8px 0;}}
+
+/* ───────── 📇 REVISION CARD ───────── */
+.rev{background:linear-gradient(150deg,rgba(2,6,14,.95),rgba(14,10,24,.9));
+  border:2px solid var(--gold);border-radius:22px;padding:28px;margin:24px 0;
+  box-shadow:0 0 70px -20px var(--gold),inset 0 0 90px rgba(0,0,0,.65);position:relative;overflow:hidden;}
+.rev::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 22px,rgba(244,200,105,.028) 22px,rgba(244,200,105,.028) 44px);
+  animation:slideStripes 22s linear infinite;}
+@keyframes slideStripes{to{transform:translateX(62px);}}
+.rev-row{display:grid;grid-template-columns:190px 1fr;gap:14px;padding:11px 0;
+  border-bottom:1px dashed rgba(244,200,105,.16);position:relative;transition:.35s;}
+.rev-row:hover{background:rgba(244,200,105,.075);transform:translateX(9px);
+  border-radius:9px;padding-left:10px;}
+.rev-row b{color:var(--gold);font-size:.87rem;letter-spacing:.9px;}
+.rev-row span{color:var(--txt-soft);font-size:.9rem;}
+@media(max-width:640px){.rev-row{grid-template-columns:1fr;gap:2px;}}
+
+/* ───────── 🔝 BACK TO TOP ───────── */
+#top{position:fixed;bottom:26px;right:24px;width:54px;height:54px;border-radius:50%;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));color:var(--ink);
+  border:none;font-size:1.35rem;cursor:pointer;z-index:997;opacity:0;pointer-events:none;
+  transition:.45s;box-shadow:0 12px 32px rgba(255,154,60,.45);display:grid;place-items:center;}
+#top.show{opacity:1;pointer-events:auto;}
+#top:hover{transform:translateY(-8px) rotate(360deg) scale(1.14);
+  box-shadow:0 18px 44px rgba(255,154,60,.7);}
+
+footer{text-align:center;padding:60px 20px 90px;border-top:1px solid var(--line);}
+footer .fem{font-size:2.6rem;animation:floaty 5s ease-in-out infinite;display:inline-block;}
+footer p{color:var(--txt-dim);font-size:.9rem;margin-top:10px;}
+footer .fg{font-family:'Cinzel',serif;color:var(--gold);letter-spacing:3px;font-size:1.1rem;margin-top:8px;}
+
+::-webkit-scrollbar{width:11px;}
+::-webkit-scrollbar-track{background:#05070f;}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--saffron),var(--gold));border-radius:9px;}
+::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+::selection{background:rgba(255,154,60,.42);color:#fff;}
+@media(max-width:640px){
+  body{font-size:15.4px;}
+  .part-head{padding:22px 18px 22px 24px;}
+  .diagram pre{font-size:.63rem;}
+  .card{padding:18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-cinema"></div>
+<div class="bg-grid"></div>
+<div class="bg-rays"></div>
+<div class="bg-dust" id="dust"></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+<div id="progress"></div>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <span class="brand">🏛️ SANSAD</span>
+    <a href="#A">🌱 A · Why</a>
+    <a href="#B">📖 B · Meaning</a>
+    <a href="#C">🧭 C · Model</a>
+    <a href="#D">🏗️ D · Organisation</a>
+    <a href="#E">🧬 E · 20 Features</a>
+    <a href="#F">📜 F · Articles</a>
+    <a href="#G">⚔️ G · Comparisons</a>
+    <a href="#H">🌊 H · Flowchart</a>
+    <a href="#I">🧠 I · Mind Map</a>
+    <a href="#J">🗓️ J · Timeline</a>
+    <a href="#K">📸 K · Snapshot</a>
+    <a href="#L">🎯 L · Exam Zone</a>
+    <a href="#M">🧾 M · Revision</a>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <div class="hero-halo"></div>
+  <div class="emblem">🏛️</div>
+  <div class="kicker">Part V · Chapter II · Articles 79 – 122</div>
+  <div class="title-wrap">
+    <h1 class="mega">THE PARLIAMENT<br>OF INDIA</h1>
+  </div>
+<br><p><div class="subtitle"><b><em><i><strong>AUTEUR: PIYUSH PARTE</strong></i></em></b></div>
+  <div class="subtitle"> MEANING · DEFINITION · CHARACTERISTICS</div>
+  <p class="tagline"><b>“Where a billion voices become one deliberating chamber — the institutional heartbeat of Indian democracy”</b></p>
+
+  <div class="hero-chips">
+    <span class="chip">👑 President + 🏛️ RS + 🏛️ LS</span>
+    <span class="chip">🗳️ Universal Adult Franchise</span>
+    <span class="chip">⚖️ Westminster Model</span>
+    <span class="chip">🚫 Not Sovereign</span>
+    <span class="chip">🧬 20 Defining Features</span>
+    <span class="chip">🆕 Updated to mid-2026</span>
+  </div>
+  <div class="tricolor-bar"></div>
+  <div class="scroll-cue">⮟</div>
+</header>
+
+<div class="wrap">
+
+<!-- ══════════════ PART A ══════════════ -->
+<section class="part A" id="A">
+  <div class="part-head">
+    <div class="part-tag">Part A · The Philosophy</div>
+    <h2>🌱 WHY DO WE NEED A PARLIAMENT AT ALL?</h2>
+    <p class="lede">Before the articles and the arithmetic — the moral case for a talking chamber.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="sec">🤔 The Core Idea</h3>
+    <p>A Parliament exists because <span class="w">people cannot all govern directly</span> — so they govern <span class="k">through representatives</span> whom they choose, control, and can remove. It is <em>indirect democracy</em> engineered into an institution.</p>
+    <p>The Greek city-state could gather in the Agora; a nation of <span class="kk">1.4 billion</span> cannot. Parliament is therefore the <span class="g">technology of scale for democracy</span> — it compresses the will of the multitude into a debating chamber of a few hundred, without severing the thread of accountability that runs back to the voter.</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="tile"><span class="ico">🗳️</span><b>Public Participation</b><small>Enables ordinary citizens to take part in decision-making <em>indirectly</em>, through people they elect and can throw out.</small></div>
+    <div class="tile"><span class="ico">✅</span><b>Consent of the Governed</b><small>Government derives authority from people's consent, not force. Locke's social contract, institutionalised.</small></div>
+    <div class="tile"><span class="ico">🧾</span><b>Accountability</b><small>Executive is answerable <em>daily</em> — Question Hour, motions, committees, and ultimately the No-Confidence Motion.</small></div>
+    <div class="tile"><span class="ico">🔍</span><b>Deliberation</b><small>National issues get debated openly before becoming law. "Government by discussion" — Bagehot.</small></div>
+    <div class="tile"><span class="ico">⚖️</span><b>Legitimacy</b><small>Laws made by the people's representatives command <em>moral</em> obedience, not merely legal compliance.</small></div>
+    <div class="tile"><span class="ico">🕊️</span><b>Peaceful Change</b><small>Parliament allows governments to fall and policies to reverse <em>without bloodshed</em> — the ballot replaces the bullet.</small></div>
+    <div class="tile"><span class="ico">🪞</span><b>Representation of Diversity</b><small>A federal, multi-lingual, multi-faith society finds a single arena where every identity has a seat and a voice.</small></div>
+    <div class="tile"><span class="ico">🎓</span><b>Political Education</b><small>Debates telecast on Sansad TV educate the nation; Mill called this the "teaching" function.</small></div>
+    <div class="tile"><span class="ico">🛡️</span><b>Grievance Redressal</b><small>Mill's "nation's Committee of Grievances" — the safety valve where public discontent is voiced, not suppressed.</small></div>
+  </div>
+
+  <h3 class="sec">📜 The Historical Journey — "But Why Should <em>People</em> Decide?"</h3>
+  <div class="diagram">
+<pre>
+🇬🇧 COLONIAL RULE
+   People lived in FEAR • disagreed with decisions
+   but faced GRAVE DANGER if they criticised them
+   Legislatures were ADVISORY, nominated, powerless
+              ⬇️
+✊ FREEDOM MOVEMENT
+   Nationalists began OPENLY criticising the British
+   Demanded elected legislatures &amp; self-rule
+   1885 INC ➜ 1892 (Indian Councils Act, indirect election, "recommend")
+           ➜ 1909 (Morley–Minto: separate electorates ☠️)
+           ➜ 1919 (Montford: BICAMERAL centre, dyarchy in provinces)
+           ➜ 1935 (Provincial autonomy; federal part never implemented)
+              ⬇️
+🏛️ CONSTITUENT ASSEMBLY (1946–49)
+   Nehru's Objectives Resolution (13 Dec 1946)
+   Union Constitution Committee (Nehru) chose the
+   PARLIAMENTARY, not Presidential, system
+              ⬇️
+🇮🇳 AFTER INDEPENDENCE
+   Dreams &amp; aspirations of the freedom struggle
+   made CONCRETE in the Constitution
+              ⬇️
+🗳️ UNIVERSAL ADULT FRANCHISE
+   Every adult = one vote, one value
+   (Radical! Britain/USA took 100+ years to reach this)
+   India granted it on DAY ONE — to a largely poor,
+   illiterate, newly-partitioned electorate. 🌟
+</pre>
+  </div>
+
+  <div class="call gold-c"><b>🌟 Golden Line for Mains:</b> “Parliament is the institutional embodiment of the promise of the freedom struggle — that Indians shall be ruled by Indians whom Indians choose.”</div>
+  <div class="call tip-c"><b>💡 Value Addition:</b> The Constituent Assembly deliberately rejected the American presidential model. Dr. Ambedkar's reasoning: a democratic executive must satisfy two conditions — <span class="g">stability</span> and <span class="g">responsibility</span>. The presidential system offers more stability but less responsibility; the parliamentary system, more responsibility but less stability. India, he said, needed <mark>“a government more responsible than stable.”</mark></div>
+</section>
+
+<!-- ══════════════ PART B ══════════════ -->
+<section class="part B" id="B">
+  <div class="part-head">
+    <div class="part-tag">Part B · Definition</div>
+    <h2>📖 MEANING &amp; DEFINITION OF PARLIAMENT</h2>
+    <p class="lede">From a French verb to Article 79 — how a word became an institution.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="sec">1️⃣ Etymology 🔤</h3>
+    <p>The word <span class="kk">“Parliament”</span> comes from the French <em class="k">parler</em> = <em>“to talk / to speak”</em> (Old French <em>parlement</em>, Medieval Latin <em>parliamentum</em>).</p>
+    <p>👉 Hence, Parliament literally = <span class="w">“the place where the nation talks”</span> — a <span class="g">deliberative</span> body, not merely a law-factory. 🗣️ The very name reminds us that a Parliament that does not <em>talk</em> — that passes bills without debate — has betrayed its own etymology.</p>
+    <p>🇮🇳 The Indian equivalents carry the same soul: <span class="k">Sansad</span> (from Sanskrit <em>sam + sad</em> = “to sit together”), <span class="k">Lok Sabha</span> = Assembly of the People, <span class="k">Rajya Sabha</span> = Council of the States.</p>
+  </div>
+
+  <h3 class="sec">2️⃣ Constitutional Definition 📜</h3>
+  <blockquote class="quote">
+    <b class="k">ARTICLE 79 — Constitution of Parliament</b><br><br>
+    “There shall be a Parliament for the Union which shall consist of the <span class="w">President</span> and <span class="w">two Houses</span> to be known respectively as the <span class="w">Council of States (Rajya Sabha)</span> and the <span class="w">House of the People (Lok Sabha)</span>.”
+    <cite>— The Constitution of India, Part V, Chapter II</cite>
+  </blockquote>
+
+  <h4 class="sub">🧮 THE PARLIAMENT EQUATION</h4>
+  <div class="diagram gold">
+<pre>
+   👑 PRESIDENT   +   🏛️ RAJYA SABHA   +   🏛️ LOK SABHA   =   🇮🇳 PARLIAMENT
+   (Head of State)   (Council of States)  (House of People)
+                      Upper / Second        Lower / First
+                          House                House
+                      Federal Chamber     Popular Chamber
+                      Indirectly elected  Directly elected
+                      NEVER dissolved     5-year life
+</pre>
+  </div>
+  <div class="call warn-c"><b>⚠️ Precision Point:</b> Parliament ≠ the two Houses alone. A Bill passed by both Houses is <span class="r">not law</span> until the President assents. Therefore the President is not decorative — he is <span class="w">constitutionally constitutive</span> of Parliament.</div>
+
+  <h3 class="sec">3️⃣ Working Definitions ✍️</h3>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>Type</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td>⚖️ Legal</td><td>The supreme <span class="k">legislative organ of the Union Government</span>, constituted under <span class="art">Art. 79</span>, comprising the President + Rajya Sabha + Lok Sabha.</td></tr>
+      <tr><td>🏛️ Political</td><td>The <span class="k">highest representative and deliberative body</span> of the nation — the apex forum of national debate and the mirror of the popular will.</td></tr>
+      <tr><td>🔗 Functional</td><td>The institution that <span class="k">makes laws, controls the executive, holds the purse, amends the Constitution</span> and voices public opinion.</td></tr>
+      <tr><td>🌍 Comparative</td><td>India's version of the <span class="k">Westminster Model</span> legislature, adapted to a federal, republican, written-Constitution framework.</td></tr>
+      <tr><td>🧭 Normative</td><td>A <span class="k">trustee of popular sovereignty</span> — it exercises, but does not own, the sovereignty that resides in "We, the People" (Preamble).</td></tr>
+      <tr><td>🏦 Fiscal</td><td>The <span class="k">custodian of the public purse</span>: <span class="art">Art. 265</span> (no tax without authority of law) and <span class="art">Art. 266</span> (no withdrawal from the CFI without appropriation).</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sec">4️⃣ 🏷️ NOMENCLATURE — The Naming Story</h3>
+  <div class="tbox"><table>
+    <thead><tr><th>Year</th><th>Event</th></tr></thead>
+    <tbody>
+      <tr><td>1919</td><td>Bicameral <span class="k">Central Legislature</span> created (Council of State + Legislative Assembly) — GoI Act 1919 (Montagu–Chelmsford Reforms).</td></tr>
+      <tr><td>1935</td><td>GoI Act envisaged a <em>Federal Legislature</em> (Council of State + Federal Assembly) — the federal portion was <span class="r">never implemented</span>.</td></tr>
+      <tr><td>26 Jan 1950</td><td>Constitution names them <span class="k">“Council of States”</span> &amp; <span class="k">“House of the People”</span> — the only names in the constitutional text.</td></tr>
+      <tr><td>1954 🎉</td><td>The Hindi names <span class="kk">“Rajya Sabha”</span> (23 Aug 1954) and <span class="kk">“Lok Sabha”</span> (14 May 1954) were <span class="w">officially adopted</span> by the Council of States and the House of the People respectively, by their own resolutions.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call mem-c"><b>🧠 Memory Hook:</b> <em>“In 1954, English got a Hindi coat.”</em> 🧥 — Also remember 1954 gave us the <span class="v">Calling Attention Motion</span> and the <span class="v">Salary &amp; Allowances of MPs Act</span>. <mark>1954 = the "naming + notice + note" year.</mark></div>
+
+  <h3 class="sec">5️⃣ 🏢 Where Does It Sit?</h3>
+  <div class="grid g2">
+    <div class="tile"><span class="ico">🏛️</span><b>Old Building — “Samvidhan Sadan”</b><small>Circular <em>Sansad Bhavan</em>, designed by <span class="k">Edwin Lutyens &amp; Herbert Baker</span>. Foundation stone laid <span class="k">12 Feb 1921</span> by the Duke of Connaught; opened <span class="k">18 Jan 1927</span> by Lord Irwin. Housed the Constituent Assembly (1946–49). Renamed <span class="kk">“Samvidhan Sadan” (Constitution House)</span> in Sept 2023. 144 sandstone columns; inspired by the Chausath Yogini temple, Morena (popular belief).</small></div>
+    <div class="tile"><span class="ico">🦚</span><b>New Building (2023)</b><small>Triangular design (Bimal Patel / HCP), inaugurated <span class="k">28 May 2023</span>. Lok Sabha chamber ≈ <span class="kk">888</span> seats (<span class="g">peacock theme 🦚</span>); Rajya Sabha chamber ≈ <span class="kk">300</span> seats (<span class="g">lotus theme 🪷</span>); joint sittings held in the LS chamber (capacity ≈1272). The <span class="k">Sengol</span> (Chola sceptre of 1947) installed near the Speaker's chair. Constitution Hall houses a digital copy of the Constitution.</small></div>
+  </div>
+  <div class="call info-c"><b>🗿 Bonus Symbolism:</b> The National Emblem atop the new building (9,500 kg bronze, 6.5 m) and the Foucault Pendulum in the Constitution Hall (representing the idea of India within the cosmos) are frequently asked "static + current" fusion points.</div>
+</section>
+
+<!-- ══════════════ PART C ══════════════ -->
+<section class="part C" id="C">
+  <div class="part-head">
+    <div class="part-tag">Part C · Foundational Rationale</div>
+    <h2>🧭 WHY THIS FORM? — THE WESTMINSTER CHOICE</h2>
+    <p class="lede">Why India crowned its President into Parliament while America locked its President out.</p>
+  </div>
+
+  <div class="diagram blue">
+<pre>
+        Framers relied on the BRITISH pattern, NOT the American pattern
+                                   │
+        ┌──────────────────────────┴──────────────────────────┐
+        ▼                                                     ▼
+🇬🇧 PARLIAMENTARY FORM                              🇺🇸 PRESIDENTIAL FORM
+• INTERDEPENDENCE of                               • SEPARATION of legislature
+  legislature &amp; executive                            &amp; executive
+• Executive drawn FROM legislature                 • Executive outside legislature
+• Nominal head + Real head                         • One single real executive
+• Collective responsibility                        • Individual responsibility
+• "Crown-in-Parliament"                            • President is NOT a constituent
+  = King/Queen is part of Parliament                 part of the Congress
+• Dissolution possible                             • Fixed term, no dissolution
+        ⬇️                                                  ⬇️
+🇮🇳 "President-in-Parliament"                      Congress = Senate + House only
+   President is a CONSTITUENT PART                 (President excluded)
+   but NOT a MEMBER of either House                President may only "recommend"
+                                                    via the State of the Union
+</pre>
+  </div>
+
+  <div class="grid g2">
+    <div class="tile"><span class="ico">🤝</span><b>Why Familiarity Won</b><small>Indians had ~30 years of experience with the parliamentary form under the GoI Acts of 1919 &amp; 1935. Ambedkar: the framers preferred "a system with which we are familiar."</small></div>
+    <div class="tile"><span class="ico">⚔️</span><b>Why Avoid Conflict</b><small>A presidential system risks deadlock between an elected President and an elected legislature. In a plural society emerging from Partition, the framers wanted <em>harmony</em>, not institutional combat.</small></div>
+    <div class="tile"><span class="ico">🌈</span><b>Why Plurality Needed It</b><small>Coalition and minority governments allow diverse communities into the executive. A single-winner presidency would exclude minorities from the top office permanently.</small></div>
+    <div class="tile"><span class="ico">📆</span><b>Why Daily Accountability</b><small>A President is accountable once in 4–5 years; a Prime Minister is accountable every sitting day. India chose continuous answerability.</small></div>
+  </div>
+
+  <h3 class="sec">👑 WHY IS THE PRESIDENT A PART OF PARLIAMENT?</h3>
+  <p><em>(Even though he/she is <span class="r">NOT a member</span> of either House!)</em> — <span class="kk">Very high-yield Prelims point ⚠️</span></p>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>#</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>1️⃣ Assent</td><td><span class="k">No Bill can become law</span> without the President's assent <span class="art">Art. 111</span>. He may assent, withhold, or return a non-Money Bill for reconsideration (suspensive veto — must assent if re-passed).</td></tr>
+      <tr><td>2️⃣ Summon</td><td><span class="k">Summons</span> and <span class="k">prorogues</span> both Houses; <span class="k">dissolves</span> the Lok Sabha <span class="art">Art. 85</span>. Without summoning, Parliament legally cannot meet.</td></tr>
+      <tr><td>3️⃣ Ordinance</td><td><span class="k">Promulgates Ordinances</span> when Parliament is not in session <span class="art">Art. 123</span> — a direct <em>legislative</em> power, co-extensive with Parliament's.</td></tr>
+      <tr><td>4️⃣ Address</td><td><span class="k">Addresses</span> Parliament <span class="art">Art. 86(1)</span> &amp; delivers the <span class="k">Special Address</span> to both Houses assembled together <span class="art">Art. 87</span>.</td></tr>
+      <tr><td>5️⃣ Message</td><td><span class="k">Sends messages</span> to either House <span class="art">Art. 86(2)</span> — whether on a pending Bill or otherwise; the House must consider it "with all convenient despatch."</td></tr>
+      <tr><td>6️⃣ Nominate</td><td><span class="k">Nominates 12</span> members to the Rajya Sabha <span class="art">Art. 80(3)</span>; (formerly 2 Anglo-Indians to the LS under old Art. 331).</td></tr>
+      <tr><td>7️⃣ Recommend</td><td><span class="k">Recommendation</span> needed for Money Bills, Financial Bills &amp; demands for grants <span class="art">Arts. 110, 113, 117</span>.</td></tr>
+      <tr><td>8️⃣ Sanction</td><td>Certain Bills need <span class="k">prior sanction</span> — e.g. <span class="art">Art. 3</span> (reorganisation of States), <span class="art">Art. 304(b)</span> proviso (State trade restrictions).</td></tr>
+      <tr><td>9️⃣ Lay Reports</td><td>Causes to be laid before Parliament the reports of the <span class="k">CAG, UPSC, Finance Commission, NCSC/NCST, NCBC</span> and the Special Officer for Linguistic Minorities.</td></tr>
+      <tr><td>🔟 Convention</td><td>Adopts the British <span class="k">“Crown-in-Parliament”</span> convention — the head of State is legally inseparable from the legislature.</td></tr>
+      <tr><td>1️⃣1️⃣ Joint Sitting</td><td>Only the President can <span class="k">notify a joint sitting</span> under <span class="art">Art. 108</span> to break a deadlock.</td></tr>
+      <tr><td>1️⃣2️⃣ Budget</td><td>Causes the <span class="k">Annual Financial Statement</span> to be laid before both Houses <span class="art">Art. 112</span>.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call mem-c"><b>🧠 Mnemonic — “A-S-O-A-M-N-R-S-L-C”</b> → <span class="v">A</span>ssent, <span class="v">S</span>ummon, <span class="v">O</span>rdinance, <span class="v">A</span>ddress, <span class="v">M</span>essage, <span class="v">N</span>ominate, <span class="v">R</span>ecommend, <span class="v">S</span>anction, <span class="v">L</span>ay reports, <span class="v">C</span>rown-in-Parliament.</div>
+  <div class="call warn-c"><b>⚠️ Fine Distinction:</b> The President is <span class="g">part of Parliament ✅</span> but <span class="r">NOT a member of either House ❌</span>. Hence parliamentary <span class="w">privileges do NOT extend to the President</span> — they extend to Ministers and the <span class="k">Attorney-General</span>, who under <span class="art">Art. 88</span> may speak in either House, in a joint sitting and in committees, <em>but have no right to vote</em> (unless a Minister is a member of that House).</div>
+</section>
+
+<!-- ══════════════ PART D ══════════════ -->
+<section class="part D" id="D">
+  <div class="part-head">
+    <div class="part-tag">Part D · Structure</div>
+    <h2>🏗️ ORGANISATION OF PARLIAMENT</h2>
+    <p class="lede">Three limbs, two chambers, one sovereign people.</p>
+  </div>
+
+  <div class="diagram violet">
+<pre>
+                        🇮🇳 PARLIAMENT (Art. 79)
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        ▼                        ▼                        ▼
+   👑 PRESIDENT           🏛️ RAJYA SABHA           🏛️ LOK SABHA
+   Integral part           UPPER HOUSE              LOWER HOUSE
+   Not a member            Second Chamber           First Chamber
+                           "House of Elders"        "Popular House"
+        │                        │                        │
+        │                Represents:                Represents:
+        │                STATES &amp; UTs of            THE PEOPLE OF
+        │                the Indian Union           INDIA as a whole
+        │                        │                        │
+        │                Art. 80 • Max 250          Art. 81 • Max 550
+        │                (238 elected + 12 nom.)    (530 States + 20 UTs)
+        │                Actual sanctioned: 245     Actual: 543
+        │                (233 elected + 12 nom.)    (Anglo-Indian 2 lapsed)
+        │                PERMANENT (no dissolution) 5-YEAR term
+        │                Chairman = Vice-President  Speaker elected by House
+        │                Age 30+ • Term 6 yrs       Age 25+ • Term 5 yrs
+        │                PR by STV, open ballot     FPTP, secret ballot
+        ▼
+   Assent • Summon • Prorogue • Dissolve LS • Ordinances • Address • Messages
+</pre>
+  </div>
+
+  <div class="flip-grid">
+    <div class="flip"><div class="flip-in">
+      <div class="face front"><span class="em">👑</span><b>The President</b><small style="color:var(--txt-dim)">Hover 🔄</small></div>
+      <div class="face back">Head of State, integral part of Parliament, <b>not a member</b>. Elected by an electoral college of MPs + MLAs of States &amp; Delhi/Puducherry via <b>PR by STV, secret ballot</b>. Term 5 years. Impeachable under Art. 61.</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="face front"><span class="em">🏛️</span><b>Rajya Sabha</b><small style="color:var(--txt-dim)">Hover 🔄</small></div>
+      <div class="face back">Max <b>250</b> (238 elected + 12 nominated); sanctioned <b>245</b> (233 + 12). First constituted <b>3 April 1952</b>; first sitting <b>13 May 1952</b>. Permanent body, 1/3 retire every 2 years.</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="face front"><span class="em">🗳️</span><b>Lok Sabha</b><small style="color:var(--txt-dim)">Hover 🔄</small></div>
+      <div class="face back">Max <b>550</b> (530 States + 20 UTs); actual <b>543</b>. Directly elected by FPTP from territorial constituencies. First LS met <b>13 May 1952</b>. Currently the <b>18th Lok Sabha</b>.</div>
+    </div></div>
+    <div class="flip"><div class="flip-in">
+      <div class="face front"><span class="em">🎖️</span><b>12 Nominated</b><small style="color:var(--txt-dim)">Hover 🔄</small></div>
+      <div class="face back">Art. 80(3): special knowledge/practical experience in <b>Literature 📚, Science 🔬, Art 🎨, Social Service 🤝</b>. They may vote in the President's election but <b>not</b> in the Vice-President's… <i>(correction: they CAN vote for VP; they cannot vote for President)</i>.</div>
+    </div></div>
+  </div>
+  <div class="call warn-c"><b>⚠️ Classic Trap:</b> <span class="w">Nominated members of Parliament CANNOT vote in the election of the President</span> (electoral college = <em>elected</em> MPs + <em>elected</em> MLAs only) — but they <span class="g">CAN vote in the election of the Vice-President</span> (electoral college = <em>all</em> members of both Houses, elected <em>and</em> nominated). Also, MLCs never vote in either. 🎯</div>
+
+  <h3 class="sec">🗺️ Representation of Union Territories in the Rajya Sabha</h3>
+  <div class="call info-c">Only <span class="k">3 UTs</span> are represented: <span class="pill p-gold">Delhi — 3</span> <span class="pill p-gold">Puducherry — 1</span> <span class="pill p-gold">Jammu &amp; Kashmir — 4</span>. Chosen by an <span class="w">electoral college</span> constituted for the purpose (in practice, the elected members of the UT Assembly), via PR by STV. The other UTs (Chandigarh, Ladakh, Lakshadweep, A&amp;N, D&amp;NH-Daman&amp;Diu) have <span class="r">no Rajya Sabha representation</span> because they lack legislatures / adequate population. Seat allocation for States &amp; UTs is in the <span class="k">Fourth Schedule</span>.</div>
+</section>
+
+<!-- ══════════════ PART E ══════════════ -->
+<section class="part E" id="E">
+  <div class="part-head">
+    <div class="part-tag">Part E · The Heart ❤️</div>
+    <h2>🧬 THE 20 DEFINING CHARACTERISTICS</h2>
+    <p class="lede">Twenty structural DNA strands that make the Indian Parliament what it is.</p>
+  </div>
+
+  <div class="char" data-n="01" style="--c:#4fd6a0">
+    <h4><span class="num">1️⃣</span>🏛️ BICAMERAL (Two-Chambered)</h4>
+    <p>Two Houses — <span class="k">Rajya Sabha</span> (Upper) + <span class="k">Lok Sabha</span> (Lower).</p>
+    <h4 class="sub">Why bicameralism? ✅</h4>
+    <ul class="nice">
+      <li>Checks <span class="w">hasty, defective, careless &amp; ill-considered legislation</span> — provides “revision and second thought.”</li>
+      <li>Gives representation to <span class="w">States</span> → federal balance ⚖️</li>
+      <li>Brings in <span class="w">experts/eminent persons</span> who cannot or will not win direct elections (the 12 nominated).</li>
+      <li>Acts as a <span class="w">revising chamber</span>, a “sober second thought” / “de-bunking chamber.”</li>
+      <li>Provides <span class="w">continuity</span> — the RS never dissolves, so the legislature never wholly disappears.</li>
+      <li>Acts as a <span class="w">safety valve against majoritarianism</span> in the popular House.</li>
+    </ul>
+    <div class="call gold-c">🗣️ <em>Sir John Seeley:</em> “The second chamber is a <b>brake</b>, not an engine.” &nbsp;|&nbsp; 🗣️ <em>Abbé Sieyès (critique):</em> “If the second chamber agrees with the first, it is <b>superfluous</b>; if it disagrees, it is <b>mischievous</b>.” — Use both for balanced Mains answers.</div>
+  </div>
+
+  <div class="char" data-n="02" style="--c:#f4c869">
+    <h4><span class="num">2️⃣</span>👑 PRESIDENT IS AN INTEGRAL PART</h4>
+    <p>Unlike the US (where the President is excluded from Congress), India follows <span class="kk">“Crown-in-Parliament”</span> → <span class="k">“President-in-Parliament.”</span> <em>(12 reasons detailed in Part C.)</em> The doctrine means Parliament acts as a <span class="w">tri-partite composite</span>: two deliberating chambers plus one assenting head.</p>
+  </div>
+
+  <div class="char" data-n="03" style="--c:#6fb7ff">
+    <h4><span class="num">3️⃣</span>🗳️ REPRESENTATIVE &amp; DEMOCRATIC</h4>
+    <p>Based on <span class="k">Universal Adult Franchise</span> — every citizen <span class="kk">18+</span> (reduced from 21 by the <span class="k">61st Amendment Act, 1988</span> ✨, effective 28 March 1989) who is not otherwise disqualified may vote.</p>
+    <div class="grid g2">
+      <div class="tile"><span class="ico">🏛️</span><b>Lok Sabha → DIRECT</b><small>Elected directly by the people from single-member <em>territorial constituencies</em>. Article 326 guarantees adult suffrage.</small></div>
+      <div class="tile"><span class="ico">🏛️</span><b>Rajya Sabha → INDIRECT</b><small>Elected by the <em>elected</em> MLAs of State Assemblies (MLCs excluded) via PR-STV with an <b>open ballot</b> (since 2003) to curb cross-voting.</small></div>
+    </div>
+    <div class="call info-c"><b>🆕 Reform note:</b> The <span class="k">RPA (Amendment) Act, 2003</span> removed the “domicile/residence” requirement for RS candidates and introduced the <span class="w">open ballot</span>. The Supreme Court upheld both in <em class="k">Kuldip Nayar v. Union of India (2006)</em>, holding that the Rajya Sabha is not required to be a chamber of "residents", and that the secrecy of the ballot is not an absolute constitutional value in an indirect election.</div>
+  </div>
+
+  <div class="char" data-n="04" style="--c:#b79cff">
+    <h4><span class="num">4️⃣</span>🔗 RESPONSIBLE / ACCOUNTABLE GOVERNMENT</h4>
+    <p><span class="art">Article 75(3)</span>: The Council of Ministers is <span class="kk">collectively responsible to the Lok Sabha</span>. <span class="art">Art. 75(4)</span> individual responsibility to the President; <span class="art">Art. 75(1A)</span> caps the CoM at <span class="k">15% of LS strength</span> (91st Amendment, 2003); <span class="art">Art. 75(5)</span> — a Minister must become an MP within <span class="k">6 months</span>.</p>
+    <p>→ The Executive is <em>born of, sustained by and removable by</em> the Legislature. <span class="w">Fusion, not separation, of powers.</span></p>
+    <div class="call tip-c"><b>💡 Insight:</b> Collective responsibility means the CoM "sink or swim together" — a no-confidence motion against one Minister is a motion against the whole Council. Even Ministers from the Rajya Sabha fall when the Lok Sabha withdraws confidence. Notably, <span class="k">only the Lok Sabha</span> can enforce this; the Rajya Sabha can criticise but cannot remove.</div>
+  </div>
+
+  <div class="char" data-n="05" style="--c:#ff9a3c">
+    <h4><span class="num">5️⃣</span>⚖️ FEDERAL FLAVOUR (with a Unitary Tilt)</h4>
+    <ul class="nice">
+      <li>RS represents States → the <span class="w">federal principle</span> 🤝</li>
+      <li><span class="kk">BUT</span> representation is on the basis of <span class="w">POPULATION</span>, <em>not</em> equality of States.
+        <br>🇮🇳 UP = <span class="k">31</span> seats; Maharashtra = 19; Tamil Nadu = 18; while Sikkim, Nagaland, Mizoram, Tripura, Manipur, Arunachal, Meghalaya, Goa = <span class="k">1</span> each.
+        <br>🇺🇸 USA: <span class="w">every</span> State gets exactly <span class="k">2 Senators</span> (50 States → 100 Senators), regardless of size.</li>
+      <li>📜 The <span class="k">Fourth Schedule</span> allocates RS seats to States &amp; UTs.</li>
+      <li>➡️ The Indian RS is thus a <span class="kk">“quasi-federal” chamber</span> — less federal than the US Senate, but far more federal than the House of Lords.</li>
+    </ul>
+    <div class="call warn-c"><b>⚠️ Additional unitary tilts:</b> (i) State legislatures have <span class="r">no role</span> in RS members' removal; (ii) an RS member need not be a resident of the State he represents (post-2003); (iii) <span class="art">Art. 249</span> allows the RS itself to <em>surrender</em> State autonomy; (iv) <span class="art">Art. 3</span> lets Parliament redraw States without their consent.</div>
+  </div>
+
+  <div class="char" data-n="06" style="--c:#63e6e2">
+    <h4><span class="num">6️⃣</span>♾️ ONE PERMANENT + ONE DISSOLVABLE HOUSE</h4>
+    <div class="tbox"><table>
+      <thead><tr><th>Feature</th><th>🏛️ Lok Sabha</th><th>🏛️ Rajya Sabha</th></tr></thead>
+      <tbody>
+        <tr><td>Article</td><td><span class="art">83(2)</span></td><td><span class="art">83(1)</span></td></tr>
+        <tr><td>Term</td><td><span class="k">5 years</span> from the date of its first meeting</td><td><span class="k">Continuing / Permanent body</span> — <em>not subject to dissolution</em></td></tr>
+        <tr><td>Rotation</td><td>Dissolved as a whole</td><td><span class="k">1/3rd retire every 2 years</span></td></tr>
+        <tr><td>Member's term</td><td>5 years</td><td><span class="kk">6 years</span> — fixed by <span class="k">RPA 1951</span>, <span class="r">not the Constitution!</span></td></tr>
+        <tr><td>Early end?</td><td>President may dissolve <span class="k">any time</span> on the PM's advice (not justiciable)</td><td>❌ Never dissolved</td></tr>
+        <tr><td>Emergency</td><td>Extendable by Parliament by <span class="k">1 year at a time</span>, ending within <span class="k">6 months</span> after the Emergency ceases</td><td>No extension needed</td></tr>
+        <tr><td>Longest / shortest</td><td>5th LS extended to <span class="k">~6 yrs</span> (1971–77, Emergency); 6th, 9th, 11th, 12th, 13th LS dissolved early. The 12th LS lasted only <span class="k">~13 months</span> (1998–99).</td><td>Continuous since 3 April 1952</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call gold-c">🎲 <b>Trivia:</b> For the <span class="w">first</span> Rajya Sabha (1952), the question of who would retire first was decided by <span class="kk">LOTTERY 🎰</span>, and the President was empowered under <span class="art">Art. 83(1)</span> proviso + the RPA 1951 to curtail their terms so as to establish the biennial cycle.</div>
+    <div class="call warn-c"><b>⚠️ Trap:</b> The 42nd Amendment (1976) raised the LS term from 5 → <span class="k">6 years</span>; the <span class="k">44th Amendment (1978)</span> restored it to 5. During a proclamation of <em>National</em> Emergency alone (not State Emergency) can the term be extended.</div>
+  </div>
+
+  <div class="char" data-n="07" style="--c:#9be15d">
+    <h4><span class="num">7️⃣</span>🗺️ DUAL ELECTORAL SYSTEMS</h4>
+    <div class="tbox"><table class="wide">
+      <thead><tr><th>House</th><th>System</th></tr></thead>
+      <tbody>
+        <tr><td>🏛️ Lok Sabha</td><td><span class="k">First-Past-The-Post (FPTP)</span> + <span class="k">Territorial Representation</span> + <span class="k">Single-member constituencies</span> — <em>whoever comes first wins</em> (no 50% needed!). Secret ballot.</td></tr>
+        <tr><td>🏛️ Rajya Sabha</td><td><span class="k">Proportional Representation</span> by means of the <span class="k">Single Transferable Vote (STV)</span> — <span class="w">open ballot</span> for MLAs; preferences marked 1, 2, 3… (1st preference <span class="kk">mandatory</span>, else the vote is invalid).</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call info-c"><b>📌 PR by STV is used for:</b> President 👑 (secret ballot), Vice-President 🎖️ (secret ballot), Rajya Sabha (open ballot), and State Legislative Councils. <br><b>❌ Not used for:</b> Lok Sabha &amp; State Legislative Assemblies.<br><b>🧮 Quota formula (RS):</b> Quota = ⌊(Total valid votes ÷ (Seats + 1))⌋ + 1. Each MLA's vote carries a value of <span class="k">100</span> and preferences are transferred by the surplus-transfer method.</div>
+    <h4 class="sub">🚫 Why the Constitution Rejected PR for the Lok Sabha</h4>
+    <div class="grid g3">
+      <div class="tile"><span class="ico">📚</span><b>Too complicated</b><small>Unsuited to a largely illiterate electorate in 1950.</small></div>
+      <div class="tile"><span class="ico">💰</span><b>Highly expensive</b><small>Huge multi-member constituencies, costly campaigns and counting.</small></div>
+      <div class="tile"><span class="ico">🗳️</span><b>No by-elections</b><small>Vacancies filled from lists, weakening the voter's direct choice.</small></div>
+      <div class="tile"><span class="ico">💔</span><b>No intimate contact</b><small>Eliminates the close voter–representative bond of a small constituency.</small></div>
+      <div class="tile"><span class="ico">🧩</span><b>Minority thinking</b><small>Promotes group interests, sectionalism and communalism.</small></div>
+      <div class="tile"><span class="ico">🎭</span><b>Party over voter</b><small>Increases the significance of the party machine, reduces that of the individual voter.</small></div>
+      <div class="tile"><span class="ico">⚠️</span><b>Multiplies parties</b><small>Fragmentation → coalition instability → unsuited to a parliamentary government needing a stable majority.</small></div>
+      <div class="tile"><span class="ico">🏛️</span><b>Weak government</b><small>Perpetual hung houses would defeat Ambedkar's aim of a "responsible <em>and</em> workable" executive.</small></div>
+    </div>
+    <div class="call warn-c"><b>📉 The FPTP Critique (for Mains):</b> FPTP systematically produces a <span class="w">seats–votes mismatch</span> — a party can win a majority of seats on ~35–40% of the vote, while sizeable minorities remain unrepresented. Reform suggestions include the <span class="k">Mixed Member Proportional (MMP)</span> model (Law Commission's 170th Report, 1999, suggested adding 25% seats via a list system) and the <span class="k">run-off / 50%+1</span> requirement.</div>
+  </div>
+
+  <div class="char" data-n="08" style="--c:#ffd27a">
+    <h4><span class="num">8️⃣</span>📊 POPULATION-BASED, EQUITABLE REPRESENTATION <span class="art">Art. 81(2)</span></h4>
+    <ul class="nice">
+      <li>Seats : Population ratio shall be <span class="w">the same for all States</span> → uniformity <em>between</em> States.</li>
+      <li>Each constituency's population ratio shall be <span class="w">the same throughout a State</span> → uniformity <em>within</em> a State.</li>
+      <li>🛡️ <em>Exception:</em> the "same ratio between States" rule does not apply to States with a population below <span class="k">60 lakh</span>.</li>
+    </ul>
+    <h4 class="sub">🧊 THE GREAT FREEZE</h4>
+    <div class="diagram gold">
+<pre>
+1971 CENSUS  ──►  42nd AMENDMENT (1976)  ──►  frozen till the first census after 2000
+                            │
+                            ▼
+              84th AMENDMENT (2001) ──► freeze extended till the first census after 2026
+              Rationale: do NOT penalise States that successfully
+                         controlled their population 👨‍👩‍👧
+                            │
+                            ▼
+              87th AMENDMENT (2003) ──► delimitation WITHIN States permitted
+                                        on the 2001 census, WITHOUT altering
+                                        each State's total number of seats
+                            │
+                            ▼
+              ⏰ FREEZE EXPIRES after the first census following 2026
+                 ➜ CENSUS 2027 (reference date 1 March 2027)
+                 ➜ DELIMITATION = the great federal question of the late 2020s
+</pre>
+    </div>
+    <ul class="nice">
+      <li>🗓️ <span class="art">Article 82</span>: upon completion of each census, Parliament enacts a <span class="k">Delimitation Act</span> and a Delimitation Commission redraws boundaries. Commissions so far: <span class="k">1952, 1963, 1973, 2002</span> (the 2002 Commission finalised its orders in <span class="k">2008</span>). A separate J&amp;K Delimitation Commission (2020–2022) redrew that UT's Assembly seats.</li>
+      <li>🔒 The Delimitation Commission's orders have the <span class="w">force of law</span> and <span class="r">cannot be questioned in any court</span> (<span class="art">Art. 329(a)</span> + Delimitation Act).</li>
+    </ul>
+    <div class="call new-c"><b>🆕 BIG CURRENT AFFAIR (April 2026):</b> Three Bills were introduced in the Lok Sabha on <span class="k">16 April 2026</span> — the <span class="kk">Constitution (131st Amendment) Bill, 2026</span>, the <span class="kk">Delimitation Bill, 2026</span>, and the <span class="kk">Union Territories Laws (Amendment) Bill, 2026</span>. The Constitution Amendment Bill sought to raise the Lok Sabha's maximum strength from <span class="k">550 → 850</span> (815 from States + 35 from UTs), to let Parliament decide by ordinary law <em>which</em> census delimitation would use (effectively the 2011 census), and to de-link women's reservation from the "first census after 2023" trigger.<br><br>➡️ <span class="w">The Constitution (131st Amendment) Bill, 2026 was DEFEATED in the Lok Sabha on 17 April 2026</span> — it secured <span class="k">298 ayes to 230 noes</span>, short of the <span class="kk">special majority</span> (2/3 of members present and voting <em>and</em> a majority of the total membership — roughly 352 in a House of 543). This is a rare and highly examinable instance of a Constitution Amendment Bill <em>failing</em> on the floor. <em>(Verify the latest status before your exam, as the issue remains live.)</em></div>
+    <div class="call info-c"><b>⚖️ The Delimitation Dilemma:</b> Southern and smaller States that curbed fertility fear losing relative weight; populous northern States argue that "one person, one vote, one value" demands re-proportioning. On 2011 figures at constant strength, Tamil Nadu would fall 39→32 and Kerala 20→15, while UP would rise 80→89 and Bihar 40→46. Proposed middle paths: freeze each State's <em>share</em> while expanding the House; strengthen the Rajya Sabha with equal State representation; or devolve more powers to States (the "federal bargain" approach).</div>
+  </div>
+
+  <div class="char" data-n="09" style="--c:#ff8fb1">
+    <h4><span class="num">9️⃣</span>🤝 SOCIAL JUSTICE BUILT IN — Reservation of Seats</h4>
+    <ul class="nice">
+      <li>❌ <span class="w">Communal / separate electorates ABANDONED</span> (the spirit of the Poona Pact, 1932). SC/ST MPs are elected by <span class="k">ALL voters</span> of the constituency (joint electorate) and may also contest <span class="k">general seats</span>. <em>(Only SC/ST candidates may contest a reserved seat, but every voter votes.)</em></li>
+      <li>🪑 <span class="art">Arts. 330 &amp; 332</span>: SC/ST reservation in the LS and State Assemblies on a <span class="k">population-ratio</span> basis — originally till 1960 (<span class="art">Art. 334</span>), extended every 10 years → now till <span class="kk">25 January 2030</span> by the <span class="k">104th Amendment Act, 2019</span>. Current LS: <span class="k">84 SC</span> + <span class="k">47 ST</span> seats.</li>
+      <li>🚫 <span class="w">Anglo-Indian nomination (2 in LS, 1 in some Assemblies)</span> — provision <span class="r">NOT extended</span> by the 104th Amendment; it <span class="kk">lapsed on 25 January 2020</span> → maximum LS strength effectively <span class="k">552 → 550</span> and actual <span class="k">545 → 543</span>.</li>
+      <li>👩 <span class="k">106th Amendment Act, 2023</span> — the <span class="kk">Nari Shakti Vandan Adhiniyam</span> — inserts <span class="art">Arts. 330A, 332A, 239AA(2)(b)</span>: reserves <span class="w">1/3rd of seats for women</span> in the Lok Sabha, State Legislative Assemblies and the Delhi Assembly (including within the SC/ST quota); to operate for <span class="k">15 years</span>, extendable by Parliament; seats to <span class="k">rotate</span> after each delimitation. Commencement was tied to the first census after 2023 + delimitation. ❌ <span class="r">Not applicable to the Rajya Sabha or Legislative Councils.</span></li>
+      <li>⚠️ <span class="w">No reservation of any kind in the Rajya Sabha</span> — not for SC/ST, not for women.</li>
+    </ul>
+    <div class="call new-c"><b>🆕 2026 Status:</b> The <span class="k">Census 2027</span> is underway (house-listing phase from April 2026; population enumeration February 2027; reference date <span class="k">1 March 2027</span>) and is also India's first census to collect <span class="k">caste</span> data since 1931. Because delimitation on the 2027 census cannot realistically be completed before the 2029 general election, the government's 2026 Bills tried to de-link women's reservation from that trigger — but the constitutional component was defeated on 17 April 2026, leaving the timing of women's reservation genuinely uncertain. 🎯 <em>A prime Mains/essay flashpoint.</em></div>
+  </div>
+
+  <div class="char" data-n="10" style="--c:#7ef9d0">
+    <h4><span class="num">🔟</span>⚙️ MULTIFUNCTIONAL BODY — The 7 Powers</h4>
+    <div class="diagram">
+<pre>
+        🏛️ THE 7 POWERS OF PARLIAMENT
+   1️⃣ Legislative  → Union List (98), Concurrent List (52), Residuary powers;
+                     State List in 5 situations (Art. 249, 250, 252, 253, 356)
+   2️⃣ Executive    → Question Hour, Motions, Committees, No-Confidence,
+                     Censure, Adjournment, Cut Motions, Calling Attention
+   3️⃣ Financial    → Budget, Demands for Grants, Financial Committees (PAC,
+                     Estimates, COPU), Rule of Lapse, Appropriation & Finance Bills
+   4️⃣ Constituent  → Amend the Constitution (Art. 368) — 3 types of majority
+                     (subject to the Basic Structure doctrine)
+   5️⃣ Judicial     → Impeach the President (Art. 61), remove VP / Judges of
+                     SC & HC / CEC / CAG / UPSC Chairman; punish for contempt
+                     & breach of privilege
+   6️⃣ Electoral    → Elects the President (part of electoral college), the
+                     Vice-President, Speaker, Deputy Speaker, Deputy Chairman
+   7️⃣ Other        → Highest deliberative body; approves all 3 Emergencies;
+                     creates/abolishes State Legislative Councils (Art. 169);
+                     alters State boundaries/names/areas (Art. 3);
+                     regulates SC/HC organisation & jurisdiction;
+                     creates All-India Services (Art. 312); increases SC
+                     judges' strength; establishes joint public service commissions
+</pre>
+    </div>
+    <div class="call mem-c"><b>🧠 Mnemonic: “LEFT-CJEO”</b> → <span class="v">L</span>egislative, <span class="v">E</span>xecutive, <span class="v">F</span>inancial, <span class="v">C</span>onstituent, <span class="v">J</span>udicial, <span class="v">E</span>lectoral, <span class="v">O</span>ther.</div>
+    <div class="call info-c"><b>🗺️ The 5 routes to the State List:</b> <span class="art">249</span> (RS resolution, national interest) · <span class="art">250</span> (during National Emergency) · <span class="art">252</span> (two or more States request) · <span class="art">253</span> (international treaty/agreement) · <span class="art">356</span> (President's Rule in a State).</div>
+  </div>
+
+  <div class="char" data-n="11" style="--c:#ff6b6b">
+    <h4><span class="num">1️⃣1️⃣</span>🚫 NOT SOVEREIGN (Unlike the British Parliament)</h4>
+    <h4 class="sub">🇬🇧 British Doctrine of Parliamentary Sovereignty — A.V. Dicey's 3 Implications</h4>
+    <ol class="nice">
+      <li>Parliament can <span class="w">make, amend, substitute or repeal ANY law</span>.</li>
+      <li>Constitutional laws can be made by the <span class="w">same procedure</span> as ordinary laws — no distinction.</li>
+      <li>Parliamentary laws <span class="w">cannot be declared invalid</span> by the judiciary — <span class="kk">no judicial review</span>.</li>
+    </ol>
+    <blockquote class="quote">“The British Parliament can do everything except make a woman a man and a man a woman.”<cite>— Jean-Louis De Lolme</cite></blockquote>
+    <h4 class="sub">🇮🇳 The Chains on the Indian Parliament ⛓️</h4>
+    <div class="tbox"><table class="wide">
+      <thead><tr><th>#</th><th>Limitation</th><th>Explanation</th></tr></thead>
+      <tbody>
+        <tr><td>📜 1</td><td>Written Constitution</td><td>The Constitution is the <span class="k">fundamental law</span>; it defines the authority and jurisdiction of all three organs. Parliament must operate <em>within</em> it. (Britain: unwritten ❌)</td></tr>
+        <tr><td>🗺️ 2</td><td>Federal System</td><td>Division of powers between the Union and the States (7th Schedule). Parliament <span class="r">cannot</span> normally legislate on the State List — except in <span class="k">5 abnormal situations</span>, and then only temporarily. (Britain: unitary ❌)</td></tr>
+        <tr><td>⚖️ 3</td><td>Judicial Review</td><td>The SC &amp; HCs can strike down laws as <span class="k">void and ultra vires</span> (<span class="art">Arts. 13, 32, 226, 131, 137</span>). (Britain: no judicial review ❌)</td></tr>
+        <tr><td>🛡️ 4</td><td>Fundamental Rights</td><td><span class="art">Article 13</span> bars the State from making laws that take away or abridge Part III rights. (Britain: no written charter — liberty rests on the <span class="k">Rule of Law</span> ❌)</td></tr>
+        <tr><td>➕ 5</td><td>Basic Structure Doctrine</td><td><em class="k">Kesavananda Bharati (1973)</em>, reaffirmed in <em class="k">Indira Nehru Gandhi (1975)</em>, <em class="k">Minerva Mills (1980)</em>, <em class="k">Waman Rao (1981)</em>, <em class="k">S.R. Bommai (1994)</em>, <em class="k">I.R. Coelho (2007)</em> — even the <em>constituent</em> power under Art. 368 is limited.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call info-c"><b>🇺🇸 Note:</b> The <span class="k">US Congress is also NOT sovereign</span>, for the same 4 reasons (written Constitution, federalism, judicial review, Bill of Rights). Hence <span class="w">Indian Parliament ≈ US Congress</span> in legal status, and <span class="w">≠ British Parliament</span>. However, the Indian Parliament is <em>more powerful than</em> the US Congress in one respect — it can amend most of its own Constitution unilaterally, whereas the US requires ratification by 3/4 of the States.</div>
+    <div class="call warn-c"><b>📉 Postscript on Britain:</b> Even British sovereignty is today qualified in practice — by devolution (Scotland/Wales/NI), the Human Rights Act 1998 (courts may issue "declarations of incompatibility"), and the establishment of the UK Supreme Court in 2009. Still, formally, no British court can annul an Act of Parliament.</div>
+  </div>
+
+  <div class="char" data-n="12" style="--c:#f4c869">
+    <h4><span class="num">1️⃣2️⃣</span>⚖️ ASYMMETRICAL BICAMERALISM — Lok Sabha is “More Equal”</h4>
+    <div class="tbox"><table class="wide">
+      <thead><tr><th>🟰 EQUAL POWERS (RS = LS)</th><th>🔻 LS SUPERIOR</th><th>🔺 RS EXCLUSIVE</th></tr></thead>
+      <tbody>
+        <tr><td>Ordinary Bills; Constitutional Amendment Bills; Financial Bills (Category II)</td><td>Money Bill: introduction only in LS; RS gets only <span class="k">14 days</span>; its recommendations are not binding</td><td><span class="art">Art. 249</span> — resolution allowing Parliament to legislate on a <span class="k">State List</span> subject <em>(2/3 present &amp; voting; 1 year, renewable)</em></td></tr>
+        <tr><td>Election &amp; <span class="k">impeachment of the President</span></td><td>The <span class="k">Speaker certifies</span> a Money Bill — decision <span class="w">final</span></td><td><span class="art">Art. 312</span> — resolution to create <span class="k">new All-India Services</span> <em>(2/3 present &amp; voting)</em></td></tr>
+        <tr><td>Election of the Vice-President <em>(both Houses vote)</em></td><td>Speaker presides over the <span class="k">joint sitting</span></td><td><span class="art">Art. 67(b)</span> — resolution for the <span class="k">removal of the Vice-President</span> must <span class="w">originate in the RS</span> (then agreed to by the LS)</td></tr>
+        <tr><td>Removal of the CJI, SC &amp; HC Judges, CEC, CAG, UPSC Chairman</td><td><span class="k">No-Confidence Motion</span> only in the LS</td><td>Approval of an Emergency <span class="k">alone</span> if the LS is dissolved / its term has expired</td></tr>
+        <tr><td>Approval of Ordinances and all 3 Emergencies</td><td>RS <span class="r">cannot vote</span> on Demands for Grants (may only discuss the Budget)</td><td>Its <em>own</em> Deputy Chairman's election/removal</td></tr>
+        <tr><td>Selection of Ministers including the <span class="k">PM</span> <em>(the PM may be from the RS)</em></td><td>Resolution <span class="k">disapproving continuance</span> of a National Emergency — LS only (<span class="art">Art. 352(8)</span>, 1/10th notice)</td><td>—</td></tr>
+        <tr><td>Consideration of reports of the Finance Commission, UPSC, CAG, NCSC/NCST</td><td><span class="k">Adjournment Motion</span> — LS only</td><td>—</td></tr>
+        <tr><td>Enlarging the jurisdiction of the SC &amp; the UPSC</td><td>The CoM is collectively responsible <span class="w">only to the LS</span></td><td>—</td></tr>
+        <tr><td>Making laws; approving statutory rules &amp; regulations</td><td>In a joint sitting the LS almost always prevails (it is ~2.2× larger)</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call gold-c"><b>📌 Verdict:</b> The Rajya Sabha is <em>“not as weak as the British House of Lords, nor as strong as the American Senate.”</em> 🎯<br><b>📌 Rule:</b> <span class="w">Except in financial matters and control over the Council of Ministers, RS = LS.</span> 🎯<br>🎤 <em>Mains 2020 framing:</em> the RS has transformed from a “<span class="r">useless stepney tyre</span>” (Lanka Sundaram, Constituent Assembly) into a “<span class="g">most useful supporting organ</span>” — especially during periods when the ruling party lacked an Upper-House majority.</div>
+    <div class="call warn-c"><b>⚠️ Why the RS is weaker in a joint sitting:</b> A joint sitting is decided by a simple majority of the <em>total members present and voting</em> of <em>both</em> Houses. With LS 543 vs RS 245 (a 2.2 : 1 ratio), the LS structurally dominates. Note that the 2026 proposal to expand the LS to 815 would have pushed this ratio to <span class="k">3.3 : 1</span>, further weakening the RS — a key objection raised against that Bill.</div>
+  </div>
+
+  <div class="char" data-n="13" style="--c:#63e6e2">
+    <h4><span class="num">1️⃣3️⃣</span>🗣️ A DELIBERATIVE, DEBATING FORUM</h4>
+    <p>Equipped with a rich toolkit of procedural devices:</p>
+    <div class="tbox"><table class="wide">
+      <thead><tr><th>Device</th><th>Essence</th></tr></thead>
+      <tbody>
+        <tr><td>❓ Question Hour</td><td>First hour of every sitting (LS 11 am; RS 12 noon since 2014). <span class="pill p-green">🟩 Starred</span> = oral answer + supplementaries (max 20/day). <span class="pill p-gold">⬜ Unstarred</span> = written answer, no supplementaries (max 230/day). <span class="pill p-red">🩷 Short Notice</span> = urgent matter, &lt;10 days' notice, oral. <span class="pill p-violet">🟨 To Private Members</span> = when the subject concerns a Bill/resolution for which that member is responsible.</td></tr>
+        <tr><td>⚡ Zero Hour</td><td>Immediately after Question Hour (≈12 noon). An <span class="k">Indian innovation since 1962</span>; <span class="r">unmentioned</span> in the Rules of Procedure. Members raise matters without prior notice.</td></tr>
+        <tr><td>📣 Calling Attention Motion</td><td>An <span class="k">Indian innovation, since 1954</span>. A member, with the Speaker's prior permission, calls the attention of a Minister to a matter of urgent public importance and seeks a statement. Also unmentioned in the Constitution but <em>is</em> in the Rules.</td></tr>
+        <tr><td>⏱️ Half-an-Hour Discussion</td><td>On a matter of sufficient public importance already answered in a question, where the answer needs elucidation on a point of fact. No formal motion, no voting.</td></tr>
+        <tr><td>🕑 Short Duration (2-hour) Discussion</td><td>Also called the "two-hour discussion." Urgent public matter; no formal motion, no voting. Introduced 1953.</td></tr>
+        <tr><td>📝 Special Mention (RS) / Rule 377 (LS)</td><td>To raise a matter that is not a point of order and cannot be raised under any other rule.</td></tr>
+        <tr><td>⚖️ Point of Order</td><td>Raised when proceedings do not follow the normal rules; it is extraordinary, suspends proceedings, no debate allowed; must relate to interpretation/enforcement of the Constitution or Rules.</td></tr>
+        <tr><td>🚨 Motions</td><td><span class="k">Adjournment Motion</span> (LS only, censure implied, 50 members' support, min. 2½ hrs discussion) · <span class="k">No-Confidence Motion</span> (LS only, 50 members) · <span class="k">Censure Motion</span> (must state reasons; may target one Minister) · <span class="k">Motion of Thanks</span> (on the President's Address — must be passed, else it signals defeat) · <span class="k">No-Day-Yet-Named Motion</span> · <span class="k">Privilege Motion</span> · <span class="k">Confidence Motion</span>.</td></tr>
+        <tr><td>✂️ Cut Motions</td><td><span class="k">Policy Cut</span> ("reduced to ₹1") · <span class="k">Economy Cut</span> (reduced by a specified amount) · <span class="k">Token Cut</span> (reduced by ₹100, to air a specific grievance). LS only.</td></tr>
+        <tr><td>🪓 Guillotine</td><td>The Speaker "guillotines" undiscussed Demands for Grants and puts them to vote together, to meet the deadline.</td></tr>
+        <tr><td>🏛️ Committees</td><td><span class="k">24 Departmentally Related Standing Committees</span> (DRSCs); Financial Committees — <span class="k">PAC</span> (22: 15 LS + 7 RS; chaired by an Opposition MP by convention since 1967), <span class="k">Estimates Committee</span> (30, LS only), <span class="k">COPU</span> (22); plus ad-hoc, Select and Joint Committees. Called the "<em>mini-legislatures</em>" and the "<em>Parliament's eyes and ears</em>."</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="char" data-n="14" style="--c:#b79cff">
+    <h4><span class="num">1️⃣4️⃣</span>🛡️ PRIVILEGED &amp; AUTONOMOUS</h4>
+    <ul class="nice">
+      <li><span class="art">Art. 105</span> — Freedom of speech in Parliament; <span class="w">no court proceedings</span> for anything said or any vote given in the House or its committees; immunity for publication of proceedings under the House's authority.</li>
+      <li><span class="art">Art. 122</span> — Courts <span class="w">cannot inquire</span> into parliamentary proceedings on grounds of <em>irregularity of procedure</em>. (But <em>illegality</em> and unconstitutionality remain reviewable — <em class="k">Raja Ram Pal v. Speaker (2007)</em>.)</li>
+      <li><span class="art">Art. 121</span> — No discussion in Parliament on the <span class="w">conduct of SC/HC judges</span> except on a motion for their removal.</li>
+      <li><span class="art">Art. 98</span> — Each House has its <span class="w">own Secretariat</span> and staff, independent of the executive.</li>
+      <li><span class="art">Art. 118</span> — Each House makes its <span class="w">own Rules of Procedure</span> and Conduct of Business.</li>
+      <li>👥 <span class="w">Individual privileges:</span> freedom from arrest in <em>civil</em> cases during a session and 40 days before/after (❌ <span class="r">not in criminal or preventive-detention cases</span>); exemption from jury service; freedom of speech.</li>
+      <li>🏛️ <span class="w">Collective privileges:</span> right to publish/prohibit publication of proceedings; to exclude strangers; to hold secret sittings; to make its own rules; to punish for contempt (admonition, reprimand, imprisonment); to receive immediate information of a member's arrest/detention; to institute inquiries.</li>
+    </ul>
+    <div class="call warn-c"><b>⚠️ Privileges are still NOT codified.</b> The <span class="k">44th Amendment (1978)</span> dropped the direct textual reference to the British House of Commons (as at the commencement of the Constitution) <em>without changing the substance</em>. Sources today: the Constitution, laws made by Parliament, the Rules of the Houses, parliamentary conventions, and judicial interpretations. Codification is debated — it would bring clarity but would also make privileges justiciable.</div>
+    <div class="call info-c"><b>⚖️ Key cases:</b> <em class="k">P.V. Narasimha Rao v. State (1998)</em> granted immunity to MPs who took bribes and then voted — <span class="w">overruled in 2024</span> by a 7-judge bench in <em class="k">Sita Soren v. Union of India</em>, which held that bribery is <span class="r">not protected</span> by Arts. 105/194 because the crime is complete on acceptance, irrespective of the vote. Also <em class="k">Keshav Singh's case (1965)</em> on the balance between privileges and fundamental rights, and <em class="k">Raja Ram Pal (2007)</em> upholding expulsion but affirming judicial review for illegality.</div>
+  </div>
+
+  <div class="char" data-n="15" style="--c:#4fd6a0">
+    <h4><span class="num">1️⃣5️⃣</span>🗓️ SESSION-BASED, NOT CONTINUOUS</h4>
+    <ul class="nice">
+      <li><span class="art">Art. 85(1)</span>: the gap between two sessions <span class="w">cannot exceed 6 months</span> → Parliament must meet <span class="k">at least twice a year</span>.</li>
+      <li>3 usual sessions: <span class="k">Budget (Feb–May, longest, usually in two parts with a recess)</span>, <span class="k">Monsoon (Jul–Sep)</span>, <span class="k">Winter (Nov–Dec, shortest)</span>. Special sessions may be summoned at any time (e.g. September 2023, when the new building was occupied and the 106th Amendment was passed).</li>
+      <li>❗ The Constitution prescribes <span class="r">NO minimum number of sitting days</span> — a major criticism 📉. (The NCRWC recommended a minimum of <span class="k">120 days</span> for Parliament and 100 for larger State Assemblies.)</li>
+      <li>❗ The Constitution does <span class="r">not</span> mandate three sessions; it mandates only the <span class="k">6-month gap</span>.</li>
+      <li>⏰ Typical sitting: morning <span class="k">11 am–1 pm</span> + post-lunch <span class="k">2 pm–6 pm</span>. Sittings may be extended, and the House does not sit on Saturdays, Sundays or gazetted holidays.</li>
+      <li>🔑 Vocabulary: <span class="k">Summoning</span> (President calls the House) · <span class="k">Sitting</span> (a single day's meeting) · <span class="k">Session</span> (period between summoning and prorogation) · <span class="k">Recess</span> (period between prorogation and reassembly) · <span class="k">Adjournment sine die</span> (terminating a sitting for an indefinite period) · <span class="k">Prorogation</span> · <span class="k">Dissolution</span> · <span class="k">Quorum</span>.</li>
+      <li>🚨 <span class="art">Art. 352(8)</span>: a <span class="k">special sitting</span> of the Lok Sabha must be held within 14 days if 1/10th of the members give notice of a resolution disapproving a National Emergency.</li>
+    </ul>
+  </div>
+
+  <div class="char" data-n="16" style="--c:#ffa9f0">
+    <h4><span class="num">1️⃣6️⃣</span>🌐 MULTILINGUAL YET WORKABLE <span class="art">Art. 120</span></h4>
+    <p>Business is transacted in <span class="k">Hindi or English</span>; the Presiding Officer may permit a member who cannot adequately express himself in either to address the House in his/her <span class="k">mother tongue</span>. Simultaneous <span class="w">interpretation</span> is now available for all <span class="k">22 Eighth Schedule languages</span> into Hindi and English. English was to cease after <span class="k">15 years</span> (i.e. in 1965), but the <span class="k">Official Languages Act, 1963</span> allowed its indefinite continuance — a decisive act of linguistic accommodation after the anti-Hindi agitations.</p>
+    <div class="call info-c"><b>📌 Compare:</b> <span class="art">Art. 210</span> makes parallel provision for State legislatures (regional language, Hindi or English), and <span class="art">Art. 348</span> requires the authoritative texts of all Bills, Acts, Ordinances and judgments to be in <span class="k">English</span>.</div>
+  </div>
+
+  <div class="char" data-n="17" style="--c:#8fd3ff">
+    <h4><span class="num">1️⃣7️⃣</span>🧑‍⚖️ PRESIDING OFFICERS WITH BUILT-IN IMPARTIALITY</h4>
+    <div class="grid g2">
+      <div class="tile"><span class="ico">🏛️</span><b>Lok Sabha</b><small><b>Speaker</b> <span class="art">Art. 93</span> + <b>Deputy Speaker</b> + a <b>Panel of up to 10 Chairpersons</b> nominated by the Speaker + <b>Speaker Pro Tem</b>. Elected by the House from among its own members on a date fixed by the President (for the Speaker) and by the Speaker (for the Deputy Speaker).</small></div>
+      <div class="tile"><span class="ico">🏛️</span><b>Rajya Sabha</b><small><b>Chairman</b> — <em>ex-officio</em> the <b>Vice-President of India</b> <span class="art">Art. 89(1)</span>, and thus <span class="r">not a member</span> of the House + <b>Deputy Chairman</b> <span class="art">Art. 89(2)</span> (a member, elected by the House) + a <b>Panel of Vice-Chairpersons</b> nominated by the Chairman.</small></div>
+    </div>
+    <h4 class="sub">🛡️ Safeguards of Independence</h4>
+    <ul class="nice">
+      <li><span class="w">Security of tenure</span> — removable only by a resolution passed by an <span class="k">effective majority</span> after <span class="k">14 days' notice</span>.</li>
+      <li>Salaries and allowances are <span class="k">charged on the Consolidated Fund of India</span> <span class="art">Art. 97</span> — <span class="w">not votable</span> by Parliament.</li>
+      <li>Their conduct in regulating procedure cannot be discussed except on a <span class="k">substantive motion</span>.</li>
+      <li>Their vast procedural powers are <span class="w">outside the jurisdiction of the courts</span>.</li>
+      <li>They do not vote in the first instance — only a <span class="k">casting vote</span> in a tie, to resolve the deadlock.</li>
+      <li>The Speaker ranks <span class="k">7th</span> in the Warrant of Precedence (with the CJI); the Deputy Chairman/Deputy Speaker rank 9th (approx.).</li>
+    </ul>
+    <div class="call warn-c"><b>⚠️ Special rules during a removal motion</b> <span class="art">Arts. 92 &amp; 96</span>: the Speaker/Chairman <span class="r">shall not preside</span>, but the Speaker (being a member) <span class="g">may speak and vote in the first instance</span> — though <span class="r">not</span> a casting vote. The RS Chairman, <em>not</em> being a member, may <span class="g">speak and take part</span> but <span class="r">cannot vote at all</span>. 🎯 High-yield distinction.</div>
+  </div>
+
+  <div class="char" data-n="18" style="--c:#9be15d">
+    <h4><span class="num">1️⃣8️⃣</span>👥 CONTINUITY THROUGH DISSOLUTION</h4>
+    <ul class="nice">
+      <li>🔒 The <span class="w">Speaker does NOT vacate office</span> on the dissolution of the Lok Sabha — he continues until <em>immediately before the first meeting</em> of the newly elected Lok Sabha. (The <span class="k">Deputy Speaker's office DOES end</span> with dissolution.) 🎯</li>
+      <li>🔒 The <span class="w">Rajya Sabha is never dissolved</span> — legislative continuity is guaranteed; it can even approve an Emergency alone when the LS stands dissolved.</li>
+      <li>⚡ <span class="k">Speaker Pro Tem</span> — appointed by the <span class="w">President</span> (by convention the <em>senior-most member</em> by years of service); the <span class="w">President personally administers the oath</span> to him. His duties: to administer the oath/affirmation to the new members, to enable the House to elect the new Speaker, and to preside over the first sitting. His office <span class="w">ceases</span> the moment the new Speaker is elected.</li>
+      <li>📜 Bills, motions, resolutions, notices and petitions pending <span class="k">in the Rajya Sabha</span> and <span class="k">pending assurances</span> before the Committee on Government Assurances <span class="g">survive</span> dissolution.</li>
+    </ul>
+    <div class="call warn-c"><b>⚠️ Trap:</b> A member of the <span class="w">Panel of Chairpersons cannot preside</span> when the offices of both the Speaker and the Deputy Speaker are vacant — in that case the <span class="k">President appoints</span> a member of the House for the purpose.</div>
+  </div>
+
+  <div class="char" data-n="19" style="--c:#ff9a3c">
+    <h4><span class="num">1️⃣9️⃣</span>🎯 SUBJECT TO PARTY DISCIPLINE (Anti-Defection)</h4>
+    <p>The <span class="k">52nd Amendment (1985)</span> inserted the <span class="kk">Tenth Schedule</span>. Grounds of disqualification:</p>
+    <ol class="nice">
+      <li>A member of a political party who <span class="w">voluntarily gives up</span> his party membership (interpreted broadly — conduct, not just formal resignation).</li>
+      <li>Who <span class="w">votes or abstains contrary to a whip</span> without prior permission and without condonation within 15 days.</li>
+      <li>An <span class="w">independent</span> member who joins any political party after the election.</li>
+      <li>A <span class="w">nominated</span> member who joins a political party <span class="k">after 6 months</span> of taking his seat. (Within 6 months he may join freely.)</li>
+    </ol>
+    <p><b>Exceptions:</b> ✅ <span class="k">Merger</span> — if 2/3rds of a legislature party agree to merge (the "split" exception of 1/3rd was <span class="r">deleted by the 91st Amendment, 2003</span>). ✅ A person elected as <span class="k">Speaker/Chairman/Deputy</span> who voluntarily gives up party membership on election and rejoins afterwards.</p>
+    <p><b>Decision:</b> by the <span class="k">Speaker/Chairman</span>, acting as a <em>tribunal</em>; the decision is subject to <span class="w">judicial review</span> — <em class="k">Kihoto Hollohan v. Zachillhu (1992)</em>, which struck down Para 7 (the ouster clause) for want of State ratification while upholding the rest.</p>
+    <div class="call info-c"><b>⚖️ Later jurisprudence:</b> <em class="k">Ravi S. Naik (1994)</em> — "voluntarily giving up" is wider than resignation and may be inferred from conduct. <em class="k">Rajendra Singh Rana (2007)</em> — failure of the Speaker to decide is itself reviewable. <em class="k">Keisham Meghachandra Singh v. Manipur (2020)</em> — the Speaker should ordinarily decide within a <span class="k">reasonable period of about 3 months</span>, and Parliament should consider replacing the Speaker with an <span class="k">independent tribunal</span> headed by a retired judge.</div>
+    <div class="call warn-c"><b>📌 The Whip:</b> The office of <span class="k">“Whip”</span> finds <span class="r">no mention</span> in the Constitution, in the Rules of the House, or in any parliamentary statute — it rests purely on <span class="w">convention</span>. 🕊️ (The <em>Leaders and Chief Whips of Recognised Parties and Groups in Parliament (Facilities) Act, 1998</em> gives facilities but does not create the office.)</div>
+  </div>
+
+  <div class="char" data-n="20" style="--c:#f4c869">
+    <h4><span class="num">2️⃣0️⃣</span>🔢 QUORUM &amp; MAJORITY DISCIPLINE <span class="art">Art. 100</span></h4>
+    <ul class="nice">
+      <li><span class="w">Quorum = 1/10th</span> of the total number of members of the House, <span class="k">including the Presiding Officer</span>. → Lok Sabha <span class="kk">55</span> | Rajya Sabha <span class="kk">25</span>. If there is no quorum, the presiding officer must adjourn the House or suspend the sitting.</li>
+      <li>The presiding officer <span class="w">does not vote in the first instance</span>, but has a <span class="k">casting vote</span> in the case of an equality of votes ⚖️.</li>
+      <li><span class="art">Art. 100(2)</span>: a House may act <span class="w">notwithstanding any vacancy</span> in its membership, and proceedings are valid even if it is later discovered that an unentitled person voted.</li>
+    </ul>
+    <h4 class="sub">⚖️ The Four Majorities</h4>
+    <div class="tbox"><table class="wide">
+      <thead><tr><th>Type</th><th>Meaning</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td>1️⃣ Simple</td><td>Majority of members <span class="k">present and voting</span> — the default majority.</td><td>Ordinary Bills, Money Bills, Financial Bills, No-Confidence &amp; Confidence Motions, Censure, Adjournment, budget votes, declaration of financial emergency, election of Speaker/Deputy Speaker, joint sittings, ordinary resolutions.</td></tr>
+        <tr><td>2️⃣ Effective</td><td>Majority of "all the <span class="k">then members</span>" = total strength <em>minus</em> vacancies.</td><td>Removal of the Speaker/Deputy Speaker, Chairman/Deputy Chairman of RS; removal of the Vice-President in the RS (Art. 67(b) — <em>effective majority of the RS</em>).</td></tr>
+        <tr><td>3️⃣ Absolute</td><td>Majority of the <span class="k">total membership</span> of the House (e.g. 272 in the LS).</td><td>Rarely used alone in Parliament; relevant to government formation. It is a <em>component</em> of the special majority under Art. 368.</td></tr>
+        <tr><td>4️⃣ Special — I</td><td><span class="art">Art. 368</span>: majority of the <span class="k">total membership</span> of the House <b>AND</b> <span class="k">2/3 of members present &amp; voting</span>.</td><td>Constitutional Amendment Bills; removal of Judges of the SC/HC, CEC, CAG; approval of a National Emergency; resolution under Art. 249 (in the RS this is 2/3 present &amp; voting).</td></tr>
+        <tr><td>4️⃣ Special — II</td><td><span class="art">Art. 61</span>: <span class="k">2/3 of the total membership</span> of the House.</td><td>Impeachment of the President.</td></tr>
+        <tr><td>4️⃣ Special — III</td><td><span class="art">Arts. 249 &amp; 312</span>: <span class="k">2/3 of members present &amp; voting</span> in the Rajya Sabha.</td><td>Legislating on the State List in the national interest; creating new All-India Services.</td></tr>
+        <tr><td>4️⃣ Special — IV</td><td>Special majority of Parliament <span class="k">+ ratification by half the State legislatures</span> by simple majority.</td><td>Federal provisions: election of the President, Union–State legislative/executive distribution, the Seventh Schedule, representation of States in Parliament, Art. 368 itself, the SC &amp; HCs.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="call mem-c"><b>🧠 Memory ladder:</b> <span class="v">Simple → Effective → Absolute → Special</span> = increasing difficulty. Remember: <mark>you need a special majority to change the Constitution, but only a simple majority to change the government.</mark></div>
+  </div>
+</section>
+
+<!-- ══════════════ PART F ══════════════ -->
+<section class="part F" id="F">
+  <div class="part-head">
+    <div class="part-tag">Part F · The Text</div>
+    <h2>📜 ARTICLE ARSENAL — Articles 79–122</h2>
+    <p class="lede">Part V, Chapter II. Every article, every trigger word.</p>
+  </div>
+
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>🔢 Art.</th><th>📌 Subject</th><th>🌟 Key Point</th></tr></thead>
+    <tbody>
+      <tr><td>79</td><td>Constitution of Parliament</td><td>President + RS + LS</td></tr>
+      <tr><td>80</td><td>Composition of the Council of States</td><td>Max <span class="k">250</span> = 238 elected + 12 nominated; Fourth Schedule; nominated for Art 🎨, Literature 📚, Science 🔬, Social Service 🤝</td></tr>
+      <tr><td>81</td><td>Composition of the House of the People</td><td>Max <span class="k">550</span> = 530 from States + 20 from UTs; uniform seats:population ratio; &lt;60 lakh exception</td></tr>
+      <tr><td>82</td><td>Readjustment after each census</td><td>Delimitation Act enacted by Parliament</td></tr>
+      <tr><td>83</td><td>Duration of the Houses</td><td>RS permanent, 1/3 retire every 2 yrs; LS = 5 yrs; extension during Emergency</td></tr>
+      <tr><td>84</td><td>Qualifications for membership</td><td>Citizen of India; <span class="k">RS 30+</span>, <span class="k">LS 25+</span>; oath before a person authorised by the EC; other qualifications by Parliament (RPA 1951)</td></tr>
+      <tr><td>85</td><td>Sessions, prorogation, dissolution</td><td>6-month rule; President summons/prorogues/dissolves</td></tr>
+      <tr><td>86</td><td>President's right to address &amp; send messages</td><td>⭐ <em>Missing in most notes</em> — 86(1) address, 86(2) messages</td></tr>
+      <tr><td>87</td><td>Special Address by the President</td><td>1st session after each general election + 1st session of every year; followed by the Motion of Thanks</td></tr>
+      <tr><td>88</td><td>Rights of Ministers &amp; the Attorney-General</td><td>Speak in either House / joint sitting / committees — <span class="r">no right to vote</span></td></tr>
+      <tr><td>89</td><td>Chairman &amp; Deputy Chairman of the RS</td><td>VP = <em>ex-officio</em> Chairman; Deputy Chairman elected by the House</td></tr>
+      <tr><td>90</td><td>Vacation / resignation / removal of the Dy. Chairman</td><td>Effective majority + 14 days' notice</td></tr>
+      <tr><td>91</td><td>Dy. Chairman to perform the Chairman's duties</td><td>Also when the Chairman acts as President</td></tr>
+      <tr><td>92</td><td>Chairman/Dy. Chairman not to preside during his own removal motion</td><td>Chairman may <span class="g">speak</span> but <span class="r">cannot vote</span> (not a member)</td></tr>
+      <tr><td>93</td><td>Speaker &amp; Deputy Speaker of the LS</td><td>“<span class="k">as soon as may be</span>” after the first sitting — the phrase at the heart of the Deputy Speaker vacancy debate</td></tr>
+      <tr><td>94</td><td>Vacation / resignation / removal</td><td>Speaker resigns to the <span class="k">Dy. Speaker</span>; Dy. Speaker resigns to the <span class="k">Speaker</span>; both cease if they cease to be members</td></tr>
+      <tr><td>95</td><td>Dy. Speaker to perform the Speaker's duties</td><td>When the office is vacant or the Speaker is absent</td></tr>
+      <tr><td>96</td><td>Not to preside during his own removal motion</td><td>Speaker may <span class="g">speak and vote</span> in the first instance (no casting vote)</td></tr>
+      <tr><td>97</td><td>Salaries &amp; allowances of the presiding officers</td><td>Charged on the <span class="k">Consolidated Fund of India</span></td></tr>
+      <tr><td>98</td><td>Secretariat of Parliament</td><td>Separate staff for each House; recruitment regulated by Parliament</td></tr>
+      <tr><td>99</td><td>Oath or affirmation by members</td><td>Before the President or a person appointed by him; Third Schedule form</td></tr>
+      <tr><td>100</td><td>Voting, quorum</td><td>1/10th quorum; casting vote; proceedings valid despite vacancies</td></tr>
+      <tr><td>101</td><td>Vacation of seats</td><td>Double membership (Parliament + State legislature ⇒ 14 days); absence for <span class="k">60 days</span> without permission</td></tr>
+      <tr><td>102</td><td>Disqualifications</td><td>Office of profit, unsound mind, undischarged insolvent, not a citizen / voluntarily acquired foreign citizenship, and disqualifications under any law (RPA 1951) + Tenth Schedule</td></tr>
+      <tr><td>103</td><td>Decision on questions of disqualification</td><td><span class="k">President</span> decides, on the <span class="w">binding opinion of the ECI</span></td></tr>
+      <tr><td>104</td><td>Penalty for sitting/voting before taking the oath</td><td><span class="k">₹500 per day</span> 💸 recoverable as a debt due to the Union</td></tr>
+      <tr><td>105</td><td>Privileges of the Houses &amp; members</td><td>Freedom of speech; immunity for publication under authority</td></tr>
+      <tr><td>106</td><td>Salaries &amp; allowances of members</td><td>Determined by Parliament (Salary, Allowances and Pension of MPs Act, 1954; pension added 1976)</td></tr>
+      <tr><td>107–108</td><td>Legislative procedure &amp; Joint Sitting</td><td>Introduction, passage, deadlock and its resolution</td></tr>
+      <tr><td>109</td><td>Special procedure re Money Bills</td><td>LS only; RS's 14-day limit; recommendations non-binding</td></tr>
+      <tr><td>110</td><td>Definition of a Money Bill</td><td>6 specified matters + the exclusive “<span class="kk">only</span>” test; Speaker's certificate final</td></tr>
+      <tr><td>111</td><td>Assent to Bills</td><td>Assent / withhold (absolute veto) / return for reconsideration (suspensive veto — <span class="r">not for Money Bills</span>)</td></tr>
+      <tr><td>112</td><td>Annual Financial Statement</td><td>The word “<span class="kk">Budget</span>” is <span class="r">absent</span> from the Constitution!</td></tr>
+      <tr><td>113</td><td>Procedure in Parliament with respect to estimates</td><td>Charged expenditure = not votable; other expenditure = Demands for Grants (LS votes)</td></tr>
+      <tr><td>114</td><td>Appropriation Bills</td><td>No withdrawal from the CFI except under appropriation; no amendment to vary the amount</td></tr>
+      <tr><td>115–116</td><td>Supplementary/Additional/Excess Grants; Vote on Account, Votes of Credit, Exceptional Grants</td><td>Vote on Account = advance grant to meet expenditure pending Budget passage</td></tr>
+      <tr><td>117</td><td>Special provisions as to Financial Bills</td><td>Category I (Art. 110 matters + other matters) &amp; Category II (spending from the CFI)</td></tr>
+      <tr><td>118</td><td>Rules of Procedure</td><td>Each House makes its own; the President, after consulting the presiding officers, makes rules for joint sittings</td></tr>
+      <tr><td>119</td><td>Regulation by law of financial business</td><td>Parliament may regulate the procedure for timely completion of financial business</td></tr>
+      <tr><td>120</td><td>Language in Parliament</td><td>Hindi or English; mother tongue with permission</td></tr>
+      <tr><td>121</td><td>Restriction on discussion re the conduct of Judges</td><td>⭐ Rarely noted — except upon a motion for removal</td></tr>
+      <tr><td>122</td><td>Courts not to inquire into proceedings</td><td>Immunity for <em>irregularity of procedure</em>, not for illegality</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call mem-c"><b>🧠 Super-Mnemonic:</b> <em>“79 se 122 tak — Sansad ka poora ilaaka.”</em> 🗺️ &nbsp;And beyond the chapter: <span class="art">123</span> Ordinances · <span class="art">124–147</span> Supreme Court · <span class="art">148</span> CAG · <span class="art">168–212</span> State Legislatures (the mirror image) · <span class="art">265, 266, 267</span> the purse · <span class="art">330–334</span> reservation of seats · <span class="art">368</span> amendment.</div>
+</section>
+
+<!-- ══════════════ PART G ══════════════ -->
+<section class="part G" id="G">
+  <div class="part-head">
+    <div class="part-tag">Part G · Comparative</div>
+    <h2>⚔️ THE GREAT COMPARISONS</h2>
+    <p class="lede">India vs Britain vs USA — and the fine mechanics of lapsing, adjournment and prorogation.</p>
+  </div>
+
+  <h3 class="sec">🌍 India 🆚 Britain 🆚 USA</h3>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>Feature</th><th>🇮🇳 India</th><th>🇬🇧 Britain</th><th>🇺🇸 USA</th></tr></thead>
+    <tbody>
+      <tr><td>Name</td><td>Parliament</td><td>Parliament</td><td>Congress</td></tr>
+      <tr><td>Houses</td><td>Lok Sabha + Rajya Sabha</td><td>House of Commons + House of Lords</td><td>House of Representatives + Senate</td></tr>
+      <tr><td>Head of State part of it?</td><td>✅ <span class="g">Yes</span> (President)</td><td>✅ Yes (Crown-in-Parliament)</td><td>❌ <span class="r">No</span></td></tr>
+      <tr><td>Sovereign?</td><td>❌ No (4+1 limits)</td><td>✅ <span class="g">Yes</span></td><td>❌ No</td></tr>
+      <tr><td>Judicial review</td><td>✅ Yes (<em>procedure established by law</em>, widened by <em>Maneka</em>)</td><td>❌ No</td><td>✅ Yes (<em>due process of law</em>)</td></tr>
+      <tr><td>Upper House basis</td><td>Population-wise, unequal</td><td>Hereditary/appointed/spiritual peers</td><td><span class="k">Equal — 2 per State</span></td></tr>
+      <tr><td>Nominated members</td><td>✅ 12 in the RS</td><td>✅ Life peers</td><td>❌ <span class="r">None</span> (Senators directly elected since the 17th Amendment, 1913)</td></tr>
+      <tr><td>Upper House power</td><td>Moderate</td><td>Very weak (delaying only, Parliament Acts 1911 &amp; 1949)</td><td><span class="k">Very strong</span> (ratifies treaties, confirms appointments, tries impeachments)</td></tr>
+      <tr><td>Money Bill</td><td>Speaker of the LS certifies; RS 14 days</td><td>Speaker certifies; Lords 1 month</td><td>Revenue Bills originate in the House, but the Senate may amend freely</td></tr>
+      <tr><td>Speaker's party ties</td><td>May or may not resign from the party</td><td><span class="k">Must resign</span> from the party — strictly non-party 🕊️; re-elected unopposed</td><td>Openly partisan (leader of the majority party)</td></tr>
+      <tr><td>Executive–Legislature</td><td>Fused</td><td>Fused</td><td>Separated</td></tr>
+      <tr><td>Ministers</td><td>Must be members of Parliament (or become so within 6 months)</td><td>Must be members of Parliament</td><td><span class="r">Cannot</span> be members of Congress</td></tr>
+      <tr><td>Prorogation effect</td><td>Pending Bills <span class="g">survive</span></td><td>Pending Bills <span class="r">die</span> ☠️</td><td>Bills die at the end of a 2-year Congress</td></tr>
+      <tr><td>Dissolution of the Lower House</td><td>Possible any time on the PM's advice</td><td>Possible (Dissolution and Calling of Parliament Act 2022 restored the prerogative)</td><td>❌ Impossible — fixed 2-year terms</td></tr>
+      <tr><td>Impeachment of the Head of State</td><td>Either House may initiate (Art. 61)</td><td>N/A (monarch)</td><td>House impeaches; Senate tries</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sec">🧊 Lapsing of Bills on the Dissolution of the Lok Sabha</h3>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>Situation</th><th>Fate</th></tr></thead>
+    <tbody>
+      <tr><td>Bill pending <span class="w">in the LS</span> (originated there, or came from the RS)</td><td>☠️ <span class="r">LAPSES</span></td></tr>
+      <tr><td>Bill passed by the LS but <span class="w">pending in the RS</span></td><td>☠️ <span class="r">LAPSES</span></td></tr>
+      <tr><td>Bill pending <span class="w">in the RS</span>, not yet passed by the LS</td><td>✅ <span class="g">DOES NOT LAPSE</span></td></tr>
+      <tr><td>Bill passed by <span class="w">both Houses</span>, awaiting the President's assent</td><td>✅ <span class="g">DOES NOT LAPSE</span></td></tr>
+      <tr><td>Bill returned by the President for reconsideration</td><td>✅ <span class="g">DOES NOT LAPSE</span></td></tr>
+      <tr><td>Bill on which the President has <span class="w">notified a joint sitting</span> before dissolution</td><td>✅ <span class="g">DOES NOT LAPSE</span></td></tr>
+      <tr><td>Pending <span class="w">notices, motions, resolutions and petitions</span> in the LS</td><td>☠️ <span class="r">LAPSE</span></td></tr>
+      <tr><td>Pending <span class="w">assurances</span> before the Committee on Government Assurances</td><td>✅ <span class="g">DO NOT LAPSE</span></td></tr>
+      <tr><td>Pending business <span class="w">in the Rajya Sabha</span> generally</td><td>✅ <span class="g">DOES NOT LAPSE</span> (the RS is never dissolved)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call mem-c"><b>🧠 Rule of Thumb:</b> <em>“If the Lok Sabha still has a hand on it — it dies. If it has passed beyond the Lok Sabha, it lives.”</em> 💡</div>
+
+  <h3 class="sec">🔁 Adjournment 🆚 Prorogation 🆚 Dissolution</h3>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th></th><th>🔸 Adjournment</th><th>🔹 Prorogation</th><th>🔻 Dissolution</th></tr></thead>
+    <tbody>
+      <tr><td>Terminates</td><td><span class="k">Sitting</span> only</td><td><span class="k">Sitting + Session</span></td><td><span class="k">Life of the House</span></td></tr>
+      <tr><td>Done by</td><td><span class="k">Presiding Officer</span></td><td><span class="k">President</span></td><td><span class="k">President</span> (Lok Sabha only)</td></tr>
+      <tr><td>Effect on pending business</td><td>❌ No effect</td><td>❌ No effect on Bills; but <span class="w">pending notices lapse</span> (except those for introducing Bills)</td><td>☠️ Most LS business <span class="r">lapses</span></td></tr>
+      <tr><td>Applies to the RS?</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ <span class="r">Never</span></td></tr>
+      <tr><td>Nature</td><td>Short (hours/days/weeks); <em>sine die</em> = indefinite</td><td>Ends the session; the House must be re-summoned</td><td>Irrevocable; a fresh general election follows</td></tr>
+      <tr><td>Sequence</td><td>Usually precedes prorogation</td><td>Usually follows <em>adjournment sine die</em>; the President may prorogue even while sitting</td><td>Either on the expiry of 5 years, or earlier on the PM's advice</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="vs">
+    <div class="vs-side vs-l">
+      <h5>🏛️ RAJYA SABHA — Strengths</h5>
+      <ul class="nice">
+        <li>Never dissolved — institutional memory</li>
+        <li>Exclusive powers under Arts. 249, 312, 67(b)</li>
+        <li>Can approve an Emergency alone</li>
+        <li>Home to expertise (12 nominated)</li>
+        <li>A check on a runaway Lok Sabha majority</li>
+      </ul>
+    </div>
+    <div class="vs-mid">VS</div>
+    <div class="vs-side vs-r">
+      <h5>🗳️ LOK SABHA — Supremacy</h5>
+      <ul class="nice">
+        <li>Sole master of Money Bills &amp; the purse</li>
+        <li>Alone can remove the government</li>
+        <li>Dominates joint sittings by numbers</li>
+        <li>Speaker presides over joint sittings</li>
+        <li>Direct mandate = superior democratic legitimacy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PART H ══════════════ -->
+<section class="part H" id="H">
+  <div class="part-head">
+    <div class="part-tag">Part H · Master Flowchart</div>
+    <h2>🌊 HOW PARLIAMENT IS BORN &amp; HOW IT WORKS</h2>
+    <p class="lede">One diagram to bind the whole chapter.</p>
+  </div>
+
+  <div class="diagram gold">
+<pre>
+╔══════════════════════════════════════════════════════════════════════════╗
+║              🇮🇳  T H E   P A R L I A M E N T   O F   I N D I A          ║
+║                     Articles 79–122 • Part V • Chapter II                ║
+╚══════════════════════════════════════════════════════════════════════════╝
+                                     │
+                    ┌────────────────┴────────────────┐
+                    ▼                                 ▼
+        📜 WHY THIS FORM?                    ⚖️ WHAT IT IS (Art. 79)
+        Westminster Model                  PRESIDENT + RS + LS
+        (Interdependence)                            │
+                                                     │
+    ┌────────────────────────┬───────────────────────┴──────────────────┐
+    ▼                        ▼                                          ▼
+👑 PRESIDENT           🏛️ RAJYA SABHA (Art. 80)              🏛️ LOK SABHA (Art. 81)
+Integral part          Max 250 | Actual 245                  Max 550 | Actual 543
+NOT a member           233 elected + 12 nominated             530 States + 20 UTs
+    │                  ┌──────────┴────────┐                 ┌────────┴────────┐
+    │                  ▼                   ▼                 ▼                 ▼
+    │            STATES: elected      UTs: electoral    DIRECT election    (Anglo-Indian
+    │            by elected MLAs      college (only     by people •         nomination
+    │            via PR–STV           Delhi 3,          FPTP • Territorial  LAPSED 2020 —
+    │            (open ballot)        Puducherry 1,     constituencies      104th Amdt)
+    │                  │              J&amp;K 4)                    │
+    │            12 NOMINATED by President                SC/ST reservation
+    │            (Art. 80(3)): Art 🎨 Literature 📚        till 2030 (104th)
+    │            Science 🔬 Social Service 🤝              👩 1/3 Women (106th Amdt
+    │                  │                                     2023 — commencement
+    │                  ▼                                     contested; 131st Amdt
+    │            ♾️ PERMANENT BODY (Art. 83(1))              Bill DEFEATED 17 Apr 2026)
+    │            1/3 retire every 2 yrs                            │
+    │            Term 6 yrs (RPA 1951)                             ▼
+    │            Chairman = Vice-President                 ⏳ 5 YEARS (Art. 83(2))
+    │                                                     Dissolvable anytime on
+    ▼                                                     PM's advice; +1 yr at a
+Assent 111 • Summon/Prorogue/Dissolve 85 • Ordinance 123  time during Emergency
+Address 86/87 • Nominate 80(3) • Recommend 110/113/117    (ends ≤6 months after)
+Notify Joint Sitting 108 • Lay reports of CAG/UPSC/FC
+                                     │
+                                     ▼
+        ╔════════════════════════════════════════════════════╗
+        ║      🎬 THE PARLIAMENT IN MOTION (Life-Cycle)      ║
+        ╚════════════════════════════════════════════════════╝
+                                     │
+    SUMMONING (Art. 85) ──► SESSION ──► SITTINGS ──► RECESS ──► next SESSION
+      by President          Budget/       11–1 pm      (between prorogation
+      Gap ≤ 6 months        Monsoon/      2–6 pm        &amp; reassembly)
+                            Winter            │
+                                              ▼
+                    ┌─────────────────────────┼─────────────────────────┐
+                    ▼                         ▼                         ▼
+            ❓ QUESTION HOUR          ⚡ ZERO HOUR             📋 REGULAR BUSINESS
+            (1st hour; RS 12 noon)    (Indian innovation,      Legislative • Financial
+            Starred🟩 Unstarred⬜      1962, unwritten)         • Motions • Resolutions
+            Short Notice🩷 Private🟨                            • Committee reports
+                                              │
+                                              ▼
+                    ┌─────────────────────────┴─────────────────────────┐
+                    ▼                                                   ▼
+        🧾 LEGISLATIVE PROCEDURE                          💰 FINANCIAL PROCEDURE
+        1st Reading (introduction)                        Budget (Art. 112, 1 Feb)
+        → 2nd Reading (General Discussion                 → General Discussion
+           → Committee Stage → Consideration              → DRSC Scrutiny (recess)
+           clause-by-clause)                              → Voting on Demands
+        → 3rd Reading (accept/reject as a whole)             (Cut Motions ✂️ / Guillotine 🪓)
+        → 2nd House (same 3 stages)                       → Appropriation Bill (Art. 114)
+        → President's Assent (Art. 111)                   → Finance Bill (within 75 days)
+                    │                                     → CAG audit → PAC 🕵️
+              ⚠️ DEADLOCK?                                  (Rule of Lapse: 31 March)
+                    ▼
+        🤝 JOINT SITTING (Art. 108)
+        Triggered if: (a) the other House rejects the Bill,
+        (b) disagrees on amendments, or (c) sits on it for &gt; 6 months
+        Presided by the SPEAKER of the LS
+        (then Dy. Speaker → Dy. Chairman RS → any other member;
+         the RS Chairman NEVER presides)
+        Quorum = 1/10th of the total members of both Houses
+        Passed by SIMPLE majority of members present &amp; voting
+        ✅ Ordinary Bills &amp; Financial Bills
+        ❌ Money Bills &amp; Constitutional Amendment Bills
+        📌 Used only 3 times: Dowry Prohibition Bill 1961 •
+           Banking Service Commission (Repeal) Bill 1978 • POTA 2002
+                    │
+                    ▼
+        ╔════════════════════════════════════════════════════╗
+        ║   🔚 TERMINATION: Adjournment → Adjournment sine   ║
+        ║      die → Prorogation → Dissolution (LS only)     ║
+        ╚════════════════════════════════════════════════════╝
+</pre>
+  </div>
+
+  <h3 class="sec">🧾 Types of Bills — The Four-Fold Classification</h3>
+  <div class="grid g4">
+    <div class="tile"><span class="ico">📄</span><b>Ordinary Bill</b><small>Any matter other than financial. Either House; no President's recommendation; joint sitting possible; RS may delay up to 6 months.</small></div>
+    <div class="tile"><span class="ico">💵</span><b>Money Bill</b><small>Art. 110's six matters <em>only</em>. LS only, on the President's recommendation; Speaker certifies; RS 14 days; <span class="r">no joint sitting</span>; President cannot return it.</small></div>
+    <div class="tile"><span class="ico">🏦</span><b>Financial Bill</b><small><b>Cat. I</b> — Art. 110 matters + other matters: like a Money Bill in introduction (LS only, President's recommendation) but like an Ordinary Bill thereafter. <b>Cat. II</b> — involves expenditure from the CFI: like an Ordinary Bill, but the President's recommendation is needed for <em>consideration</em>.</small></div>
+    <div class="tile"><span class="ico">📜</span><b>Constitutional Amendment Bill</b><small>Art. 368. Either House; no President's recommendation; <span class="r">no joint sitting</span>; special majority (+ State ratification for federal matters); President <span class="w">must</span> assent (24th Amendment, 1971).</small></div>
+  </div>
+  <div class="call warn-c"><b>⚠️ Also distinguish:</b> <span class="k">Public Bills</span> (introduced by a Minister; 7 days' notice; rejection = loss of confidence) vs <span class="k">Private Members' Bills</span> (any non-Minister; 1 month's notice; discussed on Fridays; only <span class="kk">14</span> have ever become law, the last in 1970 — the Supreme Court (Enlargement of Criminal Appellate Jurisdiction) Bill).</div>
+</section>
+
+<!-- ══════════════ PART I ══════════════ -->
+<section class="part I" id="I">
+  <div class="part-head">
+    <div class="part-tag">Part I · Visual Recall</div>
+    <h2>🧠 MIND MAP — PARLIAMENT AT A GLANCE</h2>
+    <p class="lede">The whole chapter compressed into one spatial memory.</p>
+  </div>
+
+  <div class="diagram">
+<pre>
+                                    🏛️ PARLIAMENT OF INDIA
+                                              │
+   ┌──────────┬──────────┬──────────┬─────────┼─────────┬──────────┬──────────┬─────────┐
+   │          │          │          │         │         │          │          │         │
+📖 MEANING  📜 BASIS  🏗️ ORGAN.  🧬 CHARAC.  👥 MEMBERS  🧑‍⚖️ OFFICERS  ⚙️ WORKING  🛡️ PRIVI.  🚫 LIMITS
+   │          │          │          │         │         │          │          │         │
+"Parler"   Art.79-122  President  1 Bicameral │        LOK SABHA   Sessions   Art.105  Written
+= to talk  Part V     (not a      2 Pres. is  │        • Speaker   (≤6 month  Art.122  Constitution
+   │       Chapter II  member)      part      │          Art.93     gap)      Art.121     │
+Highest        │          │       3 Repre-    │        • Dy.Speaker    │      Art.194  Federal
+deliberative  Art.79    RAJYA       sentative │          (VACANT     Sittings Art.212  System
+& legislative  = P+RS   SABHA     4 Respon-   │          since 2019) (11-1,      │         │
+body           +LS      (Art.80)    sible     │        • Panel of    2-6 pm)  Collective Judicial
+   │           │        Max 250   5 Federal   │          10 Chairs     │      Privileges Review
+Westminster  Art.80     245 now     tilt      │        • Speaker    Quorum       │         │
+Model        Art.81     ♾️Permanent 6 One perm.│          Pro Tem    1/10th   Individual Fundamental
+   │           │           │         one temp │            │        LS 55    Privileges  Rights
+"President-  Art.83     LOK SABHA  7 Dual     │        RAJYA SABHA  RS 25        │         │
+in-Parliament"  │       (Art.81)    electoral │        • Chairman      │      Breach of  Basic
+   │        Art.85      Max 550     systems   │          = VP       Voting:   Privilege Structure
+1954: Hindi    │        543 now   8 Population│          Art.89(1) Voice/       │      (Kesavananda
+names       Art.105     ⏳5 years    based    │        • Dy.Chairman Division/ Contempt   1973 +
+adopted        │           │      9 Social    │          Art.89(2)  Secret/   of House  Minerva
+   │        Art.110    President     justice  │        • Panel of   Slips/       │       Mills 1980)
+Samvidhan   Art.112    (integral)  10 Multi-  │          Vice-Chairs Count/   Not codified
+Sadan +        │           │        functional│            │        Casting   yet (44th
+New Bldg    Art.368       ⬇️       11 NOT     │        LEADERS:        │       Amdt 1978)
+(28 May 2023)  │      4th Schedule   sovereign│        • Leader of  Language:
+               │      (RS seats)   12 Asymmetric         the House  Hindi/
+               │                     bicameralism        (=PM in LS) English
+               │                   13 Deliberative     • Leader of  + 8th Sch.
+               │                   14 Privileged         Opposition  interpretation
+               │                   15 Session-based      (1/10th seats
+               │                   16 Multilingual        convention;
+               │                   17 Impartial           statutory 1977)
+               │                      Presiding Officers • Whip (NO mention in
+               │                   18 Continuity            Constitution/Rules/Statute)
+               │                   19 Anti-defection (10th Sch., 52nd Amdt 1985)
+               │                   20 Quorum & Majorities
+               ▼
+        ⚖️ MAJORITIES: Simple (Art.100) → Effective ("all the then members")
+                       → Absolute (50%+1 of total) → Special I (Art.368) /
+                       Special II (Art.61) / Special III (Arts.249 & 312) /
+                       Special IV (368 + ratification by half the States)
+</pre>
+  </div>
+
+  <h3 class="sec">👤 Officers &amp; Leaders — Quick Reference</h3>
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>Office</th><th>Constitutional / Statutory Basis</th><th>Essence</th></tr></thead>
+    <tbody>
+      <tr><td>Speaker</td><td><span class="art">Art. 93</span></td><td>Guardian of the House's powers &amp; privileges; final interpreter of the Constitution, Rules &amp; precedents <em>within</em> the House; certifies Money Bills; decides defection cases; presides over joint sittings; ex-officio chairs the Business Advisory, Rules and General Purposes Committees.</td></tr>
+      <tr><td>Deputy Speaker</td><td><span class="art">Art. 93</span></td><td>Elected by the House; <span class="w">not subordinate</span> to the Speaker — directly responsible to the House; automatically chairs any committee of which he is a member. <span class="r">Vacant since 26 May 2019.</span></td></tr>
+      <tr><td>Speaker Pro Tem</td><td>Convention + Art. 94 (implied)</td><td>Appointed by the President (senior-most member by convention); oath administered by the President himself; ceases on the election of the Speaker.</td></tr>
+      <tr><td>Chairman, RS</td><td><span class="art">Art. 89(1)</span></td><td>The Vice-President <em>ex-officio</em>; not a member; cannot vote even on his own removal motion; ceases to preside when acting as President.</td></tr>
+      <tr><td>Deputy Chairman, RS</td><td><span class="art">Art. 89(2)</span></td><td>A member, elected by the RS; performs the Chairman's duties in his absence; may be a nominated member.</td></tr>
+      <tr><td>Leader of the House</td><td>Rules of Procedure only</td><td>The PM (if a member of that House) or a Minister nominated by him; the RS has its own Leader of the House. <span class="r">No mention in the Constitution.</span></td></tr>
+      <tr><td>Leader of the Opposition</td><td>Salary and Allowances of Leaders of Opposition in Parliament Act, <span class="k">1977</span></td><td>Leader of the largest Opposition party with at least <span class="k">1/10th</span> of the total strength of the House (a convention-based threshold applied by the Speaker). Recognised in the LS since 1969; enjoys Cabinet rank; a statutory member of selection committees for the CBI Director, CVC, CIC, Lokpal and the NHRC Chairperson.</td></tr>
+      <tr><td>Whip</td><td>Convention only</td><td>No mention anywhere in the Constitution, Rules or statute; enforces party discipline; defiance attracts the Tenth Schedule.</td></tr>
+      <tr><td>Secretary-General</td><td><span class="art">Art. 98</span></td><td>Appointed by the presiding officer; ranks with the Cabinet Secretary; permanent officer; advises on procedure; works behind the scenes and never speaks in the House.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ══════════════ PART J ══════════════ -->
+<section class="part J" id="J">
+  <div class="part-head">
+    <div class="part-tag">Part J · Chronology</div>
+    <h2>🗓️ TIMELINE OF THE INDIAN LEGISLATURE</h2>
+    <p class="lede">From a nominated council of 1861 to the delimitation battle of 2026.</p>
+  </div>
+
+  <div class="tl">
+    <div class="tl-item"><div class="tl-year">1861</div><p>Indian Councils Act — Indians first <span class="k">associated</span> (nominated) with law-making; the beginning of portfolio government.</p></div>
+    <div class="tl-item"><div class="tl-year">1892</div><p>Indian Councils Act — <span class="k">indirect election</span> (though the word "election" was avoided) and the power to <em>discuss the budget</em> and <em>ask questions</em>.</p></div>
+    <div class="tl-item"><div class="tl-year">1909</div><p>Morley–Minto Reforms — first Indian in the Executive Council (Satyendra Prasad Sinha); introduced the poison of <span class="r">separate electorates</span>.</p></div>
+    <div class="tl-item"><div class="tl-year">1919</div><p>GoI Act (Montagu–Chelmsford) → <span class="k">Bicameral</span> Central Legislature (Council of State + Legislative Assembly); direct election introduced; dyarchy in the provinces.</p></div>
+    <div class="tl-item"><div class="tl-year">1921</div><p>Offices of <span class="k">President &amp; Deputy President</span> created → <span class="k">Frederick Whyte</span> (1st President/Speaker, <em>appointed</em> by the Governor-General) &amp; <span class="k">Sachidanand Sinha</span> (1st Deputy President). Foundation stone of Parliament House laid (12 Feb).</p></div>
+    <div class="tl-item"><div class="tl-year">1925</div><p><span class="kk">Vithalbhai J. Patel</span> — the first <span class="w">elected</span> Indian President of the Central Legislative Assembly 🇮🇳.</p></div>
+    <div class="tl-item"><div class="tl-year">1927</div><p>Parliament House (Sansad Bhavan) formally opened on <span class="k">18 January</span> by Lord Irwin.</p></div>
+    <div class="tl-item"><div class="tl-year">1935</div><p>GoI Act renamed the posts <span class="k">Speaker &amp; Deputy Speaker</span> — but the old names continued until <span class="k">1947</span> (the federal part was never implemented).</p></div>
+    <div class="tl-item"><div class="tl-year">1946–49</div><p><span class="k">Constituent Assembly</span> debates on Parliament; the Union Constitution Committee (Nehru) settles on the parliamentary system.</p></div>
+    <div class="tl-item"><div class="tl-year">26 Jan 1950</div><p>Constitution comes into force; the Constituent Assembly becomes the <span class="k">Provisional Parliament</span> until 1952.</p></div>
+    <div class="tl-item"><div class="tl-year">1951–52</div><p><span class="k">First General Election</span> (Oct 1951 – Feb 1952) under Sukumar Sen; <span class="k">First Lok Sabha (1952–57)</span>.</p></div>
+    <div class="tl-item"><div class="tl-year">1952</div><p>Rajya Sabha first constituted <span class="k">3 April 1952</span>; first sitting <span class="k">13 May 1952</span> — the same day as the first Lok Sabha sitting. <span class="k">G.V. Mavalankar</span> 1st Speaker 🏅; <span class="k">M. Ananthasayanam Ayyangar</span> 1st Deputy Speaker; <span class="k">Dr. S. Radhakrishnan</span> 1st Chairman of the RS.</p></div>
+    <div class="tl-item"><div class="tl-year">1953</div><p>Short Duration Discussion introduced; the first Delimitation Commission (1952) completes its work.</p></div>
+    <div class="tl-item"><div class="tl-year">1954</div><p>Names <span class="kk">“Lok Sabha” (14 May)</span> &amp; <span class="kk">“Rajya Sabha” (23 Aug)</span> adopted; the <span class="k">Calling Attention Motion</span> introduced; Salary &amp; Allowances of MPs Act enacted.</p></div>
+    <div class="tl-item"><div class="tl-year">1961</div><p><span class="k">1st Joint Sitting</span> — the Dowry Prohibition Bill.</p></div>
+    <div class="tl-item"><div class="tl-year">1962</div><p><span class="k">Zero Hour</span> emerges as a practice — a purely Indian innovation, still unwritten in the Rules.</p></div>
+    <div class="tl-item"><div class="tl-year">1963</div><p><span class="k">Official Languages Act</span> — English continues indefinitely; second Delimitation Commission.</p></div>
+    <div class="tl-item"><div class="tl-year">1965</div><p>UT (Direct Election to the House of the People) Act.</p></div>
+    <div class="tl-item"><div class="tl-year">1967</div><p>Convention begins that the <span class="k">PAC Chairman</span> is drawn from the Opposition.</p></div>
+    <div class="tl-item"><div class="tl-year">1969</div><p><span class="k">Leader of the Opposition</span> first recognised in the Lok Sabha.</p></div>
+    <div class="tl-item"><div class="tl-year">1971–77</div><p>The 5th Lok Sabha's term extended twice during the Emergency — the only LS to sit beyond 5 years.</p></div>
+    <div class="tl-item"><div class="tl-year">1976</div><p><span class="k">42nd Amendment</span> — froze seat allocation on the 1971 census till 2000; LS term extended 5 → 6 years; MPs' <span class="k">pension</span> introduced.</p></div>
+    <div class="tl-item"><div class="tl-year">1977</div><p>LoP given <span class="k">statutory recognition</span> (Salary &amp; Allowances of Leaders of Opposition Act); 2nd Joint Sitting (Banking Service Commission (Repeal) Bill, 16 May 1978 — <em>passed in 1978</em>).</p></div>
+    <div class="tl-item"><div class="tl-year">1978</div><p><span class="k">44th Amendment</span> — LS term restored to 5 years; privileges reference to the House of Commons removed; safeguards against Emergency misuse. <span class="k">2nd Joint Sitting</span> held.</p></div>
+    <div class="tl-item"><div class="tl-year">1985</div><p><span class="k">52nd Amendment</span> — Anti-Defection Law (Tenth Schedule).</p></div>
+    <div class="tl-item"><div class="tl-year">1988</div><p><span class="k">61st Amendment</span> — voting age lowered <span class="kk">21 → 18</span> (effective 28 March 1989).</p></div>
+    <div class="tl-item"><div class="tl-year">1992</div><p><em class="k">Kihoto Hollohan v. Zachillhu</em> — the Speaker's decision on defection is <span class="w">subject to judicial review</span>; Para 7 struck down.</p></div>
+    <div class="tl-item"><div class="tl-year">1993</div><p><span class="k">Departmentally Related Standing Committees (DRSCs)</span> established — 17 initially, expanded to <span class="k">24</span> in 2004. A landmark in parliamentary scrutiny.</p></div>
+    <div class="tl-item"><div class="tl-year">1998</div><p>Leaders &amp; Chief Whips (Facilities) Act. Recognised <span class="k">Party</span>: 55 (LS) / 25 (RS); recognised <span class="k">Group</span>: 30 (LS) / 15 (RS).</p></div>
+    <div class="tl-item"><div class="tl-year">2001</div><p><span class="k">84th Amendment</span> — freeze extended to the first census after <span class="kk">2026</span>.</p></div>
+    <div class="tl-item"><div class="tl-year">2002</div><p><span class="k">3rd Joint Sitting</span> — the Prevention of Terrorism Bill (POTA), 26 March 2002; the fourth <span class="k">Delimitation Commission</span> constituted (orders finalised 2008). NCRWC report submitted.</p></div>
+    <div class="tl-item"><div class="tl-year">2003</div><p><span class="k">87th Amendment</span> — delimitation on the 2001 census within States. <span class="k">91st Amendment</span> — CoM capped at 15%; the "split" exception in the Tenth Schedule deleted. <span class="k">RPA Amendment</span> — open ballot &amp; no domicile requirement for the RS.</p></div>
+    <div class="tl-item"><div class="tl-year">2014</div><p>RS Question Hour shifted <span class="k">11 am → 12 noon</span> (Chairman <span class="k">Hamid Ansari</span>) so that Zero Hour issues could be raised first.</p></div>
+    <div class="tl-item"><div class="tl-year">2017</div><p>Budget advanced to <span class="k">1 February</span>; the <span class="k">Railway Budget merged</span> with the General Budget (Bibek Debroy Committee) — the Railway Budget had been separated in <span class="k">1924</span> on the recommendation of the <span class="k">Acworth Committee (1921)</span>; Plan/Non-Plan classification abolished.</p></div>
+    <div class="tl-item"><div class="tl-year">2019</div><p><span class="k">104th Amendment</span> — SC/ST reservation extended to <span class="kk">2030</span>; Anglo-Indian nomination <span class="r">not extended</span> (lapsed 25 Jan 2020). The Deputy Speaker's post falls vacant on <span class="k">26 May 2019</span>.</p></div>
+    <div class="tl-item"><div class="tl-year">2023</div><p><span class="k">New Parliament Building</span> inaugurated (28 May); the old building renamed <span class="k">Samvidhan Sadan</span>; the <span class="kk">106th Amendment</span> — Women's Reservation (<em>Nari Shakti Vandan Adhiniyam</em>) passed in a Special Session in September.</p></div>
+    <div class="tl-item"><div class="tl-year">2024</div><p><span class="k">Sita Soren v. Union of India</span> (7 judges) overrules <em>P.V. Narasimha Rao</em> — <span class="r">no immunity for bribe-taking legislators</span>. <span class="k">18th Lok Sabha</span> constituted (June); <span class="k">Om Birla</span> re-elected Speaker; <span class="k">Rahul Gandhi</span> becomes Leader of the Opposition (9 June) after a 10-year vacancy.</p></div>
+    <div class="tl-item"><div class="tl-year">2025</div><p><span class="k">C.P. Radhakrishnan</span> sworn in as the <span class="kk">15th Vice-President</span> and <em>ex-officio</em> Chairman of the Rajya Sabha on <span class="k">12 September 2025</span>, following the mid-term resignation of his predecessor. <span class="badge-new">NEW</span></p></div>
+    <div class="tl-item"><div class="tl-year">2026</div><p>🔥 A landmark parliamentary year: <span class="k">Census 2027</span> operations begin (house-listing from April 2026); a <span class="k">no-confidence motion against Speaker Om Birla</span> is moved by the Opposition and <span class="w">rejected</span> in the Lok Sabha on <span class="k">11 March 2026</span> — an extremely rare event that spotlighted the Deputy Speaker vacancy; the <span class="k">Delimitation Bills</span> are introduced on 16 April; the <span class="kk">Constitution (131st Amendment) Bill, 2026 is DEFEATED</span> on <span class="k">17 April 2026</span> (298 ayes v. 230 noes, short of the required ~352); <span class="k">Harivansh Narayan Singh</span> re-elected Deputy Chairman of the RS for a third term, unopposed, on <span class="k">17 April 2026</span>. <span class="badge-new">NEW</span></p></div>
+  </div>
+</section>
+
+<!-- ══════════════ PART K ══════════════ -->
+<section class="part K" id="K">
+  <div class="part-head">
+    <div class="part-tag">Part K · Current Affairs</div>
+    <h2>📸 CURRENT SNAPSHOT — mid-2026</h2>
+    <p class="lede">Verified against sources up to mid-2026. Always re-check before the exam. ⏱️</p>
+  </div>
+
+  <div class="tbox"><table class="wide">
+    <thead><tr><th>Post / Fact</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>🏛️ Current Lok Sabha</td><td><span class="k">18th Lok Sabha</span> (constituted June 2024; term to 2029)</td></tr>
+      <tr><td>🧑‍⚖️ Speaker, Lok Sabha</td><td><span class="k">Om Birla</span> (re-elected June 2024 — the first Speaker since Balram Jakhar to serve consecutive full terms). <span class="r">A no-confidence motion against him was moved and rejected on 11 March 2026.</span> <span class="badge-new">2026</span></td></tr>
+      <tr><td>⚠️ Deputy Speaker, LS</td><td><span class="r">VACANT since 26 May 2019</span> — the longest such vacancy in Indian parliamentary history; a live constitutional-morality debate under <span class="art">Art. 93</span>, sharpened by the 2026 motion against the Speaker.</td></tr>
+      <tr><td>🎖️ Vice-President &amp; Chairman, Rajya Sabha</td><td><span class="k">C.P. Radhakrishnan</span>, <span class="kk">15th Vice-President</span>, in office since <span class="k">12 September 2025</span>. <span class="badge-new">NEW</span></td></tr>
+      <tr><td>🪑 Deputy Chairman, Rajya Sabha</td><td><span class="k">Harivansh Narayan Singh</span> — re-elected unopposed for a <span class="kk">third term on 17 April 2026</span>; the first to achieve this since Najma Heptulla. Notably, he is a <em>nominated</em> member. <span class="badge-new">2026</span></td></tr>
+      <tr><td>🗣️ Leader of the Opposition, Lok Sabha</td><td><span class="k">Rahul Gandhi</span> (since 9 June 2024) — the office was filled after a 10-year gap (2014–2024).</td></tr>
+      <tr><td>🗣️ Leader of the Opposition, Rajya Sabha</td><td><span class="k">Mallikarjun Kharge</span> — reappointed with effect from <span class="k">26 June 2026</span> after his re-election to the House. <span class="badge-new">2026</span></td></tr>
+      <tr><td>🔢 Lok Sabha strength</td><td><span class="k">543</span> (max. 550 after the Anglo-Indian lapse)</td></tr>
+      <tr><td>🔢 Rajya Sabha strength</td><td><span class="k">245</span> sanctioned = 233 elected + 12 nominated (constitutional maximum 250)</td></tr>
+      <tr><td>🗺️ UTs in the Rajya Sabha</td><td>Only <span class="k">Delhi (3), Puducherry (1), Jammu &amp; Kashmir (4)</span></td></tr>
+      <tr><td>🧊 Delimitation</td><td>The <span class="k">Constitution (131st Amendment) Bill, 2026</span> — which sought to raise the LS ceiling to <span class="kk">850</span> and permit delimitation on the 2011 census — was <span class="r">DEFEATED in the Lok Sabha on 17 April 2026</span> (298 v. 230; ~352 needed). The 84th Amendment freeze therefore stands, and the constitutional trigger remains "the first census after 2026." <span class="badge-new">HOT</span></td></tr>
+            <tr><td>👩 Women's Reservation</td><td>The 106th Amendment (2023) remains <span class="r">un-operationalised</span>; its commencement is tied to the first census after 2023 + delimitation. With Census 2027's reference date of <span class="k">1 March 2027</span> and the defeat of the de-linking Bill, operationalisation before the <span class="k">2029</span> general election now looks difficult. <span class="badge-new">HOT</span></td></tr>
+      <tr><td>🗓️ Census 2027</td><td>House-listing phase began <span class="k">April 2026</span>; population enumeration <span class="k">February 2027</span>; reference date <span class="k">1 March 2027</span> (1 October 2026 for the snow-bound areas of J&amp;K, Ladakh, Himachal &amp; Uttarakhand). India's first <span class="k">digital</span> census and the first to enumerate <span class="k">caste</span> since 1931.</td></tr>
+      <tr><td>🤝 Joint Sittings held</td><td>Only <span class="k">3</span>: Dowry Prohibition Bill (1961) · Banking Service Commission (Repeal) Bill (1978) · POTA (2002)</td></tr>
+      <tr><td>🏛️ Standing Committees</td><td><span class="k">24</span> DRSCs (16 serviced by the LS Secretariat, 8 by the RS Secretariat)</td></tr>
+      <tr><td>📉 Sitting days</td><td>No constitutional minimum. Average has fallen from <span class="k">~120+ days</span> in the 1950s to often <span class="r">fewer than 70</span> today — the core of the "declining deliberation" critique.</td></tr>
+      <tr><td>📈 Next big event</td><td><span class="k">Delimitation</span> after the first census post-2026, which will also trigger the 106th Amendment's women's reservation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call warn-c"><b>⏱️ Standing Caution:</b> Office-holders, House strengths and Bill statuses change. The 2026 entries above are marked <span class="badge-new">NEW</span> — <span class="w">re-verify each of them from PRIB / Lok Sabha Bulletin Part-II before your exam.</span></div>
+</section>
+
+<!-- ══════════════ PART L ══════════════ -->
+<section class="part L" id="L">
+  <div class="part-head">
+    <div class="part-tag">Part L · Exam Smart Zone</div>
+    <h2>🎯 TRAPS, ANGLES &amp; QUOTES</h2>
+    <p class="lede">Where the examiner hides the knife — and how to write the answer that scores.</p>
+  </div>
+
+  <h3 class="sec">⚠️ Top 20 Prelims Trap-Points</h3>
+  <div class="card">
+    <ol class="nice">
+      <li>President is <span class="g">part of</span> Parliament ✅ but <span class="r">not a member</span> of either House ❌.</li>
+      <li>Parliamentary <span class="w">privileges do NOT extend to the President</span> — they extend to Ministers and the Attorney-General <span class="art">Art. 88</span>.</li>
+      <li>Max LS strength is <span class="k">550</span> (530 + 20); the two Anglo-Indians made it <span class="k">552</span> only <em>before</em> 25 Jan 2020.</li>
+      <li>Max RS strength is <span class="k">250</span>, but <span class="k">238</span> is the <em>elected</em> ceiling — current sanctioned strength is <span class="k">245</span> (233 + 12).</li>
+      <li>An RS member's <span class="k">6-year term</span> is fixed by the <span class="w">RPA 1951</span> — ❌ <span class="r">not by the Constitution</span>.</li>
+      <li><span class="art">Art. 83(1)</span> says only that <span class="k">1/3rd retire every 2 years</span>; it does <em>not</em> state a six-year term.</li>
+      <li><span class="r">No minimum sitting days</span> are prescribed; the rule is a <span class="k">6-month gap</span> — <em>not</em> "three sessions a year."</li>
+      <li>The President may summon Parliament at <span class="k">any place</span> he thinks fit ✅.</li>
+      <li>Under FPTP the winner needs only a <span class="k">plurality</span> — ❌ <span class="r">not 50%</span> of the votes.</li>
+      <li>There is <span class="r">no constitutional provision</span> that the Deputy Speaker must come from the Opposition — it is only a <span class="k">convention</span>.</li>
+      <li>The <span class="w">Speaker</span> fixes the date of the Deputy Speaker's election; the <span class="w">President</span> fixes the date of the Speaker's election.</li>
+      <li>Removal of the Speaker → <span class="k">effective majority</span> + <span class="k">14 days' notice</span>; during that motion the Speaker <span class="g">may speak and vote in the first instance</span> but has <span class="r">no casting vote</span>. The RS Chairman may <span class="g">speak</span> but <span class="r">cannot vote at all</span>.</li>
+      <li>The Speaker <span class="g">does not vacate</span> office on dissolution; the <span class="r">Deputy Speaker does</span>.</li>
+      <li>A member of the <span class="w">Panel of Chairpersons cannot preside</span> when both the Speaker's and Deputy Speaker's offices are vacant — the <span class="k">President appoints</span> a member for that purpose.</li>
+      <li>A Bill pending <span class="w">in the RS</span> and not yet passed by the LS <span class="g">does NOT lapse</span> on dissolution.</li>
+      <li><span class="k">Prorogation</span> does not kill Bills in India (unlike Britain), but <span class="r">pending notices lapse</span> — except notices for the introduction of Bills.</li>
+      <li>Only a <span class="k">Money Bill</span> <span class="art">Art. 110</span> carries the exclusive "<span class="kk">only</span>" test; a Financial Bill (Category I) has Art. 110 matters <span class="w">plus</span> other general legislation.</li>
+      <li><span class="k">Joint sitting</span>: ❌ Money Bills, ❌ Constitutional Amendment Bills; ✅ Ordinary and Financial Bills.</li>
+      <li><span class="w">Zero Hour, Whip, Leader of the House, Leader of the Opposition, "Budget"</span> — none of these words appears in the Constitution.</li>
+      <li>The <span class="k">Quorum includes</span> the presiding officer — LS 55, RS 25.</li>
+    </ol>
+  </div>
+
+  <div class="call mem-c"><b>🧠 Bonus traps:</b> Nominated MPs <span class="r">cannot</span> vote for the President but <span class="g">can</span> vote for the Vice-President · MLCs vote in <span class="r">neither</span> · a <span class="k">nominated</span> member may become Deputy Chairman of the RS (Harivansh) · the <span class="k">Estimates Committee</span> has no RS members · the <span class="k">PAC Chairman</span> is an Opposition MP only by convention (since 1967), not by law.</div>
+
+  <h3 class="sec">✍️ Mains Angles — Value-Added Points</h3>
+  <div class="grid g2">
+    <div class="tile"><span class="ico">📉</span><b>Declining Deliberation</b><small>Sitting days down from ~120+ in the 1950s to often under 70; Bills passed amid din with minimal scrutiny; falling reference to Standing Committees (from ~60–70% in the 15th LS to under 20% in recent Houses). Remedy: a statutory minimum of <em>120 sitting days</em> (NCRWC) and mandatory Committee referral.</small></div>
+    <div class="tile"><span class="ico">🏛️</span><b>"Once a Speaker, Always a Speaker"</b><small><em>(UPSC 2020)</em> The British convention — the Speaker resigns from the party and is returned unopposed. India has not adopted it. It would strengthen impartiality, especially in defection adjudication, but needs cross-party consensus and a safe-seat guarantee.</small></div>
+    <div class="tile"><span class="ico">⚖️</span><b>The Anti-Defection Paradox</b><small><em>(UPSC 2013 &amp; 2019)</em> Meant to curb horse-trading, the Tenth Schedule has silenced the individual MP, converting Parliament into a chamber of <em>parties</em> rather than of <em>persons</em>. Reform: confine the whip to confidence motions, Money Bills and manifesto commitments (Dinesh Goswami, Law Commission 170th Report, NCRWC).</small></div>
+    <div class="tile"><span class="ico">💵</span><b>The Money Bill Route</b><small>Certification of Bills as Money Bills to bypass the Rajya Sabha (<em>Aadhaar Act</em>, <em>Finance Act 2017</em> tribunal provisions, PMLA amendments). <em>Rojer Mathew (2019)</em> referred the correctness of <em>Puttaswamy</em>'s Aadhaar holding to a larger bench — still pending. Raises the question whether the Speaker's certificate is truly beyond review.</small></div>
+    <div class="tile"><span class="ico">🕰️</span><b>The Deputy Speaker Vacancy</b><small>Art. 93's "<em>shall… as soon as may be</em>" is arguably mandatory. A vacancy since 2019 leaves no constitutional fallback if the Speaker's office falls vacant — an issue thrown into sharp relief by the 2026 motion against the Speaker.</small></div>
+    <div class="tile"><span class="ico">🗺️</span><b>Delimitation: the Federal Flashpoint</b><small>Reconciling <em>democratic equality</em> (one person, one vote, one value) with <em>federal fairness</em> to States that succeeded in population control. Options: expand the House while freezing State shares; equalise Rajya Sabha representation; devolve fiscal and legislative power; or a phased, negotiated re-proportioning.</small></div>
+    <div class="tile"><span class="ico">👩</span><b>Women's Representation</b><small>The 106th Amendment is passed but dormant. India's LS has ~14% women against a global average near 27%. Debate: rotation of reserved seats weakens incumbency and constituency-nurturing; the alternative is intra-party quotas for candidature.</small></div>
+    <div class="tile"><span class="ico">🔧</span><b>The Reform Basket</b><small>Minimum sitting days · an independent tribunal for defection cases (<em>Keisham Meghachandra</em>, 2020) · mandatory Committee referral · pre-legislative consultation policy · legislative impact assessment · a shadow-cabinet-style Opposition · codification of privileges · a Parliamentary Budget Office.</small></div>
+  </div>
+
+  <h3 class="sec">🏆 Five Golden Quotes for Answer-Writing</h3>
+  <blockquote class="quote">“However good a Constitution may be, it is sure to turn out bad because those who are called to work it happen to be a bad lot.”<cite>— Dr. B.R. Ambedkar, Constituent Assembly, 25 Nov 1949</cite></blockquote>
+  <blockquote class="quote">“The British Parliament can do everything except make a woman a man and a man a woman.”<cite>— Jean-Louis De Lolme · contrast with India's limited Parliament</cite></blockquote>
+  <blockquote class="quote">Parliament's functions are <em>elective, expressive, teaching, informing</em> and <em>legislative</em>.<cite>— Walter Bagehot, The English Constitution</cite></blockquote>
+  <blockquote class="quote">Parliament is the “Congress of Opinions” and the “nation's Committee of Grievances.”<cite>— John Stuart Mill, Considerations on Representative Government</cite></blockquote>
+  <blockquote class="quote">“Parliament's real function is not to govern, but to make the government behave.”<cite>— Sir Ivor Jennings 🎯</cite></blockquote>
+
+  <div class="call gold-c"><b>🎤 Closing line for any Parliament essay:</b> “A Parliament is judged not by the number of laws it passes, but by the quality of the questions it is allowed to ask.”</div>
+</section>
+
+<!-- ══════════════ PART M ══════════════ -->
+<section class="part M" id="M">
+  <div class="part-head">
+    <div class="part-tag">Part M · Final Recall</div>
+    <h2>🧾 ONE-PAGE REVISION CARD — 60 SECONDS ⏱️</h2>
+    <p class="lede">If you read nothing else the night before — read this.</p>
+  </div>
+
+  <div class="rev">
+    <div class="rev-row"><b>📖 MEANING</b><span>“Parler” = to talk · the supreme legislative <em>and</em> deliberative organ of the Union</span></div>
+    <div class="rev-row"><b>📜 DEFINITION</b><span>Art. 79 → PRESIDENT + RAJYA SABHA + LOK SABHA</span></div>
+    <div class="rev-row"><b>📍 LOCATION</b><span>Part V, Chapter II, Articles 79–122</span></div>
+    <div class="rev-row"><b>🌍 MODEL</b><span>Westminster / British — “President-in-Parliament” ≠ the American pattern</span></div>
+    <div class="rev-row"><b>🏷️ NAMES</b><span>Hindi names adopted in 1954 (Lok Sabha 14 May · Rajya Sabha 23 Aug)</span></div>
+    <div class="rev-row"><b>🔢 STRENGTH</b><span>LS: max 550, actual 543 · RS: max 250, sanctioned 245 (233 + 12)</span></div>
+    <div class="rev-row"><b>⏳ DURATION</b><span>LS 5 yrs (83(2)) · RS permanent, 1/3 retire every 2 yrs (83(1)), 6-yr term via RPA 1951</span></div>
+    <div class="rev-row"><b>🗳️ ELECTION</b><span>LS: FPTP, direct, territorial, secret · RS: PR by STV, indirect, open ballot</span></div>
+    <div class="rev-row"><b>👤 AGE</b><span>Voter 18 (61st Amdt 1988) · LS candidate 25 · RS candidate 30</span></div>
+    <div class="rev-row"><b>🪑 RESERVATION</b><span>SC 84 + ST 47 till 2030 (104th) · Anglo-Indian lapsed 25 Jan 2020 · Women 1/3 (106th, 2023, dormant)</span></div>
+    <div class="rev-row"><b>🧊 FREEZE</b><span>42nd (1976) → 84th (2001, till first census after 2026) → 87th (2003, delimitation on the 2001 census)</span></div>
+    <div class="rev-row"><b>🧑‍⚖️ OFFICERS</b><span>Speaker 93 + Dy. Speaker · Chairman = VP 89(1) + Dy. Chairman 89(2) · Pro Tem by the President</span></div>
+    <div class="rev-row"><b>🔢 QUORUM</b><span>1/10th including the presiding officer → LS 55 · RS 25</span></div>
+    <div class="rev-row"><b>🗓️ SESSIONS</b><span>Gap ≤ 6 months · Budget, Monsoon, Winter · no minimum sitting days</span></div>
+    <div class="rev-row"><b>🤝 JOINT SITTING</b><span>Art. 108 · Speaker presides · simple majority · 3 times: 1961, 1978, 2002</span></div>
+    <div class="rev-row"><b>🛡️ PRIVILEGES</b><span>Arts. 105 &amp; 122 (Union) · 194 &amp; 212 (States) · still uncodified</span></div>
+    <div class="rev-row"><b>🚫 NOT SOVEREIGN</b><span>Written Constitution + Federalism + Judicial Review + Fundamental Rights + Basic Structure (Kesavananda 1973, Minerva Mills 1980)</span></div>
+    <div class="rev-row"><b>🎯 7 POWERS</b><span>LEFT-CJEO → Legislative · Executive · Financial · Constituent · Judicial · Electoral · Other</span></div>
+    <div class="rev-row"><b>⚖️ MAJORITIES</b><span>Simple → Effective → Absolute → Special I (368) / II (61) / III (249 &amp; 312) / IV (368 + half the States)</span></div>
+    <div class="rev-row"><b>📌 VERDICT ON RS</b><span>Not as weak as the House of Lords, not as strong as the US Senate</span></div>
+    <div class="rev-row"><b>🔥 LIVE ISSUES</b><span>Delimitation &amp; the 850-seat debate · Deputy Speaker vacancy · Money Bill route · sitting days · women's reservation trigger</span></div>
+  </div>
+
+  <div class="call tip-c"><b>✅ Final self-test:</b> Can you name the three joint sittings, the four majorities, the five routes to the State List, the six matters in Art. 110, the seven powers, the ten reasons the President is part of Parliament, and the twenty characteristics? If yes — this chapter is done. 🏁</div>
+</section>
+
+</div><!-- /.wrap -->
+
+<footer>
+  <div class="fem">🏛️</div>
+  <div class="fg"><em>SANSAD · संसद</em></div>
+  <p><b>Parliament of India · Articles 79–122 · Part V, Chapter II</b></p>
+  <p style="margin-top:14px;font-style:italic;"><b>“Parliament's real function is not to govern, but to make the government behave.”</b></p>
+  <div class="tricolor-bar" style="animation:none;opacity:1;margin-top:26px;"></div>
+  <br><p><div class="subtitle"><b><em><i><strong><h2>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h2></strong></i></em></b></div>
+</footer>
+
+<button id="top" aria-label="Back to top">⏏</button>
+
+<script>
+/* ═══════════ 🌌 FLOATING DUST MOTES ═══════════ */
+(function(){
+  const dust = document.getElementById('dust');
+  const N = window.innerWidth < 640 ? 26 : 55;
+  for(let i=0;i<N;i++){
+    const m = document.createElement('div');
+    m.className = 'mote';
+    const s = Math.random()*3.2 + 1.1;
+    m.style.width = s+'px';
+    m.style.height = s+'px';
+    m.style.left = Math.random()*100 + '%';
+    m.style.bottom = '-10px';
+    m.style.animationDuration = (Math.random()*26 + 16)+'s';
+    m.style.animationDelay = (-Math.random()*30)+'s';
+    m.style.background = ['#f4c869','#ff9a3c','#4fd6a0','#6fb7ff'][Math.floor(Math.random()*4)];
+    dust.appendChild(m);
+  }
+})();
+
+/* ═══════════ 📊 SCROLL PROGRESS BAR ═══════════ */
+const bar = document.getElementById('progress');
+const topBtn = document.getElementById('top');
+function onScroll(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+  bar.style.width = pct + '%';
+  topBtn.classList.toggle('show', h.scrollTop > 600);
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', onScroll);
+onScroll();
+
+/* ═══════════ ⏏ BACK TO TOP ═══════════ */
+topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+/* ═══════════ 👁️ REVEAL SECTIONS ON SCROLL ═══════════ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:0, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.part').forEach(p => io.observe(p));
+
+/* ═══════════ 🧭 ACTIVE NAV HIGHLIGHT ═══════════ */
+const links = [...document.querySelectorAll('.topnav a')];
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      links.forEach(a => a.style.color = '');
+      const active = links.find(a => a.getAttribute('href') === '#'+e.target.id);
+      if(active) active.style.color = 'var(--gold)';
+    }
+  });
+}, {threshold:0, rootMargin:'-45% 0px -45% 0px'});
+document.querySelectorAll('section.part').forEach(s => spy.observe(s));
+
+/* ═══════════ 🎬 HERO EMBLEM EASTER EGG ═══════════ */
+document.querySelector('.emblem').addEventListener('click', function(){
+  this.style.transition = 'transform 1.1s cubic-bezier(.2,.8,.2,1)';
+  this.style.transform = 'rotateY(1080deg) scale(1.35)';
+  setTimeout(() => { this.style.transform = ''; }, 1150);
+});
+
+/* ═══════════ ⌨️ KEYBOARD NAV (J / K between parts) ═══════════ */
+const parts = [...document.querySelectorAll('section.part')];
+document.addEventListener('keydown', (ev) => {
+  if(ev.target.tagName === 'INPUT' || ev.target.tagName === 'TEXTAREA') return;
+  const k = ev.key.toLowerCase();
+  if(k !== 'j' && k !== 'k') return;
+  const y = window.scrollY + 90;
+  let idx = parts.findIndex(p => p.offsetTop > y);
+  if(k === 'j'){ if(idx === -1) idx = parts.length - 1; }
+  else { idx = (idx === -1 ? parts.length : idx) - 2; if(idx < 0) idx = 0; }
+  parts[idx] && parts[idx].scrollIntoView({behavior:'smooth'});
+});
+</script>
+
+</body>
+</html>
