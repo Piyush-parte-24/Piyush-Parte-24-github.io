@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comptroller & Auditor General of India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            securityLevel: 'loose',
+            flowchart: { 
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <style>
+        :root {
+            --primary: #4cc9f0;
+            --primary-dark: #4361ee;
+            --primary-light: rgba(76, 201, 240, 0.1);
+            --secondary: #7209b7;
+            --secondary-dark: #3a0ca3;
+            --secondary-light: rgba(114, 9, 183, 0.1);
+            --accent: #f72585;
+            --accent-dark: #b5179e;
+            --accent-light: rgba(247, 37, 133, 0.1);
+            --success: #4ade80;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gold: #fbbf24;
+            --gold-dark: #d97706;
+            
+            --bg-dark: #0a0a0f;
+            --bg-darker: #050508;
+            --bg-card: #111118;
+            --bg-card-light: #1a1a24;
+            --border-color: #2d2d3a;
+            --border-light: #3a3a4a;
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            
+            --gradient-1: linear-gradient(135deg, #4cc9f0 0%, #4361ee 50%, #7209b7 100%);
+            --gradient-2: linear-gradient(135deg, #7209b7 0%, #4361ee 100%);
+            --gradient-3: linear-gradient(135deg, #f72585 0%, #7209b7 100%);
+            --gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 35px 60px -15px rgba(0, 0, 0, 0.7);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+            
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+            
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 5% 20%, rgba(76, 201, 240, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 95% 10%, rgba(114, 9, 183, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 50% 95%, rgba(247, 37, 133, 0.03) 0%, transparent 25%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Main Title with Animation */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, var(--bg-darker) 0%, transparent 30%);
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(76, 201, 240, 0.15) 0%, transparent 60%);
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: pulse 8s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.95); }
+            100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        .main-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 30px;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 10px 30px rgba(76, 201, 240, 0.3);
+            position: relative;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            animation: titleReveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes titleReveal {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .title-emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 20px;
+            animation: emojiFloat 3s infinite ease-in-out;
+        }
+
+        @keyframes emojiFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-weight: 300;
+            line-height: 1.6;
+            animation: fadeInUp 1s 0.8s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title-divider {
+            width: 200px;
+            height: 4px;
+            background: var(--gradient-1);
+            margin: 40px auto;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            animation: expandWidth 1.5s 0.5s forwards;
+            opacity: 0;
+            width: 0;
+        }
+
+        @keyframes expandWidth {
+            to { width: 200px; opacity: 1; }
+        }
+
+        .title-divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-3);
+            animation: slide 3s infinite linear;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Master Flowchart */
+        .master-flowchart {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            margin: 80px auto;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+        }
+
+        .flowchart-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 5px;
+            background: var(--gradient-2);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin: 30px auto 0;
+            font-weight: 300;
+        }
+
+        /* Article Cards */
+        .article-card {
+            background: linear-gradient(145deg, var(--bg-card) 0%, var(--bg-card-light) 100%);
+            border-radius: var(--radius-lg);
+            padding: 45px;
+            margin-bottom: 50px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--gradient-1);
+        }
+
+        .article-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(76, 201, 240, 0.3);
+        }
+
+        .article-number {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-1);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-weight: 900;
+            margin-right: 30px;
+            font-size: 2rem;
+            box-shadow: 0 15px 30px rgba(76, 201, 240, 0.3);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .article-card:hover .article-number {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 20px 40px rgba(76, 201, 240, 0.4);
+        }
+
+        .article-number span {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .article-description {
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            padding-left: 110px;
+        }
+
+        .article-content {
+            padding-left: 110px;
+        }
+
+        /* Clause Styling */
+        .clause-container {
+            margin-bottom: 35px;
+        }
+
+        .clause {
+            background: rgba(26, 26, 36, 0.7);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .clause:hover {
+            transform: translateX(10px);
+            background: rgba(26, 26, 36, 0.9);
+            border-left-color: var(--accent);
+        }
+
+        .clause-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .clause-number {
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'Courier New', monospace;
+            font-size: 1.4rem;
+            background: rgba(76, 201, 240, 0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-right: 20px;
+            transition: var(--transition-fast);
+        }
+
+        .clause:hover .clause-number {
+            background: rgba(247, 37, 133, 0.2);
+            color: var(--accent);
+        }
+
+        .clause-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.3rem;
+        }
+
+        .clause-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Insight Boxes */
+        .insight-box {
+            background: linear-gradient(135deg, rgba(76, 201, 240, 0.15), rgba(114, 9, 183, 0.15));
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            margin: 40px 0;
+            border: 1px solid rgba(76, 201, 240, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .insight-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .insight-box::before {
+            content: '💡';
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 4rem;
+            opacity: 0.15;
+        }
+
+        .insight-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Comparison Tables */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .comparison-table thead {
+            background: var(--gradient-1);
+        }
+
+        .comparison-table th {
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 700;
+            color: white;
+            font-size: 1.2rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table th:last-child {
+            border-right: none;
+        }
+
+        .comparison-table tbody tr {
+            background: var(--bg-card-light);
+            transition: var(--transition-fast);
+        }
+
+        .comparison-table tbody tr:nth-child(even) {
+            background: var(--bg-card);
+        }
+
+        .comparison-table tbody tr:hover {
+            background: rgba(76, 201, 240, 0.1);
+            transform: translateX(5px);
+        }
+
+        .comparison-table td {
+            padding: 22px 20px;
+            color: var(--text-secondary);
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Tag Styling */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: default;
+            gap: 10px;
+            border: 1px solid transparent;
+        }
+
+        .tag:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .tag-primary {
+            background: rgba(76, 201, 240, 0.15);
+            color: var(--primary);
+            border-color: rgba(76, 201, 240, 0.4);
+        }
+
+        .tag-secondary {
+            background: rgba(114, 9, 183, 0.15);
+            color: var(--secondary);
+            border-color: rgba(114, 9, 183, 0.4);
+        }
+
+        .tag-accent {
+            background: rgba(247, 37, 133, 0.15);
+            color: var(--accent);
+            border-color: rgba(247, 37, 133, 0.4);
+        }
+
+        .tag-gold {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--gold);
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 120px;
+            background: linear-gradient(180deg, transparent, rgba(5, 5, 8, 0.9));
+            border-top: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(76, 201, 240, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .footer-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 9999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-1);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 20px rgba(76, 201, 240, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-title { font-size: 4rem; }
+            .section-title { font-size: 2.8rem; }
+        }
+
+        @media (max-width: 992px) {
+            .main-title { font-size: 3.2rem; }
+            .section-title { font-size: 2.4rem; }
+            .article-content, .article-description { padding-left: 0; }
+            .article-header { flex-direction: column; text-align: center; }
+            .article-number { margin-right: 0; margin-bottom: 20px; }
+        }
+
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .subtitle { font-size: 1.4rem; }
+            .section-title { font-size: 2rem; }
+            .container { padding: 0 20px; }
+            .master-flowchart { padding: 30px 20px; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-darker);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 6px;
+            border: 3px solid var(--bg-darker);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            background: rgba(76, 201, 240, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: rgba(76, 201, 240, 0.3);
+            border: 2px dashed rgba(76, 201, 240, 0.2);
+            z-index: -1;
+            pointer-events: none;
+            animation: float 20s infinite linear;
+        }
+
+        .floating-1 {
+            top: 20%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-2 {
+            bottom: 30%;
+            right: 7%;
+            animation: floatReverse 25s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(360deg); }
+        }
+
+        @keyframes floatReverse {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-1000px) rotate(-360deg); }
+        }
+
+        /* Enhanced Content Boxes */
+        .content-box {
+            background: linear-gradient(145deg, rgba(26, 26, 36, 0.8), rgba(17, 17, 24, 0.9));
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--radius-lg);
+            padding: 2px;
+            background: var(--gradient-1);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .content-box:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1">💸</div>
+    <div class="floating-element floating-2">🏦</div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-glow"></div>
+            <div>
+                <div class="title-emoji">⚖️🏦💸</div>
+                <h1 class="main-title">
+                    COMPTROLLER & AUDITOR GENERAL OF INDIA<br>
+<br><p><span style="font-size: 0.5em; display: block; margin-top: 20px; font-weight: 300; color: var(--text-secondary);"><b><em><i><strong>AUTEUR: PIYUSH PARTE</strong></i></em></b></span>
+                   
+                </h1>
+                <div class="title-divider"></div>
+<p class="subtitle"><b>Supreme Audit Institution of India</b></p>
+                <p class="subtitle">
+                    The Supreme Guardian of Public Treasury & Independent Constitutional Watchdog<br>
+                    <span style="font-size: 0.8em; display: block; margin-top: 15px; color: var(--text-muted);">
+                        Established by Articles 148-151 & 279 of the Constitution of India
+                    </span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Master Flowchart -->
+        <section class="master-flowchart">
+            <h2 class="flowchart-title">
+                <i class="fas fa-sitemap"></i> CONSTITUTIONAL ACCOUNTABILITY ECOSYSTEM
+            </h2>
+            <div class="mermaid">
+                graph TD
+                    A["CONSTITUTION OF INDIA<br>🐲</br>Articles 148-151, 279"] --> B["ARTICLE 148<br>Establishment & Independence"]
+                    A --> C["ARTICLE 149<br>Duties & Powers"]
+                    A --> D["ARTICLE 150<br>Form of Accounts"]
+                    A --> E["ARTICLE 151<br>Audit Reports"]
+                    A --> F["ARTICLE 279<br>Net Proceeds Certification"]
+                    
+                    B --> B1["Presidential Appointment<br>👑"]
+                    B --> B2["Security of Tenure<br>⚖️"]
+                    B --> B3["Financial Independence<br>💰"]
+                    B --> B4["Post-Retirement Ban<br>🚫"]
+                    
+                    C --> C1["Financial Audit<br>📊"]
+                    C --> C2["Performance Audit<br>⚡"]
+                    C --> C3["Compliance Audit<br>✅"]
+                    C --> C4["Propriety Audit<br>⚖️"]
+                    
+                    D --> D1["Uniform Accounting<br>Across Union & States"]
+                    D --> D2["CAG Advises President<br>on Accounting Format"]
+                    
+                    E --> E1["Reports to President<br>for Parliament"]
+                    E --> E2["Reports to Governor<br>for State Legislature"]
+                    E --> E3["Public Accounts Committee<br>Examination"]
+                    
+                    F --> F1["Net Proceeds Calculation<br>Tax Collection - Cost"]
+                    F --> F2["CAG Certification is Final<br>Federal Finance Arbitration"]
+                    
+                    B1 --> G["COMPLETE AUDIT CYCLE<br>🔁"]
+                    C1 --> G
+                    D1 --> G
+                    E3 --> G
+                    F2 --> G
+                    
+                    G --> H["PARLIAMENTARY CONTROL<br>🏛️"]
+                    G --> I["EXECUTIVE ACCOUNTABILITY<br>🏢"]
+                    G --> J["PUBLIC TRANSPARENCY<br>👁️"]
+                    
+                    H --> K["DEMOCRATIC GOVERNANCE<br>🔱"]
+                    I --> K
+                    J --> K
+                    
+                    style A fill:#7209b7,color:#fff,stroke:#fff,stroke-width:3px
+                    style G fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                    style K fill:#f72585,color:#fff,stroke:#fff,stroke-width:2px
+            </div>
+        </section>
+
+        <!-- ARTICLE 148 -->
+        <section class="section" id="article148">
+            <div class="section-header">
+                <h2 class="section-title">📜 ARTICLE 148: CONSTITUTIONAL FOUNDATION</h2>
+                <p class="section-subtitle">The Bedrock of Independence & Institutional Autonomy</p>
+            </div>
+
+            <div class="article-card">
+                <div class="article-header">
+                    <div class="article-number">
+                        148
+                        <span>Article</span>
+                    </div>
+                    <div class="article-title">Comptroller and Auditor-General of India</div>
+                </div>
+                
+                <p class="article-description">
+                    The cornerstone article that establishes CAG as a constitutional authority with unparalleled independence from executive influence, creating an impregnable fortress for financial oversight in the world's largest democracy.
+                </p>
+
+                <div class="article-content">
+                    <!-- Clause 148(1) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(1)</div>
+                                <div class="clause-title">Establishment & Appointment</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"There shall be a Comptroller and Auditor-General of India who shall be appointed by the President by warrant under his hand and seal."</strong></p>
+                                <p>🎯 <strong>Constitutional Office</strong>: Not a statutory body but a constitutional authority, giving it supreme status</p>
+                                <p>👑 <strong>Presidential Warrant</strong>: Highest level of appointment, similar to Supreme Court judges</p>
+                                <p>⚖️ <strong>Security of Tenure</strong>: Can only be removed like a Supreme Court Judge (Article 124)</p>
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-crown"></i> Presidential Appointment</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-file-signature"></i> Warrant under Seal</span>
+                                    <span class="tag tag-accent"><i class="fas fa-shield-alt"></i> Constitutional Office</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 148(2) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(2)</div>
+                                <div class="clause-title">Oath of Office</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"Every person appointed... shall make and subscribe before the President... an oath or affirmation according to the form set out... in the Third Schedule."</strong></p>
+                                <p>📜 <strong>Third Schedule Format</strong>: Binds CAG to uphold Constitution, sovereignty, and integrity of India</p>
+                                <p>⚡ <strong>Psychological Barrier</strong>: Creates solemn constitutional commitment against executive pressure</p>
+                                <p>🎯 <strong>Fidelity to Duty</strong>: Emphasis on faithful discharge "without fear or favor"</p>
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-handshake"></i> Constitutional Oath</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-book"></i> Third Schedule</span>
+                                    <span class="tag tag-accent"><i class="fas fa-balance-scale"></i> Solemn Commitment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 148(3) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(3)</div>
+                                <div class="clause-title">Salary & Conditions of Service (Salary & Rights)</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"The salary and other conditions of service... shall be such as may be determined by Parliament by law..."</p><p>"Deals with the conditions of service for the CAG personally (Salary, leave, pension)"</strong></p>
+                                <p>💰 <strong>CAG Act, 1971</strong>: Currently governs salary, set equal to Supreme Court Judge</p>
+                                <p>⚖️ <strong>Parliamentary Control</strong>: Ultimate authority lies with Parliament, not executive</p>
+                                <p>🛡️ <strong>Non-Votable Salary</strong>: Cannot be reduced during tenure for political reasons</p>
+                                
+                                <div class="insight-box">
+                                    <div class="insight-title"><i class="fas fa-lightbulb"></i> SALARY PROTECTION MECHANISM</div>
+                                    <p>The salary is <strong>charged on Consolidated Fund</strong> (Art. 148(6)), meaning:</p>
+                                    <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                                        <li>✅ Not subject to annual parliamentary vote</li>
+                                        <li>✅ Cannot be withheld or reduced by executive</li>
+                                        <li>✅ Automatic payment from Consolidated Fund</li>
+                                        <li>✅ Similar protection as judiciary and President</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 148(4) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(4)</div>
+                                <div class="clause-title">Post-Retirement Restrictions</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"The Comptroller and Auditor-General shall not be eligible for further office either under the Government of India or under the Government of any State after he has ceased to hold his office."</strong></p>
+                                <p>🚫 <strong>Absolute Ban</strong>: Cannot join any government service (Centre, State, PSUs)</p>
+                                <p>🎯 <strong>Fearless Final Years</strong>: Eliminates temptation for post-retirement favors</p>
+                                <p>⚖️ <strong>Unique Safeguard</strong>: More stringent than even Supreme Court judges</p>
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-door-closed"></i> No Post-Retirement Office</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-user-shield"></i> Absolute Independence</span>
+                                    <span class="tag tag-accent"><i class="fas fa-gavel"></i> Anti-Corruption Measure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 148(5) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(5)</div>
+                                <div class="clause-title">Administrative Powers (Staff & Administration)</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"Subject to the provisions of this Constitution... the conditions of service of persons serving in the Indian Audit and Accounts Department... shall be prescribed by rules made by the President after consultation with the Comptroller and Auditor-General."</p><p>"Deals with the conditions of service for the Staff/Employees working under the CAG"</strong></p>
+                                <p>🏢 <strong>Departmental Autonomy</strong>: CAG controls Indian Audit & Accounts Department</p>
+                                <p>🤝 <strong>Mandatory Consultation</strong>: President must consult CAG before making rules</p>
+                                <p>👥 <strong>Staff Protection</strong>: Prevents executive from demoralizing audit staff</p>
+                                
+                                <div class="content-box">
+                                    <h4 style="color: var(--primary); margin-bottom: 15px;">🏛️ AUDIT DEPARTMENT STRUCTURE</h4>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px;">
+                                        <div style="background: rgba(76, 201, 240, 0.1); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>Headquarters</strong><br>
+                                            <small>New Delhi, Office of CAG</small>
+                                        </div>
+                                        <div style="background: rgba(114, 9, 183, 0.1); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>Field Offices</strong><br>
+                                            <small>Across all states & UTs</small>
+                                        </div>
+                                        <div style="background: rgba(247, 37, 133, 0.1); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>International</strong><br>
+                                            <small>UN Panel, INTOSAI membership</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 148(6) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">148(6)</div>
+                                <div class="clause-title">Financial Independence</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"The administrative expenses of the office of the Comptroller and Auditor-General... shall be charged upon the Consolidated Fund of India."</strong></p>
+                                <p>💰 <strong>Charged Expenditure</strong>: Not subject to parliamentary vote annually</p>
+                                <p>🛡️ <strong>Financial Shield</strong>: Executive cannot starve CAG of funds</p>
+                                <p>⚖️ <strong>Judicial Parity</strong>: Same protection as Supreme Court and High Courts</p>
+                                
+                                <div class="insight-box">
+                                    <div class="insight-title"><i class="fas fa-university"></i> CONSOLIDATED FUND PROTECTION</div>
+                                    <p>The "charged expenditure" mechanism ensures:</p>
+                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px;">
+                                        <div style="background: rgba(76, 201, 240, 0.15); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>Automatic Funding</strong><br>
+                                            <small>No annual budget battles</small>
+                                        </div>
+                                        <div style="background: rgba(114, 9, 183, 0.15); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>Executive Immunity</strong><br>
+                                            <small>Cannot use funds as pressure tool</small>
+                                        </div>
+                                        <div style="background: rgba(247, 37, 133, 0.15); padding: 15px; border-radius: var(--radius-sm);">
+                                            <strong>Operational Freedom</strong><br>
+                                            <small>Independent recruitment, infrastructure</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary Insight -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-chess-queen"></i> THE INDEPENDENCE TRINITY</div>
+                        <p>Article 148 creates a <strong>triple-layered independence shield</strong> unmatched in constitutional design:</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px;">
+                            <div style="background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), transparent); padding: 20px; border-radius: var(--radius-md); border: 1px solid rgba(76, 201, 240, 0.3);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">1. TENURE SECURITY</h4>
+                                <p style="color: var(--text-secondary);">Removal only via impeachment like Supreme Court Judge • 6-year fixed term • Age 65 protection</p>
+                            </div>
+                            <div style="background: linear-gradient(135deg, rgba(114, 9, 183, 0.2), transparent); padding: 20px; border-radius: var(--radius-md); border: 1px solid rgba(114, 9, 183, 0.3);">
+                                <h4 style="color: var(--secondary); margin-bottom: 10px;">2. FINANCIAL AUTONOMY</h4>
+                                <p style="color: var(--text-secondary);">Charged expenditure • Non-votable salary • Control over departmental budget</p>
+                            </div>
+                            <div style="background: linear-gradient(135deg, rgba(247, 37, 133, 0.2), transparent); padding: 20px; border-radius: var(--radius-md); border: 1px solid rgba(247, 37, 133, 0.3);">
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">3. POST-RETIREMENT IMMUNITY</h4>
+                                <p style="color: var(--text-secondary);">No government jobs • No post-audit favors • Fearless final years in office</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE 149 -->
+        <section class="section" id="article149">
+            <div class="section-header">
+                <h2 class="section-title">📋 ARTICLE 149: AUDIT MANDATE & POWERS</h2>
+                <p class="section-subtitle">From Financial Compliance to Performance Evaluation</p>
+            </div>
+
+            <div class="article-card">
+                <div class="article-header">
+                    <div class="article-number">
+                        149
+                        <span>Article</span>
+                    </div>
+                    <div class="article-title">Duties and Powers of Comptroller and Auditor-General</div>
+                </div>
+                
+                <p class="article-description">
+                    Defines the expansive jurisdiction and authority of CAG as the Supreme Audit Institution of India, evolving from traditional financial audit to comprehensive performance evaluation of government programs and schemes.
+                </p>
+
+                <div class="article-content">
+                    <div class="content-box">
+                        <h3 style="color: var(--primary); margin-bottom: 20px; text-align: center;">🔍 THE FOUR-DIMENSIONAL AUDIT UNIVERSE</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                            <div style="background: rgba(76, 201, 240, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                                <h4 style="color: var(--primary); margin-bottom: 15px;">1. FINANCIAL AUDIT 💰</h4>
+                                <p style="color: var(--text-secondary);">Traditional compliance checking:</p>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+<li>Verification of financial statements</li>
+                                    <li>Factual correctness</li>
+
+<li>No misstatement</li>
+                                    <li>Proper accounting</li>
+                                    <li>Expenditure within grants</li>
+                                    <li>Revenue collection accuracy</li>
+<br><li><b>Obligatory:</b> Conducted regularly & mandatory 
+                                </ul>
+                            </div>
+                            
+                           
+                            
+                            <div style="background: rgba(114, 9, 183, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
+                                <h4 style="color: var(--secondary); margin-bottom: 15px;">2. COMPLIANCE AUDIT ✅</h4>
+                                <p style="color: var(--text-secondary);">Rules & regulations adherence:</p>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                                    <li>Legality of expenditure</li>
+<li>Authorization</li>
+                                    <li>Parliamentary directives</li>
+                                    <li>Procedural compliance</li>
+<li>Expenditure as per law & rules:<p>~ Constitution <p>~ Acts & Rules <p>~ Budget provisions</li>
+<br><li><b>Obligatory:</b> Conducted regularly & mandatory 
+                                </ul>
+                            </div>
+
+ <div style="background: rgba(230, 35, 110, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--accent);">
+                                <h4 style="color: var(--accent); margin-bottom: 15px;">3. PERFORMANCE AUDIT ⚡</h4>
+                                <p style="color: var(--text-secondary);">Was the money spent wisely,<br>The 3Es framework (CAG Act, 1971):</p>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                                    <li><strong>Economy:</strong> Purchasing resources at the lowest possible cost without compromising quality</li>
+                                    <li><strong>Efficiency:</strong> Getting maximum output from the resources used</li>
+                                    <li><strong>Effectiveness:</strong> Achieving the intended goals & desired results</li>
+<br><li><b>Discretionary:</b> Conducted at the discretion of the CAG</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="background: rgba(300 100, 70, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--danger);">
+                                <h4 style="color: var(--danger); margin-bottom: 15px;">4. PROPRIETY AUDIT ⚖️</h4>
+                                <p style="color: var(--text-secondary);">Value-for-money principles:</p>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+<li>Wisdom of expenditure</li>
+                                    <li>Moral correctness</li>
+                                    <li>Public interest</li>
+                                    <li>Ethical spending</li>
+                                    <li>Avoidance of waste</li> 
+<br><li><b>Discretionary:</b> Conducted at the discretion of the CAG</li>                                  
+                                    
+                                </ul>
+                            </div>
+
+                            <div style="background: rgba(176, 301, 340, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--gold);">
+                                <h4 style="color: var(--gold); margin-bottom: 15px;">✪ AUDIT OF GOVERNMENT COMPANIES & PSUs 🏣</h4>
+                                <p style="color: var(--text-secondary);">Audit of govt controlled/owned:</p>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                                    <li><b>Public Sector Undertakings</b></li>
+                                    <li><b>Govt companies</b></li>
+<br><li>CAG audits govt companies to ensure accountability</li>
+<li>CAG audits (Directly or via Chartered Accountants)</li>
+<br><li><b>Discretionary:</b> Financial & Compliance audits
+<br><li><b>Obligatory:</b> Performance & Propriety audits 
+                                 </ul>
+                            </div>
+ <div style="background: rgba(176, 301, 340, 0.1); padding: 25px; border-radius: var(--radius-md); border-left: 4px solid var(--gold);">
+                                
+                                
+                                <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                                 <p><li><b>Government Company: ≥ 51% paid-up share capital is held by:</b><br>~ Central Government<br>~ State Government<br>~ Or jointly by both</li>
+                                    
+
+<br><li><b>PSUs:</b><br>~ CPSEs - Central Public Sector Enterprises <br>~ SPSEs - State Public Sector Enterprises</li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Jurisdiction Diagram -->
+                    <div class="content-box">
+                        <h3 style="color: var(--secondary); margin-bottom: 25px; text-align: center;">🏛️ COMPLETE AUDIT JURISDICTION</h3>
+                        <div class="mermaid">
+                            graph TD
+                                A["ARTICLE 149 JURISDICTION<br>As expanded by CAG Act 1971"] --> B[Constitutional Entities]
+                                A --> C[Statutory Bodies]
+                                A --> D[Substantially Financed]
+                                A --> E[Special Audits]
+                                
+                                B --> B1["Union Government<br>All Ministries/Departments"]
+                                B --> B2["State Governments<br>29 States"]
+                                B --> B3["Union Territories<br>with Legislature"]
+                                
+                                C --> C1["Public Sector Undertakings<br>PSUs (Maharatna, Navratna)"]
+                                C --> C2["Government Companies<br>>50% Govt shareholding"]
+                                C --> C3["Statutory Corporations<br>RBI, SEBI, etc."]
+                                
+                                D --> D1["Autonomous Bodies<br>Universities, IITs, AIIMS"]
+                                D --> D2["Substantially Financed<br>>51% Govt funding"]
+                                D --> D3["PPP Projects<br>with public money"]
+                                
+                                E --> E1["Defense & Security<br>with necessary protocols"]
+                                E --> E2["Intelligence Agencies<br>as permitted"]
+                                E --> E3["Special Investigations<br>as directed"]
+                                
+                                B1 --> F[THREE FUNDS AUDIT]
+                                B2 --> F
+                                B3 --> F
+                                
+                                F --> G["Consolidated Fund 💰"]
+                                F --> H["Contingency Fund 🚨"]
+                                F --> I["Public Account 👥"]
+                                
+                                style A fill:#7209b7,color:#fff,stroke:#fff,stroke-width:3px
+                                style F fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- Audit Powers -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-gavel"></i> LEGAL POWERS UNDER ARTICLE 149</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px;">
+                            <div style="background: rgba(76, 201, 240, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">🚪 UNLIMITED ACCESS</h4>
+                                <p style="color: var(--text-secondary);">Right to access all records, documents, files, and information of audited entities without restrictions.</p>
+                            </div>
+                            <div style="background: rgba(114, 9, 183, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--secondary); margin-bottom: 10px;">📞 SUMMON AUTHORITY</h4>
+                                <p style="color: var(--text-secondary);">Power to summon officials for explanations and clarifications on audit observations.</p>
+                            </div>
+                            <div style="background: rgba(247, 37, 133, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">🔍 INSPECTION RIGHTS</h4>
+                                <p style="color: var(--text-secondary);">Authority to conduct surprise inspections and physical verification of assets and stores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Historical Evolution -->
+                    <div class="content-box">
+                        <h3 style="color: var(--accent); margin-bottom: 20px; text-align: center;">📜 HISTORICAL EVOLUTION OF AUDIT MANDATE</h3>
+                        
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Audit Focus</th>
+                                    <th>Key Developments</th>
+                                    <th>Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1858-1919</strong></td>
+                                    <td>Account Keeping</td>
+                                    <td>Separation from British Treasury</td>
+                                    <td>Basic financial control</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1919-1947</strong></td>
+                                    <td>Compliance Audit</td>
+                                    <td>Government of India Act, 1919</td>
+                                    <td>Procedural regularity</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1950-1971</strong></td>
+                                    <td>Constitutional Audit</td>
+                                    <td>Articles 148-151 enacted</td>
+                                    <td>Independent constitutional status</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1971-2000</strong></td>
+                                    <td>Performance Audit</td>
+                                    <td>CAG Act, 1971 passed</td>
+                                    <td>3Es (Economy, Efficiency, Effectiveness)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2000-Present</strong></td>
+                                    <td>Digital & Thematic Audit</td>
+                                    <td>IT integration, Big data analytics</td>
+                                    <td>Real-time, predictive auditing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Landmark Audits -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-landmark"></i> LANDMARK AUDITS THAT SHAPED INDIA</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 25px;">
+                            <div style="background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(76, 201, 240, 0.3);">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                    <div style="background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2G</div>
+                                    <h4 style="color: var(--primary); margin: 0;">2G SPECTRUM ALLOCATION (2010)</h4>
+                                </div>
+                                <p style="color: var(--text-secondary);">Estimated loss: ₹1.76 lakh crore • Led to Supreme Court cancellation of 122 licenses • Triggered major telecom reforms</p>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(114, 9, 183, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(114, 9, 183, 0.3);">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                    <div style="background: var(--secondary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">⛏️</div>
+                                    <h4 style="color: var(--secondary); margin: 0;">COAL BLOCK ALLOCATION (2012)</h4>
+                                </div>
+                                <p style="color: var(--text-secondary);">Estimated loss: ₹1.86 lakh crore • Supreme Court cancelled allocations • Coal Mines (Special Provisions) Act, 2015</p>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(247, 37, 133, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(247, 37, 133, 0.3);">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                    <div style="background: var(--accent); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">🦠</div>
+                                    <h4 style="color: var(--accent); margin: 0;">COVID-19 MANAGEMENT (2020-22)</h4>
+                                </div>
+                                <p style="color: var(--text-secondary);">Audited PPE procurement, vaccine distribution, oxygen supply • Led to emergency healthcare reforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE 150 -->
+        <section class="section" id="article150">
+            <div class="section-header">
+                <h2 class="section-title">📒 ARTICLE 150: ACCOUNTING ARCHITECTURE</h2>
+                <p class="section-subtitle">Standardizing India's Financial Blueprint</p>
+            </div>
+
+            <div class="article-card">
+                <div class="article-header">
+                    <div class="article-number">
+                        150
+                        <span>Article</span>
+                    </div>
+                    <div class="article-title">Form of Accounts of the Union and of the States</div>
+                </div>
+                
+                <p class="article-description">
+                    Creates a constitutional partnership between the Executive (President) and the Auditor (CAG) to prescribe uniform accounting standards across all governments in India, ensuring transparency, comparability, and audit efficiency.
+                </p>
+
+                <div class="article-content">
+                    <div class="clause">
+                        <div class="clause-header">
+                            <div class="clause-number"> Essence</div>
+                            <div class="clause-title">Article 150</div>
+                        </div>
+                        <div class="clause-content">
+                            <p><strong>"The accounts of the Union and the States shall be maintained in a format prescribed by the President of India 
+<br> ‎ ‎ ‎President acts on the advice of the CAG"<br>"Union & State Govts
+Maintain accounts in that prescribed format"</strong></p>
+                            <p>‎ ‎ ‎ ‎ 🎯 <strong>Mandatory Consultation</strong>: President must act "on the advice of CAG"</p>
+                            <p>‎ ‎ ‎ ‎ 🏛️ <strong>Federal Uniformity</strong>: Same format for Union and all State accounts</p>
+                            <p>‎ ‎ ‎ ‎ 🔧 <strong>Technical Primacy</strong>: CAG's accounting expertise guides executive prescription</p>
+<p>‎ ‎ ‎ ‎ 🗒️ <strong>Form of Accounts</strong> : The structure and system of government accounting :-</p>
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎• Classification of receipts & expenditure <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎  ‎•  Major heads, minor heads, sub-heads <p>‎ ‎ ‎‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎• Standard financial statements format <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎‎ ‎ ‎ ‎• Recording of :- <br>‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎~ Revenue receipts <br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Capital receipts <br>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ ‎ ‎~ Revenue expenditure <br>‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎~ Capital expenditure</p>                      
+</div>
+                    </div>
+
+                    <!-- Accounting Evolution -->
+                    <div class="content-box">
+                        <h3 style="color: var(--primary); margin-bottom: 25px; text-align: center;">📊 EVOLUTION FROM CASH TO ACCRUAL ACCOUNTING</h3>
+                        <div class="mermaid">
+                            graph LR
+                                subgraph "TRADITIONAL SYSTEM 💵"
+                                    A[Cash Basis Accounting] --> B[When money received/paid]
+                                    B --> C[Departmental Silos]
+                                    C --> D[Process-Focused]
+                                end
+                                
+                                subgraph "MODERN SYSTEM 📈"
+                                    E[Accrual Basis Accounting] --> F[When revenue earned/liability incurred]
+                                    F --> G[Whole-of-Government View]
+                                    G --> H[Outcome-Focused]
+                                end
+                                
+                                A -- "Constitutional Evolution" --> E
+                                B -- "Driven by Article 150" --> F
+                                C -- "Standardization" --> G
+                                D -- "Performance Orientation" --> H
+                                
+                                style E fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                                style F fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- IGAS Framework -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-cogs"></i> INDIAN GOVERNMENT ACCOUNTING STANDARDS (IGAS)</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                            <div style="background: rgba(76, 201, 240, 0.1); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">LEVEL 1: CORE STANDARDS</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">12 fundamental accounting standards covering presentation, policies, assets, liabilities</p>
+                            </div>
+                            <div style="background: rgba(114, 9, 183, 0.1); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--secondary); margin-bottom: 10px;">LEVEL 2: SECTORAL ADAPTATIONS</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Modified standards for defense, railways, telecom, and other sectors</p>
+                            </div>
+                            <div style="background: rgba(247, 37, 133, 0.1); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">LEVEL 3: IMPLEMENTATION GUIDES</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">Practical manuals, templates, and software specifications</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Uniformity Matters -->
+                    <div class="content-box">
+                        <h3 style="color: var(--secondary); margin-bottom: 25px; text-align: center;">🎯 WHY UNIFORM ACCOUNTING MATTERS</h3>
+                        
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Benefit</th>
+                                    <th>Description</th>
+                                    <th>Practical Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Comparative Analysis</strong></td>
+                                    <td>Enables comparison across states and departments</td>
+                                    <td>Education spending in Kerala vs. Bihar analysis</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Consolidated Accounts</strong></td>
+                                    <td>Facilitates preparation of national public finance picture</td>
+                                    <td>Union + State deficits = Consolidated fiscal deficit</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fraud Prevention</strong></td>
+                                    <td>Prevents creative accounting and hidden liabilities</td>
+                                    <td>Off-budget borrowing detection</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Audit Efficiency</strong></td>
+                                    <td>Standardized formats reduce audit time and cost</td>
+                                    <td>Automated audit tools development</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Investor Confidence</strong></td>
+                                    <td>Transparent accounts build trust in government bonds</td>
+                                    <td>Sovereign credit rating improvements</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Historical Context -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-history"></i> HISTORICAL CONTEXT & CONSTITUENT ASSEMBLY DEBATES</div>
+                        <div style="margin-top: 15px; padding: 20px; background: rgba(26, 26, 36, 0.5); border-radius: var(--radius-md);">
+                            <p style="color: var(--text-secondary); line-height: 1.8;">
+                                <strong>Dr. B.R. Ambedkar during Constituent Assembly debates:</strong><br>
+                                <em>"Uniform accounts are not merely an accounting requirement; they are the foundation of accountable governance in a federal polity. Without uniform accounts, we cannot have comparable data, we cannot have fair distribution of resources, and we cannot have effective audit."</em>
+                            </p>
+                            <p style="margin-top: 15px; color: var(--text-muted);">
+                                The concept originated in <strong>Government of India Act, 1919</strong> and was strengthened in <strong>Government of India Act, 1935</strong>. The framers recognized that without uniform accounts, India's complex federal finance system would be unmanageable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE 151 -->
+        <section class="section" id="article151">
+            <div class="section-header">
+                <h2 class="section-title">📑 ARTICLE 151: ACCOUNTABILITY BRIDGE</h2>
+                <p class="section-subtitle">Transforming Audit Findings into Democratic Accountability</p>
+            </div>
+
+            <div class="article-card">
+                <div class="article-header">
+                    <div class="article-number">
+                        151
+                        <span>Article</span>
+                    </div>
+                    <div class="article-title">Audit Reports</div>
+                </div>
+                
+                <p class="article-description">
+                    Establishes the constitutional pathway for audit reports to reach legislatures, creating the essential bridge between technical audit findings and political accountability through parliamentary scrutiny.
+                </p>
+
+                <div class="article-content">
+                    <!-- Clause 151(1) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">151(1)</div>
+                                <div class="clause-title">Union Audit Reports</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"The reports of the Comptroller and Auditor-General of India relating to the accounts of the Union shall be submitted to the President, who shall cause them to be laid before each House of Parliament."</strong></p>
+                                <p>👑 <strong>Presidential Conduit</strong>: Reports go through President as constitutional head</p>
+                                <p>⚖️ <strong>Mandatory Laying</strong>: "Shall cause them to be laid" imposes duty, not discretion</p>
+                                <p>🏛️ <strong>Parliamentary Access</strong>: Both Houses (Lok Sabha & Rajya Sabha) receive reports</p>
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-user-tie"></i> Presidential Submission</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-landmark"></i> Parliamentary Laying</span>
+                                    <span class="tag tag-accent"><i class="fas fa-gavel"></i> Constitutional Duty</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 151(2) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">151(2)</div>
+                                <div class="clause-title">State Audit Reports</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"The reports of the Comptroller and Auditor-General of India relating to the accounts of a State shall be submitted to the Governor of the State, who shall cause them to be laid before the Legislature of the State."</strong></p>
+                                <p>🏛️ <strong>Federal Parallel</strong>: Similar process at state level</p>
+                                <p>👑 <strong>Gubernatorial Role</strong>: Governor acts as constitutional conduit for states</p>
+                                <p>⚖️ <strong>State Legislature</strong>: Reports go to Vidhan Sabha (and Vidhan Parishad where exists)</p>
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-flag"></i> State Governor</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-university"></i> State Legislature</span>
+                                    <span class="tag tag-accent"><i class="fas fa-balance-scale"></i> Federal Structure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reporting Pathway Diagram -->
+                    <div class="content-box">
+                        <h3 style="color: var(--primary); margin-bottom: 25px; text-align: center;">📤 AUDIT REPORTING PATHWAY</h3>
+                        <div class="mermaid">
+                            graph TD
+                                A["CAG AUDIT COMPLETED<br>🔍"] --> B{Report Type}
+                                B --> C["Union Government Report<br>🏛️"]
+                                B --> D["State Government Report<br>🏛️"]
+                                
+                                C --> E["Submitted to<br>PRESIDENT OF INDIA 👑"]
+                                D --> F["Submitted to<br>STATE GOVERNOR 👑"]
+                                
+                                E --> G["President 'causes to be laid'<br>before PARLIAMENT"]
+                                F --> H["Governor 'causes to be laid'<br>before STATE LEGISLATURE"]
+                                
+                                G --> I["PUBLIC ACCOUNTS COMMITTEE<br>22 MPs (15 LS + 7 RS)"]
+                                H --> J["STATE PAC<br>Proportionate members"]
+                                
+                                I --> K["Detailed Examination<br>Summon officials, Review evidence"]
+                                J --> K
+                                
+                                K --> L["PAC Recommendations<br>to Government for action"]
+                                L --> M["Government Action Taken Report<br>Submitted within 6 months"]
+                                M --> N["Follow-up Audit by CAG<br>Verification of implementation"]
+                                
+                                style A fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                                style I fill:#7209b7,color:#fff,stroke:#fff,stroke-width:2px
+                                style N fill:#f72585,color:#fff,stroke:#fff,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- Types of Reports -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-file-alt"></i> TYPES OF AUDIT REPORTS (Traditional Classification)</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 25px;">
+                            <div style="background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(76, 201, 240, 0.3);">
+                                <h4 style="color: var(--primary); margin-bottom: 15px;">1. FINANCE ACCOUNTS 📘</h4>
+                                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                                    <li><strong>Purpose:</strong> Complete financial position</li>
+                                    <li><strong>Content:</strong> Receipts, expenditure, assets, liabilities</li>
+                                    <li><strong>Frequency:</strong> Annual (after financial year end)</li>
+                                    <li><strong>Deadline:</strong> Within 12 months (CAG Act 1971)</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(114, 9, 183, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(114, 9, 183, 0.3);">
+                                <h4 style="color: var(--secondary); margin-bottom: 15px;">2. APPROPRIATION ACCOUNTS 📙</h4>
+                                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                                    <li><strong>Purpose:</strong> Grant vs Actual comparison</li>
+                                    <li><strong>Content:</strong> Excess, savings, irregularities</li>
+                                    <li><strong>Focus:</strong> Parliamentary control verification</li>
+                                    <li><strong>Impact:</strong> Excess requires regularization</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, rgba(247, 37, 133, 0.2), transparent); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(247, 37, 133, 0.3);">
+                                <h4 style="color: var(--accent); margin-bottom: 15px;">3. AUDIT REPORTS 📗</h4>
+                                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                                    <li><strong>Purpose:</strong> Compliance & performance issues</li>
+                                    <li><strong>Content:</strong> Audit paras, observations</li>
+                                    <li><strong>Frequency:</strong> Throughout the year</li>
+                                    <li><strong>Scope:</strong> Ministries, departments, PSUs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modern Enhancements -->
+                    <div class="content-box">
+                        <h3 style="color: var(--accent); margin-bottom: 25px; text-align: center;">🚀 MODERN ENHANCEMENTS & DIGITAL TRANSFORMATION</h3>
+                        
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Innovation</th>
+                                    <th>Description</th>
+                                    <th>Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Digital Accessibility</strong></td>
+                                    <td>All reports available on CAG website in real-time</td>
+                                    <td>24/7 public access, global reach</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Citizen-Friendly Summaries</strong></td>
+                                    <td>Simplified versions with infographics, regional languages</td>
+                                    <td>Democratizes audit knowledge</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Follow-up Tracking System</strong></td>
+                                    <td>Online monitoring of action on audit paras</td>
+                                    <td>Improves compliance rates</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Performance Audit Reports</strong></td>
+                                    <td>Thematic reports on major schemes/programs</td>
+                                    <td>Outcome-based evaluation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Social Media Engagement</strong></td>
+                                    <td>Twitter, YouTube summaries, interactive sessions</td>
+                                    <td>Public awareness & participation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Golden Triangle -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-democrat"></i> THE GOLDEN TRIANGLE OF DEMOCRATIC ACCOUNTABILITY</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 30px;">
+                            <div style="text-align: center; padding: 30px; border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(76, 201, 240, 0.15), transparent); border: 2px solid var(--primary);">
+                                <div style="font-size: 4rem; margin-bottom: 20px; color: var(--primary);">🔍</div>
+                                <h3 style="color: var(--primary); margin-bottom: 15px;">CAG</h3>
+                                <p style="color: var(--text-secondary);"><strong>The Investigator</strong><br>Independent constitutional auditor that finds irregularities and reports facts without fear or favor.</p>
+                            </div>
+                            
+                            <div style="text-align: center; padding: 30px; border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(114, 9, 183, 0.15), transparent); border: 2px solid var(--secondary);">
+                                <div style="font-size: 4rem; margin-bottom: 20px; color: var(--secondary);">🏛️</div>
+                                <h3 style="color: var(--secondary); margin-bottom: 15px;">PUBLIC ACCOUNTS COMMITTEE</h3>
+                                <p style="color: var(--text-secondary);"><strong>The Prosecutor</strong><br>Parliamentary committee (traditionally opposition-headed) that questions officials and makes recommendations.</p>
+                            </div>
+                            
+                            <div style="text-align: center; padding: 30px; border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(247, 37, 133, 0.15), transparent); border: 2px solid var(--accent);">
+                                <div style="font-size: 4rem; margin-bottom: 20px; color: var(--accent);">🏢</div>
+                                <h3 style="color: var(--accent); margin-bottom: 15px;">EXECUTIVE GOVERNMENT</h3>
+                                <p style="color: var(--text-secondary);"><strong>The Implementor</strong><br>Ministries and departments that implement PAC recommendations and improve systems based on audit findings.</p>
+                            </div>
+                        </div>
+                        
+                        <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-secondary); padding: 20px; background: rgba(26, 26, 36, 0.5); border-radius: var(--radius-md);">
+                            "When audit speaks, power listens. When legislature questions, executive answers. When public watches, democracy thrives."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTICLE 279 -->
+        <section class="section" id="article279">
+            <div class="section-header">
+                <h2 class="section-title">🧮 ARTICLE 279: FEDERAL FINANCE ARBITER</h2>
+                <p class="section-subtitle">CAG as Neutral Umpire in Centre-State Financial Relations</p>
+            </div>
+
+            <div class="article-card">
+                <div class="article-header">
+                    <div class="article-number">
+                        279
+                        <span>Article</span>
+                    </div>
+                    <div class="article-title">Calculation of "Net Proceeds", etc.</div>
+                </div>
+                
+                <p class="article-description">
+                    Makes CAG the final certifying authority for net proceeds of taxes shared between Centre and States, positioning it as a trusted neutral arbiter in India's complex fiscal federalism with quasi-judicial finality.
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ 📍 TAX COLLECTED 📍
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ 💰‎Collected tax−collection expenses = Net proceeds
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 🧾 CAG calculates & certifies Net Proceeds [279(1)]
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 👑 Parliamentary law + Presidential directions [279(2)]
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ ‎ ‎‎ ↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 💸 Fɪɴᴀʟ Tᴀx Sʜᴀʀɪɴɢ Bᴇᴛᴡᴇᴇɴ Cᴇɴᴛʀᴇ & Sᴛᴀᴛᴇꜱ 💸<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </p>
+                </p>
+
+                <div class="article-content">
+                    <!-- Clause 279(1) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">279(1)</div>
+                                <div class="clause-title">Definition & Certification Authority of Net Proceeds</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"'Net proceeds' means, in relation to any tax or duty, the proceeds thereof reduced by the cost of collection... shall be ascertained and certified by the Comptroller and Auditor-General of India, whose certificate shall be final."<p>‎ </p><br>"Clause (1) empowers the CAG to calculate and certify what constitutes net proceeds of a tax."
+
+<br>"This is for taxes that have to be distributed between Centre & States."
+
+<br>🔎Focus = "Calculation & Certification"</strong></p><p>‎ </p>
+                                <p>⚖️ <strong>Quasi-Judicial Finality</strong>: CAG's certificate cannot be challenged in court</p>
+                                <p>💰 <strong>Technical Ascertainment</strong>: Complex calculation of divisible tax pool</p>
+                                <p>🏛️ <strong>Federal Trust</strong>: Both Centre and States accept CAG's neutrality</p>
+<p> ‎ </p>
+<p><b>Role of CAG :</b> "CAG only calculates and certifies the net proceeds of a tax"
+<br>‎ ‎ ‎ ‎ ‎ ‎What CAG does :-
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Determines how much tax was collected 💰
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Subtracts cost of collection ➖
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Certifies the final “net proceeds” amount 📊
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎~ His certificate is final ⚖️</p>
+<p><b>🏦 CAG’s role = "Technical calculation, NOT distribution"</b></p>
+<p> ‎ </p>
+<p>📜 <b>Tax distribution is governed by</b> :-
+<br>‎ ‎ ‎ ‎ ‎ ‎<b>Article 270 :</b> Distribution of taxes between Union & States
+<br>‎ ‎ ‎ ‎ ‎ ‎<b>Finance Commission (Article 280) :</b> Recommends sharing formula
+<br>‎ ‎ ‎ ‎ ‎ <b>‎President + Parliament :</b> Give effect through law/orders</p>
+
+                                
+                                <div class="tag-container">
+                                    <span class="tag tag-primary"><i class="fas fa-certificate"></i> Final Certification</span>
+                                    <span class="tag tag-secondary"><i class="fas fa-balance-scale"></i> Federal Arbitration</span>
+                                    <span class="tag tag-accent"><i class="fas fa-calculator"></i> Net Proceeds Calculation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clause 279(2) -->
+                    <div class="clause-container">
+                        <div class="clause">
+                            <div class="clause-header">
+                                <div class="clause-number">279(2)</div>
+                                <div class="clause-title">Presidential Control/Authority over Settlement & Adjustment of Tax Proceeds (under law)</div>
+                            </div>
+                            <div class="clause-content">
+                                <p><strong>"Subject as aforesaid... a law made by Parliament or an order of the President may... provide for the manner in which the proceeds are to be calculated..."<p>‎ </p><br>"Clause (2) permits the President (under law) to seek info and direct how 'taxes' net proceeds are settled/classified."
+
+<br>"This is subject to law made by Parliament"
+<br> ‎ ‎Clause (2) gives power under Parliamentary law for :-</strong>
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Settlement of doubts or disputes
+<br> ‎ ‎ ‎ ‎ ‎ ‎ ‎~ Determining how proceeds are to be dealt with in special situations
+<br><strong>🔎Focus = "Presidential powers & Parliament’s law"</strong></p><p>‎ </p>
+                                <p>📜 <strong>Parliamentary Supplement</strong>: Allows law to prescribe calculation methods</p>
+                                <p>⚙️ <strong>Procedural Flexibility</strong>: Accommodates complex fiscal arrangements</p>
+                                <p>🔄 <strong>Year Adjustments</strong>: Allows corrections between financial years</p>
+<p> ‎ </p>
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎📍 TAX COLLECTED 📍
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎ 💰‎Collected tax−collection expenses = Net proceeds
+      <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ 🧾 CAG calculates & certifies Net Proceeds [279(1)]
+      <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎‎📜 Finance Commission recommends sharing (Art 280)
+      <p> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎ ‎‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎‎🏛️ Centre–State Distribution happens (Art 270)
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎  ‎👑 Parliamentary law + Presidential directions [279(2)]<br>‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ (Special settlement powers if needed)
+      <p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎  ‎  ‎ ‎‎↓
+<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎💸 Fɪɴᴀʟ Tᴀx Sʜᴀʀɪɴɢ Bᴇᴛᴡᴇᴇɴ Cᴇɴᴛʀᴇ & Sᴛᴀᴛᴇꜱ 💸<p>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </p>
+             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Net Proceeds Process Diagram -->
+                    <div class="content-box">
+                        <h3 style="color: var(--primary); margin-bottom: 25px; text-align: center;">💰 NET PROCEEDS CERTIFICATION PROCESS</h3>
+                        <div class="mermaid">
+                            graph TD
+                                A["GROSS TAX COLLECTION<br>From all sources nationwide"] --> B["MINUS (-)<br>COST OF COLLECTION<br>Administration, refunds, charges"]
+                                B --> C["NET PROCEEDS<br>Divisible Pool for States"]
+                                C --> D["CAG TECHNICAL VERIFICATION<br>Detailed examination & ascertainment"]
+                                D --> E["CAG CERTIFICATE ISSUED<br>'Certificate shall be final' ⚖️"]
+                                
+                                E --> F["FINANCE COMMISSION USES<br>For tax devolution formula"]
+                                E --> G["TAX DEVOLUTION TO STATES<br>As per Constitutional scheme"]
+                                E --> H["GRANTS-IN-AID DISTRIBUTION<br>Supplementary transfers"]
+                                
+                                I["Parliament/President"] --> J["May prescribe methodology<br>Through law/order"]
+                                J --> K["Adjustments between years<br>Technical corrections"]
+                                J --> L["Payment mechanisms<br>Timing & procedures"]
+                                
+                                F --> M["STATE GOVERNMENTS RECEIVE<br>Their constitutional share"]
+                                G --> M
+                                H --> M
+                                
+                                style D fill:#4cc9f0,color:#000,stroke:#fff,stroke-width:2px
+                                style E fill:#7209b7,color:#fff,stroke:#fff,stroke-width:3px
+                                style M fill:#f72585,color:#fff,stroke:#fff,stroke-width:2px
+                        </div>
+                    </div>
+
+                    <!-- Cost of Collection Analysis -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-calculator"></i> WHAT CONSTITUTES "COST OF COLLECTION"?</div>
+                        
+                        <table class="comparison-table" style="margin-top: 20px;">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Included ✅</th>
+                                    <th>Excluded ❌</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Administrative Costs</strong></td>
+                                    <td>Salaries of tax officials, office expenses, infrastructure, training</td>
+                                    <td>Policy making costs, ministry administrative expenses</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Refunds & Rebates</strong></td>
+                                    <td>All tax refunds paid, drawbacks, export incentives</td>
+                                    <td>Interest on delayed refunds, penalty waivers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Collection Charges</strong></td>
+                                    <td>Bank commission, agent fees, transaction costs</td>
+                                    <td>Capital expenditure on buildings, long-term assets</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Legal & Audit Costs</strong></td>
+                                    <td>Litigation expenses, recovery proceedings, verification audits</td>
+                                    <td>Constitutional amendment costs, law-making expenses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Practical Impact -->
+                    <div class="content-box">
+                        <h3 style="color: var(--secondary); margin-bottom: 25px; text-align: center;">📊 PRACTICAL IMPACT: BILLIONS AT STAKE</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px;">
+                            <div style="background: rgba(76, 201, 240, 0.1); padding: 25px; border-radius: var(--radius-md); text-align: center;">
+                                <h4 style="color: var(--primary); margin-bottom: 15px;">GST EXAMPLE (2022-23)</h4>
+                                <div style="font-size: 2rem; color: var(--primary); font-weight: bold; margin: 15px 0;">₹18.10 L Cr</div>
+                                <p style="color: var(--text-secondary);">Gross GST Collection</p>
+                                <div style="font-size: 1.5rem; color: var(--accent); margin: 10px 0;">~₹2,000 Cr</div>
+                                <p style="color: var(--text-secondary);">Cost of Collection (approx.)</p>
+                                <div style="font-size: 2rem; color: var(--success); font-weight: bold; margin: 15px 0;">₹18.08 L Cr</div>
+                                <p style="color: var(--text-secondary);">Net Proceeds Certified by CAG</p>
+                            </div>
+                            
+                            <div style="background: rgba(114, 9, 183, 0.1); padding: 25px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--secondary); margin-bottom: 20px;">STATE SHARE CALCULATION FACTORS</h4>
+                                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                                    <li><strong>Population (2011 Census)</strong> - 15% weight</li>
+                                    <li><strong>Income Distance</strong> - 45% weight</li>
+                                    <li><strong>Area</strong> - 15% weight</li>
+                                    <li><strong>Demographic Performance</strong> - 12.5% weight</li>
+                                    <li><strong>Tax Effort</strong> - 2.5% weight</li>
+                                    <li><strong>Forest & Ecology</strong> - 10% weight</li>
+                                </ul>
+                                <div style="margin-top: 20px; padding: 15px; background: rgba(247, 37, 133, 0.1); border-radius: var(--radius-sm);">
+                                    <strong>Key Impact:</strong> Every 1% variance in net proceeds = ~₹180 crore difference in state shares
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Federal Role Analysis -->
+                    <div class="insight-box">
+                        <div class="insight-title"><i class="fas fa-handshake"></i> WHY CAG AS FINAL ARBITER? FEDERAL TRUST MECHANISM</div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 25px;">
+                            <div style="background: rgba(76, 201, 240, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">🛡️ DISPUTE PREVENTION</h4>
+                                <p style="color: var(--text-secondary);">Final certificate prevents Centre-State litigation over revenue sharing, saving time, resources, and political capital.</p>
+                            </div>
+                            <div style="background: rgba(114, 9, 183, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--secondary); margin-bottom: 10px;">🤝 TRUSTED NEUTRALITY</h4>
+                                <p style="color: var(--text-secondary);">Both Centre and States accept CAG's impartiality due to constitutional independence and historical accuracy record.</p>
+                            </div>
+                            <div style="background: rgba(247, 37, 133, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">📜 TECHNICAL EXPERTISE</h4>
+                                <p style="color: var(--text-secondary);">CAG possesses unmatched accounting, audit, and data analysis capabilities that states individually lack.</p>
+                            </div>
+                            <div style="background: rgba(251, 191, 36, 0.15); padding: 20px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--gold); margin-bottom: 10px;">⚖️ FEDERAL BALANCE</h4>
+                                <p style="color: var(--text-secondary);">Union appointee auditing Union but certifying for States creates unique federal trust accepted by all parties.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Historical Evolution -->
+                    <div class="content-box">
+                        <h3 style="color: var(--accent); margin-bottom: 20px; text-align: center;">📜 HISTORICAL CONTINUITY & EVOLUTION</h3>
+                        <div style="padding: 25px; background: rgba(26, 26, 36, 0.7); border-radius: var(--radius-md); margin-top: 15px;">
+                            <p style="color: var(--text-secondary); line-height: 1.8;">
+                                <strong>Historical Roots:</strong> The concept of CAG certifying net proceeds dates to <strong>Government of India Act, 1935</strong>, which first established federal finance arrangements in British India. The framers of the Constitution retained this mechanism recognizing its effectiveness.
+                            </p>
+                            <p style="color: var(--text-secondary); margin-top: 15px; line-height: 1.8;">
+                                <strong>Post-Independence Evolution:</strong> With the establishment of <strong>Finance Commission</strong> under Article 280, Article 279's role became even more critical. The Finance Commission uses CAG-certified figures to determine state shares, creating a seamless constitutional mechanism for federal finance.
+                            </p>
+                            <p style="color: var(--text-secondary); margin-top: 15px; line-height: 1.8;">
+                                <strong>GST Era Significance:</strong> After GST implementation (2017), Article 279's importance multiplied as GST represents the largest divisible pool (approximately 50% of total tax revenue). CAG's certification now affects over ₹18 lakh crore annually.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">🏛️ CONSTITUTIONAL SENTINEL: CONCLUSION</h2>
+                <p class="section-subtitle">The Complete Accountability Architecture of Indian Democracy</p>
+            </div>
+
+            <div class="content-box">
+                <h3 style="color: var(--primary); margin-bottom: 30px; text-align: center;">⚡ THE INDEPENDENCE CHECKLIST: UNMATCHED CONSTITUTIONAL PROTECTIONS</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div style="background: rgba(76, 201, 240, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 10px;">📜</div>
+                        <strong>Constitutional Status</strong><br>
+                        <small>Article 148, not statutory</small>
+                    </div>
+                    <div style="background: rgba(114, 9, 183, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px;">⚖️</div>
+                        <strong>Secure Tenure</strong><br>
+                        <small>6 years or age 65</small>
+                    </div>
+                    <div style="background: rgba(247, 37, 133, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 10px;">💰</div>
+                        <strong>Financial Autonomy</strong><br>
+                        <small>Charged expenditure</small>
+                    </div>
+                    <div style="background: rgba(251, 191, 36, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--gold); margin-bottom: 10px;">🚫</div>
+                        <strong>Post-Retirement Ban</strong><br>
+                        <small>No government jobs</small>
+                    </div>
+                    <div style="background: rgba(76, 201, 240, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 10px;">🏢</div>
+                        <strong>Department Control</strong><br>
+                        <small>Audit staff autonomy</small>
+                    </div>
+                    <div style="background: rgba(114, 9, 183, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px;">🏛️</div>
+                        <strong>Parliament as Client</strong><br>
+                        <small>Not executive</small>
+                    </div>
+                    <div style="background: rgba(247, 37, 133, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 10px;">📤</div>
+                        <strong>Direct Reporting</strong><br>
+                        <small>To legislature</small>
+                    </div>
+                    <div style="background: rgba(251, 191, 36, 0.1); padding: 20px; border-radius: var(--radius-md); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--gold); margin-bottom: 10px;">⚖️</div>
+                        <strong>Final Authority</strong><br>
+                        <small>Article 279 certification</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Summary -->
+            <div class="insight-box">
+                <div class="insight-title"><i class="fas fa-crown"></i> THE ENDURING CONSTITUTIONAL LEGACY</div>
+                
+                <div style="text-align: center; padding: 40px; background: rgba(26, 26, 36, 0.5); border-radius: var(--radius-lg); margin-top: 20px;">
+                    <div style="font-size: 3.5rem; margin-bottom: 25px;">💎</div>
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 2.2rem;">THE COMPLETE ACCOUNTABILITY EQUATION</h3>
+                    
+                    <div style="font-size: 1.8rem; color: var(--text-secondary); margin: 30px 0; line-height: 1.5;">
+                        <strong>INDEPENDENCE (Article 148)</strong> + <br>
+                        <strong>MANDATE (Article 149)</strong> + <br>
+                        <strong>STANDARDS (Article 150)</strong> + <br>
+                        <strong>REPORTING (Article 151)</strong> + <br>
+                        <strong>FEDERAL ARBITRATION (Article 279)</strong>
+                    </div>
+                    
+                    <div style="font-size: 2.5rem; color: var(--accent); margin: 40px 0; font-weight: bold;">
+                        = COMPLETE DEMOCRATIC ACCOUNTABILITY
+                    </div>
+                    
+                    <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                        <b>The CAG stands as India's constitutional sentinel of fiscal prudence and public trust-a unique blend of auditor, advisor, and accountability agent in the world's largest democracy. For over seven decades, this institution has fearlessly guarded the public purse while evolving to meet new challenges of governance, technology, and federal complexity</b>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ambedkar's Vision -->
+            <div class="content-box">
+                <div style="text-align: center; padding: 40px;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🦁</div>
+                    <h3 style="color: var(--secondary); margin-bottom: 25px; font-size: 2rem;">DR. B.R. AMBEDKAR'S VISION REALIZED</h3>
+                    
+                    <div style="max-width: 900px; margin: 0 auto; padding: 30px; background: rgba(114, 9, 183, 0.1); border-radius: var(--radius-lg); border-left: 5px solid var(--secondary);">
+                        <p style="color: var(--text-primary); font-size: 1.4rem; font-style: italic; line-height: 1.8; margin-bottom: 20px;">
+                            "The Comptroller and Auditor-General is the most important officer in the Constitution of India. He is the one man who is going to see that the expenses voted by Parliament are not exceeded, or varied from what has been laid down by Parliament. Without him, the entire financial system of the country would collapse into chaos and corruption."
+                        </p>
+                        <p style="color: var(--text-secondary); font-size: 1.2rem;">
+                            ~ <strong>Dr. B.R. Ambedkar</strong>, Chief Architect of Indian Constitution<br>
+                            <small>Constituent Assembly Debates, 1949</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3 class="footer-title">COMPTROLLER & AUDITOR GENERAL OF INDIA</h3>
+            <div class="footer-text">
+                <p><strong><em><i>Constitutional Sentinel • Guardian of Public Treasury • Supreme Audit Institution</i></em></strong></p>
+                <p><b>Comprehensive Study Reference Covering Constitutional Articles 148-151 & 279</b></p>
+                <p style="margin-top: 30px; font-size: 1rem; color: var(--text-muted); line-height: 1.7;">
+                    <b>"In a democracy, the auditor is as important as the elected representative – <br>
+                    one spends, the other ensures it's spent well. Both serve the same master: The People of India."</b>
+                </p>
+                <p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);">
+                   <b>"India's supreme audit institution"  ‎ ‎  ‎   ‎︳"When audit speaks, power listens"</b>
+                </p>
+<p class="subtitle"><b><h1><em>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</em></h1></b></p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.init();
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+            
+            // Trigger animations for sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Enhanced hover effects
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-12px)';
+                this.style.boxShadow = '0 35px 60px -15px rgba(0, 0, 0, 0.7)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+        });
+
+        // Tag hover effects
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.05)';
+                this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.3)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Clause click effect
+        document.querySelectorAll('.clause').forEach(clause => {
+            clause.addEventListener('click', function() {
+                this.style.transform = 'translateX(10px)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 300);
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize section animations
+        window.addEventListener('load', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200 + 1000);
+            });
+        });
+
+        // Main title animation
+        const mainTitle = document.querySelector('.main-title');
+        setTimeout(() => {
+            mainTitle.style.animation = 'titleReveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards';
+        }, 500);
+
+        // Floating elements animation
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 2}s`;
+        });
+    </script>
+</body>
+</html>
