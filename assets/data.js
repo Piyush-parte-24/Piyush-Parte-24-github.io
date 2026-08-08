@@ -159,7 +159,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "Presidents & Prime Ministers of India.html",
-    icon: "🏛️",
+    icon: "🏛",
     image: "",
     featured: true
   },
@@ -187,12 +187,24 @@ const archiveEntries = [
     icon: "🛂",
     image: "",
     featured: true
-  }
+  },
+  {
+    number: "13",
+    title: "THE PARLIAMENT OF INDIA",
+    category: "Political Science",
+    description: "Where a billion voices become one deliberating chamber — the institutional heartbeat of Indian democracy",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Parliament.html",
+    icon: "🏛️",
+    image: "",
+    featured: true
+  } 
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "13",
+    number: "14",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
