@@ -51,7 +51,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "modern-indian-history.html",
-    icon: "\u{1F1EE}\u{1F1F3}",
+    icon: "🛞",
     image: "",
     featured: true
   },
