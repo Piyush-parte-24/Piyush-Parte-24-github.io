@@ -244,7 +244,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "THE SUPREME COURT OF INDIA.html",
-    icon: "👨🏻‍⚖️",
+    icon: "🎓",
     image: "",
     featured: true
   }
