@@ -223,12 +223,36 @@ const archiveEntries = [
     icon: "🗳️",
     image: "",
     featured: true
-  } 
+  },
+  {
+    number: "16",
+    title: "THE UNION EXECUTIVE",
+    category: "Political Science",
+    description: "President  •  Vice-President  •  Prime Minister  •  Council of Ministers  •  Attorney General",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "THE UNION EXECUTIVE — President, PM & Union Government.html",
+    icon: "🔰",
+    image: "",
+    featured: true
+  },
+  {
+    number: "17",
+    title: "THE SUPREME COURT OF INDIA",
+    category: "Political Science",
+    description: "The Sentinel on the Qui Vive — Guardian of the Constitution · Final Interpreter of the Law · Protector of Fundamental Rights",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "THE SUPREME COURT OF INDIA.html",
+    icon: "👨🏻‍⚖️",
+    image: "",
+    featured: true
+  }
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "16",
+    number: "18",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
