@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE UNION EXECUTIVE — President, PM &amp; Union Government | Arts 52–78</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Marcellus&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   ⚙️  CORE TOKENS
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  --ink:#e9eef8;                 /* soft primary text */
+  --ink-2:#b8c4dc;               /* secondary text   */
+  --ink-3:#8a97b4;               /* muted text       */
+  --glass:rgba(14,20,38,.55);
+  --glass-2:rgba(20,28,52,.66);
+  --stroke:rgba(160,190,255,.14);
+  --saffron:#ff9d3c;
+  --gold:#ffd479;
+  --green:#3fd6a4;
+  --teal:#4fd2e6;
+  --rose:#ff7a9c;
+  --violet:#b493ff;
+  --sky:#7db8ff;
+  --amber:#ffc46b;
+  --crimson:#ff6b6b;
+  --acc:var(--saffron);
+  --acc2:var(--gold);
+  --r:20px;
+  --shadow:0 24px 70px -28px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  font-family:'Outfit',system-ui,sans-serif;
+  color:var(--ink);
+  background:#05070f;
+  line-height:1.72;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:.2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   🎬  SUPER-CINEMATIC BACKGROUND STACK  (6 layers)
+   ═══════════════════════════════════════════════════════════════ */
+/* L1 — deep space gradient */
+.bg-base{position:fixed;inset:0;z-index:-9;
+  background:
+    radial-gradient(1400px 900px at 12% -10%, #1b2547 0%, transparent 60%),
+    radial-gradient(1200px 800px at 92% 8%,  #2a1a34 0%, transparent 62%),
+    radial-gradient(1300px 1000px at 50% 115%, #0d2a2c 0%, transparent 60%),
+    linear-gradient(175deg,#060916 0%,#080c1c 40%,#050810 100%);
+}
+/* L2 — tricolour aurora ribbons */
+.bg-aurora{position:fixed;inset:-25%;z-index:-8;filter:blur(90px);opacity:.55;pointer-events:none}
+.bg-aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:drift 34s ease-in-out infinite}
+.bg-aurora span:nth-child(1){width:52vw;height:52vw;left:-8%;top:2%;background:radial-gradient(circle,#ff8a2a99,transparent 66%);animation-duration:31s}
+.bg-aurora span:nth-child(2){width:46vw;height:46vw;right:-6%;top:14%;background:radial-gradient(circle,#3ad6a099,transparent 66%);animation-duration:39s;animation-delay:-6s}
+.bg-aurora span:nth-child(3){width:60vw;height:60vw;left:22%;bottom:-18%;background:radial-gradient(circle,#4f7dff88,transparent 68%);animation-duration:45s;animation-delay:-14s}
+.bg-aurora span:nth-child(4){width:34vw;height:34vw;right:20%;bottom:6%;background:radial-gradient(circle,#c86bff77,transparent 66%);animation-duration:36s;animation-delay:-20s}
+@keyframes drift{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  33%{transform:translate3d(6vw,-5vh,0) scale(1.18)}
+  66%{transform:translate3d(-5vw,6vh,0) scale(.9)}
+}
+/* L3 — rotating Ashoka-chakra watermark */
+.bg-chakra{position:fixed;z-index:-7;left:50%;top:46%;width:150vmin;height:150vmin;
+  transform:translate(-50%,-50%);opacity:.05;pointer-events:none;
+  animation:spin 220s linear infinite;
+  background:
+    conic-gradient(from 0deg, transparent 0 1.2deg, #cfe0ff 1.2deg 1.9deg, transparent 1.9deg 15deg);
+  -webkit-mask:radial-gradient(circle, transparent 0 16%, #000 17% 49%, transparent 50%);
+          mask:radial-gradient(circle, transparent 0 16%, #000 17% 49%, transparent 50%);
+}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+/* L4 — starfield / dust motes */
+.bg-stars{position:fixed;inset:0;z-index:-6;pointer-events:none;opacity:.6;
+  background-image:
+    radial-gradient(1.4px 1.4px at 18% 22%, #ffffffcc, transparent),
+    radial-gradient(1.2px 1.2px at 74% 12%, #cfe4ffaa, transparent),
+    radial-gradient(1.6px 1.6px at 42% 68%, #ffe6c2aa, transparent),
+    radial-gradient(1.1px 1.1px at 88% 54%, #bfffe6aa, transparent),
+    radial-gradient(1.3px 1.3px at 8% 78%,  #d8ccffaa, transparent),
+    radial-gradient(1.1px 1.1px at 62% 88%, #ffffff99, transparent),
+    radial-gradient(1.5px 1.5px at 30% 40%, #ffd9a6aa, transparent);
+  animation:twinkle 7s ease-in-out infinite alternate;
+}
+@keyframes twinkle{from{opacity:.30}to{opacity:.75}}
+/* L5 — anamorphic light sweep (film lens flare) */
+.bg-sweep{position:fixed;inset:0;z-index:-5;pointer-events:none;overflow:hidden}
+.bg-sweep::before{content:"";position:absolute;top:-60%;left:-40%;width:60%;height:220%;
+  background:linear-gradient(90deg,transparent,rgba(160,200,255,.09),rgba(255,205,140,.05),transparent);
+  transform:rotate(16deg);filter:blur(28px);animation:sweep 17s ease-in-out infinite}
+@keyframes sweep{0%{left:-45%;opacity:0}12%{opacity:1}55%{left:105%;opacity:.7}100%{left:130%;opacity:0}}
+/* L6 — 35 mm grain + scanlines + vignette */
+.bg-grain{position:fixed;inset:-200px;z-index:-4;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/></filter><rect width='260' height='260' filter='url(%23n)' opacity='0.55'/></svg>");
+  animation:grain .7s steps(3) infinite}
+@keyframes grain{0%{transform:translate(0,0)}33%{transform:translate(-14px,9px)}66%{transform:translate(11px,-12px)}100%{transform:translate(0,0)}}
+.bg-vig{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse at 50% 40%, transparent 42%, rgba(0,0,0,.62) 100%);
+  opacity:.85}
+
+/* ═══════════════════════════════════════════════════════════════
+   📊  SCROLL PROGRESS  (tricolour)
+   ═══════════════════════════════════════════════════════════════ */
+#prog{position:fixed;top:0;left:0;height:4px;width:0;z-index:999;
+  background:linear-gradient(90deg,#ff9933,#ffffff,#138808);
+  box-shadow:0 0 22px #ff9933aa,0 0 42px #13880877}
+
+/* ═══════════════════════════════════════════════════════════════
+   🧭  NAV RAIL
+   ═══════════════════════════════════════════════════════════════ */
+nav.rail{position:sticky;top:0;z-index:900;backdrop-filter:blur(18px) saturate(150%);
+  background:linear-gradient(180deg,rgba(6,10,22,.92),rgba(6,10,22,.55));
+  border-bottom:1px solid var(--stroke);padding:10px 14px}
+.rail-in{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;max-width:1400px;margin:0 auto}
+.rail-in::-webkit-scrollbar{display:none}
+.rail-in a{white-space:nowrap;text-decoration:none;color:var(--ink-2);font-size:.79rem;font-weight:600;
+  padding:7px 14px;border:1px solid var(--stroke);border-radius:999px;background:rgba(255,255,255,.03);
+  transition:.35s cubic-bezier(.2,.9,.3,1);position:relative;overflow:hidden}
+.rail-in a::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.22),transparent);
+  transform:translateX(-120%);transition:.6s}
+.rail-in a:hover{color:#fff;border-color:var(--saffron);background:rgba(255,157,60,.14);
+  transform:translateY(-3px);box-shadow:0 10px 26px -12px var(--saffron)}
+.rail-in a:hover::after{transform:translateX(120%)}
+.rail-in a.active{color:#fff;border-color:var(--saffron)}
+
+/* ═══════════════════════════════════════════════════════════════
+   👑  HERO  — the title intro with hover magic
+   ═══════════════════════════════════════════════════════════════ */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;perspective:1400px}
+.hero-plate{max-width:1080px;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.9,.3,1)}
+.hero:hover .hero-plate{transform:rotateX(4deg) scale(1.012)}
+.emblem{font-size:clamp(3rem,8vw,5.4rem);display:inline-block;filter:drop-shadow(0 0 34px #ff9d3caa);
+  animation:float 6s ease-in-out infinite;cursor:pointer;transition:.6s}
+.emblem:hover{transform:rotate(360deg) scale(1.25);filter:drop-shadow(0 0 60px #ffd479)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+.kicker{font-family:'Marcellus',serif;letter-spacing:.55em;text-transform:uppercase;
+  font-size:clamp(.6rem,1.5vw,.86rem);color:var(--gold);margin:16px 0 6px;opacity:.9}
+h1.mega{
+  font-family:'Cinzel',serif;font-weight:900;line-height:1.02;
+  font-size:clamp(2.3rem,8.4vw,6.4rem);letter-spacing:-1px;margin:8px 0 4px;
+  background:linear-gradient(100deg,#ff9933 0%,#ffd479 18%,#ffffff 38%,#bfe8ff 55%,#ffffff 66%,#7de3b8 84%,#138808 100%);
+  background-size:340% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 11s linear infinite;
+  filter:drop-shadow(0 6px 40px rgba(255,153,51,.30));
+  transition:.6s cubic-bezier(.2,.9,.3,1);cursor:default;position:relative}
+@keyframes shimmer{to{background-position:340% 0}}
+h1.mega:hover{letter-spacing:2px;filter:drop-shadow(0 10px 62px rgba(255,212,121,.65)) drop-shadow(0 0 20px rgba(63,214,164,.35));transform:translateZ(60px) scale(1.02)}
+h1.mega::before{content:attr(data-t);position:absolute;inset:0;color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.16);opacity:0;transition:.6s;transform:translate(4px,4px)}
+h1.mega:hover::before{opacity:1;transform:translate(10px,10px)}
+.sub{font-family:'Marcellus',serif;color:var(--ink-2);font-size:clamp(.85rem,2.2vw,1.22rem);margin-top:12px}
+.tri-rule{height:3px;width:min(560px,86vw);margin:26px auto;border-radius:9px;
+  background:linear-gradient(90deg,transparent,#ff9933,#fff,#138808,transparent);
+  box-shadow:0 0 26px #ff993388;animation:pulseRule 4.5s ease-in-out infinite}
+@keyframes pulseRule{0%,100%{opacity:.6;width:min(420px,72vw)}50%{opacity:1;width:min(620px,90vw)}}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.hstat{background:var(--glass);border:1px solid var(--stroke);border-radius:16px;padding:12px 20px;
+  backdrop-filter:blur(14px);transition:.4s;min-width:132px}
+.hstat:hover{transform:translateY(-8px) scale(1.05);border-color:var(--gold);box-shadow:0 20px 46px -20px var(--gold)}
+.hstat b{display:block;font-size:1.5rem;font-family:'Cinzel',serif;
+  background:linear-gradient(90deg,var(--gold),var(--saffron));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hstat span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.scroll-cue{margin-top:44px;font-size:.72rem;letter-spacing:.3em;color:var(--ink-3);text-transform:uppercase}
+.scroll-cue i{display:block;font-style:normal;font-size:1.4rem;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(10px);opacity:1}}
+
+/* ═══════════════════════════════════════════════════════════════
+   📦  LAYOUT & SECTIONS
+   ═══════════════════════════════════════════════════════════════ */
+.wrap{max-width:1280px;margin:0 auto;padding:0 18px 120px}
+section.sec{margin:76px 0;position:relative}
+.sec-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.sec-num{font-family:'Cinzel',serif;font-size:clamp(2.4rem,7vw,4.4rem);font-weight:900;line-height:.85;
+  color:transparent;-webkit-text-stroke:1.6px var(--acc);opacity:.42;transition:.5s}
+.sec:hover .sec-num{opacity:1;-webkit-text-stroke-color:var(--acc2);transform:translateX(6px)}
+h2.sec-t{font-family:'Cinzel',serif;font-size:clamp(1.25rem,3.6vw,2.3rem);font-weight:800;
+  background:linear-gradient(92deg,var(--acc),var(--acc2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 18px rgba(0,0,0,.6))}
+.sec-line{height:2px;flex:1;min-width:60px;background:linear-gradient(90deg,var(--acc),transparent);border-radius:4px}
+h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(1.02rem,2.5vw,1.36rem);margin:30px 0 12px;
+  color:var(--acc2);display:flex;align-items:center;gap:10px}
+h3::before{content:"";width:6px;height:26px;border-radius:4px;background:linear-gradient(180deg,var(--acc),transparent);box-shadow:0 0 16px var(--acc)}
+h4{font-size:1rem;font-weight:700;color:var(--ink);margin:20px 0 8px}
+p{color:var(--ink-2);margin:10px 0}
+strong{color:var(--ink);font-weight:700}
+em{color:var(--gold);font-style:italic}
+a{color:var(--teal)}
+
+/* GLASS CARD */
+.card{background:var(--glass);border:1px solid var(--stroke);border-radius:var(--r);
+  padding:22px 24px;backdrop-filter:blur(16px) saturate(140%);box-shadow:var(--shadow);
+  position:relative;overflow:hidden;transition:.45s cubic-bezier(.2,.9,.3,1);margin:16px 0}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--acc),transparent);opacity:.85}
+.card::after{content:"";position:absolute;inset:0;opacity:0;transition:.5s;pointer-events:none;
+  background:radial-gradient(600px circle at var(--mx,50%) var(--my,0%), rgba(255,255,255,.07), transparent 42%)}
+.card:hover{transform:translateY(-6px);border-color:var(--acc);
+  box-shadow:0 34px 80px -34px var(--acc),0 0 0 1px rgba(255,255,255,.05) inset}
+.card:hover::after{opacity:1}
+
+/* grids */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(236px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(186px,1fr))}
+
+/* CALLOUTS */
+.box{border-radius:16px;padding:16px 20px;margin:16px 0;border:1px solid;backdrop-filter:blur(12px);
+  transition:.4s;position:relative}
+.box:hover{transform:translateX(7px)}
+.mnemo{border-color:rgba(255,196,107,.42);background:linear-gradient(100deg,rgba(255,196,107,.13),rgba(255,157,60,.05))}
+.mnemo b{color:var(--amber)}
+.insight{border-color:rgba(79,210,230,.38);background:linear-gradient(100deg,rgba(79,210,230,.11),rgba(79,210,230,.03))}
+.insight b{color:var(--teal)}
+.warn{border-color:rgba(255,107,107,.42);background:linear-gradient(100deg,rgba(255,107,107,.12),rgba(255,107,107,.03))}
+.warn b{color:var(--crimson)}
+.case{border-color:rgba(180,147,255,.4);background:linear-gradient(100deg,rgba(180,147,255,.12),rgba(180,147,255,.03))}
+.case b{color:var(--violet)}
+.good{border-color:rgba(63,214,164,.4);background:linear-gradient(100deg,rgba(63,214,164,.12),rgba(63,214,164,.03))}
+.good b{color:var(--green)}
+.quote{border-left:4px solid var(--gold);background:rgba(255,212,121,.07);padding:16px 22px;border-radius:0 16px 16px 0;
+  font-family:'Marcellus',serif;font-size:1.03rem;color:#f2e9d8;margin:18px 0;transition:.4s}
+.quote:hover{background:rgba(255,212,121,.13);transform:translateX(9px);box-shadow:-6px 0 40px -14px var(--gold)}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{font-size:.75rem;font-weight:600;padding:5px 13px;border-radius:999px;
+  border:1px solid var(--stroke);background:rgba(255,255,255,.045);color:var(--ink-2);transition:.32s;cursor:default}
+.chip:hover{transform:translateY(-4px) scale(1.07);color:#fff;border-color:var(--acc);
+  background:rgba(255,255,255,.11);box-shadow:0 10px 24px -12px var(--acc)}
+.art{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:600;
+  padding:2px 9px;border-radius:7px;background:linear-gradient(92deg,rgba(255,157,60,.22),rgba(255,212,121,.10));
+  border:1px solid rgba(255,157,60,.36);color:var(--gold);white-space:nowrap;transition:.3s}
+.art:hover{background:var(--saffron);color:#12060a;box-shadow:0 0 20px var(--saffron)}
+
+/* TABLES */
+.tw{overflow-x:auto;border-radius:18px;border:1px solid var(--stroke);margin:18px 0;
+  background:var(--glass);backdrop-filter:blur(14px);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+thead th{background:linear-gradient(100deg,rgba(255,157,60,.20),rgba(20,28,52,.7));
+  color:var(--gold);font-family:'Outfit';font-weight:700;text-align:left;padding:13px 16px;
+  letter-spacing:.05em;text-transform:uppercase;font-size:.73rem;position:sticky;top:0;backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--stroke)}
+tbody td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.055);color:var(--ink-2);vertical-align:top}
+tbody tr{transition:.28s}
+tbody tr:hover{background:linear-gradient(90deg,rgba(255,157,60,.12),transparent)}
+tbody tr:hover td{color:var(--ink)}
+tbody tr:last-child td{border-bottom:none}
+td.c,th.c{text-align:center}
+
+/* ASCII / FLOW DIAGRAM */
+pre.flow{font-family:'JetBrains Mono',monospace;font-size:.735rem;line-height:1.52;
+  background:linear-gradient(160deg,rgba(6,12,26,.92),rgba(10,18,36,.86));
+  border:1px solid var(--stroke);border-radius:18px;padding:20px;overflow-x:auto;color:#c9d8f5;
+  box-shadow:inset 0 0 90px rgba(0,0,0,.6),var(--shadow);margin:18px 0;transition:.45s;position:relative}
+pre.flow:hover{border-color:var(--acc);color:#e7f0ff;box-shadow:inset 0 0 90px rgba(0,0,0,.6),0 30px 70px -30px var(--acc)}
+pre.flow::selection,pre.flow *::selection{background:var(--saffron);color:#0b0b12}
+
+/* HTML FLOW NODES */
+.fchain{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:18px 0}
+.fnode{flex:1 1 168px;background:var(--glass-2);border:1px solid var(--stroke);border-radius:16px;padding:14px;
+  text-align:center;transition:.42s;position:relative}
+.fnode:hover{transform:translateY(-8px) scale(1.04);border-color:var(--acc);background:rgba(255,157,60,.1);
+  box-shadow:0 22px 50px -24px var(--acc)}
+.fnode .fi{font-size:1.7rem;display:block;margin-bottom:6px}
+.fnode .ft{font-weight:700;font-size:.88rem;color:var(--ink)}
+.fnode .fd{font-size:.76rem;color:var(--ink-3);margin-top:4px}
+.arrowr{align-self:center;color:var(--acc);font-size:1.3rem;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateX(0);opacity:.5}50%{transform:translateX(6px);opacity:1}}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:34px;margin:22px 0}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--acc),var(--acc2),transparent)}
+.tl-i{position:relative;margin-bottom:20px;transition:.4s}
+.tl-i::before{content:"";position:absolute;left:-29px;top:8px;width:13px;height:13px;border-radius:50%;
+  background:var(--acc);box-shadow:0 0 0 4px rgba(255,157,60,.16),0 0 18px var(--acc);transition:.4s}
+.tl-i:hover{transform:translateX(8px)}
+.tl-i:hover::before{background:#fff;box-shadow:0 0 0 7px rgba(255,212,121,.22),0 0 26px var(--gold)}
+.tl-y{font-family:'Cinzel',serif;font-weight:800;color:var(--gold);font-size:.95rem}
+
+/* VS COMPARISON */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch;margin:18px 0}
+.vs .pane{background:var(--glass);border:1px solid var(--stroke);border-radius:18px;padding:18px;transition:.42s}
+.vs .pane:first-child:hover{border-color:var(--saffron);box-shadow:0 24px 54px -28px var(--saffron);transform:translateY(-5px)}
+.vs .pane:last-child:hover{border-color:var(--teal);box-shadow:0 24px 54px -28px var(--teal);transform:translateY(-5px)}
+.vs .mid{display:grid;place-items:center;font-family:'Cinzel',serif;font-weight:900;color:var(--crimson);
+  font-size:1.3rem;text-shadow:0 0 22px var(--crimson);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.2);opacity:1}}
+@media(max-width:760px){.vs{grid-template-columns:1fr}.vs .mid{padding:6px 0}}
+
+/* LISTS */
+ul.tick,ol.tick{list-style:none;margin:12px 0 12px 4px}
+ul.tick li,ol.tick li{position:relative;padding-left:30px;margin:9px 0;color:var(--ink-2);transition:.3s}
+ul.tick li::before{content:"◈";position:absolute;left:4px;color:var(--acc);transition:.3s}
+ol.tick{counter-reset:n}
+ol.tick li::before{counter-increment:n;content:counter(n);position:absolute;left:0;top:3px;width:21px;height:21px;
+  font-size:.68rem;font-weight:800;display:grid;place-items:center;border-radius:7px;
+  background:linear-gradient(135deg,var(--acc),var(--acc2));color:#10060c}
+ul.tick li:hover,ol.tick li:hover{color:var(--ink);transform:translateX(6px)}
+ul.tick li:hover::before{color:var(--gold);transform:scale(1.35)}
+
+/* KEY-VALUE STAT TILE */
+.tile{background:var(--glass);border:1px solid var(--stroke);border-radius:16px;padding:16px;text-align:center;transition:.42s}
+.tile:hover{transform:translateY(-7px) rotate(-.6deg);border-color:var(--acc);box-shadow:0 24px 54px -26px var(--acc)}
+.tile .e{font-size:1.9rem;display:block}
+.tile .v{font-family:'Cinzel',serif;font-size:1.22rem;font-weight:800;color:var(--gold);margin-top:4px}
+.tile .l{font-size:.74rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.1em}
+
+/* MNEMONIC BANNER */
+.mban{font-family:'JetBrains Mono',monospace;text-align:center;font-weight:600;letter-spacing:.14em;
+  font-size:clamp(.9rem,2.4vw,1.35rem);padding:16px;border-radius:16px;margin:16px 0;
+  background:linear-gradient(100deg,rgba(255,157,60,.16),rgba(180,147,255,.14),rgba(63,214,164,.14));
+  border:1px dashed rgba(255,212,121,.42);color:var(--gold);transition:.45s;cursor:default}
+.mban:hover{letter-spacing:.3em;color:#fff;border-color:#fff;box-shadow:0 0 46px -8px var(--gold);transform:scale(1.02)}
+
+/* ACCORDION */
+details.acc{background:var(--glass);border:1px solid var(--stroke);border-radius:16px;margin:12px 0;overflow:hidden;transition:.4s}
+details.acc[open]{border-color:var(--acc);box-shadow:0 22px 52px -30px var(--acc)}
+details.acc summary{cursor:pointer;padding:14px 18px;font-weight:700;color:var(--ink);list-style:none;
+  display:flex;align-items:center;gap:10px;transition:.3s}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"▾";margin-left:auto;color:var(--acc);transition:.35s}
+details.acc[open] summary::after{transform:rotate(180deg)}
+details.acc summary:hover{background:rgba(255,157,60,.10);padding-left:24px}
+details.acc .body{padding:4px 18px 18px}
+
+/* REVEAL ANIM — only hidden when JS is available to un-hide it */
+.js .rv{opacity:0;transform:translateY(38px);transition:.85s cubic-bezier(.16,1,.3,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* BACK TO TOP */
+#top{position:fixed;right:20px;bottom:22px;z-index:950;width:50px;height:50px;border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;font-size:1.15rem;opacity:0;pointer-events:none;
+  background:linear-gradient(135deg,#ff9933,#138808);color:#fff;border:1px solid rgba(255,255,255,.24);
+  box-shadow:0 14px 40px -12px #ff9933;transition:.45s}
+#top.on{opacity:1;pointer-events:auto}
+#top:hover{transform:translateY(-7px) rotate(360deg) scale(1.1);box-shadow:0 20px 54px -12px #ffd479}
+
+/* FOOTER */
+footer{text-align:center;padding:60px 20px 90px;border-top:1px solid var(--stroke);margin-top:60px}
+footer .fq{font-family:'Marcellus',serif;font-size:clamp(1rem,2.6vw,1.35rem);color:var(--gold);max-width:900px;margin:0 auto 18px;line-height:1.7}
+footer small{color:var(--ink-3);font-size:.78rem}
+
+/* selection */
+::selection{background:var(--saffron);color:#0b0b12}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#080c18}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#ff9933,#138808);border-radius:9px;border:2px solid #080c18}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .js .rv{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-base"></div>
+<div class="bg-aurora"><span></span><span></span><span></span><span></span></div>
+<div class="bg-chakra"></div>
+<div class="bg-stars"></div>
+<div class="bg-sweep"></div>
+<div class="bg-grain"></div>
+<div class="bg-vig"></div>
+<div id="prog"></div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <div class="hero-plate">
+    <span class="emblem">🗺</span>
+    <div class="kicker">Part V · Chapter I · Constitution of India</div>
+    <h1 class="mega" data-t="THE UNION EXECUTIVE">THE UNION EXECUTIVE</h1>
+    <div class="tri-rule"></div>
+ <div class="hstat"><h2><b><i>AUTEUR:  PIYUSH  PARTE</i></b></h2></div>
+    <p class="sub">👑 President &nbsp;•&nbsp; 🎖️ Vice-President &nbsp;•&nbsp; 🧑‍💼 Prime Minister &nbsp;•&nbsp; 🏛️ Council of Ministers &nbsp;•&nbsp; ⚖️ Attorney General</p>
+    <p class="sub" style="font-size:.95rem;color:var(--ink-3)">Articles 52 – 78 &nbsp;(+ allied Articles 79, 80, 103, 108, 111, 123, 143, 263, 280, 324, 352–360, 361)</p>
+    <div class="hero-stats">
+      <div class="hstat"><b>27</b><span>Core Articles</span></div>
+      <div class="hstat"><b>05</b><span>Organs · P V P C A</span></div>
+      <div class="hstat"><b>15th</b><span>President 👑</span></div>
+      <div class="hstat"><b>15%</b><span>Ministry Cap ⚖️</span></div>
+      <div class="hstat"><b>7½ m</b><span>Ordinance Life 📜</span></div>
+    </div>
+    <div class="scroll-cue">Scroll to begin the journey<i>▼</i></div>
+  </div>
+</header>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="rail">
+  <div class="rail-in">
+    <a href="#map">🗺️ Master Map</a>
+    <a href="#pres">👑 President</a>
+    <a href="#elect">🗳️ Election</a>
+    <a href="#impeach">⚖️ Impeachment</a>
+    <a href="#powers">🎛️ Powers</a>
+    <a href="#pardon">🕊️ Art 72</a>
+    <a href="#veto">✍️ Vetoes</a>
+    <a href="#ord">📜 Ordinance</a>
+    <a href="#immun">🛡️ Art 361</a>
+    <a href="#emerg">🚨 Emergency</a>
+    <a href="#debate">🧠 Rubber Stamp?</a>
+    <a href="#vp">🎖️ Vice-President</a>
+    <a href="#pm">🧑‍💼 Prime Minister</a>
+    <a href="#com">🏛️ Council of Ministers</a>
+    <a href="#ag">⚖️ Attorney General</a>
+    <a href="#conv">🧾 Conventions</a>
+    <a href="#law">🔄 Law-Making</a>
+    <a href="#facts">📊 Fact Sheet</a>
+    <a href="#curr">⚡ Current Issues</a>
+    <a href="#mnemo">🎯 Mnemonics</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ═══════════ MASTER MAP ═══════════ -->
+<section class="sec rv" id="map" style="--acc:#ff9d3c;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">00</span><h2 class="sec-t">🗺️ Master Mind Map — The Big Picture</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+                        ╔═══════════════════════════════════╗
+                        ║   THE UNION EXECUTIVE (Part V)    ║
+                        ║       Articles 52 – 78            ║
+                        ╚═══════════════╤═══════════════════╝
+                                        │
+        ┌───────────────┬───────────────┼───────────────┬──────────────────┐
+        │               │               │               │                  │
+   👑 PRESIDENT    🎖️ VICE-PRES    🧑‍💼 PRIME MIN.   🏛️ COUNCIL OF    ⚖️ ATTORNEY
+   (Art 52–62,      (Art 63–71)      (Art 75, 78)      MINISTERS        GENERAL
+    72–73)                                            (Art 74, 75, 77)   (Art 76, 88)
+        │               │               │               │                  │
+   Nominal /       Ex-officio       REAL Executive   Collectively      Highest Law
+   Constitutional  Chairman, RS     Head; "Keystone  responsible to    Officer of
+   Head of State   + Acting Pres.   of Cabinet arch"  LOK SABHA        the Union
+</pre>
+
+  <div class="mban">🔑 P&nbsp;V&nbsp;P&nbsp;C&nbsp;A → “Please Visit Parliament, Come Along!”</div>
+  <div class="box mnemo"><b>🧠 The 5 components:</b> <b>P</b>resident • <b>V</b>ice-President • <b>P</b>rime Minister • <b>C</b>ouncil of Ministers • <b>A</b>ttorney General</div>
+
+  <h3>🧬 The Design Philosophy — Why this shape?</h3>
+  <div class="grid g3">
+    <div class="card"><h4>🎩 Westminster Borrowing</h4><p>India adopted the <strong>British parliamentary (Cabinet) system</strong> — an executive drawn from and answerable to the legislature — but grafted it onto a <strong>Republican head of State</strong> (elected, not hereditary) instead of a monarch. Hence: <em>“A crowned republic without a crown.”</em></p></div>
+    <div class="card"><h4>⚖️ Nominal vs Real</h4><p>The Constitution deliberately splits <strong>de jure</strong> authority (President, <span class="art">Art 53</span>) from <strong>de facto</strong> authority (PM + CoM, <span class="art">Art 74–75</span>). This is the “dignified” vs “efficient” distinction of <em>Walter Bagehot</em>.</p></div>
+    <div class="card"><h4>🔗 Fusion of Powers</h4><p>Unlike the USA’s <strong>separation</strong> of powers, India has a <strong>fusion</strong>: Ministers must be MPs (<span class="art">Art 75(5)</span>), the President is part of Parliament (<span class="art">Art 79</span>), and the executive lives only while it holds the Lok Sabha’s confidence (<span class="art">Art 75(3)</span>).</p></div>
+  </div>
+
+  <h3>🌍 The Constituent Assembly Choice — Why not a US-style President?</h3>
+  <div class="box insight"><b>💡 The Ambedkar formulation:</b> The Assembly weighed <strong>stability</strong> (US presidential model — fixed term, strong executive) against <strong>responsibility</strong> (British model — daily answerability). Ambedkar declared that India needed a government <em>“more responsible than stable,”</em> because a nascent democracy must be continuously accountable. Hence the parliamentary system was chosen for both the Union and the States.</div>
+  <div class="box mnemo"><b>🧠 Remember:</b> USA = <b>Stability</b> (fixed 4-yr term, no daily accountability). India/UK = <b>Responsibility</b> (daily Question Hour, no-confidence motions, but risk of instability). Ambedkar: <em>“The daily assessment of responsibility is far more effective than the periodic assessment.”</em></div>
+</section>
+
+<!-- ═══════════ PART 1: PRESIDENT ═══════════ -->
+<section class="sec rv" id="pres" style="--acc:#ff9d3c;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-t">👑 Part 1 — The President of India</h2><span class="sec-line"></span></div>
+
+  <h3>🧭 1.1 Article-by-Article Map (Art 52–62): The President’s Life Cycle</h3>
+  <div class="box mnemo"><b>🧠 NARRATIVE MNEMONIC:</b> “The President <b>E</b>xists (52) with <b>P</b>ower (53), gets <b>E</b>lected (54) in a <b>M</b>anner (55), serves a <b>T</b>erm (56), may <b>R</b>epeat (57), if <b>Q</b>ualified (58) under <b>C</b>onditions (59), takes an <b>O</b>ath (60), may face <b>I</b>mpeachment (61), leaving a <b>V</b>acancy (62).”</div>
+
+  <div class="tw"><table>
+    <thead><tr><th class="c">Art</th><th>Heading</th><th>Core Content &amp; Key Details</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">52</span></td><td>There shall be a President</td><td>The <strong>shortest Article</strong> on the Union Executive. Office is <strong>mandatory</strong> — India cannot exist without a President. 🏛️</td></tr>
+      <tr><td class="c"><span class="art">53</span></td><td>Executive power of the Union</td><td><strong>53(1)</strong> Executive power vested in the President; exercised by him <em>directly</em> or through <em>officers subordinate to him</em>. <strong>53(2)</strong> <strong>Supreme Command of the Defence Forces</strong> — exercise regulated by law. <strong>53(3)</strong> Nothing in this Article transfers to the President functions conferred by existing law on any other authority, nor prevents Parliament from conferring functions on authorities other than the President. ⚔️</td></tr>
+      <tr><td class="c"><span class="art">54</span></td><td>Election of the President</td><td><strong>Indirect</strong> election by an <strong>Electoral College</strong>. 🗳️</td></tr>
+      <tr><td class="c"><span class="art">55</span></td><td>Manner of election</td><td><strong>Proportional Representation</strong> by means of the <strong>Single Transferable Vote</strong>, by <strong>Secret Ballot</strong>; <strong>uniformity</strong> among States + <strong>parity</strong> between Union &amp; States. 🔢</td></tr>
+      <tr><td class="c"><span class="art">56</span></td><td>Term of office</td><td><strong>5 years</strong> from the date he enters upon office. Resignation addressed to the <strong>Vice-President</strong> (who must forthwith communicate it to the Speaker of the Lok Sabha). Continues <strong>until his successor enters upon office</strong> — <em>no interregnum</em>. ⏳</td></tr>
+      <tr><td class="c"><span class="art">57</span></td><td>Eligibility for re-election</td><td><strong>Unlimited</strong> re-election permitted (contrast: US 22nd Amendment, 1951 = max 2 terms). 🔄</td></tr>
+      <tr><td class="c"><span class="art">58</span></td><td>Qualifications</td><td>See §1.2 below. ✅</td></tr>
+      <tr><td class="c"><span class="art">59</span></td><td>Conditions of office</td><td>Not a member of Parliament/State Legislature (if elected, seat deemed vacated on the date he enters office); no other <strong>office of profit</strong>; <strong>free official residence</strong> (Rashtrapati Bhavan) without rent; emoluments &amp; allowances <strong>cannot be diminished</strong> during his term. 🏠</td></tr>
+      <tr><td class="c"><span class="art">60</span></td><td>Oath / Affirmation</td><td>Administered by the <strong>Chief Justice of India</strong>; in his absence, the <strong>senior-most available Judge of the Supreme Court</strong>. He swears to <em>“preserve, protect and defend the Constitution and the law”</em> and to devote himself to the <em>“service and well-being of the people of India.”</em> 📖</td></tr>
+      <tr><td class="c"><span class="art">61</span></td><td>Impeachment</td><td>Removal only for <strong>“violation of the Constitution”</strong> — see §1.5. ⚖️</td></tr>
+      <tr><td class="c"><span class="art">62</span></td><td>Filling vacancies</td><td>Timelines — see §1.6. 📅</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box insight"><b>💡 Add-on you must know — Art 73 (Extent of Union executive power):</b> The Union’s executive power is <strong>co-extensive with Parliament’s legislative power</strong> — it extends to all matters in the <strong>Union List</strong>, to the exercise of rights/authority under any <strong>treaty or agreement</strong>, and (with State consent or where a law of Parliament expressly provides) to <strong>Concurrent List</strong> matters. On the Concurrent List, the <strong>States</strong> ordinarily retain executive power unless Parliament/Constitution says otherwise. 🌐</div>
+
+  <div class="box good"><b>📖 Oath text nuance:</b> The President’s oath is the <strong>only</strong> constitutional oath that uses the words <em>“preserve, protect and defend the Constitution”</em> — Ministers, MPs and Judges swear to <em>“bear true faith and allegiance”</em>. This textual difference is often cited to argue the President is the Constitution’s <strong>guardian of last resort</strong>. 🛡️</div>
+
+  <!-- 1.2 -->
+  <h3>✅ 1.2 Qualifications, Conditions &amp; Disqualifications (Art 58, 59)</h3>
+  <div class="mban">🧠 “C-35-L-O” → Citizen • 35 years • Lok-Sabha-qualified • No Office of profit</div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Requirement</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>🇮🇳 Citizenship</td><td>Must be a <strong>citizen of India</strong> (by <em>any</em> mode — birth, descent, registration, naturalisation, incorporation of territory)</td></tr>
+      <tr><td>🎂 Age</td><td>Must have <strong>completed 35 years</strong> of age</td></tr>
+      <tr><td>🗳️ Electoral capacity</td><td>Qualified for election as a member of the <strong>House of the People (Lok Sabha)</strong> — hence must be a <strong>registered elector</strong> somewhere in India (need not actually be an MP)</td></tr>
+      <tr><td>🚫 Office of profit</td><td>Must <strong>not hold</strong> any office of profit under the Union, a State, a local authority or any other public authority</td></tr>
+      <tr><td>✔️ Exceptions <em>(deemed NOT office of profit)</em></td><td>President • Vice-President • <strong>Governor of any State</strong> • <strong>Union or State Minister</strong> — a sitting Governor or Minister may therefore contest 🎗️</td></tr>
+      <tr><td>➕ Statutory bar</td><td>Must not be disqualified under the <strong>Representation of the People Act, 1951</strong> (e.g., conviction-based disqualification, corrupt practices, unsound mind, insolvency)</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="card"><h4>📝 Nomination formalities — Presidential &amp; Vice-Presidential Elections Act, 1952</h4>
+  <ul class="tick">
+    <li><strong>50 proposers + 50 seconders</strong> — raised from 10+10 by amendment in <strong>1997</strong> to curb frivolous candidatures (in 1957 there were 3 candidates; by 1974 candidate numbers had ballooned).</li>
+    <li><strong>Security deposit ₹15,000</strong> — forfeited if the candidate fails to secure <strong>1/6th</strong> of the votes required for return (the quota).</li>
+    <li><strong>Returning Officer:</strong> Secretary-General of the Lok Sabha / Rajya Sabha, <strong>by rotation</strong>.</li>
+    <li><strong>Conducting authority:</strong> <strong>Election Commission of India</strong> — <span class="art">Art 324(1)</span> expressly gives the ECI superintendence of Presidential and Vice-Presidential elections.</li>
+    <li>An elector may propose/second <strong>only one</strong> candidate; violating this invalidates the later subscription.</li>
+  </ul></div>
+
+  <div class="box warn"><b>⚠️ Trap:</b> A person who is <strong>already an MP or MLA</strong> <em>can</em> contest for President. If elected, his seat is <strong>deemed vacated</strong> on the date he enters upon office (<span class="art">Art 59(1)</span>) — he is not required to resign beforehand. Example: <strong>V.V. Giri resigned as Vice-President in 1969</strong> only because a VP contesting would otherwise conflict with acting as President; and <strong>Neelam Sanjiva Reddy resigned as Speaker</strong> in 1977 to contest.</div>
+</section>
+
+<!-- ═══════════ ELECTORAL COLLEGE ═══════════ -->
+<section class="sec rv" id="elect" style="--acc:#7db8ff;--acc2:#4fd2e6">
+  <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-t">🗳️ 1.3 The Electoral College — Who Votes, Who Doesn’t</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+        ╔══════════════════ ELECTORAL COLLEGE (Art 54) ══════════════════╗
+        ║                                                                 ║
+        ║   ✅ ELECTED MPs of Lok Sabha                                   ║
+        ║   ✅ ELECTED MPs of Rajya Sabha                                 ║
+        ║   ✅ ELECTED MLAs of all States                                 ║
+        ║   ✅ ELECTED MLAs of NCT Delhi &amp; Puducherry  [70th Amdt, 1992]  ║
+        ║        (+ UT of J&amp;K, having a Legislative Assembly)             ║
+        ║                                                                 ║
+        ║   ❌ NOMINATED MPs (12 in RS + erstwhile 2 Anglo-Indians in LS) ║
+        ║   ❌ NOMINATED MLAs                                              ║
+        ║   ❌ MLCs (members of State Legislative COUNCILS)                ║
+        ║   ❌ MLAs of UTs without a Legislature                           ║
+        ╚═════════════════════════════════════════════════════════════════╝
+</pre>
+
+  <div class="mban">🚫 “NO-NO-C” → NOminated MPs • NOminated MLAs • Council (MLC) members</div>
+
+  <div class="box warn"><b>⚠️ CRITICAL CONTRAST:</b> Nominated members <strong>CAN</strong> vote in the <strong>Vice-Presidential</strong> election and <strong>CAN</strong> participate in the President’s <strong>impeachment</strong> — but <strong>CANNOT</strong> vote in the Presidential election. <em>Reason:</em> the Presidential election is meant to reflect the “will of the people” expressed through directly-derived mandates; impeachment, by contrast, is a purely <strong>parliamentary</strong> function.</div>
+
+  <div class="box insight"><b>💡 Why an indirect election?</b> Three reasons debated in the Constituent Assembly: (i) direct election would give the President a <strong>popular mandate rivalling the PM’s</strong>, destabilising the parliamentary scheme; (ii) an all-India direct poll would be enormously <strong>costly and disruptive</strong>; (iii) indirect election through State legislatures gives the office a <strong>federal character</strong>. Ambedkar: the President is elected <em>“indirectly by a system of proportional representation”</em> precisely to keep him a <strong>figurehead</strong>.</div>
+
+  <div class="box good"><b>⚖️ Federal balance in the formula:</b> <span class="art">Art 55(2)</span> ensures <strong>(a) uniformity in the scale of representation among States</strong> (a citizen in Bihar and a citizen in Kerala count equally) and <strong>(b) parity between the Union and the States as a whole</strong> (total MLA votes ≈ total MP votes). This makes the President the head of the <strong>federation</strong>, not merely of the Centre. 🤝</div>
+
+  <!-- vote value -->
+  <h3>🔢 1.4 The Vote-Value Formula (Art 55) — Fully Worked</h3>
+<pre class="flow">
+ ┌──────────────────────────── STEP 1: VALUE OF AN MLA's VOTE ─────────────────────────┐
+ │                                                                                      │
+ │                    Population of the State (1971 Census)                             │
+ │   Value  =  ───────────────────────────────────────────────────  ÷  1000             │
+ │                Total no. of ELECTED members of that Assembly                         │
+ │                                                                                      │
+ │   (Fractions ≥ 0.5 are rounded UP; below 0.5 ignored)                                │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+                                        ▼
+ ┌──────────────────────────── STEP 2: VALUE OF AN MP's VOTE ──────────────────────────┐
+ │                                                                                      │
+ │                 Total value of votes of ALL MLAs of ALL States                       │
+ │   Value  =  ───────────────────────────────────────────────────────                  │
+ │                    Total no. of ELECTED members of Parliament                        │
+ │                                                                                      │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+                                        ▼
+ ┌──────────────────────────── STEP 3: THE QUOTA (winning mark) ───────────────────────┐
+ │                                                                                      │
+ │        Quota  =  (Total valid votes polled ÷ 2)  +  1                                │
+ │                                                                                      │
+ │   → 1st preferences counted. If no one crosses quota, lowest candidate ELIMINATED    │
+ │     and their 2nd preferences transferred. Repeat till someone crosses the quota.    │
+ └──────────────────────────────────────────────────────────────────────────────────────┘
+</pre>
+
+  <div class="grid g4">
+    <div class="tile"><span class="e">🏆</span><span class="v">208</span><span class="l">UP — Highest MLA value</span></div>
+    <div class="tile"><span class="e">🪶</span><span class="v">7</span><span class="l">Sikkim — Lowest</span></div>
+    <div class="tile"><span class="e">🧮</span><span class="v">700</span><span class="l">MP value (2022)</span></div>
+    <div class="tile"><span class="e">🎯</span><span class="v">10,86,431</span><span class="l">Total EC value (2022)</span></div>
+  </div>
+
+  <div class="card"><h4>🔍 Key facts &amp; insights</h4>
+  <ul class="tick">
+    <li><strong>Population = 1971 Census</strong> figures, frozen by the <strong>42nd Amendment (1976)</strong>, extended by the <strong>84th Amendment Act, 2001</strong> until <em>“the first census taken after the year 2026”</em> is published. The freeze <strong>rewards States that performed on population control</strong> (otherwise UP/Bihar would gain and Kerala/TN would lose weight). 📉</li>
+    <li>⚠️ It is called <em>“Proportional Representation by Single Transferable Vote”</em> even though <strong>only ONE seat is filled</strong> — strictly this is the <strong>Alternative Vote / Instant-Runoff</strong>. Constitutional purists call it a <strong>drafting anomaly</strong>, but the constitutional text governs.</li>
+    <li>Other low values: <strong>Arunachal Pradesh (8)</strong>, <strong>Mizoram (8)</strong>, <strong>Nagaland (9)</strong>. Other high values: <strong>Jharkhand &amp; Tamil Nadu (176)</strong>, <strong>Maharashtra (175)</strong>, <strong>Bihar (173)</strong>.</li>
+    <li><strong>2022 Election:</strong> MP vote value fell from <strong>708 → 700</strong> because the <strong>J&amp;K Assembly was not in existence</strong>. <strong>Droupadi Murmu</strong> polled <strong>≈64.03%</strong> of the value of valid votes.</li>
+    <li><strong>Secret ballot is mandatory</strong> → the <strong>Anti-Defection Law (10th Schedule) does NOT apply</strong>; <strong>no party whip</strong> can be issued. <strong>Cross-voting is legal</strong> and common. 🤫</li>
+    <li>Voting is by marking <strong>preferences in figures (1, 2, 3…) only</strong> — marking a “✓” or writing in words invalidates the ballot. Marking the <strong>1st preference is compulsory</strong>; the rest are optional.</li>
+    <li>MPs vote with a <strong>green ballot paper</strong>, MLAs with a <strong>pink</strong> one. Polling is normally at Parliament House and State Assembly premises; an elector may seek prior permission to vote elsewhere.</li>
+  </ul></div>
+
+  <details class="acc"><summary>🧮 Worked numerical example (exam-style)</summary><div class="body">
+    <p><strong>Q.</strong> A State has a 1971 population of 5,00,00,000 and 250 elected MLAs. Find the value of one MLA’s vote.</p>
+    <p><strong>A.</strong> 5,00,00,000 ÷ 250 = 2,00,000 → ÷ 1000 = <strong>200</strong>. So each MLA’s vote = <strong>200</strong>. Total State value = 250 × 200 = <strong>50,000</strong>.</p>
+    <p><strong>Q.</strong> If the total value of all MLAs’ votes in India is 5,49,495 and the elected MPs number 776, find the MP vote value.</p>
+    <p><strong>A.</strong> 5,49,495 ÷ 776 = 708.1… → rounded to <strong>708</strong> (the 2017 figure). In 2022, with J&amp;K’s assembly dissolved the numerator fell, giving <strong>700</strong>.</p>
+  </div></details>
+
+  <details class="acc"><summary>📜 Presidential elections at a glance — the roll of honour</summary><div class="body">
+  <div class="tw"><table><thead><tr><th class="c">#</th><th>President</th><th>Term</th><th>Notable</th></tr></thead><tbody>
+    <tr><td class="c">1</td><td>Dr. Rajendra Prasad</td><td>1950–1962</td><td>Only President to serve <strong>two full terms</strong>; longest-serving 🏅</td></tr>
+    <tr><td class="c">2</td><td>Dr. S. Radhakrishnan</td><td>1962–1967</td><td>Philosopher-statesman; first VP to become President</td></tr>
+    <tr><td class="c">3</td><td>Dr. Zakir Husain</td><td>1967–1969</td><td>First Muslim President; <strong>first to die in office</strong> ⚫</td></tr>
+    <tr><td class="c">4</td><td>V.V. Giri</td><td>1969–1974</td><td>Only person to be <strong>Acting President and then elected President</strong>; won on <strong>2nd preference count</strong> (the only such instance) 🗳️</td></tr>
+    <tr><td class="c">5</td><td>Fakhruddin Ali Ahmed</td><td>1974–1977</td><td>Signed the 1975 Emergency proclamation; <strong>died in office</strong></td></tr>
+    <tr><td class="c">6</td><td>Neelam Sanjiva Reddy</td><td>1977–1982</td><td>Only President elected <strong>unopposed</strong>; only person to lose (1969) then win (1977) 🏵️</td></tr>
+    <tr><td class="c">7</td><td>Giani Zail Singh</td><td>1982–1987</td><td>The <strong>pocket veto</strong> (Post Office Bill, 1986) ✉️</td></tr>
+    <tr><td class="c">8</td><td>R. Venkataraman</td><td>1987–1992</td><td>Presided over 4 PMs; used the absolute veto (1991); called himself an <em>“emergency lamp”</em> 💡</td></tr>
+    <tr><td class="c">9</td><td>Dr. Shankar Dayal Sharma</td><td>1992–1997</td><td>Constitutional scholar</td></tr>
+    <tr><td class="c">10</td><td>K.R. Narayanan</td><td>1997–2002</td><td>First Dalit President; the <strong>“working President”</strong> — returned Cabinet advice twice 💪</td></tr>
+    <tr><td class="c">11</td><td>Dr. A.P.J. Abdul Kalam</td><td>2002–2007</td><td>“People’s President”; the 2006 <strong>suspensive veto</strong> 🚀</td></tr>
+    <tr><td class="c">12</td><td>Smt. Pratibha Patil</td><td>2007–2012</td><td><strong>First woman President</strong> 👩</td></tr>
+    <tr><td class="c">13</td><td>Pranab Mukherjee</td><td>2012–2017</td><td>Most experienced parliamentarian to hold the office</td></tr>
+    <tr><td class="c">14</td><td>Ram Nath Kovind</td><td>2017–2022</td><td>Second Dalit President</td></tr>
+    <tr><td class="c">15</td><td><strong>Smt. Droupadi Murmu</strong></td><td>2022–</td><td><strong>First tribal</strong> President, second woman, youngest ever, first born in independent India 🌟</td></tr>
+  </tbody></table></div>
+  <div class="box warn"><b>⚠️ Currency note:</b> Smt. Droupadi Murmu’s term runs to <strong>July 2027</strong>; the next presidential election falls due in <strong>2027</strong>. Verify the current position from a live source.</div>
+  </div></details>
+</section>
+
+<!-- ═══════════ IMPEACHMENT ═══════════ -->
+<section class="sec rv" id="impeach" style="--acc:#ff6b6b;--acc2:#ff9d3c">
+  <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-t">⚖️ 1.5 Article 61 — Impeachment: The Only Way Out</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+   ┌──────────────────────────────────────────────────────────────────────┐
+   │  GROUND: "VIOLATION OF THE CONSTITUTION" — deliberately UNDEFINED    │
+   └───────────────────────────────┬──────────────────────────────────────┘
+                                   ▼
+   ①  CHARGE preferred by EITHER House (LS or RS — no priority)
+       • Resolution signed by ≥ 1/4th of the TOTAL members of that House
+       • 14 days' written NOTICE given to the President
+                                   ▼
+   ②  Resolution PASSED by ≥ 2/3rd of the TOTAL MEMBERSHIP of that House
+       (Special Majority — not "members present and voting")
+                                   ▼
+   ③  The OTHER House INVESTIGATES the charge
+       • President has the RIGHT to appear &amp; be REPRESENTED (by counsel/AG)
+                                   ▼
+   ④  Investigating House passes resolution by ≥ 2/3rd of TOTAL MEMBERSHIP
+                                   ▼
+   ⑤  ✅ PRESIDENT REMOVED from the DATE the resolution is passed
+</pre>
+
+  <div class="mban">🔢 “1/4 → 14 → 2/3 → 2/3” — One-fourth sign, fourteen days wait, two-thirds twice, and out the gate!</div>
+
+  <div class="grid g2">
+    <div class="card"><h4>💡 Key insights</h4>
+    <ul class="tick">
+      <li>It is a <strong>quasi-judicial</strong> procedure — the only process in the Constitution where the President is effectively a <strong>party</strong> with a right to defend himself.</li>
+      <li><strong>NOMINATED members participate</strong> (unlike the election) — impeachment is a parliamentary, not electoral, function.</li>
+      <li><strong>ELECTED MLAs do NOT participate</strong> — even though they elected him. ⚠️ A famous <strong>constitutional asymmetry</strong>: those who elect cannot remove.</li>
+      <li><strong>No President of India has ever been impeached.</strong> 🕊️</li>
+      <li>A President elected to fill a <strong>casual vacancy</strong> gets a <strong>full fresh 5-year term</strong>, not the residue of the predecessor’s term — unlike US succession.</li>
+    </ul></div>
+    <div class="card"><h4>⚖️ Why “violation of the Constitution” is undefined</h4>
+      <p>The Constituent Assembly deliberately left the phrase open so that <strong>Parliament, not a court, determines its content politically</strong>. Since the President acts on ministerial advice, a genuine “violation” would arise mainly where he acts <strong>against or without</strong> advice, or refuses to discharge a mandatory duty.</p>
+      <p><strong>Practical reality:</strong> because a 2/3rd special majority of the <em>total membership</em> of <em>both</em> Houses is required, and the President is elected by the same political configuration that would need to remove him, impeachment is a <strong>theoretical safeguard</strong>. 🔒</p>
+      <div class="box insight" style="margin-top:8px"><b>🧮 Numerically:</b> With LS = 543 and RS = 245, a resolution needs roughly <strong>362 votes in the LS</strong> and <strong>164 in the RS</strong> — regardless of absentees.</div>
+    </div>
+  </div>
+
+  <div class="box case"><b>⚔️ Contrast — impeachment of the President vs removal of a Judge:</b> A <strong>Judge</strong> of the SC/HC is removed under <span class="art">Art 124(4)</span> for <strong>“proved misbehaviour or incapacity”</strong>, on an address by <strong>both Houses</strong> passed by a majority of total membership <strong>and</strong> 2/3rd of those present and voting, following an inquiry under the <strong>Judges (Inquiry) Act, 1968</strong>. The <strong>President</strong> is removed under <span class="art">Art 61</span> for <strong>“violation of the Constitution”</strong> by <strong>2/3rd of the total membership</strong> — a <em>stricter</em> numerical threshold and a <em>looser</em> substantive ground.</div>
+</section>
+
+<!-- ═══════════ VACANCY ═══════════ -->
+<section class="sec rv" style="--acc:#b493ff;--acc2:#7db8ff">
+  <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-t">📅 1.6 Article 62 — Vacancy Timelines &amp; Succession</h2><span class="sec-line"></span></div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Situation</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td>Vacancy by <strong>expiry of term</strong></td><td>Election <strong>must be completed BEFORE</strong> the expiry of the term ⏰</td></tr>
+      <tr><td>Vacancy by <strong>death / resignation / removal / otherwise</strong></td><td>Election held <strong>as soon as possible</strong>, and in any case <strong>within 6 months</strong> of the vacancy</td></tr>
+      <tr><td>Who fills the gap?</td><td><strong>Vice-President</strong> acts as President (<span class="art">Art 65</span>) — for a <strong>maximum of 6 months</strong> 🎖️</td></tr>
+      <tr><td>If the VP’s office is also vacant</td><td><strong>Chief Justice of India</strong> acts; if the CJI is unavailable, the <strong>senior-most Judge of the Supreme Court</strong> → <em>Presidential (Discharge of Functions) Act, 1969</em> ⚖️</td></tr>
+      <tr><td>Powers of the Acting President</td><td><strong>ALL</strong> the powers, immunities, emoluments and privileges of the President 👑</td></tr>
+      <tr><td>Temporary inability (illness/absence abroad)</td><td>The VP <strong>discharges the functions</strong> of the President for that period only — this is <em>not</em> “acting as President” for the 6-month rule</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>📌 Historical facts (high-frequency exam material)</h3>
+  <div class="tl">
+    <div class="tl-i"><span class="tl-y">1969 ⚫</span> — <strong>Dr. Zakir Husain</strong> died in office: the <strong>first President to die in office</strong>. VP <strong>V.V. Giri</strong> became Acting President; he then resigned to contest, so <strong>Justice M. Hidayatullah (CJI)</strong> acted — <strong>the only CJI ever to act as President</strong>. 🏛️</div>
+    <div class="tl-i"><span class="tl-y">1977 ⚫</span> — <strong>Fakhruddin Ali Ahmed</strong> died in office; VP <strong>B.D. Jatti</strong> acted as President.</div>
+    <div class="tl-i"><span class="tl-y">1977 🏵️</span> — <strong>Neelam Sanjiva Reddy</strong>: the <strong>only President elected unopposed</strong>; also the only person to <em>lose</em> a presidential election (1969) and later <em>win</em> one.</div>
+    <div class="tl-i"><span class="tl-y">1950–62 🏅</span> — <strong>Dr. Rajendra Prasad</strong>: the only President to serve <strong>two full terms</strong>.</div>
+    <div class="tl-i"><span class="tl-y">2022 🌟</span> — <strong>Smt. Droupadi Murmu</strong>, <strong>15th President</strong>, sworn in <strong>25 July 2022</strong>: first tribal President, second woman, youngest ever, first born in independent India. <em>(Term to July 2027 — verify current status.)</em></div>
+  </div>
+
+  <div class="box insight"><b>💡 No “interregnum” doctrine:</b> The proviso to <span class="art">Art 56(1)(c)</span> guarantees that the incumbent <strong>continues to hold office until his successor enters upon office</strong>. Read with <span class="art">Art 62</span> and <span class="art">Art 65</span>, India can <strong>never</strong> be without someone discharging the President’s functions — a deliberate design against a constitutional vacuum. 🔗</div>
+  <div class="box warn"><b>⚠️ Never confuse:</b> The <strong>Vice-President does NOT automatically become President</strong> on a vacancy (unlike the US VP). He only <strong>acts</strong>, for a maximum of 6 months, within which a fresh election must be held. The Indian VP is not a “President-in-waiting.”</div>
+</section>
+
+<!-- ═══════════ POWERS ═══════════ -->
+<section class="sec rv" id="powers" style="--acc:#ffd479;--acc2:#ff9d3c">
+  <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-t">🎛️ 1.7 Powers of the President — The Complete Wheel</h2><span class="sec-line"></span></div>
+
+  <div class="mban">🧠 “LEFT-JAM-D” → Legislative • Executive • Financial • Treaty/Diplomatic • Judicial • Appointments • Military • Discretionary/Emergency</div>
+
+<pre class="flow">
+                      ┌──────────────────┐
+                      │  👑 PRESIDENT     │
+                      └────────┬─────────┘
+      ┌──────────┬─────────┬───┴────┬─────────┬──────────┬─────────┐
+      ▼          ▼         ▼        ▼         ▼          ▼         ▼
+  EXECUTIVE  LEGISLATIVE FINANCIAL JUDICIAL MILITARY DIPLOMATIC EMERGENCY
+  Art 53,72  Art 85-111  Art 112   Art 72   Art 53(2) Art 53    Art 352
+  73,75,77   123,80,103  267,280   143,124                      356,360
+</pre>
+
+  <h3>🅰️ Executive Powers</h3>
+  <div class="card">
+    <ul class="tick">
+      <li>All executive action of the Government of India is <strong>expressed to be taken in the name of the President</strong> (<span class="art">Art 77(1)</span>).</li>
+      <li><strong>Appoints:</strong> Prime Minister &amp; other Ministers (<span class="art">75</span>), Attorney General (<span class="art">76</span>), CAG (<span class="art">148</span>), Governors (<span class="art">155</span>), Judges of the SC &amp; HCs (<span class="art">124, 217</span>), Chief Election Commissioner &amp; ECs (<span class="art">324</span> r/w the <em>CEC and Other ECs (Appointment, Conditions of Service and Term of Office) Act, 2023</em> — on the recommendation of a Selection Committee of the <strong>PM, a Union Cabinet Minister nominated by the PM, and the Leader of the Opposition in the Lok Sabha</strong>), Chairman/Members of the UPSC (<span class="art">316</span>), Finance Commission (<span class="art">280</span>), Administrators of UTs (<span class="art">239</span>), Chairpersons of NCSC/NCST/NCBC (<span class="art">338, 338A, 338B</span>), Special Officer for Linguistic Minorities (<span class="art">350B</span>), Inter-State Council (<span class="art">263</span>), Ambassadors &amp; High Commissioners.</li>
+      <li>Can <strong>seek information</strong> from the PM about the administration of the Union (<span class="art">Art 78</span>).</li>
+      <li>Can appoint a Commission to investigate the conditions of <strong>SC/ST/OBC/backward classes</strong> (<span class="art">Art 340</span> — e.g., Kaka Kalelkar 1953, Mandal 1979).</li>
+      <li>Directly administers <strong>Union Territories</strong> through Administrators (<span class="art">239</span>) and can declare any area a <strong>Scheduled Area</strong> (5th Schedule) with powers of administration over Scheduled/Tribal Areas.</li>
+      <li>Can appoint <strong>inter-State river water dispute tribunals</strong> (<span class="art">262</span> r/w statute) and set up the <strong>Inter-State Council</strong> (<span class="art">263</span>).</li>
+    </ul>
+  </div>
+
+  <h3>🅱️ Legislative Powers</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Power</th><th class="c">Article</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Integral part of Parliament</strong> — “Parliament shall consist of the President and two Houses” 🏛️</td><td class="c"><span class="art">79</span></td></tr>
+      <tr><td><strong>Summon</strong> and <strong>prorogue</strong> the Houses; <strong>dissolve</strong> the Lok Sabha; the <strong>6-month rule</strong> — not more than 6 months may elapse between the last sitting of one session and the first sitting of the next</td><td class="c"><span class="art">85</span></td></tr>
+      <tr><td>Right to <strong>address</strong> either House / both Houses and to send <strong>messages</strong> (on a pending Bill or otherwise) — the House must consider a message “with all convenient despatch”</td><td class="c"><span class="art">86</span></td></tr>
+      <tr><td><strong>Special Address</strong> to both Houses assembled together — at the <strong>first session after each general election</strong> and at the <strong>first session of each year</strong> (the “Motion of Thanks” follows)</td><td class="c"><span class="art">87</span></td></tr>
+      <tr><td>Can <strong>appoint a member of the Lok Sabha to preside</strong> when the offices of both Speaker and Deputy Speaker are vacant; similarly for the Rajya Sabha</td><td class="c"><span class="art">95(1), 91(1)</span></td></tr>
+      <tr><td><strong>Nominates 12 members to the Rajya Sabha</strong> — persons with special knowledge/practical experience in <strong>Literature, Science, Art and Social Service</strong> 🎨🔬📚🤝</td><td class="c"><span class="art">80(1)(a) &amp; 80(3)</span></td></tr>
+      <tr><td><em>Nomination of 2 Anglo-Indians to the Lok Sabha — <strong>ABOLISHED by the 104th Amendment Act, 2019</strong>, w.e.f. 25 Jan 2020</em></td><td class="c"><span class="art">331 (omitted)</span></td></tr>
+      <tr><td>Decides questions of <strong>disqualification of MPs</strong> — must act on the <strong>binding opinion of the ECI</strong> (defection questions, however, go to the Presiding Officer under the 10th Schedule)</td><td class="c"><span class="art">103</span></td></tr>
+      <tr><td><strong>Prior recommendation / permission</strong> needed for: Money Bills (<span class="art">117(1)</span>), Bills altering State areas/boundaries/names (<span class="art">Art 3</span> — after referring to the State Legislature for its views), Bills affecting State taxation interests (<span class="art">274</span>), Financial Bills, and Bills imposing restrictions on inter-State trade (<span class="art">304(b)</span> proviso, for State Bills)</td><td class="c"><span class="art">3, 117, 274</span></td></tr>
+      <tr><td><strong>Assent to Bills</strong> — assent / withhold / return / (for State Bills) reserve</td><td class="c"><span class="art">111, 201</span></td></tr>
+      <tr><td><strong>Ordinance-making power</strong> 📜</td><td class="c"><span class="art">123</span></td></tr>
+      <tr><td><strong>Joint sitting</strong> of both Houses to resolve a deadlock over an ordinary Bill</td><td class="c"><span class="art">108</span></td></tr>
+      <tr><td>Lays before Parliament: <strong>CAG report</strong> (151), <strong>UPSC report</strong> (323), <strong>Finance Commission recommendations + Explanatory Memorandum</strong> (281), NCSC/NCST/NCBC reports (338/338A/338B)</td><td class="c"><span class="art">151, 323, 281</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box insight"><b>💡 Joint sitting (Art 108) — the fine print:</b> Available only for <strong>Ordinary Bills</strong> and <strong>Financial Bills (Category I)</strong>. <strong>NOT</strong> available for <strong>Money Bills</strong> (the Lok Sabha’s will prevails anyway) or <strong>Constitutional Amendment Bills</strong> (both Houses must pass them separately by special majority). Presided over by the <strong>Speaker</strong> (not the Chairman of the RS); decided by a <strong>simple majority of those present and voting</strong>. Held only <strong>three times</strong>: <strong>Dowry Prohibition Bill (1961)</strong>, <strong>Banking Service Commission (Repeal) Bill (1978)</strong>, <strong>POTA (2002)</strong>. 🔔</div>
+
+  <h3>🅲 Financial Powers</h3>
+  <div class="grid g2">
+    <div class="card"><ul class="tick">
+      <li>A <strong>Money Bill</strong> can be introduced only with his <strong>prior recommendation</strong> (<span class="art">Art 117(1)</span>) and only in the <strong>Lok Sabha</strong> (<span class="art">Art 109</span>).</li>
+      <li>Causes the <strong>Annual Financial Statement (Budget)</strong> to be laid before both Houses (<span class="art">Art 112</span>).</li>
+      <li><strong>No demand for a grant</strong> can be made except on his recommendation (<span class="art">Art 113(3)</span>).</li>
+    </ul></div>
+    <div class="card"><ul class="tick">
+      <li><strong>Contingency Fund of India</strong> is at his disposal — he makes advances for unforeseen expenditure, later regularised by Parliament (<span class="art">Art 267</span>) 💰.</li>
+      <li>Constitutes a <strong>Finance Commission every 5 years</strong> (or earlier) to recommend the distribution of taxes between the Union and the States (<span class="art">Art 280</span>).</li>
+      <li>Can make rules for <strong>Consolidated Fund</strong> custody (<span class="art">283</span>) and decides on the <strong>charged expenditure</strong> laid before Parliament (<span class="art">112(3)</span>).</li>
+    </ul></div>
+  </div>
+
+  <h3>🅳 Judicial Powers</h3>
+  <div class="card">
+    <ul class="tick">
+      <li>Appoints the <strong>CJI and Judges of the SC/HCs</strong> — bound in practice by the <strong>Collegium</strong> after the <em>Second Judges Case (1993)</em> and the <em>Third Judges Case (1998)</em>; the NJAC (99th Amendment, 2014) was struck down in <em>Supreme Court Advocates-on-Record Assn. v. Union of India (2015)</em> as violating judicial independence, a basic-structure feature. ⚖️</li>
+      <li><span class="art">Art 143</span> — <strong>Advisory Jurisdiction:</strong> may refer (a) a question of <strong>law or fact of public importance</strong> that has arisen or is likely to arise — the SC <strong>may</strong> decline to answer; or (b) a dispute over a <strong>pre-Constitution treaty/agreement</strong> — here the SC <strong>must</strong> report. The opinion is <strong>advisory, not binding</strong>, and is not “law declared” under <span class="art">Art 141</span> in the strict sense, though it carries the highest persuasive value.</li>
+      <li><span class="art">Art 72</span> — <strong>Pardoning power</strong> (see below).</li>
+      <li>Enjoys <strong>immunity from judicial process</strong> under <span class="art">Art 361</span>.</li>
+    </ul>
+    <div class="box insight"><b>📚 Famous Art 143 references:</b> Delhi Laws Act (1951) • Kerala Education Bill (1958) • Berubari Union (1960) • Presidential Poll (1974) • Special Courts Bill (1978) • Cauvery Water Disputes (1992) • <strong>Ram Janmabhoomi/Ismail Faruqui (1993 — the Court declined to answer)</strong> • Gujarat Assembly Election (2002) • 2G Spectrum (2012) • <strong>the 16th Reference on Governor’s assent (2025)</strong>.</div>
+  </div>
+
+  <h3>🎖️ Military &amp; 🕊️ Diplomatic Powers</h3>
+  <div class="grid g2">
+    <div class="card"><h4>⚔️ Military</h4><p><strong>Supreme Commander of the Defence Forces</strong> (<span class="art">Art 53(2)</span>). Appoints the Chiefs of the Army, Navy and Air Force. <strong>Declares war or concludes peace</strong> — but <strong>subject to the law made by Parliament</strong> and, in reality, on the Cabinet’s advice. Confers military honours (Param Vir Chakra etc.).</p></div>
+    <div class="card"><h4>🌐 Diplomatic</h4><p><strong>International treaties and agreements are negotiated and concluded in his name</strong> — subject to ratification by Parliament. He <strong>represents India in international fora</strong>, sends and receives <strong>Ambassadors, High Commissioners and diplomatic envoys</strong>, and accredits foreign envoys.</p></div>
+  </div>
+</section>
+
+<!-- ═══════════ PARDON ═══════════ -->
+<section class="sec rv" id="pardon" style="--acc:#3fd6a4;--acc2:#4fd2e6">
+  <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-t">🕊️ 1.8 Article 72 — The Pardoning Power (Deep Dive)</h2><span class="sec-line"></span></div>
+
+  <div class="mban">🧠 “P-C-R-R-R” → Please Call Rahul Regarding Results</div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Term</th><th>Precise Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><strong>P</strong>ardon 🕊️</td><td><strong>Completely absolves</strong> the offender — removes <strong>both the sentence AND the conviction</strong>; the person is deemed innocent and all disqualifications disappear</td></tr>
+      <tr><td><strong>C</strong>ommutation 🔄</td><td><strong>Substitutes one form of punishment for a LIGHTER form</strong> (death → rigorous imprisonment → simple imprisonment → fine)</td></tr>
+      <tr><td><strong>R</strong>emission ✂️</td><td><strong>Reduces the QUANTUM/period</strong> of the sentence — the <strong>character of the sentence remains the same</strong> (e.g., 2 yrs RI → 1 yr RI)</td></tr>
+      <tr><td><strong>R</strong>espite ⏸️</td><td>Awards a <strong>LESSER sentence in place of the original due to SPECIAL FACTS</strong> — e.g., pregnancy of a woman convict, physical disability, advanced age</td></tr>
+      <tr><td><strong>R</strong>eprieve ⏳</td><td>A <strong>TEMPORARY stay</strong> of execution of a sentence (especially death) — to let the convict seek pardon or commutation</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="card"><h4>📌 Scope under Art 72 — the three heads</h4>
+  <ol class="tick">
+    <li>Punishment/sentence for an offence against a law relating to a matter to which the <strong>Union’s executive power extends</strong> (Union-law offences).</li>
+    <li>Punishment/sentence by a <strong>COURT-MARTIAL</strong> (military tribunal).</li>
+    <li><strong>ALL cases where the sentence is a SENTENCE OF DEATH</strong> — irrespective of whether the law is Union or State.</li>
+  </ol>
+  <p><strong>Rationale (as stated by the SC):</strong> (a) to keep the door open for correcting <strong>judicial error</strong> — no human system is infallible; and (b) to allow relief where the <strong>punishment appears unduly harsh</strong> on humanitarian grounds. It is an act of <strong>grace</strong>, not a right of the convict.</p>
+  </div>
+
+  <h3>⚔️ President (Art 72) vs Governor (Art 161) — The Three Differences</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Aspect</th><th>👑 President (Art 72)</th><th>🎗️ Governor (Art 161)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Court-Martial</strong> sentences</td><td>✅ <strong>CAN</strong> pardon</td><td>❌ <strong>CANNOT</strong></td></tr>
+      <tr><td><strong>Death sentence</strong></td><td>✅ <strong>Exclusive</strong> power to pardon/commute — <em>only the President can PARDON a death sentence</em></td><td>⚠️ Can <strong>suspend, remit or commute</strong> a death sentence, but <strong>CANNOT PARDON</strong> it</td></tr>
+      <tr><td><strong>Scope of law</strong></td><td>Offences against <strong>Union law</strong> (+ all death sentences + court-martials)</td><td>Offences against <strong>State law</strong> only</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box insight"><b>💡 Also distinguish — statutory remission:</b> Sections on remission/commutation in the criminal procedure code (now the <strong>BNSS, 2023</strong>, replacing the CrPC, 1973) confer a <strong>statutory</strong> power on the <strong>appropriate Government</strong>. The constitutional power under Arts 72/161 is <strong>wider, unfettered by statutory conditions, and cannot be curtailed by legislation</strong> — <em>Maru Ram</em> and <em>Kehar Singh</em> both affirm this.</div>
+
+  <h3>🏛️ Landmark judgments on Art 72</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Case</th><th>Ratio</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Maru Ram v. Union of India (1980)</strong></td><td>The power under Art 72 is to be exercised on the <strong>aid and advice of the Council of Ministers</strong>, not on the President’s personal discretion. Guidelines to structure the power are desirable to prevent arbitrariness.</td></tr>
+      <tr><td><strong>Kehar Singh v. Union of India (1989)</strong></td><td>The President <strong>can re-examine the merits/evidence</strong> and take a view different from the Court’s; he is <strong>not sitting in appeal</strong> but exercising a distinct <em>constitutional</em> power. <strong>No right to an oral hearing</strong>; <strong>no reasons need be disclosed</strong>. The power is <strong>not justiciable on merits</strong>.</td></tr>
+      <tr><td><strong>Epuru Sudhakar v. Govt. of A.P. (2006)</strong></td><td>Pardon is subject to <strong>LIMITED judicial review</strong> on 5 grounds: (i) non-application of mind, (ii) mala fides, (iii) extraneous/irrelevant considerations, (iv) relevant material kept out of consideration, (v) arbitrariness. <em>“Rule of law is the basis; pardon cannot be an act of political favouritism.”</em></td></tr>
+      <tr><td><strong>Shatrughan Chauhan v. Union of India (2014)</strong></td><td><strong>Inordinate, unexplained delay</strong> in deciding a mercy petition is a valid ground for <strong>commuting death to life imprisonment</strong>. Guidelines: <strong>14 days’ notice</strong> before execution, legal aid, mental health evaluation, family meeting, post-mortem — insanity/mental illness is a supervening ground for commutation.</td></tr>
+      <tr><td><strong>Union of India v. V. Sriharan “Murugan” (2015, Const. Bench)</strong></td><td>Courts may impose a <strong>“fixed-term life sentence”</strong> (e.g., life without remission for 20/25 years) as a middle path between death and ordinary life — but this does <strong>not</strong> curtail the <strong>constitutional</strong> power under Arts 72/161.</td></tr>
+      <tr><td><strong>Kuljeet Singh (Ranga) v. Lt. Governor (1982)</strong></td><td>Early affirmation that the Art 72 power is not wholly beyond judicial scrutiny where exercised arbitrarily.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box warn"><b>⚠️ Two frequently-tested nuances:</b> (1) There is <strong>no time limit</strong> prescribed for deciding a mercy petition — but <em>Shatrughan Chauhan</em> makes unexplained delay reviewable. (2) A convict has <strong>no right to insist</strong> on a pardon; but he <strong>does</strong> have a right to have his petition <strong>considered fairly and expeditiously</strong>.</div>
+</section>
+
+<!-- ═══════════ VETO ═══════════ -->
+<section class="sec rv" id="veto" style="--acc:#ff7a9c;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-t">✍️ 1.9 Veto Powers of the President (Article 111)</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+        A BILL IS PASSED BY BOTH HOUSES → PRESENTED TO THE PRESIDENT
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        ▼                     ▼                     ▼
+   ✅ ASSENTS           ❌ WITHHOLDS           ↩️ RETURNS
+   Bill becomes         ABSOLUTE VETO          (Non-Money Bills only)
+   an ACT               (Bill dies)            SUSPENSIVE VETO
+                                                      │
+                                        ┌─────────────┴──────────────┐
+                                        ▼                            ▼
+                            Parliament re-passes           Parliament amends
+                            WITH or WITHOUT changes        or drops it
+                                        │
+                                        ▼
+                        🔒 PRESIDENT IS **BOUND** TO ASSENT
+                           (Only ONE return permitted)
+
+        ⏸️  4th option: SIT ON IT INDEFINITELY = "POCKET VETO"
+            (Art 111 says assent shall be declared "as soon as possible"
+             — but NO time limit is prescribed → the loophole)
+</pre>
+
+  <div class="mban">✍️ “A-S-P” → Absolute • Suspensive • Pocket</div>
+
+  <h3>📊 Veto Applicability Matrix</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Type of Bill</th><th class="c">Absolute</th><th class="c">Suspensive</th><th class="c">Pocket</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ordinary Bill</strong></td><td class="c">✅</td><td class="c">✅</td><td class="c">✅</td><td>Full arsenal available</td></tr>
+      <tr><td><strong>Money Bill</strong></td><td class="c">✅</td><td class="c">❌</td><td class="c">✅</td><td>Cannot be <strong>returned</strong> — it was introduced only on his own prior recommendation</td></tr>
+      <tr><td><strong>Constitutional Amendment Bill</strong></td><td class="c">❌</td><td class="c">❌</td><td class="c">❌</td><td><strong>MUST assent</strong> — mandatory since the <strong>24th Amendment Act, 1971</strong> (proviso to <span class="art">Art 368(2)</span>)</td></tr>
+      <tr><td><strong>State Bill reserved by the Governor (Art 201)</strong></td><td class="c">✅</td><td class="c">✅</td><td class="c">✅</td><td>⚠️ The President enjoys an <strong>ABSOLUTE veto</strong> over State Bills — even if the State Legislature re-passes it, he is <strong>NOT bound</strong> to assent</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box insight"><b>💡 Why no “qualified veto” in India?</b> A <strong>qualified veto</strong> (as in the USA, where Congress needs a 2/3rd majority to override) does <strong>not</strong> exist in India. Indian Parliament can override a return by a <strong>simple majority</strong> on re-passage. So Indian veto types = <strong>Absolute, Suspensive, Pocket</strong> only. 🇺🇸 vs 🇮🇳 — a classic MCQ.</div>
+
+  <h3>📌 Real instances (memorise these)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Veto</th><th>President</th><th>Bill</th><th class="c">Year</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Absolute</strong></td><td>Dr. Rajendra Prasad</td><td>PEPSU Appropriation Bill</td><td class="c">1954</td></tr>
+      <tr><td><strong>Absolute</strong></td><td>R. Venkataraman</td><td>Salary, Allowances &amp; Pension of MPs (Amendment) Bill — <em>the Lok Sabha had been dissolved; the outgoing government advised withholding</em></td><td class="c">1991</td></tr>
+      <tr><td><strong>Pocket</strong></td><td>Giani Zail Singh</td><td><strong>Indian Post Office (Amendment) Bill</strong> — allowed government interception of mail; he simply never acted, and it lapsed with the next government ✉️</td><td class="c">1986</td></tr>
+      <tr><td><strong>Suspensive</strong></td><td>Dr. A.P.J. Abdul Kalam</td><td>Parliament (Prevention of Disqualification) Amendment Bill — the <strong>“Office of Profit” Bill</strong>; returned, re-passed unchanged, and he was <strong>bound to assent</strong></td><td class="c">2006</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box warn"><b>⚖️ CRITICAL 2025 DEVELOPMENT — the “deemed assent” saga.</b> In <strong>State of Tamil Nadu v. Governor of Tamil Nadu (April 2025)</strong>, a two-judge SC bench imposed <strong>timelines</strong> on Governors/the President under <span class="art">Arts 200–201</span> and used <span class="art">Art 142</span> to “deem” 10 Bills to have received assent. The President then made the <strong>16th Presidential Reference</strong> under <span class="art">Art 143</span> (13 May 2025). On <strong>20 November 2025</strong>, a <strong>5-judge Constitution Bench (CJI B.R. Gavai)</strong> delivered a unanimous advisory opinion <strong>overriding</strong> that view. It held: (i) the Governor has <strong>three</strong> options under Art 200 — assent, withhold + return, or reserve for the President; (ii) the Governor exercises <strong>genuine discretion</strong> under Art 200 and is <strong>not bound</strong> by ministerial advice; (iii) <strong>courts cannot impose timelines</strong> on the Governor or the President; (iv) there is <strong>no such thing as “deemed assent”</strong> and <strong>Art 142 cannot supplant</strong> express constitutional provisions; (v) these functions are <strong>broadly non-justiciable</strong> — but <strong>prolonged, unexplained, indefinite inaction</strong> invites <strong>limited judicial review</strong>, in which a court may only direct the Governor <strong>to act</strong>, without touching the merits. This is now the governing law on assent. <em>(This area is moving fast — verify the latest position before relying on it.)</em></div>
+
+  <div class="box case"><b>⚖️ Related jurisprudence on assent:</b> <em>Purushothaman Nambudiri v. State of Kerala (1962)</em> — a Bill pending assent does <strong>not lapse</strong> on the dissolution of the Legislature (unlike Bills pending in the House). <em>Hoechst Pharmaceuticals v. State of Bihar (1983)</em> — the President’s assent under Art 254(2) makes a repugnant State law prevail in that State. <em>Kaiser-i-Hind v. NTC (2002)</em> — assent must be a <strong>conscious, specific</strong> assent on the identified repugnancy, not a general one.</div>
+</section>
+
+<!-- ═══════════ ORDINANCE ═══════════ -->
+<section class="sec rv" id="ord" style="--acc:#4fd2e6;--acc2:#3fd6a4">
+  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-t">📜 1.10 Article 123 — Ordinance-Making Power</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+   CONDITIONS PRECEDENT (all must be satisfied)
+   ┌──────────────────────────────────────────────────────────────┐
+   │ ① Both Houses NOT in session (or at least ONE House not in   │
+   │    session — an ordinance can be issued if even one House    │
+   │    is not sitting)                                            │
+   │ ② President is SATISFIED that circumstances exist rendering   │
+   │    IMMEDIATE ACTION necessary                                 │
+   │ ③ Subject-matter must be within PARLIAMENT'S legislative      │
+   │    competence (co-extensive with Parliament's power)          │
+   └───────────────────────────┬──────────────────────────────────┘
+                               ▼
+                 ORDINANCE = SAME FORCE &amp; EFFECT AS AN ACT
+                 (but it is an EXECUTIVE act, not legislative)
+                               ▼
+   ┌──────────────────────────────────────────────────────────────┐
+   │  MUST be LAID before BOTH Houses on re-assembly               │
+   │  CEASES to operate 6 WEEKS from re-assembly                   │
+   │  (if the two Houses re-assemble on different dates,           │
+   │   6 weeks counted from the LATER date)                        │
+   │  OR earlier, if DISAPPROVED by resolutions of BOTH Houses     │
+   │  President may WITHDRAW it at any time                        │
+   └──────────────────────────────────────────────────────────────┘
+
+   ⏱️ MAXIMUM LIFE  =  6 MONTHS (max gap between sessions)  +  6 WEEKS
+                    =  approx. 7½ MONTHS
+</pre>
+
+  <div class="grid g2">
+    <div class="card"><h4>🚫 Limits &amp; character</h4>
+    <ul class="tick">
+      <li><strong>Cannot amend the Constitution</strong> — Art 368 requires an Act of Parliament with special majority.</li>
+      <li>Subject to the <strong>same constitutional limitations</strong> as an Act — an ordinance violating Fundamental Rights is void.</li>
+      <li>May be <strong>retrospective</strong>; may amend/repeal an Act of Parliament or another ordinance; may amend a tax law.</li>
+      <li>Issued only on the <strong>advice of the Council of Ministers</strong> — never a personal exercise.</li>
+      <li>It is <strong>co-extensive but not co-equal</strong> with Parliament’s legislative power: same subject-matter reach, but a subordinate, temporary and conditional instrument.</li>
+      <li><strong>Unique to India</strong> — no such power exists with the British Crown or the US President; it descends from the <strong>Government of India Act, 1935 (s.42)</strong>.</li>
+    </ul></div>
+    <div class="card"><h4>⚖️ Landmark cases</h4>
+    <ul class="tick">
+      <li><strong>R.C. Cooper v. Union of India (1970, Bank Nationalisation):</strong> the President’s “satisfaction” is <strong>justiciable</strong> on grounds of <strong>mala fide</strong> — overturning the earlier view that it was wholly immune. (The 38th Amendment, 1975 tried to make it non-justiciable; the <strong>44th Amendment, 1978</strong> deleted that protection.)</li>
+      <li><strong>A.K. Roy v. Union of India (1982):</strong> upheld the ordinance power, but observed that judicial review is available where satisfaction is based on <strong>wholly extraneous</strong> grounds.</li>
+      <li><strong>D.C. Wadhwa v. State of Bihar (1987):</strong> successive <strong>re-promulgation</strong> of ordinances without placing them before the legislature is a <strong>“fraud on the Constitution”</strong> and a <strong>subversion of the democratic process</strong>. (Bihar had re-promulgated <strong>256 ordinances</strong> between 1967–81, some kept alive for <strong>14 years</strong>.)</li>
+      <li><strong>Krishna Kumar Singh v. State of Bihar (2017, 7-judge):</strong> <strong>laying before Parliament is mandatory</strong>; re-promulgation is unconstitutional; an ordinance that lapses does <strong>not</strong> create <strong>enduring rights</strong> — only “irreversible consequences” and compelling public-interest situations are protected. The theory that a lapsed ordinance has permanent effects (from <em>State of Orissa v. Bhupendra Kumar Bose</em>) stands substantially diluted.</li>
+    </ul></div>
+  </div>
+
+  <div class="box insight"><b>💡 Ordinance vs Governor’s ordinance (Art 213) — the difference:</b> A <strong>Governor cannot</strong> issue an ordinance <strong>without the President’s instructions</strong> in three cases: (i) if a Bill on the same subject would have required the <strong>President’s previous sanction</strong> for introduction; (ii) if the Governor would have <strong>reserved</strong> such a Bill for the President’s consideration; (iii) if an Act of the State Legislature on the same subject would have been <strong>invalid without the President’s assent</strong>. The <strong>President has no such fetter</strong>. 🎗️</div>
+  <div class="box warn"><b>⚠️ “Ordinance Raj” critique:</b> Ordinances are meant for emergencies, but have been used to bypass a hostile Rajya Sabha or an inconvenient session. Reformers suggest: a <strong>constitutional bar on re-promulgation</strong>, a requirement of <strong>reasons in writing</strong>, and <strong>compulsory parliamentary vote within a fixed period</strong>. <em>(Note: an ordinance is “laid” before Parliament; it need not be affirmatively voted upon — silence is enough to let it lapse.)</em></div>
+</section>
+
+<!-- ═══════════ IMMUNITY ═══════════ -->
+<section class="sec rv" id="immun" style="--acc:#b493ff;--acc2:#7db8ff">
+  <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-t">🛡️ 1.11 Article 361 — Immunity of the President</h2><span class="sec-line"></span></div>
+
+  <div class="tw"><table>
+    <thead><tr><th class="c">Clause</th><th>Protection</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">361(1)</span></td><td><strong>Not answerable to any court</strong> for the exercise/performance of the powers &amp; duties of office. ⚠️ <em>Exception:</em> his conduct <strong>may be reviewed</strong> by any court/tribunal/body designated by either House for the purpose of <strong>impeachment under Art 61</strong>. Also, this does not bar suits against the <strong>Government of India</strong>.</td></tr>
+      <tr><td class="c"><span class="art">361(2)</span></td><td><strong>No criminal proceedings whatsoever</strong> shall be instituted or continued against him during his term of office 🚫</td></tr>
+      <tr><td class="c"><span class="art">361(3)</span></td><td><strong>No process for arrest or imprisonment</strong> shall issue from any court during his term ⛓️</td></tr>
+      <tr><td class="c"><span class="art">361(4)</span></td><td><strong>Civil proceedings</strong> for acts in his <strong>personal capacity</strong>: may be instituted only after <strong>2 months’ prior written notice</strong> stating the nature of the proceedings, the cause of action, the party’s name/description/residence, and the relief claimed 📝</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box insight"><b>💡 Insight:</b> The immunity is <strong>personal and temporal</strong> — it protects the <em>office-holder during the term</em>, not the <em>act forever</em>. Proceedings can be instituted after he demits office. Government actions taken in the President’s name remain fully <strong>justiciable</strong> — the <strong>individual, not the action</strong>, is immune. The same protection extends to <strong>Governors</strong> under Art 361.</div>
+  <div class="box case"><b>⚖️ Rameshwar Prasad v. Union of India (2006):</b> Immunity under Art 361 protects the Governor personally, but the <strong>court can still examine the mala fides of the action</strong> and strike it down — the immunity of the person does not sanctify the act. The Bihar Assembly’s dissolution in 2005 was held unconstitutional even though the Governor could not be summoned.</div>
+  <div class="box warn"><b>⚠️ Related privileges:</b> <span class="art">Art 361A</span> protects the publication of <strong>substantially true reports of parliamentary/State legislature proceedings</strong> (inserted by the 44th Amendment, 1978). <span class="art">Art 361B</span> (91st Amendment, 2003) bars a defection-disqualified member from holding any <strong>remunerative political post</strong>.</div>
+</section>
+
+<!-- ═══════════ EMERGENCY ═══════════ -->
+<section class="sec rv" id="emerg" style="--acc:#ff6b6b;--acc2:#ffc46b">
+  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-t">🚨 1.12 Emergency Powers (Part XVIII) — Quick Reference</h2><span class="sec-line"></span></div>
+
+  <div class="mban">🚨 “N-S-F” → 352 National • 356 State • 360 Financial</div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Type</th><th class="c">Art</th><th>Ground</th><th>Proclamation Safeguards</th></tr></thead>
+    <tbody>
+      <tr><td><strong>N</strong>ational Emergency ⚔️</td><td class="c"><span class="art">352</span></td><td><strong>War, External Aggression, Armed Rebellion</strong> <em>(the 44th Amdt replaced “internal disturbance” with “armed rebellion”)</em></td><td>Requires the <strong>WRITTEN recommendation of the UNION CABINET</strong> <em>(the ONLY place the word “Cabinet” appears in the Constitution)</em>; parliamentary approval by <strong>SPECIAL majority within 1 month</strong>; valid <strong>6 months at a time</strong>; revoked by a <strong>simple-majority resolution of the LOK SABHA alone</strong> (on a notice signed by 1/10th of LS members, a special sitting must be held within 14 days)</td></tr>
+      <tr><td><strong>S</strong>tate Emergency (President’s Rule) 🏛️</td><td class="c"><span class="art">356</span></td><td>Failure of the constitutional machinery in a State (also <span class="art">Art 365</span> — failure to comply with Union directions)</td><td>Approval by <strong>simple majority within 2 months</strong>; <strong>6 months at a time</strong>; <strong>max 3 years</strong> — beyond 1 year only if a National Emergency is in force <em>and</em> the ECI certifies that elections cannot be held</td></tr>
+      <tr><td><strong>F</strong>inancial Emergency 💸</td><td class="c"><span class="art">360</span></td><td>Threat to the <strong>financial stability or credit</strong> of India or any part of its territory</td><td>Approval by <strong>simple majority within 2 months</strong>; <strong>once approved, continues indefinitely</strong> until revoked. <strong>NEVER USED.</strong> Effects: salaries of all officials (including <strong>SC/HC Judges</strong>) may be reduced; all Money Bills of States may be reserved for the President</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid g2">
+    <div class="card"><h4>📆 National Emergency — declared 3 times</h4>
+    <ul class="tick">
+      <li><strong>1962–68</strong> — Chinese aggression (external aggression) 🇨🇳</li>
+      <li><strong>1971–77</strong> — Indo-Pak war (external aggression) 🇵🇰</li>
+      <li><strong>1975–77</strong> — “internal disturbance” — the <strong>most controversial</strong>; led directly to the 44th Amendment safeguards ⚫</li>
+    </ul>
+    <p><strong>Effects:</strong> Centre gets executive directions over States (<span class="art">353</span>); Parliament may legislate on the <strong>State List</strong> (<span class="art">250</span>); the Lok Sabha’s life may be <strong>extended one year at a time</strong> (<span class="art">83</span>); <span class="art">Art 19</span> suspended only in <strong>war/external aggression</strong> (<span class="art">358</span>, post-44th Amdt); other FRs may be suspended by Presidential order under <span class="art">359</span>, <strong>except Arts 20 and 21</strong> (44th Amendment).</p>
+    </div>
+    <div class="card"><h4>⚖️ S.R. Bommai v. Union of India (1994) — the landmark</h4>
+    <ul class="tick">
+      <li>A proclamation under <span class="art">Art 356</span> is <strong>JUSTICIABLE</strong>.</li>
+      <li>The majority must be tested on the <strong>floor of the House</strong>, not in the Raj Bhavan. 🏛️</li>
+      <li><strong>Secularism</strong> is part of the <strong>basic structure</strong>.</li>
+      <li>The Assembly can only be <strong>suspended</strong>, not dissolved, before both Houses approve the proclamation; a dissolved Assembly can be <strong>revived</strong> if the proclamation is struck down.</li>
+      <li>The <strong>material</strong> on which the President formed his satisfaction can be examined (Art 74(2) does not bar this).</li>
+    </ul>
+    <p class="box good" style="margin-top:10px"><b>📚 Also cite:</b> <em>Rameshwar Prasad (2006)</em> — dissolution of the Bihar Assembly on the Governor’s report about “horse-trading” held mala fide; <em>Nabam Rebia (2016)</em> — the Governor cannot act on his own on Assembly summoning/Speaker matters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ RUBBER STAMP DEBATE ═══════════ -->
+<section class="sec rv" id="debate" style="--acc:#ffd479;--acc2:#3fd6a4">
+  <div class="sec-head"><span class="sec-num">11</span><h2 class="sec-t">🧠 1.13 The Great Debate: Is the President a Rubber Stamp?</h2><span class="sec-line"></span></div>
+
+  <div class="vs">
+    <div class="pane">
+      <h4>🎭 ARGUMENT: NOMINAL HEAD</h4>
+      <ul class="tick">
+        <li><span class="art">Art 74(1)</span> — <strong>“shall act in accordance with”</strong> ministerial advice (42nd Amendment, 1976).</li>
+        <li><em>Shamsher Singh v. State of Punjab (1974, 7-judge)</em> — the President is a <strong>formal/constitutional head</strong>; his “satisfaction” means the satisfaction of the <strong>Council of Ministers</strong>. The Indian system is a “Cabinet system,” not a presidential one.</li>
+        <li><em>Ram Jawaya Kapur v. State of Punjab (1955)</em> — executive power is really exercised by the Council of Ministers; the President is the formal repository.</li>
+        <li><em>U.N.R. Rao v. Indira Gandhi (1971)</em> — <span class="art">Art 74(1)</span> is <strong>mandatory</strong>; there must ALWAYS be a Council of Ministers, even after the Lok Sabha is dissolved.</li>
+        <li><strong>Dr. Ambedkar:</strong> <em>“He is the head of the State but not of the Executive. He represents the Nation but does not rule the Nation. He is the symbol of the Nation.”</em></li>
+        <li><strong>Nehru:</strong> <em>“We did not give him any real power, but we have made his position one of great authority and dignity.”</em></li>
+      </ul>
+    </div>
+    <div class="mid">⚔️<br>VS</div>
+    <div class="pane">
+      <h4>💪 ARGUMENT: REAL AUTHORITY</h4>
+      <ul class="tick">
+        <li><strong>44th Amendment (1978) proviso</strong> — can <strong>require reconsideration ONCE</strong>; and there is <strong>no time limit</strong> for doing so.</li>
+        <li><span class="art">Art 78</span> — right to be <strong>informed</strong>, to <strong>seek information</strong>, and to require a Minister’s solitary decision to be <strong>placed before the full Council</strong>.</li>
+        <li><strong>Situational discretion:</strong> hung Parliament (choice of PM), dismissal of a CoM that has demonstrably lost confidence, refusal of dissolution to a “spent” PM, and the timing of assent.</li>
+        <li><strong>Veto powers</strong> (absolute, suspensive, pocket) — Zail Singh 1986, Kalam 2006.</li>
+        <li><strong>K.R. Narayanan</strong> returned Union Cabinet advice for President’s Rule in <strong>UP (1997)</strong> and <strong>Bihar (1998)</strong> — the government backed down both times. 🔥</li>
+        <li>The <strong>2025 advisory opinion</strong> re-affirmed that no court may impose timelines on the President’s assent function — a de facto expansion of his discretionary space.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="quote">🎯 <strong>THE BALANCED VERDICT:</strong> The President is a <strong>constitutional head with no discretionary policy power but substantial <em>situational</em> and <em>moral</em> authority</strong> — best captured by Bagehot’s three rights of a constitutional monarch: <strong>the right to be consulted, the right to encourage, and the right to warn.</strong> Post-1990s coalition politics vastly expanded the <em>practical</em> significance of the office; the return of single-party majorities after 2014 has again narrowed it. The office is therefore <strong>elastic — it expands in proportion to political fragmentation.</strong> 🎈</div>
+
+  <details class="acc"><summary>🇺🇸 vs 🇮🇳 — President of India vs President of the USA (comparison table)</summary><div class="body">
+  <div class="tw"><table><thead><tr><th>Basis</th><th>🇮🇳 India</th><th>🇺🇸 USA</th></tr></thead><tbody>
+    <tr><td>Nature</td><td>Nominal/constitutional head</td><td><strong>Real</strong> head of the executive</td></tr>
+    <tr><td>Election</td><td><strong>Indirect</strong> — MPs + MLAs, PR by STV</td><td>Indirect but quasi-direct — popularly chosen Electoral College</td></tr>
+    <tr><td>Term</td><td>5 years, <strong>unlimited</strong> re-election</td><td>4 years, <strong>max 2 terms</strong> (22nd Amendment, 1951)</td></tr>
+    <tr><td>Relation to legislature</td><td><strong>Part of Parliament</strong> (Art 79)</td><td><strong>Separate</strong> from Congress</td></tr>
+    <tr><td>Cabinet</td><td>Ministers are MPs, responsible to the Lok Sabha</td><td>Secretaries are <strong>not</strong> members of Congress; answerable only to the President</td></tr>
+    <tr><td>Veto</td><td>Absolute, Suspensive, Pocket (<strong>no qualified veto</strong>)</td><td><strong>Qualified veto</strong> — Congress overrides by 2/3rd of both Houses</td></tr>
+    <tr><td>Removal</td><td>Impeachment for <strong>“violation of the Constitution”</strong> — by Parliament</td><td>Impeachment for <strong>treason, bribery, high crimes and misdemeanours</strong> — House charges, Senate tries, CJ presides</td></tr>
+    <tr><td>Ordinance power</td><td>✅ Yes (Art 123)</td><td>❌ No (only executive orders, of lesser force)</td></tr>
+  </tbody></table></div>
+  <div class="box mnemo"><b>⭐ Ambedkar’s summing-up:</b> <em>“The President of the Indian Union occupies the same position as the King under the English Constitution… He is the head of the State but not of the Executive.”</em></div>
+  </div></details>
+</section>
+
+<!-- ═══════════ VICE PRESIDENT ═══════════ -->
+<section class="sec rv" id="vp" style="--acc:#4fd2e6;--acc2:#7db8ff">
+  <div class="sec-head"><span class="sec-num">12</span><h2 class="sec-t">🎖️ Part 2 — The Vice-President (Articles 63–71)</h2><span class="sec-line"></span></div>
+
+  <div class="box mnemo"><b>🧠 NARRATIVE MNEMONIC:</b> “The VP <b>E</b>xists (63), <b>C</b>hairs the Rajya Sabha (64), <b>A</b>cts as President (65), is <b>E</b>lected (66), has a <b>T</b>erm (67), on a <b>T</b>imeline (68), takes an <b>O</b>ath (69), covers <b>O</b>ther contingencies (70), and <b>D</b>isputes go to the SC (71).”</div>
+
+  <div class="tw"><table>
+    <thead><tr><th class="c">Art</th><th>Content</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">63</span></td><td>There shall be a Vice-President of India — the <strong>second-highest constitutional office</strong> 🥈</td></tr>
+      <tr><td class="c"><span class="art">64</span></td><td><strong>Ex-officio Chairman of the Rajya Sabha</strong>; shall <strong>not hold any other office of profit</strong>; while <em>acting</em> as President he does <strong>not</strong> perform the Chairman’s duties and is <strong>not entitled to the Chairman’s salary</strong> (he draws the President’s emoluments instead)</td></tr>
+      <tr><td class="c"><span class="art">65</span></td><td><strong>Acts as President</strong> during a vacancy (death/resignation/removal/otherwise) — for a <strong>maximum of 6 months</strong>; also <strong>discharges the functions</strong> of the President when the President is unable to act (illness, absence) — for that period only. Enjoys <strong>all powers and immunities</strong> of the President</td></tr>
+      <tr><td class="c"><span class="art">66</span></td><td><strong>Election:</strong> Electoral College = <strong>ALL members of BOTH Houses</strong> (elected <strong>AND nominated</strong>) — a <strong>joint electoral college but NOT a joint sitting</strong> <em>(the requirement of a joint meeting was removed by the 11th Amendment Act, 1961)</em>. Method: <strong>PR by STV, secret ballot</strong>. Qualifications: citizen, <strong>35 years</strong>, qualified for election to the <strong>Rajya Sabha</strong>, no office of profit (with the same exceptions)</td></tr>
+      <tr><td class="c"><span class="art">67</span></td><td><strong>Term 5 years</strong>; continues until his successor enters office. <strong>Resignation → to the PRESIDENT.</strong> <strong>Removal:</strong> a resolution passed by a <strong>MAJORITY OF ALL THE THEN MEMBERS of the RAJYA SABHA</strong> (<em>effective majority</em>) and <strong>AGREED TO by the Lok Sabha</strong> (<em>simple majority</em>), after <strong>14 days’ notice</strong>. <strong>NO GROUNDS are specified</strong> in the Constitution</td></tr>
+      <tr><td class="c"><span class="art">68</span></td><td>Timing of the election to fill a vacancy — vacancy by expiry: election <strong>before</strong> expiry; other vacancies: <strong>as soon as possible</strong>, and the new VP serves a <strong>full 5-year term</strong> from the date he enters office</td></tr>
+      <tr><td class="c"><span class="art">69</span></td><td><strong>Oath administered by the PRESIDENT</strong> (or a person appointed by him) — he swears “true faith and allegiance to the Constitution”</td></tr>
+      <tr><td class="c"><span class="art">70</span></td><td>Parliament may provide for the discharge of the President’s functions in <strong>other contingencies</strong> → the <em>Presidential (Discharge of Functions) Act, 1969</em></td></tr>
+      <tr><td class="c"><span class="art">71</span></td><td><strong>All doubts and disputes</strong> regarding the election of the President/VP → decided <strong>exclusively and finally by the SUPREME COURT</strong>. <strong>71(2):</strong> acts done by the President/VP before the election is declared void <strong>remain valid</strong>. <strong>71(3):</strong> Parliament may regulate matters by law. <strong>71(4):</strong> the election <strong>cannot be challenged</strong> on the ground of any <strong>vacancy in the electoral college</strong> 🧑‍⚖️</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>👑 vs 🎖️ President vs Vice-President — The Comparison Table</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Feature</th><th>👑 PRESIDENT</th><th>🎖️ VICE-PRESIDENT</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Electoral College</strong></td><td>Elected MPs + Elected MLAs (incl. Delhi, Puducherry, J&amp;K)</td><td><strong>ONLY MPs</strong> — of <strong>both Houses</strong>, <strong>including nominated</strong> members</td></tr>
+      <tr><td><strong>House qualification</strong></td><td>Qualified for election to the <strong>LOK SABHA</strong></td><td>Qualified for election to the <strong>RAJYA SABHA</strong> <em>(⚠️ this does NOT reduce the age to 30 — it remains 35)</em></td></tr>
+      <tr><td><strong>Age</strong></td><td>35 years</td><td>35 years</td></tr>
+      <tr><td><strong>Nomination</strong></td><td>50 proposers + 50 seconders</td><td>20 proposers + 20 seconders</td></tr>
+      <tr><td><strong>Security deposit</strong></td><td>₹15,000</td><td>₹15,000</td></tr>
+      <tr><td><strong>Oath by</strong></td><td><strong>Chief Justice of India</strong></td><td><strong>President</strong></td></tr>
+      <tr><td><strong>Resignation to</strong></td><td><strong>Vice-President</strong></td><td><strong>President</strong></td></tr>
+      <tr><td><strong>Removal</strong></td><td><strong>Impeachment (Art 61)</strong> — 2/3rd of the total membership, BOTH Houses; ground: <em>violation of the Constitution</em></td><td><strong>Art 67(b)</strong> — effective majority in the <strong>RAJYA SABHA</strong> + simple-majority agreement of the <strong>LOK SABHA</strong>; <strong>NO ground specified</strong></td></tr>
+      <tr><td><strong>Which House initiates removal?</strong></td><td>Either House</td><td><strong>Only the RAJYA SABHA</strong></td></tr>
+      <tr><td><strong>Salary (as of 2018 revision)</strong></td><td>₹5,00,000 / month</td><td>₹4,00,000 / month <em>(drawn as Chairman of the Rajya Sabha — the Constitution does not fix a VP salary as such)</em></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box insight"><b>💡 The VP’s dual personality:</b> The VP is the <strong>only office-holder who belongs to two organs</strong> — he is part of the <strong>Union Executive</strong> (Part V, Chapter I) and simultaneously the <strong>presiding officer of the legislature</strong> (Chairman of the Rajya Sabha). He is <strong>not a member</strong> of the Rajya Sabha and therefore has <strong>no ordinary vote</strong> — only a <strong>casting vote</strong> in case of a tie. The model is borrowed from the <strong>American Vice-President</strong>, who presides over the Senate. 🇺🇸</div>
+  <div class="box warn"><b>⚠️ Trap:</b> Because the VP is not a member of the RS, when a resolution for his own removal is moved he <strong>cannot preside</strong> over that sitting — but he <strong>can speak and take part</strong> in the proceedings (<span class="art">Art 92</span> logic applied by analogy; the Deputy Chairman presides). Similarly, the <strong>Speaker</strong> can vote in the first instance on his own removal motion.</div>
+
+  <div class="grid g2">
+    <div class="card"><h4>📌 Current holder</h4><p><strong>Shri C.P. Radhakrishnan</strong>, <strong>15th Vice-President</strong>, sworn in on <strong>12 September 2025</strong>, following the resignation of <strong>Jagdeep Dhankhar</strong> (21 July 2025, citing health). Dhankhar is only the <strong>second VP to resign mid-term</strong>, after <strong>V.V. Giri</strong> (1969, who resigned to contest the Presidency). <em>Verify current status via a live source.</em></p></div>
+    <div class="card"><h4>📌 Six VPs who became President</h4><div class="chips">
+      <span class="chip">S. Radhakrishnan</span><span class="chip">Zakir Husain</span><span class="chip">V.V. Giri</span><span class="chip">R. Venkataraman</span><span class="chip">Shankar Dayal Sharma</span><span class="chip">K.R. Narayanan</span>
+    </div><p style="font-size:.86rem;color:var(--ink-3)">🏅 <strong>Dr. S. Radhakrishnan</strong> is the only VP to serve <strong>two full terms</strong> (1952–62) and then become President. <strong>Hamid Ansari</strong> (2007–2017) is the only other VP to serve two full terms, but he did not become President.</p></div>
+  </div>
+</section>
+
+<!-- ═══════════ PRIME MINISTER ═══════════ -->
+<section class="sec rv" id="pm" style="--acc:#ff7a9c;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">13</span><h2 class="sec-t">🧑‍💼 Part 3 — The Prime Minister</h2><span class="sec-line"></span></div>
+
+  <h3>🏛️ 3.1 The Constitutional Foundation</h3>
+  <div class="quote">📜 <strong>Article 75(1):</strong> <em>“The Prime Minister shall be appointed by the President and the other Ministers shall be appointed by the President on the advice of the Prime Minister.”</em></div>
+  <p>That is <strong>all</strong> the Constitution says about the <em>appointment</em> of the PM. There is no prescribed qualification, no prescribed procedure, no mention of “majority.” Everything else is <strong>CONVENTION</strong> — the single most important insight about this office. 🔑</p>
+
+  <h3>📋 3.2 Appointment: Rules, Conventions &amp; Case Law</h3>
+<pre class="flow">
+     ┌─────────────────────── APPOINTMENT OF THE PM ───────────────────────┐
+     │                                                                      │
+     │  SCENARIO A: CLEAR MAJORITY                                          │
+     │  → President has NO discretion. Must invite the leader of the        │
+     │    majority party / pre-poll alliance in the LOK SABHA.              │
+     │                                                                      │
+     │  SCENARIO B: HUNG PARLIAMENT  🎯 GENUINE PRESIDENTIAL DISCRETION     │
+     │  → Established order of preference (Sarkaria/Punchhi Commission      │
+     │    guidance, drawn from practice):                                   │
+     │      ① Leader of the pre-poll alliance with the largest strength     │
+     │      ② Leader of the single largest party with support of others     │
+     │      ③ Post-poll coalition with all partners joining the govt        │
+     │      ④ Post-poll coalition with some partners supporting from outside│
+     │  → Followed by a MANDATORY FLOOR TEST within a stipulated time.      │
+     │                                                                      │
+     │  SCENARIO C: SUDDEN DEATH OF A SITTING PM                            │
+     │  → President may appoint a caretaker/interim PM, then the ruling     │
+     │    party elects its leader. (Precedents: Gulzarilal Nanda in 1964    │
+     │    after Nehru, and 1966 after Shastri.)                             │
+     └──────────────────────────────────────────────────────────────────────┘
+</pre>
+
+  <h3>⚖️ Key case law on the PM’s appointment</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Case</th><th>Ratio</th></tr></thead>
+    <tbody>
+      <tr><td><strong>S.P. Anand v. H.D. Deve Gowda (1996)</strong></td><td>A person who is <strong>not a member of either House</strong> <em>can</em> be appointed Prime Minister, provided he becomes a member within <strong>6 months</strong> (<span class="art">Art 75(5)</span>). <em>Rationale:</em> Art 75(5) speaks of “a Minister,” and the PM is a Minister.</td></tr>
+      <tr><td><strong>B.R. Kapur v. State of Tamil Nadu (2001)</strong></td><td>A person <strong>disqualified</strong> from being a legislator (e.g., convicted under the RP Act, 1951) <strong>cannot</strong> be appointed CM/PM even for the 6-month window. Jayalalithaa’s appointment was struck down as unconstitutional.</td></tr>
+      <tr><td><strong>Manoj Narula v. Union of India (2014, Const. Bench)</strong></td><td>The Court <strong>cannot</strong> read in a disqualification barring persons with pending <strong>criminal charges</strong> from being Ministers — that is Parliament’s domain. But it invoked <strong>“constitutional trust,” “constitutional silence” and “constitutional morality”</strong>: the PM/CM is <em>expected</em> not to appoint persons with serious criminal antecedents. Selection of Ministers is the <strong>“constitutional prerogative”</strong> of the PM.</td></tr>
+      <tr><td><strong>Har Sharan Verma v. T.N. Singh (1971) / Union of India (1987)</strong></td><td>Affirmed that a non-legislator can be a Minister for 6 months; also that a person who has failed in an election can be appointed a Minister (though this remains constitutionally criticised).</td></tr>
+      <tr><td><strong>Rameshwar Prasad (2006) / Nabam Rebia (2016) / Shivraj Singh Chouhan v. Speaker, M.P. (2020)</strong></td><td>Cumulatively establish the <strong>floor test</strong> as the sole constitutionally recognised method of testing majority, and that the Governor/President may direct one where confidence is genuinely in doubt.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>🏛️ Conventions surrounding the PM (the ones examiners love)</h3>
+  <div class="card"><ol class="tick">
+    <li>The PM is <strong>normally a member of the LOK SABHA</strong> — but this is <strong>NOT</strong> a constitutional requirement. <strong>Rajya Sabha PMs:</strong> Indira Gandhi (1966, briefly), H.D. Deve Gowda (1996), I.K. Gujral (1997), and <strong>Dr. Manmohan Singh (2004–2014, the longest-serving RS Prime Minister)</strong>.</li>
+    <li>The PM <strong>must resign the moment he loses the confidence</strong> of the Lok Sabha — and his resignation <strong>automatically dissolves the entire Council of Ministers</strong>; individual Ministers cannot survive him.</li>
+    <li>Only the PM can <strong>advise the President to dissolve the Lok Sabha</strong>. <em>(A defeated PM’s right to advise dissolution is contested — precedent suggests the President may refuse and first explore alternative governments; e.g., 1979, 1990, 1997.)</em></li>
+    <li>A <strong>caretaker PM</strong> must not take major policy decisions or make major appointments.</li>
+    <li><strong>“Deputy Prime Minister”</strong> is an <strong>extra-constitutional</strong> post — the holder takes the oath <strong>as a Minister</strong>, not as Deputy PM. <em>(Precedents: Sardar Patel, Morarji Desai, Charan Singh, Jagjivan Ram, Y.B. Chavan, Devi Lal, L.K. Advani.)</em> In <strong>K.M. Sharma v. Devi Lal (1990)</strong> the SC upheld Devi Lal’s oath, treating “Deputy PM” as merely <strong>descriptive</strong>, since the oath’s substance was that of a Minister.</li>
+    <li>Cabinet decisions are <strong>collective and secret</strong> — no Minister may publicly dissent while remaining in office.</li>
+    <li>The PM chairs the Cabinet, sets its agenda, and by convention the <strong>Cabinet Secretary</strong> is its custodian of record.</li>
+  </ol></div>
+
+  <h3>⚙️ 3.3 Article 78 — The PM’s Three Duties to the President</h3>
+  <div class="mban">⚖️ “C-F-S” → Communicate • Furnish • Submit</div>
+  <div class="tw"><table>
+    <thead><tr><th class="c">Clause</th><th>Duty</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">78(a)</span></td><td><strong>COMMUNICATE</strong> to the President all <strong>decisions of the Council of Ministers</strong> relating to the <strong>administration of the affairs of the Union</strong> and <strong>proposals for legislation</strong> 📨</td></tr>
+      <tr><td class="c"><span class="art">78(b)</span></td><td><strong>FURNISH</strong> such information relating to the administration of the Union and proposals for legislation <strong>as the President may call for</strong> 📂</td></tr>
+      <tr><td class="c"><span class="art">78(c)</span></td><td>If the <strong>President so requires</strong>, <strong>SUBMIT for the consideration of the Council of Ministers</strong> any matter on which a <strong>decision has been taken by an individual Minister but which has NOT been considered by the Council</strong> 🔁</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box insight"><b>💡 INSIGHT:</b> Art 78 is the <strong>umbilical cord</strong> between the nominal and the real executive. It gives the President an <em>institutional right to information</em> — and clause (c) lets him force a solitary Minister’s decision into the collective forum, a subtle but real check. Note the asymmetry: the duty is on the <strong>PM personally</strong>, not on the Council; and <strong>no court can enforce Art 78</strong> — it is a political obligation, breach of which is at most a ground under Art 61.</div>
+  <div class="box warn"><b>⚠️ Zail Singh’s grievance (1986–87):</b> President Giani Zail Singh publicly complained that PM Rajiv Gandhi was <strong>not fulfilling Art 78</strong> — he wrote formally seeking information (e.g., on the Bofors matter and the Sri Lanka accord) and received little. This episode is the classic illustration that <strong>Art 78 has no enforcement machinery</strong>.</div>
+
+  <h3>🌟 3.4 Powers &amp; Roles of the Prime Minister</h3>
+<pre class="flow">
+                            🧑‍💼 PRIME MINISTER
+                                    │
+   ┌──────────┬──────────┬──────────┼──────────┬────────────┬──────────┐
+   ▼          ▼          ▼          ▼          ▼            ▼          ▼
+ Head of   Leader of  Link with  Chief of   Political   Emergency   Chief
+ Council   the Lok    the        Adminis-   Leader of   Manager     Spokes-
+ of Min.   Sabha      President  tration    the Nation              person
+</pre>
+
+  <div class="grid g2">
+    <div class="card"><h4>🅰️ In relation to the Council of Ministers</h4><p>Recommends persons for appointment as Ministers; <strong>allocates and reshuffles portfolios</strong> (via <span class="art">Art 77(3)</span> rules); can ask a Minister to resign or advise the President to dismiss him; presides over Cabinet meetings and guides, directs and controls all Ministers; <strong>his resignation or death dissolves the entire Council</strong> — <em>“he is the keystone; remove it and the arch falls.”</em></p></div>
+    <div class="card"><h4>🅱️ In relation to the President</h4><p>Sole channel of communication (<span class="art">Art 78</span>); advises on the appointment of the <strong>CAG, Attorney General, CEC &amp; ECs, UPSC Chairman &amp; members, Finance Commission Chairman, Governors, Ambassadors</strong> and other high constitutional functionaries.</p></div>
+    <div class="card"><h4>🅲 In relation to Parliament</h4><p><strong>Leader of the Lok Sabha</strong>; advises the President on <strong>summoning and proroguing</strong> sessions and on <strong>dissolving the Lok Sabha at any time</strong>; announces government policies on the floor; the government’s survival is measured by his command of the House.</p></div>
+    <div class="card"><h4>🅳 Other roles</h4><p><strong>Chairperson of NITI Aayog</strong>; Chairperson of the <strong>Inter-State Council</strong> (<span class="art">Art 263</span>); Chairman of the <strong>National Water Resources Council</strong>; Chair of the <strong>Cabinet Committee on Security (CCS)</strong> and the <strong>Appointments Committee of the Cabinet (ACC)</strong>; political head of all services; <strong>chief spokesperson of the nation</strong> in foreign affairs; the <strong>crisis manager-in-chief</strong> during emergencies.</p></div>
+  </div>
+
+  <div class="box good"><b>🏢 The PMO — the invisible institution:</b> The <strong>Prime Minister’s Office</strong> is an <strong>extra-constitutional</strong> body (created 1947 as the PM’s Secretariat, renamed PMO in 1977). Headed by the <strong>Principal Secretary to the PM</strong>, it has no attached executive authority of its own but has become the nerve-centre of policy coordination. Alongside it: the <strong>Cabinet Secretariat</strong> (headed by the Cabinet Secretary, the senior-most civil servant) services the Cabinet. The rise of the PMO is the administrative face of what Crossman called <strong>“Prime Ministerial Government.”</strong> 🧠</div>
+
+  <details class="acc"><summary>📈 Prime Ministerial trivia worth remembering</summary><div class="body"><ul class="tick">
+    <li><strong>Jawaharlal Nehru</strong> — first and longest-serving PM (1947–1964, 16 years 286 days); the only PM to die in office along with <strong>Lal Bahadur Shastri</strong> (1966) and <strong>Indira Gandhi</strong> (assassinated 1984).</li>
+    <li><strong>Gulzarilal Nanda</strong> — acting PM <strong>twice</strong> (1964, 1966), each for 13 days; never a full PM.</li>
+    <li><strong>Indira Gandhi</strong> — first and so far only woman PM; first PM to be defeated in a general election (1977).</li>
+    <li><strong>Morarji Desai</strong> — first non-Congress PM; oldest to assume office (81).</li>
+    <li><strong>Charan Singh</strong> — the only PM who <strong>never faced Parliament</strong>.</li>
+    <li><strong>Rajiv Gandhi</strong> — youngest PM (40).</li>
+    <li><strong>Atal Bihari Vajpayee</strong> — the shortest full term (13 days, 1996); lost the 1999 confidence motion by <strong>one vote</strong>.</li>
+    <li><strong>Dr. Manmohan Singh</strong> — longest-serving PM from the Rajya Sabha; the first Sikh PM.</li>
+    <li>The PM’s <strong>salary and allowances are determined by Parliament</strong> (<span class="art">Art 75(6)</span>) — he draws them as a Minister and as an MP; there is no separate constitutional salary for the office.</li>
+  </ul></div></details>
+
+  <h3>🗣️ 3.5 The Great Quotations on the PM &amp; Cabinet</h3>
+  <div class="mban">🧠 “L-L-H-M-J-C-A” → Lowell • Laski • Harcourt • Morley • Jennings • Crossman • Ambedkar</div>
+  <div class="tw"><table>
+    <thead><tr><th>Thinker</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lord Morley</strong></td><td>The PM is <strong>“primus inter pares”</strong> (<em>first among equals</em>) and the <strong>“keystone of the Cabinet arch.”</strong></td></tr>
+      <tr><td><strong>Sir W.V. Harcourt</strong></td><td><strong>“Inter stellas luna minores”</strong> — <em>a moon among lesser stars.</em> 🌙</td></tr>
+      <tr><td><strong>Ivor Jennings</strong></td><td>The PM is <strong>“the sun around which planets revolve”</strong>; the Cabinet is the <strong>“steering wheel of the ship of state”</strong> and the <strong>“core of the British constitutional system.”</strong> ☀️</td></tr>
+      <tr><td><strong>H.J. Laski</strong></td><td>The PM is <strong>“central to the Cabinet’s formation, central to its life, and central to its death”</strong>; also the <strong>“pivot of the whole system of government.”</strong></td></tr>
+      <tr><td><strong>Walter Bagehot</strong></td><td>The Cabinet is <strong>“a hyphen that joins, a buckle that fastens, the legislative part of the State to the executive part.”</strong> 🔗</td></tr>
+      <tr><td><strong>A.L. Lowell</strong></td><td>The Cabinet is the <strong>“keystone of the political arch.”</strong></td></tr>
+      <tr><td><strong>R.H.S. Crossman</strong></td><td>Post-war democracies have shifted from <strong>“Cabinet Government” to “PRIME MINISTERIAL GOVERNMENT.”</strong></td></tr>
+      <tr><td><strong>Ramsay Muir</strong></td><td>Warned of <strong>“Cabinet dictatorship.”</strong> ⚠️</td></tr>
+      <tr><td><strong>Dr. B.R. Ambedkar</strong></td><td>⭐ <em>“If any functionary under our Constitution is to be compared with the US President, he is the <strong>Prime Minister</strong> and not the President of the Union.”</em></td></tr>
+      <tr><td><strong>W.H. Morris-Jones</strong></td><td>The Cabinet is the <strong>“pivot around which the whole political machinery revolves.”</strong></td></tr>
+      <tr><td><strong>Herman Finer</strong></td><td>The Cabinet is <strong>“the steering wheel of the ship of state”</strong> (echoing Jennings) and the PM its helmsman. 🚢</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ═══════════ COUNCIL OF MINISTERS ═══════════ -->
+<section class="sec rv" id="com" style="--acc:#b493ff;--acc2:#ff7a9c">
+  <div class="sec-head"><span class="sec-num">14</span><h2 class="sec-t">🏛️ Part 4 — The Council of Ministers (Art 74, 75, 77)</h2><span class="sec-line"></span></div>
+
+  <h3>📜 4.1 Article 74 — Aid &amp; Advice</h3>
+  <div class="quote"><strong>74(1):</strong> <em>“There <strong>shall be</strong> a Council of Ministers with the Prime Minister at the head to <strong>aid and advise</strong> the President who <strong>shall, in the exercise of his functions, act in accordance with such advice</strong>: Provided that the President <strong>may require the Council of Ministers to reconsider</strong> such advice, either generally or otherwise, and the President <strong>shall act in accordance with the advice tendered after such reconsideration</strong>.”</em><br><br>
+  <strong>74(2):</strong> <em>“The question whether any, and if so what, advice was tendered by Ministers to the President <strong>shall not be inquired into in any court</strong>.”</em></div>
+
+  <h3>🕰️ The Evolution of Article 74 — A Timeline</h3>
+<pre class="flow">
+ 1950 ─────────────► 1976 ─────────────────► 1978 ────────────────────────►
+ ORIGINAL           42nd AMENDMENT          44th AMENDMENT
+ "to aid and        Made the advice         Added the PROVISO:
+ advise the         EXPRESSLY BINDING       President may return the advice
+ President"         ("shall act in          for RECONSIDERATION ONCE.
+ (Binding only      accordance with         After reconsideration, he is
+ by convention)     such advice")           BOUND to act on it.
+                                            → The "POCKET/DELAY" power
+</pre>
+
+  <div class="box insight"><b>💡 KEY INSIGHTS on Art 74(2):</b> It bars inquiry into the <strong>advice itself</strong>, <strong>NOT</strong> into the <strong>material on which the advice was based</strong>. <em>S.R. Bommai (1994)</em> confirmed the Court can examine the underlying <strong>material/records</strong> for an Art 356 proclamation. The proviso also creates the President’s most potent weapon: <strong>the power of delay</strong> — no time limit is prescribed for returning advice, so an unwilling President can hold advice for weeks while political pressure builds.</div>
+  <div class="box warn"><b>⚠️ Constitutional puzzle:</b> If the President <strong>refuses to act even after reconsideration</strong>, there is <strong>no mechanism</strong> to compel him — except <strong>impeachment under Art 61</strong> for “violation of the Constitution.” The Constitution relies here on <strong>convention and political morality</strong>, not enforcement.</div>
+
+  <h3>📋 4.2 Article 75 — Other Provisions as to Ministers (Clause-by-Clause)</h3>
+  <div class="mban">🧠 “A-C-D-P-C-O-S-S” → Appointment • Cap of 15% • Defection bar • Pleasure • Collective responsibility • Oath • Six months • Salaries</div>
+  <div class="tw"><table>
+    <thead><tr><th class="c">Clause</th><th>Text &amp; Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">75(1)</span></td><td><strong>PM appointed by the President</strong>; other Ministers appointed by the President <strong>on the PM’s advice</strong></td></tr>
+      <tr><td class="c"><span class="art">75(1A)</span> ⭐</td><td><em>[Inserted by the <strong>91st Amendment Act, 2003</strong>]</em> The total number of Ministers, <strong>including the Prime Minister</strong>, shall <strong>not exceed 15% of the total strength of the LOK SABHA</strong> <em>(→ with the LS at 543, the cap is <strong>81</strong>)</em>. <em>For States, the cap is 15% of the Assembly with a floor of 12 Ministers (Art 164(1A)).</em></td></tr>
+      <tr><td class="c"><span class="art">75(1B)</span> ⭐</td><td><em>[<strong>91st Amendment, 2003</strong>]</em> An MP <strong>disqualified for DEFECTION</strong> under the 10th Schedule is <strong>also disqualified to be a Minister</strong> for the remainder of his term or until he is re-elected</td></tr>
+      <tr><td class="c"><span class="art">75(2)</span></td><td>Ministers hold office <strong>“during the pleasure of the President”</strong> → in reality, during the pleasure of the <strong>Prime Minister</strong> (<strong>individual responsibility</strong>)</td></tr>
+      <tr><td class="c"><span class="art">75(3)</span> ⭐</td><td>The Council of Ministers is <strong>COLLECTIVELY RESPONSIBLE to the HOUSE OF THE PEOPLE (Lok Sabha)</strong> — <em>the bedrock of parliamentary government</em> 🏛️</td></tr>
+      <tr><td class="c"><span class="art">75(4)</span></td><td><strong>Oaths of office and secrecy</strong> administered by the <strong>President</strong> (forms in the <strong>Third Schedule</strong>)</td></tr>
+      <tr><td class="c"><span class="art">75(5)</span></td><td>A Minister who is <strong>not a member of either House for 6 consecutive months</strong> <strong>ceases</strong> to be a Minister</td></tr>
+      <tr><td class="c"><span class="art">75(6)</span></td><td>Salaries and allowances of Ministers are <strong>determined by Parliament</strong> from time to time</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box warn"><b>⚠️ 91st Amendment (2003) — the anti-defection package.</b> It did four things: (i) capped the Union CoM at 15% of the LS (Art 75(1A)); (ii) capped State CoMs at 15% of the Assembly with a minimum of 12 (Art 164(1A)); (iii) disqualified defectors from ministerial office (Arts 75(1B) &amp; 164(1B)) and from <strong>remunerative political posts</strong> (Art 361B); and (iv) <strong>deleted paragraph 3 of the 10th Schedule</strong> — thereby abolishing the <strong>“split” exception (1/3rd)</strong>, leaving only <strong>merger (2/3rd)</strong> as a defence. 🧨</div>
+
+  <h3>🔗 Collective Responsibility — The Doctrine Unpacked</h3>
+<pre class="flow">
+   ┌─────────────────── COLLECTIVE RESPONSIBILITY (Art 75(3)) ───────────────────┐
+   │                                                                              │
+   │  ① "SINK OR SWIM TOGETHER" — All Ministers own JOINT responsibility for      │
+   │     EVERY Cabinet decision, even if they were absent or dissented in-camera. │
+   │                                                                              │
+   │  ② A NO-CONFIDENCE motion passed against ONE Minister/the PM brings down     │
+   │     the ENTIRE Council of Ministers.                                          │
+   │                                                                              │
+   │  ③ A Minister who cannot defend a decision publicly MUST RESIGN.             │
+   │     (Precedent: Dr. B.R. Ambedkar resigned in 1951 over the Hindu Code Bill; │
+   │      C.D. Deshmukh resigned in 1956 over the Bombay reorganisation.)         │
+   │                                                                              │
+   │  ④ ONLY the LOK SABHA can enforce it — the Rajya Sabha CANNOT pass a         │
+   │     no-confidence motion (though it can criticise, censure, and question).   │
+   │                                                                              │
+   │  ⑤ Enforced by the OATH OF SECRECY + the convention of Cabinet unanimity.    │
+   └──────────────────────────────────────────────────────────────────────────────┘
+</pre>
+
+  <div class="grid g2">
+    <div class="card"><h4>⚖️ No legal responsibility</h4><p>Unlike Britain, India has <strong>no provision for the counter-signature of a Minister</strong> on the President’s orders. Therefore a Minister bears <strong>no legal responsibility</strong> for the President’s acts, and courts cannot compel production of the record of ministerial advice (<span class="art">Art 74(2)</span>). Accountability is <strong>political, not legal</strong>.</p></div>
+    <div class="card"><h4>🧾 The two limbs distinguished</h4><p><strong>Collective responsibility (Art 75(3))</strong> → the Council stands or falls together before the Lok Sabha. <strong>Individual responsibility (Art 75(2))</strong> → a single Minister may be dropped at the PM’s instance without the government falling. The Indian Constitution expressly recognises <em>only</em> collective responsibility; individual responsibility flows from the “pleasure” doctrine and convention.</p></div>
+  </div>
+
+  <div class="box case"><b>⚖️ Case law on collective responsibility:</b> <em>Common Cause v. Union of India (1996)</em> — Ministers are accountable for discretionary allotments; <em>State of Karnataka v. Union of India (1977)</em> — Cabinet responsibility to the legislature is a basic feature of the parliamentary system; <em>Kihoto Hollohan v. Zachillhu (1992)</em> — the 10th Schedule upheld, reinforcing party discipline that underpins collective responsibility; <em>R.K. Jain v. Union of India (1993)</em> — the Court will not sit in judgment over policy choices made collectively by the Cabinet.</div>
+
+  <h3>🪜 4.3 Council of Ministers vs Cabinet — The Crucial Distinction</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Feature</th><th>🏛️ COUNCIL OF MINISTERS</th><th>🎯 CABINET</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Constitutional mention</strong></td><td><span class="art">Art 74 &amp; 75</span> — expressly mentioned</td><td>Mentioned <strong>ONLY ONCE</strong> — in <span class="art">Art 352</span>, inserted by the <strong>44th Amendment Act, 1978</strong> ⭐</td></tr>
+      <tr><td><strong>Size</strong></td><td>Large — <strong>40 to 81</strong> members</td><td>Small — <strong>15 to 20</strong> members</td></tr>
+      <tr><td><strong>Composition</strong></td><td>All three categories of Ministers (+ Deputy Ministers)</td><td><strong>Cabinet Ministers only</strong></td></tr>
+      <tr><td><strong>Does it meet as a body?</strong></td><td>❌ <strong>Never meets as a whole</strong> to transact business</td><td>✅ Meets <strong>frequently</strong> (usually weekly)</td></tr>
+      <tr><td><strong>Real power</strong></td><td>Theoretically vested with all powers</td><td><strong>Exercises, in practice, the powers of the Council and acts for it</strong></td></tr>
+      <tr><td><strong>Function</strong></td><td>Nominal repository of executive authority</td><td>Decides policy; <strong>enforces collective responsibility</strong> on the larger body</td></tr>
+      <tr><td><strong>Constitutional status</strong></td><td>Created by the Constitution</td><td>Evolved by convention; given indirect recognition only in Art 352</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>🪜 The Ministerial Hierarchy</h3>
+<pre class="flow">
+   ┌─────────────────────────────────────────────────────────────────┐
+   │  ① CABINET MINISTERS                                            │
+   │     Head major ministries (Home, Finance, Defence, External     │
+   │     Affairs). Attend Cabinet meetings as of right.               │
+   ├─────────────────────────────────────────────────────────────────┤
+   │  ② MINISTERS OF STATE (Independent Charge)                      │
+   │     Head a ministry independently; DO NOT attend Cabinet         │
+   │     meetings unless SPECIALLY INVITED for their subject.         │
+   ├─────────────────────────────────────────────────────────────────┤
+   │  ③ MINISTERS OF STATE (attached)                                │
+   │     Attached to a Cabinet Minister; may be given charge of a     │
+   │     department within that ministry.                             │
+   ├─────────────────────────────────────────────────────────────────┤
+   │  ④ DEPUTY MINISTERS                                             │
+   │     No independent charge; assist Cabinet Ministers/MoS.         │
+   │     ⚠️ NOT members of the Cabinet.                               │
+   ├─────────────────────────────────────────────────────────────────┤
+   │  ⑤ PARLIAMENTARY SECRETARIES  ❌ NOT Ministers at all            │
+   │     No department; assist in parliamentary work. Take NO oath    │
+   │     of office. (SC has struck down mass appointments in States   │
+   │     as a device to circumvent the 15% cap.)                      │
+   └─────────────────────────────────────────────────────────────────┘
+</pre>
+
+  <div class="grid g2">
+    <div class="card"><h4>🍳 “Kitchen Cabinet” / Inner Cabinet</h4><p>An <strong>extra-constitutional, informal</strong> body of the PM’s 2–4 most trusted colleagues, and sometimes friends and advisers from outside government. <strong>Merits:</strong> small, efficient, quick decisions, absolute secrecy. <strong>Demerits:</strong> reduces the Cabinet’s authority, bypasses statutory decision-making, allows non-accountable outsiders to influence policy. <em>Historically prominent under Nehru and Indira Gandhi.</em></p></div>
+    <div class="card"><h4>🗂️ Cabinet Committees</h4><p>Extra-constitutional but set up under the <strong>Government of India (Transaction of Business) Rules, 1961</strong>, by the <strong>Prime Minister</strong>, who decides their number, composition and functions. Standing committees include: <strong>Cabinet Committee on Security (CCS)</strong>, <strong>Cabinet Committee on Economic Affairs (CCEA)</strong>, <strong>Appointments Committee of the Cabinet (ACC)</strong>, and committees on Political Affairs, Parliamentary Affairs, Accommodation, Investment &amp; Growth, and Employment &amp; Skill Development. The <strong>PM chairs the most important ones</strong>; the <strong>Home Minister</strong> typically chairs others in the PM’s absence. <em>Ad hoc</em> Groups of Ministers (GoMs) are also constituted.</p></div>
+  </div>
+
+  <h3>⚙️ 4.4 Article 77 — Conduct of Government Business</h3>
+  <div class="tw"><table>
+    <thead><tr><th class="c">Clause</th><th>Provision</th></tr></thead>
+    <tbody>
+      <tr><td class="c"><span class="art">77(1)</span></td><td>All executive action of the Government of India shall be <strong>expressed to be taken in the NAME of the President</strong></td></tr>
+      <tr><td class="c"><span class="art">77(2)</span></td><td>Orders/instruments made in his name shall be <strong>authenticated</strong> as per rules made by the President; the <strong>validity shall not be called in question</strong> on the ground that it is not an order made by the President</td></tr>
+      <tr><td class="c"><span class="art">77(3)</span> ⭐</td><td>The President shall make rules for the <strong>more convenient transaction of the business</strong> of the Government of India and for the <strong>ALLOCATION of that business among Ministers</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>→ This gives rise to the <strong>Government of India (Allocation of Business) Rules, 1961</strong> and the <strong>Government of India (Transaction of Business) Rules, 1961</strong> — the operating manual of the Union Government. The <strong>Cabinet Secretariat</strong> administers these Rules; the <strong>Cabinet Secretary</strong> is their custodian, the <strong>senior-most civil servant</strong> in India, head of the civil services and <em>ex-officio</em> Chairman of the Civil Services Board.</p>
+  <div class="box insight"><b>💡 The doctrine of departmental disposal:</b> Because <span class="art">Art 77(3)</span> permits business to be allocated to Ministers and, through them, to officials, decisions taken by a <strong>Secretary under the Transaction of Business Rules are decisions of the Government</strong> — the President need not personally apply his mind. This was affirmed in <em>Emperor v. Sibnath Banerji (1945)</em> and carried forward in <em>Shamsher Singh (1974)</em> and <em>Gulabrao Keshavrao Patil v. State of Gujarat (1996)</em>.</div>
+</section>
+
+<!-- ═══════════ ATTORNEY GENERAL ═══════════ -->
+<section class="sec rv" id="ag" style="--acc:#3fd6a4;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">15</span><h2 class="sec-t">⚖️ Part 5 — The Attorney General of India (Art 76 &amp; 88)</h2><span class="sec-line"></span></div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Aspect</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Articles</strong></td><td><span class="art">76</span> (office) • <span class="art">88</span> (rights in Parliament) • <span class="art">105(4)</span> (privileges)</td></tr>
+      <tr><td><strong>Status</strong></td><td><strong>Highest Law Officer</strong> of the Union; the <strong>only law officer created by the Constitution</strong> 👨‍⚖️</td></tr>
+      <tr><td><strong>Appointment</strong></td><td>By the <strong>President</strong> — in practice, on the advice of the government</td></tr>
+      <tr><td><strong>Qualification</strong></td><td>Must be <strong>qualified to be appointed a Judge of the Supreme Court</strong>: a citizen of India + <strong>5 years as a High Court Judge</strong>, OR <strong>10 years as a High Court advocate</strong>, OR <strong>a distinguished jurist</strong> in the President’s opinion</td></tr>
+      <tr><td><strong>Term</strong></td><td><strong>NOT fixed</strong> by the Constitution; holds office <strong>during the pleasure of the President</strong></td></tr>
+      <tr><td><strong>Removal</strong></td><td><strong>No procedure or ground</strong> prescribed — removable at any time by the President; by convention he resigns when the government resigns or is replaced, since he is appointed on its advice</td></tr>
+      <tr><td><strong>Remuneration</strong></td><td><strong>Not fixed</strong> by the Constitution — determined by the <strong>President</strong> 💼</td></tr>
+      <tr><td><strong>Duties</strong></td><td>① Advise the Government of India on legal matters referred by the President; ② Perform other legal duties assigned by the President; ③ Discharge functions conferred by the Constitution or any law</td></tr>
+      <tr><td><strong>Rights</strong></td><td><strong>Right of audience in ALL courts</strong> in India; right to <strong>speak and take part in the proceedings</strong> of <strong>both Houses of Parliament, their joint sittings, and any parliamentary committee of which he is named a member</strong> — but <strong>NO RIGHT TO VOTE</strong> (<span class="art">Art 88</span>); enjoys all the <strong>privileges and immunities of an MP</strong> (<span class="art">Art 105(4)</span>)</td></tr>
+      <tr><td><strong>Limitations</strong></td><td>Shall <strong>not advise or hold a brief against the Government of India</strong>; shall not advise/hold a brief in cases in which he is called upon to advise the GoI; shall not <strong>defend accused persons in criminal prosecutions</strong> without GoI permission; shall not <strong>accept appointment as a director</strong> in any company or corporation without GoI permission</td></tr>
+      <tr><td><strong>⚠️ Key insight</strong></td><td>The AG is <strong>NOT a government servant</strong> and is <strong>NOT debarred from private legal practice</strong> — a controversial feature, since it creates a permanent risk of conflict of interest</td></tr>
+      <tr><td><strong>Not a Minister</strong></td><td>The AG is <strong>NOT a member of the Cabinet</strong>. India has a separate <strong>Minister of Law and Justice</strong> — a deliberate departure from the British model, where the Attorney General is a Minister</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="box warn"><b>🚫 NOT constitutional posts:</b> The <strong>Solicitor General of India</strong> and the <strong>Additional Solicitors General</strong> are <strong>NOT</strong> mentioned in the Constitution — they are appointed by the <strong>Appointments Committee of the Cabinet</strong> and governed by the <em>Law Officers (Conditions of Service) Rules</em>. Article 76 mentions only the AG. <em>(By convention, the AG appears in the most constitutionally significant matters; the SG handles the bulk of routine government litigation.)</em></div>
+  <div class="box insight"><b>💡 The federal counterpart:</b> The State-level equivalent is the <strong>Advocate General</strong> under <span class="art">Art 165</span> — appointed by the Governor, must be qualified to be a High Court Judge, holds office during the Governor’s pleasure, and has the right to speak (not vote) in the State Legislature under <span class="art">Art 177</span>. <strong>Symmetry:</strong> AG : Union :: Advocate General : State. 🪞</div>
+  <div class="box good"><b>📌 Current:</b> <strong>Shri R. Venkataramani</strong> — appointed <strong>1 October 2022</strong> (the 16th AG); his term was extended by the President in <strong>September 2025</strong> for a further two years, i.e., <strong>until 30 September 2027</strong>. <em>(First AG: <strong>M.C. Setalvad</strong>, 1950–1963 — the longest-serving. Verify current status via a live source.)</em></div>
+</section>
+
+<!-- ═══════════ CONVENTIONS ═══════════ -->
+<section class="sec rv" id="conv" style="--acc:#ffc46b;--acc2:#ff9d3c">
+  <div class="sec-head"><span class="sec-num">16</span><h2 class="sec-t">🧾 Part 6 — Conventions of the Union Government (Master List)</h2><span class="sec-line"></span></div>
+
+  <div class="quote">📖 <strong>DEFINITION:</strong> <em>Constitutional conventions</em> are <strong>non-legal, unwritten rules of political practice</strong> considered binding by those who operate the Constitution. They are <strong>not enforceable by courts</strong> (though courts may <em>recognise</em> them — <em>Supreme Court Advocates-on-Record Assn., 1993</em>). <strong>Dicey</strong> called them <em>“the conventions of the Constitution,”</em> distinguishing them from <em>“the law of the Constitution.”</em> <strong>Jennings’ three-part test:</strong> (i) Is there a precedent? (ii) Did the actors believe they were bound by a rule? (iii) Is there a good constitutional reason for the rule?</div>
+
+  <div class="mban">🧠 “A-C-R-D-S” → Appointment • Collective functioning • Resignation • Dissolution • Secrecy</div>
+
+  <div class="grid g2">
+    <div class="card"><h3 style="margin-top:0">🅰️ Conventions of Appointment</h3><ol class="tick">
+      <li>The President appoints the <strong>leader of the majority party/coalition in the Lok Sabha</strong> as PM.</li>
+      <li>In a hung Parliament, the President invites in the order of the four-step preference (pre-poll alliance → single largest party → post-poll coalition inside → post-poll coalition with outside support), followed by a <strong>floor test</strong>.</li>
+      <li>Ministers are appointed <strong>only on the PM’s recommendation</strong>; the President does not question the list.</li>
+      <li>The <strong>Finance Minister and Home Minister are ordinarily in the Cabinet</strong> and, by strong practice, drawn from the Lok Sabha where possible.</li>
+      <li>The <strong>CJI-designate</strong> is the <strong>senior-most Judge of the Supreme Court</strong> (the seniority convention — departed from in the <strong>1973 and 1977 supersessions</strong>, restored thereafter).</li>
+      <li>Governors are appointed <strong>after consulting the Chief Minister</strong> of the State concerned (a Sarkaria Commission recommendation, honoured more in the breach).</li>
+    </ol></div>
+
+    <div class="card"><h3 style="margin-top:0">🅱️ Conventions of Collective Functioning</h3><ol class="tick" start="7" style="counter-reset:n 6">
+      <li><strong>Cabinet unanimity</strong> — Ministers speak with one voice in public.</li>
+      <li>Cabinet proceedings are <strong>secret</strong>; minutes are not published.</li>
+      <li>Major policy is settled in <strong>Cabinet</strong>, not by individual Ministers acting alone.</li>
+      <li>The <strong>President’s Address</strong> (<span class="art">Art 87</span>) is drafted by the government and states its policy — the President reads it out whatever his personal view.</li>
+    </ol></div>
+
+    <div class="card"><h3 style="margin-top:0">🅲 Conventions of Resignation &amp; Responsibility</h3><ol class="tick" start="11" style="counter-reset:n 10">
+      <li>A PM who <strong>loses a no-confidence motion resigns immediately</strong> with the whole Council.</li>
+      <li>A Minister whose department is guilty of a serious lapse resigns — <strong>individual ministerial responsibility</strong> (e.g., <strong>Lal Bahadur Shastri’s 1956 resignation</strong> after the Ariyalur rail disaster — the gold standard, though rarely followed since).</li>
+      <li>A Minister who publicly disagrees with Cabinet policy must <strong>resign first, criticise later</strong>.</li>
+      <li>The outgoing Council continues as a <strong>caretaker</strong> until the successor takes charge, avoiding major policy decisions.</li>
+    </ol></div>
+
+    <div class="card"><h3 style="margin-top:0">🅳 Conventions of Parliament &amp; Dissolution</h3><ol class="tick" start="15" style="counter-reset:n 14">
+      <li>Dissolution of the Lok Sabha is advised <strong>only by the PM</strong>; but the President is <strong>not obliged</strong> to accept advice from a PM who has already lost the House’s confidence.</li>
+      <li><strong>Money Bills originate only in the Lok Sabha</strong> (this is <em>constitutional</em>, <span class="art">Art 109</span> — but the practice of respecting the Speaker’s Money Bill certificate is a convention, now qualified by <em>Rojer Mathew v. South Indian Bank (2019)</em>, which referred the scope of judicial review over such certification to a <strong>7-judge bench</strong>).</li>
+      <li><strong>Question Hour, Zero Hour and Calling Attention</strong> — <strong>Zero Hour</strong> is a purely Indian innovation, unmentioned in the Constitution <em>and</em> in the Rules; <strong>Calling Attention</strong> is an Indian innovation mentioned in the Rules of Procedure.</li>
+      <li>The <strong>Public Accounts Committee is chaired by a member of the Opposition</strong> — a convention since <strong>1967</strong>.</li>
+      <li>The <strong>Deputy Speaker of the Lok Sabha</strong> is, by convention, offered to the Opposition; the Speaker, once elected, severs active party ties.</li>
+    </ol></div>
+
+    <div class="card"><h3 style="margin-top:0">🅴 Conventions surrounding the President</h3><ol class="tick" start="20" style="counter-reset:n 19">
+      <li>The President does <strong>not</strong> publicly criticise the government or express partisan views.</li>
+      <li>The President <strong>severs formal party ties</strong> on assuming office.</li>
+      <li>The President’s <strong>discretion is exercised sparingly</strong> and always with a written record of reasons.</li>
+      <li>The President may return advice <strong>once</strong> (Art 74 proviso) — but by convention does so only in exceptional cases (<strong>K.R. Narayanan, 1997 &amp; 1998</strong>).</li>
+      <li>By practice, the President is consulted on major foreign-policy and national-security decisions even where no constitutional duty exists.</li>
+    </ol></div>
+  </div>
+
+  <div class="box insight"><b>💡 Why conventions matter more in India than the text suggests:</b> The Constitution is the <strong>lengthiest written constitution</strong> in the world, yet the <strong>entire working of the executive</strong> — Cabinet, Kitchen Cabinet, PMO, coalition-formation, caretaker governments, floor tests, portfolio allocation — rests on convention. Ivor Jennings’ formulation applies squarely: <em>“The Constitution provides the flesh and bones; the conventions provide the blood which makes it live.”</em> 🩸</div>
+  <div class="box warn"><b>⚠️ Weakness of conventions:</b> They are <strong>self-enforcing</strong> only so long as political actors value institutional reputation. India has seen conventions break repeatedly — <strong>supersession of judges (1973, 1977)</strong>, <strong>misuse of Art 356 before Bommai</strong>, <strong>Money Bill route</strong> for non-money legislation, and long <strong>vacancies in the Deputy Speaker’s office</strong>. This is why the judiciary has increasingly converted conventions into <strong>enforceable constitutional principles</strong> (e.g., the floor test).</div>
+</section>
+
+<!-- ═══════════ LAW MAKING ═══════════ -->
+<section class="sec rv" id="law" style="--acc:#7db8ff;--acc2:#3fd6a4">
+  <div class="sec-head"><span class="sec-num">17</span><h2 class="sec-t">🔄 Part 7 — Integrated Flowchart: How a Law is Made &amp; the Executive’s Role</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+   💡 POLICY IDEA (Ministry / Cabinet Committee)
+              ▼
+   🗂️ CABINET APPROVAL  ──► collective responsibility attaches
+              ▼
+   ✍️ PRESIDENT'S PRIOR RECOMMENDATION (if Money Bill / Art 3 Bill / Art 117 Bill)
+              ▼
+   🏛️ INTRODUCED IN PARLIAMENT (Money Bill → LOK SABHA only)
+              ▼
+   📖 FIRST READING → SECOND READING (Committee/Clause-by-clause) → THIRD READING
+              ▼
+   🔁 TRANSMITTED TO THE OTHER HOUSE
+        │
+        ├── Money Bill: RS has 14 days, RECOMMENDATORY powers only
+        └── Ordinary Bill: DEADLOCK possible → 🔔 JOINT SITTING (Art 108)
+                                               (summoned by the President;
+                                                presided by the SPEAKER;
+                                                simple majority of those
+                                                present &amp; voting)
+              ▼
+   👑 PRESENTED TO THE PRESIDENT (Art 111)
+        ├── ✅ ASSENT → 📜 ACT OF PARLIAMENT
+        ├── ❌ WITHHOLD → Absolute veto, Bill DIES
+        ├── ↩️ RETURN (non-Money Bill) → Parliament reconsiders → if re-passed,
+        │      President is BOUND to assent
+        └── ⏸️ NO ACTION → Pocket veto
+              ▼
+   ⚖️ SUBJECT TO JUDICIAL REVIEW (Arts 13, 32, 226) for constitutionality
+</pre>
+
+  <div class="fchain">
+    <div class="fnode"><span class="fi">💡</span><span class="ft">Policy</span><span class="fd">Ministry drafts</span></div>
+    <div class="arrowr">➜</div>
+    <div class="fnode"><span class="fi">🗂️</span><span class="ft">Cabinet</span><span class="fd">Approval + CR attaches</span></div>
+    <div class="arrowr">➜</div>
+    <div class="fnode"><span class="fi">🏛️</span><span class="ft">Parliament</span><span class="fd">3 readings, both Houses</span></div>
+    <div class="arrowr">➜</div>
+    <div class="fnode"><span class="fi">👑</span><span class="ft">Art 111</span><span class="fd">Assent / veto</span></div>
+    <div class="arrowr">➜</div>
+    <div class="fnode"><span class="fi">⚖️</span><span class="ft">Courts</span><span class="fd">Judicial review</span></div>
+  </div>
+
+  <div class="box insight"><b>💡 Where the executive dominates law-making:</b> Over <strong>90% of Bills</strong> are <strong>Government Bills</strong> introduced by Ministers; Private Members’ Bills have succeeded only <strong>14 times</strong> in Indian parliamentary history (the last in <strong>1970</strong>). Add the <strong>ordinance power</strong>, the <strong>delegated legislation</strong> machinery, and the requirement of the <strong>President’s prior recommendation</strong> for financial legislation, and it becomes clear that the legislature largely <strong>ratifies</strong> executive initiative — Ramsay Muir’s warning of <em>“Cabinet dictatorship”</em> in action. 📊</div>
+</section>
+
+<!-- ═══════════ FACT SHEET ═══════════ -->
+<section class="sec rv" id="facts" style="--acc:#ffd479;--acc2:#ff9d3c">
+  <div class="sec-head"><span class="sec-num">18</span><h2 class="sec-t">📊 Part 8 — Quick-Fire Fact Sheet (Exam Gold)</h2><span class="sec-line"></span></div>
+
+  <div class="tw"><table>
+    <thead><tr><th class="c">#</th><th>Fact</th><th>Answer</th></tr></thead>
+    <tbody>
+      <tr><td class="c">1</td><td>Total Articles on the Union Executive</td><td><strong>Art 52–78</strong> (Part V, Chapter I)</td></tr>
+      <tr><td class="c">2</td><td>Only Article where the word <strong>“Cabinet”</strong> appears</td><td><strong>Art 352</strong> (via the 44th Amendment, 1978)</td></tr>
+      <tr><td class="c">3</td><td>Amendment that made ministerial advice <strong>binding</strong></td><td><strong>42nd Amendment, 1976</strong></td></tr>
+      <tr><td class="c">4</td><td>Amendment that allowed <strong>one reconsideration</strong></td><td><strong>44th Amendment, 1978</strong></td></tr>
+      <tr><td class="c">5</td><td>Amendment capping the Council of Ministers at 15%</td><td><strong>91st Amendment, 2003</strong></td></tr>
+      <tr><td class="c">6</td><td>Amendment adding <strong>Delhi &amp; Puducherry</strong> MLAs to the Electoral College</td><td><strong>70th Amendment, 1992</strong></td></tr>
+      <tr><td class="c">7</td><td>Amendment making Presidential assent to Constitutional Amendment Bills <strong>mandatory</strong></td><td><strong>24th Amendment, 1971</strong></td></tr>
+      <tr><td class="c">8</td><td>Amendment freezing the <strong>1971 Census</strong> for the vote-value formula (till the first census after 2026)</td><td><strong>84th Amendment, 2001</strong></td></tr>
+      <tr><td class="c">9</td><td>Amendment removing the requirement of a <strong>joint meeting</strong> for the VP’s election</td><td><strong>11th Amendment, 1961</strong></td></tr>
+      <tr><td class="c">10</td><td>Amendment abolishing <strong>Anglo-Indian nomination</strong> to the Lok Sabha</td><td><strong>104th Amendment, 2019</strong> (w.e.f. 25 Jan 2020)</td></tr>
+      <tr><td class="c">11</td><td>Maximum life of an <strong>Ordinance</strong></td><td><strong>6 months + 6 weeks (≈ 7½ months)</strong></td></tr>
+      <tr><td class="c">12</td><td>Maximum period the <strong>VP can act as President</strong></td><td><strong>6 months</strong></td></tr>
+      <tr><td class="c">13</td><td>Majority needed to <strong>impeach the President</strong></td><td><strong>2/3rd of the TOTAL membership</strong> of each House</td></tr>
+      <tr><td class="c">14</td><td>Majority needed to <strong>remove the Vice-President</strong></td><td><strong>Effective majority in the RS + simple majority in the LS</strong></td></tr>
+      <tr><td class="c">15</td><td>Order of Precedence</td><td>1️⃣ President 2️⃣ Vice-President 3️⃣ Prime Minister 4️⃣ Governors (in their States) 5️⃣ Former Presidents 6️⃣ Deputy PM 7️⃣ CJI &amp; Speaker of the Lok Sabha</td></tr>
+      <tr><td class="c">16</td><td>President’s salary (since the 2018 revision)</td><td><strong>₹5,00,000 / month</strong> (VP ₹4,00,000; Governor ₹3,50,000). President’s pension = <strong>50%</strong> of salary</td></tr>
+      <tr><td class="c">17</td><td>Body that decides President/VP <strong>election disputes</strong></td><td><strong>Supreme Court alone</strong> (Art 71) — final &amp; binding</td></tr>
+      <tr><td class="c">18</td><td>Act governing Presidential elections</td><td><strong>Presidential and Vice-Presidential Elections Act, 1952</strong> (+ Rules, 1974)</td></tr>
+      <tr><td class="c">19</td><td>Number of <strong>joint sittings</strong> held so far</td><td><strong>3</strong> — Dowry Prohibition (1961), Banking Service Commission Repeal (1978), POTA (2002)</td></tr>
+      <tr><td class="c">20</td><td>Only CJI to act as President</td><td><strong>Justice M. Hidayatullah</strong> (1969)</td></tr>
+      <tr><td class="c">21</td><td>Emergency requiring the <strong>written recommendation of the Cabinet</strong></td><td><strong>National Emergency (Art 352)</strong> — post-44th Amendment</td></tr>
+      <tr><td class="c">22</td><td>Emergency <strong>never used</strong></td><td><strong>Financial Emergency (Art 360)</strong></td></tr>
+      <tr><td class="c">23</td><td>Article barring courts from inquiring into ministerial advice</td><td><strong>Art 74(2)</strong> — but the <em>material</em> behind the advice is reviewable (<em>Bommai</em>)</td></tr>
+      <tr><td class="c">24</td><td>Highest &amp; lowest MLA vote values</td><td><strong>UP = 208</strong> ; <strong>Sikkim = 7</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid g4">
+    <div class="tile"><span class="e">👑</span><span class="v">Art 52</span><span class="l">Shortest Article</span></div>
+    <div class="tile"><span class="e">🏛️</span><span class="v">Art 79</span><span class="l">President = part of Parliament</span></div>
+    <div class="tile"><span class="e">🕊️</span><span class="v">Art 72</span><span class="l">Pardon</span></div>
+    <div class="tile"><span class="e">📜</span><span class="v">Art 123</span><span class="l">Ordinance</span></div>
+    <div class="tile"><span class="e">🛡️</span><span class="v">Art 361</span><span class="l">Immunity</span></div>
+    <div class="tile"><span class="e">⚖️</span><span class="v">Art 76</span><span class="l">Attorney General</span></div>
+    <div class="tile"><span class="e">🔗</span><span class="v">Art 78</span><span class="l">PM ↔ President link</span></div>
+    <div class="tile"><span class="e">🎯</span><span class="v">Art 75(3)</span><span class="l">Collective responsibility</span></div>
+  </div>
+</section>
+
+<!-- ═══════════ CURRENT ISSUES ═══════════ -->
+<section class="sec rv" id="curr" style="--acc:#ff6b6b;--acc2:#ffc46b">
+  <div class="sec-head"><span class="sec-num">19</span><h2 class="sec-t">⚡ Part 9 — Current &amp; Emerging Issues (as of mid-2026)</h2><span class="sec-line"></span></div>
+
+  <div class="card"><h4>1️⃣ The Constitution (130th Amendment) Bill, 2025 — the “30-Day Removal Bill”</h4>
+  <p>Introduced in the Lok Sabha on <strong>20 August 2025</strong> by the Ministry of Home Affairs and referred to a <strong>Joint Parliamentary Committee (Chair: Aparajita Sarangi)</strong>. It seeks to amend <span class="art">Article 75</span> (Union), <span class="art">Article 164</span> (States) and <span class="art">Article 239AA</span> (Delhi), with companion Bills for Puducherry and Jammu &amp; Kashmir.</p>
+  <p><strong>The proposal:</strong> a Minister accused of an offence punishable with <strong>five years or more</strong> who is <strong>arrested and detained for 30 consecutive days</strong> may be removed by the President/Governor on the PM’s/CM’s advice — or is <strong>automatically removed on the 31st day</strong>. A <strong>Prime Minister or Chief Minister must resign by the 31st day</strong>, failing which he <strong>automatically ceases to hold office</strong>. A removed Minister may be <strong>re-appointed</strong> upon release.</p>
+  <p><strong>Critics</strong> (including PRS Legislative Research) argue it may violate <strong>four basic-structure features</strong>: the <strong>parliamentary form of democracy</strong> (only the Lok Sabha may unseat a PM through loss of confidence), <strong>separation of powers</strong> (investigative agencies under executive control could topple elected governments), <strong>federalism</strong> (one level of government influencing the removal of another), and the <strong>rule of law</strong> (removal on mere accusation and custody, before any judicial finding even on framing of charges — offending the presumption of innocence).</p>
+  <p><strong>Supporters</strong> cite the criminalisation of politics, the difficulty of securing convictions against powerful politicians, ADR data on MPs with declared criminal cases, and the moral untenability of governance from custody.</p>
+  <div class="box warn"><b>⚠️ Status:</b> As of my information, the <strong>JPC was finalising its report around mid-2026</strong>, reportedly retaining the 30-day clause. <strong>This is still a Bill, not law</strong> — verify its current status on sansad.in / PRS, as it may well have moved since.</div>
+  </div>
+
+  <div class="card"><h4>2️⃣ The 16th Presidential Reference (Nov 2025) — the assent question settled (for now)</h4>
+  <p>Discussed in §1.9. Its significance for the <strong>Union Executive</strong> is threefold: it has meaningfully <strong>re-expanded the discretionary space</strong> of the President and Governors under <span class="art">Arts 111, 200 and 201</span>; it has <strong>restricted the judiciary’s use of Art 142</strong> to fashion remedies that displace express constitutional text; and it has reaffirmed the <strong>advisory jurisdiction (Art 143)</strong> as a live instrument of constitutional dialogue between the executive and the judiciary. It is the most consequential constitutional development on the Union/State executive in years. ⚖️</p>
+  </div>
+
+  <div class="card"><h4>3️⃣ Ongoing structural debates 🧩</h4>
+  <ul class="tick">
+    <li><strong>Direct vs indirect election</strong> of the President — periodically revived, consistently rejected as incompatible with parliamentary government.</li>
+    <li>Whether the President’s role in <strong>coalition formation</strong> should be codified by statute (the Sarkaria and Punchhi Commissions recommended written guidelines; nothing binding exists).</li>
+    <li>The absence of any <strong>time limit</strong> on Presidential assent (<span class="art">Art 111</span>) — a gap the 2025 opinion has now largely <strong>constitutionalised as discretionary</strong>.</li>
+    <li>The AG’s freedom to hold <strong>private practice</strong> — a conflict-of-interest debate raised repeatedly by the Law Commission.</li>
+    <li>Constitutional silence on <strong>qualifications and criminal antecedents of Ministers</strong> (<em>Manoj Narula</em>) — the 130th Amendment Bill is the political answer to a judicial abstention.</li>
+    <li><strong>Post-2026 delimitation</strong> — once the first census after 2026 is published, the 1971 freeze ends, which will <strong>re-weight the Presidential Electoral College</strong> and reopen North–South federal tensions. 🗺️</li>
+    <li>The <strong>growth of the PMO</strong> and the decline of full-Cabinet deliberation — Crossman’s “Prime Ministerial Government” thesis applied to India.</li>
+    <li><strong>Ordinance frequency</strong> and the demand for a constitutional bar on re-promulgation beyond the <em>Krishna Kumar Singh</em> judicial rule.</li>
+  </ul>
+  </div>
+</section>
+
+<!-- ═══════════ MNEMONICS ═══════════ -->
+<section class="sec rv" id="mnemo" style="--acc:#3fd6a4;--acc2:#ffd479">
+  <div class="sec-head"><span class="sec-num">20</span><h2 class="sec-t">🎯 Part 10 — The Ultimate Revision Mnemonic Sheet</h2><span class="sec-line"></span></div>
+
+<pre class="flow">
+╔═══════════════════════════════════════════════════════════════════════════╗
+║  📌 "52 to 78 — the Union Executive gate"                                 ║
+║                                                                            ║
+║  52-62  PRESIDENT  →  "Exists, Power, Elected, Manner, Term, Repeat,      ║
+║                        Qualified, Conditions, Oath, Impeach, Vacancy"      ║
+║                                                                            ║
+║  63-71  VICE-PRES  →  "Exists, Chairs, Acts, Elected, Term, Timed,        ║
+║                        Oath, Others, Disputes"                             ║
+║                                                                            ║
+║  72-78  THE REST   →  "PEAM-ACD"                                          ║
+║         72 Pardon | 73 Extent | 74 Advice | 75 Ministers                  ║
+║         76 Attorney | 77 Conduct of business | 78 Duties of the PM        ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║  🕊️  ART 72 → "P-C-R-R-R"  Pardon, Commute, Remit, Respite, Reprieve      ║
+║  ✍️  VETOES → "A-S-P"      Absolute, Suspensive, Pocket                   ║
+║  ✅  QUALIF → "C-35-L-O"   Citizen, 35, Lok Sabha-qualified, no Office    ║
+║  🚫  NO VOTE → "NO-NO-C"   Nominated MPs, Nominated MLAs, MLCs            ║
+║  ⚖️  ART 78 → "C-F-S"      Communicate, Furnish, Submit                   ║
+║  🚨  EMERG. → "N-S-F"      352 National, 356 State, 360 Financial         ║
+║  🏛️  BODIES → "P-V-P-C-A"  President, VP, PM, CoM, Attorney General       ║
+║  🔢  IMPEACH → "1/4 → 14 → 2/3 → 2/3"                                     ║
+║  📋  ART 75 → "A-C-D-P-C-O-S-S"  Appoint, Cap, Defection, Pleasure,       ║
+║               Collective, Oath, Six months, Salaries                       ║
+║  🧾  CONVEN. → "A-C-R-D-S"  Appointment, Collective, Resignation,          ║
+║               Dissolution, Secrecy                                         ║
+║  🎛️  POWERS → "LEFT-JAM-D"  Legislative, Executive, Financial, Treaty,    ║
+║               Judicial, Appointments, Military, Discretionary              ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+</pre>
+
+  <div class="grid g3">
+    <div class="card"><h4>⏱️ Numbers to burn in</h4><div class="chips">
+      <span class="chip">35 — age</span><span class="chip">5 yrs — term</span><span class="chip">50+50 — nomination</span><span class="chip">₹15,000 — deposit</span><span class="chip">14 days — impeach notice</span><span class="chip">6 months — VP acting</span><span class="chip">6 weeks — ordinance lapse</span><span class="chip">15% — ministry cap</span><span class="chip">12 — RS nominees</span><span class="chip">2 months — Art 361(4) notice</span><span class="chip">3 — joint sittings</span><span class="chip">1971 — census freeze</span>
+    </div></div>
+    <div class="card"><h4>⚖️ Cases to burn in</h4><div class="chips">
+      <span class="chip">Shamsher Singh 1974</span><span class="chip">U.N.R. Rao 1971</span><span class="chip">Ram Jawaya 1955</span><span class="chip">R.C. Cooper 1970</span><span class="chip">D.C. Wadhwa 1987</span><span class="chip">Krishna Kumar Singh 2017</span><span class="chip">Maru Ram 1980</span><span class="chip">Kehar Singh 1989</span><span class="chip">Epuru Sudhakar 2006</span><span class="chip">Shatrughan Chauhan 2014</span><span class="chip">S.R. Bommai 1994</span><span class="chip">Rameshwar Prasad 2006</span><span class="chip">Manoj Narula 2014</span><span class="chip">B.R. Kapur 2001</span><span class="chip">S.P. Anand 1996</span><span class="chip">Presidential Reference 2025</span>
+    </div></div>
+    <div class="card"><h4>🏛️ Amendments to burn in</h4><div class="chips">
+      <span class="chip">11th — 1961</span><span class="chip">24th — 1971</span><span class="chip">42nd — 1976</span><span class="chip">44th — 1978</span><span class="chip">70th — 1992</span><span class="chip">84th — 2001</span><span class="chip">91st — 2003</span><span class="chip">104th — 2019</span><span class="chip">130th — Bill, 2025</span>
+    </div></div>
+  </div>
+
+  <details class="acc"><summary>🧪 Rapid self-test — 12 questions (tap to reveal)</summary><div class="body">
+    <ol class="tick">
+      <li>Who administers the oath to the President? → <strong>CJI</strong>; in his absence, the senior-most available SC Judge.</li>
+      <li>To whom does the President address his resignation? → <strong>Vice-President</strong>.</li>
+      <li>Can nominated MPs vote in the Presidential election? → <strong>No</strong>; but they can in the VP’s election and in impeachment.</li>
+      <li>Which majority removes the VP? → <strong>Effective majority of the Rajya Sabha</strong> + simple majority agreement of the Lok Sabha.</li>
+      <li>Can the President pardon a death sentence under State law? → <strong>Yes</strong> — Art 72 covers <em>all</em> death sentences.</li>
+      <li>Can the Governor pardon a death sentence? → <strong>No</strong> — he may suspend, remit or commute only.</li>
+      <li>Maximum life of an ordinance? → <strong>6 months + 6 weeks</strong>.</li>
+      <li>Which veto is unavailable for a Money Bill? → <strong>Suspensive</strong> (it cannot be returned).</li>
+      <li>Where does the word “Cabinet” appear? → <strong>Art 352</strong> only.</li>
+      <li>Can a non-member be PM? → <strong>Yes</strong>, for up to <strong>6 months</strong> (Art 75(5)) — unless disqualified (<em>B.R. Kapur</em>).</li>
+      <li>Is the Solicitor General a constitutional post? → <strong>No</strong> — only the Attorney General (Art 76) is.</li>
+      <li>Which body decides disputes over the President’s election? → <strong>The Supreme Court alone</strong> (Art 71), and vacancies in the electoral college are no ground for challenge.</li>
+    </ol>
+  </div></details>
+</section>
+
+<!-- ═══════════ ESSENCE ═══════════ -->
+<section class="sec rv" style="--acc:#ff9d3c;--acc2:#3fd6a4">
+  <div class="sec-head"><span class="sec-num">★</span><h2 class="sec-t">🧭 The One-Line Essence</h2><span class="sec-line"></span></div>
+  <div class="quote" style="font-size:1.12rem">🇮🇳 The Indian Constitution vests <strong>de jure</strong> executive power in the President (<span class="art">Art 53</span>) but transfers <strong>de facto</strong> power to the Prime Minister and the Council of Ministers (<span class="art">Art 74–75</span>), binding them to the Lok Sabha through <strong>collective responsibility</strong> (<span class="art">Art 75(3)</span>) — a design Ambedkar summed up as: the President <em>“represents the Nation but does not rule the Nation.”</em></div>
+  <div class="box warn"><b>📌 A note on currency:</b> The 130th Amendment Bill’s status and any post-May-2026 developments should be cross-checked against Parliament’s website (<em>sansad.in</em>), <em>PRS Legislative Research</em>, and the Supreme Court’s live judgments, since this area is evolving quickly. Office-holders (President, Vice-President, Attorney General) should likewise be verified before an exam.</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="fq"><em>“He is the head of the State but not of the Executive. He represents the Nation but does not rule the Nation. He is the symbol of the Nation.”</em><br>— Dr. B.R. Ambedkar, Constituent Assembly Debates</div>
+  <div class="tri-rule"></div>
+  <small>The Union Executive · Part V, Chapter I · Articles 52–78</small>
+<br><p><h1><strong style="color:var(--gold)"><b><i><span>En Nenjil Kudiyirukkum<br>என் நெஞ்சில் குடியிருக்கும்</h1></b></i></span></strong></h1>
+</footer>
+
+<div id="top" title="Back to top">▲</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var progEl   = document.getElementById('prog');
+  var topBtn   = document.getElementById('top');   // renamed: 'top' is a restricted global
+  var docEl    = document.documentElement;
+
+  /* ---------- progress bar + back-to-top visibility ---------- */
+  function onScroll(){
+    var max = docEl.scrollHeight - docEl.clientHeight;
+    var p   = max > 0 ? (docEl.scrollTop / max) * 100 : 0;
+    if (progEl) progEl.style.width = p + '%';
+    if (topBtn) topBtn.classList.toggle('on', docEl.scrollTop > 700);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if (topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* ---------- stagger delays BEFORE observing (so they apply) ---------- */
+  document.querySelectorAll('.sec').forEach(function(s){
+    s.querySelectorAll('.card,.box,.tw,pre.flow,.tile,.fnode').forEach(function(el,i){
+      el.style.transitionDelay = Math.min(i*35,320) + 'ms';
+    });
+  });
+
+  /* ---------- reveal on scroll (with graceful fallback) ---------- */
+  var revealables = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, {threshold:.06, rootMargin:'0px 0px -8% 0px'});
+    revealables.forEach(function(el){ io.observe(el); });
+  } else {
+    revealables.forEach(function(el){ el.classList.add('in'); });
+  }
+  /* safety net: if anything is still hidden after 3s, show it */
+  window.setTimeout(function(){
+    document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('in');
+    });
+  }, 3000);
+
+  /* ---------- spotlight cursor inside cards ---------- */
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('pointermove', function(e){
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+    });
+  });
+
+  /* ---------- subtle parallax on hero title ---------- */
+  var hero  = document.querySelector('.hero');
+  var plate = document.querySelector('.hero-plate');
+  if (hero && plate){
+    hero.addEventListener('pointermove', function(e){
+      var rx = ((e.clientY / window.innerHeight) - .5) * -6;
+      var ry = ((e.clientX / window.innerWidth)  - .5) *  7;
+      plate.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1.01)';
+    });
+    hero.addEventListener('pointerleave', function(){ plate.style.transform = ''; });
+  }
+
+  /* ---------- active nav highlight ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail-in a'));
+  var secs  = links.map(function(a){
+    var id = a.getAttribute('href');
+    return (id && id.charAt(0) === '#' && id.length > 1) ? document.getElementById(id.slice(1)) : null;
+  }).filter(Boolean);
+
+  if (secs.length && 'IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          var a = links.filter(function(l){ return l.getAttribute('href') === '#' + e.target.id; })[0];
+          if (a) a.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-15% 0px -75% 0px'});
+    secs.forEach(function(s){ io2.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
