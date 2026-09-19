@@ -247,12 +247,24 @@ const archiveEntries = [
     icon: "🎓",
     image: "",
     featured: true
-  }
+  },
+  {
+    number: "18",
+    title: "THE CONSTITUTION OF INDIA",
+    category: "Political Science",
+    description: "'Justice, Liberty, Equality, & Fraternity' — the eternal promise of the Preamble, now walked through Articles 1 to 14",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "THE CONSTITUTION OF INDIA — ARTICLES 1 TO 14.html",
+    icon: "🪶",
+    image: "",
+    featured: true
+  } 
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "18",
+    number: "19",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
