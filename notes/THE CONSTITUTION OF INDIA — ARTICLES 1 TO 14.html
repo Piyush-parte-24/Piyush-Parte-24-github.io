@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE CONSTITUTION OF INDIA — ARTICLES 1 TO 14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Noto+Sans+Tamil:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-deep:#05060d;
+  --bg-navy:#0a0e1f;
+  --saffron:#ff9a3c;
+  --saffron-soft:#ffb35c;
+  --gold:#e8c257;
+  --chakra:#3f8cff;
+  --crimson:#ff5570;
+  --emerald:#2fbf71;
+  --text-main:#eae7e0;
+  --text-dim:#a9a6b0;
+  --card-bg:rgba(255,255,255,0.045);
+  --card-border:rgba(255,255,255,0.09);
+  --accent: var(--saffron);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg-deep);
+  color:var(--text-main);
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+  line-height:1.75;
+}
+::selection{background:var(--saffron);color:#1a1200;}
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background:var(--bg-deep);}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--saffron),var(--chakra));border-radius:10px;}
+
+/* ===== CINEMATIC BACKGROUND LAYERS ===== */
+.cine-bg{position:fixed;inset:0;z-index:-4;background:
+  radial-gradient(ellipse 80% 60% at 15% 10%, rgba(255,154,60,0.16), transparent 60%),
+  radial-gradient(ellipse 70% 60% at 85% 15%, rgba(63,140,255,0.16), transparent 60%),
+  radial-gradient(ellipse 80% 70% at 50% 90%, rgba(47,191,113,0.13), transparent 60%),
+  linear-gradient(180deg,#05060d 0%, #0a0e1f 40%, #0c0a18 100%);
+  animation:auroraShift 18s ease-in-out infinite alternate;
+}
+@keyframes auroraShift{0%{filter:hue-rotate(0deg) brightness(1);}50%{filter:hue-rotate(8deg) brightness(1.08);}100%{filter:hue-rotate(-6deg) brightness(0.98);}}
+.stars{position:fixed;inset:0;z-index:-3;opacity:.5;
+  background-image:radial-gradient(1.5px 1.5px at 10% 20%, #fff, transparent),radial-gradient(1px 1px at 80% 40%, #fff, transparent),radial-gradient(2px 2px at 50% 70%, #fff, transparent),radial-gradient(1px 1px at 30% 85%, #fff, transparent),radial-gradient(1.5px 1.5px at 92% 90%, #fff, transparent),radial-gradient(1px 1px at 65% 15%, #fff, transparent);
+  background-repeat:repeat;background-size:250px 250px;animation:twinkle 6s ease-in-out infinite alternate;
+}
+@keyframes twinkle{0%{opacity:.3;}100%{opacity:.65;}}
+.grain{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.spotlight{position:fixed;inset:0;z-index:5;pointer-events:none;
+  background:radial-gradient(550px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.05), transparent 45%);
+}
+.vignette{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 220px rgba(0,0,0,0.75);}
+.progress{position:fixed;top:0;left:0;height:4px;z-index:100;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--emerald),var(--chakra));width:0%;box-shadow:0 0 12px var(--saffron);transition:width .1s ease;}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(8,10,22,0.65);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;gap:6px;overflow-x:auto;padding:12px 18px;white-space:nowrap;}
+nav a{color:var(--text-dim);text-decoration:none;font-size:.8rem;font-weight:500;padding:8px 14px;border-radius:20px;transition:all .3s ease;flex-shrink:0;}
+nav a:hover{background:rgba(255,154,60,0.15);color:var(--saffron-soft);box-shadow:0 0 14px rgba(255,154,60,0.35);transform:translateY(-2px);}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;position:relative;}
+.chakra-spin{font-size:3.4rem;animation:spin 12s linear infinite;display:inline-block;margin-bottom:18px;filter:drop-shadow(0 0 20px rgba(63,140,255,0.6));}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2.2rem,7vw,5.4rem);font-weight:900;
+  background:linear-gradient(90deg,#ff9a3c,#ffd66b,#2fbf71,#3f8cff,#ff5570,#ff9a3c);
+  background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:gradientMove 8s linear infinite;letter-spacing:2px;text-shadow:0 0 60px rgba(255,154,60,0.25);
+  cursor:default;transition:transform .5s cubic-bezier(.16,1,.3,1),filter .5s ease;transform-style:preserve-3d;
+}
+.hero h1:hover{transform:perspective(700px) rotateX(6deg) rotateY(-5deg) scale(1.04);letter-spacing:4px;filter:drop-shadow(0 0 30px rgba(116,215,255,0.35));}
+@keyframes gradientMove{to{background-position:300% center;}}
+.hero .subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,2.4vw,1.5rem);color:var(--text-dim);margin-top:14px;letter-spacing:1px;}
+.hero .tagline{margin-top:26px;font-size:.95rem;color:var(--text-dim);max-width:700px;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:14px 0;}
+.hero .badges{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.badge{padding:8px 18px;border-radius:30px;font-size:.8rem;font-weight:600;border:1px solid var(--card-border);background:var(--card-bg);backdrop-filter:blur(6px);transition:all .35s ease;cursor:default;}
+.badge:hover{transform:translateY(-5px) scale(1.08);border-color:var(--saffron);box-shadow:0 8px 22px rgba(255,154,60,0.3);}
+.scrolldown{margin-top:60px;font-size:1.6rem;animation:bounce 2s infinite;color:var(--text-dim);}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(12px);}}
+
+/* ===== SECTIONS ===== */
+section{padding:90px 6vw;position:relative;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:'Fira Code',monospace;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:18px;background:rgba(255,255,255,0.03);}
+h2.title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:700;margin-bottom:10px;}
+h2.title span{color:var(--accent);}
+.lede{color:var(--text-dim);max-width:900px;margin-bottom:40px;font-size:1.02rem;}
+.reveal{opacity:0;transform:translateY(40px);transition:all .9s cubic-bezier(.2,.7,.2,1);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+/* ===== CARDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin:30px 0;}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:18px;padding:26px;backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:all .45s cubic-bezier(.2,.8,.2,1);}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),transparent 60%);opacity:0;transition:opacity .4s ease;}
+.card:hover{transform:translateY(-10px);border-color:var(--accent);box-shadow:0 18px 40px rgba(0,0,0,0.45);}
+.card:hover::before{opacity:.08;}
+.card h3{font-size:1.15rem;margin-bottom:10px;color:var(--accent);position:relative;z-index:1;}
+.card p,.card ul{color:var(--text-dim);font-size:.93rem;position:relative;z-index:1;}
+.card ul{padding-left:18px;margin-top:8px;}
+.num-badge{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:linear-gradient(145deg,var(--accent),transparent);font-family:'Fira Code',monospace;font-weight:700;margin-bottom:12px;border:1px solid var(--accent);}
+
+/* ===== FLOW DIAGRAMS ===== */
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:34px 0;}
+.flow.vertical{flex-direction:column;}
+.flow-node{background:linear-gradient(150deg,rgba(255,255,255,0.07),rgba(255,255,255,0.015));border:1px solid var(--card-border);border-radius:16px;padding:16px 20px;min-width:150px;text-align:center;backdrop-filter:blur(8px);transition:all .4s cubic-bezier(.2,.8,.2,1);box-shadow:0 6px 18px rgba(0,0,0,.35);font-size:.88rem;}
+.flow-node b{display:block;color:var(--accent);font-size:.95rem;margin-bottom:4px;}
+.flow-node:hover{transform:translateY(-8px) scale(1.06);border-color:var(--accent);}
+.flow-arrow{font-size:1.5rem;color:var(--accent);animation:pulseArrow 1.8s ease-in-out infinite;}
+@keyframes pulseArrow{0%,100%{opacity:.4;}50%{opacity:1;transform:translateX(4px);}}
+.flow.vertical .flow-arrow{animation:pulseArrowV 1.8s ease-in-out infinite;}
+@keyframes pulseArrowV{0%,100%{opacity:.4;}50%{opacity:1;transform:translateY(4px);}}
+.hub{display:flex;flex-direction:column;align-items:center;margin:36px 0;}
+.hub .flow-node{border-color:var(--accent);box-shadow:0 0 20px rgba(255,255,255,0.08);}
+.hub-line{width:2px;height:34px;background:linear-gradient(var(--accent),transparent);margin:4px 0;}
+.spokes{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
+.spokes .flow-node{border-top:3px solid var(--accent);}
+
+/* ===== CALLOUT / QUOTE ===== */
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,0.035);border-radius:0 14px 14px 0;padding:18px 22px;margin:24px 0;font-size:.92rem;color:var(--text-dim);transition:all .3s ease;}
+.callout:hover{background:rgba(255,255,255,0.06);transform:translateX(6px);}
+.callout b{color:var(--accent);}
+.quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;padding:20px 30px;border:1px solid var(--card-border);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,0.05),transparent);margin:26px 0;position:relative;color:#fff8ec;}
+.quote::before{content:'📜';position:absolute;top:-16px;left:20px;font-size:1.6rem;background:var(--bg-deep);padding:0 6px;}
+
+/* ===== TABLE ===== */
+table{width:100%;border-collapse:collapse;margin:26px 0;font-size:.92rem;background:var(--card-bg);border-radius:14px;overflow:hidden;border:1px solid var(--card-border);}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.06);}
+th{background:rgba(255,255,255,0.06);color:var(--accent);text-transform:uppercase;font-size:.75rem;letter-spacing:1px;}
+tr:hover td{background:rgba(255,255,255,0.045);}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;margin:40px 0;padding-left:30px;}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;background:linear-gradient(var(--saffron),var(--gold),var(--emerald),var(--chakra),var(--crimson));background-size:100% 400%;animation:flowLine 6s linear infinite;border-radius:4px;}
+@keyframes flowLine{0%{background-position:0 0;}100%{background-position:0 100%;}}
+.t-item{position:relative;margin-bottom:30px;padding-left:26px;}
+.t-item::before{content:'';position:absolute;left:-30px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--bg-deep);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent);}
+.t-item .t-date{font-family:'Fira Code',monospace;color:var(--accent);font-size:.85rem;}
+.t-item .t-desc{color:var(--text-dim);font-size:.93rem;}
+
+/* ===== GOLDEN TRIANGLE ===== */
+.triangle-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin:36px 0;}
+.triangle-bottom{display:flex;gap:60px;flex-wrap:wrap;justify-content:center;}
+.tri-node{width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:.85rem;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0.02));border:2px solid var(--accent);transition:all .4s ease;box-shadow:0 0 20px rgba(255,255,255,0.08);}
+.tri-node:hover{transform:scale(1.12) rotate(3deg);box-shadow:0 0 34px var(--accent);}
+.tri-node b{display:block;font-size:1.3rem;color:var(--accent);}
+
+/* ===== MNEMONIC ===== */
+.mnemonic{background:linear-gradient(135deg, rgba(255,154,60,0.09), rgba(63,140,255,0.06));border:1px dashed var(--accent);border-radius:16px;padding:22px;margin:18px 0;font-family:'Fira Code',monospace;font-size:.9rem;color:#fff3e0;letter-spacing:.3px;transition:all .35s ease;}
+.mnemonic:hover{transform:scale(1.01);box-shadow:0 0 26px rgba(255,255,255,0.1);}
+
+/* ===== CASE CHIPS ===== */
+.case-chip{display:inline-block;margin:0.22rem;padding:0.42rem 0.7rem;border:1px solid var(--accent);border-radius:999px;color:#fff;background:rgba(255,255,255,0.04);font-size:0.82rem;}
+
+/* ===== FOOTER / BACK TO TOP ===== */
+footer{padding:60px 6vw;text-align:center;color:var(--text-dim);font-size:.85rem;border-top:1px solid rgba(255,255,255,0.08);}
+footer .final{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;margin-bottom:14px;font-style:italic;}
+.toTop{position:fixed;bottom:26px;right:26px;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--chakra));display:flex;align-items:center;justify-content:center;font-size:1.3rem;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:all .4s ease;box-shadow:0 6px 20px rgba(0,0,0,0.4);}
+.toTop.show{opacity:1;pointer-events:auto;}
+.toTop:hover{transform:translateY(-6px) scale(1.1);}
+
+@media(max-width:600px){section{padding:70px 5vw;}.triangle-bottom{gap:20px;}.tri-node{width:110px;height:110px;font-size:.7rem;}}
+
+/* ============================================================
+   GLOBAL ANIMATION & HOVER REFINEMENTS
+   (Purely additive — every rule above stays untouched; these
+   rules only refine motion, depth and glow across the page)
+   ============================================================ */
+.chakra-spin{transition:transform .6s cubic-bezier(.16,1,.3,1),filter .6s ease;}
+.chakra-spin:hover{transform:scale(1.25) rotate(50deg);filter:drop-shadow(0 0 26px rgba(63,140,255,.9)) drop-shadow(0 0 40px rgba(255,154,60,.6));}
+
+.badge{position:relative;overflow:hidden;}
+.badge::before{content:'';position:absolute;top:0;bottom:0;left:-75%;width:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .65s ease;pointer-events:none;}
+.badge:hover::before{left:130%;}
+
+.card{transform-style:preserve-3d;}
+.card:hover{transform:translateY(-12px) perspective(900px) rotateX(2deg) rotateY(-2deg) scale(1.015);box-shadow:0 22px 46px rgba(0,0,0,.5),0 0 26px rgba(255,255,255,.06);}
+
+.flow-node:hover{box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px var(--accent);}
+
+.quote:hover,.mnemonic:hover{transform:translateY(-4px) scale(1.012);border-color:var(--accent);}
+
+.t-item{transition:transform .4s cubic-bezier(.16,1,.3,1),filter .4s ease;}
+.t-item:hover{transform:translateX(10px);filter:drop-shadow(0 0 10px rgba(255,255,255,.12));}
+.t-item:hover::before{box-shadow:0 0 16px var(--accent),0 0 30px var(--accent);}
+
+.case-chip{transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease;}
+.case-chip:hover{transform:translateY(-4px) scale(1.08);background:var(--accent);color:#0a0a12;box-shadow:0 8px 20px rgba(0,0,0,.35);}
+
+.tri-node{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease;}
+
+nav a{position:relative;}
+nav a::after{content:'';position:absolute;left:50%;bottom:2px;width:0;height:2px;background:var(--saffron);transition:all .35s ease;transform:translateX(-50%);}
+nav a:hover::after{width:60%;}
+
+/* ============================================================
+   AUTEUR CREDIT — "PIYUSH PARTE"
+   ============================================================ */
+.auteur-credit{
+  position:relative;isolation:isolate;overflow:hidden;
+  margin-top:30px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;
+  padding:20px 42px;border-radius:50px;
+  background:linear-gradient(135deg,rgba(255,154,60,.14),rgba(255,255,255,.03),rgba(63,140,255,.12));
+  border:1.5px solid rgba(232,194,87,.4);
+  box-shadow:0 10px 34px rgba(255,154,60,.18),inset 0 0 18px rgba(232,194,87,.12);
+  backdrop-filter:blur(14px);
+  cursor:default;
+  animation:auteurFloat 6s ease-in-out infinite;
+  transition:transform .55s cubic-bezier(.16,1,.3,1),box-shadow .5s ease,border-color .5s ease;
+}
+.auteur-credit::before{
+  content:'';position:absolute;top:0;bottom:0;left:-60%;width:45%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-20deg);animation:auteurSweep 4.5s ease-in-out infinite;pointer-events:none;
+}
+.auteur-credit::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.14), transparent 60%);
+  opacity:0;transition:opacity .4s ease;
+}
+.auteur-credit:hover::after{opacity:1;}
+.auteur-spark{position:absolute;top:9px;right:16px;font-size:.7rem;color:var(--gold);animation:starPulse 2.2s ease-in-out infinite;}
+.auteur-tag{font-family:'Fira Code',monospace;font-size:.68rem;letter-spacing:6px;text-transform:uppercase;color:#8fc2ff;text-shadow:0 0 10px rgba(103,183,255,.7);}
+.auteur-name{
+  font-family:'Cinzel Decorative',serif;font-weight:900;
+  font-size:clamp(1.1rem,3vw,1.85rem);letter-spacing:4px;
+  background:linear-gradient(100deg,#fff8ec 0%,#ffd66b 25%,#ff9a3c 50%,#e8c257 75%,#fff8ec 100%);
+  background-size:280% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:auteurShine 6s linear infinite;
+  transition:letter-spacing .5s cubic-bezier(.2,.8,.2,1),transform .5s cubic-bezier(.2,.8,.2,1),filter .5s ease;
+}
+.auteur-underline{
+  width:60%;height:2px;border-radius:10px;margin-top:2px;
+  background:linear-gradient(90deg,transparent,var(--saffron),var(--gold),var(--chakra),transparent);
+  transform:scaleX(.4);opacity:.6;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s ease;
+}
+.auteur-credit:hover{transform:translateY(-8px) scale(1.05);border-color:var(--gold);box-shadow:0 18px 46px rgba(255,154,60,.4),inset 0 0 26px rgba(232,194,87,.3);}
+.auteur-credit:hover .auteur-name{letter-spacing:7px;transform:perspective(600px) rotateX(4deg) scale(1.04);filter:drop-shadow(0 0 20px rgba(255,214,107,.55));}
+.auteur-credit:hover .auteur-underline{transform:scaleX(1);opacity:1;}
+@keyframes auteurFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+@keyframes auteurSweep{0%,35%{left:-60%;}70%,100%{left:130%;}}
+@keyframes auteurShine{to{background-position:280% center;}}
+@keyframes starPulse{0%,100%{opacity:.4;transform:scale(.8) rotate(0deg);}50%{opacity:1;transform:scale(1.3) rotate(90deg);}}
+
+/* ============================================================
+   HEART TRIBUTE — "En Nenjil Kudiyirukkum / என் நெஞ்சில் குடியிருக்கும்"
+   ============================================================ */
+.heart-tribute{
+  margin:30px auto 6px;max-width:580px;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:32px 30px;border-radius:24px;position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(150deg,rgba(255,154,60,.08),rgba(63,140,255,.07),rgba(47,191,113,.07));
+  border:1px solid rgba(255,255,255,.12);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease,border-color .5s ease;
+}
+.heart-tribute::before{
+  content:'';position:absolute;inset:-3px;z-index:-1;border-radius:24px;
+  background:conic-gradient(from 0deg,var(--saffron),var(--gold),var(--crimson),var(--chakra),var(--emerald),var(--saffron));
+  filter:blur(16px);opacity:.32;animation:tributeRotate 9s linear infinite;
+}
+.heart-tribute::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.12), transparent 60%);
+  opacity:0;transition:opacity .4s ease;
+}
+.heart-tribute:hover::after{opacity:1;}
+.heart-tribute:hover{transform:translateY(-8px) scale(1.03);border-color:rgba(255,255,255,.25);box-shadow:0 20px 50px rgba(0,0,0,.5);}
+.heart-icon{font-size:1.9rem;display:inline-block;animation:heartbeat 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,85,112,.65));}
+.tribute-en{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:clamp(1.15rem,3vw,1.7rem);color:#fff8ec;letter-spacing:1px;text-shadow:0 0 20px rgba(255,214,107,.3);}
+.tribute-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-weight:800;
+  font-size:clamp(1.35rem,3.6vw,2.15rem);
+  background:linear-gradient(90deg,var(--saffron),var(--gold),var(--crimson),var(--chakra),var(--emerald),var(--saffron));
+  background-size:320% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:gradientMove 7s linear infinite;
+  transition:letter-spacing .5s ease,transform .5s ease;
+}
+.heart-tribute:hover .tribute-ta{letter-spacing:1.5px;transform:scale(1.04);}
+@keyframes tributeRotate{to{transform:rotate(360deg);}}
+@keyframes heartbeat{0%,100%{transform:scale(1);}14%{transform:scale(1.28);}28%{transform:scale(1);}42%{transform:scale(1.18);}60%{transform:scale(1);}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}
+}
+@media(max-width:600px){
+  .auteur-credit{padding:16px 24px;}
+  .heart-tribute{padding:24px 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="cine-bg"></div>
+<div class="stars"></div>
+<div class="grain"></div>
+<div class="spotlight"></div>
+<div class="vignette"></div>
+<div class="progress" id="progress"></div>
+
+<nav>
+  <a href="#hero">🏠 Home</a>
+  <a href="#mindmap">🌳 Mind Map</a>
+  <a href="#part1">🗺️ Art 1–4</a>
+  <a href="#part2">🪪 Art 5–11</a>
+  <a href="#art12">⚖️ Art 12</a>
+  <a href="#art13">🛡️ Art 13</a>
+  <a href="#art14">⚡ Art 14</a>
+  <a href="#timeline">🗓️ Timeline</a>
+  <a href="#synoptic">📊 Synopsis</a>
+  <a href="#mnemonics">🧠 Mnemonics</a>
+  <a href="#finale">🏆 Finale</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" style="--accent:var(--saffron);">
+  <div class="chakra-spin">🛞</div>
+  <h1>THE CONSTITUTION OF INDIA</h1>
+  <div class="subtitle">"India, that is Bharat, shall be a Union of States"</div>
+
+  <div class="auteur-credit" tabindex="0" aria-label="Auteur: Piyush Parte">
+    <span class="auteur-spark">✦</span>
+    <span class="auteur-tag">Auteur</span>
+    <span class="auteur-name">PIYUSH PARTE</span>
+    <span class="auteur-underline"></span>
+  </div>
+
+  <div class="badges">
+    <div class="badge">🗺️ Territory (1–4)</div>
+    <div class="badge">🪪 Citizenship (5–11)</div>
+    <div class="badge">⚖️ State (12)</div>
+    <div class="badge">🛡️ Guardian (13)</div>
+    <div class="badge">⚡ Equality (14)</div>
+  </div>
+  <div class="scrolldown">⮟</div>
+</section>
+
+<!-- ================= MASTER MIND MAP ================= -->
+<section id="mindmap" style="--accent:var(--gold);">
+  <div class="reveal">
+    <span class="kicker">🎬 Opening Scene</span>
+    <h2 class="title">🌳 Master Mind Map — <span>The Big Picture</span></h2>
+    <p class="lede">Before diving deep, here is the entire architecture at a glance — five acts that build the Republic's foundation and open the door to Fundamental Rights. 🏛️</p>
+    <div class="hub">
+      <div class="flow-node"><b>🏛️ CONSTITUTION OF INDIA</b>Articles 1–14</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="flow-node"><b>🗺️ Art 1–4</b>Union & Territory<br>What is India, territorially?</div>
+        <div class="flow-node"><b>🪪 Art 5–11</b>Citizenship<br>Who belonged at birth?</div>
+        <div class="flow-node"><b>⚖️ Art 12</b>Definition of "State"<br>Against whom do FRs operate?</div>
+        <div class="flow-node"><b>🛡️ Art 13</b>Guardian of FRs<br>Voids inconsistent laws</div>
+        <div class="flow-node"><b>⚡ Art 14</b>Equality<br>Before law & equal protection</div>
+      </div>
+    </div>
+    <div class="callout">💡 <b>Insight:</b> Articles 12, 13 & 14 form the <b>"Golden Gateway"</b> to Part III — Article 12 defines <i>who</i> can violate your rights, Article 13 defines <i>what happens</i> to laws that do, and Article 14 begins the substantive list of rights themselves. 🚪✨</div>
+  </div>
+</section>
+
+<!-- ================= PART I: ARTICLES 1-4 ================= -->
+<section id="part1" style="--accent:var(--saffron);">
+  <div class="reveal">
+    <span class="kicker">🎬 Act I · Scene 1</span>
+    <h2 class="title">🗺️ The Union and Its <span>Territory</span> (Articles 1–4)</h2>
+    <p class="lede">India's territorial personality: an indestructible Union sculpted from destructible, ever-adaptable States. 🧩</p>
+
+    <h3 style="color:var(--accent);margin:26px 0 10px;">Article 1 — Name and Territory of the Union 🇮🇳</h3>
+    <div class="quote">"India, that is Bharat, shall be a Union of States."</div>
+    <div class="flow">
+      <div class="flow-node">❌ NOT formed by agreement between pre-existing sovereign States</div>
+      <div class="flow-arrow">➡️</div>
+      <div class="flow-node">❌ No State has a right to secede</div>
+      <div class="flow-arrow">➡️</div>
+      <div class="flow-node">🔒 <b>INDESTRUCTIBLE UNION</b>built of ✂️ destructible, reorganisable States</div>
+    </div>
+    <p style="color:var(--text-dim);">Dr. B. R. Ambedkar deliberately chose <b>"Union"</b> over <b>"Federation"</b> to signal these two ideas. Internal State boundaries remain freely alterable by Parliament under Article 3 — a deliberate design choice favouring adaptability over rigidity. 🔧</p>
+
+    <h3 style="color:var(--accent);margin:30px 0 10px;">🌍 Article 1(3) — Three Components of "Territory of India"</h3>
+    <div class="hub">
+      <div class="flow-node"><b>🌏 TERRITORY OF INDIA</b>(wider than "Union of India")</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="flow-node">🏘️ Territories of the <b>States</b></div>
+        <div class="flow-node">🏙️ <b>Union Territories</b> (First Schedule)</div>
+        <div class="flow-node">🎁 Territories that may be <b>Acquired</b> (cession, treaty, purchase, exchange — Goa, Puducherry, Sikkim)</div>
+      </div>
+    </div>
+
+    <table>
+      <tr><th>Concept</th><th>Scope</th></tr>
+      <tr><td>🌐 Territory of India</td><td>Wider term — includes future acquisitions even before formal integration</td></tr>
+      <tr><td>🏛️ Union of India</td><td>Narrower term — States, UTs, and the actual governmental machinery only</td></tr>
+    </table>
+    <table>
+      <tr><th>Feature</th><th>🏗️ Federation (e.g. USA)</th><th>🏗️ Union of States (India)</th></tr>
+      <tr><td>Formation</td><td>By agreement between sovereign States</td><td>By administrative division from one source</td></tr>
+      <tr><td>Right to secede</td><td>States may retain this right</td><td>States have <b>zero</b> right to secede 🔒</td></tr>
+      <tr><td>Source of power</td><td>Centre derives power <i>from</i> States</td><td>Centre <i>is</i> the source; States are its creations</td></tr>
+    </table>
+    <div class="callout">📌 This makes India a <b>"holding-together federation"</b> — a Centre comparatively stronger than in classical federations.</div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="num-badge">2️⃣</div>
+        <h3>Article 2 — Admission or Establishment of New States 🆕</h3>
+        <p>"Parliament may by law admit into the Union, or <b>establish</b>, new States on such terms and conditions as it thinks fit."</p>
+        <div class="flow" style="margin:14px 0;">
+          <div class="flow-node">🟢 <b>ADMIT</b> existing territory INTO the Union</div>
+          <div class="flow-node">🟣 <b>ESTABLISH</b> a brand-new State from scratch</div>
+        </div>
+        <p>Concerns territory from <b>outside</b> the existing Union — a <b>plenary power</b> (e.g. Sikkim's integration via the 35th & 36th Amendments). ⚡</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">3️⃣</div>
+        <h3>Article 3 — Formation & Alteration of States ✂️</h3>
+        <ul>
+          <li>(a) Form new State by separation/uniting States or parts</li>
+          <li>(b) Increase area of any State</li>
+          <li>(c) Diminish area of any State</li>
+          <li>(d) Alter boundaries of any State</li>
+          <li>(e) Alter name of any State</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="num-badge">4️⃣</div>
+        <h3>Article 4 — Supplemental & Consequential Provisions ⚙️</h3>
+        <p>Any Art.2/3 law amends the <b>First & Fourth Schedules</b> and covers representation, assets, staff, laws, and High Court adjustments.</p>
+        <div class="callout">⭐ <b>Golden Rule — Art. 4(2):</b> Such a law is <b>NOT</b> deemed an amendment under Article 368 → passed by <b>simple majority</b>, no State ratification needed! ✂️</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:20px 0 10px;">🏛️ Procedure Under Article 3</h3>
+    <div class="flow vertical">
+      <div class="flow-node">📝 Bill drafted</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🖋️ MUST have President's <b>prior recommendation</b></div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">📩 President refers Bill to affected <b>State Legislature</b> (only if area/boundary/name affected)</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🗣️ State gives views within specified time</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">⚠️ Views are <b>CONSULTATIVE</b> only — NOT binding</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">✅ Parliament may proceed regardless (simple majority)</div>
+    </div>
+    <div class="callout">🔁 If the Bill is later amended so as to <b>further affect</b> the State, a fresh reference may be required.</div>
+    <div class="mnemonic">🧾 <b>Explanations to Art. 3:</b> In clauses (a)–(e), "State" <b>includes</b> a UT ✅ — but in the proviso (legislature reference), "State" <b>excludes</b> a UT ❌.</div>
+    <div class="callout">🗓️ <b>Illustrative reorganisations:</b> Andhra State (1953) → States Reorganisation Act (1956) → Maharashtra/Gujarat (1960) → Punjab/Haryana (1966) → Chhattisgarh, Jharkhand, Uttarakhand (2000) → Telangana (2014) → J&K into two UTs (2019) — all WITHOUT touching Article 368! 🎯</div>
+
+    <h3 style="color:var(--accent);margin:26px 0 10px;">⚖️ The Berubari Union Case (1960) — Judicial Landmark</h3>
+    <div class="flow vertical">
+      <div class="flow-node">❓ Can Article 3 CEDE Indian territory to a FOREIGN country?</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🚫 <b>NO</b> — said the Supreme Court</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">✅ Requires a full <b>Article 368</b> amendment</div>
+    </div>
+    <div class="flow">
+      <div class="flow-node">9th Amendment (1960) — Berubari transfer</div>
+      <div class="flow-node">100th Amendment (2015) — India–Bangladesh Land Boundary Agreement</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PART II: ARTICLES 5-11 ================= -->
+<section id="part2" style="--accent:var(--gold);">
+  <div class="reveal">
+    <span class="kicker">🎬 Act I · Scene 2</span>
+    <h2 class="title">🪪 <span>Citizenship</span> (Articles 5–11)</h2>
+    <p class="lede">A response to the trauma of Partition — fixing who became a citizen at the Republic's birth while permanently handing future control to Parliament. 📸</p>
+
+    <div class="flow vertical">
+      <div class="flow-node">📍 1 Mar 1947 — Art.7 cut-off (India → Pakistan)</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">📍 19 Jul 1948 — Art.6 cut-off (permit system begins)</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">📍 26 Jan 1950 — Constitution commences, citizenship "snapshot" taken 📸</div>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="num-badge">5️⃣</div><h3>Art. 5 🏠 At Commencement</h3>
+        <p>A person <b>domiciled in India</b> became a citizen if: (a) born in India, OR (b) either parent born in India, OR (c) ordinarily resident for <b>≥5 years</b> before commencement.</p></div>
+      <div class="card"><div class="num-badge">6️⃣</div><h3>Art. 6 🚂 Pakistan → India</h3>
+        <p>Migrated + born (or parent/grandparent born) in undivided India:</p>
+        <ul><li>Before 19 Jul 1948 + resident since ➜ Citizen ✅</li><li>On/after 19 Jul 1948 + registered + 6 months' residence ➜ Citizen ✅</li></ul></div>
+      <div class="card"><div class="num-badge">7️⃣</div><h3>Art. 7 🚪 India → Pakistan</h3>
+        <p>Migration after 1 Mar 1947 generally <b>disqualified</b> Art.5/6 claims ❌ — <b>except</b> those who returned under a valid <b>resettlement permit</b>, who could qualify under Art.6's post-1948 rules ✅.</p></div>
+      <div class="card"><div class="num-badge">8️⃣</div><h3>Art. 8 🌍 Indians Abroad</h3>
+        <p>Born (or parent/grandparent born) in undivided India, residing abroad → could be <b>registered</b> by an Indian diplomatic/consular representative.</p></div>
+      <div class="card"><div class="num-badge">9️⃣</div><h3>Art. 9 🚫 Foreign Citizenship Bar</h3>
+        <p>Voluntary acquisition of <b>foreign citizenship</b> bars/ends claims under Arts 5, 6 or 8 — the constitutional basis of India's <b>single citizenship</b> principle.</p></div>
+      <div class="card"><div class="num-badge">🔟</div><h3>Art. 10 ♾️ Continuance</h3>
+        <p>Citizenship isn't frozen at 1950 — it <b>continues</b>, subject to laws Parliament may make.</p></div>
+    </div>
+    <div class="card" style="max-width:700px;margin:0 auto;">
+      <div class="num-badge">1️⃣1️⃣</div><h3>Article 11 👑 Parliament's Plenary Power</h3>
+      <div class="quote">"Nothing... shall derogate from the power of Parliament to make any provision with respect to the acquisition and termination of citizenship and all other matters relating to citizenship."</div>
+      <p>Foundation of the <b>Citizenship Act, 1955</b> and its amendments, including the <b>Citizenship (Amendment) Act, 2019</b>.</p>
+    </div>
+
+    <h3 style="color:var(--accent);margin:34px 0 10px;">🔄 Unified Citizenship Flow</h3>
+    <div class="flow vertical">
+      <div class="flow-node">👶 Person exists at/around 1950</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🏠 Born in India (Art.5) / 🚶 Migrated from Pakistan (Art.6) / 🚪 Migrated to Pakistan (Art.7) / 🌍 Living Abroad (Art.8)</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">🪙 CITIZEN OF INDIA</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">Voluntarily acquires FOREIGN citizenship? (Art.9) — ✅ YES → 🚫 VOID | ❌ NO → ♾️ Continues (Art.10)</div>
+      <div class="flow-arrow">⬇️</div>
+      <div class="flow-node">👑 All future rules → PARLIAMENT (Art.11) → Citizenship Act 1955 / CAA 2019</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARTICLE 12 ================= -->
+<section id="art12" style="--accent:var(--chakra);">
+  <div class="reveal">
+    <span class="kicker">🎬 Act II · The Gateway Opens</span>
+    <h2 class="title">⚖️ Article 12 — Definition of <span>"State"</span></h2>
+    <p class="lede">The gateway to Part III — before claiming a right was violated, we must ask: <i>violated by whom?</i> 🚪</p>
+    <div class="quote">"In this Part, unless the context otherwise requires, 'the State' includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India."</div>
+
+    <div class="hub">
+      <div class="flow-node"><b>🚪 ARTICLE 12</b>Who can be held to violate Fundamental Rights?</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="flow-node">🏛️ Govt + Parliament of India</div>
+        <div class="flow-node">🏢 State Govt + Legislature</div>
+        <div class="flow-node">🏘️ Local Authorities (municipalities, panchayats, port trusts)</div>
+        <div class="flow-node">🏢 "Other" Authorities (via judicial tests)</div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:30px 0 10px;">🔍 Doctrinal Evolution of "Other Authorities"</h3>
+    <div class="timeline">
+      <div class="t-item"><div class="t-date">1967</div><div class="t-desc"><b>Rajasthan SEB v. Mohan Lal</b> — "Other authorities" = bodies created by statute with statutory powers.</div></div>
+      <div class="t-item"><div class="t-date">1979 / 1981</div><div class="t-desc"><b>R.D. Shetty v. IAAI / Ajay Hasia v. Khalid Mujib</b> — Instrumentality/Agency Test: deep financial aid, pervasive government control, monopoly status, public function, departmental transfer to a corporate body.</div></div>
+      <div class="t-item"><div class="t-date">2002</div><div class="t-desc"><b>Pradeep Kumar Biswas v. IICB</b> (7-judge bench) — Refined test: must show <b>DEEP, PERVASIVE, FUNCTIONAL</b> control by government — mere regulation is not enough.</div></div>
+    </div>
+    <div class="callout">🔑 This test determines whether bodies like LIC, ONGC, or CSIR fall within Article 12 as instrumentalities of the State.</div>
+    <div class="callout">🧑‍⚖️ <b>A subtler question — is the Judiciary "the State"?</b> Courts performing purely judicial/adjudicatory functions have generally been treated differently from Article 12's core list (see <i>Naresh Shridhar Mirajkar v. State of Maharashtra</i>), whereas the judiciary's <b>administrative</b> actions (framing rules, service matters) are accepted as falling within Article 12. This remains a nuanced, debated corner of doctrine. 📚</div>
+  </div>
+</section>
+
+<!-- ================= ARTICLE 13 ================= -->
+<section id="art13" style="--accent:var(--crimson);">
+  <div class="reveal">
+    <span class="kicker">🎬 Act II · Scene 2 — The Guardian</span>
+    <h2 class="title">🛡️ Article 13 — Laws Inconsistent With or in <span>Derogation of Fundamental Rights</span></h2>
+    <p class="lede">If Article 12 tells us <i>who</i> the State is, Article 13 is the <b>enforcement sword</b> ⚔️ — it gives Part III real teeth by striking down any law, past or future, that clashes with your Fundamental Rights. It is rightly called the <b>"Guardian of Fundamental Rights"</b> and is the constitutional root of <b>Judicial Review</b>.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="num-badge">13(1)</div>
+        <h3>Pre-Constitution Laws 📜</h3>
+        <p>All laws <b>in force</b> in India immediately before commencement, insofar as inconsistent with Part III, are <b>void to the extent of that inconsistency</b>.</p>
+        <p style="margin-top:8px;">⚠️ <b>Important nuance:</b> such a law is <b>not void ab initio</b> — it was perfectly valid when made. It only becomes void <b>prospectively, from 26 January 1950 onward</b>. This is why the <b>Doctrine of Eclipse</b> (below) can apply to it (<i>Keshavan Madhava Menon v. State of Bombay</i>, 1951).</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">13(2)</div>
+        <h3>Post-Constitution Laws 🚫</h3>
+        <p>The <b>State shall not make any law</b> which takes away or abridges Part III rights. Any law made in contravention is <b>void to the extent of the contravention</b>.</p>
+        <p style="margin-top:8px;">⚠️ <b>Here, "void" means void ab initio</b> — the law is <b>still-born</b>, a nullity from the moment of its enactment (<i>Deep Chand v. State of U.P.</i>). The Doctrine of Eclipse does <b>not</b> revive it.</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">13(3)</div>
+        <h3>Definitions 📖</h3>
+        <ul>
+          <li><b>(a) "Law"</b> includes Ordinance, order, bye-law, rule, regulation, notification, custom or usage having the force of law.</li>
+          <li><b>(b) "Laws in force"</b> includes laws passed before commencement even if not then in operation everywhere, provided not previously repealed.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="num-badge">13(4)</div>
+        <h3>The Amendment Exception 🏛️</h3>
+        <p>Inserted by the <b>24th Amendment Act, 1971</b>: "Nothing in this article shall apply to any amendment of this Constitution made under Article 368." A direct legislative response to <i>Golaknath</i> (see timeline below).</p>
+      </div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:34px 0 12px;">🧠 The Doctrine Toolbox of Article 13</h3>
+    <div class="grid">
+      <div class="card"><h3>🌘 Doctrine of Eclipse</h3><p>A <b>pre-constitution</b> law inconsistent with a Fundamental Right isn't dead — it's <b>eclipsed / dormant</b>. It can spring back to life if the relevant Right is later amended to remove the inconsistency (<i>Bhikaji Narain Dhakras v. State of M.P.</i>). Applies only to laws valid when made — not to post-Constitution void laws.</p></div>
+      <div class="card"><h3>✂️ Doctrine of Severability</h3><p>Only the part of a statute <b>inconsistent</b> with Part III is struck down — the rest survives if separable (<i>A.K. Gopalan v. State of Madras</i>, 1950).</p></div>
+      <div class="card"><h3>🙅 Doctrine of Waiver — Rejected</h3><p>A citizen <b>cannot waive</b> a Fundamental Right, since these rights serve public policy, not just private benefit (<i>Basheshar Nath v. CIT</i>, 1959; <i>Behram Pesikaka v. State of Bombay</i>).</p></div>
+      <div class="card"><h3>🕰️ Prospective Overruling</h3><p>The Court may declare a new legal position to operate only from a future date, to avoid unsettling past transactions (used in <i>Golaknath</i>, 1967).</p></div>
+      <div class="card"><h3>🧪 Reading Down</h3><p>Where a provision admits multiple interpretations, courts prefer the constitutionally compatible one over an outright strike-down.</p></div>
+      <div class="card"><h3>🔬 Presumption of Constitutionality</h3><p>Legislation is presumed valid; the burden lies on the challenger to prove a clear constitutional violation.</p></div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:34px 0 12px;">⚔️ The Great Amendment Battle — Case Law Timeline</h3>
+    <div class="timeline">
+      <div class="t-item"><div class="t-date">1950</div><div class="t-desc"><b>A.K. Gopalan v. State of Madras</b> — Narrow, compartmentalised reading of Fundamental Rights (later overruled by Maneka Gandhi).</div></div>
+      <div class="t-item"><div class="t-date">1951</div><div class="t-desc"><b>Shankari Prasad v. Union of India</b> — A constitutional amendment under Art.368 is <b>not "law"</b> under Art.13(2) — Parliament CAN amend Fundamental Rights.</div></div>
+      <div class="t-item"><div class="t-date">1965</div><div class="t-desc"><b>Sajjan Singh v. State of Rajasthan</b> — Reaffirmed Shankari Prasad.</div></div>
+      <div class="t-item"><div class="t-date">1967</div><div class="t-desc"><b>I.C. Golaknath v. State of Punjab</b> (11-judge bench) — Reversed course: "law" in Art.13(2) <b>includes</b> constitutional amendments; Parliament <b>cannot</b> abridge Fundamental Rights, even by amendment (applied prospectively).</div></div>
+      <div class="t-item"><div class="t-date">1971</div><div class="t-desc"><b>24th Constitutional Amendment</b> — Inserted Art.13(4) and amended Art.368, nullifying Golaknath and restoring Parliament's power to amend any part of the Constitution.</div></div>
+      <div class="t-item"><div class="t-date">1973</div><div class="t-desc"><b>Kesavananda Bharati v. State of Kerala</b> (13-judge bench) — Upheld the 24th Amendment BUT propounded the historic <b>Basic Structure Doctrine</b>: Parliament cannot destroy the Constitution's basic structure even via Art.368. 🌟</div></div>
+      <div class="t-item"><div class="t-date">1980</div><div class="t-desc"><b>Minerva Mills v. Union of India</b> — Struck down 42nd Amendment clauses granting unlimited amending power; reaffirmed limited amending power, judicial review, and FR–DPSP harmony as basic structure.</div></div>
+    </div>
+    <div class="callout">💡 <b>Insight:</b> Article 13(4) removes constitutional amendments from Article 13's literal reach — but the <b>Basic Structure Doctrine</b> ensures amendments stay subject to judicial review whenever they damage the Constitution's core identity. ⚔️🌟</div>
+    <div class="callout">📌 <b>Fact:</b> Article 372 separately provides for the general continuance of pre-Constitution laws — Article 13(1) is the special provision that specifically <b>voids</b> those inconsistent with Fundamental Rights.</div>
+    <span class="case-chip">A.K. Gopalan</span><span class="case-chip">Shankari Prasad</span><span class="case-chip">Golaknath</span><span class="case-chip">Kesavananda Bharati</span><span class="case-chip">Minerva Mills</span><span class="case-chip">I.R. Coelho</span>
+  </div>
+</section>
+
+<!-- ================= ARTICLE 14 ================= -->
+<section id="art14" style="--accent:var(--emerald);">
+  <div class="reveal">
+    <span class="kicker">🎬 Act III · The First Right</span>
+    <h2 class="title">⚡ Article 14 — Equality Before Law & <span>Equal Protection of Laws</span></h2>
+    <p class="lede">The very first Fundamental Right of Part III — the cornerstone of Indian equality jurisprudence. 🏛️✨</p>
+    <div class="quote">"The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India."</div>
+
+    <h3 style="color:var(--accent);margin:26px 0 10px;">🌓 The Two Limbs of Article 14</h3>
+    <div class="flow">
+      <div class="flow-node"><b>⚖️ Equality Before Law</b>Negative concept 🇬🇧<br>British origin — Dicey's Rule of Law<br>No one above law; no special privileges</div>
+      <div class="flow-arrow">🤝</div>
+      <div class="flow-node"><b>🛡️ Equal Protection of Laws</b>Positive concept 🇺🇸<br>American origin — 14th Amendment<br>Equal treatment in equal circumstances; permits affirmative classification</div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:30px 0 10px;">📚 Dicey's Rule of Law — 3 Pillars</h3>
+    <div class="hub">
+      <div class="flow-node"><b>⚖️ RULE OF LAW</b> (A.V. Dicey)</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="flow-node">👑 Supremacy of Law<br>(absence of arbitrary power)</div>
+        <div class="flow-node">🤝 Equality Before Law</div>
+        <div class="flow-node">📖 Predominance of Legal Spirit<br>(rights secured via ordinary courts)</div>
+      </div>
+    </div>
+    <div class="callout">🌍 <b>Who is protected?</b> Article 14 applies to <b>"any person"</b> — citizens AND foreigners, natural persons AND juristic persons like companies. This is broader than Articles 15, 16 & 19, which protect only <b>citizens</b>. 🧍🏢🌐</div>
+
+    <h3 style="color:var(--accent);margin:30px 0 10px;">🚫 Exceptions & Limitations</h3>
+    <div class="grid">
+      <div class="card"><h3>👑 Art. 361 Immunity</h3><p>President & Governors are not answerable to courts for official acts; immune from criminal proceedings during term; civil proceedings need prior notice.</p></div>
+      <div class="card"><h3>🌐 Diplomatic Immunity</h3><p>Foreign sovereigns, ambassadors & diplomats enjoy immunity under international law and statute.</p></div>
+      <div class="card"><h3>📜 Article 31-C (Partial) Shield</h3><p>Inserted by the 25th Amendment (1971): laws implementing Art.39(b)/(c) get some protection from Art.14/19 challenges — but its blanket extension to <b>all</b> DPSPs was struck down in <i>Minerva Mills</i> (1980).</p></div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:34px 0 12px;">🧪 The Twin Test — Doctrine of Reasonable Classification</h3>
+    <p class="lede" style="margin-bottom:14px;">Article 14 forbids <b>class legislation</b> but permits <b>reasonable classification</b> — laid down in <i>State of West Bengal v. Anwar Ali Sarkar</i> (1952) and elaborated in <i>Ram Krishna Dalmia v. Justice S.R. Tendolkar</i> (1959).</p>
+    <div class="flow">
+      <div class="flow-node">1️⃣ <b>Intelligible Differentia</b><br>A real, discernible distinction separating the grouped persons/things from those left out</div>
+      <div class="flow-arrow">➕</div>
+      <div class="flow-node">2️⃣ <b>Rational Nexus</b><br>The differentia must relate rationally to the object of the law</div>
+      <div class="flow-arrow">=</div>
+      <div class="flow-node">✅ <b>VALID CLASSIFICATION</b><br>(both conditions must be satisfied together)</div>
+    </div>
+    <div class="callout">📌 <i>Ram Krishna Dalmia</i> laid down a strong <b>presumption of constitutionality</b> in favour of legislation, placing the burden of proof on the party alleging discrimination.</div>
+
+    <h3 style="color:var(--accent);margin:34px 0 12px;">🔥 The New Dimension — Doctrine Against Arbitrariness</h3>
+    <div class="timeline">
+      <div class="t-item"><div class="t-date">1974</div><div class="t-desc"><b>E.P. Royappa v. State of Tamil Nadu</b> — Justice Bhagwati: "Equality is a dynamic concept... Article 14 strikes at arbitrariness in State action. Equality and arbitrariness are sworn enemies." 🔥</div></div>
+      <div class="t-item"><div class="t-date">1978</div><div class="t-desc"><b>Maneka Gandhi v. Union of India</b> — Articles 14, 19 & 21 read together as a <b>"Golden Triangle."</b> "Procedure established by law" under Art.21 must now be fair, just & reasonable, satisfying Art.14 too.</div></div>
+      <div class="t-item"><div class="t-date">1992</div><div class="t-desc"><b>Indra Sawhney v. Union of India</b> — Mandal Commission case; examined reservation, the 50% ceiling, and the "creamy layer" concept under Arts.14/16.</div></div>
+      <div class="t-item"><div class="t-date">2017</div><div class="t-desc"><b>Shayara Bano v. Union of India</b> (Triple Talaq case) — Extended "manifest arbitrariness" to strike down <b>legislation itself</b>, not just executive action.</div></div>
+    </div>
+
+    <h3 style="color:var(--accent);margin:34px 0 12px;">🔺 The Golden Triangle</h3>
+    <div class="triangle-wrap">
+      <div class="triangle-top"><div class="tri-node"><b>21</b>Personal Liberty</div></div>
+      <div class="triangle-bottom">
+        <div class="tri-node"><b>14</b>Equality</div>
+        <div class="tri-node"><b>19</b>Freedoms</div>
+      </div>
+    </div>
+    <div class="callout">💡 <b>Insight:</b> Post-<i>Maneka Gandhi</i>, any law depriving personal liberty must satisfy Articles 14, 19 <b>and</b> 21 together — the beating heart of modern Indian constitutional law. 💛🔺</div>
+    <div class="callout">📌 <b>Fact:</b> Article 14 does not demand identical treatment for all — <i>"equals should be treated equally, and unequals cannot be treated equally."</i> Special provisions like Arts. 15(3)/(4)/(5) and 16(4) are facets of <b>substantive</b>, not merely formal, equality. ⚖️✨</div>
+    <span class="case-chip">Anwar Ali Sarkar</span><span class="case-chip">Ram Krishna Dalmia</span><span class="case-chip">E.P. Royappa</span><span class="case-chip">Maneka Gandhi</span><span class="case-chip">Indra Sawhney</span><span class="case-chip">Shayara Bano</span><span class="case-chip">Navtej Singh Johar</span>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section id="timeline" style="--accent:var(--gold);">
+  <div class="reveal">
+    <span class="kicker">🎬 Recap Reel</span>
+    <h2 class="title">🗓️ Consolidated Timeline of <span>Key Dates</span></h2>
+    <table>
+      <tr><th>Date</th><th>Significance</th></tr>
+      <tr><td>1 March 1947</td><td>Art.7 cut-off — migration India → Pakistan</td></tr>
+      <tr><td>19 July 1948</td><td>Art.6 cut-off — permit system begins, Pakistan → India</td></tr>
+      <tr><td>26 January 1950</td><td>Constitution commences; citizenship provisions operative</td></tr>
+      <tr><td>1950</td><td>A.K. Gopalan v. State of Madras — narrow FR reading</td></tr>
+      <tr><td>1951</td><td>Shankari Prasad v. Union of India; Keshavan Madhava Menon (Art.13(1) prospective)</td></tr>
+      <tr><td>1952</td><td>State of WB v. Anwar Ali Sarkar — reasonable classification introduced</td></tr>
+      <tr><td>1953</td><td>Andhra State created (first linguistic State)</td></tr>
+      <tr><td>1955</td><td>Citizenship Act enacted under Article 11</td></tr>
+      <tr><td>1956</td><td>States Reorganisation Act</td></tr>
+      <tr><td>1959</td><td>Ram Krishna Dalmia; Basheshar Nath (waiver rejected)</td></tr>
+      <tr><td>1960</td><td>Berubari Union Case; Maharashtra & Gujarat created; 9th Amendment</td></tr>
+      <tr><td>1966</td><td>Punjab–Haryana bifurcation</td></tr>
+      <tr><td>1967</td><td>I.C. Golaknath v. State of Punjab; Rajasthan SEB v. Mohan Lal</td></tr>
+      <tr><td>1971</td><td>24th Amendment — inserts Art.13(4), nullifies Golaknath</td></tr>
+      <tr><td>1973</td><td>Kesavananda Bharati — Basic Structure Doctrine born</td></tr>
+      <tr><td>1974</td><td>E.P. Royappa — Article 14 & non-arbitrariness</td></tr>
+      <tr><td>1978</td><td>Maneka Gandhi — Golden Triangle (Arts. 14, 19, 21)</td></tr>
+      <tr><td>1980</td><td>Minerva Mills — limited amending power is basic structure</td></tr>
+      <tr><td>1992</td><td>Indra Sawhney — reservation & equality</td></tr>
+      <tr><td>2000</td><td>Chhattisgarh, Jharkhand, Uttarakhand created</td></tr>
+      <tr><td>2002</td><td>Pradeep Kumar Biswas — refined instrumentality test</td></tr>
+      <tr><td>2014</td><td>Telangana created</td></tr>
+      <tr><td>2015</td><td>100th Amendment — India–Bangladesh Land Boundary Agreement</td></tr>
+      <tr><td>2017</td><td>Shayara Bano — manifest arbitrariness strikes down legislation</td></tr>
+      <tr><td>2019</td><td>J&K reorganised into two UTs; Citizenship (Amendment) Act</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= SYNOPTIC TABLE ================= -->
+<section id="synoptic" style="--accent:var(--chakra);">
+  <div class="reveal">
+    <span class="kicker">🎬 The Big Recap</span>
+    <h2 class="title">📊 Articles 1–14 <span>At a Glance</span></h2>
+    <table>
+      <tr><th>Article</th><th>Subject</th><th>Key Doctrine / Mechanism</th><th>Landmark</th></tr>
+      <tr><td><b>1</b></td><td>Name & Territory</td><td>Indestructible Union of destructible States</td><td>Ambedkar's Union vs. Federation debate</td></tr>
+      <tr><td><b>2</b></td><td>New States</td><td>Plenary power to admit/establish</td><td>Sikkim (35th/36th Amdt)</td></tr>
+      <tr><td><b>3</b></td><td>Reorganisation</td><td>Consultative, non-binding State reference</td><td>SRA 1956; Telangana 2014</td></tr>
+      <tr><td><b>4</b></td><td>Consequential provisions</td><td>Simple majority, not Art.368</td><td>Berubari (1960)</td></tr>
+      <tr><td><b>5–8</b></td><td>Citizenship at commencement</td><td>Domicile + birth/descent/residence; migration cut-offs</td><td>Constitutional "snapshot," 1950</td></tr>
+      <tr><td><b>9–11</b></td><td>Single citizenship & Parliament's power</td><td>Foreign citizenship bar; plenary legislative power</td><td>Citizenship Act 1955; CAA 2019</td></tr>
+      <tr><td><b>12</b></td><td>Definition of "State"</td><td>Instrumentality/agency test</td><td>Ajay Hasia (1981); Pradeep Kumar Biswas (2002)</td></tr>
+      <tr><td><b>13</b></td><td>Judicial review</td><td>Void prospectively (13(1)) vs. void ab initio (13(2)); Eclipse, Severability, Waiver</td><td>Golaknath (1967); Kesavananda Bharati (1973)</td></tr>
+      <tr><td><b>14</b></td><td>Equality</td><td>Reasonable classification + Anti-arbitrariness</td><td>Royappa (1974); Maneka Gandhi (1978)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= MNEMONICS ================= -->
+<section id="mnemonics" style="--accent:var(--saffron);">
+  <div class="reveal">
+    <span class="kicker">🎬 Behind the Scenes</span>
+    <h2 class="title">🧠 Memory Architecture for <span>Rapid Recall</span></h2>
+    <div class="mnemonic">🧩 <b>ARTICLES 1–4</b> → "NAME – NEW – NEW SHAPE – NECESSARY CHANGES"<br>1️⃣ Name & Territory · 2️⃣ New States (admit/establish) · 3️⃣ New Shape (reorganise) · 4️⃣ Necessary consequential changes (simple majority)</div>
+    <div class="mnemonic">🧩 <b>ARTICLES 5–11</b> → "AT PARTITION – PEOPLE ABROAD – FOREIGN CHOICE – CONTINUANCE by PARLIAMENT"<br>5️⃣ At commencement · 6️⃣ Pakistan→India · 7️⃣ India→Pakistan · 8️⃣ People abroad · 9️⃣ Foreign citizen bar · 🔟 Continuance · 1️⃣1️⃣ Parliament's power</div>
+    <div class="mnemonic">🧩 <b>ARTICLE 12</b> → "GOVERNMENT + LEGISLATURE + LOCAL + OTHER" = 4 pillars of "State"</div>
+    <div class="mnemonic">🧩 <b>ARTICLE 13</b> → "PRE + POST + DEFINE + PROTECT AMENDMENT"<br>13(1) Pre-law void prospectively · 13(2) Post-law void ab initio · 13(3) Defines "law" · 13(4) Amendments exempted (but Basic Structure watches!) 👁️</div>
+    <div class="mnemonic">🧩 <b>ARTICLE 14</b> → "BEFORE + PROTECTION = CLASSIFICATION + NO ARBITRARINESS"<br>Equality Before Law (negative/British) + Equal Protection (positive/American) → Reasonable Classification (Differentia + Nexus) → Non-Arbitrariness (Royappa → Maneka → Shayara Bano) 🔥</div>
+  </div>
+</section>
+
+<!-- ================= FINALE ================= -->
+<section id="finale" style="--accent:var(--chakra);">
+  <div class="reveal">
+    <span class="kicker">🎬 Final Act</span>
+    <h2 class="title">🏆 Final Master <span>Flowchart</span></h2>
+    <div class="hub">
+      <div class="flow-node"><b>🇮🇳 CONSTITUTION OF INDIA 🇮🇳</b></div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="flow-node">🗺️ Art 1–4<br>Indestructible UNION of destructible STATES 🧩</div>
+        <div class="flow-node">🪪 Art 5–11<br>Citizenship fixed at 1950 + Parliament controls future</div>
+        <div class="flow-node">⚖️ Art 12<br>Defines "State" → who Fundamental Rights bind 👑</div>
+        <div class="flow-node">🛡️ Art 13<br>Voids inconsistent laws → Guardian of Part III ⚔️</div>
+        <div class="flow-node">⚡ Art 14<br>Opens Part III with Equality → Golden Triangle 🔺</div>
+      </div>
+    </div>
+    <div class="quote" style="margin-top:40px;">🌟 <b>Final Takeaway</b> 🌟<br><br>
+    🗺️ <b>Articles 1–4</b> establish what India <i>is</i> territorially: an indestructible Union built of freely reorganisable States, changed by simple majority — except when ceding territory to a foreign nation, which demands full Article 368 rigour (Berubari, 1960).<br><br>
+    🪪 <b>Articles 5–11</b> establish who belonged to India at the Republic's birth, then hand all future control to Parliament's plenary power (Article 11) — the foundation of the Citizenship Act, 1955 and CAA, 2019.<br><br>
+    ⚖️ <b>Article 12</b> opens the door to Part III by defining "the State."<br><br>
+    🛡️ <b>Article 13</b> arms Part III with real enforcement power — voiding any law, past or future, that abridges a Fundamental Right, tempered and perfected by the Basic Structure Doctrine.<br><br>
+    ⚡ <b>Article 14</b> begins the substantive journey of rights themselves — equality before law, equal protection, reasonable classification, and the powerful modern doctrine against arbitrary State action. 🚀📚
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="final">"Justice, Liberty, Equality, and Fraternity" — the eternal promise of the Preamble, now walked through Articles 1 to 14</div>
+
+  <div class="heart-tribute" tabindex="0" aria-label="En Nenjil Kudiyirukkum — என் நெஞ்சில் குடியிருக்கும்">
+    <span class="heart-icon">💗</span>
+    <span class="tribute-en">En Nenjil Kudiyirukkum</span>
+    <span class="tribute-ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+</footer>
+
+<div class="toTop" id="toTop">▲</div>
+
+<script>
+  const progress = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progress.style.width = scrolled + '%';
+    const toTop = document.getElementById('toTop');
+    if (h.scrollTop > 500) toTop.classList.add('show'); else toTop.classList.remove('show');
+  });
+  document.getElementById('toTop').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  document.addEventListener('mousemove', e => {
+    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--my', e.clientY + 'px');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  /* Pointer-reactive glow for the special AUTEUR and TRIBUTE panels */
+  document.querySelectorAll('.auteur-credit, .heart-tribute').forEach(panel => {
+    panel.addEventListener('pointermove', e => {
+      const r = panel.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width) * 100;
+      const y = ((e.clientY - r.top) / r.height) * 100;
+      panel.style.setProperty('--gx', x + '%');
+      panel.style.setProperty('--gy', y + '%');
+    });
+    panel.addEventListener('pointerleave', () => {
+      panel.style.removeProperty('--gx');
+      panel.style.removeProperty('--gy');
+    });
+  });
+</script>
+
+</body>
+</html>
