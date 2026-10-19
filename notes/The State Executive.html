@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070f">
+<meta name="description" content="Cinematic, clause-accurate notes on the State Executive of India — Articles 153 to 167 — with auxiliary powers, flow diagrams, mnemonics, case law and exam traps.">
+<title>The State Executive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Noto+Sans+Tamil:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#05070f;--ink:#ece9f3;--mut:#c4bfd3;--dim:#948fa9;
+  --card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);
+  --saffron:#ffa45c;--gold:#f2cf72;--sky:#78b8ff;--mint:#6fdcab;
+  --rose:#ff8aa1;--violet:#bd9bff;--cyan:#6fe3e8;--pink:#f5a6d0;
+  --accent:var(--gold);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif;line-height:1.8;overflow-x:hidden;font-size:15.5px}
+::selection{background:var(--gold);color:#140e00}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--saffron),var(--violet),var(--sky));border-radius:10px}
+a{color:var(--sky)}a:hover{color:var(--gold)}
+b,strong{color:#f7f4ee;font-weight:600}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.hide{display:none!important}
+
+/* ===== CINEMATIC LAYERS ===== */
+.cine-bg{position:fixed;inset:0;z-index:-6;background:
+  radial-gradient(ellipse 75% 55% at 10% 8%,rgba(255,164,92,.17),transparent 62%),
+  radial-gradient(ellipse 70% 60% at 90% 14%,rgba(120,184,255,.16),transparent 62%),
+  radial-gradient(ellipse 75% 65% at 50% 100%,rgba(111,220,171,.13),transparent 65%),
+  radial-gradient(ellipse 50% 40% at 80% 60%,rgba(189,155,255,.10),transparent 65%),
+  linear-gradient(180deg,#04060e 0%,#090e20 45%,#0d0a1b 100%);
+  animation:aurora 18s ease-in-out infinite alternate}
+@keyframes aurora{0%{filter:hue-rotate(0) brightness(1)}50%{filter:hue-rotate(10deg) brightness(1.08)}100%{filter:hue-rotate(-8deg) brightness(.98)}}
+.stars{position:fixed;inset:0;z-index:-5;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(1.5px 1.5px at 10% 20%,#fff,transparent),radial-gradient(1px 1px at 80% 40%,#fff,transparent),radial-gradient(2px 2px at 50% 70%,#fff,transparent),radial-gradient(1px 1px at 30% 85%,#fff,transparent),radial-gradient(1.5px 1.5px at 92% 90%,#fff,transparent),radial-gradient(1px 1px at 65% 15%,#fff,transparent);
+  background-size:250px 250px;animation:twinkle 6s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.28}to{opacity:.65}}
+#dust{position:fixed;inset:0;z-index:-4;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spotlight{position:fixed;inset:0;z-index:5;pointer-events:none;background:radial-gradient(560px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.055),transparent 46%)}
+.vignette{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 200px rgba(0,0,0,.72)}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:150;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--mint),var(--sky),var(--violet));box-shadow:0 0 14px var(--saffron)}
+.curtain{position:fixed;inset:0;z-index:300;pointer-events:none}
+.curtain::before,.curtain::after{content:'';position:absolute;left:0;right:0;height:50.5%;background:linear-gradient(#02030a,#070a18);animation:curtainOpen 1.7s .35s cubic-bezier(.77,0,.18,1) forwards}
+.curtain::before{top:0;--d:-102%}.curtain::after{bottom:0;--d:102%}
+@keyframes curtainOpen{to{transform:translateY(var(--d))}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:90;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:12px 18px;background:rgba(7,9,20,.74);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);scrollbar-width:thin}
+nav a{position:relative;flex-shrink:0;color:var(--mut);text-decoration:none;font-size:.78rem;font-weight:500;padding:8px 14px;border-radius:22px;border:1px solid transparent;transition:all .3s ease}
+nav a::after{content:'';position:absolute;left:50%;bottom:2px;width:0;height:2px;background:var(--gold);transform:translateX(-50%);transition:width .3s}
+nav a:hover,nav a.on{color:#fff;background:rgba(242,207,114,.12);border-color:rgba(242,207,114,.3);box-shadow:0 0 16px rgba(242,207,114,.22);transform:translateY(-2px)}
+nav a:hover::after,nav a.on::after{width:60%}
+
+/* ===== LETTER MAGIC ===== */
+.split{color:var(--ink)}
+.split .word{display:inline-block;white-space:nowrap}
+.split .ch{display:inline-block;background:linear-gradient(90deg,var(--g1,#ffa45c),var(--g2,#ffe08a),var(--g3,#6fdcab),var(--g4,#78b8ff),var(--g5,#bd9bff),var(--g1,#ffa45c));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite;animation-delay:calc(var(--i)*-.27s);transition:transform .45s cubic-bezier(.34,1.56,.64,1),filter .3s;cursor:default}
+.split .ch:hover{transform:translateY(-14px) rotate(-6deg) scale(1.24);filter:drop-shadow(0 0 16px rgba(255,214,120,.85))}
+.split .sp{display:inline-block;width:.34em}
+@keyframes gm{to{background-position:300% center}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px 50px;position:relative}
+.orbit{position:relative;width:240px;height:240px;margin:0 auto 12px;display:grid;place-items:center}
+.orbit .core{font-size:4.4rem;filter:drop-shadow(0 0 26px rgba(242,207,114,.6));animation:lev 5s ease-in-out infinite;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.orbit:hover .core{transform:scale(1.25) rotate(8deg)}
+.orbit::before,.orbit::after{content:'';position:absolute;border-radius:50%;border:1px dashed rgba(242,207,114,.28)}
+.orbit::before{inset:10px;animation:spin 60s linear infinite}
+.orbit::after{inset:38px;border-color:rgba(120,184,255,.25);animation:spin 40s linear infinite reverse}
+.orb{position:absolute;left:50%;top:50%;font-size:1.5rem;margin:-.75rem 0 0 -.75rem;animation:orb 36s linear infinite;filter:drop-shadow(0 0 10px rgba(255,255,255,.35))}
+@keyframes orb{from{transform:rotate(var(--a)) translateX(110px) rotate(calc(var(--a)*-1))}to{transform:rotate(calc(var(--a) + 360deg)) translateX(110px) rotate(calc(var(--a)*-1 - 360deg))}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes lev{50%{transform:translateY(-9px)}}
+.eyebrow{font-family:'Fira Code',monospace;font-size:.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.9}
+.hero h1{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(2.3rem,7.4vw,6rem);line-height:1.12;letter-spacing:2px;margin:16px 0 6px;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease;text-shadow:0 0 60px rgba(255,164,92,.2);--g1:#ffa45c;--g2:#ffe08a;--g3:#6fdcab;--g4:#78b8ff;--g5:#bd9bff}
+.title-glow{width:min(520px,70%);height:3px;margin:8px auto 0;border-radius:9px;background:linear-gradient(90deg,transparent,var(--saffron),var(--gold),var(--sky),var(--violet),transparent);transform:scaleX(.35);opacity:.6;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.hero:hover .title-glow{transform:scaleX(1);opacity:1}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.05rem,2.4vw,1.55rem);color:#dccdaa;margin-top:12px}
+.tagline{margin:22px auto 0;max-width:860px;color:var(--mut);font-size:.95rem;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:14px 10px}
+.badges{margin-top:26px;display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:980px}
+.badge{position:relative;overflow:hidden;padding:7px 16px;border-radius:30px;font-size:.78rem;font-weight:500;color:var(--mut);border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(8px);transition:all .35s}
+.badge::before{content:'';position:absolute;top:0;bottom:0;left:-75%;width:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);transition:left .65s}
+.badge:hover{transform:translateY(-5px) scale(1.07);border-color:var(--gold);color:#fff;box-shadow:0 8px 24px rgba(242,207,114,.28)}
+.badge:hover::before{left:130%}
+.stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:30px}
+.stat{min-width:130px;padding:14px 20px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .4s}
+.stat:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.stat b{display:block;font:700 2rem 'Cinzel Decorative',serif;color:var(--gold);line-height:1.1}
+.stat span{font-size:.72rem;color:var(--mut);letter-spacing:.5px}
+.scrolldown{margin-top:44px;font-size:1.6rem;color:var(--dim);animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(12px)}}
+.burst{position:fixed;z-index:400;pointer-events:none;font-size:1.5rem;animation:burst 1.2s ease-out forwards}
+@keyframes burst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4) rotate(220deg);opacity:0}}
+
+/* ===== AUTEUR ===== */
+.auteur-wrap{position:relative;display:inline-block;margin-top:30px;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px)}}
+.auteur-halo{position:absolute;inset:-6px;border-radius:62px;z-index:0;background:conic-gradient(from var(--ang),var(--saffron),var(--gold),var(--rose),var(--violet),var(--sky),var(--mint),var(--saffron));filter:blur(15px);opacity:.4;animation:halo 8s linear infinite;transition:opacity .5s}
+@keyframes halo{to{--ang:360deg}}
+.auteur-wrap:hover .auteur-halo,.auteur-wrap:focus-within .auteur-halo{opacity:.8}
+.auteur-credit{position:relative;z-index:1;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:5px;padding:21px 52px;border-radius:58px;border:1.5px solid rgba(242,207,114,.5);background:linear-gradient(135deg,rgba(255,164,92,.17),rgba(8,10,24,.8) 45%,rgba(120,184,255,.15));box-shadow:0 12px 38px rgba(255,164,92,.2),inset 0 0 22px rgba(242,207,114,.14);backdrop-filter:blur(14px);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease,scale .5s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s;cursor:pointer}
+.auteur-credit::before{content:'';position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);animation:sweep 4.5s ease-in-out infinite;pointer-events:none}
+.auteur-credit::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.17),transparent 60%);opacity:0;transition:opacity .4s}
+.auteur-credit:hover::after,.auteur-credit:focus-visible::after{opacity:1}
+.auteur-credit:hover,.auteur-credit:focus-visible{scale:1.06;border-color:var(--gold);box-shadow:0 20px 52px rgba(255,164,92,.42),inset 0 0 28px rgba(242,207,114,.3)}
+@keyframes sweep{0%,35%{left:-60%}70%,100%{left:130%}}
+.a-star{position:absolute;color:var(--gold);font-size:.8rem;animation:starP 2.4s ease-in-out infinite;z-index:2}
+.a-star.s1{top:8px;right:22px}.a-star.s2{bottom:10px;left:22px;animation-delay:.8s;color:#9ec9ff}.a-star.s3{top:12px;left:32px;animation-delay:1.5s;font-size:.6rem;color:var(--rose)}
+@keyframes starP{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.4) rotate(90deg)}}
+.auteur-tag{font:500 .68rem 'Fira Code',monospace;letter-spacing:6px;text-transform:uppercase;color:#a4cbff;text-shadow:0 0 10px rgba(103,183,255,.7)}
+.auteur-name{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(1.2rem,3.2vw,1.95rem);letter-spacing:4px;--g1:#fff8ec;--g2:#ffd66b;--g3:#ff9a3c;--g4:#e8c257;--g5:#fff8ec}
+.auteur-name .ch{animation-duration:6s}
+.auteur-underline{width:60%;height:2px;border-radius:10px;background:linear-gradient(90deg,transparent,var(--saffron),var(--gold),var(--sky),transparent);transform:scaleX(.4);opacity:.6;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.auteur-credit:hover .auteur-underline{transform:scaleX(1);opacity:1}
+.auteur-role{font-size:.66rem;letter-spacing:2px;color:var(--mut);text-transform:uppercase}
+.auteur-reel{font:500 .6rem 'Fira Code',monospace;letter-spacing:3px;color:var(--dim);opacity:.85}
+
+/* ===== SECTIONS ===== */
+section{padding:90px 6vw;position:relative}
+section+section::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.35}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:500 .74rem 'Fira Code',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:18px;background:rgba(255,255,255,.03);box-shadow:0 0 14px color-mix(in srgb,var(--accent) 20%,transparent)}
+h2.title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.2vw,3rem);font-weight:700;line-height:1.2;margin-bottom:12px}
+h2.title span{color:var(--accent)}
+h3.sub{color:var(--accent);margin:34px 0 12px;font-size:1.2rem;font-family:'Playfair Display',serif}
+h4.mini{color:var(--accent);margin:20px 0 8px;font-size:.98rem}
+.lede{color:var(--mut);max-width:980px;margin-bottom:32px;font-size:1.02rem}
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ===== CARDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:26px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:26px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .45s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-10px) perspective(900px) rotateX(2deg) scale(1.012);border-color:var(--accent);box-shadow:0 20px 44px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--accent) 22%,transparent)}
+.card:hover::before{opacity:.08}
+.card>*{position:relative;z-index:1}
+.card h3{color:var(--accent);font-size:1.1rem;margin-bottom:10px;font-family:'Playfair Display',serif}
+.card p,.card li{color:var(--mut);font-size:.92rem}
+.card ul,.card ol{padding-left:19px;margin-top:8px}
+.card p+p{margin-top:8px}
+.calc label{display:flex;align-items:center;gap:10px;color:var(--mut);font-size:.9rem;margin:8px 0}
+.calc input{width:120px;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:#0b1124;color:var(--ink);font:inherit}
+.calc output{display:block;margin-top:10px;color:var(--mut);font-size:.9rem}
+.calc output b{color:var(--accent)}
+
+/* ===== FLOW / HUB ===== */
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:30px 0}
+.flow.v{flex-direction:column}
+.node{background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid var(--bd);border-radius:16px;padding:15px 20px;min-width:150px;max-width:340px;text-align:center;backdrop-filter:blur(8px);font-size:.87rem;color:var(--mut);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:all .4s cubic-bezier(.2,.8,.2,1)}
+.node b{display:block;color:var(--accent);font-size:.95rem;margin-bottom:3px}
+.node:hover{transform:translateY(-8px) scale(1.05);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px color-mix(in srgb,var(--accent) 45%,transparent)}
+.arrow{font-size:1.45rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{0%,100%{opacity:.4}50%{opacity:1;transform:translateX(4px)}}
+.flow.v .arrow{animation-name:pav}
+@keyframes pav{0%,100%{opacity:.4}50%{opacity:1;transform:translateY(4px)}}
+.hub{display:flex;flex-direction:column;align-items:center;margin:34px 0}
+.hub>.node{border-color:var(--accent);box-shadow:0 0 22px rgba(255,255,255,.08)}
+.hub-line{width:2px;height:34px;margin:4px 0;background:linear-gradient(var(--accent),transparent)}
+.spokes{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.spokes .node{border-top:3px solid var(--accent)}
+
+/* ===== CALLOUT / TRAP / MNEMONIC / QUOTE ===== */
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 14px 14px 0;padding:16px 22px;margin:20px 0;font-size:.92rem;color:var(--mut);transition:all .3s}
+.callout:hover{background:rgba(255,255,255,.07);transform:translateX(6px)}
+.callout b{color:var(--accent)}
+.callout.warn{border-color:var(--saffron);background:rgba(255,164,92,.06)}.callout.warn b{color:var(--saffron)}
+.callout.tip{border-color:var(--mint);background:rgba(111,220,171,.05)}.callout.tip b{color:var(--mint)}
+.trap{border:1.5px solid var(--rose);border-radius:16px;padding:16px 22px;margin:20px 0;font-size:.92rem;color:#ffdce3;background:linear-gradient(135deg,rgba(255,138,161,.12),rgba(255,164,92,.05))}
+.trap b{color:#ff9db0}
+.quote{position:relative;margin:30px 0;padding:22px 30px;border:1px solid var(--bd);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 1.1rem/1.8 'Playfair Display',serif;color:#fff6e6;transition:all .4s}
+.quote::before{content:'📜';position:absolute;top:-16px;left:20px;font-size:1.6rem;background:var(--bg);padding:0 6px;font-style:normal}
+.mnemonic{margin:18px 0;padding:20px 22px;border:1px dashed var(--accent);border-radius:16px;background:linear-gradient(135deg,rgba(255,164,92,.09),rgba(120,184,255,.06));font:.86rem/1.95 'Fira Code',monospace;color:#fff3df;transition:all .35s}
+.mnemonic:hover,.quote:hover{transform:translateY(-4px) scale(1.012);box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.mnemonic b{color:var(--gold)}
+.mnemonic .lab{display:block;font-size:.68rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+
+/* ===== TABLES ===== */
+.table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--bd);border-radius:16px;background:var(--card)}
+table{width:100%;min-width:640px;border-collapse:collapse;font-size:.88rem}
+caption{text-align:left;padding:14px 18px;font-weight:600;color:var(--ink)}
+th,td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.07);color:var(--accent);font:600 .72rem 'Fira Code',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--mut)}tr:last-child td{border-bottom:0}
+tr:hover td{background:rgba(255,255,255,.05);color:#fff}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;margin:34px 0;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--saffron),var(--gold),var(--mint),var(--sky),var(--violet),var(--rose));background-size:100% 400%;animation:fl 7s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:26px;padding-left:24px;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ti::before{content:'';position:absolute;left:-34px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(10px)}
+.ti .d{font:500 .84rem 'Fira Code',monospace;color:var(--accent)}
+.ti p{color:var(--mut);font-size:.92rem}
+
+/* ===== ARTICLE ACCORDION ===== */
+details.art{margin:15px 0;border:1px solid var(--bd);border-left:4px solid var(--accent);border-radius:18px;background:rgba(14,19,38,.74);backdrop-filter:blur(10px);overflow:hidden;transition:border-color .3s,box-shadow .3s}
+details.art:hover{box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 24px color-mix(in srgb,var(--accent) 18%,transparent)}
+details.art:target{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 45%,transparent)}
+details.art summary{list-style:none;display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer}
+details.art summary::-webkit-details-marker{display:none}
+details.art summary::after{content:'+';margin-left:auto;font-size:1.6rem;color:var(--accent)}
+details.art[open] summary::after{content:'−'}
+.no{flex-shrink:0;min-width:66px;white-space:nowrap;text-align:center;padding:8px 10px;font:600 1.02rem 'Fira Code',monospace;color:var(--accent);border:1px solid var(--accent);border-radius:12px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 22%,transparent),transparent)}
+.at{display:flex;flex-direction:column;min-width:0}
+.at b{font-size:1.02rem;color:#f4f1ea}
+.at small{font-size:.68rem;letter-spacing:.7px;color:var(--dim);text-transform:uppercase}
+.art-body{padding:2px 26px 24px;color:var(--mut);font-size:.93rem}
+.art-body p{margin:10px 0}
+.art-body ul,.art-body ol{padding-left:22px;margin:8px 0}
+.art-body li{margin:6px 0}
+.cl{display:inline-block;font:600 .74rem 'Fira Code',monospace;color:var(--accent);background:rgba(255,255,255,.07);padding:1px 8px;border-radius:6px;margin-right:4px}
+.xl{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.xl span{font-size:.74rem;color:var(--accent);border:1px solid var(--bd);border-radius:8px;padding:4px 10px;background:rgba(255,255,255,.03)}
+
+/* ===== TOOLS / ATLAS ===== */
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:20px;border:1px solid var(--bd);border-radius:20px;background:rgba(14,19,38,.8);backdrop-filter:blur(12px);margin:26px 0 12px}
+.tools input{flex:1;min-width:230px;padding:12px 16px;border-radius:12px;border:1px solid var(--bd);background:#0b1124;color:var(--ink);font:inherit}
+.btn{padding:9px 14px;border-radius:12px;border:1px solid var(--bd);background:rgba(255,255,255,.05);color:var(--ink);font:inherit;font-size:.82rem;cursor:pointer;transition:all .3s}
+.btn:hover,.btn.on{background:rgba(242,207,114,.15);border-color:var(--gold);transform:translateY(-2px)}
+.qstat{width:100%;font-size:.8rem;color:var(--dim)}
+.atlas{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:9px;margin:20px 0}
+.atlas a{text-align:center;text-decoration:none;font:600 .84rem 'Fira Code',monospace;padding:9px 2px;border-radius:12px;border:1px solid;transition:all .3s;white-space:nowrap}
+.atlas a.p1{color:#ff9db0;border-color:rgba(255,138,161,.5);background:rgba(255,138,161,.08)}
+.atlas a.p2{color:#ffbf8a;border-color:rgba(255,164,92,.5);background:rgba(255,164,92,.08)}
+.atlas a.p3{color:#8fe9bf;border-color:rgba(111,220,171,.5);background:rgba(111,220,171,.08)}
+.atlas a:hover{transform:translateY(-5px) scale(1.12);box-shadow:0 8px 20px rgba(0,0,0,.4);color:#fff}
+.atlas a.dim{opacity:.22}
+.atlas a[aria-current="true"]{outline:2px solid var(--gold);outline-offset:2px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.8rem;color:var(--mut)}
+.nores{display:none;text-align:center;padding:24px;color:var(--mut)}
+.nores.show{display:block}
+
+/* ===== QUIZ / CHECKLIST ===== */
+.quiz{margin:12px 0;padding:16px 20px;border:1px solid var(--bd);border-radius:14px;background:rgba(255,255,255,.035);transition:all .3s}
+.quiz:hover{border-color:var(--accent)}
+.quiz summary{cursor:pointer;color:var(--ink);font-weight:500}
+.quiz p{margin-top:12px;color:var(--mut);font-size:.92rem}
+.check-progress{height:8px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0 6px}
+.check-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--sky),var(--violet));transition:width .45s}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:18px 0}
+.checkitem{display:flex;gap:12px;align-items:flex-start;padding:12px 15px;border:1px solid var(--bd);border-radius:12px;background:rgba(255,255,255,.03);color:var(--mut);font-size:.84rem;cursor:pointer;transition:all .3s}
+.checkitem:hover{border-color:var(--accent)}
+.checkitem input{margin-top:6px;width:17px;height:17px;accent-color:var(--mint);flex-shrink:0}
+.checkitem:has(input:checked){border-color:rgba(111,220,171,.45);background:rgba(111,220,171,.06)}
+.chip{display:inline-block;margin:.25rem;padding:.42rem .8rem;border:1px solid var(--accent);border-radius:999px;color:#fff;background:rgba(255,255,255,.04);font-size:.82rem;transition:all .3s;text-decoration:none}
+.chip:hover{transform:translateY(-4px) scale(1.08);background:var(--accent);color:#0b0a14;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+
+/* ===== FOOTER / TRIBUTE ===== */
+footer{padding:64px 6vw 80px;text-align:center;color:var(--mut);font-size:.86rem;border-top:1px solid var(--bd)}
+footer .final{font:italic 1.3rem 'Playfair Display',serif;color:#fff;margin-bottom:12px}
+.sig{font:700 1rem 'Cinzel Decorative',serif;letter-spacing:4px;color:var(--gold);margin:26px 0 6px}
+.heart-tribute{position:relative;isolation:isolate;overflow:hidden;margin:30px auto 8px;max-width:600px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:32px 30px;border-radius:24px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(150deg,rgba(255,164,92,.09),rgba(120,184,255,.08),rgba(111,220,171,.07));transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease,box-shadow .5s,border-color .5s}
+.heart-tribute::before{content:'';position:absolute;inset:-3px;z-index:-1;border-radius:24px;background:conic-gradient(from var(--ang),var(--saffron),var(--gold),var(--rose),var(--sky),var(--mint),var(--saffron));filter:blur(16px);opacity:.34;animation:halo 9s linear infinite}
+.heart-tribute::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.13),transparent 60%);opacity:0;transition:opacity .4s}
+.heart-tribute:hover::after{opacity:1}
+.heart-tribute:hover{border-color:rgba(255,255,255,.28);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.heart-icon{font-size:2rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,138,161,.7))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.tribute-en{font:italic 700 clamp(1.15rem,3vw,1.7rem) 'Playfair Display',serif;color:#fff8ec}
+.tribute-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.6vw,2.15rem);background:linear-gradient(90deg,var(--saffron),var(--gold),var(--rose),var(--sky),var(--mint),var(--saffron));background-size:320% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite}
+.toTop{position:fixed;right:24px;bottom:24px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;cursor:pointer;z-index:100;background:linear-gradient(135deg,var(--saffron),var(--sky));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:all .4s;border:0;font-family:inherit}
+.toTop.show{opacity:1;pointer-events:auto}.toTop:hover{transform:translateY(-6px) scale(1.1)}
+
+@media(max-width:650px){
+  section{padding:70px 5vw}.orbit{transform:scale(.8)}
+  .grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+  .auteur-credit{padding:16px 26px}.heart-tribute{padding:24px 16px}
+  details.art summary{padding:14px 12px;gap:10px}.art-body{padding:2px 16px 20px}.no{min-width:54px;font-size:.9rem}
+  .at b{font-size:.92rem}.hero h1{letter-spacing:0}.eyebrow{letter-spacing:2px}
+  .node{min-width:0;max-width:100%;overflow-wrap:anywhere}.auteur-name{letter-spacing:2px}
+  .tools input{min-width:0;width:100%;flex-basis:100%}.spotlight,.vignette{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .curtain,#dust{display:none}.js .reveal{opacity:1;transform:none}
+}
+@media print{
+  :root{--bg:#fff;--ink:#111;--mut:#333;--dim:#555;--bd:#ccc;--card:#fff;--gold:#765400;--saffron:#8a3c00;--sky:#145b93;--mint:#146442;--rose:#942645;--violet:#60408b;--cyan:#08636b;--pink:#8a2c63}
+  html{scroll-behavior:auto}body{background:#fff;color:#111;font-size:10pt}
+  nav,.cine-bg,.stars,#dust,.grain,.spotlight,.vignette,.curtain,.progress,.toTop,.tools,.scrolldown,.orbit,.auteur-halo,.a-star,.heart-icon,.atlas,.badges,.stats,.check-progress{display:none!important}
+  section{padding:20px 0}.hero{min-height:0;padding:20px 0}.hero h1{font-size:30pt;transform:none}
+  .js .reveal{opacity:1;transform:none}
+  .split .ch,.tribute-ta{background:none;color:#111}
+  .auteur-credit,.heart-tribute,.card,.node,details.art,.quote,.callout,.trap,.mnemonic,.table-wrap,.quiz{background:#fff;color:#111;box-shadow:none;backdrop-filter:none;transform:none;border-color:#bbb}
+  b,strong,.at b,.quote,.tribute-en{color:#111}
+  .card,.quiz,details.art{break-inside:avoid}
+  table{min-width:0;font-size:9pt}th,td{color:#111}.table-wrap{overflow:visible}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="cine-bg"></div><div class="stars"></div><canvas id="dust" aria-hidden="true"></canvas>
+<div class="grain"></div><div class="spotlight"></div><div class="vignette"></div>
+<div class="progress" id="progress"></div><div class="curtain" aria-hidden="true"></div>
+
+<nav aria-label="Sections">
+  <a href="#hero">🏠 Home</a><a href="#mindmap">🌳 Mind Map</a><a href="#atlas">🧭 Atlas</a>
+  <a href="#act1">👑 153–160</a><a href="#act2">🕊️ 161–162</a><a href="#act3">🤝 163–164</a>
+  <a href="#act4">⚖️ 165</a><a href="#act5">📂 166–167</a><a href="#auxiliary">🔗 Auxiliary Powers</a>
+  <a href="#comparison">🪞 Union vs State</a><a href="#cases">🗂️ Cases</a><a href="#lab">🧠 Memory Lab</a>
+  <a href="#checklist">✅ Checklist</a><a href="#finale">🏆 Finale</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" style="--accent:var(--gold)">
+  <div class="orbit" aria-hidden="true">
+    <span class="core">🗺</span>
+    <span class="orb" style="--a:0deg">🏛️</span><span class="orb" style="--a:60deg">🤝</span>
+    <span class="orb" style="--a:120deg">⚖️</span><span class="orb" style="--a:180deg">🕊️</span>
+    <span class="orb" style="--a:240deg">📜</span><span class="orb" style="--a:300deg">👑</span>
+  </div>
+  <div class="eyebrow">🎬 The Constitutional Architecture of the States</div>
+  <h1 id="heroTitle" aria-label="The State Executive">
+    <span class="split" data-split="THE STATE">THE STATE</span><br>
+    <span class="split" data-split="EXECUTIVE">EXECUTIVE</span>
+  </h1>
+  <div class="title-glow"></div>
+  <div class="subtitle">Part VI · Chapter II — Articles 153 to 167</div>
+
+  <div class="auteur-wrap">
+    <span class="auteur-halo"></span>
+    <div class="auteur-credit tilt" tabindex="0" role="button" aria-label="Auteur: Piyush Parte. Activate for a celebratory burst.">
+      <span class="a-star s1">✦</span><span class="a-star s2">✧</span><span class="a-star s3">✦</span>
+      <span class="auteur-tag">🎬 Auteur</span>
+      <span class="auteur-name split" data-split="PIYUSH PARTE">PIYUSH PARTE</span>
+      <span class="auteur-underline"></span>
+      <span class="auteur-role">A Constitutional Study Film</span>
+      <span class="auteur-reel">🎞️ REEL II · ARTICLES 153–167 🎞️</span>
+    </div>
+  </div>
+
+  <div class="tagline">👑 The Governor gives the State its constitutional form; 🤝 the Council of Ministers gives it democratic direction; the Chief Minister links the two; ⚖️ the Advocate-General gives legal counsel; and the Constitution gives every power its boundary — told as one connected story.</div>
+  <div class="badges">
+    <div class="badge">👑 153–160 Governor's Office</div><div class="badge">🕊️ 161–162 Clemency &amp; Reach</div>
+    <div class="badge">🤝 163–164 Ministry</div><div class="badge">⚖️ 165 Advocate-General</div>
+    <div class="badge">📂 166–167 Government Business</div><div class="badge">🔗 Auxiliary: 174 · 200–201 · 213 · 356 · 361</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b data-count="15">15</b><span>📖 CORE ARTICLES</span></div>
+    <div class="stat"><b id="statNotes" data-count="25">25</b><span>🗂️ SEARCHABLE NOTES</span></div>
+    <div class="stat"><b data-count="4">4</b><span>🏛️ PILLARS</span></div>
+    <div class="stat"><b data-count="7">7</b><span>🪞 UNION MIRRORS (72–78)</span></div>
+  </div>
+  <div class="scrolldown">⮟</div>
+</section>
+
+<!-- ================= MIND MAP ================= -->
+<section id="mindmap" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🎬 Opening Scene · The Big Picture</span>
+    <h2 class="title">🌳 Master Mind Map — <span>One Executive, Four Pillars</span></h2>
+    <p class="lede">India follows the parliamentary model in the States. <b>Executive power is formally vested in the Governor</b> (the constitutional head), but it is ordinarily exercised through a <b>Council of Ministers headed by the Chief Minister</b> (the real executive), which is <b>collectively responsible to the Legislative Assembly</b>. Everything in Articles 153–167 is a variation on this single idea. 🧩</p>
+    <div class="hub">
+      <div class="node"><b>🏛️ THE STATE EXECUTIVE</b>Part VI · Chapter II · Articles 153–167</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="node" style="--accent:var(--saffron)"><b>👑 153–162</b>The Governor<br>Office · Appointment · Term · Oath · Clemency · Reach</div>
+        <div class="node" style="--accent:var(--sky)"><b>🤝 163–164</b>Aid &amp; advice<br>Chief Minister · Ministers · Responsibility</div>
+        <div class="node" style="--accent:var(--violet)"><b>⚖️ 165</b>Advocate-General<br>Chief legal adviser of the State</div>
+        <div class="node" style="--accent:var(--mint)"><b>📂 166–167</b>Government business<br>Governor's name · CM's duties</div>
+        <div class="node" style="--accent:var(--cyan)"><b>🔗 Auxiliary</b>174–176 · 200–201 · 202–207 · 213 · 356 · 361</div>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="node"><b>🗳️ People</b>Elect the Legislative Assembly</div><div class="arrow">➡️</div>
+      <div class="node"><b>🏛️ Assembly</b>Confidence of the House</div><div class="arrow">➡️</div>
+      <div class="node"><b>🤝 CM + Council</b>Real political executive</div><div class="arrow">➡️</div>
+      <div class="node"><b>👑 Governor</b>Formal head · acts on advice</div><div class="arrow">➡️</div>
+      <div class="node"><b>⚖️ Courts</b>Enforce constitutional limits</div>
+    </div>
+    <div class="callout">💡 <b>The Constitutional Triad:</b> <b>Art. 154</b> vests executive power in the Governor → <b>Art. 163</b> says he acts on the aid and advice of the Council of Ministers (except where the Constitution requires discretion) → <b>Art. 164(2)</b> makes that Council collectively responsible to the <b>Legislative Assembly</b>. Remember the three together and most descriptive answers write themselves.</div>
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>👑 Constitutional head</h3><p>Formal executive power, assent to Bills, oaths, appointments, summoning and addressing the Legislature.</p></div>
+      <div class="card" style="--accent:var(--sky)"><h3>🔗 Federal link</h3><p>Appointed by the President, reports on constitutional breakdown (Art. 356), reserves Bills for the President (Art. 200), and may act as Administrator of an adjoining Union Territory (Art. 239(2)).</p></div>
+      <div class="card" style="--accent:var(--mint)"><h3>📚 Statutory &amp; special roles</h3><p>Chancellor of State universities (by <i>university statute</i>, not by Arts. 153–167) and special duties in Scheduled and Tribal Areas (Fifth and Sixth Schedules).</p></div>
+    </div>
+    <div class="callout warn">📌 <b>Scope note:</b> Part VI governs <b>States</b>. Union Territories with legislatures (Delhi, Puducherry, Jammu &amp; Kashmir) are run by Lieutenant Governors or Administrators under separate provisions and statutes — do not mix them with Arts. 153–167.</div>
+    <div class="mnemonic"><span class="lab">🧠 Four-Pillar Code</span><b>G–M–A–B</b> → <b>G</b>overnor (153–162) · <b>M</b>inistry (163–164) · <b>A</b>dvocate-General (165) · <b>B</b>usiness (166–167).</div>
+  </div>
+</section>
+
+<!-- ================= ATLAS ================= -->
+<section id="atlas" style="--accent:var(--cyan)">
+  <div class="reveal">
+    <span class="kicker">🧭 Complete Codification</span>
+    <h2 class="title">📋 The Article <span>Atlas &amp; Study Tools</span></h2>
+    <p class="lede">Every chip opens its note. Colour shows exam priority. Search by number, clause or concept — try <b>pleasure</b>, <b>164(1A)</b>, <b>tribal</b>, <b>six weeks</b> or <b>pardon</b> — then filter, fold or expand everything.</p>
+    <div class="legend"><span>🔴 Core exam article</span><span>🟠 Supporting / connected power</span><span>🟢 Factual / institutional detail</span></div>
+    <div class="atlas" id="atlasGrid" aria-label="Article atlas"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="🔎 Search all article notes…" autocomplete="off" aria-label="Search article notes">
+      <button class="btn on" data-f="all" type="button">✨ All</button>
+      <button class="btn" data-f="1" type="button">🔴 Core</button>
+      <button class="btn" data-f="2" type="button">🟠 Supporting</button>
+      <button class="btn" data-f="3" type="button">🟢 Factual</button>
+      <button class="btn" id="exp" type="button">＋ Expand all</button>
+      <button class="btn" id="col" type="button">− Fold all</button>
+      <button class="btn" id="prt" type="button">🖨️ Print</button>
+      <p class="qstat" id="qstat" aria-live="polite"></p>
+    </div>
+    <p class="nores" id="noRes">🔎 No matching article. Try a broader keyword.</p>
+  </div>
+</section>
+
+<!-- ================= ACT I ================= -->
+<section id="act1" style="--accent:var(--saffron)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act I · The Constitutional Head</span>
+    <h2 class="title">👑 The Governor's Office — <span>Articles 153–160</span></h2>
+    <p class="lede">Begin with the office itself: why every State has a Governor, how power is vested, who appoints, how long he serves, what he must be, what he may not be, and how he swears in. Keep three kinds of authority apart: <b>constitutional text</b>, <b>convention</b> and <b>commission recommendation</b>.</p>
+    <div class="flow">
+      <div class="node"><b>📜 155 Appointed</b>By the President</div><div class="arrow">➡️</div>
+      <div class="node"><b>🤚 159 Oath</b>Before the HC Chief Justice</div><div class="arrow">➡️</div>
+      <div class="node"><b>⏳ 156 Term</b>5 years · at pleasure</div><div class="arrow">➡️</div>
+      <div class="node"><b>🏠 158 Conditions</b>No seat · no profit · protected pay</div><div class="arrow">➡️</div>
+      <div class="node"><b>🚪 Exit</b>Resign · removed · successor enters</div>
+    </div>
+    <div class="mnemonic"><span class="lab">🧠 Governor Ladder 153–162</span><b>G-E-A-T-Q-C-O-C-P-R</b> → <b>G</b>overnor (153) · <b>E</b>xecutive power (154) · <b>A</b>ppointment (155) · <b>T</b>erm (156) · <b>Q</b>ualification (157) · <b>C</b>onditions (158) · <b>O</b>ath (159) · <b>C</b>ontingency (160) · <b>P</b>ardon (161) · <b>R</b>each (162).</div>
+  </div>
+
+  <details class="art reveal" id="a153" data-p="1" open>
+    <summary><span class="no">153</span><span class="at"><b>👑 Governors of States</b><small>🔴 Core · A Governor for each State · Common Governor allowed</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">153</span> There shall be a <b>Governor for each State</b>. The proviso — inserted by the <b>Seventh Amendment, 1956</b> — allows the <b>same person to be appointed Governor of two or more States</b>.</p>
+      <p>A common Governor does not merge the States. He performs each office separately, normally on the advice of that State's own Council of Ministers. Emoluments are apportioned under <b>Art. 158(3A)</b>.</p>
+      <div class="trap">🚨 <b>Exam trap:</b> "Every State has a Governor" ≠ "every State has a different Governor". Also, a <b>Lieutenant Governor</b> in a Union Territory is not an Art. 153 Governor.</div>
+      <div class="xl"><span>↔ Art. 52 (President)</span><span>↔ Art. 158(3A)</span><span>7th Amendment · 1956</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a154" data-p="1" open>
+    <summary><span class="no">154</span><span class="at"><b>⚙️ Executive Power of the State</b><small>🔴 Core · Vesting · Direct or subordinate exercise</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">154(1)</span> The executive power of the State is <b>vested in the Governor</b> and is exercised by him <b>either directly or through officers subordinate to him</b>, <b>in accordance with this Constitution</b>.</p>
+      <p><span class="cl">154(2)(a)</span> It does not transfer to the Governor functions that an existing law confers on another authority.</p>
+      <p><span class="cl">154(2)(b)</span> Parliament or the State Legislature may by law confer functions on authorities subordinate to the Governor.</p>
+      <h4 class="mini">🔍 What is "executive power"?</h4>
+      <p>It is the residual governmental power — administering departments, framing and implementing policy, maintaining public order and conducting government affairs — that is neither legislative nor judicial. <i>Ram Jawaya Kapur v. State of Punjab</i> (1955) shows that it is wider than merely executing statutes, yet it cannot override a law, violate rights without legal authority, or spend public money without legislative sanction.</p>
+      <div class="callout tip">🔗 <b>Read together:</b> 154 (where power vests) → 163 (who advises) → 164(2) (who is answerable) → 166 (how action is expressed).</div>
+      <div class="trap">🚨 <b>Do not write</b> "the Governor personally exercises all executive power". "In accordance with this Constitution" imports the parliamentary system.</div>
+      <div class="xl"><span>↔ Art. 53 (President)</span><span>↔ Art. 162</span><span>↔ Arts. 163–164, 166</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a155" data-p="1" open>
+    <summary><span class="no">155</span><span class="at"><b>📜 Appointment of Governor</b><small>🔴 Core · President · Warrant under hand and seal</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">155</span> The Governor is appointed by the <b>President by warrant under his hand and seal</b>. There is no popular election and no State electoral college. In practice the President acts on the advice of the <b>Union Council of Ministers</b> (Art. 74).</p>
+      <p>The Constituent Assembly preferred nomination to election, in the Canadian rather than the American style, so that a popularly elected Governor would not rival the Chief Minister's mandate.</p>
+      <div class="callout">⚖️ <b><i>Hargovind Pant v. Raghukul Tilak</i> (1979):</b> The Governor holds an <b>independent constitutional office</b>, not employment under the Government of India. Appointment by the President does not make him an agent or subordinate of the Union Government.</div>
+      <div class="callout warn">📌 <b>Convention ≠ constitutional condition:</b> Choosing a person from <i>outside</i> the State and <i>consulting the Chief Minister</i> are conventions and Sarkaria/Punchhi recommendations. They are <b>not</b> written into Art. 155 or 157.</div>
+      <div class="xl"><span>↔ Art. 54 (President is elected)</span><span>↔ Art. 74</span><span>↔ Art. 157</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a156" data-p="1" open>
+    <summary><span class="no">156</span><span class="at"><b>⏳ Term of Office of Governor</b><small>🔴 Core · Pleasure · Resignation · Five years · Holdover</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">156(1)</span> The Governor holds office <b>during the pleasure of the President</b>.</li>
+        <li><span class="cl">156(2)</span> He may resign by writing under his hand addressed to the <b>President</b>.</li>
+        <li><span class="cl">156(3)</span> Subject to the above, the term is <b>five years from the date he enters upon office</b>.</li>
+        <li><b>Proviso:</b> even after the term expires, he <b>continues until his successor enters upon office</b>.</li>
+      </ul>
+      <div class="flow">
+        <div class="node"><b>📅 Five years</b>Normal duration</div><div class="arrow">＋</div>
+        <div class="node"><b>👑 Pleasure</b>Earlier exit is possible</div><div class="arrow">＋</div>
+        <div class="node"><b>🔄 Holdover</b>Until successor enters</div>
+      </div>
+      <p><b>No contradiction:</b> five years is the normal term, not a guarantee. Reappointment is not barred.</p>
+      <div class="callout warn">⚖️ <b><i>B. P. Singhal v. Union of India</i> (2010):</b> Removal need not follow an impeachment-type process, and reasons need not be given in every case, but the power <b>cannot be exercised arbitrarily, capriciously or mala fide</b>. A mere change of government at the Union is not a proper ground.</div>
+      <div class="trap">🚨 <b>No impeachment:</b> there is no constitutional impeachment of a Governor. A State Assembly cannot remove him by a no-confidence motion.</div>
+      <div class="mnemonic"><span class="lab">🧠 P–R–F–C</span><b>P</b>leasure · <b>R</b>esign to President · <b>F</b>ive years · <b>C</b>ontinue until successor.</div>
+      <div class="xl"><span>↔ Art. 56 (President)</span><span>↔ Art. 61 (impeachment)</span><span>↔ B. P. Singhal 2010</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a157" data-p="1" open>
+    <summary><span class="no">157</span><span class="at"><b>🪪 Qualifications for Appointment</b><small>🔴 Core · Citizen of India · Age 35 · Nothing more</small></span></summary>
+    <div class="art-body">
+      <p>No person is eligible for appointment as Governor unless he is (a) a <b>citizen of India</b> and (b) has completed <b>35 years of age</b>.</p>
+      <p>There is no requirement of a degree, legislative experience, residence in the State, or being an outsider.</p>
+      <div class="trap">🚨 <b>President comparison:</b> Art. 58 also requires the President to be qualified for election to the Lok Sabha. Art. 157 has <b>no such requirement</b> for the Governor.</div>
+      <div class="callout tip">🤝 <b>Conventions &amp; recommendations (non-justiciable):</b> an eminent person in some walk of life; not belonging to the State; not recently active in politics; meaningful consultation with the Chief Minister (Sarkaria 1988, Punchhi 2010).</div>
+      <div class="mnemonic"><span class="lab">🧠 C–35</span><b>Citizen + 35</b> — the two express qualifications.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a158" data-p="2" open>
+    <summary><span class="no">158</span><span class="at"><b>🏠 Conditions of the Governor's Office</b><small>🟠 Supporting · No seat · No profit · Protected emoluments</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">158(1)</span> Not a member of Parliament or a State Legislature. If such a member is appointed, his seat is <b>deemed vacated on the date he enters office</b>.</li>
+        <li><span class="cl">158(2)</span> Shall not hold any <b>other office of profit</b>.</li>
+        <li><span class="cl">158(3)</span> Entitled, <b>without payment of rent</b>, to official residences (Raj Bhavan), and to emoluments, allowances and privileges determined by <b>Parliament</b> by law (Second Schedule until then).</li>
+        <li><span class="cl">158(3A)</span> A common Governor's emoluments are <b>allocated among the States by the President</b>.</li>
+        <li><span class="cl">158(4)</span> Emoluments and allowances <b>cannot be diminished during his term</b>.</li>
+      </ul>
+      <div class="callout">💰 <b>Three authorities, three jobs:</b> Parliament fixes the Governor's emoluments; the President allocates them for a common Governor; Art. <b>202(3)(a)</b> makes them <b>charged expenditure</b> on the State Consolidated Fund (discussed, not voted).</div>
+      <div class="trap">🚨 The Governor is a <b>part of the State Legislature</b> (Art. 168) but <b>not a member</b> of either House. His emoluments are fixed by <b>Parliament</b>, not by the State Legislature.</div>
+      <div class="xl"><span>↔ Art. 59 (President)</span><span>↔ Art. 168</span><span>↔ Art. 202(3)(a)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a159" data-p="2" open>
+    <summary><span class="no">159</span><span class="at"><b>🤚 Oath or Affirmation by the Governor</b><small>🟠 Supporting · High Court Chief Justice · Text is in the Article</small></span></summary>
+    <div class="art-body">
+      <p>Every Governor <b>and every person discharging the Governor's functions</b> must, before entering office, make and subscribe an oath or affirmation before the <b>Chief Justice of the High Court</b> exercising jurisdiction over the State, or, in his absence, the <b>senior-most available Judge</b> of that Court.</p>
+      <ul>
+        <li>Faithfully execute the office (or discharge the functions);</li>
+        <li><b>Preserve, protect and defend the Constitution and the law</b>;</li>
+        <li>Devote himself to the <b>service and well-being of the people</b> of the State.</li>
+      </ul>
+      <div class="trap">🚨 <b>Location trap:</b> the Governor's oath is set out in <b>Article 159 itself</b>, not in the Third Schedule. A <b>Minister's</b> oath (Art. 164(3)) <i>is</i> in the Third Schedule.</div>
+      <div class="mnemonic"><span class="lab">🧠 F–P–S</span><b>F</b>aithfully execute · <b>P</b>reserve the Constitution &amp; law · <b>S</b>erve the people.</div>
+      <div class="xl"><span>↔ Art. 60 (President's oath)</span><span>↔ Art. 164(3)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a160" data-p="3" open>
+    <summary><span class="no">160</span><span class="at"><b>🔄 Discharge of Functions in Contingencies</b><small>🟢 Factual · President makes arrangements</small></span></summary>
+    <div class="art-body">
+      <p>The <b>President</b> may make such provision as he thinks fit for the discharge of the Governor's functions in any contingency <b>not provided for in this Chapter</b> (death, illness, absence and similar situations).</p>
+      <p>In practice the arrangement is often an <b>additional charge</b> to a neighbouring Governor, and on occasion the Chief Justice of the High Court has acted as Governor.</p>
+      <div class="callout warn">🧩 <b>No automatic succession:</b> the Chief Minister, Speaker or Chief Justice does <b>not</b> become Governor by operation of the Constitution. Art. 160 requires a <b>presidential order</b>, and Art. 159 requires the oath again.</div>
+      <div class="xl"><span>↔ Art. 65 (analogue — not an exact equivalent)</span><span>↔ Art. 159</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT II ================= -->
+<section id="act2" style="--accent:var(--rose)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act II · Mercy &amp; Executive Reach</span>
+    <h2 class="title">🕊️ Clemency &amp; Competence — <span>Articles 161–162</span></h2>
+    <p class="lede">Art. 161 asks <i>"when may the Governor soften punishment?"</i> Art. 162 asks <i>"over which subjects does State executive power run?"</i> Both are bounded by the <b>State's own sphere</b>.</p>
+  </div>
+
+  <details class="art reveal" id="a161" data-p="1" open>
+    <summary><span class="no">161</span><span class="at"><b>🕊️ Power to Grant Pardons, etc.</b><small>🔴 Core · State executive field · Advice-bound · Reviewable</small></span></summary>
+    <div class="art-body">
+      <p>The Governor may grant <b>pardons, reprieves, respites or remissions</b> of punishment, or <b>suspend, remit or commute</b> the sentence of any person convicted of an offence against a law relating to a matter to which the <b>executive power of the State extends</b>.</p>
+      <div class="table-wrap"><table>
+        <caption>🕊️ Distinguish the forms of relief</caption>
+        <thead><tr><th>Form</th><th>Meaning</th><th>Recall image</th></tr></thead>
+        <tbody>
+          <tr><td><b>Pardon</b></td><td>Relieves the offender of the sentence and its penal consequences. It is executive relief, not a judicial acquittal.</td><td>🧽 Wipe clean</td></tr>
+          <tr><td><b>Commutation</b></td><td>Substitutes one kind of punishment with a <b>lighter kind</b> (e.g., rigorous to simple imprisonment).</td><td>🔁 Change the kind</td></tr>
+          <tr><td><b>Remission</b></td><td>Reduces the <b>amount or period</b> without changing its character (10 years → 5 years).</td><td>✂️ Cut the quantity</td></tr>
+          <tr><td><b>Respite</b></td><td>A <b>lesser sentence</b> because of a special fact (pregnancy, physical disability).</td><td>🌿 Compassion</td></tr>
+          <tr><td><b>Reprieve</b></td><td>A <b>temporary stay</b> of execution, to seek other relief.</td><td>⏸️ Pause</td></tr>
+          <tr><td><b>Suspension</b></td><td>Keeps the operation of a sentence in abeyance for a period.</td><td>⏳ Hold</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout">📝 <b>Counting note:</b> the Article names <b>four</b> nouns (pardon, reprieve, respite, remission) and <b>three</b> verbs (suspend, remit, commute). Textbooks collapse these into <b>five</b> forms; the text also mentions <b>suspension</b>. Know both.</div>
+
+      <h4 class="mini">🪞 Article 72 (President) vs Article 161 (Governor)</h4>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Feature</th><th>Art. 72 · President</th><th>Art. 161 · Governor</th></tr></thead>
+        <tbody>
+          <tr><td>Court-martial sentences</td><td>✅ Yes</td><td>❌ No</td></tr>
+          <tr><td>Offences</td><td>Against Union executive field</td><td>Against laws on matters within the <b>State's</b> executive power</td></tr>
+          <tr><td>Death sentence</td><td>Can <b>pardon</b> and grant every form of relief</td><td>Cannot pardon, but may <b>suspend, remit or commute</b> (Art. 72(3) preserves this)</td></tr>
+          <tr><td>Advice</td><td>Union Council of Ministers</td><td>State Council of Ministers (<i>Maru Ram</i>, 1980)</td></tr>
+          <tr><td>Judicial review</td><td>Limited (<i>Kehar Singh</i>, <i>Shatrughan Chauhan</i>)</td><td>Limited (<i>Epuru Sudhakar</i>, 2006)</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout warn">⚖️ <b>Is it the Governor's personal mercy?</b> No. The power is exercised on the <b>aid and advice of the State Council of Ministers</b>. Courts review only for <b>mala fides, irrelevant or extraneous considerations, non-application of mind, arbitrariness or unreasonable delay</b>; they do not sit as an appeal on the conviction. In <i>A. G. Perarivalan</i> (2022) the Court stressed that the Governor is bound by the State Cabinet's advice in an Art. 161 matter.</div>
+      <div class="trap">🚨 <b>Constitutional power ≠ statutory remission.</b> Ordinary remission rules (earlier CrPC ss. 432–433A, now carried into the <b>BNSS, 2023</b>) are separate from, and do not cut down, the constitutional power under Arts. 72 and 161.</div>
+      <div class="mnemonic"><span class="lab">🧠 Relief Spectrum</span><b>Pardon = wipe · Commute = change kind · Remit = cut quantity · Respite = special reason · Reprieve = temporary stay.</b></div>
+      <div class="xl"><span>↔ Art. 72</span><span>↔ Art. 163</span><span>Maru Ram 1980</span><span>Epuru Sudhakar 2006</span><span>Perarivalan 2022</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a162" data-p="1" open>
+    <summary><span class="no">162</span><span class="at"><b>🗺️ Extent of Executive Power of the State</b><small>🔴 Core · Follows legislative competence · Union proviso</small></span></summary>
+    <div class="art-body">
+      <p>Subject to the Constitution, the executive power of a State extends to matters on which the <b>State Legislature has power to make laws</b> (State List, and Concurrent List where the State may legislate).</p>
+      <p><b>Proviso:</b> in a matter on which both the State Legislature and Parliament may legislate, the State's executive power is <b>subject to, and limited by,</b> executive power <b>expressly conferred</b> on the Union or its authorities by the Constitution or by a law of Parliament.</p>
+      <div class="grid two">
+        <div class="card" style="--accent:var(--saffron)"><h3>🏡 State List</h3><p>Executive reach follows legislative reach — for example public order, police and public health.</p></div>
+        <div class="card" style="--accent:var(--sky)"><h3>🤝 Concurrent List</h3><p>The State is <b>not</b> automatically displaced because Parliament <i>can</i> legislate. Look for an express Union executive assignment in the Constitution or a parliamentary law.</p></div>
+      </div>
+      <div class="callout">🔍 <b>Do not confuse:</b> Art. 162 concerns <b>executive power</b>; Art. 254 concerns <b>repugnancy of laws</b> in the Concurrent field. Federal links: Art. 256–257 (Union directions), Art. 258 (Union entrusts functions to a State) and Art. 258A (Governor entrusts functions to the Union with its consent).</div>
+      <div class="mnemonic"><span class="lab">🧠 Reach + Restriction</span>Legislative field gives the <b>reach</b>; the Constitution and express Union assignments give the <b>limits</b>.</div>
+      <div class="xl"><span>↔ Art. 73</span><span>↔ Arts. 245–246</span><span>↔ Seventh Schedule</span><span>↔ Art. 254</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT III ================= -->
+<section id="act3" style="--accent:var(--sky)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act III · The Democratic Engine</span>
+    <h2 class="title">🤝 Chief Minister &amp; Council of Ministers — <span>Articles 163–164</span></h2>
+    <p class="lede">These are the engine-room provisions of State parliamentary government. Art. 163 settles <i>who advises</i> and where discretion survives; Art. 164 settles <i>who is appointed, how many, to whom they answer, and when they must be legislators</i>.</p>
+  </div>
+
+  <details class="art reveal" id="a163" data-p="1" open>
+    <summary><span class="no">163</span><span class="at"><b>🧭 Council of Ministers to Aid and Advise</b><small>🔴 Core · General rule · Narrow discretion · Confidential advice</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">163(1)</span> There shall be a Council of Ministers with the <b>Chief Minister at the head</b> to aid and advise the Governor in the exercise of his functions, <b>except in so far as he is by or under this Constitution required to exercise his functions or any of them in his discretion</b>.</p>
+      <p><span class="cl">163(2)</span> If a question arises whether a matter is one in which the Governor must act in his discretion, <b>his decision is final</b>, and anything done is not to be questioned on the ground that he ought or ought not to have acted in discretion. This is <b>not a charter for unlimited discretion</b>: courts can still examine whether a constitutional discretion exists.</p>
+      <p><span class="cl">163(3)</span> Courts cannot inquire into <b>whether any, and if so what, advice</b> was tendered by Ministers to the Governor.</p>
+      <div class="table-wrap"><table>
+        <caption>🧩 Where does gubernatorial discretion actually arise?</caption>
+        <thead><tr><th>Category</th><th>Examples</th><th>Limit</th></tr></thead>
+        <tbody>
+          <tr><td><b>Express constitutional discretion</b></td><td>Art. 239(2) — acting as Administrator of an adjoining UT, <b>independently of the State Council of Ministers</b>; Sixth Schedule (para. 9(2)) — determining royalty sharing with District Councils (Assam, Meghalaya, Tripura, Mizoram); special responsibilities such as law and order under Arts. 371A (Nagaland) and 371H (Arunachal Pradesh).</td><td>Read the exact text; never generalise one State's special provision to all States.</td></tr>
+          <tr><td><b>Situational (implied) discretion</b></td><td>Choosing a Chief Minister when no party has a clear majority; reporting under Art. 356; reserving a Bill under Art. 200 (including the mandatory High Court proviso).</td><td>Guided by convention and judicial review; <i>Bommai</i>, <i>Nabam Rebia</i>.</td></tr>
+          <tr><td><b>Ordinary rule</b></td><td>Summoning, proroguing, dissolving (Art. 174), clemency (Art. 161), ordinances (Art. 213), appointments.</td><td>Aid and advice (<i>Shamsher Singh</i>, 1974).</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout warn">⚖️ <b><i>Shamsher Singh</i> (1974)</b> fixes the baseline: the Governor is a constitutional head acting on ministerial advice. <b><i>Nabam Rebia</i> (2016)</b> held that Art. 163 gives no general discretionary power; advancing an Assembly session contrary to ministerial advice was invalid. Later reference questions on the Speaker's removal powers should be checked against the latest law.</div>
+      <div class="callout">🪞 <b>Art. 74 comparison:</b> Art. 74(1) contains a proviso letting the President send advice back once for reconsideration. Art. 163 has <b>no identical proviso</b> — do not copy the Union text.</div>
+      <div class="trap">🚨 <b>Confidential advice ≠ unreviewable action.</b> Art. 163(3) shields <i>the advice</i> from inquiry; it does not immunise every governmental decision from judicial review.</div>
+      <div class="mnemonic"><span class="lab">🧠 A–D–C</span><b>163(1): A</b>id &amp; advice · <b>163(2): D</b>iscretion questions · <b>163(3): C</b>onfidentiality.</div>
+      <div class="xl"><span>↔ Art. 74</span><span>↔ Art. 154</span><span>Shamsher Singh 1974</span><span>Nabam Rebia 2016</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a164" data-p="1" open>
+    <summary><span class="no">164</span><span class="at"><b>🏛️ Other Provisions as to Ministers</b><small>🔴 Core · Appointment · 15% · Responsibility · Oath · Six months</small></span></summary>
+    <div class="art-body">
+      <h4 class="mini">1. 👤 Appointment — Art. 164(1)</h4>
+      <p>The <b>Governor appoints the Chief Minister</b>. Other Ministers are appointed by the Governor <b>on the advice of the Chief Minister</b>. Ministers hold office <b>during the pleasure of the Governor</b> — but in a parliamentary system that pleasure is exercised on the Chief Minister's advice and cannot be used to dismiss a Ministry that enjoys the Assembly's confidence.</p>
+      <h4 class="mini">2. 🌿 Tribal welfare Minister — proviso to 164(1)</h4>
+      <p>There must be a Minister in charge of <b>tribal welfare</b> in <b>Chhattisgarh, Jharkhand, Madhya Pradesh and Odisha</b>; he may also hold SC welfare, backward class welfare or other work. The <b>94th Amendment (2006)</b> removed Bihar and added Chhattisgarh and Jharkhand.</p>
+      <div class="mnemonic"><span class="lab">🧠 C–J–M–O</span><b>C</b>hhattisgarh · <b>J</b>harkhand · <b>M</b>adhya Pradesh · <b>O</b>disha. (Bihar is <b>not</b> on the list.)</div>
+      <h4 class="mini">3. 📏 Size of the Council — Art. 164(1A) (91st Amendment, 2003)</h4>
+      <p>The total number of Ministers, <b>including the Chief Minister</b>, must <b>not exceed 15% of the total membership of the Legislative Assembly</b> alone (not the Council's strength), and must <b>not be fewer than 12</b>.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>State</th><th>Assembly</th><th>15% (exact)</th><th>Whole-number ceiling</th></tr></thead>
+        <tbody>
+          <tr><td>Madhya Pradesh</td><td>230</td><td>34.5</td><td><b>34</b></td></tr>
+          <tr><td>Uttar Pradesh</td><td>403</td><td>60.45</td><td><b>60</b></td></tr>
+          <tr><td>Maharashtra</td><td>288</td><td>43.2</td><td><b>43</b></td></tr>
+          <tr><td>Bihar</td><td>243</td><td>36.45</td><td><b>36</b></td></tr>
+          <tr><td>Goa</td><td>40</td><td>6.0</td><td><b>12</b> (the floor of 12 applies)</td></tr>
+        </tbody>
+      </table></div>
+      <div class="card calc" style="--accent:var(--sky)">
+        <h3>🧮 Ministry-Size Calculator</h3>
+        <label for="calcN">Assembly strength:
+          <input id="calcN" type="number" min="1" max="1000" value="230"></label>
+        <output id="calcOut" aria-live="polite"></output>
+      </div>
+      <div class="callout tip">🧠 <b>Method:</b> compute $15\% \times N$, round <b>down</b> (the ceiling cannot be exceeded), then ensure the figure is at least 12. For MP: <b>34 including the CM</b>, so 35 is unconstitutional. For Delhi (a UT), Art. 239AA(5) sets a separate 10% rule.</div>
+      <h4 class="mini">4. 🔀 Defectors — Art. 164(1B)</h4>
+      <p>A member disqualified under <b>paragraph 2 of the Tenth Schedule</b> is also barred from being appointed a Minister from the date of disqualification until his term would expire or he is re-elected, <b>whichever is earlier</b>. Art. <b>361B</b> similarly restricts remunerative political posts — keep it separate from Art. 361 (immunities).</p>
+      <h4 class="mini">5. 🤝 Collective responsibility — Art. 164(2)</h4>
+      <p>The Council of Ministers is <b>collectively responsible to the Legislative Assembly</b> — never to the Legislative Council. If the Assembly withdraws confidence, the whole Ministry must go. Cabinet solidarity means Ministers publicly defend agreed policy; a Minister who cannot do so should resign.</p>
+      <h4 class="mini">6. 🤚 Oath — Art. 164(3)</h4>
+      <p>Before entering office a Minister takes the <b>oath of office and the oath of secrecy</b> before the Governor, in the forms in the <b>Third Schedule</b>.</p>
+      <h4 class="mini">7. ⏳ Six-month rule — Art. 164(4)</h4>
+      <p>A Minister who for <b>six consecutive months</b> is not a member of the State Legislature ceases to be a Minister at the end of that period. Membership of <b>either House</b> suffices, so a Chief Minister may be an MLC.</p>
+      <div class="trap">🚨 <b>Two limits on the six-month rule:</b> <i>S. R. Chaudhuri v. State of Punjab</i> (2001) — a non-member cannot be reappointed repeatedly to restart the clock. <i>B. R. Kapur v. State of Tamil Nadu</i> (2001) — Art. 164(4) does not allow a person who is <b>already disqualified</b> from legislative membership to become Chief Minister.</div>
+      <h4 class="mini">8. 💰 Salaries — Art. 164(5)</h4>
+      <p>Determined by the <b>State Legislature by law</b>; until then, the Second Schedule applies.</p>
+      <div class="grid two">
+        <div class="card" style="--accent:var(--sky)"><h3>🧭 Collective vs individual responsibility</h3><p><b>Collective</b> (164(2)) is to the Assembly. <b>Individual</b> flows from pleasure (164(1)): a Minister may be dropped on the Chief Minister's advice.</p></div>
+        <div class="card" style="--accent:var(--saffron)"><h3>🪑 Council vs Cabinet</h3><p>The Council of Ministers is the wider body; the Cabinet is its senior decision-making core. Ranks such as Cabinet Minister and Minister of State are practice — Art. 164 does not prescribe a compulsory three-tier hierarchy.</p></div>
+      </div>
+      <div class="callout warn">🧩 <b>Resignation insight:</b> the death or resignation of the Chief Minister ends the existing Ministry as a Ministry, though a caretaker arrangement keeps government running. One other Minister's resignation does not dissolve the Council.</div>
+      <div class="mnemonic"><span class="lab">🧠 A–S–R–O–6–P &amp; 15·12·6</span><b>A</b>ppointment · <b>S</b>ize · <b>R</b>esponsibility · <b>O</b>ath · <b>6</b>-month rule · <b>P</b>ay.<br><b>15%</b> ceiling · <b>12</b> floor · <b>6</b> months to find a seat.</div>
+      <div class="xl"><span>↔ Art. 75 (Union)</span><span>↔ Art. 177</span><span>↔ Art. 191</span><span>↔ Tenth Schedule</span><span>91st Amend. 2003</span><span>94th Amend. 2006</span></div>
+    </div>
+  </details>
+
+  <h3 class="sub">🗳️ Government Formation — the Confidence Principle</h3>
+  <div class="flow">
+    <div class="node"><b>Clear majority?</b>Appoint the leader who commands it</div><div class="arrow">➡️</div>
+    <div class="node"><b>Hung House?</b>Assess who can credibly command confidence</div><div class="arrow">➡️</div>
+    <div class="node"><b>Floor test</b>Prove majority on the Assembly floor</div><div class="arrow">➡️</div>
+    <div class="node"><b>Responsible Ministry</b>Continues while the Assembly has confidence</div>
+  </div>
+  <div class="table-wrap reveal"><table>
+    <thead><tr><th>Situation</th><th>Constitutional approach</th><th>Authority</th></tr></thead>
+    <tbody>
+      <tr><td>Clear majority</td><td>Appoint the person who demonstrably commands it.</td><td>Art. 164(1) + convention</td></tr>
+      <tr><td>Hung Assembly</td><td>The Governor judges who is most likely to command the House. No rigid invitation ladder is written in the text (commissions suggested an order of preference).</td><td>Sarkaria, Punchhi (recommendations)</td></tr>
+      <tr><td>Doubt about majority</td><td>The Assembly floor is the arena. Subjective Raj Bhavan assessments or letters are not substitutes.</td><td><i>S. R. Bommai</i> (1994)</td></tr>
+      <tr><td>Party split / dissent</td><td>Internal dissent alone does not automatically justify a floor test.</td><td><i>Subhash Desai</i> (2023)</td></tr>
+      <tr><td>Objective material on loss of confidence</td><td>A floor test may be directed.</td><td><i>Shivraj Singh Chouhan</i> (2020)</td></tr>
+      <tr><td>Illegal dissolution on speculation</td><td>Struck down as unconstitutional and mala fide.</td><td><i>Rameshwar Prasad</i> (2006)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================= ACT IV ================= -->
+<section id="act4" style="--accent:var(--violet)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act IV · The State's First Law Officer</span>
+    <h2 class="title">⚖️ Advocate-General — <span>Article 165</span></h2>
+    <p class="lede">The Advocate-General is the State's highest constitutional law officer. Do not confuse the office with the Law Minister, the Attorney-General of India, a High Court judge or the Public Prosecutor.</p>
+    <div class="flow">
+      <div class="node"><b>🎓 Qualified for HC judgeship</b>Art. 217(2) test</div><div class="arrow">➡️</div>
+      <div class="node"><b>📜 Governor appoints</b>Art. 165(1)</div><div class="arrow">➡️</div>
+      <div class="node"><b>🗣️ Speaks in the Houses</b>Art. 177</div><div class="arrow">➡️</div>
+      <div class="node"><b>🚫 No vote</b>Not a member</div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a165" data-p="1" open>
+    <summary><span class="no">165</span><span class="at"><b>⚖️ Advocate-General for the State</b><small>🔴 Core · Appointment · Qualification · Duties · Pleasure</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">165(1)</span> The Governor appoints a person <b>qualified to be appointed a Judge of a High Court</b> as Advocate-General. In practice this appointment is made on ministerial advice.</p>
+      <div class="callout tip">📋 <b>Qualification link (Art. 217(2)):</b> citizen of India who has held a <b>judicial office for at least ten years</b> in India, <b>or</b> been a <b>High Court advocate for at least ten years</b>. The Advocate-General need not be a sitting or retired judge.</div>
+      <p><span class="cl">165(2)</span> <b>Duties:</b> advise the State Government on legal matters; perform other legal duties assigned by the Governor; discharge functions conferred by the Constitution or any other law.</p>
+      <p><span class="cl">165(3)</span> <b>Tenure:</b> holds office during the <b>Governor's pleasure</b>; receives remuneration as the <b>Governor determines</b>.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Feature</th><th>Attorney-General (Art. 76)</th><th>Advocate-General (Art. 165)</th></tr></thead>
+        <tbody>
+          <tr><td>Appointed by</td><td>President</td><td>Governor</td></tr>
+          <tr><td>Qualification</td><td>Qualified to be a Supreme Court judge</td><td>Qualified to be a High Court judge</td></tr>
+          <tr><td>Tenure</td><td>During President's pleasure</td><td>During Governor's pleasure</td></tr>
+          <tr><td>Right of audience</td><td>Art. 76(3): in all courts in India</td><td>No identical all-India clause in Art. 165</td></tr>
+          <tr><td>Legislative participation</td><td>Art. 88 (Parliament)</td><td>Art. 177 (State Legislature) — <b>speak, no vote</b></td></tr>
+        </tbody>
+      </table></div>
+      <div class="trap">🚨 <b>Do not import judge rules:</b> Art. 165 prescribes no retirement age, no 35-year minimum and no fixed five-year term for the Advocate-General. By convention he resigns when the Ministry that advised his appointment goes.</div>
+      <div class="mnemonic"><span class="lab">🧠 A–Q–D–T–R</span><b>A</b>ppointed by Governor · <b>Q</b>ualified as HC judge · <b>D</b>uties to State Government · <b>T</b>enure at pleasure · <b>R</b>emuneration by Governor.</div>
+      <div class="xl"><span>↔ Art. 76</span><span>↔ Art. 177</span><span>↔ Art. 194(4)</span><span>↔ Art. 217(2)</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT V ================= -->
+<section id="act5" style="--accent:var(--mint)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act V · How Government Actually Moves</span>
+    <h2 class="title">📂 Government Business &amp; the CM's Duties — <span>Articles 166–167</span></h2>
+    <p class="lede">Art. 166 turns constitutional form into administrative reality; Art. 167 builds an information bridge between the elected government and the constitutional head.</p>
+    <div class="flow">
+      <div class="node"><b>🤝 Decision</b>Minister / Cabinet under rules of business</div><div class="arrow">➡️</div>
+      <div class="node"><b>👑 In Governor's name</b>166(1)</div><div class="arrow">➡️</div>
+      <div class="node"><b>✍️ Authenticated</b>166(2)</div><div class="arrow">➡️</div>
+      <div class="node"><b>⚙️ Implemented</b>Departments act within law</div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a166" data-p="1" open>
+    <summary><span class="no">166</span><span class="at"><b>📂 Conduct of Business of the State Government</b><small>🔴 Core · Governor's name · Authentication · Rules of business</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">166(1)</span> All executive action of the Government of a State is <b>expressed to be taken in the name of the Governor</b>.</p>
+      <p><span class="cl">166(2)</span> Orders and instruments made and executed in the Governor's name are <b>authenticated</b> as specified in rules made by the Governor, and their validity <b>cannot be questioned on the ground that they were not made or executed by the Governor personally</b>.</p>
+      <p><span class="cl">166(3)</span> The Governor makes rules for the <b>more convenient transaction of State Government business</b> and for the <b>allocation of business among Ministers</b>, except business where the Constitution requires him to act in discretion.</p>
+      <div class="callout">🖊️ <b>No personal signature needed:</b> a Minister's or officer's decision under the rules of business is, in law, the Governor's. Authentication lets a large administration function.</div>
+      <div class="trap">🚨 <b>Authentication does not cure illegality.</b> It only removes the objection "the Governor did not personally make this". An order can still be challenged for lack of competence, breach of statute, violation of fundamental rights or non-compliance with mandatory rules.</div>
+      <div class="mnemonic"><span class="lab">🧠 E–A–A</span><b>166(1): E</b>xpress in Governor's name · <b>166(2): A</b>uthenticate · <b>166(3): A</b>llocate &amp; transact business.</div>
+      <div class="xl"><span>↔ Art. 77 (Union)</span><span>↔ Art. 154</span><span>↔ Art. 163</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a167" data-p="1" open>
+    <summary><span class="no">167</span><span class="at"><b>🌉 Duties of the Chief Minister towards the Governor</b><small>🔴 Core · Communicate · Furnish · Submit</small></span></summary>
+    <div class="art-body">
+      <p>It is the Chief Minister's duty:</p>
+      <ul>
+        <li><span class="cl">167(a)</span> to <b>communicate</b> to the Governor all decisions of the Council of Ministers on State administration and proposals for legislation;</li>
+        <li><span class="cl">167(b)</span> to <b>furnish</b> such information on administration and legislative proposals as the Governor calls for;</li>
+        <li><span class="cl">167(c)</span> if the Governor so requires, to <b>submit for the Council's consideration</b> any matter on which a Minister has decided but which the Council has not considered.</li>
+      </ul>
+      <div class="grid two">
+        <div class="card" style="--accent:var(--mint)"><h3>📨 Information bridge</h3><p>The constitutional head must be informed. Art. 167 locates that duty squarely in the Chief Minister.</p></div>
+        <div class="card" style="--accent:var(--rose)"><h3>⛔ Not a general veto</h3><p>Seeking information or collective consideration does not let the Governor replace the Council's lawful policy with a personal decision.</p></div>
+      </div>
+      <div class="callout">🎯 <b>Art. 167(c) insight:</b> it protects <b>collective responsibility</b> by stopping a single Minister from taking a major decision without Cabinet consideration.</div>
+      <div class="mnemonic"><span class="lab">🧠 C–F–S</span><b>C</b>ommunicate decisions · <b>F</b>urnish information · <b>S</b>ubmit a single Minister's decision to the Council.</div>
+      <div class="xl"><span>↔ Art. 78 (Prime Minister)</span><span>↔ Art. 163</span><span>↔ Art. 164(2)</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= AUXILIARY ================= -->
+<section id="auxiliary" style="--accent:var(--cyan)">
+  <div class="reveal">
+    <span class="kicker">🔗 Beyond the Core Chapter</span>
+    <h2 class="title">🔗 Auxiliary Powers — <span>The Governor Across the Constitution</span></h2>
+    <p class="lede">Many of the Governor's most-tested powers lie outside Arts. 153–167. Study them as <b>connected pathways</b>, not as extra clauses of the chapter.</p>
+    <div class="grid">
+      <div class="card" style="--accent:var(--saffron)"><h3>🏛️ Legislative</h3><p>Arts. 168, 171(5), 174–176, 192, 200–201.</p></div>
+      <div class="card" style="--accent:var(--gold)"><h3>💰 Financial</h3><p>Arts. 202–207, 267(2).</p></div>
+      <div class="card" style="--accent:var(--mint)"><h3>⚡ Ordinance</h3><p>Art. 213.</p></div>
+      <div class="card" style="--accent:var(--rose)"><h3>🚨 Breakdown &amp; immunity</h3><p>Arts. 356, 361, 239(2).</p></div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a168" data-p="2" open>
+    <summary><span class="no">168</span><span class="at"><b>🏛️ Governor as Part of the State Legislature</b><small>🟠 Supporting · Arts. 168, 171(5), 177, 192</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">168</span> The Legislature of a State consists of the <b>Governor</b> and one House (the Assembly) or two Houses in the bicameral States. The Governor is a <b>constitutional component</b> of the Legislature but <b>not a member of any House</b> — which is why his assent (Art. 200) is needed for a Bill to become law.</p>
+      <ul>
+        <li><b>Art. 171(3)(e), 171(5):</b> the Governor nominates about <b>one-sixth</b> of the Legislative Council from persons with special knowledge or practical experience in <b>literature, science, art, the co-operative movement and social service</b>.</li>
+        <li><b>Art. 177:</b> Ministers and the Advocate-General may speak in and take part in proceedings of either House and its committees, with <b>no right to vote</b> by virtue of this Article.</li>
+        <li><b>Art. 192:</b> a question whether a member has incurred a disqualification under <b>Art. 191(1)</b> goes to the <b>Governor</b>, who must obtain the <b>Election Commission's opinion</b> and act according to it.</li>
+      </ul>
+      <div class="trap">🚨 <b>Do not merge disqualification routes:</b> Art. 192 covers 191(1) grounds (office of profit, unsound mind, insolvency, citizenship, Parliament's law). <b>Defection</b> under the Tenth Schedule (Art. 191(2)) is decided by the <b>Speaker or Chairman</b> as a tribunal (<i>Kihoto Hollohan</i>, 1992), subject to judicial review. The Governor does not act on the Council of Ministers' advice in Art. 192 matters.</div>
+      <div class="callout warn">📌 <b>History:</b> Anglo-Indian nomination (Art. 333) ended in 2020 under the 104th Amendment; do not list it as a present gubernatorial power.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a174" data-p="1" open>
+    <summary><span class="no">174–176</span><span class="at"><b>🔔 Sessions, Dissolution &amp; Addresses</b><small>🔴 Core · Summon · Prorogue · Dissolve · Address</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">174(1)</span> The Governor <b>summons</b> the House(s) as he thinks fit, but <b>six months must not intervene</b> between the last sitting of one session and the first sitting of the next (at least two sessions a year).</p>
+      <p><span class="cl">174(2)</span> He may <b>prorogue</b> either House and <b>dissolve</b> the Legislative Assembly.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>What it ends</th><th>By whom</th></tr></thead>
+        <tbody>
+          <tr><td>Adjournment</td><td>A sitting</td><td>Presiding officer</td></tr>
+          <tr><td>Prorogation</td><td>A <b>session</b> (House survives)</td><td>Governor</td></tr>
+          <tr><td>Dissolution</td><td>The <b>life of the Assembly</b></td><td>Governor / expiry of term</td></tr>
+        </tbody>
+      </table></div>
+      <p><span class="cl">175</span> The Governor may address either House or both together and send <b>messages</b> on pending Bills or other matters. This is a <b>general optional power</b>.</p>
+      <p><span class="cl">176</span> The Governor <b>must</b> address the Assembly (or both Houses together) at the commencement of the <b>first session after each general election</b> and the <b>first session of each year</b>, explaining the causes of the summons. Time must be allotted for discussing the address (Motion of Thanks).</p>
+      <div class="callout">⚖️ These powers are exercised on ministerial advice (<i>Shamsher Singh</i>; <i>Nabam Rebia</i>). The Governor's address is drafted by the Council of Ministers and states the government's policy.</div>
+      <div class="trap">🚨 <b>Not every session:</b> Art. 176 does not require an address at every session, and one address suffices if both triggers coincide. Budget, Monsoon and Winter sessions are convention, not constitutional text.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a200" data-p="1" open>
+    <summary><span class="no">200</span><span class="at"><b>👑 Governor's Assent to Bills</b><small>🔴 Core · Assent · Withhold · Reserve · Return</small></span></summary>
+    <div class="art-body">
+      <p>When a Bill passed by the Legislature is presented, the Governor declares that he <b>assents</b>, <b>withholds assent</b>, or <b>reserves it for the President</b>.</p>
+      <p><b>First proviso:</b> as soon as possible after presentation he may <b>return a Bill other than a Money Bill</b> with a message asking for reconsideration. If it is passed again, with or without amendment, he <b>shall not withhold assent</b>.</p>
+      <p><b>Second proviso:</b> he <b>must reserve</b> a Bill that would so derogate from the powers of the High Court as to endanger the position that Court is designed to fill.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Course</th><th>Key point</th></tr></thead>
+        <tbody>
+          <tr><td>Assent</td><td>The Bill becomes law.</td></tr>
+          <tr><td>Withhold assent</td><td>The Bill does not become law. <i>State of Punjab v. Principal Secretary to the Governor</i> (2023) says a Governor who withholds assent must follow the return procedure, rather than sit on the Bill indefinitely.</td></tr>
+          <tr><td>Return</td><td>Only for non-Money Bills; after repassage assent cannot be withheld.</td></tr>
+          <tr><td>Reserve</td><td>Sent to the President; Art. 201 governs. Mandatory in the High Court situation.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="trap">🚨 <b>Current-law discipline:</b> Art. 200 fixes <b>no number of days</b>; only "as soon as possible" appears in the first proviso. The 2025 Supreme Court proceedings in the <i>Tamil Nadu</i> litigation and the later Presidential Reference advisory opinion deal with timelines and "deemed assent". Do not present earlier judicially prescribed deadlines as a settled final rule; read the official opinions for the exact current position.</div>
+      <div class="xl"><span>↔ Art. 111 (President)</span><span>↔ Art. 163</span><span>↔ Art. 201</span><span>↔ Art. 254(2)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a201" data-p="1" open>
+    <summary><span class="no">201</span><span class="at"><b> Bills Reserved for the President</b><small>🔴 Core · Presidential choice · Six-month reconsideration</small></span></summary>
+    <div class="art-body">
+      <p>The President declares <b>assent</b> or <b>withholding of assent</b>. For a non-Money Bill he may direct the Governor to return it with a message, and the House(s) must <b>reconsider it within six months of receiving the message</b>. If passed again, it is presented again to the President.</p>
+      <div class="trap">🚨 <b>Whose six months?</b> It is the <b>Legislature's reconsideration period</b>, not a deadline for the President to decide. Unlike Art. 200's first proviso, Art. 201 does <b>not expressly oblige assent</b> after repassage.</div>
+      <div class="callout tip">🔗 <b>Federal link:</b> under Art. 254(2), a State law on a Concurrent List matter that is repugnant to an earlier Union law may prevail in that State if reserved for and assented to by the President — though Parliament may override it later.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a202" data-p="2" open>
+    <summary><span class="no">202–207</span><span class="at"><b>💰 Financial Powers &amp; the State Budget</b><small>🟠 Supporting · Budget · Demands · Appropriation · Financial Bills · Contingency Fund</small></span></summary>
+    <div class="art-body">
+      <div class="flow">
+        <div class="node"><b>📊 202</b>Budget laid by Governor</div><div class="arrow">➡️</div>
+        <div class="node"><b>🗳️ 203</b>Demands on Governor's recommendation</div><div class="arrow">➡️</div>
+        <div class="node"><b>📜 204</b>Appropriation Act</div><div class="arrow">➡️</div>
+        <div class="node"><b>🏦 Withdrawal</b>From the Consolidated Fund</div>
+      </div>
+      <p><span class="cl">202(1)</span> The Governor <b>causes to be laid</b> before the House or Houses of the State Legislature, for every financial year, a statement of estimated receipts and expenditure — the <b>Annual Financial Statement</b> (State Budget).</p>
+      <p><span class="cl">202(2)</span> The statement must show expenditure <b>charged on the Consolidated Fund</b> separately from other expenditure, and distinguish <b>revenue</b> expenditure from other expenditure.</p>
+      <p><span class="cl">202(3)</span> The following are <b>charged expenditure</b> (discussable, but <b>not submitted to the vote</b>):</p>
+      <ul>
+        <li>(a) the Governor's emoluments and allowances and other expenditure relating to his office;</li>
+        <li>(b) salaries and allowances of the Speaker, Deputy Speaker and (where there is a Council) the Chairman and Deputy Chairman;</li>
+        <li>(c) debt charges of the State;</li>
+        <li>(d) salaries and allowances of <b>High Court Judges</b>;</li>
+        <li>(e) sums required to satisfy judgments, decrees or awards of any court or tribunal;</li>
+        <li>(f) any other expenditure declared by the Constitution or by the State Legislature by law to be so charged.</li>
+      </ul>
+      <p><span class="cl">203</span> Charged expenditure may be <b>discussed</b> but is not voted. Other expenditure goes to the <b>Legislative Assembly</b> as <b>demands for grants</b>; the Assembly may <b>assent, refuse or reduce</b> a demand, but cannot increase it. <b>No demand may be made except on the Governor's recommendation</b> (203(3)). The Legislative Council may discuss the Budget but does not vote on demands.</p>
+      <p><span class="cl">204</span> After the grants are voted, an <b>Appropriation Bill</b> authorises withdrawal from the Consolidated Fund. No amendment may vary the amount or alter the destination of a grant or vary charged expenditure, and <b>no money may be withdrawn except under appropriation made by law</b>.</p>
+      <p><span class="cl">205</span> <b>Supplementary, additional or excess grants</b> are presented when the authorised amount is insufficient, a new service arises, or expenditure has exceeded the grant. <span class="cl">206</span> The Assembly may also pass <b>votes on account</b>, <b>votes of credit</b> and <b>exceptional grants</b>.</p>
+      <p><span class="cl">207</span> Financial Bills need the Governor's <b>recommendation</b>. A Bill dealing with the matters in Art. 199(1) — including a <b>Money Bill</b> — cannot be introduced or moved without it, and a Bill that would involve expenditure from the Consolidated Fund cannot be <b>passed</b> by either House unless the Governor has recommended its consideration.</p>
+      <p><span class="cl">267(2)</span> A State law may create a <b>Contingency Fund</b> at the Governor's disposal, from which advances can be made for unforeseen expenditure pending legislative authorisation.</p>
+      <div class="callout tip">💡 <b>Financial initiative:</b> only the executive proposes expenditure and taxation (through the Governor's recommendation); only the elected Assembly votes it. The Governor does not prepare a rival budget — the Council of Ministers does.</div>
+      <div class="trap">🚨 <b>Certification trap:</b> whether a Bill is a Money Bill is certified by the <b>Speaker</b> (Art. 199(3)), not the Governor. The Council cannot originate a Money Bill and must return it with recommendations within <b>fourteen days</b> (Art. 198); the Assembly may accept or reject those recommendations.</div>
+      <div class="mnemonic"><span class="lab">🧠 B–D–A–S–V–F</span><b>202</b> Budget · <b>203</b> Demands · <b>204</b> Appropriation · <b>205</b> Supplementary · <b>206</b> Votes on account/credit · <b>207</b> Financial Bills.</div>
+      <div class="xl"><span>↔ Arts. 112–117 (Union)</span><span>↔ Art. 158(3)</span><span>↔ Art. 199</span><span>↔ Art. 267(2)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a213" data-p="1" open>
+    <summary><span class="no">213</span><span class="at"><b>⚡ Ordinance-Making Power</b><small>🔴 Core · Legislative recess · Immediate action · Six weeks from reassembly</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">213(1)</span> Except when the Legislative Assembly (or, in a bicameral State, <b>both Houses</b>) is in session, the Governor may promulgate Ordinances if satisfied that circumstances make <b>immediate action</b> necessary. In practice the power is exercised on the advice of the Council of Ministers.</p>
+      <p><b>President's instructions</b> are required if a Bill containing the same provisions (i) would have needed the President's <b>previous sanction</b> for introduction, (ii) the Governor would have thought it necessary to <b>reserve</b> for the President, or (iii) an Act containing them would be invalid unless <b>reserved for and assented to by the President</b>.</p>
+      <p><span class="cl">213(2)</span> An Ordinance has the <b>same force and effect as an Act</b> of the Legislature, but it must be <b>laid before the Assembly</b> (and Council, if any) and <b>ceases to operate six weeks after reassembly</b> — or earlier if a disapproving resolution is passed. Where the Houses reassemble on different dates, the six weeks run from the <b>later</b> date. The Governor may <b>withdraw</b> it at any time.</p>
+      <p><span class="cl">213(3)</span> An Ordinance that would be invalid if it were an Act of the Legislature is <b>void</b>.</p>
+      <div class="callout warn">⚖️ <b><i>D. C. Wadhwa v. State of Bihar</i> (1987)</b> condemned routine re-promulgation as a <b>fraud on the Constitution</b>. <b><i>Krishna Kumar Singh v. State of Bihar</i> (2017)</b> confirmed that ordinance-making is an emergency power, not a parallel legislature, that placing the Ordinance before the Legislature is <b>mandatory</b>, and that the Governor's satisfaction can be judicially examined.</div>
+      <div class="trap">🚨 <b>Time-limit trap:</b> the textual rule is <b>six weeks from reassembly</b>. The familiar "six months + six weeks" is a <b>derived outer limit</b>: up to six months may pass between sittings (Art. 174(1)), after which the six weeks run. Do not describe it as the wording of Art. 213.</div>
+      <div class="mnemonic"><span class="lab">🧠 R–I–6–L</span><b>R</b>ecess · <b>I</b>mmediate action · <b>6</b> weeks from reassembly · <b>L</b>aid before the Legislature.</div>
+      <div class="xl"><span>↔ Art. 123 (President)</span><span>↔ Art. 163</span><span>↔ Art. 174</span><span>D. C. Wadhwa 1987</span><span>Krishna Kumar Singh 2017</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a239" data-p="2" open>
+    <summary><span class="no">239(2)</span><span class="at"><b>🧩 Governor as Administrator of an Adjoining Union Territory</b><small>🟠 Supporting · Separate capacity · Independent of the State ministry</small></span></summary>
+    <div class="art-body">
+      <p>The President may appoint the Governor of a State as the <b>Administrator of an adjoining Union Territory</b>. In that capacity he acts <b>independently of his State Council of Ministers</b>.</p>
+      <div class="trap">🚨 <b>Two constitutional hats:</b> this independence exists only while discharging the Administrator's separate office. It does <b>not</b> make the Governor generally independent of the Council when governing the State.</div>
+      <div class="xl"><span>↔ Art. 163</span><span>↔ Art. 239(1)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a316" data-p="3" open>
+    <summary><span class="no">316</span><span class="at"><b>📋 Other Constitutional Appointments by the Governor</b><small>🟢 Factual · State PSC · SEC · Finance Commission · Judicial service</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">316</span> The Governor appoints the <b>Chairman and members of the State Public Service Commission</b>. The term is <b>six years or until age sixty-two</b>, whichever is earlier.</p>
+      <p><span class="cl">243K</span> The Governor appoints the <b>State Election Commissioner</b>, who can be removed only in the manner and on the grounds applicable to a High Court Judge.</p>
+      <p><span class="cl">243I</span> The Governor constitutes the <b>State Finance Commission</b> every five years to review Panchayat finances. Art. 243Y applies the same arrangement to Municipalities.</p>
+      <p><span class="cl">233–234</span> District Judges are appointed, and the State judicial service is recruited, only after the <b>consultation</b> the Constitution requires (High Court, and for recruitment also the State PSC).</p>
+      <div class="trap">🚨 <b>Appointment ≠ removal:</b> a State PSC member is removed by the <b>President</b> under Art. 317 on a Supreme Court inquiry. The Governor has only a limited power of suspension in the circumstances laid down there.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a356" data-p="1" open>
+    <summary><span class="no">356</span><span class="at"><b>🚨 Failure of Constitutional Machinery</b><small>🔴 Core · Governor's report · Presidential proclamation · Judicial review</small></span></summary>
+    <div class="art-body">
+      <p>If the President is satisfied, <b>on a report from the Governor or otherwise</b>, that the government of the State cannot be carried on in accordance with the Constitution, he may issue a Proclamation assuming State functions and declaring that the Legislature's powers are exercisable by or under Parliament.</p>
+      <p>The Governor <b>reports; he does not impose</b> President's Rule. A report is not indispensable, because the text says "or otherwise".</p>
+      <p><b>Duration:</b> Parliamentary approval is needed within <b>two months</b>, with a special rule if the Lok Sabha is dissolved. An approved Proclamation runs for <b>six months at a time</b>, up to a general maximum of <b>three years</b>, with extra conditions for continuation beyond one year.</p>
+      <div class="callout warn">⚖️ <b><i>S. R. Bommai v. Union of India</i> (1994):</b>
+        <ul>
+          <li>Presidential satisfaction is <b>judicially reviewable</b> (mala fides, irrelevant or extraneous material).</li>
+          <li>A disputed majority should <b>ordinarily be tested on the floor of the Assembly</b>.</li>
+          <li>The Assembly should be kept in <b>suspended animation</b> until Parliament approves the Proclamation, not dissolved at once.</li>
+        </ul>
+      </div>
+      <div class="trap">🚨 <b>Bad government ≠ constitutional breakdown.</b> Political disagreement, corruption allegations or a change of government at the Union do not by themselves justify Art. 356. <i>Rameshwar Prasad</i> (2006) struck down a speculative dissolution.</div>
+      <div class="xl"><span>↔ Art. 355</span><span>↔ Art. 365</span><span>↔ Art. 163</span><span>S. R. Bommai 1994</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a361" data-p="1" open>
+    <summary><span class="no">361</span><span class="at"><b>🛡️ Protection of the President and Governors</b><small>🔴 Core · Personal immunity · Governmental action remains reviewable</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">361(1)</span> The Governor is not answerable to any court for the exercise and performance of the powers and duties of his office, or for acts done or purporting to be done in their exercise. Proceedings against the <b>Government</b> remain possible.</p>
+      <p><span class="cl">361(2)</span> <b>No criminal proceedings</b> may be instituted or continued against the Governor during his term.</p>
+      <p><span class="cl">361(3)</span> <b>No process for arrest or imprisonment</b> may issue from any court during his term.</p>
+      <p><span class="cl">361(4)</span> <b>Civil proceedings</b> in respect of a personal act may be instituted during the term only after <b>two months' written notice</b> stating the nature of the proceedings, the cause of action, the parties and the relief claimed.</p>
+      <div class="trap">🚨 <b>Personal immunity ≠ immunity for unconstitutional action.</b> Courts can review State action (Arts. 32 and 226) by naming the State or appropriate officials. Art. <b>361B</b> (disqualification for remunerative political posts) is a different provision.</div>
+      <div class="xl"><span>↔ Art. 361 (President)</span><span>↔ Art. 300</span><span>↔ Art. 361B</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section id="comparison" style="--accent:var(--pink)">
+  <div class="reveal">
+    <span class="kicker">🪞 Parallel Constitutional Design</span>
+    <h2 class="title">🪞 Union vs State — <span>Mirrors, Not Copies</span></h2>
+    <p class="lede">The parliamentary structure is broadly parallel, but appointment, discretion and institutional details differ. Use the first table as a map and the second to avoid copying a Union rule onto the Governor.</p>
+    <div class="table-wrap"><table>
+      <caption>📚 Counterparts at a glance</caption>
+      <thead><tr><th>Subject</th><th>Union</th><th>State</th></tr></thead>
+      <tbody>
+        <tr><td>Constitutional head</td><td>52 — President</td><td>153 — Governor</td></tr>
+        <tr><td>Vesting executive power</td><td>53</td><td>154</td></tr>
+        <tr><td>Selection</td><td>54–55 — Election</td><td>155 — Appointment by President</td></tr>
+        <tr><td>Term</td><td>56 (impeachment: 61)</td><td>156 — Pleasure of the President</td></tr>
+        <tr><td>Qualifications</td><td>58</td><td>157</td></tr>
+        <tr><td>Conditions of office</td><td>59</td><td>158</td></tr>
+        <tr><td>Oath</td><td>60</td><td>159</td></tr>
+        <tr><td>Clemency</td><td>72</td><td>161</td></tr>
+        <tr><td>Executive reach</td><td>73</td><td>162</td></tr>
+        <tr><td>Aid and advice</td><td>74</td><td>163</td></tr>
+        <tr><td>Ministers</td><td>75</td><td>164</td></tr>
+        <tr><td>Law officer</td><td>76 — Attorney-General</td><td>165 — Advocate-General</td></tr>
+        <tr><td>Government business</td><td>77</td><td>166</td></tr>
+        <tr><td>Head of government's duties</td><td>78 — Prime Minister</td><td>167 — Chief Minister</td></tr>
+        <tr><td>Ordinances</td><td>123</td><td>213</td></tr>
+      </tbody>
+    </table></div>
+    <div class="table-wrap"><table>
+      <caption>⚠️ Where the State text deliberately differs</caption>
+      <thead><tr><th>Feature</th><th>Union rule</th><th>State rule</th></tr></thead>
+      <tbody>
+        <tr><td>Removal</td><td>Impeachment under Art. 61</td><td>No impeachment; pleasure, not to be exercised arbitrarily (<i>B. P. Singhal</i>)</td></tr>
+        <tr><td>Qualification</td><td>Must also be qualified for the Lok Sabha (Art. 58)</td><td>Citizen and 35 years only</td></tr>
+        <tr><td>Oath before</td><td>Chief Justice of India</td><td>Chief Justice of the High Court</td></tr>
+        <tr><td>Clemency</td><td>Covers court-martial; can pardon death sentences</td><td>No court-martial; death sentence only suspended, remitted or commuted</td></tr>
+        <tr><td>Reconsideration of advice</td><td>Art. 74(1) proviso (one-time return)</td><td>No identical proviso in Art. 163</td></tr>
+        <tr><td>Size of ministry</td><td>15% of Lok Sabha (Art. 75(1A)); no stated floor</td><td>15% of Assembly <b>and a floor of 12</b>; tribal-welfare proviso in four States</td></tr>
+        <tr><td>Law officer</td><td>Qualified as Supreme Court Judge; right of audience in all courts (Art. 76(3))</td><td>Qualified as High Court Judge; no identical all-India clause</td></tr>
+        <tr><td>Ordinance</td><td>Parliament not in session</td><td>Assembly (or both Houses) not in session; extra presidential-instruction conditions</td></tr>
+      </tbody>
+    </table></div>
+    <div class="mnemonic"><span class="lab">🧠 Seven Consecutive Mirrors</span><b>72–78 ↔ 161–167</b><br>Mercy · Reach · Advice · Ministers · Law officer · Business · Duties.</div>
+  </div>
+</section>
+
+<!-- ================= CASES ================= -->
+<section id="cases" style="--accent:var(--rose)">
+  <div class="reveal">
+    <span class="kicker">⚖️ Judicial Guardrails</span>
+    <h2 class="title">🗂️ Case-Law <span>Timeline</span></h2>
+    <p class="lede">Remember each judgment through its constitutional proposition: <b>case → principle → article</b>. These are revision cues, not substitutes for the full holdings or later developments.</p>
+    <div class="timeline">
+      <div class="ti"><div class="d">1955 · Ram Jawaya Kapur (Arts. 154, 162)</div><p>Executive power is wider than executing statutes, but remains subject to law, fundamental rights and legislative financial control.</p></div>
+      <div class="ti"><div class="d">1974 · Shamsher Singh (Art. 163)</div><p>The President and Governor are constitutional heads and ordinarily act on ministerial aid and advice.</p></div>
+      <div class="ti"><div class="d">1979 · Hargovind Pant (Art. 155)</div><p>The Governor holds an independent constitutional office, not employment under the Government of India.</p></div>
+      <div class="ti"><div class="d">1980 · Maru Ram (Arts. 72, 161)</div><p>Constitutional clemency operates on governmental advice; statutory restrictions do not extinguish it.</p></div>
+      <div class="ti"><div class="d">1987 · D. C. Wadhwa (Art. 213)</div><p>Routine re-promulgation of ordinances subverts the legislative process.</p></div>
+      <div class="ti"><div class="d">1994 · S. R. Bommai (Art. 356)</div><p>Presidential satisfaction is reviewable; majority disputes are ordinarily resolved on the Assembly floor.</p></div>
+      <div class="ti"><div class="d">2001 · B. R. Kapur · S. R. Chaudhuri (Art. 164(4))</div><p>The six-month rule cannot cure an existing disqualification or be restarted by repeated non-member appointments.</p></div>
+      <div class="ti"><div class="d">2006 · Rameshwar Prasad · Epuru Sudhakar</div><p>Speculative grounds cannot justify dissolution; clemency is reviewable on limited grounds such as mala fides and non-application of mind.</p></div>
+      <div class="ti"><div class="d">2010 · B. P. Singhal (Art. 156)</div><p>Pleasure does not authorise arbitrary or mala fide removal of a Governor.</p></div>
+      <div class="ti"><div class="d">2016 · Nabam Rebia (Art. 163)</div><p>Art. 163 gives no general reservoir of discretion; session timing contrary to ministerial advice was invalid.</p></div>
+      <div class="ti"><div class="d">2017 · Krishna Kumar Singh (Art. 213)</div><p>Ordinances are exceptional; re-promulgation is impermissible and laying before the Legislature is mandatory.</p></div>
+      <div class="ti"><div class="d">2020 · Shivraj Singh Chouhan</div><p>A floor test may be directed where objective material indicates loss of confidence.</p></div>
+      <div class="ti"><div class="d">2022 · A. G. Perarivalan (Art. 161)</div><p>The Governor is bound by the State Cabinet's advice in the Art. 161 context considered.</p></div>
+      <div class="ti"><div class="d">2023 · Subhash Desai</div><p>Internal party dissent alone did not justify a floor-test direction in the circumstances examined.</p></div>
+      <div class="ti"><div class="d">2023 · State of Punjab v. Principal Secretary to the Governor (Art. 200)</div><p>A Governor cannot withhold assent and then decline to follow the return procedure, leaving a Bill pending indefinitely.</p></div>
+    </div>
+    <div class="callout warn">📌 <b>Update-sensitive area:</b> assent, reservation, judicial timelines and "deemed assent" under Arts. 200–201 should be checked against the latest official Supreme Court judgments and advisory opinions before an examination or legal submission.</div>
+  </div>
+</section>
+
+<!-- ================= MEMORY LAB ================= -->
+<section id="lab" style="--accent:var(--violet)">
+  <div class="reveal">
+    <span class="kicker">🧠 Active Recall Studio</span>
+    <h2 class="title">🧠 Memory Lab — <span>Retrieve Before You Reveal</span></h2>
+    <p class="lede">Answer aloud before opening each card. Separate the rule from its exceptions, then attach one article number and one case wherever possible.</p>
+
+    <details class="quiz"><summary>1. Does every State need a different Governor?</summary><p>No. Art. 153 (proviso, 7th Amendment, 1956) allows the same person to be Governor of two or more States.</p></details>
+    <details class="quiz"><summary>2. Who appoints the Governor, and who can impeach him?</summary><p>The President appoints under Art. 155. There is no constitutional impeachment; tenure is governed by Art. 156 (five years, subject to pleasure, with holdover).</p></details>
+    <details class="quiz"><summary>3. Where is the Governor's oath located?</summary><p>In Art. 159 itself. A Minister's oaths of office and secrecy are in the Third Schedule.</p></details>
+    <details class="quiz"><summary>4. Can the Governor pardon a death sentence?</summary><p>No. He can suspend, remit or commute it for offences within the State's executive field. Only the President can pardon (Art. 72).</p></details>
+    <details class="quiz"><summary>5. Is Art. 163 a source of unlimited personal discretion?</summary><p>No. Discretion needs a constitutional basis. <i>Shamsher Singh</i> and <i>Nabam Rebia</i> are the central guardrails. Art. 163(3) bars inquiry into the advice, not into the action.</p></details>
+    <details class="quiz"><summary>6. A 60-member Assembly: what is the maximum ministry size?</summary><p>15% of 60 = 9, but the floor of 12 applies, so the maximum is <b>12</b> including the Chief Minister.</p></details>
+    <details class="quiz"><summary>7. To which House is the ministry collectively responsible?</summary><p>The Legislative Assembly (Art. 164(2)), never the Council. A Chief Minister may nevertheless be an MLC.</p></details>
+    <details class="quiz"><summary>8. Which four States require a tribal-welfare Minister?</summary><p>Chhattisgarh, Jharkhand, Madhya Pradesh and Odisha (C–J–M–O). Bihar was removed in 2006.</p></details>
+    <details class="quiz"><summary>9. Can authentication save an unconstitutional order?</summary><p>No. Art. 166(2) only removes the objection that the Governor did not personally make it. It does not cure illegality.</p></details>
+    <details class="quiz"><summary>10. What are the Chief Minister's three duties under Art. 167?</summary><p>Communicate Council decisions, furnish information the Governor calls for, and submit an individual Minister's decision for collective consideration when required (C–F–S).</p></details>
+    <details class="quiz"><summary>11. When does an Ordinance under Art. 213 lapse?</summary><p>Six weeks after reassembly (from the later date if the Houses meet on different dates), or earlier on disapproval or withdrawal.</p></details>
+    <details class="quiz"><summary>12. Who removes a State PSC member?</summary><p>The President under Art. 317, after a Supreme Court inquiry — not the Governor, even though the Governor appoints.</p></details>
+
+    <div class="mnemonic"><span class="lab">🎯 Thirty-Second Revision</span>
+      <b>153</b> Office · <b>154</b> Power · <b>155</b> Appointment · <b>156</b> Term · <b>157</b> Qualifications · <b>158</b> Conditions · <b>159</b> Oath · <b>160</b> Contingency · <b>161</b> Mercy · <b>162</b> Reach · <b>163</b> Advice · <b>164</b> Ministers · <b>165</b> Law officer · <b>166</b> Business · <b>167</b> CM's duties.
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section id="checklist" style="--accent:var(--mint)">
+  <div class="reveal">
+    <span class="kicker">✅ Final Readiness Check</span>
+    <h2 class="title">✅ Your Revision <span>Checklist</span></h2>
+    <p class="lede">Tick a statement only when you can explain it without looking back. Progress is saved in this browser when local storage is available.</p>
+    <div class="check-progress" role="progressbar" aria-label="Revision progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="checkBar"></span></div>
+    <p class="qstat" id="checkStatus" aria-live="polite"></p>
+    <div class="checklist" id="checkItems">
+      <label class="checkitem"><input type="checkbox"><span>I can reconstruct Articles 153–167 in sequence.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can distinguish appointment, term, qualifications and conditions of the Governor.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can explain pleasure, five years and holdover together.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can locate the Governor's and Ministers' oaths correctly.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can distinguish the forms of clemency and compare Arts. 72 and 161.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can explain State executive reach under Art. 162.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can explain advice, discretion and confidentiality under Art. 163.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I know the 15% ceiling, twelve-member floor and six-month rule.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I remember C–J–M–O and the tribal-welfare proviso.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can compare the Advocate-General and the Attorney-General.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can distinguish authentication from substantive legality.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can state the Chief Minister's C–F–S duties.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can separate Arts. 200 and 201 and flag update-sensitive issues.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can trace the financial chain from Art. 202 to Art. 204.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can calculate Ordinance expiry from reassembly.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I understand judicial review under Arts. 356 and 361.</span></label>
+      <label class="checkitem"><input type="checkbox"><span>I can connect the major cases to their constitutional principles.</span></label>
+    </div>
+    <button class="btn" id="resetChecks" type="button">↺ Reset checklist</button>
+  </div>
+</section>
+
+<!-- ================= FINALE ================= -->
+<section id="finale" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🏆 The Closing Frame</span>
+    <h2 class="title">🏆 One Connected <span>Constitutional Story</span></h2>
+    <p class="lede">The Governor supplies constitutional form, the Council supplies democratic direction, the Assembly supplies accountability, and the courts enforce legal boundaries. Read every power through that structure rather than treating the Governor as a parallel elected government.</p>
+    <div class="quote">The office is constitutional; the government is parliamentary; responsibility is democratic; and every power remains bounded by law.</div>
+    <div>
+      <a class="chip" href="#a154">154 · Vesting</a>
+      <a class="chip" href="#a163">163 · Advice</a>
+      <a class="chip" href="#a164">164 · Responsibility</a>
+      <a class="chip" href="#a166">166 · Business</a>
+      <a class="chip" href="#a167">167 · Information</a>
+    </div>
+    <div class="mnemonic">
+      <span class="lab">🎬 Final Frame</span>
+      <b>Vesting is not personal rule.</b><br>
+      <b>Discretion is not unlimited choice.</b><br>
+      <b>Immunity is not constitutional impunity.</b><br>
+      <b>Procedure is not empty ceremony.</b>
+    </div>
+    <div class="callout">📚 <b>Source discipline:</b> use the official Constitution text for clauses, official Supreme Court decisions for holdings, and commission reports for recommendations. A convention or recommendation should never be presented as an express constitutional qualification.</div>
+  </div>
+</section>
+
+<footer>
+  <p class="final">“Constitutional form. Democratic substance. Accountable power.”</p>
+  <p>Part VI · Chapter II · Articles 153–167 · Connected constitutional provisions</p>
+  <div class="sig">PIYUSH PARTE</div>
+  <p>A Constitutional Study Film · Reel II</p>
+  <div class="heart-tribute tilt">
+    <span class="heart-icon" aria-hidden="true">❤️</span>
+    <span class="tribute-en">En Nenjil Kudiyirukkum</span>
+    <span class="tribute-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+  <p style="margin-top:20px">Verify current law and official sources before relying on update-sensitive propositions.</p>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(() => {
+  'use strict';
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const notes = $$('details.art');
+  const query = $('#q');
+  let priority = 'all';
+
+  /* ===== LETTER SPLITTING ===== */
+
+  $$('[data-split]').forEach(element => {
+    const text = element.dataset.split;
+    element.textContent = '';
+    element.setAttribute('aria-label', text);
+    let index = 0;
+    text.split(' ').forEach((word, wordIndex) => {
+      if (wordIndex) {
+        const space = document.createElement('span');
+        space.className = 'sp';
+        space.setAttribute('aria-hidden', 'true');
+        element.append(space);
+      }
+      const wrapper = document.createElement('span');
+      wrapper.className = 'word';
+      wrapper.setAttribute('aria-hidden', 'true');
+      for (const character of word) {
+        const span = document.createElement('span');
+        span.className = 'ch';
+        span.style.setProperty('--i', index++);
+        span.textContent = character;
+        wrapper.append(span);
+      }
+      element.append(wrapper);
+    });
+  });
+
+  /* ===== REVEALS (content stays visible if the observer is unavailable) ===== */
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.04 });
+
+    $$('.reveal').forEach(element => revealObserver.observe(element));
+  } else {
+
+    $$('.reveal').forEach(element => element.classList.add('in'));
+  }
+
+  /* ===== ARTICLE ATLAS & FILTERS ===== */
+  const atlas = $('#atlasGrid');
+  const searchText = new Map(notes.map(note => [
+    note, note.textContent.toLowerCase().replace(/\s+/g, ' ')
+  ]));
+
+  notes.forEach(note => {
+    const link = document.createElement('a');
+    link.href = '#' + note.id;
+    link.className = 'p' + note.dataset.p;
+    link.textContent = $('.no', note).textContent;
+    link.title = $('.at b', note).textContent;
+    link.dataset.target = note.id;
+    atlas.append(link);
+  });
+  const chips = $$('a', atlas);
+
+  function applyFilters() {
+    const term = query.value.trim().toLowerCase().replace(/\s+/g, ' ');
+    let visible = 0;
+    notes.forEach((note, index) => {
+      const match = (priority === 'all' || note.dataset.p === priority) &&
+        searchText.get(note).includes(term);
+      note.classList.toggle('hide', !match);
+      chips[index].classList.toggle('dim', !match);
+      if (match) visible++;
+    });
+    $('#qstat').textContent = `${visible} of ${notes.length} article notes shown.`;
+    $('#noRes').classList.toggle('show', visible === 0);
+  }
+
+
+  $$('[data-f]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.f === 'all'));
+    button.addEventListener('click', () => {
+      priority = button.dataset.f;
+
+      $$('[data-f]').forEach(item => {
+        const active = item === button;
+        item.classList.toggle('on', active);
+        item.setAttribute('aria-pressed', String(active));
+      });
+      applyFilters();
+    });
+  });
+
+  query.addEventListener('input', applyFilters);
+  $('#exp').addEventListener('click', () => {
+    notes.filter(note => !note.classList.contains('hide')).forEach(note => { note.open = true; });
+  });
+  $('#col').addEventListener('click', () => {
+    notes.filter(note => !note.classList.contains('hide')).forEach(note => { note.open = false; });
+  });
+
+  function openHashTarget() {
+    const id = location.hash.slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target || !target.matches('details.art')) return;
+
+    if (target.classList.contains('hide')) {
+      query.value = '';
+      priority = 'all';
+
+      $$('[data-f]').forEach(button => {
+        const active = button.dataset.f === 'all';
+        button.classList.toggle('on', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      applyFilters();
+    }
+    target.open = true;
+    target.classList.add('in');
+    chips.forEach(chip => {
+      if (chip.dataset.target === id) chip.setAttribute('aria-current', 'true');
+      else chip.removeAttribute('aria-current');
+    });
+    requestAnimationFrame(() => target.scrollIntoView({
+      behavior: motion.matches ? 'auto' : 'smooth', block: 'start'
+    }));
+  }
+
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (link && link.getAttribute('href') === location.hash) {
+      event.preventDefault();
+      openHashTarget();
+    }
+  });
+  window.addEventListener('hashchange', openHashTarget);
+  applyFilters();
+  if (location.hash) openHashTarget();
+
+  $('#statNotes').dataset.count = String(notes.length);
+  $('#statNotes').textContent = String(notes.length);
+
+  /* ===== MINISTRY CALCULATOR ===== */
+  const calculator = $('#calcN');
+  function calculateMinistry() {
+    const strength = Number(calculator.value);
+    if (!Number.isInteger(strength) || strength < 1 || strength > 1000) {
+      $('#calcOut').textContent = 'Enter a whole-number Assembly strength from 1 to 1,000.';
+      return;
+    }
+    const rounded = Math.floor(strength * 15 / 100);
+    const ceiling = Math.max(12, rounded);
+    $('#calcOut').innerHTML =
+      `15% of ${strength} = <b>${(strength * 0.15).toFixed(2)}</b>, rounded down to <b>${rounded}</b>. ` +
+      `Applicable maximum: <b>${ceiling} Ministers, including the Chief Minister</b> (minimum 12). ` +
+      `This applies the State rule in Art. 164(1A), not UT-specific rules.`;
+  }
+  calculator.addEventListener('input', calculateMinistry);
+  calculateMinistry();
+
+  /* ===== CHECKLIST (persisted when storage is available) ===== */
+  const checkboxes = $$('#checkItems input');
+  const storageKey = 'state-executive-checklist-v1';
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '[]');
+    if (Array.isArray(saved)) checkboxes.forEach((box, i) => { box.checked = saved[i] === true; });
+  } catch (_) { /* storage disabled: checklist still works */ }
+
+  function updateChecklist() {
+    const completed = checkboxes.filter(box => box.checked).length;
+    const percentage = Math.round(completed / checkboxes.length * 100);
+    $('#checkBar').style.width = percentage + '%';
+    $('.check-progress').setAttribute('aria-valuenow', String(percentage));
+    $('#checkStatus').textContent = `${completed} of ${checkboxes.length} completed · ${percentage}% ready`;
+    try { localStorage.setItem(storageKey, JSON.stringify(checkboxes.map(box => box.checked))); } catch (_) {}
+  }
+  checkboxes.forEach(box => box.addEventListener('change', updateChecklist));
+  $('#resetChecks').addEventListener('click', () => {
+    checkboxes.forEach(box => { box.checked = false; });
+    updateChecklist();
+  });
+  updateChecklist();
+
+  /* ===== READING PROGRESS & NAVIGATION ===== */
+  let scrollPending = false;
+  const sections = $$('section[id]');
+  const navLinks = $$('nav a');
+
+  function updateScroll() {
+    const available = document.documentElement.scrollHeight - window.innerHeight;
+    $('#progress').style.width = (available > 0 ? window.scrollY / available * 100 : 0) + '%';
+    $('#toTop').classList.toggle('show', window.scrollY > 500);
+
+    let active = sections[0].id;
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top <= 150) active = section.id;
+    });
+    navLinks.forEach(link => {
+      const selected = link.getAttribute('href') === '#' + active;
+      link.classList.toggle('on', selected);
+      if (selected) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    scrollPending = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!scrollPending) { scrollPending = true; requestAnimationFrame(updateScroll); }
+  }, { passive: true });
+  window.addEventListener('resize', updateScroll);
+  $('#toTop').addEventListener('click', () => window.scrollTo({
+    top: 0, behavior: motion.matches ? 'auto' : 'smooth'
+  }));
+  updateScroll();
+
+  /* ===== POINTER LIGHT & TILT ===== */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.addEventListener('pointermove', event => {
+      if (motion.matches) return;
+      document.documentElement.style.setProperty('--mx', event.clientX + 'px');
+      document.documentElement.style.setProperty('--my', event.clientY + 'px');
+    }, { passive: true });
+
+    [...$$('.tilt'), $('#heroTitle')].filter(Boolean).forEach(element => {
+      element.addEventListener('pointermove', event => {
+        if (motion.matches) return;
+        const rect = element.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        element.style.setProperty('--rx', ((0.5 - y) * 8) + 'deg');
+        element.style.setProperty('--ry', ((x - 0.5) * 10) + 'deg');
+        element.style.setProperty('--gx', (x * 100) + '%');
+        element.style.setProperty('--gy', (y * 100) + '%');
+      });
+      element.addEventListener('pointerleave', () => {
+        element.style.setProperty('--rx', '0deg');
+        element.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
+  /* ===== CELEBRATORY BURST ===== */
+  const credit = $('.auteur-credit');
+  function celebrate() {
+    if (motion.matches) return;
+    const rect = credit.getBoundingClientRect();
+    const symbols = ['✦', '✨', '📜', '⚖️', '👑'];
+    for (let i = 0; i < 14; i++) {
+      const particle = document.createElement('span');
+      particle.className = 'burst';
+      particle.setAttribute('aria-hidden', 'true');
+      particle.textContent = symbols[i % symbols.length];
+      particle.style.left = (rect.left + rect.width / 2) + 'px';
+      particle.style.top = (rect.top + rect.height / 2) + 'px';
+      const angle = Math.PI * 2 * i / 14;
+      const distance = 80 + Math.random() * 120;
+      particle.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
+      particle.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
+      document.body.append(particle);
+      setTimeout(() => particle.remove(), 1300);
+    }
+  }
+  credit.addEventListener('click', celebrate);
+  credit.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); celebrate(); }
+  });
+
+  /* ===== PRINT: expand notes and quiz answers, then restore ===== */
+  let printState = null;
+  window.addEventListener('beforeprint', () => {
+    if (printState) return;
+    printState = $$('details').map(el => ({ el, open: el.open, hidden: el.classList.contains('hide') }));
+    printState.forEach(({ el }) => { el.open = true; el.classList.remove('hide'); });
+  });
+  window.addEventListener('afterprint', () => {
+    if (!printState) return;
+    printState.forEach(({ el, open, hidden }) => { el.open = open; el.classList.toggle('hide', hidden); });
+    printState = null;
+  });
+  $('#prt').addEventListener('click', () => window.print());
+
+  /* ===== LIGHTWEIGHT CANVAS DUST ===== */
+  const canvas = $('#dust');
+  const context = canvas.getContext('2d');
+  let particles = [];
+  let frame = 0;
+  let width = 0;
+  let height = 0;
+
+  function resizeDust() {
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    if (!context) return;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    particles = Array.from({ length: width < 650 ? 22 : 45 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 1.4 + 0.3,
+      speed: Math.random() * 0.22 + 0.06,
+      alpha: Math.random() * 0.35 + 0.08
+    }));
+  }
+
+  function drawDust() {
+    frame = 0;
+    if (!context || motion.matches || document.hidden) return;
+    context.clearRect(0, 0, width, height);
+    particles.forEach(p => {
+      p.y -= p.speed;
+      if (p.y < -4) { p.y = height + 4; p.x = Math.random() * width; }
+      context.beginPath();
+      context.fillStyle = `rgba(242,207,114,${p.alpha})`;
+      context.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+    frame = requestAnimationFrame(drawDust);
+  }
+
+  function syncDust() {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    if (context) context.clearRect(0, 0, width, height);
+    if (!motion.matches && !document.hidden) drawDust();
+  }
+
+  window.addEventListener('resize', resizeDust);
+  document.addEventListener('visibilitychange', syncDust);
+  if (motion.addEventListener) motion.addEventListener('change', syncDust);
+  resizeDust();
+  syncDust();
+})();
+</script>
+</body>
+</html>

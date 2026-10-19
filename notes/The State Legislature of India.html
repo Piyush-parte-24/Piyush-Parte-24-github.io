@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070f">
+<meta name="description" content="Cinematic, clause-accurate notes on the State Legislature of India — Articles 168 to 212 — with flow diagrams, mnemonics and exam traps.">
+<title>The State Legislature of India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Noto+Sans+Tamil:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#05070f;--ink:#ece9f3;--mut:#bdb8cc;--dim:#8f8aa3;
+  --card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);
+  --saffron:#ffa45c;--gold:#f2cf72;--sky:#78b8ff;--mint:#6fdcab;
+  --rose:#ff8aa1;--violet:#bd9bff;--cyan:#6fe3e8;--pink:#f5a6d0;
+  --accent:var(--gold);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif;line-height:1.8;overflow-x:hidden;font-size:15.5px}
+::selection{background:var(--gold);color:#140e00}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--saffron),var(--violet),var(--sky));border-radius:10px}
+a{color:var(--sky)}a:hover{color:var(--gold)}
+b,strong{color:#f7f4ee;font-weight:600}
+.hide{display:none!important}
+
+/* ===== CINEMATIC LAYERS ===== */
+.cine-bg{position:fixed;inset:0;z-index:-6;background:
+  radial-gradient(ellipse 75% 55% at 10% 8%,rgba(255,164,92,.17),transparent 62%),
+  radial-gradient(ellipse 70% 60% at 90% 14%,rgba(120,184,255,.16),transparent 62%),
+  radial-gradient(ellipse 75% 65% at 50% 100%,rgba(111,220,171,.13),transparent 65%),
+  radial-gradient(ellipse 50% 40% at 80% 60%,rgba(189,155,255,.10),transparent 65%),
+  linear-gradient(180deg,#04060e 0%,#090e20 45%,#0d0a1b 100%);
+  animation:aurora 18s ease-in-out infinite alternate}
+@keyframes aurora{0%{filter:hue-rotate(0) brightness(1)}50%{filter:hue-rotate(10deg) brightness(1.08)}100%{filter:hue-rotate(-8deg) brightness(.98)}}
+.stars{position:fixed;inset:0;z-index:-5;opacity:.5;pointer-events:none;
+  background-image:radial-gradient(1.5px 1.5px at 10% 20%,#fff,transparent),radial-gradient(1px 1px at 80% 40%,#fff,transparent),radial-gradient(2px 2px at 50% 70%,#fff,transparent),radial-gradient(1px 1px at 30% 85%,#fff,transparent),radial-gradient(1.5px 1.5px at 92% 90%,#fff,transparent),radial-gradient(1px 1px at 65% 15%,#fff,transparent);
+  background-size:250px 250px;animation:twinkle 6s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.28}to{opacity:.65}}
+#dust{position:fixed;inset:0;z-index:-4;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spotlight{position:fixed;inset:0;z-index:5;pointer-events:none;background:radial-gradient(560px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.055),transparent 46%)}
+.vignette{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 200px rgba(0,0,0,.72)}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:150;background:linear-gradient(90deg,var(--saffron),var(--gold),var(--mint),var(--sky),var(--violet));box-shadow:0 0 14px var(--saffron)}
+.curtain{position:fixed;inset:0;z-index:300;pointer-events:none}
+.curtain::before,.curtain::after{content:'';position:absolute;left:0;right:0;height:50.5%;background:linear-gradient(#02030a,#070a18);animation:curtainOpen 1.7s .35s cubic-bezier(.77,0,.18,1) forwards}
+.curtain::before{top:0;--d:-102%}.curtain::after{bottom:0;--d:102%}
+@keyframes curtainOpen{to{transform:translateY(var(--d))}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:90;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:12px 18px;background:rgba(7,9,20,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);scrollbar-width:thin}
+nav a{position:relative;flex-shrink:0;color:var(--mut);text-decoration:none;font-size:.78rem;font-weight:500;padding:8px 14px;border-radius:22px;border:1px solid transparent;transition:all .3s ease}
+nav a::after{content:'';position:absolute;left:50%;bottom:2px;width:0;height:2px;background:var(--gold);transform:translateX(-50%);transition:width .3s}
+nav a:hover,nav a.on{color:#fff;background:rgba(242,207,114,.12);border-color:rgba(242,207,114,.3);box-shadow:0 0 16px rgba(242,207,114,.22);transform:translateY(-2px)}
+nav a:hover::after,nav a.on::after{width:60%}
+
+/* ===== LETTER MAGIC ===== */
+.split{color:var(--ink)}
+.split .ch{display:inline-block;background:linear-gradient(90deg,var(--g1,#ffa45c),var(--g2,#ffe08a),var(--g3,#6fdcab),var(--g4,#78b8ff),var(--g5,#bd9bff),var(--g1,#ffa45c));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite;animation-delay:calc(var(--i)*-.27s);transition:transform .45s cubic-bezier(.34,1.56,.64,1),filter .3s;cursor:default}
+.split .ch:hover{transform:translateY(-14px) rotate(-6deg) scale(1.24);filter:drop-shadow(0 0 16px rgba(255,214,120,.85))}
+.split .sp{display:inline-block;width:.34em}
+@keyframes gm{to{background-position:300% center}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px 50px;position:relative}
+.orbit{position:relative;width:230px;height:230px;margin:0 auto 12px;display:grid;place-items:center}
+.orbit .core{font-size:4.2rem;filter:drop-shadow(0 0 26px rgba(242,207,114,.6));animation:lev 5s ease-in-out infinite;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.orbit:hover .core{transform:scale(1.25) rotate(8deg)}
+.orbit::before,.orbit::after{content:'';position:absolute;border-radius:50%;border:1px dashed rgba(242,207,114,.28)}
+.orbit::before{inset:10px;animation:spin 60s linear infinite}
+.orbit::after{inset:36px;border-color:rgba(120,184,255,.25);animation:spin 40s linear infinite reverse}
+.orb{position:absolute;left:50%;top:50%;font-size:1.5rem;margin:-.75rem 0 0 -.75rem;animation:orb 36s linear infinite;filter:drop-shadow(0 0 10px rgba(255,255,255,.35))}
+@keyframes orb{from{transform:rotate(var(--a)) translateX(106px) rotate(calc(var(--a)*-1))}to{transform:rotate(calc(var(--a) + 360deg)) translateX(106px) rotate(calc(var(--a)*-1 - 360deg))}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes lev{50%{transform:translateY(-9px)}}
+.eyebrow{font-family:'Fira Code',monospace;font-size:.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.9}
+.hero h1{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(2.3rem,7.4vw,6rem);line-height:1.12;letter-spacing:2px;margin:16px 0 6px;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease,letter-spacing .5s;text-shadow:0 0 60px rgba(255,164,92,.2);--g1:#ffa45c;--g2:#ffe08a;--g3:#6fdcab;--g4:#78b8ff;--g5:#bd9bff}
+.title-glow{width:min(520px,70%);height:3px;margin:8px auto 0;border-radius:9px;background:linear-gradient(90deg,transparent,var(--saffron),var(--gold),var(--sky),var(--violet),transparent);transform:scaleX(.35);opacity:.6;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.hero:hover .title-glow{transform:scaleX(1);opacity:1}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.05rem,2.4vw,1.55rem);color:#d8c9a6;margin-top:12px}
+.tagline{margin:22px auto 0;max-width:820px;color:var(--mut);font-size:.95rem;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:14px 10px}
+.badges{margin-top:26px;display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:960px}
+.badge{position:relative;overflow:hidden;padding:7px 16px;border-radius:30px;font-size:.78rem;font-weight:500;color:var(--mut);border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(8px);transition:all .35s}
+.badge::before{content:'';position:absolute;top:0;bottom:0;left:-75%;width:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);transition:left .65s}
+.badge:hover{transform:translateY(-5px) scale(1.07);border-color:var(--gold);color:#fff;box-shadow:0 8px 24px rgba(242,207,114,.28)}
+.badge:hover::before{left:130%}
+.stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:30px}
+.stat{min-width:130px;padding:14px 20px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .4s}
+.stat:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.stat b{display:block;font:700 2rem 'Cinzel Decorative',serif;color:var(--gold);line-height:1.1}
+.stat span{font-size:.75rem;color:var(--mut);letter-spacing:.5px}
+.scrolldown{margin-top:44px;font-size:1.6rem;color:var(--dim);animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(12px)}}
+.burst{position:fixed;z-index:400;pointer-events:none;font-size:1.5rem;animation:burst 1.2s ease-out forwards}
+@keyframes burst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4) rotate(220deg);opacity:0}}
+
+/* ===== AUTEUR (advanced) ===== */
+.auteur-wrap{position:relative;display:inline-block;margin-top:30px;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px)}}
+.auteur-halo{position:absolute;inset:-5px;border-radius:60px;z-index:0;background:conic-gradient(from var(--ang),var(--saffron),var(--gold),var(--rose),var(--violet),var(--sky),var(--mint),var(--saffron));filter:blur(14px);opacity:.38;animation:halo 8s linear infinite;transition:opacity .5s}
+@keyframes halo{to{--ang:360deg}}
+.auteur-wrap:hover .auteur-halo{opacity:.75}
+.auteur-credit{position:relative;z-index:1;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:5px;padding:20px 48px;border-radius:56px;border:1.5px solid rgba(242,207,114,.5);background:linear-gradient(135deg,rgba(255,164,92,.16),rgba(8,10,24,.78) 45%,rgba(120,184,255,.15));box-shadow:0 12px 38px rgba(255,164,92,.2),inset 0 0 22px rgba(242,207,114,.14);backdrop-filter:blur(14px);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease,scale .5s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s;outline:none}
+.auteur-credit::before{content:'';position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);animation:sweep 4.5s ease-in-out infinite;pointer-events:none}
+.auteur-credit::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.17),transparent 60%);opacity:0;transition:opacity .4s}
+.auteur-credit:hover::after,.auteur-credit:focus-visible::after{opacity:1}
+.auteur-credit:hover,.auteur-credit:focus-visible{scale:1.06;border-color:var(--gold);box-shadow:0 20px 52px rgba(255,164,92,.42),inset 0 0 28px rgba(242,207,114,.3)}
+@keyframes sweep{0%,35%{left:-60%}70%,100%{left:130%}}
+.a-star{position:absolute;color:var(--gold);font-size:.8rem;animation:starP 2.4s ease-in-out infinite;z-index:2}
+.a-star.s1{top:8px;right:20px}.a-star.s2{bottom:10px;left:22px;animation-delay:.8s;color:#9ec9ff}.a-star.s3{top:12px;left:30px;animation-delay:1.5s;font-size:.6rem}
+@keyframes starP{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.4) rotate(90deg)}}
+.auteur-tag{font:500 .68rem 'Fira Code',monospace;letter-spacing:6px;text-transform:uppercase;color:#a4cbff;text-shadow:0 0 10px rgba(103,183,255,.7)}
+.auteur-name{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(1.2rem,3.2vw,1.95rem);letter-spacing:4px;--g1:#fff8ec;--g2:#ffd66b;--g3:#ff9a3c;--g4:#e8c257;--g5:#fff8ec}
+.auteur-name .ch{animation-duration:6s}
+.auteur-underline{width:60%;height:2px;border-radius:10px;background:linear-gradient(90deg,transparent,var(--saffron),var(--gold),var(--sky),transparent);transform:scaleX(.4);opacity:.6;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.auteur-credit:hover .auteur-underline{transform:scaleX(1);opacity:1}
+.auteur-role{font-size:.68rem;letter-spacing:2px;color:var(--mut);text-transform:uppercase}
+
+/* ===== SECTIONS ===== */
+section{padding:90px 6vw;position:relative}
+section+section::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.35}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:500 .74rem 'Fira Code',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:18px;background:rgba(255,255,255,.03);box-shadow:0 0 14px color-mix(in srgb,var(--accent) 20%,transparent)}
+h2.title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.2vw,3rem);font-weight:700;line-height:1.2;margin-bottom:12px}
+h2.title span{color:var(--accent)}
+h3.sub{color:var(--accent);margin:34px 0 12px;font-size:1.2rem;font-family:'Playfair Display',serif}
+.lede{color:var(--mut);max-width:960px;margin-bottom:34px;font-size:1.02rem}
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ===== CARDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:26px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:26px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .45s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-10px) perspective(900px) rotateX(2deg) scale(1.012);border-color:var(--accent);box-shadow:0 20px 44px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--accent) 22%,transparent)}
+.card:hover::before{opacity:.08}
+.card>*{position:relative;z-index:1}
+.card h3{color:var(--accent);font-size:1.12rem;margin-bottom:10px}
+.card p,.card li{color:var(--mut);font-size:.92rem}
+.card ul,.card ol{padding-left:19px;margin-top:8px}
+.big{font:700 2.2rem 'Cinzel Decorative',serif;color:var(--accent);display:block;line-height:1.15;margin-bottom:6px}
+
+/* ===== FLOW / HUB ===== */
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:30px 0}
+.flow.v{flex-direction:column}
+.node{background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid var(--bd);border-radius:16px;padding:15px 20px;min-width:150px;max-width:340px;text-align:center;backdrop-filter:blur(8px);font-size:.87rem;color:var(--mut);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:all .4s cubic-bezier(.2,.8,.2,1)}
+.node b{display:block;color:var(--accent);font-size:.95rem;margin-bottom:3px}
+.node:hover{transform:translateY(-8px) scale(1.05);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px color-mix(in srgb,var(--accent) 45%,transparent)}
+.arrow{font-size:1.45rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{0%,100%{opacity:.4}50%{opacity:1;transform:translateX(4px)}}
+.flow.v .arrow{animation-name:pav}
+@keyframes pav{0%,100%{opacity:.4}50%{opacity:1;transform:translateY(4px)}}
+.hub{display:flex;flex-direction:column;align-items:center;margin:34px 0}
+.hub>.node{border-color:var(--accent);box-shadow:0 0 22px rgba(255,255,255,.08)}
+.hub-line{width:2px;height:34px;margin:4px 0;background:linear-gradient(var(--accent),transparent)}
+.spokes{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.spokes .node{border-top:3px solid var(--accent)}
+
+/* ===== CALLOUT / QUOTE / MNEMONIC / TRAP ===== */
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 14px 14px 0;padding:16px 22px;margin:20px 0;font-size:.92rem;color:var(--mut);transition:all .3s}
+.callout:hover{background:rgba(255,255,255,.07);transform:translateX(6px)}
+.callout b{color:var(--accent)}
+.callout.warn{border-color:var(--saffron);background:rgba(255,164,92,.06)}.callout.warn b{color:var(--saffron)}
+.callout.tip{border-color:var(--mint);background:rgba(111,220,171,.05)}.callout.tip b{color:var(--mint)}
+.trap{border:1.5px solid var(--rose);border-radius:16px;padding:16px 22px;margin:20px 0;font-size:.92rem;color:#ffdce3;background:linear-gradient(135deg,rgba(255,138,161,.12),rgba(255,164,92,.05))}
+.trap b{color:#ff9db0}
+.quote{position:relative;margin:28px 0;padding:22px 30px;border:1px solid var(--bd);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 1.1rem/1.8 'Playfair Display',serif;color:#fff6e6;transition:all .4s}
+.quote::before{content:'📜';position:absolute;top:-16px;left:20px;font-size:1.6rem;background:var(--bg);padding:0 6px;font-style:normal}
+.mnemonic{margin:18px 0;padding:20px 22px;border:1px dashed var(--accent);border-radius:16px;background:linear-gradient(135deg,rgba(255,164,92,.09),rgba(120,184,255,.06));font:.88rem/1.9 'Fira Code',monospace;color:#fff3df;transition:all .35s}
+.mnemonic:hover,.quote:hover{transform:translateY(-4px) scale(1.012);box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.mnemonic b{color:var(--gold)}
+.mnemonic .lab{display:block;font-size:.68rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+
+/* ===== TABLES ===== */
+.table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--bd);border-radius:16px;background:var(--card)}
+table{width:100%;min-width:620px;border-collapse:collapse;font-size:.89rem}
+caption{text-align:left;padding:14px 18px;font-weight:600;color:var(--ink)}
+th,td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.07);color:var(--accent);font:600 .72rem 'Fira Code',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--mut)}tr:last-child td{border-bottom:0}
+tr:hover td{background:rgba(255,255,255,.05);color:#fff}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;margin:34px 0;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--saffron),var(--gold),var(--mint),var(--sky),var(--violet),var(--rose));background-size:100% 400%;animation:fl 7s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:26px;padding-left:24px;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ti::before{content:'';position:absolute;left:-34px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(10px)}
+.ti .d{font:500 .84rem 'Fira Code',monospace;color:var(--accent)}
+.ti p{color:var(--mut);font-size:.92rem}
+
+/* ===== ARTICLE ACCORDION ===== */
+details.art{margin:15px 0;border:1px solid var(--bd);border-left:4px solid var(--accent);border-radius:18px;background:rgba(14,19,38,.72);backdrop-filter:blur(10px);overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+details.art:hover{box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 24px color-mix(in srgb,var(--accent) 18%,transparent);transform:translateY(-2px)}
+details.art summary{list-style:none;display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer}
+details.art summary::-webkit-details-marker{display:none}
+details.art summary::after{content:'+';margin-left:auto;font-size:1.6rem;color:var(--accent);transition:transform .3s}
+details.art[open] summary::after{content:'−'}
+.no{min-width:66px;text-align:center;padding:8px 6px;font:600 1.05rem 'Fira Code',monospace;color:var(--accent);border:1px solid var(--accent);border-radius:12px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 22%,transparent),transparent)}
+.at{display:flex;flex-direction:column}
+.at b{font-size:1.02rem;color:#f4f1ea}
+.at small{font-size:.7rem;letter-spacing:.7px;color:var(--dim);text-transform:uppercase}
+.art-body{padding:2px 26px 24px;color:var(--mut);font-size:.93rem}
+.art-body p{margin:10px 0}
+.art-body ul,.art-body ol{padding-left:22px;margin:8px 0}
+.art-body li{margin:6px 0}
+.cl{display:inline-block;font:600 .74rem 'Fira Code',monospace;color:var(--accent);background:rgba(255,255,255,.07);padding:1px 8px;border-radius:6px;margin-right:4px}
+.xl{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.xl span{font-size:.74rem;color:var(--accent);border:1px solid var(--bd);border-radius:8px;padding:4px 10px;background:rgba(255,255,255,.03)}
+.pr{display:inline-block;font:700 .66rem 'Fira Code',monospace;padding:2px 9px;border-radius:12px;margin-right:6px}
+.pr.r{color:#ff9db0;background:rgba(255,138,161,.15);border:1px solid var(--rose)}
+.pr.o{color:#ffbf8a;background:rgba(255,164,92,.15);border:1px solid var(--saffron)}
+.pr.g{color:#8fe9bf;background:rgba(111,220,171,.15);border:1px solid var(--mint)}
+
+/* ===== TOOLS / ATLAS ===== */
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:20px;border:1px solid var(--bd);border-radius:20px;background:rgba(14,19,38,.8);backdrop-filter:blur(12px);margin:26px 0 12px}
+.tools input{flex:1;min-width:230px;padding:12px 16px;border-radius:12px;border:1px solid var(--bd);background:#0b1124;color:var(--ink);font:inherit}
+.tools input:focus,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn{padding:9px 14px;border-radius:12px;border:1px solid var(--bd);background:rgba(255,255,255,.05);color:var(--ink);font:inherit;font-size:.82rem;cursor:pointer;transition:all .3s}
+.btn:hover,.btn.on{background:rgba(242,207,114,.15);border-color:var(--gold);transform:translateY(-2px)}
+.qstat{width:100%;font-size:.8rem;color:var(--dim)}
+.atlas{display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:9px;margin:20px 0}
+.atlas a{text-align:center;text-decoration:none;font:600 .86rem 'Fira Code',monospace;padding:9px 0;border-radius:12px;border:1px solid;transition:all .3s}
+.atlas a.p1{color:#ff9db0;border-color:rgba(255,138,161,.5);background:rgba(255,138,161,.08)}
+.atlas a.p2{color:#ffbf8a;border-color:rgba(255,164,92,.5);background:rgba(255,164,92,.08)}
+.atlas a.p3{color:#8fe9bf;border-color:rgba(111,220,171,.5);background:rgba(111,220,171,.08)}
+.atlas a:hover{transform:translateY(-5px) scale(1.12);box-shadow:0 8px 20px rgba(0,0,0,.4);color:#fff}
+.atlas a.dim{opacity:.25}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.8rem;color:var(--mut)}
+.nores{display:none;text-align:center;padding:24px;color:var(--mut)}
+
+/* ===== STACKED BAR ===== */
+.stackbar{display:flex;height:96px;margin:24px 0 10px;border-radius:16px;overflow:hidden;border:1px solid var(--bd)}
+.stackbar>div{flex:var(--w) 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.64rem;text-align:center;line-height:1.3;color:#fff;background:color-mix(in srgb,var(--c) 30%,transparent);border-right:1px solid rgba(0,0,0,.35);transition:flex-grow .5s cubic-bezier(.2,.8,.2,1),background .3s;overflow:hidden;padding:0 2px}
+.stackbar>div:hover{flex-grow:calc(var(--w)*3.2);background:color-mix(in srgb,var(--c) 55%,transparent)}
+.stackbar b{font:700 1rem 'Fira Code',monospace;color:#fff}
+
+/* ===== CASE CHIPS ===== */
+.chip{display:inline-block;margin:.25rem;padding:.42rem .8rem;border:1px solid var(--accent);border-radius:999px;color:#fff;background:rgba(255,255,255,.04);font-size:.82rem;transition:all .3s}
+.chip:hover{transform:translateY(-4px) scale(1.08);background:var(--accent);color:#0b0a14;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+
+/* ===== QUIZ ===== */
+.quiz{margin:12px 0;padding:16px 20px;border:1px solid var(--bd);border-radius:14px;background:rgba(255,255,255,.035);transition:all .3s}
+.quiz:hover{border-color:var(--accent)}
+.quiz summary{cursor:pointer;color:var(--ink);font-weight:500}
+.quiz p{margin-top:12px;color:var(--mut);font-size:.92rem}
+
+/* ===== FOOTER / TRIBUTE ===== */
+footer{padding:64px 6vw 80px;text-align:center;color:var(--mut);font-size:.86rem;border-top:1px solid var(--bd)}
+footer .final{font:italic 1.3rem 'Playfair Display',serif;color:#fff;margin-bottom:12px}
+.sig{font:700 1rem 'Cinzel Decorative',serif;letter-spacing:4px;color:var(--gold);margin:26px 0 6px}
+.heart-tribute{position:relative;isolation:isolate;overflow:hidden;margin:30px auto 8px;max-width:600px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:32px 30px;border-radius:24px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(150deg,rgba(255,164,92,.09),rgba(120,184,255,.08),rgba(111,220,171,.07));transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease,box-shadow .5s,border-color .5s}
+.heart-tribute::before{content:'';position:absolute;inset:-3px;z-index:-1;border-radius:24px;background:conic-gradient(from var(--ang),var(--saffron),var(--gold),var(--rose),var(--sky),var(--mint),var(--saffron));filter:blur(16px);opacity:.34;animation:halo 9s linear infinite}
+.heart-tribute::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.13),transparent 60%);opacity:0;transition:opacity .4s}
+.heart-tribute:hover::after{opacity:1}
+.heart-tribute:hover{border-color:rgba(255,255,255,.28);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.heart-icon{font-size:2rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,138,161,.7))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.tribute-en{font:italic 700 clamp(1.15rem,3vw,1.7rem) 'Playfair Display',serif;color:#fff8ec}
+.tribute-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.6vw,2.15rem);background:linear-gradient(90deg,var(--saffron),var(--gold),var(--rose),var(--sky),var(--mint),var(--saffron));background-size:320% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite}
+.toTop{position:fixed;right:24px;bottom:24px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;cursor:pointer;z-index:100;background:linear-gradient(135deg,var(--saffron),var(--sky));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:all .4s}
+.toTop.show{opacity:1;pointer-events:auto}.toTop:hover{transform:translateY(-6px) scale(1.1)}
+
+@media(max-width:650px){
+  section{padding:70px 5vw}.orbit{transform:scale(.8)}
+  .auteur-credit{padding:16px 26px}.heart-tribute{padding:24px 16px}
+  details.art summary{padding:14px 12px;gap:10px}.art-body{padding:2px 16px 20px}.no{min-width:54px;font-size:.92rem}
+  .stackbar{height:80px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .curtain,#dust{display:none}.js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="cine-bg"></div><div class="stars"></div><canvas id="dust"></canvas>
+<div class="grain"></div><div class="spotlight"></div><div class="vignette"></div>
+<div class="progress" id="progress"></div><div class="curtain" aria-hidden="true"></div>
+
+<nav aria-label="Sections">
+  <a href="#hero">🏠 Home</a><a href="#mindmap">🌳 Mind Map</a><a href="#atlas">🧭 Atlas</a>
+  <a href="#act1">🏛️ 168–171</a><a href="#act2">⏳ 172–177</a><a href="#act3">🪑 178–187</a>
+  <a href="#act4">👤 188–195</a><a href="#act5">📜 196–201</a><a href="#act6">💰 202–207</a>
+  <a href="#act7">⚖️ 208–212</a><a href="#links">🔗 Connections</a><a href="#cases">🗂️ Cases</a>
+  <a href="#lab">🧠 Memory Lab</a><a href="#finale">🏆 Finale</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" style="--accent:var(--gold)">
+  <div class="orbit" aria-hidden="true">
+    <span class="core">🗺</span>
+    <span class="orb" style="--a:0deg">🗳️</span><span class="orb" style="--a:60deg">📜</span>
+    <span class="orb" style="--a:120deg">💰</span><span class="orb" style="--a:180deg">⚖️</span>
+    <span class="orb" style="--a:240deg">👑</span><span class="orb" style="--a:300deg">🏛️</span>
+  </div>
+  <div class="eyebrow">🎬 The Constitutional Architecture of the States</div>
+  <h1 id="heroTitle" aria-label="The State Legislature">
+    <span class="split" data-split="THE STATE">THE STATE</span><br>
+    <span class="split" data-split="LEGISLATURE">LEGISLATURE</span>
+  </h1>
+  <div class="title-glow"></div>
+  <div class="subtitle">Part VI · Chapter III — Articles 168 to 212</div>
+
+  <div class="auteur-wrap">
+    <span class="auteur-halo"></span>
+    <div class="auteur-credit tilt" tabindex="0" aria-label="Auteur: Piyush Parte">
+      <span class="a-star s1">✦</span><span class="a-star s2">✧</span><span class="a-star s3">✦</span>
+      <span class="auteur-tag">🎬 Auteur</span>
+      <span class="auteur-name split" data-split="PIYUSH PARTE">PIYUSH PARTE</span>
+      <span class="auteur-underline"></span>
+      <span class="auteur-role">A Constitutional Study Film</span>
+    </div>
+  </div>
+
+  <div class="tagline">🏛️ Where representation becomes deliberation, deliberation becomes law, and public money meets public accountability — Governor, Assembly, Council, Bills, Budget and the courts, told as one connected story.</div>
+  <div class="badges">
+    <div class="badge">🏛️ 168–171 Composition</div><div class="badge">⏳ 172–177 Sessions</div>
+    <div class="badge">🪑 178–187 Presiding Officers</div><div class="badge">👤 188–195 Membership</div>
+    <div class="badge">📜 196–201 Bills &amp; Assent</div><div class="badge">💰 202–207 State Budget</div>
+    <div class="badge">⚖️ 208–212 Procedure &amp; Limits</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b data-count="45">45</b><span>📖 ARTICLES</span></div>
+    <div class="stat"><b data-count="7">7</b><span>🎭 ACTS</span></div>
+    <div class="stat"><b data-count="31">31</b><span>🔴 CORE ARTICLES</span></div>
+    <div class="stat"><b data-count="6">6</b><span>🏛️ STATES WITH COUNCILS</span></div>
+  </div>
+  <div class="scrolldown">⮟</div>
+</section>
+
+<!-- ================= MIND MAP ================= -->
+<section id="mindmap" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🎬 Opening Scene · The Big Picture</span>
+    <h2 class="title">🌳 Master Mind Map — <span>Seven Systems, One Chapter</span></h2>
+    <p class="lede">Chapter III of Part VI is the State-level mirror of the Union Parliament chapter (Articles 79–122) — but with deliberate asymmetries: the Council is optional and only delays, there is no joint sitting, and the Governor is part of the Legislature without being a member of any House. 🧩</p>
+    <div class="hub">
+      <div class="node"><b>🏛️ STATE LEGISLATURE</b>Articles 168–212 · 45 provisions</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="node" style="--accent:var(--saffron)"><b>🏛️ 168–171</b>Composition<br>Governor · Assembly · Council</div>
+        <div class="node" style="--accent:var(--sky)"><b>⏳ 172–177</b>Duration · Qualification · Sessions · Governor's address</div>
+        <div class="node" style="--accent:var(--violet)"><b>🪑 178–187</b>Speaker · Chairman · Salaries · Secretariat</div>
+        <div class="node" style="--accent:var(--mint)"><b>👤 188–195</b>Oath · Quorum · Seats · Disqualification · Privileges</div>
+        <div class="node" style="--accent:var(--rose)"><b>📜 196–201</b>Bills · Money Bills · Assent</div>
+        <div class="node" style="--accent:var(--gold)"><b>💰 202–207</b>Budget · Grants · Appropriation</div>
+        <div class="node" style="--accent:var(--cyan)"><b>⚖️ 208–212</b>Rules · Language · Judges · Courts</div>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="node"><b>🗳️ Represent</b>People elect the Assembly</div><div class="arrow">➡️</div>
+      <div class="node"><b>🗣️ Deliberate</b>Houses debate under rules</div><div class="arrow">➡️</div>
+      <div class="node"><b>📜 Legislate</b>Bills → Governor's assent</div><div class="arrow">➡️</div>
+      <div class="node"><b>💰 Control money</b>No spending without law</div><div class="arrow">➡️</div>
+      <div class="node"><b>⚖️ Stay accountable</b>Constitution &amp; courts</div>
+    </div>
+    <div class="callout">💡 <b>Core insight:</b> The State Legislature is more than a law-factory. It is a representative body, a <b>financial watchdog</b> (Assembly alone votes grants), a forum for <b>responsible government</b> (Council of Ministers answers to the Assembly — Art. 164(2)) and an institution whose autonomy lives <i>inside</i> constitutional supremacy.</div>
+  </div>
+</section>
+
+<!-- ================= ATLAS + TOOLS ================= -->
+<section id="atlas" style="--accent:var(--cyan)">
+  <div class="reveal">
+    <span class="kicker">🧭 Complete Codification</span>
+    <h2 class="title">📋 The 45-Article <span>Atlas &amp; Study Tools</span></h2>
+    <p class="lede">Every chip is a doorway to its article note. Colour = exam priority. Search by keyword or number (try <b>quorum</b>, <b>169</b>, <b>14 days</b>, <b>Money Bill</b>), filter by tier, then fold or expand everything.</p>
+    <div class="legend"><span>🔴 Core exam article (31)</span><span>🟠 Supporting / connected (10)</span><span>🟢 Factual / institutional detail (4)</span></div>
+    <div class="atlas" id="atlasGrid" aria-label="Article atlas"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="🔎 Search all 45 article notes…" autocomplete="off" aria-label="Search article notes">
+      <button class="btn on" data-f="all" type="button">✨ All</button>
+      <button class="btn" data-f="1" type="button">🔴 Core</button>
+      <button class="btn" data-f="2" type="button">🟠 Supporting</button>
+      <button class="btn" data-f="3" type="button">🟢 Factual</button>
+      <button class="btn" id="exp" type="button">＋ Expand all</button>
+      <button class="btn" id="col" type="button">− Fold all</button>
+      <p class="qstat" id="qstat" aria-live="polite"></p>
+    </div>
+    <p class="nores" id="noRes">🔎 No matching article. Try a broader keyword.</p>
+  </div>
+</section>
+
+<!-- ================= ACT I ================= -->
+<section id="act1" style="--accent:var(--saffron)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act I · Building the Chambers</span>
+    <h2 class="title">🏛️ Composition — <span>Articles 168–171</span></h2>
+    <p class="lede">Who and what is the "State Legislature"? Articles 168–171 answer: the Governor plus one or two Houses; the Council's existence is optional; the Assembly is directly elected; the Council is indirectly elected and partly nominated.</p>
+    <div class="flow">
+      <div class="node"><b>👑 GOVERNOR</b>Constitutional component — <i>not</i> a member of any House</div><div class="arrow">➕</div>
+      <div class="node"><b>🗳️ ASSEMBLY (Vidhan Sabha)</b>Always present · directly elected · temporary</div><div class="arrow">➕</div>
+      <div class="node"><b>🏛️ COUNCIL (Vidhan Parishad)</b>Only in bicameral States · permanent · indirect</div>
+    </div>
+    <h3 class="sub">🗺️ The Six Bicameral States (verify the current list for current-affairs questions)</h3>
+    <div class="flow">
+      <div class="node"><b>Andhra Pradesh</b>Council: 58</div><div class="node"><b>Bihar</b>Council: 75</div>
+      <div class="node"><b>Karnataka</b>Council: 75</div><div class="node"><b>Maharashtra</b>Council: 78</div>
+      <div class="node"><b>Telangana</b>Council: 40</div><div class="node"><b>Uttar Pradesh</b>Council: 100</div>
+    </div>
+    <div class="mnemonic"><span class="lab">🧠 Mnemonic · Six Councils</span><b>"KUMBAT"</b> → <b>K</b>arnataka · <b>U</b>ttar Pradesh · <b>M</b>aharashtra · <b>B</b>ihar · <b>A</b>ndhra Pradesh · <b>T</b>elangana.<br>🎯 MP hook: <b>Madhya Pradesh is unicameral</b> — 230-member Assembly. (J&amp;K's Council ended with the 2019 Reorganisation.)</div>
+  </div>
+
+  <details class="art reveal" id="a168" data-p="1" open>
+    <summary><span class="no">168</span><span class="at"><b>🏛️ Constitution of Legislatures in States</b><small>🔴 Core · Governor + House(s)</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">168(1)</span> Every State has a Legislature consisting of the <b>Governor</b> and — in the States named in the clause (AP, Bihar, Karnataka, Maharashtra, Telangana, UP) — <b>two Houses</b>; in every other State, <b>one House</b>.</p>
+      <p><span class="cl">168(2)</span> Where there are two Houses: <b>Legislative Council</b> and <b>Legislative Assembly</b>. Where there is one: the Legislative Assembly.</p>
+      <div class="callout">💡 <b>Why the Governor counts:</b> no Bill becomes law without the Governor's assent (or the President's under Art. 201), so the Governor is a <i>constitutional part</i> of the Legislature even though he neither sits nor votes in any House.</div>
+      <div class="callout warn">⚠️ Because the Constitution <b>names</b> the bicameral States in Art. 168(1), creating or abolishing a Council needs that list changed — which Art. 169(2) lets Parliament do by ordinary law.</div>
+      <div class="xl"><span>↔ Art. 79 (Parliament)</span><span>↔ Art. 169</span><span>↔ Art. 153 (Governor)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a169" data-p="1" open>
+    <summary><span class="no">169</span><span class="at"><b>➕➖ Abolition or Creation of Legislative Councils</b><small>🔴 Core · Assembly initiates · Parliament legislates</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">169(1)</span> Parliament may by law <b>abolish</b> an existing Council or <b>create</b> one — but only if the State Assembly has first passed a resolution by <b>both</b> of these majorities:</p>
+      <ul>
+        <li>🅰️ a majority of the <b>total membership</b> of the Assembly; <b>and</b></li>
+        <li>🅱️ not less than <b>two-thirds</b> of the members <b>present and voting</b>.</li>
+      </ul>
+      <p><span class="cl">169(2)</span> The law may contain the consequential amendments to the Constitution (e.g., Art. 168(1) list) and supplemental, incidental provisions.</p>
+      <p><span class="cl">169(3)</span> Such a law is <b>not</b> an amendment under Art. 368 — ordinary Parliamentary majority, no State ratification.</p>
+      <div class="flow">
+        <div class="node"><b>1️⃣ Assembly resolution</b>Double majority</div><div class="arrow">➡️</div>
+        <div class="node"><b>2️⃣ Parliament's law</b>Simple majority</div><div class="arrow">➡️</div>
+        <div class="node"><b>3️⃣ Council created / abolished</b>Art. 168(1) list updated</div>
+      </div>
+      <div class="callout tip">🧮 <b>Worked example (230-member Assembly, 180 present and voting):</b> limb A needs <b>116</b> votes (majority of 230 = ⌊230/2⌋+1); limb B needs <b>120</b> votes (⅔ of 180). Both must hold, so the resolution needs at least <b>120</b> affirmative votes.</div>
+      <div class="trap">🚨 <b>Three traps:</b> (1) the Assembly's resolution does <b>not</b> itself abolish the Council; (2) Parliament is not compelled to act (e.g., pending proposals); (3) the Council's own consent is not required. History: Punjab (1970), West Bengal (1969), Tamil Nadu (1986) abolished; Andhra abolished (1985) and revived (2007).</div>
+      <div class="mnemonic"><span class="lab">🧠 A-S-P-N</span><b>A</b>ssembly proposes → <b>S</b>pecial double majority → <b>P</b>arliament legislates → <b>N</b>ot Article 368.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a170" data-p="1" open>
+    <summary><span class="no">170</span><span class="at"><b>🗳️ Composition of Legislative Assemblies</b><small>🔴 Core · Direct election · Constituencies · Delimitation</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">170(1)</span> Not more than <b>500</b> and not fewer than <b>60</b> members, <b>directly elected</b> from territorial constituencies (subject to Art. 333 history and special provisions).</p>
+      <p>⭐ <b>Exceptions by special constitutional provisions:</b> Sikkim <b>32</b> (Art. 371F), Goa <b>40</b> (Art. 371-I), Mizoram <b>40</b> (Art. 371G). Delhi/Puducherry have Assemblies as <b>Union Territories</b> (Arts. 239A/239AA) — not under this Chapter.</p>
+      <p><span class="cl">170(2)</span> As far as practicable, the ratio of population to seats is the <b>same throughout the State</b>.</p>
+      <p><span class="cl">170(3)</span> After each census, seats and territorial divisions are <b>readjusted</b> by the authority and manner Parliament prescribes.</p>
+      <div class="callout"><b>🧊 Freeze, stated precisely:</b> Total seats stay tied to the <b>1971</b> census; constituency boundaries were readjusted on the <b>2001</b> census (84th/87th Amendments, Delimitation Act 2002). The freeze lifts on publication of the figures of the <b>first census taken after 2026</b> — not merely when the calendar reaches 2026.</div>
+      <p><b>Reservation links:</b> Art. 332 — SC/ST seats (extended to <b>2030</b> by the 104th Amendment; Anglo-Indian nomination under Art. 333 ended). <b>Art. 332A</b> (106th Amendment, 2023) — one-third women's reservation, operational only after the next delimitation (Art. 334A).</p>
+      <div class="xl"><span>↔ Arts. 81–82</span><span>↔ Arts. 327–329</span><span>↔ Arts. 332, 332A, 334</span><span>MP Assembly = 230</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a171" data-p="1" open>
+    <summary><span class="no">171</span><span class="at"><b>🧩 Composition of Legislative Councils</b><small>🔴 Core · Indirect election + nomination · Min 40 · Max ⅓ Assembly</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">171(1)</span> Council strength cannot exceed <b>one-third</b> of the Assembly's strength, and cannot be fewer than <b>40</b>.</p>
+      <p><span class="cl">171(2)–(3)</span> Until Parliament provides otherwise, the composition is as below:</p>
+      <div class="stackbar" aria-label="Council composition bar">
+        <div style="--w:33.33;--c:var(--sky)"><b>⅓</b>Local bodies</div>
+        <div style="--w:8.33;--c:var(--mint)" title="Graduates"><b>1/12</b>Grad</div>
+        <div style="--w:8.33;--c:var(--violet)" title="Teachers"><b>1/12</b>Teach</div>
+        <div style="--w:33.33;--c:var(--saffron)"><b>⅓</b>Elected by MLAs</div>
+        <div style="--w:16.67;--c:var(--gold)"><b>⅙</b>Governor</div>
+      </div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Share</th><th>Chosen by</th><th>Key condition</th></tr></thead>
+        <tbody>
+          <tr><td>⅓ (4/12)</td><td>Local-authority electorate</td><td>Municipalities, district boards and other local authorities specified by Parliament</td></tr>
+          <tr><td>1/12</td><td>Graduates</td><td>Resident in the State; graduate (or equivalent) for at least <b>3 years</b></td></tr>
+          <tr><td>1/12</td><td>Teachers</td><td><b>3 years'</b> teaching in the State in institutions not lower than secondary school</td></tr>
+          <tr><td>⅓ (4/12)</td><td>Members of the Assembly</td><td>Elected <b>from persons who are not</b> Assembly members</td></tr>
+          <tr><td>Remainder ≈ ⅙ (2/12)</td><td>Nominated by the Governor</td><td>Special knowledge/practical experience in <b>literature, science, art, co-operative movement, social service</b> (171(5))</td></tr>
+        </tbody>
+      </table></div>
+      <p><span class="cl">171(4)</span> Members under (a), (b), (c) are chosen in territorial constituencies set by Parliament; elections under (a)–(d) use <b>proportional representation by single transferable vote</b>.</p>
+      <div class="mnemonic"><span class="lab">🧠 Fractions 4·1·1·4·2</span>Local–Graduate–Teacher–MLA–Nominee = <b>4 + 1 + 1 + 4 + 2 = 12 twelfths</b>.<br>Nominated fields: <b>"CLASS"</b> → <b>C</b>o-operative · <b>L</b>iterature · <b>A</b>rt · <b>S</b>cience · <b>S</b>ocial service.</div>
+      <div class="callout warn">⚠️ <b>Do not copy the Rajya Sabha formula:</b> Art. 80(3) has <i>no</i> co-operative movement. 🗳️ MLCs do <b>not</b> vote in the Presidential or Rajya Sabha elections (only <i>elected MLAs</i> do). A Minister or even the Chief Minister can be an MLC. Example: UP — Assembly 403 → ceiling 134, actual Council 100.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT II ================= -->
+<section id="act2" style="--accent:var(--sky)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act II · Time, Eligibility &amp; Ceremony</span>
+    <h2 class="title">⏳ Duration, Qualification &amp; the Governor — <span>Articles 172–177</span></h2>
+    <p class="lede">A Legislature must be properly constituted, regularly summoned and answerable to the electorate. These six articles set its lifespan, its entry ticket, its meeting rhythm and the Governor's links with the Houses.</p>
+    <div class="flow">
+      <div class="node"><b>📅 Summon</b>Governor calls the House</div><div class="arrow">➡️</div>
+      <div class="node"><b>🗣️ Sit &amp; transact</b>Adjournments by the presiding officer</div><div class="arrow">➡️</div>
+      <div class="node"><b>⏹️ Prorogue</b>Session ends · House survives</div><div class="arrow">➡️</div>
+      <div class="node"><b>🧾 Dissolve</b>Assembly's life ends · Council never dissolves</div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a172" data-p="1" open>
+    <summary><span class="no">172</span><span class="at"><b>⌛ Duration of State Legislatures</b><small>🔴 Core · Assembly temporary · Council continuing</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">172(1)</span> Unless sooner dissolved, the Assembly continues for <b>5 years from the date appointed for its first meeting</b> — expiry operates as dissolution. (Not from the date of results.)</p>
+      <p>During a <b>Proclamation of National Emergency</b>, Parliament may extend the term by law for <b>one year at a time</b>; the extension cannot go beyond <b>six months after the Emergency ceases</b>.</p>
+      <p><span class="cl">172(2)</span> The Council is <b>not subject to dissolution</b>; as nearly as possible <b>one-third</b> retire every <b>second year</b>.</p>
+      <div class="callout">📌 <b>Constitution vs statute:</b> the Constitution fixes biennial retirement; the normal <b>6-year MLC term</b> comes from the Representation of the People Act, 1951. A casual-vacancy member serves the unexpired term.</div>
+      <div class="callout warn">⚠️ <b>President's Rule (Art. 356)</b> does not extend the Assembly's term under Art. 172 — only a National Emergency does.</div>
+      <div class="mnemonic"><span class="lab">🧠 5 · 6 · 1 · 6</span>Assembly <b>5</b> years · max session gap <b>6</b> months (Art. 174) · Emergency extension <b>1</b> year at a time · outer limit <b>6</b> months after Emergency ends. Council: ⅓ retire every <b>2</b> years.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a173" data-p="1" open>
+    <summary><span class="no">173</span><span class="at"><b>🪪 Qualification for Membership</b><small>🔴 Core · Citizen · Oath · Age 25/30 · Parliament's law</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">173(a)</span> Citizen of India, who makes and subscribes — <b>before a person authorised by the Election Commission</b> — the Third Schedule oath or affirmation.</li>
+        <li><span class="cl">173(b)</span> At least <b>25 years</b> (Assembly) / <b>30 years</b> (Council).</li>
+        <li><span class="cl">173(c)</span> Any other qualification prescribed by or under a <b>law of Parliament</b> (RPA 1951 — e.g., being an elector).</li>
+      </ul>
+      <div class="callout warn">⚠️ <b>Two different oaths:</b> Art. 173 = <i>candidate's</i> qualifying oath before an ECI-authorised person; Art. 188 = <i>member's</i> seat-taking oath before the Governor or his appointee.</div>
+      <div class="xl"><span>↔ Art. 84</span><span>↔ Art. 188</span><span>Third Schedule</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a174" data-p="1" open>
+    <summary><span class="no">174</span><span class="at"><b>🔔 Sessions, Prorogation &amp; Dissolution</b><small>🔴 Core · Six-month rule</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">174(1)</span> The Governor summons the House(s) at such time and place as he thinks fit; <b>six months must not intervene</b> between the last sitting of one session and the first sitting of the next → at least <b>two sessions a year</b>.</p>
+      <p><span class="cl">174(2)</span> The Governor may <b>prorogue</b> either House and <b>dissolve</b> the Legislative Assembly.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>What it ends</th><th>By whom</th></tr></thead>
+        <tbody>
+          <tr><td>Adjournment</td><td>A sitting for hours/days</td><td>Presiding officer</td></tr>
+          <tr><td>Adjournment sine die</td><td>A sitting, with no date fixed</td><td>Presiding officer</td></tr>
+          <tr><td>Prorogation</td><td>The <b>session</b> (House survives; pending Bills survive)</td><td>Governor</td></tr>
+          <tr><td>Dissolution</td><td>The <b>life of the Assembly</b> (some Bills lapse — Art. 196)</td><td>Governor / expiry of term</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout">⚖️ <b>On whose advice?</b> Ordinarily the Governor acts on the aid and advice of the Council of Ministers (Art. 163; <i>Shamsher Singh</i>, 1974); his discretion is judicially limited (<i>Nabam Rebia</i>, 2016 — advancing a session without ministerial advice was held invalid).</div>
+      <div class="callout warn">🎯 <b>Text vs convention:</b> Budget / Monsoon / Winter sessions are convention. The Constitution says only "six months" — not three sessions or a fixed number of sitting days.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a175" data-p="2" open>
+    <summary><span class="no">175</span><span class="at"><b>🎙️ Governor's Right to Address &amp; Send Messages</b><small>🟠 Supporting · General power</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">175(1)</span> The Governor may address the Assembly, or either House or <b>both Houses assembled together</b>, and may require members' attendance for that purpose.</p>
+      <p><span class="cl">175(2)</span> He may send <b>messages</b> on a pending Bill or any other matter; the House must consider the matter with <b>all convenient despatch</b>.</p>
+      <div class="callout">🔎 <b>175 vs 176:</b> Art. 175 is an <i>optional general</i> power; Art. 176 is a <i>mandatory special</i> address on fixed occasions.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a176" data-p="1" open>
+    <summary><span class="no">176</span><span class="at"><b>📣 Special Address by the Governor</b><small>🔴 Core · First session after election + first session of each year</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">176(1)</span> The Governor addresses the Assembly (or both Houses together) at the commencement of <b>(i) the first session after each general election</b> to the Assembly and <b>(ii) the first session of each year</b>, informing the Legislature of the causes of its summons.</p>
+      <p><span class="cl">176(2)</span> Rules must allot time for discussing the matters in the address — the <b>Motion of Thanks</b>. (Defeat of the Motion is conventionally treated as loss of confidence.)</p>
+      <div class="callout warn">⚠️ <b>Not every session</b> — and if both triggers coincide, one address suffices. The address is drafted by the Council of Ministers; it is the <i>government's</i> policy statement.</div>
+      <div class="xl"><span>↔ Art. 87 (President's address)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a177" data-p="2" open>
+    <summary><span class="no">177</span><span class="at"><b>🗣️ Rights of Ministers &amp; the Advocate-General</b><small>🟠 Supporting · Speak, don't automatically vote</small></span></summary>
+    <div class="art-body">
+      <p>Every Minister and the <b>Advocate-General</b> may speak in, and otherwise take part in the proceedings of, either House, a joint sitting, and any committee of which he is named a member — but <b>no right to vote by virtue of this Article</b>.</p>
+      <p>A Minister who is a member votes only in the House of which he is a member. The Advocate-General has no vote anywhere.</p>
+      <div class="callout tip">🔗 <b>Responsible government:</b> Art. 164(2) — Council of Ministers collectively responsible to the <b>Assembly</b> (never the Council). Art. 164(4) — a Minister who is not a legislator for <b>six consecutive months</b> ceases to be Minister.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT III ================= -->
+<section id="act3" style="--accent:var(--violet)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act III · Guardians of the Chamber</span>
+    <h2 class="title">🪑 Presiding Officers &amp; Secretariat — <span>Articles 178–187</span></h2>
+    <p class="lede">The Assembly and the Council have <b>mirror-image</b> presiding structures — learn one set, and the other follows. A key difference from Parliament: the Council elects its own Chairman; the Governor is <i>not</i> ex officio Chairman (compare the Vice-President in the Rajya Sabha, Art. 89).</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Theme</th><th>🏛️ Assembly</th><th>🏛️ Council</th><th>Shared rule</th></tr></thead>
+      <tbody>
+        <tr><td>Election 🗳️</td><td>178 Speaker / Deputy</td><td>182 Chairman / Deputy</td><td>Each House elects from its own members "as soon as may be"</td></tr>
+        <tr><td>Exit 🚪</td><td>179</td><td>183</td><td>Vacate on ceasing membership · resign to each other · removal by majority of <b>all then members</b> + <b>14 days' notice</b></td></tr>
+        <tr><td>Stand-in 🔄</td><td>180</td><td>184</td><td>Vacancy vs absence handled differently</td></tr>
+        <tr><td>Own removal ⛔</td><td>181</td><td>185</td><td>Cannot preside; may speak and vote in the first instance — <b>no casting vote</b></td></tr>
+        <tr><td>Pay &amp; staff 💼</td><td colspan="2">186 salaries · 187 secretariat</td><td>State law; Second Schedule until law is made</td></tr>
+      </tbody>
+    </table></div>
+    <div class="mnemonic"><span class="lab">🧠 The Mirror-Pair Ladder</span><b>178↔182 Elect · 179↔183 Exit · 180↔184 Stand-in · 181↔185 Self-removal</b> — then <b>186 = Salary</b>, <b>187 = Staff</b>.</div>
+  </div>
+
+  <details class="art reveal" id="a178" data-p="1" open>
+    <summary><span class="no">178</span><span class="at"><b>🪑 Speaker &amp; Deputy Speaker of the Assembly</b><small>🔴 Core · Elected from Assembly members</small></span></summary>
+    <div class="art-body">
+      <p>The Assembly shall, <b>as soon as may be</b>, choose two of its members as Speaker and Deputy Speaker, and fill either office when vacant. ("As soon as may be" is not a fixed number of days.)</p>
+      <div class="callout">🎯 <b>Why the Speaker matters:</b> maintains order, interprets rules, <b>certifies Money Bills</b> (Art. 199(3)), decides <b>Tenth Schedule</b> disqualifications (as a tribunal — <i>Kihoto Hollohan</i>), and has the <b>casting vote</b>.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a179" data-p="1" open>
+    <summary><span class="no">179</span><span class="at"><b>🚪 Vacation, Resignation &amp; Removal — Assembly</b><small>🔴 Core · Effective majority · 14 days' notice</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">(a)</span> Vacates office on ceasing to be an Assembly member.</li>
+        <li><span class="cl">(b)</span> <b>Speaker resigns to the Deputy Speaker; Deputy Speaker resigns to the Speaker</b> — in writing.</li>
+        <li><span class="cl">(c)</span> Removed by a resolution passed by a <b>majority of all the then members</b> of the Assembly; at least <b>14 days' notice</b> of the intention to move it.</li>
+      </ul>
+      <p><b>Continuity proviso:</b> on dissolution the <b>Speaker</b> does not vacate office until <b>immediately before the first meeting of the new Assembly</b> (the proviso protects the Speaker, not the Deputy Speaker).</p>
+      <div class="callout warn">⚠️ <b>"All the then members"</b> = effective majority (vacant seats excluded) — <b>not</b> "present and voting", and <b>not</b> two-thirds.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a180" data-p="2" open>
+    <summary><span class="no">180</span><span class="at"><b>🔄 Performing the Speaker's Duties</b><small>🟠 Supporting · Vacancy vs absence</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">180(1)</span> If the Speaker's office is vacant, the <b>Deputy Speaker</b> performs the duties; if <b>both</b> are vacant, the <b>Governor appoints</b> an Assembly member to perform them (the basis of the <b>pro-tem Speaker</b> arrangement).</p>
+      <p><span class="cl">180(2)</span> During the Speaker's <b>absence from a sitting</b>, the Deputy Speaker presides; if both are absent, a person fixed by the rules — failing which, by the Assembly — acts.</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a181" data-p="2" open>
+    <summary><span class="no">181</span><span class="at"><b>⛔ No Presiding During One's Own Removal</b><small>🟠 Supporting · Special voting rule</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">181(1)</span> The Speaker or Deputy Speaker shall not preside while a resolution for his own removal is under consideration, even if present.</p>
+      <p><span class="cl">181(2)</span> The <b>Speaker</b> may speak and take part, and may vote <b>in the first instance</b> (as a member) — but <b>not</b> in the case of an equality of votes (no casting vote).</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a182" data-p="1" open>
+    <summary><span class="no">182</span><span class="at"><b>🏛️ Chairman &amp; Deputy Chairman of the Council</b><small>🔴 Core · Elected by the Council</small></span></summary>
+    <div class="art-body">
+      <p>The Council chooses <b>two of its members</b> as Chairman and Deputy Chairman as soon as may be, and fills vacancies.</p>
+      <div class="callout warn">⚠️ <b>Rajya Sabha contrast:</b> the Vice-President is ex officio RS Chairman. A State's Governor is <b>not</b> ex officio Chairman of the Council.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a183" data-p="2" open>
+    <summary><span class="no">183</span><span class="at"><b>🚪 Vacation, Resignation &amp; Removal — Council</b><small>🟠 Supporting · Parallel to Art. 179</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">(a)</span> Vacate on ceasing to be a Council member.</li>
+        <li><span class="cl">(b)</span> Chairman resigns to the Deputy Chairman and vice versa.</li>
+        <li><span class="cl">(c)</span> Removal by a majority of <b>all the then members</b> of the Council, with <b>14 days' notice</b>.</li>
+      </ul>
+      <p>There is no "dissolution continuity" proviso — the Council never dissolves.</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a184" data-p="2" open>
+    <summary><span class="no">184</span><span class="at"><b>🔄 Performing the Chairman's Duties</b><small>🟠 Supporting · Council stand-ins</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">184(1)</span> Chairman's office vacant → Deputy Chairman acts; both vacant → the <b>Governor appoints</b> a Council member.</p>
+      <p><span class="cl">184(2)</span> Absence from a sitting → Deputy Chairman presides; both absent → person fixed by rules, failing which by the Council.</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a185" data-p="2" open>
+    <summary><span class="no">185</span><span class="at"><b>⛔ Council Officers &amp; Their Own Removal</b><small>🟠 Supporting · Parallel to Art. 181</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">185(1)</span> Neither officer may preside while a resolution for his own removal is considered.</p>
+      <p><span class="cl">185(2)</span> The <b>Chairman</b> may speak and vote <b>in the first instance</b> but has <b>no casting vote</b>.</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a186" data-p="3" open>
+    <summary><span class="no">186</span><span class="at"><b>💼 Salaries &amp; Allowances of Presiding Officers</b><small>🟢 Factual · State law + Second Schedule</small></span></summary>
+    <div class="art-body">
+      <p>Fixed by <b>State legislative law</b>; until then, per the <b>Second Schedule</b>. Under Art. <b>202(3)(b)</b> they are <b>charged</b> on the State Consolidated Fund — discussed but <b>not voted</b>.</p>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a187" data-p="3" open>
+    <summary><span class="no">187</span><span class="at"><b>🏢 Secretariat of the State Legislature</b><small>🟢 Factual · Administrative autonomy</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">187(1)</span> Each House has a <b>separate secretarial staff</b> (posts common to both Houses are allowed).</p>
+      <p><span class="cl">187(2)</span> The State Legislature may regulate recruitment and service conditions by law.</p>
+      <p><span class="cl">187(3)</span> Until such law, the <b>Governor</b> may make rules after consulting the Speaker / Chairman.</p>
+      <div class="callout tip">💡 A separate secretariat keeps the Legislature administratively independent of executive departments.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT IV ================= -->
+<section id="act4" style="--accent:var(--mint)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act IV · The Member &amp; the Mandate</span>
+    <h2 class="title">👤 Oath, Seats, Disqualification &amp; Privileges — <span>Articles 188–195</span></h2>
+    <p class="lede">Taking a seat, voting in it, losing it, being disqualified from it, and being protected while speaking from it — Articles 188–195 keep these questions constitutionally ordered.</p>
+    <div class="flow">
+      <div class="node"><b>188 🤚 Oath</b>Before the seat</div><div class="arrow">➡️</div>
+      <div class="node"><b>189 🗳️ Vote &amp; Quorum</b>Present and voting</div><div class="arrow">➡️</div>
+      <div class="node"><b>190 🚪 Vacate</b>Dual seats · resign · absence</div><div class="arrow">➡️</div>
+      <div class="node"><b>191 🚫 Disqualify</b>Five grounds + Tenth Schedule</div><div class="arrow">➡️</div>
+      <div class="node"><b>192 ⚖️ Decide</b>Governor on ECI opinion</div><div class="arrow">➡️</div>
+      <div class="node"><b>193 💸 Penalise</b>₹500 per day</div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a188" data-p="1" open>
+    <summary><span class="no">188</span><span class="at"><b>🤚 Oath or Affirmation by Members</b><small>🔴 Core · Before taking the seat</small></span></summary>
+    <div class="art-body">
+      <p>Every Assembly/Council member must make and subscribe the Third Schedule oath or affirmation <b>before taking his seat</b>, before the <b>Governor or a person appointed by him</b>. The oath includes allegiance to the Constitution and upholding India's sovereignty and integrity.</p>
+      <div class="callout">🧠 <b>Pair:</b> 173 = candidate's qualifying oath (ECI-authorised person) · 188 = member's seat-taking oath (Governor or appointee) · 193 = penalty for sitting/voting without it.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a189" data-p="1" open>
+    <summary><span class="no">189</span><span class="at"><b>🗳️ Voting, Vacancies &amp; Quorum</b><small>🔴 Core · Majority present and voting · Casting vote · Quorum</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">189(1)</span> Questions are decided by a <b>majority of members present and voting</b>, excluding the presiding officer, who votes <b>only on a tie</b> (casting vote).</p>
+      <p><span class="cl">189(2)</span> A House may act <b>despite vacancies</b>; proceedings stay valid even if it is later discovered that a non-entitled person sat or voted.</p>
+      <p><span class="cl">189(3)</span> Quorum: <b>ten members or one-tenth of the total membership, whichever is greater</b> (unless the Legislature provides otherwise by law).</p>
+      <p><span class="cl">189(4)</span> If quorum is lacking, the presiding officer must <b>adjourn or suspend</b> the meeting until it is met.</p>
+      <div class="callout tip">🧮 <b>Quorum maths:</b> default quorum = max(10, N/10). 230-member Assembly → max(10, 23) = <b>23</b>. 60-member Assembly → max(10, 6) = <b>10</b>. 40-member Council → <b>10</b>.</div>
+      <div class="trap">🚨 <b>Clause trap:</b> quorum is <b>189(3)</b> — clause (2) is about vacancies and validity of proceedings.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a190" data-p="1" open>
+    <summary><span class="no">190</span><span class="at"><b>🚪 Vacation of Seats</b><small>🔴 Core · Dual membership · Resignation · 60 days' absence</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">190(1)</span> No person may be a member of <b>both Houses</b> of the same State Legislature; State law decides which seat is vacated.</li>
+        <li><span class="cl">190(2)</span> No person may be a member of the Legislatures of <b>two or more States</b>; unless all but one seat are resigned within the period set by rules made by the <b>President</b>, all become vacant.</li>
+        <li><span class="cl">190(3)</span> Seat falls vacant on disqualification under Art. 191(1)/(2), or on <b>resignation in writing</b> to the Speaker/Chairman that is <b>accepted</b> — which they must refuse if satisfied it is <b>not voluntary or genuine</b>.</li>
+        <li><span class="cl">190(4)</span> Absent from all meetings for <b>60 days without permission</b> → the House <b>may declare</b> the seat vacant (days of prorogation or adjournment over four consecutive days are excluded).</li>
+      </ul>
+      <div class="callout warn">⚠️ <b>Not automatic:</b> sixty days' absence <i>empowers</i> the House to declare vacancy; it does not vacate the seat by itself.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a191" data-p="1" open>
+    <summary><span class="no">191</span><span class="at"><b>🚫 Disqualifications for Membership</b><small>🔴 Core · Five general grounds + Tenth Schedule</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">191(1)</span> A person is disqualified for being chosen as, and for being, a member if he:</p>
+      <ol>
+        <li>holds an <b>office of profit</b> under the Union or any State Government (other than an office the State Legislature has by law exempted);</li>
+        <li>is of <b>unsound mind</b>, declared so by a competent court;</li>
+        <li>is an <b>undischarged insolvent</b>;</li>
+        <li>is <b>not a citizen</b>, has voluntarily acquired foreign citizenship, or owes allegiance to a foreign State;</li>
+        <li>is disqualified by or under a <b>law made by Parliament</b>.</li>
+      </ol>
+      <p><b>Explanation:</b> a Union or State <b>Minister</b> does not hold an office of profit by reason of being a Minister.</p>
+      <p><span class="cl">191(2)</span> Also disqualified if disqualified under the <b>Tenth Schedule</b> (anti-defection).</p>
+      <div class="grid two">
+        <div class="card" style="--accent:var(--sky)"><h3>⚖️ Statutory route</h3><p>RPA 1951 — e.g., conviction with imprisonment of <b>two years or more</b> disqualifies (immediately after <i>Lily Thomas</i>, 2013), corrupt practices, certain government contracts.</p></div>
+        <div class="card" style="--accent:var(--rose)"><h3>🔀 Anti-defection route</h3><p>Voluntarily giving up party membership; defying a party direction on a vote without permission/condonation; special rules for independents and nominated members.</p></div>
+      </div>
+      <div class="mnemonic"><span class="lab">🧠 O-U-I-C-L</span>"<b>O</b>ur <b>U</b>nique <b>I</b>nsolvent <b>C</b>itizens <b>L</b>ose" → <b>O</b>ffice of profit · <b>U</b>nsound mind · <b>I</b>nsolvent · <b>C</b>itizenship · <b>L</b>aw of Parliament.</div>
+      <div class="callout">🔍 <b>Office-of-profit insight:</b> the label doesn't decide — appointment, removal, remuneration, control and functions do. The question is whether the office <i>can</i> yield profit, not whether it actually did.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a192" data-p="1" open>
+    <summary><span class="no">192</span><span class="at"><b>⚖️ Decision on Questions of Disqualification</b><small>🔴 Core · Governor acts on ECI opinion</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">192(1)</span> A question whether a member has become subject to a disqualification under <b>Art. 191(1)</b> goes to the <b>Governor</b>, whose decision is "final".</p>
+      <p><span class="cl">192(2)</span> Before deciding, he must <b>obtain the opinion of the Election Commission</b> and <b>act according to that opinion</b>.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Question</th><th>Who decides</th></tr></thead>
+        <tbody>
+          <tr><td>Art. 191(1) grounds (office of profit), , insolvency, citizenship, etc.)</td><td><b>Governor</b>, acting according to the Election Commission's binding opinion (Art. 192(2))</td></tr>
+          <tr><td>Art. 191(2) — defection under the Tenth Schedule</td><td><b>Speaker</b> (Assembly) / <b>Chairman</b> (Council) acting as a tribunal (<i>Kihoto Hollohan</i>, 1992), subject to judicial review</td></tr>
+          <tr><td>Challenge to an election on grounds existing at the time of election</td><td><b>High Court</b>, through an election petition under election law (Art. 329(b))</td></tr>
+        </tbody>
+      </table></div>
+      <div class="trap">🚨 <b>Do not merge the two routes:</b> Article 192 concerns <b>191(1)</b> disqualifications, not anti-defection under <b>191(2)</b>. The Governor acts on the ECI's opinion, <i>not</i> on the advice of the Council of Ministers. "Final" does not oust limited judicial review under Arts. 32/226.</div>
+      <div class="xl"><span>↔ Art. 103 (President + ECI)</span><span>↔ Tenth Schedule</span><span>↔ Art. 329(b)</span><span>Jaya Bachchan, 2006 (office of profit)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a193" data-p="1" open>
+    <summary><span class="no">193</span><span class="at"><b>💸 Penalty for Sitting or Voting When Not Entitled</b><small>🔴 Core · ₹500 per day · Debt due to the State</small></span></summary>
+    <div class="art-body">
+      <p>A person who sits or votes as a member <b>before complying with Article 188</b>, or when he knows that he is <b>not qualified</b>, is <b>disqualified</b>, or is <b>prohibited</b> from doing so by a law made by Parliament or the State Legislature, is liable to a penalty of <b>₹500 for each day</b> on which he so sits or votes.</p>
+      <p>The amount is recoverable as a <b>debt due to the State</b>.</p>
+      <div class="callout warn">⚠️ <b>Personal liability vs valid proceedings:</b> Art. 189(2) keeps the House's proceedings valid even if a non-entitled person sat or voted, but the member remains personally liable under Art. 193.</div>
+      <div class="mnemonic"><span class="lab">🧠 The Seat-Taking Chain</span><b>173 qualifying oath → 188 seat-taking oath → 189 vote &amp; quorum → 193 penalty for wrongful participation.</b></div>
+      <div class="xl"><span>↔ Art. 104 (Parliament)</span><span>↔ Art. 188</span><span>↔ Art. 189(2)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a194" data-p="1" open>
+    <summary><span class="no">194</span><span class="at"><b>🛡️ Powers, Privileges &amp; Immunities</b><small>🔴 Core · Speech protected · Not a blanket immunity</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">194(1)</span> Subject to the Constitution and the rules and standing orders regulating procedure, there is <b>freedom of speech</b> in the Legislature of every State.</p>
+      <p><span class="cl">194(2)</span> No member is liable to any court proceedings for anything said or any vote given in the Legislature or any committee. No person is liable for the publication, <b>by or under the authority of a House</b>, of any report, paper, votes or proceedings.</p>
+      <p><span class="cl">194(3)</span> In other respects, the powers, privileges and immunities are those <b>defined by the State Legislature by law</b>. Until so defined, they are those of that House and its members and committees immediately before <b>section 26 of the Constitution (Forty-fourth Amendment) Act, 1978</b> came into force (which removed the older reference to the House of Commons).</p>
+      <p><span class="cl">194(4)</span> These provisions also apply to persons entitled to speak and take part in proceedings under the Constitution, such as <b>Ministers and the Advocate-General</b> (Art. 177), even if they are not members.</p>
+      <div class="callout warn">⚠️ <b>Privilege is not a licence.</b> In <i>Sita Soren v. Union of India</i> (2024), a seven-judge Bench unanimously held that <b>bribery</b> connected with a legislative speech or vote is <b>not protected</b> by Art. 105(2) or 194(2), overruling <i>P. V. Narasimha Rao</i> (1998). In <i>Raja Ram Pal</i> (2007), the Court held that privilege claims are open to judicial review for constitutional violations.</div>
+      <div class="callout">📰 <b>Reporting link:</b> Art. 361A separately protects substantially true reports of legislative proceedings, subject to its conditions. It does not cover a <b>secret sitting</b>.</div>
+      <div class="xl"><span>↔ Art. 105</span><span>↔ Art. 19(1)(a)</span><span>↔ Art. 212</span><span>↔ Art. 361A</span><span>Keshav Singh (Spl. Ref. 1/1964)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a195" data-p="3" open>
+    <summary><span class="no">195</span><span class="at"><b>💵 Salaries &amp; Allowances of Members</b><small>🟢 Factual · Determined by State law</small></span></summary>
+    <div class="art-body">
+      <p>Members of the Assembly and the Council receive such salaries and allowances as the <b>State Legislature determines by law</b>. Until it does so, the rates and conditions that applied immediately before the commencement of the Constitution to members of the corresponding Province's Assembly continue.</p>
+      <div class="callout warn">⚠️ <b>Keep the articles apart:</b> Art. <b>186</b> covers the presiding officers, which are charged expenditure under Art. 202(3). Art. <b>195</b> covers ordinary members, whose pay is not charged by Art. 202(3).</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT V ================= -->
+<section id="act5" style="--accent:var(--rose)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act V · From Proposal to Law</span>
+    <h2 class="title">📜 Bills, Money Bills &amp; Assent — <span>Articles 196–201</span></h2>
+    <p class="lede">The Assembly is the decisive elected chamber. The Council can revise and delay ordinary legislation, but it cannot permanently block an Assembly Bill. Money Bills follow an even shorter route. At State level there is <b>no joint sitting</b> to resolve a deadlock.</p>
+    <div class="grid two">
+      <div class="card"><h3>📜 Ordinary Bill</h3><p>May originate in either House. An Assembly-origin Bill can ultimately pass over Council opposition through Art. 197's repeat-passage mechanism.</p></div>
+      <div class="card"><h3>💰 Money Bill</h3><p>May originate <b>only in the Assembly</b>. The Council has <b>14 days</b> to recommend changes, and the Assembly may accept or reject any of them.</p></div>
+    </div>
+    <div class="mnemonic"><span class="lab">🧠 Two Clocks</span><b>Ordinary Assembly Bill: 3 months + 1 month (Art. 197).</b><br><b>Money Bill: 14 days (Art. 198).</b><br>These are Council-stage limits. They are not deadlines for the Governor's assent.</div>
+  </div>
+
+  <details class="art reveal" id="a196" data-p="1" open>
+    <summary><span class="no">196</span><span class="at"><b>📜 Introduction, Passage &amp; Lapse of Bills</b><small>🔴 Core · Origin · Prorogation · Dissolution</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">196(1)</span> Subject to Arts. 198 and 207, a Bill may originate in either House of a bicameral Legislature.</p>
+      <p><span class="cl">196(2)</span> Subject to Arts. 197 and 198, a Bill is deemed passed only if both Houses agree to it, either without amendment or with amendments agreed by both.</p>
+      <p><span class="cl">196(3)</span> A pending Bill does <b>not lapse on prorogation</b>.</p>
+      <p><span class="cl">196(4)</span> A Bill pending in the Council that has <b>not been passed by the Assembly</b> does not lapse when the Assembly is dissolved.</p>
+      <p><span class="cl">196(5)</span> A Bill pending in the Assembly, or passed by it and pending in the Council, <b>lapses on dissolution</b>.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Position when the Assembly is dissolved</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Pending in the Assembly</td><td>❌ Lapses</td></tr>
+          <tr><td>Passed by the Assembly; pending in the Council</td><td>❌ Lapses</td></tr>
+          <tr><td>Pending in the Council; not passed by the Assembly</td><td>✅ Does not lapse</td></tr>
+          <tr><td>Passed by the Legislature; awaiting the Governor's assent</td><td>✅ Not covered by Art. 196's lapse rules (textbooks cite <i>Purushothaman Nambudiri</i>, 1962, for Bills outside the House)</td></tr>
+          <tr><td>Reserved for the President</td><td>✅ Does not lapse merely because of dissolution</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout warn">⚠️ <b>Prorogation is not dissolution.</b> The first ends a session, while the second ends the Assembly's life. Their effects on Bills differ.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a197" data-p="1" open>
+    <summary><span class="no">197</span><span class="at"><b>⏳ Council's Limited Power over Ordinary Bills</b><small>🔴 Core · 3 months, then 1 month · No joint sitting</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">197(1)</span> A Bill passed by the Assembly goes to the Council. The Assembly may pass it again, in the same or a later session, with or without amendments, if the Council <b>rejects</b> it, lets <b>more than three months</b> pass without passing it, or passes it with amendments the Assembly does not accept.</p>
+      <p><span class="cl">197(2)</span> If, after the second transmission, the Council rejects it, lets <b>more than one month</b> pass, or proposes unacceptable amendments, the Bill is <b>deemed passed by both Houses</b> in the form passed by the Assembly the second time, with any Council amendments the Assembly has accepted.</p>
+      <p><span class="cl">197(3)</span> This Article does <b>not apply to Money Bills</b>.</p>
+      <div class="flow v">
+        <div class="node"><b>Assembly passes</b>First transmission to the Council</div><div class="arrow">⬇</div>
+        <div class="node"><b>Council rejects / delays / amends</b>More than 3 months, or rejection, or unacceptable amendments</div><div class="arrow">⬇</div>
+        <div class="node"><b>Assembly passes again</b>Second transmission</div><div class="arrow">⬇</div>
+        <div class="node"><b>Council rejects / delays again</b>More than 1 month, or rejection</div><div class="arrow">⬇</div>
+        <div class="node"><b>Deemed passed</b>The Assembly's version prevails</div>
+      </div>
+      <div class="trap">🚨 <b>Precision matters:</b> "four months" is shorthand for the two Council delay periods (3 + 1). It is not a guaranteed enactment time. Rejection can trigger the next stage earlier, and the Assembly's own scheduling adds time. A <b>Council-origin Bill rejected by the Assembly</b> has no override route at all.</div>
+      <div class="xl"><span>↔ Art. 108 (contrast: joint sitting)</span><span>↔ Art. 198</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a198" data-p="1" open>
+    <summary><span class="no">198</span><span class="at"><b>💵 Special Procedure for Money Bills</b><small>🔴 Core · Assembly only · Recommendations · 14 days</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">198(1)</span> A Money Bill <b>cannot be introduced in the Council</b>.</p>
+      <p><span class="cl">198(2)</span> After the Assembly passes it, it goes to the Council for <b>recommendations</b>, which must be returned within <b>14 days of receipt</b>.</p>
+      <p><span class="cl">198(3)–(4)</span> The Assembly may accept or reject any or all recommendations. If it accepts, the Bill is deemed passed with those amendments. If it rejects, the Bill is deemed passed without them.</p>
+      <p><span class="cl">198(5)</span> If the Council does not return the Bill within 14 days, it is deemed passed by both Houses in the form the Assembly passed it.</p>
+      <div class="callout">💡 <b>The Council recommends. It cannot amend with binding effect, and it cannot reject.</b> Its agreement is not a condition for passage.</div>
+      <div class="xl"><span>↔ Art. 109</span><span>↔ Art. 199</span><span>↔ Art. 207(1)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a199" data-p="1" open>
+    <summary><span class="no">199</span><span class="at"><b>🏷️ Definition of a Money Bill</b><small>🔴 Core · "Only" listed matters · Speaker's certificate</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">199(1)</span> A Bill is a Money Bill if it contains <b>only</b> provisions dealing with all or any of these matters:</p>
+      <ol type="a">
+        <li>Imposition, abolition, remission, alteration or regulation of any <b>tax</b>;</li>
+        <li>Regulation of <b>borrowing</b> or guarantees by the State, or amendment of law on its financial obligations;</li>
+        <li><b>Custody</b> of the Consolidated Fund or Contingency Fund, and payments into or withdrawals from them;</li>
+        <li><b>Appropriation</b> of money out of the Consolidated Fund;</li>
+        <li>Declaring expenditure to be <b>charged</b> on the Consolidated Fund, or increasing it;</li>
+        <li>Receipt, custody or issue of money of the Consolidated Fund or Public Account, or <b>audit</b> of State accounts;</li>
+        <li>Any matter <b>incidental</b> to (a)–(f).</li>
+      </ol>
+      <p><span class="cl">199(2)</span> A Bill is <b>not</b> a Money Bill merely because it provides for fines or other pecuniary penalties, licence fees or fees for services, or taxes imposed by a local authority for local purposes.</p>
+      <p><span class="cl">199(3)</span> If a question arises whether a Bill is a Money Bill, the <b>decision of the Assembly Speaker is final</b>.</p>
+      <p><span class="cl">199(4)</span> The Speaker's certificate must be endorsed on the Bill when it is sent to the Council and when it is presented to the Governor.</p>
+      <div class="callout warn">⚠️ <b>"Final" in the text vs judicial review:</b> The certification of Money Bills has been litigated (the Aadhaar judgment of 2018 and the <i>Roger Mathew</i> reference of 2019 are the usual pointers). For exams, state the express wording first, then note that review is contested.</div>
+      <div class="mnemonic"><span class="lab">🧠 Recognition Test</span><b>Only listed financial matters + incidental provisions = Money Bill.</b><br>Listed matters mixed with other substantive provisions give a <b>Financial Bill</b> under Art. 207 instead.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a200" data-p="1" open>
+    <summary><span class="no">200</span><span class="at"><b>👑 Governor's Assent to Bills</b><small>🔴 Core · Assent · Withhold · Reserve · Return (non-Money)</small></span></summary>
+    <div class="art-body">
+      <p>When a Bill passed by the House or Houses is presented to him, the Governor declares that he <b>assents</b>, <b>withholds assent</b>, or <b>reserves the Bill for the President</b>.</p>
+      <p><b>First proviso:</b> as soon as possible after presentation, the Governor may return a Bill <b>other than a Money Bill</b> with a message asking the House(s) to reconsider it. If the Bill is passed again, with or without amendment, and presented again, the Governor <b>shall not withhold assent</b>.</p>
+      <p><b>Second proviso:</b> the Governor <b>must reserve</b> (and not assent to) a Bill that, in his opinion, would so derogate from the powers of the High Court as to endanger the position it is designed to fill.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Governor's course</th><th>Key point</th></tr></thead>
+        <tbody>
+          <tr><td>Assent</td><td>The Bill becomes law (subject to its commencement clause)</td></tr>
+          <tr><td>Withhold assent</td><td>The Bill fails unless dealt with otherwise. The scope of this course is a live judicial question.</td></tr>
+          <tr><td>Return for reconsideration</td><td>Only for a non-Money Bill. After repassage, assent cannot be withheld.</td></tr>
+          <tr><td>Reserve for the President</td><td>Art. 201 then governs. Reservation is compulsory under the High Court proviso.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="trap">🚨 <b>Three different clocks:</b> Council delay (Art. 197), Council recommendations (Art. 198) and assent (Art. 200) are separate stages. Art. 200 itself fixes no number of days, only "as soon as possible" in the first proviso.</div>
+      <div class="callout warn">⚖️ <b>Current-law caution:</b> The Governor's discretion, the effect of withholding assent, and any judicially prescribed timelines (see <i>State of Punjab v. Principal Secretary to the Governor</i>, 2023, and later proceedings) have been actively litigated. This note summarises the <b>constitutional text</b>. Check the latest Supreme Court position before relying on a categorical statement.</div>
+      <div class="xl"><span>↔ Art. 111</span><span>↔ Art. 163</span><span>↔ Art. 201</span><span>↔ Art. 254(2)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a201" data-p="1" open>
+    <summary><span class="no">201</span><span class="at"><b>🇮🇳 Bills Reserved for the President</b><small>🔴 Core · Presidential choice · Six-month reconsideration</small></span></summary>
+    <div class="art-body">
+      <p>The President declares either <b>assent</b> or <b>withholding of assent</b> to a reserved Bill.</p>
+      <p>For a <b>non-Money Bill</b>, the President may direct the Governor to return it with a message. The House(s) must reconsider it within <b>six months from receiving the message</b>. If it is passed again, it is presented again to the President.</p>
+      <div class="trap">🚨 <b>Whose six months?</b> This is the <b>Legislature's reconsideration period</b>. It is not a deadline for the President to decide. Unlike Art. 200's first proviso, Art. 201 does <b>not expressly oblige assent after repassage</b>.</div>
+      <div class="callout tip">🔗 <b>Federal link:</b> Under Art. 254(2), a State law on a Concurrent List matter that is repugnant to an earlier Union law can prevail in that State if reserved and assented to by the President. Parliament may still override it later.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT VI ================= -->
+<section id="act6" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act VI · Follow the Public Money</span>
+    <h2 class="title">💰 Budget &amp; Financial Procedure — <span>Articles 202–207</span></h2>
+    <p class="lede">The executive proposes financial policy, the Assembly authorises grants, and the Legislature supplies the legal authority to withdraw money. Discussion, voting and appropriation are separate constitutional steps.</p>
+    <div class="flow">
+      <div class="node"><b>202 📊 Budget</b>Annual Financial Statement</div><div class="arrow">➡️</div>
+      <div class="node"><b>203 🗳️ Grants</b>Assembly votes the demands</div><div class="arrow">➡️</div>
+      <div class="node"><b>204 📜 Appropriation</b>Withdrawal authorised by law</div><div class="arrow">➡️</div>
+      <div class="node"><b>205–206 🔄 Adjust / bridge</b>Extra needs and interim authority</div>
+    </div>
+    <div class="callout">💡 <b>Two approvals, two jobs:</b> Voting a demand approves a grant. An Appropriation Act authorises the withdrawal from the Consolidated Fund. A voted demand alone is not a withdrawal warrant.</div>
+  </div>
+
+  <details class="art reveal" id="a202" data-p="1" open>
+    <summary><span class="no">202</span><span class="at"><b>📊 Annual Financial Statement</b><small>🔴 Core · Estimated receipts &amp; expenditure · Charged vs voted</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">202(1)</span> The Governor causes a statement of the State's estimated <b>receipts and expenditure</b> for each financial year to be laid before the House or Houses. This is the <b>Annual Financial Statement</b>, commonly called the State Budget.</p>
+      <p><span class="cl">202(2)</span> The estimates must distinguish expenditure <b>charged</b> on the Consolidated Fund from other expenditure, and must show expenditure on <b>revenue account</b> separately from other expenditure.</p>
+      <p><span class="cl">202(3)</span> Expenditure <b>charged</b> on the State Consolidated Fund includes:</p>
+      <ul>
+        <li>(a) the emoluments and allowances of the <b>Governor</b> and other expenditure relating to his office;</li>
+        <li>(b) the salaries and allowances of the <b>Speaker, Deputy Speaker, Chairman and Deputy Chairman</b>;</li>
+        <li>(c) <b>debt charges</b> for which the State is liable (interest, sinking-fund and redemption charges);</li>
+        <li>(d) expenditure on the <b>salaries and allowances of High Court Judges</b>;</li>
+        <li>(e) sums required to satisfy any <b>judgment, decree or award</b> of a court or arbitral tribunal;</li>
+        <li>(f) any other expenditure declared charged by the Constitution or by State law.</li>
+      </ul>
+      <div class="trap">🚨 <b>High Court pensions:</b> Clause (d) covers <b>salaries and allowances</b> only. Pensions of High Court Judges are charged on the <b>Consolidated Fund of India</b> (Art. 112(3)(d)(iii)).</div>
+      <div class="callout">🗣️ <b>Charged does not mean hidden:</b> Charged expenditure can be discussed but is <b>not submitted to the Assembly's vote</b>. It is still included in the Appropriation Bill.</div>
+      <div class="xl"><span>↔ Art. 112 (Union Budget)</span><span>↔ Art. 203</span><span>↔ Art. 266</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a203" data-p="1" open>
+    <summary><span class="no">203</span><span class="at"><b>🗳️ Procedure for Estimates &amp; Demands for Grants</b><small>🔴 Core · Assembly alone votes · Governor's recommendation</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">203(1)</span> Charged expenditure is <b>not submitted to vote</b>, though it may be <b>discussed</b>.</p>
+      <p><span class="cl">203(2)</span> Other expenditure is submitted as <b>demands for grants to the Assembly</b>, which may assent, refuse assent, or assent subject to a <b>reduction</b>.</p>
+      <p><span class="cl">203(3)</span> No demand for a grant may be made except on the <b>Governor's recommendation</b>.</p>
+      <div class="grid">
+        <div class="card"><h3>✂️ Policy Cut</h3><p>By practice, a motion to reduce the demand to <b>₹1</b> expresses disapproval of the underlying policy.</p></div>
+        <div class="card"><h3>💸 Economy Cut</h3><p>A motion to reduce the demand by a <b>specified amount</b> points to a suggested saving.</p></div>
+        <div class="card"><h3>🪙 Token Cut</h3><p>A motion to reduce the demand by <b>₹100</b> ventilates a specific grievance.</p></div>
+      </div>
+      <div class="callout warn">⚠️ <b>Text vs practice:</b> Art. 203 creates the power to assent, refuse or reduce. The three cut-motion categories come from legislative rules and practice, not from the Article's wording.</div>
+      <div class="callout"><b>Assembly's monopoly:</b> the Council has <b>no power to vote</b> on demands for grants, even in a bicameral State.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a204" data-p="1" open>
+    <summary><span class="no">204</span><span class="at"><b>📜 Appropriation Bills</b><small>🔴 Core · No withdrawal without appropriation by law</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">204(1)</span> As soon as grants have been made, an Appropriation Bill provides for withdrawal from the Consolidated Fund to meet the <b>voted grants</b> and the <b>charged expenditure</b>.</p>
+      <p><span class="cl">204(2)</span> No amendment may be proposed in either House that would vary the amount or alter the destination of a grant, or vary charged expenditure. The presiding person's decision that an amendment is inadmissible is final.</p>
+      <p><span class="cl">204(3)</span> Subject to Arts. 205 and 206, no money may be withdrawn from the Fund except under an <b>appropriation made by law</b>.</p>
+      <div class="mnemonic"><span class="lab">🧠 Grant ≠ Withdrawal</span><b>203 approves the demand. 204 authorises the draw.</b></div>
+      <div class="xl"><span>↔ Art. 114</span><span>↔ Art. 199(1)(d)</span><span>↔ Art. 266(3)</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a205" data-p="2" open>
+    <summary><span class="no">205</span><span class="at"><b>🔄 Supplementary, Additional &amp; Excess Grants</b><small>🟠 Supporting · Shortfall · New service · Overspending</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">205(1)(a)</span> If the amount authorised proves <b>insufficient</b>, or a need arises for <b>additional</b> expenditure on a <b>new service</b> not contemplated in the Budget, the Governor causes a further statement to be laid before the Legislature.</p>
+      <p><span class="cl">205(1)(b)</span> If money has been spent on a service in a year in <b>excess</b> of the amount granted, a demand for the excess is presented to the Assembly.</p>
+      <p><span class="cl">205(2)</span> The provisions of Arts. 202, 203 and 204 apply to these further statements and demands.</p>
+      <div class="mnemonic"><span class="lab">🧠 S-A-E</span><b>Supplementary</b> = existing provision falls short.<br><b>Additional</b> = a new service needs provision.<br><b>Excess</b> = spending has already exceeded the grant.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a206" data-p="1" open>
+    <summary><span class="no">206</span><span class="at"><b>🌉 Vote on Account, Vote of Credit &amp; Exceptional Grant</b><small>🔴 Core · Temporary bridge · Uncertain demand · Special grant</small></span></summary>
+    <div class="art-body">
+      <ul>
+        <li><span class="cl">206(1)(a)</span> <b>Vote on account:</b> an advance grant for part of a financial year, pending completion of the voting and appropriation procedure.</li>
+        <li><span class="cl">206(1)(b)</span> <b>Vote of credit:</b> a grant for an unexpected demand whose magnitude or indefinite character prevents ordinary detailed estimates.</li>
+        <li><span class="cl">206(1)(c)</span> <b>Exceptional grant:</b> a grant for a purpose that forms no part of the current service of any financial year.</li>
+      </ul>
+      <p><span class="cl">206(2)</span> Arts. 203 and 204 apply to these grants and the related appropriation.</p>
+      <div class="callout warn">⚠️ <b>No constitutional "two-month rule":</b> Two months is a common vote-on-account practice, not a period fixed by Art. 206. An <b>interim budget</b> is not the same legal concept as a vote on account.</div>
+      <div class="mnemonic"><span class="lab">🧠 A-C-E</span><b>A</b>ccount = Advance · <b>C</b>redit = Cannot estimate normally · <b>E</b>xceptional = Extra to current service.</div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a207" data-p="1" open>
+    <summary><span class="no">207</span><span class="at"><b>🧾 Special Provisions for Financial Bills</b><small>🔴 Core · Governor's recommendation · Origin</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">207(1)</span> A Bill or amendment making provision for any matter in Art. <b>199(1)(a)–(f)</b> may be introduced or moved only on the <b>Governor's recommendation</b>, and such a <b>Bill cannot be introduced in the Council</b>. <i>Proviso:</i> no recommendation is needed for an amendment that <b>reduces or abolishes a tax</b>.</p>
+      <p><span class="cl">207(2)</span> A Bill does not fall under clause (1) merely because it deals with fines or penalties, licence or service fees, or local-authority taxes for local purposes.</p>
+      <p><span class="cl">207(3)</span> A Bill that would involve expenditure from the State Consolidated Fund cannot be <b>passed by either House</b> unless the Governor has recommended its <b>consideration</b> to that House.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Type</th><th>Origin</th><th>Council's role</th><th>Governor's recommendation</th></tr></thead>
+        <tbody>
+          <tr><td>Money Bill (only Art. 199 matters)</td><td>Assembly only</td><td>Recommendations within 14 days</td><td>For introduction (207(1))</td></tr>
+          <tr><td>Financial Bill under 207(1) (listed matters plus other provisions)</td><td>Assembly only</td><td>Ordinary procedure, including Art. 197</td><td>For introduction</td></tr>
+          <tr><td>Expenditure Bill under 207(3) only</td><td>Either House</td><td>Ordinary procedure</td><td>For consideration before passage in each House</td></tr>
+        </tbody>
+      </table></div>
+      <div class="trap">🚨 <b>Every Money Bill is financial in character, but not every Financial Bill is a Money Bill.</b> Do not apply the 14-day route to a mixed-subject Financial Bill.</div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= ACT VII ================= -->
+<section id="act7" style="--accent:var(--cyan)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act VII · Autonomy within the Constitution</span>
+    <h2 class="title">⚖️ Rules, Language &amp; Constitutional Limits — <span>Articles 208–212</span></h2>
+    <p class="lede">A House governs its own proceedings, but its rules remain subject to the Constitution. Procedural autonomy protects deliberation. It does not place a Legislature beyond constitutional scrutiny.</p>
+    <div class="flow">
+      <div class="node"><b>208 📘 House rules</b>Internal procedure</div><div class="arrow">➡️</div>
+      <div class="node"><b>209 💰 Financial procedure law</b>Timely completion</div><div class="arrow">➡️</div>
+      <div class="node"><b>210 🗣️ Language</b>Accessible participation</div><div class="arrow">➡️</div>
+      <div class="node"><b>211–212 ⚖️ Boundaries</b>Judicial independence and legislative autonomy</div>
+    </div>
+  </div>
+
+  <details class="art reveal" id="a208" data-p="2" open>
+    <summary><span class="no">208</span><span class="at"><b>📘 Rules of Procedure</b><small>🟠 Supporting · House-made rules · Subject to the Constitution</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">208(1)</span> Each House may make rules to regulate its procedure and conduct of business, <b>subject to the Constitution</b>.</p>
+      <p><span class="cl">208(2)</span> Until it does so, the rules and standing orders in force before the Constitution continue, with adaptations by the Speaker or Chairman.</p>
+      <p><span class="cl">208(3)</span> In a bicameral State, the Governor, after consulting the Speaker and the Chairman, may make rules on <b>communication between the Houses</b>.</p>
+      <div class="callout warn">⚠️ <b>No joint-sitting loophole:</b> Rules on inter-House communication cannot create an Art. 108-style deadlock mechanism at State level.</div>
+      <div class="xl"><span>↔ Art. 118</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a209" data-p="3" open>
+    <summary><span class="no">209</span><span class="at"><b>⏱️ Regulation of Financial Procedure by Law</b><small>🟢 Factual · Timely completion · Law prevails over rules</small></span></summary>
+    <div class="art-body">
+      <p>The <b>State Legislature</b> may, to ensure timely completion of financial business, regulate by <b>law</b> the procedure and conduct of business in the House(s) for any financial matter or Appropriation Bill.</p>
+      <p>If such a law conflicts with a rule made or continued under Art. 208, the <b>law prevails</b> to the extent of the inconsistency.</p>
+      <div class="mnemonic"><span class="lab">🧠 208 vs 209</span><b>208 = House rules.</b><br><b>209 = financial-procedure law that overrides inconsistent House rules.</b></div>
+      <div class="xl"><span>↔ Art. 119</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a210" data-p="2" open>
+    <summary><span class="no">210</span><span class="at"><b>🗣️ Language Used in the Legislature</b><small>🟠 Supporting · State language · Hindi · English · Mother tongue</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">210(1)</span> Subject to Art. 348, business is transacted in the State's <b>official language(s)</b>, in <b>Hindi</b>, or in <b>English</b>. The Speaker or Chairman may allow a member who cannot adequately express himself in these languages to speak in his <b>mother tongue</b>.</p>
+      <p><span class="cl">210(2)</span> Unless the State Legislature provides otherwise by law, the words "or in English" cease to have effect after <b>15 years</b> from the commencement of the Constitution. The period is <b>25 years</b> for Himachal Pradesh, Manipur, Meghalaya and Tripura, and <b>40 years</b> for Arunachal Pradesh, Goa and Mizoram.</p>
+      <div class="callout">📜 <b>Speech vs legal text:</b> Art. 210 governs legislative business. Art. <b>348</b> separately governs the authoritative texts of Bills, Acts and other instruments.</div>
+      <div class="xl"><span>↔ Art. 120</span><span>↔ Arts. 343–348</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a211" data-p="1" open>
+    <summary><span class="no">211</span><span class="at"><b>⚖️ Restriction on Discussion of Judges' Conduct</b><small>🔴 Core · Supreme Court &amp; High Court judges</small></span></summary>
+    <div class="art-body">
+      <p>No discussion may take place in a State Legislature concerning the <b>conduct of any Supreme Court or High Court Judge in the discharge of his duties</b>.</p>
+      <div class="trap">🚨 <b>Union–State difference:</b> Art. <b>121</b> allows Parliament to discuss judicial conduct on a motion for presenting an address for a Judge's removal. Art. <b>211</b> has <b>no such exception</b>, because State Legislatures have no role in removing Judges.</div>
+      <div class="callout tip">💡 The bar protects judicial independence. It is not a ban on debating legislation or public policy merely because courts have considered related questions.</div>
+      <div class="xl"><span>↔ Art. 121</span><span>↔ Art. 124(4)</span><span>↔ Art. 217</span></div>
+    </div>
+  </details>
+
+  <details class="art reveal" id="a212" data-p="1" open>
+    <summary><span class="no">212</span><span class="at"><b>🏛️ Courts Not to Inquire into Legislative Proceedings</b><small>🔴 Core · Procedural irregularity ≠ substantive unconstitutionality</small></span></summary>
+    <div class="art-body">
+      <p><span class="cl">212(1)</span> The validity of any proceedings in a State Legislature <b>cannot be called in question</b> on the ground of an alleged <b>irregularity of procedure</b>.</p>
+      <p><span class="cl">212(2)</span> No officer or member in whom powers are vested for regulating procedure, conducting business or maintaining order is subject to the jurisdiction of any court for exercising those powers.</p>
+      <div class="callout warn">⚖️ <b>Not an absolute shield:</b> Courts distinguish protected procedural irregularity from substantive illegality or unconstitutionality (see <i>Raja Ram Pal</i>, 2007). Internal procedure does not remove judicial review of constitutional limits.</div>
+      <div class="mnemonic"><span class="lab">🧠 The Boundary</span><b>Procedural irregularity: protected.</b><br><b>Substantive constitutional violation: review may remain available.</b></div>
+      <div class="xl"><span>↔ Art. 122</span><span>↔ Art. 194</span><span>↔ Arts. 32 &amp; 226</span></div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= CONNECTIONS ================= -->
+<section id="links" style="--accent:var(--sky)">
+  <div class="reveal">
+    <span class="kicker">🔗 Beyond the Chapter</span>
+    <h2 class="title">🧩 Constitutional <span>Connections</span></h2>
+    <p class="lede">Articles 168–212 work together with provisions on the executive, elections, public funds and legislative competence. The strongest answers explain these links instead of reciting isolated article numbers.</p>
+    <div class="grid two">
+      <div class="card" style="--accent:var(--gold)"><h3>👑 Governor &amp; Responsible Government</h3><p>Arts. <b>153–163</b> establish the Governor and the aid-and-advice principle. Art. <b>164(2)</b> makes the Council of Ministers collectively responsible to the <b>Assembly</b>, so the Council cannot topple the government.</p></div>
+      <div class="card" style="--accent:var(--mint)"><h3>🗳️ Elections &amp; Representation</h3><p>Art. <b>324</b> vests superintendence of elections in the Election Commission. Arts. <b>325–329</b> cover rolls, adult suffrage, election law and election disputes. Arts. <b>330–334A</b> contain reservation provisions.</p></div>
+      <div class="card" style="--accent:var(--saffron)"><h3>💰 The Public Funds</h3><p>Art. <b>266</b> distinguishes the Consolidated Fund from the Public Account. Art. <b>267</b> allows a Contingency Fund. An advance from it bridges an urgent need but does not remove the need for later legislative authorisation.</p></div>
+      <div class="card" style="--accent:var(--violet)"><h3>📚 Competence &amp; Repugnancy</h3><p>Arts. <b>245–246</b> and the Seventh Schedule allocate legislative fields. Art. <b>254</b> addresses inconsistency in Concurrent List matters. Assent does not cure lack of competence or a breach of fundamental rights.</p></div>
+      <div class="card" style="--accent:var(--rose)"><h3>🔀 Anti-Defection</h3><p>Art. <b>191(2)</b> links membership to the <b>Tenth Schedule</b>. The Speaker or Chairman decides as a tribunal, subject to judicial review. This is separate from the Governor–ECI route under Art. 192.</p></div>
+      <div class="card" style="--accent:var(--cyan)"><h3>🧾 Audit &amp; Accountability</h3><p>Under Art. <b>151(2)</b>, the CAG's State reports go to the Governor, who lays them before the Legislature. Committees such as the Public Accounts Committee examine spending after the money has been spent.</p></div>
+    </div>
+
+    <h3 class="sub">🪞 Union–State Comparison: Similar Architecture, Unequal Second Chambers</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Theme</th><th>Parliament (Part V)</th><th>State Legislature (Part VI)</th></tr></thead>
+      <tbody>
+        <tr><td>Composition</td><td>President + two Houses (Art. 79)</td><td>Governor + one or two Houses (Art. 168)</td></tr>
+        <tr><td>Upper House</td><td>Rajya Sabha: constitutionally established</td><td>Council: optional, created or abolished under Art. 169</td></tr>
+        <tr><td>Upper House presiding officer</td><td>Vice-President, ex officio Chairman (Art. 89)</td><td>Chairman elected by the Council (Art. 182)</td></tr>
+        <tr><td>Deadlock on an ordinary Bill</td><td>Joint sitting possible (Art. 108)</td><td>No joint sitting; Assembly override under Art. 197</td></tr>
+        <tr><td>Money Bill</td><td>Rajya Sabha recommendations within 14 days (Art. 109)</td><td>Council recommendations within 14 days (Art. 198)</td></tr>
+        <tr><td>Executive responsibility</td><td>Lok Sabha (Art. 75(3))</td><td>Assembly (Art. 164(2))</td></tr>
+        <tr><td>Assent</td><td>President (Art. 111)</td><td>Governor, with reservation for the President (Arts. 200–201)</td></tr>
+        <tr><td>Discussion of judges' conduct</td><td>Art. 121: exception for a removal motion</td><td>Art. 211: no exception</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ================= CASES ================= -->
+<section id="cases" style="--accent:var(--violet)">
+  <div class="reveal">
+    <span class="kicker">🗂️ The Judicial Lens</span>
+    <h2 class="title">⚖️ Landmark Cases — <span>Principles, Not Just Names</span></h2>
+    <p class="lede">Use a case for the specific proposition it establishes. Some questions have developed through later judgments and references, so an older holding should not automatically be treated as the last word.</p>
+    <div class="timeline">
+      <div class="ti"><div class="d">1965 · Special Reference No. 1 of 1964 (Keshav Singh)</div><p>Reconciled legislative privilege with fundamental rights and judicial review. It is the foundational reference on <b>privilege and the courts</b>.</p></div>
+      <div class="ti"><div class="d">1974 · Shamsher Singh v. State of Punjab</div><p>The Governor ordinarily acts on <b>ministerial aid and advice</b>. Read Arts. 174 and 200 within that parliamentary framework.</p></div>
+      <div class="ti"><div class="d">1992 · Kihoto Hollohan v. Zachillhu</div><p>Upheld the Tenth Schedule's adjudication by the Speaker or Chairman, who acts as a <b>tribunal</b>. The decision is subject to judicial review.</p></div>
+      <div class="ti"><div class="d">2006 · Jaya Bachchan v. Union of India</div><p>On office of profit, the question is whether the office is <b>capable of yielding a profit</b>, not whether profit was actually received.</p></div>
+      <div class="ti"><div class="d">2007 · Raja Ram Pal v. Hon'ble Speaker, Lok Sabha</div><p>Privilege does not place every legislative act beyond review. It separates <b>procedural irregularity</b> from reviewable constitutional infirmity.</p></div>
+      <div class="ti"><div class="d">2013 · Lily Thomas v. Union of India</div><p>Struck down the provision that deferred conviction-based disqualification for sitting legislators.</p></div>
+      <div class="ti"><div class="d">2016 · Nabam Rebia v. Deputy Speaker</div><p>Held that the Governor could not advance the Assembly session contrary to ministerial advice. A related issue, on the Speaker's power while facing a removal notice, was later referred to a larger Bench, so verify subsequent developments.</p></div>
+      <div class="ti"><div class="d">2020 · Keisham Meghachandra Singh v. Hon'ble Speaker</div><p>Anti-defection petitions must be decided within a <b>reasonable period</b>, ordinarily three months. This period is not written into the Tenth Schedule.</p></div>
+      <div class="ti"><div class="d">2022 · Ashish Shelar v. Maharashtra Legislative Assembly</div><p>Set aside a one-year legislative suspension, showing that "internal legislative matter" does not by itself bar scrutiny.</p></div>
+      <div class="ti"><div class="d">2023 · State of Punjab v. Principal Secretary to the Governor of Punjab</div><p>Addressed the Governor's handling of Bills and the limits of inaction. Read it alongside later authoritative developments on Arts. 200–201.</p></div>
+      <div class="ti"><div class="d">2024 · Sita Soren v. Union of India</div><p>A seven-judge Bench held that <b>bribery is not protected</b> legislative speech or voting under Arts. 105(2) and 194(2).</p></div>
+    </div>
+    <div class="callout warn">📌 <b>Updating discipline:</b> This is a selected case map, not a full survey. Check the latest Supreme Court position, especially on <b>Arts. 200–201</b> and the <b>Nabam Rebia</b> reference.</div>
+  </div>
+</section>
+
+<!-- ================= MEMORY LAB ================= -->
+<section id="lab" style="--accent:var(--mint)">
+  <div class="reveal">
+    <span class="kicker">🧠 Retrieval over Re-reading</span>
+    <h2 class="title">🎯 Memory Lab — <span>Numbers, Traps &amp; Recall</span></h2>
+    <p class="lede">Answer from memory first, then open the explanation. Aim to remember whose power a number describes, which stage it governs and what the exceptions are.</p>
+
+    <h3 class="sub">🔢 The High-Yield Number Board</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Number</th><th>Meaning</th><th>Article</th></tr></thead>
+      <tbody>
+        <tr><td>500 / 60</td><td>Assembly maximum / minimum (special provisions excepted)</td><td>170</td></tr>
+        <tr><td>⅓ / 40</td><td>Council ceiling relative to the Assembly / minimum strength</td><td>171</td></tr>
+        <tr><td>4 : 1 : 1 : 4 : 2</td><td>Council composition in twelfths: local bodies, graduates, teachers, MLAs, nominees</td><td>171</td></tr>
+        <tr><td>5 years</td><td>Assembly duration from its first meeting</td><td>172</td></tr>
+        <tr><td>⅓ every 2 years</td><td>Council retirement cycle</td><td>172</td></tr>
+        <tr><td>25 / 30 years</td><td>Minimum age: Assembly / Council</td><td>173</td></tr>
+        <tr><td>6 months</td><td>Maximum gap between sessions</td><td>174</td></tr>
+        <tr><td>14 days</td><td>Notice of a removal resolution for a presiding officer</td><td>179 / 183</td></tr>
+        <tr><td>10 or ⅒ of total members, whichever is greater</td><td>Default quorum</td><td>189(3)</td></tr>
+        <tr><td>60 days</td><td>Unpermitted absence after which the House <i>may</i> declare the seat vacant</td><td>190(4)</td></tr>
+        <tr><td>₹500 per day</td><td>Penalty for sitting or voting when not entitled</td><td>193</td></tr>
+        <tr><td>3 months + 1 month</td><td>Council delay stages for an ordinary Assembly Bill</td><td>197</td></tr>
+        <tr><td>14 days</td><td>Council's window on a Money Bill</td><td>198</td></tr>
+        <tr><td>6 months</td><td>Legislature's reconsideration period after a Presidential return message</td><td>201</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="mnemonic"><span class="lab">🧠 Seven-Act Recall Spine</span><b>Build → Meet → Preside → Belong → Legislate → Spend → Stay within limits.</b><br><b>168–171 → 172–177 → 178–187 → 188–195 → 196–201 → 202–207 → 208–212.</b></div>
+
+    <h3 class="sub">🧪 Tap-to-Reveal Exam Checks</h3>
+    <details class="quiz"><summary>1. Can an Assembly abolish its Council by passing the Art. 169 resolution?</summary><p><b>No.</b> The resolution (a majority of total membership plus two-thirds of members present and voting) only enables Parliament to legislate. Abolition needs a Parliamentary law.</p></details>
+    <details class="quiz"><summary>2. Do Council members vote in the Presidential election?</summary><p><b>No.</b> The electoral college includes <b>elected</b> members of State Assemblies, not members of Councils or nominated members.</p></details>
+    <details class="quiz"><summary>3. Does Art. 172 fix the Council member's six-year term?</summary><p><b>No.</b> Art. 172 fixes the Council's continuing character and the retirement of one-third every second year. The normal six-year term comes from the <b>Representation of the People Act, 1951</b>.</p></details>
+    <details class="quiz"><summary>4. Must the Governor address the House at every session?</summary><p><b>No.</b> The Art. 176 address is required at the first session after a general election and at the first session of each year.</p></details>
+    <details class="quiz"><summary>5. A 40-member Council meets with eight members. Is there a quorum?</summary><p><b>No.</b> The quorum is the greater of 10 and one-tenth of 40, which is <b>10</b>. The presiding officer must adjourn or suspend the meeting under Art. 189(4).</p></details>
+    <details class="quiz"><summary>6. Does the Governor decide anti-defection cases on the ECI's opinion?</summary><p><b>No.</b> That route covers Art. 191(1) disqualifications through Art. 192. Tenth Schedule cases go to the <b>Speaker or Chairman</b>, subject to judicial review.</p></details>
+    <details class="quiz"><summary>7. Can the Council force a joint sitting after rejecting an ordinary Bill?</summary><p><b>No.</b> The State has no equivalent of Art. 108. Art. 197 gives the Assembly its repeat-passage route.</p></details>
+    <details class="quiz"><summary>8. Does a pending Bill lapse when the House is prorogued?</summary><p><b>No.</b> Art. 196(3) preserves it. Dissolution has different effects, set out in Art. 196(4)–(5).</p></details>
+    <details class="quiz"><summary>9. Can the Governor return a Money Bill for reconsideration?</summary><p><b>No.</b> The return proviso in Art. 200 excludes Money Bills.</p></details>
+    <details class="quiz"><summary>10. Does "charged expenditure" mean it cannot be discussed?</summary><p><b>No.</b> It is not <i>voted</i>, but it may be discussed, and it is still included in the Appropriation Bill.</p></details>
+    <details class="quiz"><summary>11. Can an expenditure Bill under Art. 207(3) originate in the Council?</summary><p><b>Yes, if it does not also fall within Art. 207(1).</b> The Governor's recommendation for consideration is needed before passage in each House.</p></details>
+    <details class="quiz"><summary>12. Does Art. 212 exclude every court challenge to legislative proceedings?</summary><p><b>No.</b> It bars challenges based on procedural irregularity. Substantive constitutional violations raise a different question.</p></details>
+
+    <h3 class="sub">📝 A Strong Descriptive-Answer Structure</h3>
+    <div class="callout tip"><b>For "Assess the role of Legislative Councils":</b> start with Arts. 168–171, then explain their revising and deliberative value. Contrast ordinary-Bill delay (Art. 197) with the Money Bill recommendation role (Art. 198), and note that Ministers are not responsible to the Council. Then weigh expertise and representation against cost and the risk of patronage, and end with a balanced conclusion.</div>
+  </div>
+</section>
+
+<!-- ================= FINALE ================= -->
+<section id="finale" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🏆 Final Scene · The Whole Architecture</span>
+    <h2 class="title">🏛️ The Legislature in <span>One Connected Story</span></h2>
+    <p class="lede">The people directly elect the Assembly. A Council, where it exists, adds a second deliberative layer. Presiding officers keep order, members sit under constitutional qualifications and privileges, and Bills pass through the Houses to the Governor's assent. Public money follows its own chain of estimates, grants and appropriation. Throughout, the Assembly is politically predominant, but no institution is constitutionally unlimited.</p>
+    <div class="quote">Representation gives the Legislature its democratic claim; deliberation gives its decisions depth; financial control gives accountability practical force; and the Constitution gives every power its boundary.</div>
+    <div class="flow">
+      <div class="node"><b>🗳️ People</b>Elect and hold accountable</div><div class="arrow">➡️</div>
+      <div class="node"><b>🏛️ Legislature</b>Debates, legislates, authorises</div><div class="arrow">➡️</div>
+      <div class="node"><b>⚙️ Executive</b>Governs with the Assembly's confidence</div><div class="arrow">➡️</div>
+      <div class="node"><b>⚖️ Constitution</b>Structures and limits all power</div>
+    </div>
+    <div class="callout warn">📚 <b>Source discipline:</b> Verify against the official Constitution text, election statutes, State legislative rules and authoritative judgments. Council membership figures, delimitation and census developments, and recent assent jurisprudence change over time.</div>
+    <div class="xl" style="justify-content:center">
+      <a class="chip" href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">📖 Official Constitution</a>
+      <a class="chip" href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">📚 India Code</a>
+      <a class="chip" href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">⚖️ Supreme Court</a>
+      <a class="chip" href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer">🗳️ Election Commission</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="final">"Understand the institution. Connect the articles. Recall the rule."</p>
+  <p>Part VI · Chapter III · Articles 168–212</p>
+  <div class="sig">PIYUSH PARTE</div>
+  <p>A Constitutional Study Film · Designed for connected revision.</p>
+  <div class="heart-tribute tilt">
+    <span class="heart-icon" aria-hidden="true">❤️</span>
+    <span class="tribute-en">En Nenjil Kudiyirukkum</span>
+    <span class="tribute-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+  <p style="margin-top:24px;font-size:.75rem;color:var(--dim)">Educational notes, not legal advice. Verify current law and official texts before relying on an exam-sensitive proposition.</p>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<!-- Responsive, accessibility and print refinements -->
+<style>
+  .toTop{border:0;font-family:inherit}
+  .chip{text-decoration:none}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+  .art:target{border-color:var(--accent);box-shadow:0 0 28px color-mix(in srgb,var(--accent) 22%,transparent)}
+  .atlas a[aria-current="true"]{outline:2px solid var(--gold);outline-offset:2px}
+  .split .word{display:inline-block;white-space:nowrap}
+  .nores.show{display:block}
+  @media(max-width:650px){
+    .grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+    .tools input{min-width:0;width:100%;flex-basis:100%}
+    .hero h1{letter-spacing:0}
+    .eyebrow{letter-spacing:2px}
+    .node{min-width:0;max-width:100%;overflow-wrap:anywhere}
+    .at{min-width:0}
+    .at b{font-size:.92rem}
+    .auteur-name{letter-spacing:2px}
+    .stat{min-width:115px}
+    .spotlight,.vignette{display:none}
+  }
+  @media print{
+    :root{--bg:#fff;--ink:#111;--mut:#333;--dim:#555;--bd:#ccc;--card:#fff;--gold:#765400;--saffron:#8a3c00;--sky:#145b93;--mint:#146442;--rose:#942645;--violet:#60408b;--cyan:#08636b}
+    html{scroll-behavior:auto}
+    body{background:#fff;color:#111;font-size:10pt}
+    nav,.cine-bg,.stars,#dust,.grain,.spotlight,.vignette,.curtain,.progress,.toTop,.tools,.scrolldown,.orbit,.auteur-halo,.a-star,.heart-icon,.atlas,.badges,.stats{display:none!important}
+    section{padding:20px 0}
+    .hero{min-height:0;padding:20px 0}
+    .hero h1{font-size:30pt;transform:none}
+    .js .reveal{opacity:1;transform:none}
+    .split .ch,.tribute-ta{background:none;color:#111}
+    .auteur-credit,.heart-tribute,.card,.node,details.art,.quote,.callout,.trap,.mnemonic,.table-wrap{background:#fff;color:#111;box-shadow:none;backdrop-filter:none;transform:none;border-color:#bbb}
+    b,strong,.at b,.quote,.tribute-en{color:#111}
+    .card,.quiz,details.art{break-inside:avoid}
+    table{min-width:0;font-size:9pt}
+    th,td{color:#111}
+    .table-wrap{overflow:visible}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+</style>
+
+<script>
+(() => {
+  'use strict';
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  const articles = $$('details.art');
+  const searchInput = $('#q');
+  const atlasGrid = $('#atlasGrid');
+  const resultStatus = $('#qstat');
+  const noResults = $('#noRes');
+  const filterButtons = $$('.btn[data-f]');
+  const expandButton = $('#exp');
+  const collapseButton = $('#col');
+  const progress = $('#progress');
+  const topButton = $('#toTop');
+
+  let activeFilter = 'all';
+  let searchTimer;
+
+  const normalise = value => String(value)
+    .normalize('NFKC').toLowerCase()
+    .replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
+
+  /* Snapshot searchable text before any enhancement. */
+  const articleData = articles.map(element => ({
+    element,
+    id: element.id,
+    number: element.id.replace(/^a/, ''),
+    priority: element.dataset.p,
+    text: normalise(element.textContent),
+    title: $('.at b', element)?.textContent.trim() || element.id
+  }));
+  const articleById = new Map(articleData.map(item => [item.id, item]));
+  const atlasLinks = new Map();
+
+  /* Animated lettering; words stay unbroken and the label stays accessible. */
+
+  $$('[data-split]').forEach(element => {
+    const text = element.dataset.split || element.textContent;
+    element.textContent = '';
+    element.setAttribute('aria-label', text);
+    let index = 0;
+    text.split(' ').forEach((word, wordIndex) => {
+      if (wordIndex) {
+        const space = document.createElement('span');
+        space.className = 'sp';
+        space.setAttribute('aria-hidden', 'true');
+        space.textContent = ' ';
+        element.append(space);
+      }
+      const wordElement = document.createElement('span');
+      wordElement.className = 'word';
+      wordElement.setAttribute('aria-hidden', 'true');
+      Array.from(word).forEach(character => {
+        const span = document.createElement('span');
+        span.className = 'ch';
+        span.style.setProperty('--i', index++);
+        span.textContent = character;
+        wordElement.append(span);
+      });
+      element.append(wordElement);
+    });
+  });
+
+  /* Article atlas chips. */
+  if (atlasGrid) {
+    const fragment = document.createDocumentFragment();
+    articleData.forEach(item => {
+      const link = document.createElement('a');
+      link.href = '#' + item.id;
+      link.className = 'p' + item.priority;
+      link.textContent = item.number;
+      link.title = item.title;
+      link.setAttribute('aria-label', `Article ${item.number}: ${item.title}`);
+      atlasLinks.set(item.id, link);
+      fragment.append(link);
+    });
+    atlasGrid.append(fragment);
+  }
+
+  /* Search and filter. */
+  function applyFilters() {
+    const terms = normalise(searchInput?.value || '').split(' ').filter(Boolean);
+    let visibleCount = 0;
+
+    articleData.forEach(item => {
+      const priorityMatches = activeFilter === 'all' || item.priority === activeFilter;
+      const textMatches = terms.every(term => item.text.includes(term));
+      const visible = priorityMatches && textMatches;
+      item.element.classList.toggle('hide', !visible);
+      atlasLinks.get(item.id)?.classList.toggle('dim', !visible);
+      if (visible) visibleCount++;
+    });
+
+    filterButtons.forEach(button => {
+      const selected = button.dataset.f === activeFilter;
+      button.classList.toggle('on', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+
+    if (resultStatus) {
+      resultStatus.textContent =
+        `${visibleCount} of ${articles.length} article notes shown` +
+        (terms.length ? ` · Search: “${searchInput.value.trim()}”` : '') +
+        ' · Filters affect article notes only.';
+    }
+    if (noResults) noResults.classList.toggle('show', visibleCount === 0);
+  }
+
+  searchInput?.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(applyFilters, 100);
+  });
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.f;
+      applyFilters();
+    });
+  });
+
+  expandButton?.addEventListener('click', () => {
+    articles.forEach(article => { if (!article.classList.contains('hide')) article.open = true; });
+  });
+  collapseButton?.addEventListener('click', () => {
+    articles.forEach(article => { if (!article.classList.contains('hide')) article.open = false; });
+  });
+
+  applyFilters();
+
+  /* Deep links must reveal filtered or collapsed articles. */
+  function openArticle(id, shouldScroll = true) {
+    const item = articleById.get(id);
+    if (!item) return;
+    if (item.element.classList.contains('hide')) {
+      activeFilter = 'all';
+      if (searchInput) searchInput.value = '';
+      applyFilters();
+    }
+    item.element.open = true;
+    item.element.classList.add('in');
+    atlasLinks.forEach((link, linkId) => {
+      if (linkId === id) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+    if (shouldScroll) {
+      requestAnimationFrame(() => {
+        item.element.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+      });
+    }
+  }
+
+  atlasGrid?.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#a"]');
+    if (!link) return;
+    event.preventDefault();
+    const hash = link.getAttribute('href');
+    if (location.hash !== hash) location.hash = hash;
+    else openArticle(hash.slice(1));
+  });
+
+  const handleHash = () => openArticle(location.hash.slice(1));
+  window.addEventListener('hashchange', handleHash);
+  if (location.hash) requestAnimationFrame(handleHash);
+
+  /* Reveal on scroll, with a fallback so content is always readable. */
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+    reveals.forEach(element => revealObserver.observe(element));
+  } else {
+    reveals.forEach(element => element.classList.add('in'));
+  }
+
+  /* Progress bar, back-to-top button and active navigation share one frame update. */
+  const navigationTargets = $$('nav a')
+    .map(link => ({ link, section: document.getElementById(link.getAttribute('href').slice(1)) }))
+    .filter(item => item.section);
+  let scrollQueued = false;
+
+  function updateScrollUI() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const percentage = scrollable > 0 ? Math.min(100, Math.max(0, scrollTop / scrollable * 100)) : 0;
+
+    if (progress) progress.style.width = percentage + '%';
+    if (topButton) {
+      topButton.classList.toggle('show', scrollTop > 550);
+      topButton.tabIndex = scrollTop > 550 ? 0 : -1;
+    }
+
+    let current = navigationTargets[0];
+    const offset = ($('nav')?.offsetHeight || 65) + 90;
+    navigationTargets.forEach(item => {
+      if (item.section.getBoundingClientRect().top <= offset) current = item;
+    });
+    navigationTargets.forEach(item => {
+      const selected = item === current;
+      item.link.classList.toggle('on', selected);
+      if (selected) item.link.setAttribute('aria-current', 'location');
+      else item.link.removeAttribute('aria-current');
+    });
+    scrollQueued = false;
+  }
+
+  function scheduleScrollUI() {
+    if (scrollQueued) return;
+    scrollQueued = true;
+    requestAnimationFrame(updateScrollUI);
+  }
+
+  window.addEventListener('scroll', scheduleScrollUI, { passive: true });
+  window.addEventListener('resize', scheduleScrollUI, { passive: true });
+  articles.forEach(article => article.addEventListener('toggle', scheduleScrollUI));
+  updateScrollUI();
+
+  topButton?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+  });
+
+  /* Count-up statistics. */
+  function animateCount(element) {
+    const target = Number(element.dataset.count);
+    if (!Number.isFinite(target) || reducedMotion.matches) return;
+    const start = performance.now();
+    const duration = 1200;
+    element.textContent = '0';
+    function tick(now) {
+      const elapsed = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - elapsed, 3);
+      element.textContent = String(Math.round(target * eased));
+      if (elapsed < 1) requestAnimationFrame(tick);
+      else element.textContent = String(target);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animateCount(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.5 });
+
+    $$('[data-count]').forEach(element => counterObserver.observe(element));
+  }
+
+  /* Pointer lighting and gentle perspective (fine pointers only). */
+  if (finePointer.matches) {
+    let pointerFrame = 0, pointerX = 0, pointerY = 0;
+    window.addEventListener('pointermove', event => {
+      if (reducedMotion.matches) return;
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      if (pointerFrame) return;
+      pointerFrame = requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--mx', pointerX + 'px');
+        document.documentElement.style.setProperty('--my', pointerY + 'px');
+        pointerFrame = 0;
+      });
+    }, { passive: true });
+
+    const tiltElements = $$('.tilt');
+    const heroTitle = $('#heroTitle');
+    if (heroTitle) tiltElements.push(heroTitle);
+
+    tiltElements.forEach(element => {
+      element.addEventListener('pointermove', event => {
+        if (reducedMotion.matches) return;
+        const rect = element.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        const strength = element === heroTitle ? 5 : 8;
+        element.style.setProperty('--rx', ((0.5 - y) * strength).toFixed(2) + 'deg');
+        element.style.setProperty('--ry', ((x - 0.5) * strength).toFixed(2) + 'deg');
+        element.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
+        element.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
+      }, { passive: true });
+      element.addEventListener('pointerleave', () => {
+        element.style.setProperty('--rx', '0deg');
+        element.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
+  /* Small burst on deliberate clicks of the credit and tribute cards. */
+  function createBurst(x, y) {
+    if (reducedMotion.matches) return;
+    const symbols = ['✦', '✧', '✨', '📜', '⚖️', '🏛️'];
+    for (let i = 0; i < 9; i++) {
+      const particle = document.createElement('span');
+      particle.className = 'burst';
+      particle.setAttribute('aria-hidden', 'true');
+      particle.textContent = symbols[i % symbols.length];
+      particle.style.left = x + 'px';
+      particle.style.top = y + 'px';
+      const angle = Math.PI * 2 * i / 9;
+      const distance = 70 + Math.random() * 80;
+      particle.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
+      particle.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
+      document.body.append(particle);
+      setTimeout(() => particle.remove(), 1300);
+    }
+  }
+
+  $$('.auteur-credit,.heart-tribute').forEach(element => {
+    element.addEventListener('click', event => createBurst(event.clientX, event.clientY));
+  });
+
+  /* Ambient dust: capped pixel ratio, paused when the tab is hidden. */
+  const canvas = $('#dust');
+  const context = canvas?.getContext('2d');
+  if (canvas && context) {
+    let width = 0, height = 0, particles = [], animationId = 0, previousTime = 0;
+
+    function resizeDust() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      const count = Math.min(65, Math.max(18, Math.round(width * height / 26000)));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: 0.5 + Math.random() * 1.4,
+        speed: 4 + Math.random() * 12,
+        drift: (Math.random() - 0.5) * 6,
+        phase: Math.random() * Math.PI * 2,
+        gold: Math.random() > 0.45
+      }));
+    }
+
+    function drawDust(time) {
+      if (document.hidden || reducedMotion.matches) {
+        animationId = 0;
+        previousTime = 0;
+        return;
+      }
+      const delta = previousTime ? Math.min((time - previousTime) / 1000, 0.05) : 0;
+      previousTime = time;
+      context.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.y -= p.speed * delta;
+        p.x += p.drift * delta;
+        if (p.y < -5) p.y = height + 5;
+        if (p.x < -5) p.x = width + 5;
+        if (p.x > width + 5) p.x = -5;
+        const alpha = 0.12 + (Math.sin(time / 2000 + p.phase) + 1) * 0.13;
+        context.fillStyle = p.gold ? `rgba(242,207,114,${alpha})` : `rgba(120,184,255,${alpha})`;
+        context.beginPath();
+        context.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        context.fill();
+      });
+      animationId = requestAnimationFrame(drawDust);
+    }
+
+    function syncDust() {
+      if (document.hidden || reducedMotion.matches) {
+        if (animationId) cancelAnimationFrame(animationId);
+        animationId = 0;
+        previousTime = 0;
+        context.clearRect(0, 0, width, height);
+      } else if (!animationId) {
+        animationId = requestAnimationFrame(drawDust);
+      }
+    }
+
+    resizeDust();
+    syncDust();
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resizeDust, 150);
+    }, { passive: true });
+    document.addEventListener('visibilitychange', syncDust);
+    if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', syncDust);
+    else if (reducedMotion.addListener) reducedMotion.addListener(syncDust);
+  }
+
+  /* Print every note, then restore the reader's previous state. */
+  let printState = null;
+  window.addEventListener('beforeprint', () => {
+    if (printState) return;
+    printState = articles.map(article => ({
+      article,
+      open: article.open,
+      hidden: article.classList.contains('hide')
+    }));
+    articles.forEach(article => {
+      article.open = true;
+      article.classList.remove('hide');
+    });
+  });
+  window.addEventListener('afterprint', () => {
+    if (!printState) return;
+    printState.forEach(({ article, open, hidden }) => {
+      article.open = open;
+      article.classList.toggle('hide', hidden);
+    });
+    printState = null;
+    scheduleScrollUI();
+  });
+})();
+</script>
+</body>
+</html>

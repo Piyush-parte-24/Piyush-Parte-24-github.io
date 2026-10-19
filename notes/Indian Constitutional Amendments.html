@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05070e">
+<meta name="description" content="Cinematic, five-dimension notes on Indian Constitutional Amendments: Article 368, basic structure, 42nd–44th, local government, GST, EWS, women's reservation, landmark cases, mnemonics and exam traps.">
+<title>Indian Constitutional Amendments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Cinzel+Decorative:wght@700;900&family=Fraunces:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Tamil:wght@700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#05070e;--ink:#e6e2f1;--head:#f7f2e6;--mut:#c9c5da;--dim:#938fab;
+  --card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);
+  --saf:#ff9d5c;--gold:#f2cf72;--blue:#74b4ff;--em:#62d9a8;--rose:#ff8eaa;
+  --vio:#b99cff;--cy:#6ee2e6;--pink:#f5a8d2;--accent:var(--gold);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.8;font-size:15.5px;overflow-x:hidden}
+::selection{background:var(--gold);color:#140e00}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--saf),var(--vio),var(--blue));border-radius:10px}
+a{color:var(--blue)}a:hover{color:var(--gold)}
+b,strong{color:var(--head);font-weight:700}
+i,em{color:#ddd6ee}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.hide{display:none!important}
+ul,ol{padding-left:22px}li{margin:5px 0}
+
+/* ===== CINEMATIC LAYERS ===== */
+.cine-bg{position:fixed;inset:0;z-index:-6;background:
+ radial-gradient(ellipse 70% 55% at 8% 6%,rgba(255,157,92,.17),transparent 62%),
+ radial-gradient(ellipse 65% 55% at 92% 12%,rgba(116,180,255,.15),transparent 62%),
+ radial-gradient(ellipse 70% 60% at 50% 100%,rgba(98,217,168,.12),transparent 65%),
+ radial-gradient(ellipse 45% 40% at 82% 58%,rgba(185,156,255,.10),transparent 65%),
+ linear-gradient(180deg,#04060d 0%,#090d1f 48%,#0c0a1a 100%);animation:aurora 20s ease-in-out infinite alternate}
+@keyframes aurora{to{filter:hue-rotate(14deg) brightness(1.07)}}
+.stars{position:fixed;inset:0;z-index:-5;opacity:.45;pointer-events:none;background-image:radial-gradient(1.5px 1.5px at 10% 20%,#fff,transparent),radial-gradient(1px 1px at 80% 40%,#fff,transparent),radial-gradient(2px 2px at 50% 70%,#fff,transparent),radial-gradient(1px 1px at 30% 85%,#fff,transparent),radial-gradient(1.5px 1.5px at 92% 90%,#fff,transparent),radial-gradient(1px 1px at 65% 15%,#fff,transparent);background-size:260px 260px;animation:twk 6s ease-in-out infinite alternate}
+@keyframes twk{from{opacity:.25}to{opacity:.6}}
+#dust{position:fixed;inset:0;z-index:-4;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:-3;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.spot{position:fixed;inset:0;z-index:5;pointer-events:none;background:radial-gradient(540px circle at var(--mx,50%) var(--my,40%),rgba(255,255,255,.05),transparent 46%)}
+.vig{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 190px rgba(0,0,0,.7)}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:150;background:linear-gradient(90deg,var(--saf),var(--gold),var(--em),var(--blue),var(--vio));box-shadow:0 0 14px var(--saf)}
+/* title-card intro + letterbox */
+.intro{position:fixed;inset:0;z-index:500;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 50%,#0b1024,#02030a 70%);pointer-events:none;animation:introOut 3.4s ease forwards}
+.intro .reel-no{font:500 .8rem 'JetBrains Mono',monospace;letter-spacing:8px;color:var(--gold)}
+.intro .t{font:900 clamp(1.4rem,5vw,3.2rem) 'Cinzel',serif;letter-spacing:6px;margin:14px 0;background:linear-gradient(90deg,var(--saf),var(--gold),var(--em),var(--blue),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro .bar{width:min(320px,60vw);height:2px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);animation:barIn 2s .3s ease forwards}
+@keyframes barIn{to{transform:scaleX(1)}}
+@keyframes introOut{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.bars::before,.bars::after{content:'';position:fixed;left:0;right:0;height:9vh;background:#000;z-index:490;pointer-events:none;animation:barsOut 1.2s 2.7s cubic-bezier(.7,0,.2,1) forwards}
+.bars::before{top:0}.bars::after{bottom:0}
+@keyframes barsOut{to{height:0}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:90;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:11px 16px;background:rgba(6,8,19,.8);backdrop-filter:blur(16px);border-bottom:2px dashed rgba(255,255,255,.13);scrollbar-width:thin}
+nav a{flex-shrink:0;color:var(--mut);text-decoration:none;font-size:.77rem;font-weight:600;padding:8px 14px;border-radius:22px;border:1px solid transparent;transition:all .3s}
+nav a:hover,nav a.on{color:#fff;background:rgba(242,207,114,.12);border-color:rgba(242,207,114,.32);box-shadow:0 0 16px rgba(242,207,114,.2);transform:translateY(-2px)}
+
+/* ===== LETTER MAGIC ===== */
+.split{color:var(--ink)}
+.split .word{display:inline-block;white-space:nowrap}
+.split .ch{display:inline-block;background:linear-gradient(90deg,var(--g1,#ff9d5c),var(--g2,#ffe08a),var(--g3,#62d9a8),var(--g4,#74b4ff),var(--g5,#b99cff),var(--g1,#ff9d5c));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite;animation-delay:calc(var(--i)*-.27s);cursor:default;
+ transform:translateY(calc(var(--k,0)*-24px)) scale(calc(1 + var(--k,0)*.24)) rotate(calc(var(--k,0)*-5deg));
+ filter:drop-shadow(0 0 calc(var(--k,0)*20px) rgba(255,214,120,.9));transition:transform .18s ease-out,filter .2s}
+.split .sp{display:inline-block;width:.34em}
+@keyframes gm{to{background-position:300% center}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 18px 50px;position:relative;overflow:hidden}
+.chakra{position:absolute;left:50%;top:50%;width:min(86vmin,760px);aspect-ratio:1;margin:calc(min(86vmin,760px)/-2) 0 0 calc(min(86vmin,760px)/-2);border-radius:50%;border:2px solid rgba(116,180,255,.22);background:repeating-conic-gradient(from 0deg,rgba(116,180,255,.26) 0 .5deg,transparent .5deg 15deg);-webkit-mask:radial-gradient(circle,transparent 0 22%,#000 23%,#000 100%);mask:radial-gradient(circle,transparent 0 22%,#000 23%,#000 100%);animation:turn 140s linear infinite;pointer-events:none}
+.chakra.c2{width:min(60vmin,540px);margin:calc(min(60vmin,540px)/-2) 0 0 calc(min(60vmin,540px)/-2);border-color:rgba(242,207,114,.2);background:repeating-conic-gradient(from 7deg,rgba(242,207,114,.22) 0 .5deg,transparent .5deg 15deg);animation-direction:reverse;animation-duration:90s}
+@keyframes turn{to{transform:rotate(360deg)}}
+.hero:hover .chakra{animation-duration:40s}
+.floaty{position:absolute;font-size:1.9rem;opacity:.55;filter:drop-shadow(0 0 12px rgba(255,255,255,.35));animation:fy 7s ease-in-out infinite;pointer-events:none}
+@keyframes fy{50%{transform:translateY(-16px) rotate(8deg)}}
+.hero-in{position:relative;z-index:2;max-width:1100px}
+.eyebrow{font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(1.8rem,7.2vw,6.6rem);line-height:1.08;letter-spacing:1px;margin:18px 0 6px;text-shadow:0 0 60px rgba(255,157,92,.2);--g1:#ff9d5c;--g2:#ffe08a;--g3:#62d9a8;--g4:#74b4ff;--g5:#b99cff}
+.hero h1 .split{display:block}
+.title-glow{width:min(560px,72%);height:3px;margin:10px auto 0;border-radius:9px;background:linear-gradient(90deg,transparent,var(--saf),var(--gold),var(--blue),var(--vio),transparent);transform:scaleX(.35);opacity:.6;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.hero:hover .title-glow{transform:scaleX(1);opacity:1}
+.subtitle{font:italic 600 clamp(1rem,2.3vw,1.5rem) 'Fraunces',serif;color:#e3d6b6;margin-top:14px}
+.tagline{margin:22px auto 0;max-width:860px;color:var(--mut);font-size:.95rem;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:14px 10px}
+.badges{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:980px;margin-inline:auto}
+.badge{position:relative;overflow:hidden;padding:7px 16px;border-radius:30px;font-size:.78rem;font-weight:600;color:var(--mut);border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(8px);transition:all .35s}
+.badge::before{content:'';position:absolute;top:0;bottom:0;left:-75%;width:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);transform:skewX(-20deg);transition:left .65s}
+.badge:hover{transform:translateY(-5px) scale(1.07);border-color:var(--gold);color:#fff;box-shadow:0 8px 24px rgba(242,207,114,.28)}
+.badge:hover::before{left:130%}
+.stats{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:28px}
+.stat{min-width:130px;padding:14px 20px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .4s}
+.stat:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.stat b{display:block;font:700 2rem 'Cinzel Decorative',serif;color:var(--gold);line-height:1.1}
+.stat span{font-size:.72rem;color:var(--mut);letter-spacing:.5px}
+.scrolldown{margin-top:34px;font-size:1.6rem;color:var(--dim);animation:bnc 2s infinite}
+@keyframes bnc{50%{transform:translateY(12px)}}
+.burst{position:fixed;z-index:400;pointer-events:none;font-size:1.5rem;animation:burst 1.2s ease-out forwards}
+@keyframes burst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4) rotate(220deg);opacity:0}}
+
+/* ===== AUTEUR (kept as the signature credit) ===== */
+.auteur-wrap{position:relative;display:inline-block;margin-top:30px;animation:flt 6s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-7px)}}
+.auteur-halo{position:absolute;inset:-6px;border-radius:62px;z-index:0;background:conic-gradient(from var(--ang),var(--saf),var(--gold),var(--rose),var(--vio),var(--blue),var(--em),var(--saf));filter:blur(15px);opacity:.4;animation:halo 8s linear infinite;transition:opacity .5s}
+@keyframes halo{to{--ang:360deg}}
+.auteur-wrap:hover .auteur-halo,.auteur-wrap:focus-within .auteur-halo{opacity:.8}
+.auteur-credit{position:relative;z-index:1;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:5px;padding:21px 52px;border-radius:58px;border:1.5px solid rgba(242,207,114,.5);background:linear-gradient(135deg,rgba(255,157,92,.17),rgba(8,10,24,.8) 45%,rgba(116,180,255,.15));box-shadow:0 12px 38px rgba(255,157,92,.2),inset 0 0 22px rgba(242,207,114,.14);backdrop-filter:blur(14px);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s ease,scale .5s cubic-bezier(.16,1,.3,1),box-shadow .5s,border-color .5s;cursor:pointer}
+.auteur-credit::before{content:'';position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-20deg);animation:swp 4.5s ease-in-out infinite;pointer-events:none}
+.auteur-credit::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.17),transparent 60%);opacity:0;transition:opacity .4s}
+.auteur-credit:hover::after,.auteur-credit:focus-visible::after{opacity:1}
+.auteur-credit:hover,.auteur-credit:focus-visible{scale:1.06;border-color:var(--gold);box-shadow:0 20px 52px rgba(255,157,92,.42),inset 0 0 28px rgba(242,207,114,.3)}
+@keyframes swp{0%,35%{left:-60%}70%,100%{left:130%}}
+.a-star{position:absolute;color:var(--gold);font-size:.8rem;animation:stp 2.4s ease-in-out infinite;z-index:2}
+.a-star.s1{top:8px;right:22px}.a-star.s2{bottom:10px;left:22px;animation-delay:.8s;color:#9ec9ff}.a-star.s3{top:12px;left:32px;animation-delay:1.5s;font-size:.6rem;color:var(--rose)}
+@keyframes stp{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.4) rotate(90deg)}}
+.auteur-tag{font:500 .68rem 'JetBrains Mono',monospace;letter-spacing:6px;text-transform:uppercase;color:#a4cbff;text-shadow:0 0 10px rgba(103,183,255,.7)}
+.auteur-name{font-family:'Cinzel Decorative',serif;font-weight:900;font-size:clamp(1.2rem,3.2vw,1.95rem);letter-spacing:4px;--g1:#fff8ec;--g2:#ffd66b;--g3:#ff9a3c;--g4:#e8c257;--g5:#fff8ec}
+.auteur-name .ch{animation-duration:6s;filter:none;transform:none}
+.auteur-name .ch:hover{transform:translateY(-10px) rotate(-6deg) scale(1.2);filter:drop-shadow(0 0 14px rgba(255,214,120,.85))}
+.auteur-underline{width:60%;height:2px;border-radius:10px;background:linear-gradient(90deg,transparent,var(--saf),var(--gold),var(--blue),transparent);transform:scaleX(.4);opacity:.6;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.auteur-credit:hover .auteur-underline{transform:scaleX(1);opacity:1}
+.auteur-role{font-size:.66rem;letter-spacing:2px;color:var(--mut);text-transform:uppercase}
+.auteur-reel{font:500 .6rem 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--dim);opacity:.9}
+
+/* ===== REEL TICKER ===== */
+.reel{overflow:hidden;border-block:2px dashed rgba(255,255,255,.14);background:rgba(255,255,255,.025);padding:12px 0}
+.reel-track{display:flex;width:max-content;animation:tick 60s linear infinite}
+.reel:hover .reel-track{animation-play-state:paused}
+.reel-track span{font:500 .8rem 'JetBrains Mono',monospace;color:var(--mut);padding:0 26px;white-space:nowrap}
+.reel-track span b{color:var(--gold)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ===== SECTIONS ===== */
+section{padding:92px 6vw;position:relative;isolation:isolate;overflow:hidden}
+section::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 42% at 8% 0%,color-mix(in srgb,var(--accent) 11%,transparent),transparent 70%),radial-gradient(ellipse 50% 40% at 100% 100%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 70%)}
+section[data-scene]::before{content:attr(data-scene);position:absolute;right:3vw;top:34px;z-index:-1;font:900 clamp(5rem,15vw,12rem)/1 'Cinzel',serif;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--accent) 30%,transparent);opacity:.55;pointer-events:none}
+.kicker{display:inline-flex;align-items:center;gap:8px;font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:18px;background:rgba(255,255,255,.03);box-shadow:0 0 14px color-mix(in srgb,var(--accent) 22%,transparent)}
+h2.title{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4.3vw,3.1rem);font-weight:700;line-height:1.18;margin-bottom:12px;color:var(--head)}
+h2.title span{color:var(--accent)}
+h3.sub{color:var(--accent);margin:36px 0 12px;font:700 1.3rem 'Fraunces',serif}
+h4.mini{color:var(--accent);margin:20px 0 8px;font-size:.98rem}
+.lede{color:var(--mut);max-width:980px;margin-bottom:30px;font-size:1.02rem}
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);animation:rvFail 0s 5s forwards}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes rvFail{to{opacity:1;transform:none}}
+
+/* ===== CARDS ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin:26px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:26px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:all .45s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-9px) scale(1.012);border-color:var(--accent);box-shadow:0 20px 44px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--accent) 22%,transparent)}
+.card:hover::before{opacity:.08}
+.card>*{position:relative;z-index:1}
+.card h3{color:var(--accent);font:700 1.12rem 'Fraunces',serif;margin-bottom:10px}
+.card p,.card li{color:var(--mut);font-size:.92rem}
+.card p+p{margin-top:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.pill{padding:5px 12px;border:1px solid var(--accent);border-radius:20px;font-size:.78rem;color:var(--head);background:rgba(255,255,255,.04);transition:all .3s}
+.pill:hover{background:var(--accent);color:#0b0a14;transform:translateY(-3px)}
+
+/* ===== FLOW / HUB ===== */
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:30px 0}
+.node{background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid var(--bd);border-radius:16px;padding:14px 18px;min-width:150px;max-width:300px;text-align:center;backdrop-filter:blur(8px);font-size:.86rem;color:var(--mut);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:all .4s cubic-bezier(.2,.8,.2,1)}
+.node b{display:block;color:var(--accent);font-size:.93rem;margin-bottom:3px}
+.node:hover{transform:translateY(-8px) scale(1.05);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px color-mix(in srgb,var(--accent) 45%,transparent)}
+.arrow{font-size:1.4rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{0%,100%{opacity:.4}50%{opacity:1;transform:translateX(4px)}}
+.hub{display:flex;flex-direction:column;align-items:center;margin:34px 0}
+.hub>.node{border-color:var(--accent);box-shadow:0 0 22px rgba(255,255,255,.08)}
+.hub-line{width:2px;height:34px;margin:4px 0;background:linear-gradient(var(--accent),transparent)}
+.spokes{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.spokes .node{border-top:3px solid var(--accent)}
+
+/* ===== CALLOUTS ===== */
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 14px 14px 0;padding:16px 22px;margin:20px 0;font-size:.92rem;color:var(--mut);transition:all .3s}
+.callout:hover{background:rgba(255,255,255,.07);transform:translateX(6px)}
+.callout b{color:var(--accent)}
+.callout.warn{border-color:var(--saf);background:rgba(255,157,92,.06)}.callout.warn b{color:var(--saf)}
+.callout.tip{border-color:var(--em);background:rgba(98,217,168,.05)}.callout.tip b{color:var(--em)}
+.trap{border:1.5px solid var(--rose);border-radius:16px;padding:16px 22px;margin:20px 0;font-size:.92rem;color:#ffdfe6;background:linear-gradient(135deg,rgba(255,142,170,.12),rgba(255,157,92,.05))}
+.trap b{color:#ff9db6}
+.trap ul{margin-top:6px}
+.quote{position:relative;margin:34px 0;padding:22px 30px;border:1px solid var(--bd);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 600 1.15rem/1.8 'Fraunces',serif;color:#fff6e6}
+.quote::before{content:'⚖️';position:absolute;top:-16px;left:20px;font-size:1.6rem;background:var(--bg);padding:0 6px;font-style:normal}
+.mnemonic{margin:18px 0;padding:20px 22px;border:1px dashed var(--accent);border-radius:16px;background:linear-gradient(135deg,rgba(255,157,92,.09),rgba(116,180,255,.06));font:.85rem/1.95 'JetBrains Mono',monospace;color:#fff1da;transition:all .35s}
+.mnemonic:hover,.quote:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.mnemonic b{color:var(--gold)}
+.mnemonic .lab{display:block;font-size:.66rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+
+/* ===== TABLES ===== */
+.table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--bd);border-radius:16px;background:var(--card)}
+table{width:100%;min-width:640px;border-collapse:collapse;font-size:.88rem}
+caption{text-align:left;padding:14px 18px;font-weight:700;color:var(--head)}
+th,td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.07);color:var(--accent);font:600 .7rem 'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--mut)}td:first-child{color:var(--head)}
+tr:last-child td{border-bottom:0}
+tr:hover td{background:rgba(255,255,255,.05);color:#fff}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;margin:34px 0;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--saf),var(--gold),var(--em),var(--blue),var(--vio),var(--rose));background-size:100% 400%;animation:fl 7s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:26px;padding-left:24px;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.ti::before{content:'';position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(10px)}
+.ti .d{font:500 .84rem 'JetBrains Mono',monospace;color:var(--accent)}
+.ti p{color:var(--mut);font-size:.92rem}
+.ti .xl{margin-top:8px}
+
+/* ===== ATLAS ===== */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:18px;border:1px solid var(--bd);border-radius:20px;background:rgba(14,19,38,.8);backdrop-filter:blur(12px);margin:24px 0 12px}
+.tools input,.tools select{padding:11px 14px;border-radius:12px;border:1px solid var(--bd);background:#0a1022;color:var(--ink);font:inherit}
+.tools input{flex:1;min-width:230px}
+.btn{padding:9px 14px;border-radius:12px;border:1px solid var(--bd);background:rgba(255,255,255,.05);color:var(--ink);font:inherit;font-size:.82rem;cursor:pointer;transition:all .3s}
+.btn:hover,.btn.on{background:rgba(242,207,114,.15);border-color:var(--gold);transform:translateY(-2px)}
+.qstat{width:100%;font-size:.8rem;color:var(--dim)}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;margin:18px 0}
+.chips a{text-align:center;text-decoration:none;font:600 .78rem 'JetBrains Mono',monospace;padding:8px 2px;border-radius:12px;border:1px solid;transition:all .3s;white-space:nowrap}
+.chips a.p1{color:#ff9db6;border-color:rgba(255,142,170,.5);background:rgba(255,142,170,.08)}
+.chips a.p2{color:#ffbf8a;border-color:rgba(255,157,92,.5);background:rgba(255,157,92,.08)}
+.chips a.p3{color:#8fe9bf;border-color:rgba(98,217,168,.5);background:rgba(98,217,168,.08)}
+.chips a:hover{transform:translateY(-5px) scale(1.1);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.chips a.dim{opacity:.2}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.8rem;color:var(--mut)}
+.era-label{display:flex;align-items:center;gap:12px;font:600 .82rem 'JetBrains Mono',monospace;letter-spacing:1px;color:var(--gold);margin:34px 0 12px}
+.era-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--bd),transparent)}
+details.cell{margin:12px 0;border:1px solid var(--bd);border-left:4px solid var(--c,var(--gold));border-radius:18px;background:rgba(13,18,36,.76);backdrop-filter:blur(10px);overflow:hidden;transition:border-color .3s,box-shadow .3s}
+details.cell:hover{box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 24px color-mix(in srgb,var(--c,var(--gold)) 18%,transparent)}
+details.cell:target{box-shadow:0 0 0 2px color-mix(in srgb,var(--c,var(--gold)) 45%,transparent)}
+details.cell summary{list-style:none;display:flex;align-items:center;gap:16px;padding:16px 20px;cursor:pointer}
+details.cell summary::-webkit-details-marker{display:none}
+details.cell summary::after{content:'+';margin-left:auto;font-size:1.6rem;color:var(--c,var(--gold))}
+details.cell[open] summary::after{content:'−'}
+.no{flex-shrink:0;min-width:70px;white-space:nowrap;text-align:center;padding:8px 10px;font:600 1rem 'JetBrains Mono',monospace;color:var(--c,var(--gold));border:1px solid var(--c,var(--gold));border-radius:12px;background:linear-gradient(145deg,color-mix(in srgb,var(--c,var(--gold)) 22%,transparent),transparent)}
+.at{display:flex;flex-direction:column;min-width:0}
+.at b{font-size:1.01rem}
+.at small{font-size:.68rem;letter-spacing:.7px;color:var(--dim);text-transform:uppercase}
+.dim5{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:4px 22px 22px}
+.dm{border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:14px 16px;background:rgba(0,0,0,.12);transition:border-color .3s,transform .3s}
+.dm:hover{border-color:var(--c,var(--gold));transform:translateY(-3px)}
+.dm.wide{grid-column:1/-1}
+.dm h5{font:600 .68rem 'JetBrains Mono',monospace;letter-spacing:.8px;color:var(--c,var(--gold));text-transform:uppercase;margin-bottom:6px}
+.dm p{font-size:.9rem;color:var(--mut)}
+.nores{display:none;text-align:center;padding:24px;color:var(--mut)}
+.nores.show{display:block}
+.xl{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.xl span{font-size:.74rem;color:var(--accent);border:1px solid var(--bd);border-radius:8px;padding:4px 10px;background:rgba(255,255,255,.03)}
+.cl{display:inline-block;font:600 .74rem 'JetBrains Mono',monospace;color:var(--accent);background:rgba(255,255,255,.07);padding:1px 8px;border-radius:6px;margin-right:4px}
+
+/* ===== CALC / QUIZ / CHECK ===== */
+.calc label{display:flex;align-items:center;gap:10px;color:var(--mut);font-size:.9rem;margin:8px 0;flex-wrap:wrap}
+.calc input,.calc select{width:130px;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:#0a1022;color:var(--ink);font:inherit}
+.calc select{width:auto;max-width:100%}
+.calc output{display:block;margin-top:10px;color:var(--mut);font-size:.9rem}
+.calc output b{color:var(--accent)}
+.quiz{margin:12px 0;padding:16px 20px;border:1px solid var(--bd);border-radius:14px;background:rgba(255,255,255,.035);transition:all .3s}
+.quiz:hover{border-color:var(--accent)}
+.quiz summary{cursor:pointer;color:var(--head);font-weight:600}
+.quiz p{margin-top:12px;color:var(--mut);font-size:.92rem}
+.check-progress{height:8px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0 6px}
+.check-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--em),var(--blue),var(--vio));transition:width .45s}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:18px 0}
+.checkitem{display:flex;gap:12px;align-items:flex-start;padding:12px 15px;border:1px solid var(--bd);border-radius:12px;background:rgba(255,255,255,.03);color:var(--mut);font-size:.84rem;cursor:pointer;transition:all .3s}
+.checkitem:hover{border-color:var(--accent)}
+.checkitem input{margin-top:6px;width:17px;height:17px;accent-color:var(--em);flex-shrink:0}
+.checkitem:has(input:checked){border-color:rgba(98,217,168,.45);background:rgba(98,217,168,.06)}
+.chip{display:inline-block;margin:.25rem;padding:.42rem .8rem;border:1px solid var(--accent);border-radius:999px;color:#fff;background:rgba(255,255,255,.04);font-size:.82rem;transition:all .3s;text-decoration:none}
+.chip:hover{transform:translateY(-4px) scale(1.08);background:var(--accent);color:#0b0a14;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+
+/* ===== FOOTER / TRIBUTE ===== */
+footer{padding:66px 6vw 86px;text-align:center;color:var(--mut);font-size:.86rem;border-top:1px solid var(--bd)}
+footer .final{font:italic 600 1.35rem 'Fraunces',serif;color:#fff;margin-bottom:12px}
+.sig{font:900 1rem 'Cinzel Decorative',serif;letter-spacing:4px;color:var(--gold);margin:26px 0 6px}
+.heart-tribute{position:relative;isolation:isolate;overflow:hidden;margin:30px auto 8px;max-width:600px;display:flex;flex-direction:column;align-items:center;gap:10px;padding:32px 30px;border-radius:24px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(150deg,rgba(255,157,92,.09),rgba(116,180,255,.08),rgba(98,217,168,.07));transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease,box-shadow .5s,border-color .5s}
+.heart-tribute::before{content:'';position:absolute;inset:-3px;z-index:-1;border-radius:24px;background:conic-gradient(from var(--ang),var(--saf),var(--gold),var(--rose),var(--blue),var(--em),var(--saf));filter:blur(16px);opacity:.34;animation:halo 9s linear infinite}
+.heart-tribute::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(220px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.13),transparent 60%);opacity:0;transition:opacity .4s}
+.heart-tribute:hover::after{opacity:1}
+.heart-tribute:hover{border-color:rgba(255,255,255,.28);box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.heart-icon{font-size:2rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,142,170,.7))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.tribute-en{font:italic 700 clamp(1.15rem,3vw,1.7rem) 'Fraunces',serif;color:#fff8ec}
+.tribute-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.6vw,2.15rem);background:linear-gradient(90deg,var(--saf),var(--gold),var(--rose),var(--blue),var(--em),var(--saf));background-size:320% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite}
+.toTop{position:fixed;right:24px;bottom:24px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;cursor:pointer;z-index:100;background:linear-gradient(135deg,var(--saf),var(--blue));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:all .4s;border:0;font-family:inherit}
+.toTop.show{opacity:1;pointer-events:auto}.toTop:hover{transform:translateY(-6px) scale(1.1)}
+.skip{position:fixed;top:8px;left:12px;z-index:1000;transform:translateY(-160%);padding:10px 18px;border-radius:10px;background:var(--gold);color:#080b18;font-weight:700;text-decoration:none}
+.skip:focus{transform:none}
+.reading-tools{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.source-list li{margin:12px 0}.source-list a{overflow-wrap:anywhere}
+.noscript{padding:20px;margin:20px 0;border:1px solid var(--gold);border-radius:12px}
+.scope-note{max-width:850px;margin:20px auto 0;color:var(--dim);font-size:.78rem}
+/* focus-reading mode: calmer, higher-contrast, still pretty */
+body.focus-mode .cine-bg{animation:none;filter:none}
+body.focus-mode .stars,body.focus-mode #dust,body.focus-mode .spot,body.focus-mode .vig,body.focus-mode .grain{display:none}
+body.focus-mode .chakra,body.focus-mode .floaty{opacity:.12;animation:none}
+body.focus-mode .split .ch{animation:none;background:none;color:var(--head);transform:none;filter:none}
+body.focus-mode .reel-track,body.focus-mode .auteur-wrap{animation:none}
+body.focus-mode .card:hover,body.focus-mode .node:hover{transform:none}
+body.focus-mode{--card:rgba(17,24,43,.94);--mut:#d6d3e2}
+@media(min-width:1400px){section:not(.hero){padding-inline:max(6vw,calc((100vw - 1260px)/2))}}
+@media(max-width:700px){
+ body{font-size:15px}section{padding:65px 5vw}
+ .grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+ .dim5{grid-template-columns:1fr;padding:0 14px 16px}.dm.wide{grid-column:auto}
+ details.cell summary{padding:14px 12px;gap:10px}.no{min-width:58px;font-size:.86rem}
+ .at b{font-size:.92rem}.at small{font-size:.61rem}
+ .auteur-credit{padding:18px 26px}.auteur-name{letter-spacing:2px}.eyebrow{letter-spacing:2px}
+ .hero h1{font-size:clamp(1.65rem,7.4vw,3.5rem)}.heart-tribute{padding:24px 16px}
+ .tools input{min-width:0;flex-basis:100%}.node{min-width:0;max-width:100%;overflow-wrap:anywhere}
+ .vig,.spot{display:none}.stat{min-width:110px;padding:12px}.stat b{font-size:1.7rem}.floaty{font-size:1.3rem}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .intro,.bars,#dust{display:none!important}
+ .js .reveal{opacity:1;transform:none}
+ .split .ch{transform:none!important;filter:none!important}
+}
+@media print{
+ :root{--bg:#fff;--ink:#141414;--head:#111;--mut:#333;--dim:#555;--bd:#bbb;--card:#fff;--gold:#795500;--saf:#904300;--blue:#1b5390;--em:#176449;--rose:#96334d;--vio:#62408e;--cy:#17666b;--pink:#8d396d}
+ body{background:#fff;color:#111;font-size:10pt}
+ nav,.cine-bg,.stars,#dust,.grain,.spot,.vig,.intro,.bars,.progress,.toTop,.tools,.reading-tools,.scrolldown,.chakra,.floaty,.reel,.auteur-halo,.a-star,.chips,.check-progress,.skip,.badges,.stats,.heart-icon{display:none!important}
+ section{padding:22px 0;overflow:visible}section::before,section::after{display:none!important}
+ .hero{min-height:0;padding:20px 0}.hero h1{font-size:29pt;text-shadow:none}
+ .js .reveal{opacity:1;transform:none}
+ .split .ch,.tribute-ta{background:none;color:#111;filter:none;transform:none}
+ .card,.node,.callout,.trap,.mnemonic,.quote,.dm,details.cell,.quiz,.auteur-credit,.heart-tribute,.table-wrap{background:#fff;box-shadow:none;backdrop-filter:none;color:#111;transform:none;border-color:#bbb}
+ b,strong,.at b,.quote,.tribute-en{color:#111}
+ .card,.dm,.quiz,details.cell{break-inside:avoid}
+ .table-wrap{overflow:visible}table{min-width:0;font-size:9pt}th,td{color:#111}
+ .hide{display:block!important}.dim5{display:block}.dm{margin:8px 0}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#foundation">Skip intro and start studying</a>
+<div class="cine-bg" aria-hidden="true"></div><div class="stars" aria-hidden="true"></div><canvas id="dust" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div><div class="spot" aria-hidden="true"></div><div class="vig" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="intro" aria-hidden="true">
+  <div>
+    <div class="reel-no">A CONSTITUTIONAL STUDY FILM</div>
+    <div class="t">THE POWER TO CHANGE</div>
+    <div class="bar"></div>
+    <p style="margin-top:18px;color:var(--mut)">📜 A living Constitution. An enduring identity.</p>
+  </div>
+</div>
+<div class="bars" aria-hidden="true"></div>
+
+<nav aria-label="Chapter navigation">
+  <a href="#hero">🎬 Opening</a><a href="#foundation">🏛️ Article 368</a><a href="#structure">⚖️ Basic Structure</a>
+  <a href="#atlas">🧭 Amendment Atlas</a><a href="#mini">🔥 42nd</a><a href="#restoration">🛡️ 44th</a>
+  <a href="#compare">🪞 42·43·44</a><a href="#themes">🧩 Themes</a><a href="#recent">✨ Recent</a>
+  <a href="#cases">📚 Cases</a><a href="#lab">🧠 Memory Lab</a><a href="#checklist">✅ Readiness</a><a href="#sources">🔎 Sources</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" style="--accent:var(--gold)">
+  <div class="chakra" aria-hidden="true"></div><div class="chakra c2" aria-hidden="true"></div>
+  <span class="floaty" style="left:7%;top:22%" aria-hidden="true">📜</span>
+  <span class="floaty" style="right:8%;top:18%;animation-delay:-2s" aria-hidden="true">⚖️</span>
+  <span class="floaty" style="left:10%;bottom:22%;animation-delay:-4s" aria-hidden="true">🏛️</span>
+  <span class="floaty" style="right:8%;bottom:24%;animation-delay:-3s" aria-hidden="true">🪷</span>
+
+  <div class="hero-in">
+    <div class="eyebrow">Continuity · Change · Constitutional Identity</div>
+    <h1 aria-label="Indian Constitutional Amendments">
+      <span class="split title-magic" data-split="INDIAN">INDIAN</span>
+      <span class="split title-magic" data-split="CONSTITUTIONAL">CONSTITUTIONAL</span>
+      <span class="split title-magic" data-split="AMENDMENTS">AMENDMENTS</span>
+    </h1>
+    <div class="title-glow"></div>
+    <p class="subtitle">The power to rewrite provisions — not to destroy the Constitution.</p>
+
+    <div class="auteur-wrap">
+      <span class="auteur-halo" aria-hidden="true"></span>
+      <div class="auteur-credit tilt" tabindex="0" role="button" aria-label="Auteur: Piyush Parte. Activate for a celebratory burst.">
+        <span class="a-star s1">✦</span><span class="a-star s2">✧</span><span class="a-star s3">✦</span>
+        <span class="auteur-tag">🎬 Auteur</span>
+        <span class="auteur-name split" data-split="PIYUSH PARTE">PIYUSH PARTE</span>
+        <span class="auteur-underline"></span>
+        <span class="auteur-role">A Constitutional Study Film</span>
+        
+      </div>
+    </div>
+
+    <p class="tagline">📅 Number &amp; year → 📜 provisions → ⚙️ constitutional change → ⚖️ judicial interpretation → 🎯 examination significance. Explore the Constitution as an evolving story of liberty, democracy, federalism, representation and accountable power.</p>
+
+    <div class="badges">
+      <span class="badge">🏛️ Article 368 decoded</span><span class="badge">⚖️ Basic Structure Doctrine</span>
+      <span class="badge">🔥 42nd · 🛡️ 43rd–44th</span><span class="badge">🧭 Five-dimension atlas</span>
+      <span class="badge">🧠 Mnemonics &amp; recall</span><span class="badge">📱 Responsive · 🖨️ Print-ready</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>STUDY DIMENSIONS</span></div>
+      <div class="stat"><b>3</b><span>AMENDMENT ROUTES</span></div>
+      <div class="stat"><b id="noteCount">—</b><span>SELECTED AMENDMENTS</span></div>
+      <div class="stat"><b>1973</b><span>BASIC STRUCTURE</span></div>
+    </div>
+    <div class="reading-tools">
+      <button class="btn" id="focusMode" type="button" aria-pressed="false">🌙 Focus reading</button>
+      <button class="btn" id="printTop" type="button">🖨️ Print / Save PDF</button>
+      <button class="btn" id="motionToggle" type="button" aria-pressed="false">⏸️ Pause effects</button>
+    </div>
+    <p class="scope-note">Scope: major and frequently tested amendments through the 106th Amendment Act, 2023 — not a clause-by-clause reproduction of every Act. “Year” means the Act’s title year; assent, commencement and implementation are flagged wherever they differ.</p>
+    <div class="scrolldown" aria-hidden="true">⮟</div>
+  </div>
+</section>
+
+<div class="reel" aria-label="Key amendment memory chain">
+  <div class="reel-track">
+    <span>📜 <b>1st</b> · Ninth Schedule</span><span>🗺️ <b>7th</b> · State reorganisation</span><span>🏛️ <b>24th</b> · Constituent power</span>
+    <span>⚖️ <b>25th</b> · Article 31C</span><span>🔥 <b>42nd</b> · Mini-Constitution</span><span>🛡️ <b>44th</b> · Emergency safeguards</span>
+    <span>🔀 <b>52nd</b> · Anti-defection</span><span>🗳️ <b>61st</b> · Voting age 18</span><span>🏘️ <b>73rd–74th</b> · Local democracy</span>
+    <span>🎓 <b>86th</b> · Education</span><span>📏 <b>91st</b> · 15% ministry cap</span><span>⚖️ <b>99th</b> · NJAC struck down</span>
+    <span>🧾 <b>101st</b> · GST</span><span>🎯 <b>103rd</b> · EWS</span><span>👩 <b>106th</b> · Women’s reservation</span>
+    <span aria-hidden="true">📜 <b>1st</b> · Ninth Schedule</span><span aria-hidden="true">🗺️ <b>7th</b> · State reorganisation</span><span aria-hidden="true">🏛️ <b>24th</b> · Constituent power</span>
+    <span aria-hidden="true">⚖️ <b>25th</b> · Article 31C</span><span aria-hidden="true">🔥 <b>42nd</b> · Mini-Constitution</span><span aria-hidden="true">🛡️ <b>44th</b> · Emergency safeguards</span>
+    <span aria-hidden="true">🔀 <b>52nd</b> · Anti-defection</span><span aria-hidden="true">🗳️ <b>61st</b> · Voting age 18</span><span aria-hidden="true">🏘️ <b>73rd–74th</b> · Local democracy</span>
+    <span aria-hidden="true">🎓 <b>86th</b> · Education</span><span aria-hidden="true">📏 <b>91st</b> · 15% ministry cap</span><span aria-hidden="true">⚖️ <b>99th</b> · NJAC struck down</span>
+    <span aria-hidden="true">🧾 <b>101st</b> · GST</span><span aria-hidden="true">🎯 <b>103rd</b> · EWS</span><span aria-hidden="true">👩 <b>106th</b> · Women’s reservation</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= ACT I · ARTICLE 368 ================= -->
+<section id="foundation" data-scene="368" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">🎬 Act I · The Rules of Constitutional Change</span>
+    <h2 class="title">🏛️ Article 368 — <span>Power, Procedure &amp; Limits</span></h2>
+    <p class="lede">An amendment changes the constitutional text through a constitutionally authorised process. India combines flexibility with rigidity: some changes need only an ordinary legislative majority, most need a special majority, and changes touching the federal compact also need State ratification. The key distinction is between <b>ordinary legislative power</b> and <b>constituent power</b>. Article 368 sits in <b>Part XX</b>.</p>
+
+    <div class="hub">
+      <div class="node"><b>📜 Constitutional change</b>Which procedure does the Constitution prescribe?</div>
+      <div class="hub-line"></div>
+      <div class="spokes">
+        <div class="node" style="--accent:var(--em)"><b>① Simple majority</b>Specified changes outside Article 368</div>
+        <div class="node" style="--accent:var(--blue)"><b>② Special majority</b>The Article 368 parliamentary route</div>
+        <div class="node" style="--accent:var(--rose)"><b>③ Special + States</b>Federal provisions need ratification</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card" style="--accent:var(--em)">
+        <h3>① 🟢 Simple majority — outside Article 368</h3>
+        <p>Some provisions expressly let Parliament alter constitutional consequences by ordinary law. Examples: admission, formation and boundary changes of States (Arts. 2–4), creation or abolition of Legislative Councils (Art. 169), citizenship law (Art. 11), and the Fifth and Sixth Schedules. By express declaration these are <b>not treated as amendments for Article 368</b>.</p>
+        <p>Special conditions still apply: Art. 169 needs a prior special-majority resolution of the State Assembly, and Art. 3 needs a Presidential reference to the State Legislature.</p>
+      </article>
+      <article class="card" style="--accent:var(--blue)">
+        <h3>② 🔵 Special majority — Article 368</h3>
+        <p>Each House must pass the Bill by <b>a majority of its total membership</b> <i>and</i> <b>not less than two-thirds of members present and voting</b>. Both tests apply together; abstentions are not votes cast. Fundamental Rights, Directive Principles and most institutional provisions can be amended this way, subject to the basic-structure limit.</p>
+      </article>
+      <article class="card" style="--accent:var(--rose)">
+        <h3>③ 🟣 Special majority + State ratification</h3>
+        <p>Changes to the protected federal fields in the proviso to Art. 368(2) also need ratification by the Legislatures of <b>at least one-half of the States</b>, <i>before</i> the Bill goes to the President. States ratify by ordinary majority; no general deadline is prescribed, and Union Territories do not count.</p>
+      </article>
+    </div>
+
+    <h3 class="sub">🗳️ The complete parliamentary journey</h3>
+    <div class="flow">
+      <div class="node"><b>① Introduction</b>Either House · Minister or private member</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>② Separate passage</b>Special majority in each House</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>③ Ratification?</b>Half the States, if the proviso applies</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>④ Presidential assent</b>“Shall give his assent” (24th Amendment)</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>⑤ Commencement</b>As the Act itself specifies</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <caption>📋 Federal fields requiring State ratification (proviso to Art. 368(2))</caption>
+      <thead><tr><th>Protected field</th><th>Reference</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Election of the President</td><td>Arts. 54–55</td><td>States share in the Union’s constitutional headship.</td></tr>
+        <tr><td>Extent of executive power</td><td>Arts. 73, 162</td><td>Union and State executive reach.</td></tr>
+        <tr><td>High Courts for Union Territories</td><td>Art. 241</td><td>Judicial structure of UTs.</td></tr>
+        <tr><td>GST Council</td><td>Art. 279A</td><td>Added by the 101st Amendment.</td></tr>
+        <tr><td>Higher judiciary</td><td>Part V Ch. IV; Part VI Ch. V</td><td>Supreme Court and High Courts.</td></tr>
+        <tr><td>Legislative relations</td><td>Part XI Ch. I</td><td>Distribution of legislative powers.</td></tr>
+        <tr><td>Legislative Lists</td><td>Seventh Schedule</td><td>Union, State and Concurrent subjects.</td></tr>
+        <tr><td>State representation in Parliament</td><td>Fourth Schedule and related</td><td>The federal representative arrangement.</td></tr>
+        <tr><td>The amending procedure</td><td>Art. 368 itself</td><td>Rules for changing the federal compact.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="trap">🚨 <b>Six procedure traps:</b>
+      <ul>
+        <li>There is <b>no joint sitting</b> (Art. 108 does not apply) to resolve disagreement on an Article 368 Bill.</li>
+        <li>No prior Presidential recommendation is needed merely because it is an amendment Bill.</li>
+        <li>The Rajya Sabha has full co-equal authority here.</li>
+        <li>The President cannot withhold assent or return a duly passed Article 368 Bill (24th Amendment, 1971).</li>
+        <li>“Half of the States” means States only, and half — not all.</li>
+        <li>A State Legislature cannot initiate an amendment, and no referendum is provided.</li>
+      </ul>
+    </div>
+
+    <div class="grid two">
+      <div class="card calc" style="--accent:var(--gold)">
+        <h3>🧮 Special-majority simulator</h3>
+        <p>Enter total membership and the members actually present and voting. Both thresholds are applied.</p>
+        <label>Total membership <input id="totalMembers" type="number" min="1" max="1000" value="245"></label>
+        <label>Present and voting <input id="votesCast" type="number" min="1" max="1000" value="180"></label>
+        <output id="majorityResult" aria-live="polite"></output>
+      </div>
+      <div class="card" style="--accent:var(--blue)">
+        <h3>🧠 Majority memory key</h3>
+        <p><b>“More than half the whole; at least two-thirds who poll.”</b> The minimum “Yes” vote is the <i>higher</i> of the two thresholds. “Total membership” is the House’s full strength, as parliamentary practice reckons it, not just who turns up.</p>
+        <p>Worked example: total 245, voting 180 → $$\lfloor 245/2\rfloor+1=123$$ and $$\lceil 2\times180/3\rceil=120$$ → need $$\max(123,120)=123$$ affirmative votes.</p>
+      </div>
+    </div>
+
+    <div class="mnemonic"><span class="lab">🧠 Article 368 in one breath</span><b>T + P</b> = <b>T</b>otal-membership majority + two-thirds of <b>P</b>resent &amp; voting.<br><b>N–J–A</b> = <b>N</b>o joint sitting · <b>J</b>oin half the States for federal fields · <b>A</b>ssent is mandatory.</div>
+
+    <div class="callout warn">📌 <b>Text versus operative law:</b> Art. 368(4) and (5), inserted by the 42nd Amendment, were declared invalid in <i>Minerva Mills</i> (1980). Their presence in an old or annotated text does not make them enforceable.</div>
+  </div>
+</section>
+
+<!-- ================= ACT II · BASIC STRUCTURE ================= -->
+<section id="structure" data-scene="1973" style="--accent:var(--vio)">
+  <div class="reveal">
+    <span class="kicker">⚖️ Act II · Identity Beneath the Text</span>
+    <h2 class="title">⚖️ Basic Structure — <span>Amend, Do Not Destroy</span></h2>
+    <p class="lede">In <i>Kesavananda Bharati v. State of Kerala</i> (24 April 1973) a thirteen-judge Bench held, by a 7–6 majority on the central limitation, that Parliament may amend every part of the Constitution but cannot damage or destroy its basic structure. The doctrine limits the <b>substance</b> of the amending power; Article 368 also imposes <b>procedural</b> limits.</p>
+
+    <div class="flow">
+      <div class="node"><b>📜 Amendment</b>Constitutional text changes</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>🔍 Judicial review</b>Procedure + constitutional identity</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>✅ Valid reform</b>Change without destruction</div><span class="arrow" aria-hidden="true">↔</span>
+      <div class="node"><b>⛔ Invalid destruction</b>Basic features damaged</div>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>🏛️ Constitutional supremacy</h3><p>The Constitution, not unlimited parliamentary sovereignty, is supreme. A <i>limited</i> amending power is itself a basic feature.</p></div>
+      <div class="card" style="--accent:var(--em)"><h3>🗳️ Democratic republic</h3><p>Representative government and free and fair elections cannot be hollowed out by amendment.</p></div>
+      <div class="card" style="--accent:var(--blue)"><h3>⚖️ Rule of law &amp; review</h3><p>Judicial review, judicial independence and the rule of law protect every other limit.</p></div>
+      <div class="card" style="--accent:var(--rose)"><h3>🤝 Federal &amp; secular order</h3><p>Federalism and secularism are recognised basic features; their application depends on the issue before the Court.</p></div>
+      <div class="card" style="--accent:var(--saf)"><h3>🧭 Separation &amp; balance</h3><p>Separation of powers and harmony between Parts III and IV developed through <i>Minerva Mills</i> and later cases.</p></div>
+      <div class="card" style="--accent:var(--pink)"><h3>🕊️ Dignity &amp; unity</h3><p>Dignity, unity and integrity of the nation, and essential equality commitments recur in the Court’s reasoning.</p></div>
+    </div>
+
+    <div class="callout">🔍 <b>No closed catalogue:</b> the Supreme Court has never issued one exhaustive list; features have emerged case by case. Not every infringement of a Fundamental Right is automatically a destruction of the basic structure.</div>
+
+    <div class="table-wrap"><table>
+      <caption>🧬 The judicial duel over the amending power</caption>
+      <thead><tr><th>Stage</th><th>Position</th><th>Exam connection</th></tr></thead>
+      <tbody>
+        <tr><td>1951 · Shankari Prasad</td><td>An amendment under Art. 368 is not “law” under Art. 13.</td><td>1st Amendment upheld.</td></tr>
+        <tr><td>1965 · Sajjan Singh</td><td>Earlier approach reaffirmed; doubts appear in separate opinions.</td><td>17th Amendment.</td></tr>
+        <tr><td>1967 · Golaknath (11 judges, 6:5)</td><td>Parliament cannot abridge Fundamental Rights; prospective overruling used.</td><td>Triggered the 24th Amendment.</td></tr>
+        <tr><td>1971 · 24th Amendment</td><td>Express constituent power; Art. 13 excluded; assent mandatory.</td><td>Arts. 13(4), 368(1), 368(3).</td></tr>
+        <tr><td>1973 · Kesavananda (13 judges, 7:6)</td><td>Amending power upheld, but basic structure protected; Golaknath overruled.</td><td>Constitutional identity becomes the limit.</td></tr>
+        <tr><td>1975 · Indira Gandhi v. Raj Narain</td><td>Art. 329A(4) struck down; free and fair elections are basic.</td><td>39th Amendment.</td></tr>
+        <tr><td>1980 · Minerva Mills</td><td>Art. 368(4)–(5) and the Art. 31C expansion invalid.</td><td>Limited power; balance of Parts III and IV.</td></tr>
+        <tr><td>2007 · I.R. Coelho (9 judges)</td><td>Post-24 April 1973 Ninth Schedule laws remain reviewable.</td><td>Art. 31B.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="mnemonic"><span class="lab">🧠 The doctrine in one line</span><b>“Change the chapters; preserve the constitutional character.”</b><br>Case ladder: <b>Shankari → Sajjan → Golaknath → Kesavananda → Minerva.</b><br>Seven-word key: <b>S-S-G-K-M</b> = <b>S</b>hankari · <b>S</b>ajjan · <b>G</b>olaknath · <b>K</b>esavananda · <b>M</b>inerva.</div>
+
+    <div class="trap">🚨 <b>Basic structure is primarily a test for constitutional amendments.</b> Ordinary laws are tested against constitutional provisions, legislative competence and rights, not struck down by an abstract “basic-structure” label alone. Ninth Schedule laws follow the distinct <i>I.R. Coelho</i> framework. The doctrine is judge-made — it is not a separate Article.</div>
+  </div>
+</section>
+
+<!-- ================= ACT III · ATLAS ================= -->
+<section id="atlas" data-scene="ATLAS" style="--accent:var(--cy)">
+  <div class="reveal">
+    <span class="kicker">🧭 Act III · Five-Dimension Observatory</span>
+    <h2 class="title">🧭 The Amendment Atlas — <span>Chronology with Meaning</span></h2>
+    <p class="lede">Open any amendment to see its <b>(1) number &amp; year</b>, <b>(2) provisions affected</b>, <b>(3) constitutional change</b>, <b>(4) judicial connection</b> and <b>(5) examination insight</b>. Court references are labelled as direct decisions, historical triggers or thematic connections — an amendment need not have its own landmark challenge.</p>
+    <div class="legend"><span>🔴 Priority I · essential</span><span>🟠 Priority II · important</span><span>🟢 Priority III · factual enrichment</span></div>
+    <div class="chips" id="amendmentChips" aria-label="Amendment shortcuts"></div>
+
+    <div class="tools">
+      <input id="search" type="search" placeholder="🔎 Try 31C, Nagaland, promotion, EWS, Hindi, Kihoto…" aria-label="Search amendment notes" autocomplete="off">
+      <select id="eraFilter" aria-label="Filter by era">
+        <option value="all">🕰️ All periods</option><option value="early">1951–1975</option><option value="middle">1976–1995</option>
+        <option value="modern">1996–2016</option><option value="recent">2018–2023</option>
+      </select>
+      <button class="btn on" data-priority="all" type="button" aria-pressed="true">✨ All</button>
+      <button class="btn" data-priority="1" type="button" aria-pressed="false">🔴 Essential</button>
+      <button class="btn" data-priority="2" type="button" aria-pressed="false">🟠 Important</button>
+      <button class="btn" data-priority="3" type="button" aria-pressed="false">🟢 Factual</button>
+      <button class="btn" id="expandNotes" type="button">＋ Expand</button>
+      <button class="btn" id="collapseNotes" type="button">− Fold</button>
+      <button class="btn" id="clearFilters" type="button">↺ Clear</button>
+      <p class="qstat" id="filterStatus" aria-live="polite"></p>
+    </div>
+    <p class="nores" id="noResults">🔎 No matching amendment. Try a wider term or clear the filters.</p>
+    <div id="amendmentList"></div>
+    <noscript><div class="noscript">The searchable atlas needs JavaScript. The other chapters stay readable without it.</div></noscript>
+
+    <div class="callout warn">📅 <b>Year discipline:</b> the 25th, 43rd, 44th, 61st, 92nd and 97th Acts carry title years 1971, 1977, 1978, 1988, 2003 and 2011, but received assent in 1972, 1978, 1979, 1989, 2004 and 2012. An Act’s title year is not always its assent or commencement year.</div>
+  </div>
+</section>
+
+<!-- ================= ACT IV · 42ND ================= -->
+<section id="mini" data-scene="42" style="--accent:var(--saf)">
+  <div class="reveal">
+    <span class="kicker">🔥 Act IV · The Mini-Constitution</span>
+    <h2 class="title">🔥 42nd Amendment, 1976 — <span>Constitutional Power Expanded</span></h2>
+    <p class="lede">Enacted during the 1975–77 Emergency, partly on the Swaran Singh Committee’s recommendations, the 42nd Amendment was extraordinarily wide-ranging. It combined enduring social and institutional additions with attempts to concentrate power, restrict judicial review and remove limits on amendment. Its provisions did not all commence together or share the same later fate.</p>
+
+    <div class="mnemonic"><span class="lab">🧠 Ten-door memory palace</span><b>P–D–D–A–J–T–F–L–C–E</b><br>Preamble · Duties · Directive Principles · Advice (Art. 74) · Judicial review · Tribunals · Federal Lists · Legislative terms · Constituent power · Emergency reach.</div>
+
+    <div class="table-wrap"><table>
+      <caption>📜 Major changes and what happened afterwards</caption>
+      <thead><tr><th>Field</th><th>42nd Amendment change</th><th>Later position</th></tr></thead>
+      <tbody>
+        <tr><td>Preamble</td><td>Added “Socialist”, “Secular” and “integrity”.</td><td>Retained.</td></tr>
+        <tr><td>Fundamental Duties</td><td>Part IVA, Art. 51A with ten duties.</td><td>Retained; the 86th added the eleventh.</td></tr>
+        <tr><td>Directive Principles</td><td>Arts. 39A, 43A, 48A; recast Art. 39(f).</td><td>Retained.</td></tr>
+        <tr><td>Article 31C</td><td>Extended shield from Art. 39(b)–(c) laws to laws for any Directive Principle.</td><td>Expansion struck down in <i>Minerva Mills</i>.</td></tr>
+        <tr><td>Ministerial advice</td><td>Art. 74 made the President’s duty to act on advice explicit.</td><td>44th allowed one reconsideration.</td></tr>
+        <tr><td>Legislative terms</td><td>Lok Sabha and Assembly terms raised to six years.</td><td>44th restored five years.</td></tr>
+        <tr><td>Tribunals</td><td>Part XIVA, Arts. 323A–323B.</td><td>Retained; judicial review preserved by <i>L. Chandra Kumar</i>.</td></tr>
+        <tr><td>Amending power</td><td>Art. 368(4) barred court challenge; 368(5) asserted no limit.</td><td>Both invalidated in <i>Minerva Mills</i>.</td></tr>
+        <tr><td>Courts</td><td>Arts. 32A, 131A, 144A, 226A, 228A restricted judicial functions.</td><td>Omitted by the 43rd Amendment.</td></tr>
+        <tr><td>Federal Lists</td><td>Five subjects moved to the Concurrent List.</td><td>Retained.</td></tr>
+        <tr><td>Delimitation</td><td>Freeze based on 1971 population figures.</td><td>Extended and modified by the 84th and 87th.</td></tr>
+        <tr><td>Emergency reach</td><td>National Emergency possible for the whole or any part of India.</td><td>Read with the 44th’s safeguards.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="sub">🪷 Preamble: three expressions</h3>
+    <div class="flow">
+      <div class="node"><b>Before</b>Sovereign Democratic Republic</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>After</b>Sovereign Socialist Secular Democratic Republic</div><span class="arrow" aria-hidden="true">+</span>
+      <div class="node"><b>Also</b>“Unity and integrity of the Nation”</div>
+    </div>
+    <p>The Preamble can be amended under Art. 368, subject to the basic structure. Inserting “Secular” did not mean India lacked religious equality before 1976 (Arts. 14–15, 25–28 existed), and “Socialist” does not freeze one economic model.</p>
+
+    <h3 class="sub">🧍 Fundamental Duties — the complete eleven</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Art. 51A</th><th>Duty</th><th>Cue</th></tr></thead>
+      <tbody>
+        <tr><td>(a)</td><td>Abide by the Constitution; respect its ideals, institutions, the Flag and the Anthem.</td><td>📜 Constitution</td></tr>
+        <tr><td>(b)</td><td>Cherish the noble ideals of the freedom struggle.</td><td>🕊️ Freedom</td></tr>
+        <tr><td>(c)</td><td>Uphold and protect sovereignty, unity and integrity.</td><td>🇮🇳 Nation</td></tr>
+        <tr><td>(d)</td><td>Defend the country and render national service when called upon.</td><td>🛡️ Defence</td></tr>
+        <tr><td>(e)</td><td>Promote harmony and brotherhood; renounce practices derogatory to women’s dignity.</td><td>🤝 Harmony</td></tr>
+        <tr><td>(f)</td><td>Value and preserve the composite cultural heritage.</td><td>🏺 Heritage</td></tr>
+        <tr><td>(g)</td><td>Protect the natural environment; show compassion for living creatures.</td><td>🌿 Environment</td></tr>
+        <tr><td>(h)</td><td>Develop scientific temper, humanism, inquiry and reform.</td><td>🔬 Inquiry</td></tr>
+        <tr><td>(i)</td><td>Safeguard public property and abjure violence.</td><td>🏛️ Property</td></tr>
+        <tr><td>(j)</td><td>Strive towards excellence in individual and collective activity.</td><td>🌟 Excellence</td></tr>
+        <tr><td>(k)</td><td>Parent or guardian to provide educational opportunities to a child aged 6–14.</td><td>🎓 86th Amendment</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout tip">🔍 <b>Legal character:</b> Art. 51A addresses citizens. Duties are not independently enforceable like Fundamental Rights, but legislation can give effect to them and courts use them as interpretive aids.</div>
+
+    <h3 class="sub">🌱 The three inserted Directive Principles</h3>
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>⚖️ 39A · Justice</h3><p>Equal justice and free legal aid. Connect with Arts. 14 and 21.</p></div>
+      <div class="card" style="--accent:var(--blue)"><h3>🏭 43A · Workers</h3><p>Workers’ participation in management of industrial undertakings.</p></div>
+      <div class="card" style="--accent:var(--em)"><h3>🌳 48A · Environment</h3><p>Protect and improve the environment; safeguard forests and wildlife. Connect with Art. 51A(g).</p></div>
+    </div>
+    <div class="mnemonic"><span class="lab">🧠 J–W–E</span><b>Justice 39A · Workers 43A · Environment 48A.</b></div>
+
+    <h3 class="sub">⚖️ Article 31C: the constitutional balance</h3>
+    <p>The 25th Amendment inserted Art. 31C for laws giving effect to Art. 39(b)–(c); it shields them from challenge under Arts. 14 and 19 (and, originally, 31). <i>Kesavananda</i> did not preserve the clause making a legislature’s declaration conclusive. The 42nd tried to extend the shield to <b>every</b> Directive Principle; <i>Minerva Mills</i> invalidated that expansion, so only the narrower 39(b)–(c) protection survives. In <i>Property Owners Association v. State of Maharashtra</i> (2024) the Court confirmed that position and held that not every privately owned resource is automatically a “material resource of the community” under Art. 39(b).</p>
+
+    <h3 class="sub">🗺️ Five transfers to the Concurrent List</h3>
+    <div class="pills">
+      <span class="pill">🎓 Education · Entry 25</span><span class="pill">🌳 Forests · Entry 17A</span>
+      <span class="pill">🦌 Wild animals &amp; birds · Entry 17B</span><span class="pill">⚖️ Weights &amp; measures · Entry 33A</span>
+      <span class="pill">🏛️ Administration of justice · Entry 11A</span>
+    </div>
+    <div class="mnemonic"><span class="lab">🧠 E–F–W–W–J</span><b>E</b>ducation · <b>F</b>orests · <b>W</b>ild animals · <b>W</b>eights &amp; measures · <b>J</b>ustice administration (courts other than the Supreme Court and High Courts).</div>
+
+    <h3 class="sub">🏛️ Tribunals without extinguishing judicial review</h3>
+    <p>Art. 323A covers administrative tribunals (Parliament legislates); Art. 323B covers tribunals for specified subjects such as taxation and industrial disputes. <i>L. Chandra Kumar</i> (1997) held that constitutional review under Arts. 226/227 and 32 cannot be wholly excluded, so tribunals supplement rather than replace the superior courts.</p>
+
+    <div class="trap">🚨 <b>Never write</b> “the 44th Amendment struck down the Art. 31C expansion.” <b>The Supreme Court did, in 1980.</b> Legislative reversal and judicial invalidation are different events.</div>
+  </div>
+</section>
+
+<!-- ================= ACT V · 44TH ================= -->
+<section id="restoration" data-scene="44" style="--accent:var(--em)">
+  <div class="reveal">
+    <span class="kicker">🛡️ Act V · Liberty After the Emergency</span>
+    <h2 class="title">🛡️ 44th Amendment, 1978 — <span>Safeguards Restored</span></h2>
+    <p class="lede">Enacted by the post-Emergency Janata-era Parliament, the 44th strengthened democratic and civil-liberty safeguards. Its title year is 1978; assent came in 1979. Enacted text, notified commencement and current operative law are not always identical.</p>
+
+    <h3 class="sub">🏠 Property: from Fundamental Right to constitutional right</h3>
+    <div class="flow">
+      <div class="node"><b>Before</b>Arts. 19(1)(f) and 31 · Part III</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>44th Amendment</b>Both omitted</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>Now</b>Art. 300A · Part XII</div>
+    </div>
+    <div class="quote">“No person shall be deprived of his property save by authority of law.”</div>
+    <p>Art. 300A protects <b>persons</b>, not only citizens. Executive action without legal authority cannot deprive anyone of property. Writ relief is ordinarily sought under Art. 226; Art. 32 is generally unavailable for Art. 300A alone because it is no longer a Fundamental Right. <i>K.T. Plantation</i> (2011) is key on public purpose and compensation scrutiny.</p>
+
+    <h3 class="sub">🚨 Article 352: the new safeguard architecture</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Safeguard</th><th>Current rule</th></tr></thead>
+      <tbody>
+        <tr><td>Grounds</td><td>War, external aggression or <b>armed rebellion</b> (replacing “internal disturbance”).</td></tr>
+        <tr><td>Cabinet advice</td><td>The Union Cabinet’s decision must be communicated to the President <b>in writing</b>.</td></tr>
+        <tr><td>Initial approval</td><td>Both Houses within <b>one month</b> (earlier two), with a special rule if the Lok Sabha is dissolved.</td></tr>
+        <tr><td>Approval majority</td><td>Total-membership majority plus two-thirds present and voting, in each House.</td></tr>
+        <tr><td>Continuation</td><td>Fresh approval every <b>six months</b>.</td></tr>
+        <tr><td>Revocation</td><td>The President must revoke if the Lok Sabha passes a disapproval resolution.</td></tr>
+        <tr><td>Special sitting</td><td>One-tenth of Lok Sabha members can give notice; a sitting must be held within fourteen days.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">📌 “Internal disturbance” still appears in <b>Art. 355</b>. Replacing it in Art. 352 did not erase it from the whole Constitution.</div>
+
+    <h3 class="sub">🕊️ Articles 358 and 359 — two different mechanisms</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Question</th><th>Article 358</th><th>Article 359</th></tr></thead>
+      <tbody>
+        <tr><td>Concerns</td><td>Article 19 freedoms</td><td>Right to move courts to enforce specified rights</td></tr>
+        <tr><td>Trigger</td><td>Emergency on <b>war or external aggression</b> only</td><td>A Presidential order during a National Emergency</td></tr>
+        <tr><td>Armed rebellion?</td><td>No automatic operation</td><td>Possible, within the order’s terms and limits</td></tr>
+        <tr><td>Arts. 20 and 21</td><td>Not its subject</td><td><b>Cannot</b> be included in any suspension order</td></tr>
+      </tbody>
+    </table></div>
+    <p>“Fundamental Rights are suspended” is therefore imprecise. Art. 359 suspends the <i>right to move courts</i> for named rights; always identify the right, the order and the clause.</p>
+
+    <h3 class="sub">⏳ Preventive detention — the uncommenced change</h3>
+    <div class="trap">🚨 <b>High-yield correction:</b> Section 3 of the 44th Amendment, which sought to amend Art. 22 (Advisory Board review period reduced from three months to two), <b>has never been brought into force</b>. Do not state that operative Art. 22 uses the two-month rule. See <i>A.K. Roy v. Union of India</i> (1982).</div>
+
+    <h3 class="sub">🏛️ Other democratic safeguards</h3>
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>👑 Article 74</h3><p>The President may send ministerial advice back <b>once</b>; reconsidered advice binds. Do not copy this proviso into Art. 163 (Governor).</p></div>
+      <div class="card" style="--accent:var(--blue)"><h3>🗳️ Arts. 83 &amp; 172</h3><p>Five-year normal terms restored. Emergency extensions remain a separate, constitutionally limited matter.</p></div>
+      <div class="card" style="--accent:var(--rose)"><h3>📰 Article 361A</h3><p>Protects substantially true reports of legislative proceedings, with exceptions for malice and secret sittings.</p></div>
+      <div class="card" style="--accent:var(--vio)"><h3>🏫 Article 30(1A)</h3><p>Compulsory-acquisition laws must not restrict the Art. 30(1) right of minority educational institutions through the amount fixed.</p></div>
+      <div class="card" style="--accent:var(--saf)"><h3>🚨 Article 356</h3><p>Continuation beyond one year needs a National Emergency in operation plus Election Commission certification of election difficulties.</p></div>
+      <div class="card" style="--accent:var(--em)"><h3>⚖️ Election review</h3><p>Art. 329A was omitted, undoing the special election-dispute arrangement of the 39th Amendment; Art. 257A also went.</p></div>
+    </div>
+
+    <div class="mnemonic"><span class="lab">🧠 The 44th safeguard code</span><b>P–A–W–M–20/21–5</b><br><b>P</b>roperty moved · <b>A</b>rmed rebellion · <b>W</b>ritten Cabinet decision · <b>M</b>onth for approval · Arts. <b>20/21</b> protected · <b>5</b>-year terms restored.</div>
+  </div>
+</section>
+
+<!-- ================= ACT VI · COMPARE ================= -->
+<section id="compare" data-scene="42↔44" style="--accent:var(--pink)">
+  <div class="reveal">
+    <span class="kicker">🪞 Act VI · Three Actors, Not Two</span>
+    <h2 class="title">🪞 42nd, 43rd &amp; 44th — <span>Who Actually Changed What?</span></h2>
+    <p class="lede">The post-Emergency settlement was not one blanket repeal. Parliament acted through the 43rd and 44th Amendments, and the Supreme Court separately invalidated particular provisions. Many 42nd additions remain in force.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>42nd measure</th><th>Who changed it</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Arts. 31D, 32A, 131A, 144A, 226A, 228A</td><td>43rd Amendment (1977)</td><td>Omitted.</td></tr>
+        <tr><td>Six-year legislative terms</td><td>44th Amendment (1978)</td><td>Five years restored.</td></tr>
+        <tr><td>Binding advice in Art. 74</td><td>44th Amendment</td><td>One reconsideration allowed; binding force retained.</td></tr>
+        <tr><td>Art. 257A (armed forces deployment)</td><td>44th Amendment</td><td>Omitted.</td></tr>
+        <tr><td>Art. 31C expansion</td><td>Supreme Court, <i>Minerva Mills</i> (1980)</td><td>Invalidated.</td></tr>
+        <tr><td>Art. 368(4) and (5)</td><td>Supreme Court, <i>Minerva Mills</i> (1980)</td><td>Invalidated.</td></tr>
+        <tr><td>Preamble words, Fundamental Duties, Arts. 39A/43A/48A</td><td>Not repealed</td><td>Retained.</td></tr>
+        <tr><td>Concurrent List transfers</td><td>Not reversed</td><td>Retained.</td></tr>
+        <tr><td>Tribunal framework (323A–B)</td><td><i>L. Chandra Kumar</i> (1997)</td><td>Framework stays; total exclusion of constitutional review rejected.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="quote">The 42nd enlarged and centralised power; the 43rd and 44th restored important safeguards; judicial review preserved the Constitution’s deeper limits.</div>
+  </div>
+</section>
+
+<!-- ================= ACT VII · THEMES ================= -->
+<section id="themes" data-scene="MAPS" style="--accent:var(--blue)">
+  <div class="reveal">
+    <span class="kicker">🧩 Act VII · Connect, Do Not Memorise in Isolation</span>
+    <h2 class="title">🧩 Thematic Pathways — <span>Six Connected Stories</span></h2>
+
+    <h3 class="sub">① 🌾 Property, land reform and constitutional review</h3>
+    <div class="flow">
+      <div class="node"><b>1st · 1951</b>31A · 31B · Ninth Schedule</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>4th / 17th</b>Land-reform protection widened</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>25th · 1971</b>Art. 31C · Art. 39(b)–(c)</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>44th · 1978</b>Property becomes Art. 300A</div>
+    </div>
+    <p><i>Waman Rao</i> (1981) and <i>I.R. Coelho</i> (2007) make <b>24 April 1973</b> the crucial Ninth Schedule date: laws inserted on or after it are open to basic-structure-based challenge. The test is the effect on protected constitutional essentials, not the Schedule label.</p>
+
+    <h3 class="sub">② 🎯 Reservation: admission, recruitment and promotion</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Amendment</th><th>Provision</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>1st</td><td>15(4)</td><td>Special provisions for SEBCs, SCs and STs.</td></tr>
+        <tr><td>77th</td><td>16(4A)</td><td>Enables SC/ST reservation in promotion.</td></tr>
+        <tr><td>81st</td><td>16(4B)</td><td>Backlog vacancies treated as a separate class for the 50% calculation.</td></tr>
+        <tr><td>82nd</td><td>Proviso to 335</td><td>Relaxation of qualifying marks in SC/ST promotion.</td></tr>
+        <tr><td>85th</td><td>16(4A)</td><td>Consequential seniority; retrospective from 17 June 1995.</td></tr>
+        <tr><td>93rd</td><td>15(5)</td><td>Admission, including private aided/unaided institutions; minority exception.</td></tr>
+        <tr><td>103rd</td><td>15(6), 16(6)</td><td>EWS framework; up to 10% additional reservation.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout warn">⚖️ <b>Promotion is enabling, not automatic:</b> <i>M. Nagaraj</i> (2006) and <i>Jarnail Singh</i> (2018) must be read together. <i>Jarnail Singh</i> removed the need to show SC/ST backwardness with quantifiable data, but inadequacy of representation and administrative efficiency remain relevant.</div>
+    <div class="mnemonic"><span class="lab">🧠 Promotion quartet</span><b>77 opens · 81 carries backlog · 82 relaxes marks · 85 adds seniority.</b></div>
+
+    <h3 class="sub">③ 🏘️ Local democracy: 73rd versus 74th</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Feature</th><th>73rd Amendment</th><th>74th Amendment</th></tr></thead>
+      <tbody>
+        <tr><td>Act year / commencement</td><td>1992 / 24 April 1993</td><td>1992 / 1 June 1993</td></tr>
+        <tr><td>Institutions</td><td>Panchayats</td><td>Municipalities</td></tr>
+        <tr><td>Part / Articles</td><td>IX / 243–243O</td><td>IXA / 243P–243ZG</td></tr>
+        <tr><td>Schedule</td><td>Eleventh · 29 subjects</td><td>Twelfth · 18 subjects</td></tr>
+        <tr><td>Women</td><td>At least one-third · 243D</td><td>At least one-third of direct seats · 243T</td></tr>
+        <tr><td>Elections</td><td>State Election Commission · 243K</td><td>State Election Commission · 243ZA</td></tr>
+        <tr><td>Finance</td><td>State Finance Commission · 243I</td><td>Same commission · 243Y</td></tr>
+        <tr><td>Planning</td><td>District-level arrangements</td><td>DPC · 243ZD; MPC · 243ZE</td></tr>
+      </tbody>
+    </table></div>
+    <p>Both give a normal five-year term and timely elections; after premature dissolution the new body serves the <i>remainder</i> of the term (with a six-month exception). Panchayats need no intermediate tier in a State with population under 20 lakh. Municipal forms: Nagar Panchayat, Municipal Council, Municipal Corporation. The Schedules do not transfer functions automatically — devolution of <b>functions, funds and functionaries</b> depends on State law. Art. 243M and 243ZC give territorial exceptions; PESA (1996) extends a modified framework to Fifth Schedule areas.</p>
+    <div class="mnemonic"><span class="lab">🧠 73 → 29, 74 → 18</span><b>Villages 73 · eleven · twenty-nine. Cities 74 · twelve · eighteen.</b></div>
+
+    <h3 class="sub">④ 🔀 Anti-defection: stability versus deliberation</h3>
+    <p>The 52nd Amendment inserted the Tenth Schedule. Disqualification follows voluntarily giving up party membership or defying the whip; an independent member who joins a party is covered, and a nominated member has a six-month window to join. A valid <b>merger</b> needs at least two-thirds of the legislature party. The 91st Amendment removed the old one-third <b>split</b> exception but kept merger. The Speaker or Chairman ordinarily decides, subject to judicial review; Arts. 103 and 192 govern different disqualification routes. <i>Kihoto Hollohan</i> (1992) upheld the scheme but invalidated paragraph 7 (jurisdiction bar) for want of State ratification.</p>
+    <div class="grid two">
+      <div class="card calc" style="--accent:var(--rose)">
+        <h3>🧮 Ministry-size calculator (91st Amendment)</h3>
+        <label>House strength <input id="minN" type="number" min="1" max="1000" value="230"></label>
+        <label>Government
+          <select id="minType"><option value="state">State (Art. 164(1A))</option><option value="union">Union (Art. 75(1A))</option></select></label>
+        <output id="minOut" aria-live="polite"></output>
+      </div>
+      <div class="card" style="--accent:var(--gold)">
+        <h3>🧠 Method</h3>
+        <p>Compute $$0.15 \times N$$, round <b>down</b>, include the PM or CM. A State ministry has a <b>floor of 12</b>; the Union has none. Examples: MP (230) → 34; Lok Sabha (543) → 81; a 40-member Assembly → 12 (floor applies).</p>
+      </div>
+    </div>
+
+    <h3 class="sub">⑤ 🎓 Education: right, directive and duty</h3>
+    <div class="flow">
+      <div class="node"><b>Art. 21A</b>Free and compulsory education · 6–14</div><span class="arrow" aria-hidden="true">+</span>
+      <div class="node"><b>Art. 45</b>Early childhood care · below 6</div><span class="arrow" aria-hidden="true">+</span>
+      <div class="node"><b>Art. 51A(k)</b>Parent/guardian’s duty · 6–14</div>
+    </div>
+    <p>The 86th Amendment is titled 2002; Art. 21A and the RTE Act, 2009 became operative on <b>1 April 2010</b>. <i>Unni Krishnan</i> (1993) is the main pre-amendment link; <i>Pramati</i> (2014) concerns minority institutions.</p>
+
+    <h3 class="sub">⑥ 🗺️ Territory: reorganisation is not always cession</h3>
+    <p>Art. 3 allows internal reorganisation by ordinary law; the affected State’s views must be sought but it holds no veto. <b>Cession</b> of Indian territory to a foreign State needs a constitutional amendment (<i>Berubari</i>, 1960), whereas settling an uncertain boundary by agreement is different (<i>Maganbhai Patel</i>, 1969). Connect the 9th and 100th Amendments with this distinction.</p>
+  </div>
+</section>
+
+<!-- ================= ACT VIII · RECENT ================= -->
+<section id="recent" data-scene="101–106" style="--accent:var(--cy)">
+  <div class="reveal">
+    <span class="kicker">✨ Act VIII · Contemporary Constitutional Design</span>
+    <h2 class="title">✨ GST, Backward Classes, EWS &amp; <span>Women’s Representation</span></h2>
+
+    <h3 class="sub">🧾 101st Amendment, 2016: fiscal federalism</h3>
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>246A · Power</h3><p>Special GST competence for Parliament and State Legislatures; Parliament alone for inter-State supply.</p></div>
+      <div class="card" style="--accent:var(--blue)"><h3>269A · Inter-State GST</h3><p>Levied and collected by the Union, apportioned as provided; imports count as inter-State supply.</p></div>
+      <div class="card" style="--accent:var(--em)"><h3>279A · GST Council</h3><p>Chaired by the Union Finance Minister; coordinates rates, exemptions and thresholds by recommendation.</p></div>
+    </div>
+    <p>Council decisions need <b>three-fourths of weighted votes</b> of members present and voting: the Union holds one-third weight, States together two-thirds; quorum is half the members. <i>Union of India v. Mohit Minerals</i> (2022) held the Council’s recommendations are not binding on the Union or States as legislation. Alcohol for human consumption is outside GST, and petroleum products have a deferred-levy arrangement (Art. 279A(5)). The amendment (2016) is distinct from the main rollout on 1 July 2017.</p>
+    <div class="mnemonic"><span class="lab">🧠 Triple-A</span><b>246A Authority · 269A Apportionment · 279A Advisory Council.</b></div>
+
+    <h3 class="sub">🧑‍🤝‍🧑 102nd → Maratha judgment → 105th</h3>
+    <div class="flow">
+      <div class="node"><b>102nd · 2018</b>NCBC constitutional · 338B / 342A</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>Jaishri Patil · 2021</b>Majority reading limited State identification</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>105th · 2021</b>State/UT lists expressly restored</div>
+    </div>
+    <p>The Central List and the State/UT lists are separate and may differ. Constitutional status for the NCBC does not give it a free-standing power to decide every reservation question.</p>
+
+    <h3 class="sub">🎯 103rd Amendment, 2019: EWS</h3>
+    <p>Arts. 15(6) and 16(6) enable special provisions for economically weaker sections outside the classes covered by the existing reservation clauses, of <b>up to 10%</b> in addition. Art. 15(6) covers admission (including private aided/unaided institutions, excluding Art. 30(1) minority institutions); Art. 16(6) covers appointments. <i>Janhit Abhiyan</i> (2022) upheld the amendment by 3–2. The income and asset criteria are not written in the Constitution.</p>
+
+    <h3 class="sub">🗳️ 104th Amendment, 2019</h3>
+    <p>Art. 334 extended SC/ST legislative reservation to <b>eighty years</b> from the Constitution’s commencement (January 2030). Anglo-Indian nomination was <b>not</b> extended beyond seventy years, so the Lok Sabha’s maximum strength fell from 552 to 550.</p>
+
+    <h3 class="sub">👩 106th Amendment, 2023: Nari Shakti Vandan Adhiniyam</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Provision</th><th>Function</th></tr></thead>
+      <tbody>
+        <tr><td>239AA</td><td>Women’s reservation for Delhi’s Legislative Assembly.</td></tr>
+        <tr><td>330A</td><td>As nearly as may be one-third of directly elected Lok Sabha seats, including within SC/ST seats.</td></tr>
+        <tr><td>332A</td><td>Corresponding reservation in State Legislative Assemblies.</td></tr>
+        <tr><td>334A</td><td>Trigger, duration, continuance and rotation provisions.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="flow">
+      <div class="node"><b>📜 Enacted</b>Constitution (128th Amendment) Bill → 106th Act</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>📊 Census</b>First census figures after commencement</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>🗺️ Delimitation</b>Exercise undertaken for this purpose</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>👩 Operative</b>Subject to Art. 334A</div>
+    </div>
+    <div class="trap">🚨 <b>Implementation precision:</b> enactment alone did not make reserved seats operational. The reservation excludes the Rajya Sabha and Legislative Councils, and does not replace local-body quotas (Arts. 243D, 243T). Art. 334A has a fifteen-year formulation from commencement, extendable by Parliament; rotation follows each delimitation as Parliament provides. Quote the clause for exact duration questions.</div>
+  </div>
+</section>
+
+<!-- ================= ACT IX · CASES ================= -->
+<section id="cases" data-scene="LAW" style="--accent:var(--rose)">
+  <div class="reveal">
+    <span class="kicker">⚖️ Act IX · Judicial Guardrails</span>
+    <h2 class="title">⚖️ Landmark Cases — <span>Trigger, Test &amp; Outcome</span></h2>
+    <div id="caseTimeline" class="timeline"></div>
+    <div class="callout warn">📚 <b>Case discipline:</b> a historical trigger is not necessarily a judgment on the amendment itself. <i>Champakam Dorairajan</i> preceded the 1st Amendment and <i>Madhav Rao Scindia</i> preceded the 26th, while <i>Janhit Abhiyan</i> directly decided the 103rd’s validity.</div>
+  </div>
+</section>
+
+<!-- ================= ACT X · LAB ================= -->
+<section id="lab" data-scene="RECALL" style="--accent:var(--vio)">
+  <div class="reveal">
+    <span class="kicker">🧠 Act X · Retrieval Beats Rereading</span>
+    <h2 class="title">🧠 Memory Lab — <span>Think Before You Reveal</span></h2>
+    <p class="lede">Say the amendment, article and principle aloud first, then reveal. For Mains, add a limitation, a judgment and a balanced conclusion.</p>
+    <div class="grid">
+      <div class="card" style="--accent:var(--gold)"><h3>🎓 Education triad</h3><p><b>21A right · 45 early childhood · 51A(k) guardian’s duty.</b></p></div>
+      <div class="card" style="--accent:var(--em)"><h3>🏘️ Local pair</h3><p><b>73 → villages → 29; 74 → cities → 18.</b></p></div>
+      <div class="card" style="--accent:var(--blue)"><h3>🧾 GST triple-A</h3><p><b>246A authority; 269A apportionment; 279A Council.</b></p></div>
+      <div class="card" style="--accent:var(--rose)"><h3>🌐 Language ladder</h3><p><b>21st Sindhi; 71st Ko–Ma–Ne; 92nd Bo–Do–Mai–San.</b> 14 → 22 languages.</p></div>
+    </div>
+    <div id="quizList"></div>
+
+    <h3 class="sub">✍️ Mains answer architecture</h3>
+    <div class="flow">
+      <div class="node"><b>① Context</b>What problem arose?</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>② Text</b>Which Articles or Schedules?</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>③ Judicial lens</b>What limit or reading applies?</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>④ Evaluation</b>Rights · federalism · representation</div><span class="arrow" aria-hidden="true">→</span>
+      <div class="node"><b>⑤ Conclusion</b>Reform with constitutional restraint</div>
+    </div>
+    <div class="mnemonic"><span class="lab">🎯 Fifteen-amendment priority chain</span><b>1–7–24–25–42–44–52–61–73–74–86–91–101–103–106</b><br>Land · States · Amending power · 31C · Mini-Constitution · Restoration · Defection · Vote at 18 · Panchayats · Municipalities · Education · Ministry size · GST · EWS · Women.</div>
+    <div class="quote">India’s amendment process is neither a licence for unlimited parliamentary sovereignty nor a ban on constitutional transformation: it permits reform while protecting the Constitution’s essential identity.</div>
+  </div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section id="checklist" data-scene="READY" style="--accent:var(--em)">
+  <div class="reveal">
+    <span class="kicker">✅ Final Readiness</span>
+    <h2 class="title">✅ Your Revision <span>Control Room</span></h2>
+    <p class="lede">Tick only what you can explain without looking. Progress is stored in this browser when local storage is available.</p>
+    <div class="check-progress" role="progressbar" aria-label="Revision completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="checkBar"></span></div>
+    <p class="qstat" id="checkStatus" aria-live="polite"></p>
+    <div class="checklist" id="checkItems"></div>
+    <button class="btn" id="resetChecks" type="button">↺ Reset progress</button>
+  </div>
+</section>
+
+<!-- ================= SOURCES ================= -->
+<section id="sources" data-scene="VERIFY" style="--accent:var(--gold)">
+  <div class="reveal">
+    <span class="kicker">📚 Source Discipline</span>
+    <h2 class="title">🔎 Verify the Text — <span>Then Trust the Notes</span></h2>
+    <p class="lede">Use the official Constitution for operative clauses, the original Amendment Acts for precise textual changes, gazette notifications for commencement, and official judgments for holdings. Coverage here ends at the 106th Act (2023); later developments need separate checking.</p>
+    <ul class="source-list">
+      <li><b>Legislative Department:</b> <a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">official Constitution of India</a>.</li>
+      <li><b>India Code:</b> <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">Acts and statutory records</a>.</li>
+      <li><b>Supreme Court of India:</b> <a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">judgments and orders</a>.</li>
+      <li><b>e-Gazette:</b> <a href="https://egazette.gov.in/" target="_blank" rel="noopener noreferrer">Acts and commencement notifications</a>.</li>
+    </ul>
+    <div class="trap">🔎 <b>Four final accuracy checks:</b> title year ≠ assent date · enactment ≠ commencement · constitutional permission ≠ automatic implementation · legislative reversal ≠ judicial invalidation.</div>
+    <div class="pills">
+      <a class="chip" href="#foundation">🏛️ Procedure</a><a class="chip" href="#structure">⚖️ Limits</a><a class="chip" href="#mini">🔥 Transformation</a>
+      <a class="chip" href="#restoration">🛡️ Safeguards</a><a class="chip" href="#recent">👩 Representation</a>
+    </div>
+    <div class="mnemonic"><span class="lab">🎬 Final frame</span><b>Change the text. Preserve the structure. Expand democracy. Protect constitutional identity.</b></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="final">“A living Constitution. A limited power. An enduring democratic promise.”</p>
+  <p>Indian Constitutional Amendments · Article 368 · Basic Structure · Five-Dimension Study Edition</p>
+  <div class="sig">PIYUSH PARTE</div>
+  <p>A Constitutional Study Film</p>
+  <div class="heart-tribute tilt">
+    <span class="heart-icon" aria-hidden="true">❤️</span>
+    <span class="tribute-en">En Nenjil Kudiyirukkum</span>
+    <span class="tribute-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+  <p style="margin-top:20px;font-size:.8rem;color:var(--dim)">Designed for learning and revision. Verify update-sensitive law before examination or professional use.</p>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let effectsPaused = false;
+  const canAnimate = () => !reducedMotion.matches && !effectsPaused;
+
+  /* Row format: number, Act-title year, priority, title, provisions, change, judicial connection, exam insight.
+     (Apostrophes inside strings are typographic so single-quoted JS strings stay valid.) */
+  const amendments = [
+    [1,1951,1,'🌾 Rights, land reform & the Ninth Schedule','Articles 15(4), 19(2), 31A, 31B; Ninth Schedule.','Enabled special provisions for SEBCs, SCs and STs; added public order, friendly relations with foreign States and incitement to an offence as speech restrictions; created land-reform protections and the Ninth Schedule.','Trigger: Champakam Dorairajan (1951). Direct validity: Shankari Prasad (1951). Later limit: I.R. Coelho (2007).','Prelims: 15(4), 31A/31B, Ninth Schedule. Mains: social reform versus rights; Ninth Schedule is not absolute immunity.'],
+    [4,1955,2,'🏠 Property acquisition & compensation','Articles 31, 31A, 305; Ninth Schedule.','Modified acquisition and compensation provisions, widened protected categories and added laws to the Ninth Schedule.','Context: State of West Bengal v. Bela Banerjee (1954); later review in Kesavananda Bharati.','Separate compensation-era Art. 31 from the later Art. 300A.'],
+    [7,1956,1,'🗺️ Reorganisation of States','Arts. 1, 3, 80, 81, 153, 214, 230, 231, 239 and others; First, Second, Fourth and Seventh Schedules.','Replaced the Part A/B/C/D classification with States and Union Territories (14 States, 6 UTs); allowed a common Governor and common High Courts; inserted Arts. 350A–350B for mother-tongue education and a Special Officer for linguistic minorities.','Thematic: Babulal Parate v. State of Bombay (1960) on Art. 3; not a direct invalidation.','Study with, but do not equate with, the States Reorganisation Act, 1956. Common-Governor proviso to Art. 153 is often tested.'],
+    [9,1960,2,'🤝 India–Pakistan territorial settlement','First Schedule.','Gave constitutional authority for territorial transfers under the India–Pakistan agreements (Berubari and related adjustments).','In re Berubari Union (1960): cession of Indian territory needs a constitutional amendment; Art. 3 is not enough.','Compare foreign cession, internal reorganisation and boundary demarcation.'],
+    [10,1961,3,'🗺️ Dadra and Nagar Haveli','Article 240; First Schedule.','Incorporated Dadra and Nagar Haveli as a Union Territory.','No essential direct validity case.','Distinguish from the later statutory merger with Daman and Diu.'],
+    [12,1962,3,'🌊 Goa, Daman and Diu','Article 240; First Schedule.','Incorporated Goa, Daman and Diu as a Union Territory after liberation.','No standard direct case.','1962 incorporation differs from 1987 Goa statehood.'],
+    [13,1962,2,'⛰️ Special provisions for Nagaland','Article 371A inserted; Article 170 modified.','Protected specified Naga religious and social practices, customary law and land arrangements through the Assembly-resolution mechanism.','Read the exact text of Art. 371A; it is not a blanket exemption.','Parliamentary Acts in the protected fields apply only if the Nagaland Assembly resolves so.'],
+    [14,1962,2,'🏛️ Pondicherry and UT institutions','Arts. 81, 240; Article 239A inserted; First and Fourth Schedules.','Incorporated Pondicherry (now Puducherry) and enabled legislatures or Councils of Ministers for specified UTs.','Thematic: later UT governance cases.','Art. 239A is not Delhi’s Art. 239AA.'],
+    [15,1963,2,'⚖️ High Courts and judicial administration','Arts. 124, 128, 217, 222, 224, 226, 297, 311, 316; Article 224A inserted.','Raised High Court judges’ retirement age from 60 to 62; widened writ jurisdiction on cause of action; allowed retired judges to sit under Art. 224A.','Thematic: Art. 226 territorial-jurisdiction cases such as Kusum Ingots (2004).','Supreme Court retirement 65; High Courts 62.'],
+    [16,1963,2,'🇮🇳 Sovereignty and integrity','Arts. 19, 84, 173; Third Schedule.','Added sovereignty and integrity of India as a restriction ground for specified Art. 19 freedoms and added oath commitments.','Thematic: reasonable-restriction jurisprudence.','Include the Third Schedule in article-schedule questions.'],
+    [17,1964,2,'🌾 Expanded land-reform protection','Article 31A; Ninth Schedule.','Widened the definition of estate and added more land-reform laws to the Ninth Schedule.','Sajjan Singh v. State of Rajasthan (1965) upheld the earlier approach; Golaknath later reversed it.','Art. 31B originates in the 1st Amendment, not here.'],
+    [18,1966,3,'🗺️ Article 3 clarified','Article 3 explanations.','Clarified that State includes Union Territories for specified Art. 3 purposes and that Parliament can combine parts of States or UTs.','Thematic: Art. 3 cases.','Read the two senses of “State” carefully.'],
+    [19,1966,3,'🗳️ Election disputes to High Courts','Article 324.','Removed the Election Commission’s function of appointing election tribunals; election petitions went to High Courts by statute.','Thematic: Representation of the People Act jurisprudence.','Constitutional amendment and statute do different jobs.'],
+    [21,1967,2,'🗣️ Sindhi enters the Eighth Schedule','Eighth Schedule.','Added Sindhi, raising listed languages from 14 to 15.','No direct validity case.','Ladder: 21st Sindhi; 71st +3; 92nd +4; total 22.'],
+    [22,1969,2,'⛰️ Autonomous State within Assam','Article 244A inserted; Arts. 275, 371 amended; Article 371B inserted.','Enabled an autonomous State within Assam and a legislative committee for tribal areas.','Thematic: asymmetric federalism.','Do not confuse 244A (autonomous State) with 371B (committee).'],
+    [23,1969,3,'🗳️ Representation adjustments','Arts. 330, 332, 333, 334.','Adjusted specified representation, including Nagaland ST seats and Anglo-Indian nomination; extended Art. 334 from 20 to 30 years.','No essential direct validity case.','First link in the Art. 334 extension chain.'],
+    [24,1971,1,'🏛️ Express constituent power','Article 13(4); Article 368 including clauses (1) and (3).','Declared that Art. 13 does not apply to Art. 368 amendments, affirmed power to add, vary or repeal, and made Presidential assent mandatory.','Response to Golaknath (1967); upheld in Kesavananda Bharati (1973), subject to basic structure.','Separate power from procedure, and constituent from ordinary legislative authority.'],
+    [25,1971,1,'⚖️ Article 31C and distributive justice','Article 31 modified; Article 31C inserted.','Replaced “compensation” with “amount” in the acquisition clause and protected Art. 39(b)–(c) laws. Assent in 1972.','Kesavananda kept the core protection but rejected the conclusive-declaration clause; Minerva Mills rejected the 42nd’s expansion. Trigger: R.C. Cooper (1970).','39(b) = material resources for common good; 39(c) = no harmful concentration of wealth.'],
+    [26,1971,2,'👑 Privy purses abolished','Arts. 291 and 362 omitted; Article 363A inserted; Art. 366(22) amended.','Abolished privy purses and ended recognition of rulers for these purposes.','Trigger: Madhav Rao Scindia (1971). Upheld in Raghunathrao Ganpatrao v. Union of India (1993).','Republican equality over princely guarantees; amendment versus executive action.'],
+    [31,1973,3,'🪑 Lok Sabha strength raised','Arts. 81, 330, 332.','Raised the elected maximum to 545: up to 525 State seats and 20 UT seats.','No essential case.','Historical ceiling differs from the current Art. 81 position.'],
+    [35,1974,2,'⛰️ Sikkim as an associate State','Article 2A inserted; Tenth Schedule inserted; Arts. 80, 81 adjusted.','Created the short-lived associate-State status for Sikkim.','No routine case.','The original Tenth Schedule concerned Sikkim, not anti-defection.'],
+    [36,1975,1,'🇮🇳 Sikkim becomes a State','Article 371F inserted; Article 2A and old Tenth Schedule omitted; First and Fourth Schedules.','Admitted Sikkim as the 22nd State with special transitional arrangements.','R.C. Poudyal v. Union of India (1993): Sikkim representation provisions examined.','35th associate status → 36th statehood → 52nd present Tenth Schedule.'],
+    [38,1975,2,'🚨 Executive satisfaction insulated','Arts. 123, 213, 239B, 352, 356, 360.','Tried to make satisfaction for ordinances and Emergency final and unquestionable by courts.','Thematic: later review in S.R. Bommai and Krishna Kumar Singh.','Finality clauses were removed later; do not treat as operative.'],
+    [39,1975,1,'🗳️ Election-dispute immunity','Article 71 replaced; Article 329A inserted; Ninth Schedule additions.','Created special arrangements for elections of the Prime Minister and Speaker.','Indira Nehru Gandhi v. Raj Narain (1975) invalidated Art. 329A(4).','Free and fair elections and judicial review; Art. 329A omitted by the 44th.'],
+    [42,1976,1,'🔥 The Mini-Constitution','Preamble; Parts IVA and XIVA; Arts. 31C, 39, 39A, 43A, 48A, 51A, 74, 83, 172, 323A–B, 368 and more; Seventh Schedule.','Added duties and social principles, tribunals, centralising changes, six-year terms, restrictions on courts and an unlimited amending claim.','Minerva Mills (1980): Art. 31C expansion and Art. 368(4)–(5) invalid. L. Chandra Kumar (1997): review preserved.','See the dedicated chapter: separate retained, repealed and invalidated parts.'],
+    [43,1977,1,'⚖️ Judicial powers restored','Arts. 31D, 32A, 131A, 144A, 226A, 228A omitted; related changes to 145, 226, 228, 366.','Reversed major 42nd restrictions on courts and removed Art. 31D. Assent in 1978.','Context: post-Emergency restoration; distinct from Minerva Mills.','Do not credit the 44th with all restoration.'],
+    [44,1978,1,'🛡️ Democratic safeguards','Arts. 19, 22, 30, 74, 83, 172, 352, 356, 358, 359; Arts. 300A and 361A inserted; Art. 329A omitted.','Moved property out of Part III, strengthened Emergency safeguards, protected Arts. 20–21 and restored five-year terms. Assent in 1979.','A.K. Roy (1982): Art. 22 change uncommenced. K.T. Plantation (2011): Art. 300A. Puttaswamy (2017) repudiated ADM Jabalpur.','Section 3 (Art. 22) has not commenced; distinguish proposed from operative text.'],
+    [45,1980,3,'🗳️ Article 334 extension','Article 334.','Extended SC/ST seats and Anglo-Indian representation from 30 to 40 years.','No essential case.','Chain: 8th, 23rd, 45th, 62nd, 79th, 95th, 104th.'],
+    [52,1985,1,'🔀 Anti-defection law','Arts. 101, 102, 190, 191; Tenth Schedule.','Introduced disqualification for defection, adjudication by presiding officers and specified exceptions.','Kihoto Hollohan (1992) upheld the scheme; paragraph 7 failed for want of ratification.','Voluntarily giving up membership is wider than resignation; the 91st removed the split exception.'],
+    [55,1986,3,'⛰️ Arunachal Pradesh special provision','Article 371H.','Gave the Governor a special responsibility for law and order, with individual judgment, and set a minimum Assembly of 30.','Thematic: text-specific gubernatorial discretion.','Do not generalise to all Governors.'],
+    [56,1987,3,'🌊 Goa statehood framework','Article 371I; First Schedule.','Provided the framework for Goa’s statehood, including an Assembly of at least 30; Daman and Diu stayed a UT.','No essential case.','1962 incorporation versus 1987 statehood.'],
+    [58,1987,2,'📝 Authoritative Hindi text','Article 394A.','Provided for the President to publish an authoritative Hindi translation of the Constitution and amendments.','No routine case.','Art. 394A, not the Eighth Schedule, governs this.'],
+    [61,1988,1,'🗳️ Voting age reduced','Article 326.','Reduced the voting age from 21 to 18. Assent in 1989.','No specific validity case.','Adult suffrage is Art. 326; do not confuse with candidacy ages.'],
+    [65,1990,2,'🧑‍🤝‍🧑 National SC/ST Commission','Article 338.','Replaced the Special Officer with a multi-member National Commission for SCs and STs.','Thematic: constitutional commissions.','The 89th later split the SC and ST commissions.'],
+    [69,1991,1,'🏙️ National Capital Territory of Delhi','Articles 239AA and 239AB.','Created Delhi’s Legislative Assembly and Council of Ministers; police, public order and land remain outside the Assembly’s field. Based on the Balakrishnan Committee.','Government of NCT of Delhi v. Union of India (2018, 2023): representative government and allocation of powers; check later statutory changes.','Delhi is a UT, not a State; its ministry cap is 10% (Art. 239AA(5)), not 15%.'],
+    [71,1992,2,'🗣️ Three languages added','Eighth Schedule.','Added Konkani, Manipuri and Nepali; total rose from 15 to 18.','No standard case.','Mnemonic Ko–Ma–Ne.'],
+    [73,1992,1,'🏘️ Panchayati Raj','Part IX; Arts. 243–243O; Eleventh Schedule.','Constitutionalised rural local government with Gram Sabha, reservations, five-year term, finance review and a 29-subject Schedule. Commenced 24 April 1993.','K. Krishna Murthy v. Union of India (2010): local-body reservation. Kishansing Tomar (2006): timely local elections.','243A Gram Sabha; 243D reservation; 243I finance; 243K elections. Note PESA and territorial exceptions.'],
+    [74,1992,1,'🏙️ Municipal government','Part IXA; Arts. 243P–243ZG; Twelfth Schedule.','Constitutionalised urban local government with an 18-function Schedule. Commenced 1 June 1993.','Kishansing Tomar v. Municipal Corporation of Ahmedabad (2006): timely municipal elections.','DPC 243ZD; MPC 243ZE. Listing does not itself complete devolution.'],
+    [76,1994,2,'🎯 Tamil Nadu reservation law','Ninth Schedule.','Placed the Tamil Nadu 69% reservation law in the Ninth Schedule.','I.R. Coelho (2007) supplies the review framework.','Ninth Schedule inclusion is not absolute immunity; 69% is not a national rule.'],
+    [77,1995,1,'📈 SC/ST reservation in promotion','Article 16(4A).','Enabled reservation in promotion for SCs and STs inadequately represented in State services.','Background: Indra Sawhney (1992). Framework: M. Nagaraj (2006), modified by Jarnail Singh (2018).','An enabling power, not automatic reservation; read with the 81st, 82nd and 85th.'],
+    [80,2000,2,'💰 Union tax devolution','Arts. 269 and 270; Article 272 omitted.','Recast the divisible pool to cover a broader range of Union taxes; deemed effective from 1 April 1996.','Thematic: Finance Commission and fiscal federalism.','Tax sharing differs from grants and from GST rules.'],
+    [81,2000,2,'📚 Backlog vacancies','Article 16(4B).','Treated unfilled reserved vacancies carried forward as a separate class for the 50% ceiling.','M. Nagaraj (2006).','Not a removal of every reservation ceiling.'],
+    [82,2000,2,'📝 Promotion qualifying standards','Proviso to Article 335.','Allowed relaxation of qualifying marks for SC/ST promotion.','M. Nagaraj (2006); Jarnail Singh (2018).','Art. 335 balances SC/ST claims with administrative efficiency.'],
+    [84,2001,2,'🪑 Seat freeze extended','Arts. 55, 81, 82, 170, 330.','Extended the freeze on seat allocation until publication of the first census after 2026.','Thematic: delimitation and federal representation.','“After 2026” is a census-linked trigger, not an automatic date.'],
+    [85,2001,2,'📈 Consequential seniority','Article 16(4A).','Added consequential seniority to promotion reservation, retrospective from 17 June 1995.','M. Nagaraj (2006); Jarnail Singh (2018).','Mnemonic: 85 = seniority travels with promotion.'],
+    [86,2002,1,'🎓 Right to Education','Article 21A; Article 45 substituted; Article 51A(k).','Created the 6–14 education right, recast the early-childhood directive and added the parental duty.','Unni Krishnan (1993) as background; Pramati (2014) on minority institutions.','Act 2002; operative with the RTE framework from 1 April 2010.'],
+    [87,2003,2,'🗺️ Census base for delimitation','Arts. 81, 82, 170, 330.','Replaced 1991 with 2001 census figures for constituency readjustment while keeping the seat-allocation freeze.','Thematic: delimitation.','84th extends the freeze; 87th updates the population base.'],
+    [89,2003,2,'🧑‍🤝‍🧑 Separate SC and ST Commissions','Article 338 amended; Article 338A inserted.','Created separate National Commissions for SCs and STs.','Thematic: accountability institutions.','338 = SC; 338A = ST; 338B = backward classes.'],
+    [91,2003,1,'📏 Ministry limits & anti-defection','Arts. 75(1A)–(1B), 164(1A)–(1B), 361B; Tenth Schedule.','Capped Union ministries at 15% of the Lok Sabha and State ministries at 15% of the Assembly (floor of 12); barred disqualified defectors from ministerial and remunerative political posts; removed the split exception. Based on the Venkatachaliah Commission.','Kihoto Hollohan remains central.','Count the PM or CM. No Union floor. Merger stays; split goes.'],
+    [92,2003,2,'🗣️ Four more languages','Eighth Schedule.','Added Bodo, Dogri, Maithili and Santhali; total 22. Assent in 2004.','No standard case.','Mnemonic Bo–Do–Mai–San. Scheduled is not “national”.'],
+    [93,2005,1,'🏫 Educational admission provisions','Article 15(5).','Enabled special admission provisions for SEBCs, SCs and STs, including private aided and unaided institutions but excluding Art. 30(1) minority institutions.','Ashoka Kumar Thakur (2008); Pramati (2014). Background: T.M.A. Pai (2002), P.A. Inamdar (2005).','Admission is not promotion; identify beneficiaries and the minority exception.'],
+    [94,2006,2,'🌿 Tribal-welfare Minister','Proviso to Article 164(1).','Added Chhattisgarh and Jharkhand, removed Bihar; Madhya Pradesh and Odisha retained.','No routine case.','Mnemonic C–J–M–O.'],
+    [95,2009,3,'🗳️ Article 334 to seventy years','Article 334.','Extended SC/ST seats and Anglo-Indian representation from 60 to 70 years.','No essential case.','The 104th extended only the SC/ST period.'],
+    [96,2011,3,'🗣️ Oriya renamed Odia','Eighth Schedule.','Substituted Odia for Oriya.','No standard case.','A renaming, not a new language.'],
+    [97,2011,1,'🤝 Cooperative societies','Article 19(1)(c); Article 43B; Part IXB (Arts. 243ZH–243ZT).','Added cooperative societies to Art. 19(1)(c), inserted the cooperative directive and a governance framework. Assent in 2012.','Union of India v. Rajendra N. Shah (2021): Part IXB invalid for State cooperatives for want of ratification; survives for multi-State cooperatives and UTs.','Procedural federalism; not total invalidation.'],
+    [98,2012,3,'🗺️ Special provision for a Karnataka region','Article 371J.','Special development, education and employment arrangements for the Hyderabad-Karnataka (Kalyana Karnataka) region.','Thematic: asymmetric federalism.','Distinct from backward-class reservation.'],
+    [99,2014,1,'⚖️ National Judicial Appointments Commission','Arts. 124A–124C; changes to Arts. 124, 127, 128, 217, 222, 224, 224A, 231.','Sought to replace the collegium with a six-member NJAC: CJI, two senior-most judges, Law Minister and two eminent persons.','Supreme Court Advocates-on-Record Association v. Union of India (2015, the Fourth Judges Case): amendment and NJAC Act invalidated, 4–1.','Judicial independence is basic structure; the collegium revived.'],
+    [100,2015,2,'🤝 India–Bangladesh Land Boundary Agreement','First Schedule.','Implemented territorial acquisition and transfer under the 1974 agreement and 2011 protocol, settling enclaves.','Berubari (1960) is the foundational connection.','Foreign transfer versus internal reorganisation.'],
+    [101,2016,1,'🧾 Goods and Services Tax','Arts. 246A, 269A, 279A; related taxation provisions; Art. 268A omitted; Sixth and Seventh Schedules.','Created the GST framework, shared competence, inter-State levy and the GST Council.','Union of India v. Mohit Minerals (2022): Council recommendations not binding.','246A authority; 269A inter-State; 279A Council. Rollout 1 July 2017.'],
+    [102,2018,1,'🧑‍🤝‍🧑 Constitutional NCBC','Arts. 338B, 342A, 366(26C).','Gave constitutional status to the National Commission for Backward Classes and a framework for SEBC lists.','Jaishri Laxmanrao Patil (2021) prompted the 105th.','Read 102nd → Maratha case → 105th as one federalism sequence.'],
+    [103,2019,1,'🎯 Economically Weaker Sections','Arts. 15(6), 16(6).','Enabled EWS special provisions, including up to 10% additional reservation in admission and appointments.','Janhit Abhiyan v. Union of India (2022): upheld 3–2.','Income figure is not in the Constitution; minority institutions excluded from 15(6).'],
+    [104,2019,1,'🗳️ Legislative reservation & Anglo-Indian nomination','Article 334.','Extended SC/ST reservation to eighty years (January 2030); did not extend Anglo-Indian nomination. Commenced 25 January 2020; Lok Sabha maximum strength 552 → 550.','No essential validity case.','Do not say Arts. 331 and 333 were simply deleted.'],
+    [105,2021,1,'🗂️ State and UT SEBC identification','Arts. 338B, 342A, 366(26C).','Expressly restored State and UT authority to maintain SEBC lists for their own purposes, which may differ from the Central List.','Legislative response to Jaishri Laxmanrao Patil (2021).','It does not remove substantive reservation limits.'],
+    [106,2023,1,'👩 Women in legislatures (Nari Shakti Vandan Adhiniyam)','Article 239AA amended; Arts. 330A, 332A, 334A inserted.','As nearly as may be one-third reservation in the Lok Sabha, State Assemblies and Delhi Assembly, including within SC/ST seats; operation tied to census and delimitation. Introduced as the Constitution (128th Amendment) Bill.','No settled merits judgment is assumed here.','Not Rajya Sabha or Legislative Councils; not operative on enactment; read Art. 334A.']
+  ];
+
+  const cases = [
+    ['1951 · Champakam Dorairajan','Trigger for Art. 15(4): communal allocation of seats struck down.'],
+    ['1951 · Shankari Prasad','1st Amendment: an amendment is not “law” under Art. 13.'],
+    ['1960 · In re Berubari Union','Cession of territory needs a constitutional amendment; connect the 9th and 100th.'],
+    ['1965 · Sajjan Singh','17th Amendment: earlier amending-power position reaffirmed.'],
+    ['1967 · Golaknath','Fundamental Rights cannot be abridged; prompted the 24th.'],
+    ['1973 · Kesavananda Bharati','Basic Structure Doctrine; Parliament may amend but not destroy identity.'],
+    ['1975 · Indira Nehru Gandhi v. Raj Narain','Art. 329A(4) invalid; free elections and rule of law are basic.'],
+    ['1980 · Minerva Mills','Art. 31C expansion and Art. 368(4)–(5) invalid.'],
+    ['1981 · Waman Rao','24 April 1973 divides the Ninth Schedule review framework.'],
+    ['1982 · A.K. Roy','44th Amendment’s Art. 22 change uncommenced; enactment differs from commencement.'],
+    ['1992 · Kihoto Hollohan','Anti-defection framework upheld; paragraph 7 invalid for want of ratification.'],
+    ['1993 · Raghunathrao Ganpatrao','26th Amendment (privy purses) upheld.'],
+    ['1997 · L. Chandra Kumar','Judicial review cannot be wholly excluded by tribunals.'],
+    ['2006 · M. Nagaraj','Promotion-reservation amendments upheld with conditions; read Jarnail Singh.'],
+    ['2007 · I.R. Coelho','Post-1973 Ninth Schedule laws remain open to basic-structure scrutiny.'],
+    ['2008 / 2014 · Ashoka Kumar Thakur / Pramati','Educational reservation and minority-institution aspects of Arts. 15(5) and 21A.'],
+    ['2011 · K.T. Plantation','Art. 300A scrutiny of public purpose and compensation.'],
+    ['2015 · NJAC judgment','99th Amendment and NJAC Act invalidated.'],
+    ['2017 · K.S. Puttaswamy','ADM Jabalpur’s approach to liberty during Emergency repudiated.'],
+    ['2018 · Jarnail Singh','Modified Nagaraj: no need to prove SC/ST backwardness by quantifiable data.'],
+    ['2021 · Rajendra N. Shah','97th Amendment: Part IXB invalid for State cooperatives for want of ratification.'],
+    ['2021 · Jaishri Laxmanrao Patil','Maratha reservation and the 102nd; followed by the 105th.'],
+    ['2022 · Mohit Minerals','GST Council recommendations are not binding.'],
+    ['2022 · Janhit Abhiyan','103rd Amendment upheld 3–2.'],
+    ['2024 · Property Owners Association','Narrow Art. 31C survives; not every private resource falls under Art. 39(b).']
+  ];
+
+  const quizzes = [
+    ['Does every constitutional change need Article 368?','No. Arts. 4 and 169, among others, allow specified changes by ordinary law, with their own conditions.'],
+    ['Can a joint sitting pass an amendment Bill?','No. Each House must separately satisfy the special majority.'],
+    ['Who created the Basic Structure Doctrine?','The Supreme Court in Kesavananda Bharati (24 April 1973) — not the 24th or 44th Amendment.'],
+    ['Did the 44th Amendment invalidate the Art. 31C expansion?','No. Minerva Mills (1980) did. Separate repeal from invalidation.'],
+    ['Ten or eleven Fundamental Duties?','Eleven: the 42nd inserted ten and the 86th added Art. 51A(k).'],
+    ['Is the two-month detention rule in Art. 22 operative via the 44th?','No. Section 3 has not commenced. Use the operative Art. 22.'],
+    ['Which rights keep court enforcement under an Art. 359 order?','Arts. 20 and 21 cannot be included in the suspension order.'],
+    ['Does Art. 358 operate automatically for armed rebellion?','No. It is tied to war or external aggression.'],
+    ['What did the 91st remove: split or merger?','The split exception. The merger exception stays.'],
+    ['Does every Ninth Schedule law escape review?','No. I.R. Coelho applies basic-structure scrutiny to laws inserted on or after 24 April 1973.'],
+    ['Was the whole 97th Amendment struck down?','No. Part IXB failed as to State cooperatives; Arts. 19(1)(c), 43B and other applications survive.'],
+    ['What are Arts. 338, 338A and 338B?','SC Commission, ST Commission and Backward Classes Commission.'],
+    ['Which amendment added Bodo, Dogri, Maithili and Santhali?','The 92nd Amendment Act, 2003 (assent in 2004).'],
+    ['Did the 104th extend Anglo-Indian nomination?','No. It extended only SC/ST reservation, to eighty years.'],
+    ['Is the EWS income figure in the 103rd Amendment?','No. The Constitution enables the framework; eligibility criteria come from government measures.'],
+    ['Does the 106th reserve Rajya Sabha seats?','No. It covers the Lok Sabha, State Assemblies and the Delhi Assembly, subject to implementation conditions.'],
+    ['Does the 106th rotate seats after every election?','No. Rotation is tied to each delimitation as Parliament provides.'],
+    ['Does the seat freeze end automatically on 1 January 2027?','No. It is linked to publication of the first census figures after 2026.'],
+    ['Which Tenth Schedule came first?','The 35th Amendment’s Sikkim Schedule. It was omitted by the 36th; the anti-defection Schedule came with the 52nd.'],
+    ['Which amendments form the SC/ST promotion quartet?','77th promotion · 81st backlog · 82nd relaxed standards · 85th consequential seniority.']
+  ];
+
+  const checklist = [
+    'I can distinguish all three constitutional-change routes.',
+    'I can calculate both Article 368 majority thresholds.',
+    'I know which federal fields need State ratification.',
+    'I can explain Golaknath → 24th → Kesavananda.',
+    'I can separate ordinary-law review from amendment review.',
+    'I can list retained and invalidated 42nd provisions.',
+    'I can separate the 43rd, 44th and Minerva Mills outcomes.',
+    'I know the Article 22 non-commencement trap.',
+    'I can compare Articles 358 and 359 precisely.',
+    'I can explain Article 300A remedies and limits.',
+    'I know the promotion-reservation quartet.',
+    'I can compare the 73rd and 74th Amendments.',
+    'I know split versus merger under the Tenth Schedule.',
+    'I can calculate a ministry-size ceiling.',
+    'I can explain the limited invalidation of the 97th.',
+    'I can connect the NJAC decision with judicial independence.',
+    'I can reconstruct the GST article triad.',
+    'I can explain 102nd → Maratha judgment → 105th.',
+    'I can distinguish the 103rd and 104th subjects.',
+    'I know the 106th implementation and rotation conditions.',
+    'I can separate Act year, assent, commencement and implementation.'
+  ];
+
+  const escapeHTML = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const ordinal = n => { const v = n % 100; if (v >= 11 && v <= 13) return n + 'th'; return n + ({1:'st',2:'nd',3:'rd'}[n % 10] || 'th'); };
+  const getEra = y => y <= 1975 ? 'early' : y <= 1995 ? 'middle' : y <= 2016 ? 'modern' : 'recent';
+  const eraLabels = {
+    early:'🎞️ 1951–1975 · Foundations, territory and amending power',
+    middle:'🎞️ 1976–1995 · Emergency, restoration and democratic institutions',
+    modern:'🎞️ 1996–2016 · Rights, representation and institutional redesign',
+    recent:'🎞️ 2018–2023 · Classification, inclusion and representation'
+  };
+  const colors = {early:'var(--saf)',middle:'var(--em)',modern:'var(--blue)',recent:'var(--pink)'};
+
+  /* ===== Letter splitting ===== */
+
+  $$('[data-split]').forEach(el => {
+    const text = el.dataset.split;
+    el.textContent = '';
+    el.setAttribute('aria-label', text);
+    let index = 0;
+    text.split(' ').forEach((word, wi) => {
+      if (wi) { const sp = document.createElement('span'); sp.className = 'sp'; sp.setAttribute('aria-hidden','true'); el.append(sp); }
+      const wrap = document.createElement('span'); wrap.className = 'word'; wrap.setAttribute('aria-hidden','true');
+      [...word].forEach(ch => {
+        const s = document.createElement('span'); s.className = 'ch'; s.style.setProperty('--i', index++); s.textContent = ch; wrap.append(s);
+      });
+      el.append(wrap);
+    });
+  });
+
+  /* ===== Hero title: magnetic wave across letters ===== */
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+
+    $$('.title-magic').forEach(line => {
+      const letters = $$('.ch', line);
+      line.addEventListener('pointermove', e => {
+        if (!canAnimate()) return;
+        letters.forEach(l => {
+          const r = l.getBoundingClientRect();
+          const d = Math.abs(e.clientX - (r.left + r.width / 2));
+          l.style.setProperty('--k', Math.max(0, 1 - d / 125).toFixed(3));
+        });
+      });
+      line.addEventListener('pointerleave', () => letters.forEach(l => l.style.setProperty('--k', 0)));
+    });
+    document.addEventListener('pointermove', e => {
+      if (!canAnimate()) return;
+      document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+      document.documentElement.style.setProperty('--my', e.clientY + 'px');
+    }, {passive:true});
+
+    $$('.tilt').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        if (!canAnimate()) return;
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.style.setProperty('--rx', ((.5 - y) * 8) + 'deg');
+        el.style.setProperty('--ry', ((x - .5) * 10) + 'deg');
+        el.style.setProperty('--gx', (x * 100) + '%');
+        el.style.setProperty('--gy', (y * 100) + '%');
+      });
+      el.addEventListener('pointerleave', () => { el.style.setProperty('--rx','0deg'); el.style.setProperty('--ry','0deg'); });
+    });
+  }
+
+  /* ===== Build the five-dimension atlas (cards use data-p, NOT data-priority) ===== */
+  let previousEra = '';
+  const list = $('#amendmentList'), chipsBox = $('#amendmentChips');
+  amendments.forEach(row => {
+    const [n,y,p,title,provisions,change,judgment,exam] = row;
+    const era = getEra(y);
+    if (era !== previousEra) {
+      const h = document.createElement('div'); h.className = 'era-label'; h.dataset.eraHeading = era; h.textContent = eraLabels[era];
+      list.append(h); previousEra = era;
+    }
+    const d = document.createElement('details');
+    d.className = 'cell'; d.id = 'amendment-' + n; d.dataset.p = String(p); d.dataset.era = era;
+    d.style.setProperty('--c', colors[era]);
+    d.innerHTML = `
+      <summary><span class="no">${escapeHTML(ordinal(n))}</span>
+        <span class="at"><b>${escapeHTML(title)}</b><small>${y} · Priority ${p} · Five-dimension note</small></span></summary>
+      <div class="dim5">
+        <div class="dm"><h5>📅 01 · Identity</h5><p>${escapeHTML(ordinal(n))} Constitutional Amendment Act, ${y} (Act-title year).</p></div>
+        <div class="dm"><h5>📜 02 · Provisions</h5><p>${escapeHTML(provisions)}</p></div>
+        <div class="dm wide"><h5>⚙️ 03 · Constitutional change</h5><p>${escapeHTML(change)}</p></div>
+        <div class="dm"><h5>⚖️ 04 · Judicial connection</h5><p>${escapeHTML(judgment)}</p></div>
+        <div class="dm"><h5>🎯 05 · Examination insight</h5><p>${escapeHTML(exam)}</p></div>
+      </div>`;
+    d.dataset.search = row.join(' ').toLowerCase();
+    list.append(d);
+    const a = document.createElement('a');
+    a.href = '#' + d.id; a.className = 'p' + p; a.textContent = ordinal(n);
+    a.title = `${ordinal(n)} (${y}) — ${title}`; a.dataset.target = d.id;
+    chipsBox.append(a);
+  });
+  $('#noteCount').textContent = amendments.length;
+
+  const notes = $$('details.cell');
+  const atlasLinks = $$('a', chipsBox);
+  let selectedPriority = 'all';
+  const priorityButtons = $$('.btn[data-priority]');
+
+  function filterNotes() {
+    const term = $('#search').value.trim().toLowerCase();
+    const era = $('#eraFilter').value;
+    let count = 0;
+    notes.forEach((note, i) => {
+      const ok = (selectedPriority === 'all' || note.dataset.p === selectedPriority) &&
+                 (era === 'all' || note.dataset.era === era) && note.dataset.search.includes(term);
+      note.classList.toggle('hide', !ok);
+      atlasLinks[i].classList.toggle('dim', !ok);
+      if (ok) count++;
+    });
+
+    $$('[data-era-heading]').forEach(h => {
+      const any = notes.some(n => n.dataset.era === h.dataset.eraHeading && !n.classList.contains('hide'));
+      h.classList.toggle('hide', !any);
+    });
+    $('#filterStatus').textContent = `${count} of ${notes.length} selected amendments shown. Search covers all five dimensions.`;
+    $('#noResults').classList.toggle('show', count === 0);
+  }
+  function setPriority(value) {
+    selectedPriority = value;
+    priorityButtons.forEach(b => { const on = b.dataset.priority === value; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+  }
+  function resetFilters() { $('#search').value = ''; $('#eraFilter').value = 'all'; setPriority('all'); filterNotes(); }
+
+  $('#search').addEventListener('input', filterNotes);
+  $('#eraFilter').addEventListener('change', filterNotes);
+  priorityButtons.forEach(b => b.addEventListener('click', () => { setPriority(b.dataset.priority); filterNotes(); }));
+  $('#clearFilters').addEventListener('click', resetFilters);
+  $('#expandNotes').addEventListener('click', () => notes.filter(n => !n.classList.contains('hide')).forEach(n => n.open = true));
+  $('#collapseNotes').addEventListener('click', () => notes.filter(n => !n.classList.contains('hide')).forEach(n => n.open = false));
+  filterNotes();
+
+  /* ===== Case timeline and quiz ===== */
+  $('#caseTimeline').innerHTML = cases.map(([t, x]) => `<div class="ti"><div class="d">${escapeHTML(t)}</div><p>${escapeHTML(x)}</p></div>`).join('');
+  $('#quizList').innerHTML = quizzes.map(([q, a], i) => `<details class="quiz"><summary>${i + 1}. ${escapeHTML(q)}</summary><p>${escapeHTML(a)}</p></details>`).join('');
+
+  /* ===== Checklist ===== */
+  $('#checkItems').innerHTML = checklist.map((t, i) => `<label class="checkitem"><input type="checkbox" data-index="${i}"><span>${escapeHTML(t)}</span></label>`).join('');
+  const boxes = $$('#checkItems input');
+  const storageKey = 'constitutional-amendments-v1';
+  try { const saved = JSON.parse(localStorage.getItem(storageKey) || '[]'); if (Array.isArray(saved)) boxes.forEach((b, i) => b.checked = saved[i] === true); } catch (_) {}
+  function updateChecklist() {
+    const done = boxes.filter(b => b.checked).length;
+    const pct = Math.round(done / boxes.length * 100);
+    $('#checkBar').style.width = pct + '%';
+    $('.check-progress').setAttribute('aria-valuenow', String(pct));
+    $('#checkStatus').textContent = `${done} / ${boxes.length} mastered · ${pct}%`;
+    try { localStorage.setItem(storageKey, JSON.stringify(boxes.map(b => b.checked))); } catch (_) {}
+  }
+  boxes.forEach(b => b.addEventListener('change', updateChecklist));
+  $('#resetChecks').addEventListener('click', () => { boxes.forEach(b => b.checked = false); updateChecklist(); });
+  updateChecklist();
+
+  /* ===== Special-majority simulator ===== */
+  function calculateMajority() {
+    const total = Number($('#totalMembers').value), voting = Number($('#votesCast').value), out = $('#majorityResult');
+    if (!Number.isInteger(total) || !Number.isInteger(voting) || total < 1 || total > 1000 || voting < 1 || voting > total) {
+      out.textContent = 'Enter whole numbers: total 1–1,000, voting between 1 and total.'; return;
+    }
+    const whole = Math.floor(total / 2) + 1;
+    const twoThirds = Math.ceil(voting * 2 / 3);
+    const needed = Math.max(whole, twoThirds);
+    out.innerHTML = `Total-membership threshold: <b>${whole}</b>. Two-thirds-of-voting threshold: <b>${twoThirds}</b>. Required “Yes” votes: <b>${needed}</b>.` +
+      (needed > voting ? '<br>⚠️ Passage is impossible with this few members voting.' : '<br>✅ Both thresholds can be met with this attendance.');
+  }
+  $('#totalMembers').addEventListener('input', calculateMajority);
+  $('#votesCast').addEventListener('input', calculateMajority);
+  calculateMajority();
+
+  /* ===== Ministry-size calculator (91st Amendment) ===== */
+  function calculateMinistry() {
+    const n = Number($('#minN').value), type = $('#minType').value, out = $('#minOut');
+    if (!Number.isInteger(n) || n < 1 || n > 1000) { out.textContent = 'Enter a whole-number House strength from 1 to 1,000.'; return; }
+    const exact = n * 0.15, floor = Math.floor(n * 15 / 100);
+    const cap = type === 'state' ? Math.max(12, floor) : floor;
+    out.innerHTML = `15% of ${n} = <b>${exact.toFixed(2)}</b>, rounded down to <b>${floor}</b>. ` +
+      (type === 'state' ? `State maximum (floor of 12 applies): <b>${cap}</b> including the CM.` : `Union maximum: <b>${cap}</b> including the PM (no minimum floor).`);
+  }
+  $('#minN').addEventListener('input', calculateMinistry);
+  $('#minType').addEventListener('change', calculateMinistry);
+  calculateMinistry();
+
+  /* ===== Auteur celebration ===== */
+  const credit = $('.auteur-credit');
+  function celebrate() {
+    if (!canAnimate()) return;
+    const r = credit.getBoundingClientRect();
+    const symbols = ['✦','📜','⚖️','✨','🇮🇳'];
+    for (let i = 0; i < 16; i++) {
+      const p = document.createElement('span');
+      p.className = 'burst'; p.setAttribute('aria-hidden','true'); p.textContent = symbols[i % symbols.length];
+      p.style.left = (r.left + r.width / 2) + 'px'; p.style.top = (r.top + r.height / 2) + 'px';
+      const a = Math.PI * 2 * i / 16, d = 80 + Math.random() * 130;
+      p.style.setProperty('--dx', Math.cos(a) * d + 'px'); p.style.setProperty('--dy', Math.sin(a) * d + 'px');
+      document.body.append(p); setTimeout(() => p.remove(), 1300);
+    }
+  }
+  credit.addEventListener('click', celebrate);
+  credit.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); celebrate(); } });
+
+  /* ===== Focus and motion controls ===== */
+  const pauseStyle = document.createElement('style');
+  pauseStyle.textContent = `body.effects-paused *,body.effects-paused *::before,body.effects-paused *::after{animation-play-state:paused!important}
+    body.effects-paused .intro,body.effects-paused .bars{display:none!important}
+    body.effects-paused .reveal{opacity:1!important;transform:none!important}
+    body.effects-paused .split .ch{transform:none!important;filter:none!important}`;
+  document.head.append(pauseStyle);
+  $('#focusMode').addEventListener('click', () => {
+    const on = document.body.classList.toggle('focus-mode');
+    $('#focusMode').setAttribute('aria-pressed', String(on));
+    $('#focusMode').textContent = on ? '✨ Restore atmosphere' : '🌙 Focus reading';
+    syncDust();
+  });
+  $('#motionToggle').addEventListener('click', () => {
+    effectsPaused = !effectsPaused;
+    document.body.classList.toggle('effects-paused', effectsPaused);
+    $('#motionToggle').setAttribute('aria-pressed', String(effectsPaused));
+    $('#motionToggle').textContent = effectsPaused ? '▶️ Resume effects' : '⏸️ Pause effects';
+    syncDust();
+  });
+
+  /* ===== Reveals ===== */
+  if ('IntersectionObserver' in window) {
+    const ob = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ob.unobserve(e.target); } }), {threshold:.025});
+
+    $$('.reveal').forEach(el => ob.observe(el));
+  } else $$('.reveal').forEach(el => el.classList.add('in'));
+
+  /* ===== Deep links ===== */
+  function openHashTarget(scroll = true) {
+    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    if (target.matches('details.cell')) { if (target.classList.contains('hide')) resetFilters(); target.open = true; }
+    const rev = target.closest('.reveal'); if (rev) rev.classList.add('in');
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({behavior: canAnimate() ? 'smooth' : 'auto', block:'start'}));
+  }
+  addEventListener('hashchange', () => openHashTarget(true));
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a && a.getAttribute('href') === location.hash) { e.preventDefault(); openHashTarget(true); }
+  });
+  if (location.hash) setTimeout(() => openHashTarget(true), 100);
+
+  /* ===== Scroll progress and active nav ===== */
+  const sections = $$('section[id]'), navLinks = $$('nav a');
+  let scrollPending = false;
+  function updateScroll() {
+    const avail = document.documentElement.scrollHeight - innerHeight;
+    $('#progress').style.width = (avail > 0 ? Math.min(100, Math.max(0, scrollY / avail * 100)) : 0) + '%';
+    $('#toTop').classList.toggle('show', scrollY > 600);
+    let current = sections[0].id;
+    sections.forEach(s => { if (s.getBoundingClientRect().top <= 160) current = s.id; });
+    navLinks.forEach(l => {
+      const on = l.getAttribute('href') === '#' + current;
+      l.classList.toggle('on', on);
+      if (on) l.setAttribute('aria-current','location'); else l.removeAttribute('aria-current');
+    });
+    scrollPending = false;
+  }
+  addEventListener('scroll', () => { if (!scrollPending) { scrollPending = true; requestAnimationFrame(updateScroll); } }, {passive:true});
+  addEventListener('resize', updateScroll);
+  $('#toTop').addEventListener('click', () => scrollTo({top:0, behavior: canAnimate() ? 'smooth' : 'auto'}));
+  updateScroll();
+
+  /* ===== Print: expand everything, then restore ===== */
+  let printSnap = null;
+  addEventListener('beforeprint', () => {
+    if (printSnap) return;
+    printSnap = $$('details').map(el => ({el, open: el.open, hidden: el.classList.contains('hide')}));
+    printSnap.forEach(({el}) => { el.open = true; el.classList.remove('hide'); });
+  });
+  addEventListener('afterprint', () => {
+    if (!printSnap) return;
+    printSnap.forEach(({el, open, hidden}) => { el.open = open; el.classList.toggle('hide', hidden); });
+    printSnap = null; filterNotes();
+  });
+  $('#printTop').addEventListener('click', () => print());
+
+  /* ===== Ambient dust (visibility- and preference-aware) ===== */
+  const canvas = $('#dust'), ctx = canvas.getContext('2d');
+  let particles = [], frame = 0, W = 0, H = 0, last = 0;
+  const dustOn = () => canAnimate() && !document.hidden && !document.body.classList.contains('focus-mode') && !!ctx;
+  function resizeDust() {
+    W = innerWidth; H = innerHeight;
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    if (!ctx) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    particles = Array.from({length: W < 700 ? 20 : 42}, () => ({x:Math.random()*W, y:Math.random()*H, r:.3+Math.random()*1.2, s:4+Math.random()*10, a:.08+Math.random()*.3, d:Math.random()*Math.PI*2}));
+  }
+  function drawDust(t) {
+    frame = 0;
+    if (!dustOn()) return;
+    const dt = last ? Math.min((t - last) / 1000, .05) : 0; last = t;
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.y -= p.s * dt; p.x += Math.sin(t / 4000 + p.d) * dt * 2;
+      if (p.y < -5) { p.y = H + 5; p.x = Math.random() * W; }
+      ctx.beginPath(); ctx.fillStyle = `rgba(242,207,114,${p.a})`; ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    });
+    frame = requestAnimationFrame(drawDust);
+  }
+  function syncDust() {
+    cancelAnimationFrame(frame); frame = 0; last = 0;
+    if (ctx) ctx.clearRect(0, 0, W, H);
+    if (dustOn()) frame = requestAnimationFrame(drawDust);
+  }
+  addEventListener('resize', resizeDust);
+  document.addEventListener('visibilitychange', syncDust);
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', syncDust);
+  resizeDust(); syncDust();
+})();
+</script>
+</body>
+</html>
