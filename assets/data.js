@@ -259,12 +259,48 @@ const archiveEntries = [
     icon: "🪶",
     image: "",
     featured: true
+  },
+  {
+    number: "19",
+    title: "THE STATE LEGISLATURE OF INDIA",
+    category: "Political Science",
+    description: "The Constitutional Architecture of the States • Part VI · Chapter III · Articles 168–212",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "The State Legislature of India.html",
+    icon: "🦚",
+    image: "",
+    featured: true
+  },
+  {
+    number: "20",
+    title: "THE STATE EXECUTIVE",
+    category: "Political Science",
+    description: "Constitutional form. Democratic substance. Accountable power • Part VI · Chapter II — Articles 153 to 167",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "The State Executive.html",
+    icon: "🐦‍🔥",
+    image: "",
+    featured: true
+  },
+  {
+    number: "21",
+    title: "INDIAN CONSTITUTIONAL AMENDMENTS",
+    category: "Political Science",
+    description: "The power to rewrite provisions — not to destroy the Constitution •  Article 368",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Indian Constitutional Amendments.html",
+    icon: "📰",
+    image: "",
+    featured: true
   } 
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "19",
+    number: "22",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
