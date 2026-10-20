@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05060b">
+<meta name="description" content="Cinematic, clause-accurate notes on the Emergency Provisions of the Indian Constitution: Part XVIII, Articles 352–360, President's Rule, Financial Emergency, rights, amendments, cases, mnemonics and exam traps.">
+<title>Emergency Provisions of Indian Constitution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Tamil:wght@700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --sweep{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#05060b;--ink:#e8e4ef;--head:#fff6ea;--mut:#c3bfd2;--dim:#8f8ba8;
+  --card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.11);
+  --red:#ff8497;--amb:#ffbd6e;--blu:#82b6ff;--grn:#70e2b9;--vio:#c3a9ff;--gld:#f4d38b;--cyn:#78e4ea;--pnk:#f7a9d3;
+  --accent:var(--gld)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{background:var(--bg);color:var(--ink);font:15.5px/1.8 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--amb);color:#1a0d00}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--red),var(--amb),var(--blu));border-radius:9px}
+a{color:var(--blu)}a:hover{color:var(--gld)}
+b,strong{color:var(--head);font-weight:700}
+i,em{color:#ddd5ee}
+ul,ol{padding-left:22px}li{margin:5px 0}
+:focus-visible{outline:2px solid var(--gld);outline-offset:4px}
+.hide{display:none!important}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* ===== STORM ATMOSPHERE ===== */
+.storm{position:fixed;inset:0;z-index:-6;background:
+ radial-gradient(ellipse 70% 55% at 6% 4%,rgba(255,132,151,.17),transparent 62%),
+ radial-gradient(ellipse 60% 50% at 96% 14%,rgba(130,182,255,.14),transparent 62%),
+ radial-gradient(ellipse 70% 55% at 50% 102%,rgba(255,189,110,.11),transparent 66%),
+ linear-gradient(180deg,#04050a,#0a0c1b 52%,#0d0813);animation:shift 24s ease-in-out infinite alternate}
+@keyframes shift{to{filter:hue-rotate(16deg) brightness(1.07)}}
+.flash{position:fixed;inset:0;z-index:-5;pointer-events:none;background:radial-gradient(ellipse 50% 40% at 70% 0%,rgba(190,215,255,.16),transparent 70%);opacity:0;animation:bolt 17s infinite}
+@keyframes bolt{0%,91%,95%,100%{opacity:0}92%{opacity:.9}93%{opacity:.15}94%{opacity:.7}}
+.scan{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.05;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 4px)}
+#embers{position:fixed;inset:0;z-index:-3;pointer-events:none}
+.vig{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 180px rgba(0,0,0,.72)}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:200;background:linear-gradient(90deg,var(--red),var(--amb),var(--gld),var(--grn),var(--blu),var(--vio));box-shadow:0 0 14px var(--red)}
+.skip{position:fixed;top:8px;left:12px;z-index:1000;transform:translateY(-170%);padding:10px 18px;border-radius:10px;background:var(--gld);color:#120b00;font-weight:700;text-decoration:none}
+.skip:focus{transform:none}
+
+/* ===== INTRO ===== */
+.intro{position:fixed;inset:0;z-index:600;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#10142a,#020308 74%);pointer-events:none;animation:out 3.6s ease forwards}
+.intro .code{font:500 .72rem 'IBM Plex Mono',monospace;letter-spacing:8px;color:var(--amb)}
+.intro h2{font:400 clamp(2rem,7vw,4.6rem)/1 'Bebas Neue',sans-serif;letter-spacing:8px;margin:14px 0;background:linear-gradient(90deg,var(--red),var(--amb),var(--blu));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lamps-intro{display:flex;gap:18px;justify-content:center;margin-top:18px}
+.lamps-intro i{width:16px;height:16px;border-radius:50%;background:#222;animation:lampOn .5s forwards}
+.lamps-intro i:nth-child(1){--c:var(--red);animation-delay:.5s}.lamps-intro i:nth-child(2){--c:var(--amb);animation-delay:1.1s}.lamps-intro i:nth-child(3){--c:var(--blu);animation-delay:1.7s}
+@keyframes lampOn{to{background:var(--c);box-shadow:0 0 22px var(--c)}}
+@keyframes out{0%,76%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.bars::before,.bars::after{content:'';position:fixed;left:0;right:0;height:9vh;background:#000;z-index:590;pointer-events:none;animation:barsOut 1.1s 2.8s cubic-bezier(.7,0,.2,1) forwards}
+.bars::before{top:0}.bars::after{bottom:0}
+@keyframes barsOut{to{height:0}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:100;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:11px 16px;background:rgba(5,7,14,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,132,151,.22);scrollbar-width:thin}
+nav a{flex-shrink:0;color:var(--mut);text-decoration:none;font-size:.76rem;font-weight:600;padding:7px 14px;border-radius:20px;border:1px solid transparent;transition:.3s}
+nav a:hover,nav a.on{color:#fff;background:rgba(255,132,151,.12);border-color:rgba(255,132,151,.4);box-shadow:0 0 16px rgba(255,132,151,.22);transform:translateY(-2px)}
+
+/* ===== LETTER LAMPS ===== */
+.split .word{display:inline-block;white-space:nowrap}
+.split .sp{display:inline-block;width:.3em}
+.split .ch{display:inline-block;background:linear-gradient(100deg,var(--g1,#ff8497),var(--g2,#ffbd6e),var(--g3,#f4d38b),var(--g4,#82b6ff),var(--g1,#ff8497));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 8s linear infinite;animation-delay:calc(var(--i)*-.3s);
+ transform:translateY(calc(var(--k,0)*-20px)) scale(calc(1 + var(--k,0)*.22)) rotate(calc(var(--k,0)*4deg));
+ filter:drop-shadow(0 0 calc(var(--k,0)*18px) rgba(255,132,151,.9)) hue-rotate(calc(var(--k,0)*-45deg));transition:transform .16s ease-out,filter .2s}
+@keyframes gm{to{background-position:300% 0}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:84px 18px 52px;position:relative;overflow:hidden}
+.radar{position:absolute;left:50%;top:48%;width:min(92vmin,820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:1px solid rgba(255,132,151,.22);pointer-events:none;
+ background:conic-gradient(from var(--sweep),rgba(255,132,151,.22),rgba(255,189,110,.05) 50deg,transparent 95deg),
+ repeating-radial-gradient(circle,transparent 0 56px,rgba(130,182,255,.1) 57px 58px);
+ -webkit-mask:radial-gradient(circle,#000 0 70%,transparent 72%);mask:radial-gradient(circle,#000 0 70%,transparent 72%);animation:sw 11s linear infinite}
+@keyframes sw{to{--sweep:360deg}}
+.hero-in{position:relative;z-index:2;max-width:1120px;width:100%}
+.eyebrow{font:500 .72rem 'IBM Plex Mono',monospace;letter-spacing:5px;text-transform:uppercase;color:var(--red)}
+.hero h1{margin:14px 0 6px;line-height:.95;font-family:'Bebas Neue',sans-serif;font-weight:400;--g1:#ff8497;--g2:#ffbd6e;--g3:#f4d38b;--g4:#82b6ff}
+.hero h1 .split{display:block}
+.l1{font-size:clamp(3.4rem,15vw,11rem);letter-spacing:.04em}
+.l2{font-size:clamp(2.4rem,10vw,7.6rem);letter-spacing:.06em}
+.l3{font:600 clamp(.7rem,2.2vw,1.4rem) 'IBM Plex Mono',monospace;letter-spacing:.45em;margin-top:14px}
+.beam{width:min(600px,76%);height:3px;margin:14px auto 0;border-radius:9px;background:linear-gradient(90deg,transparent,var(--red),var(--amb),var(--blu),transparent);transform:scaleX(.4);opacity:.65;transition:transform .7s,opacity .6s}
+.hero:hover .beam{transform:scaleX(1);opacity:1}
+.subtitle{font:italic 600 clamp(1.05rem,2.6vw,1.6rem) 'Playfair Display',serif;color:#ecdcc0;margin-top:16px}
+.lamps{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:26px 0 6px}
+.lamp{display:flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid var(--bd);border-radius:14px;background:rgba(10,13,26,.7);text-decoration:none;color:var(--ink);font-size:.82rem;font-weight:600;transition:.3s}
+.lamp i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 14px var(--c);animation:blink 2.4s infinite}
+.lamp:nth-child(2) i{animation-delay:.6s}.lamp:nth-child(3) i{animation-delay:1.2s}
+@keyframes blink{50%{opacity:.35}}
+.lamp:hover{transform:translateY(-5px);border-color:var(--c);box-shadow:0 10px 28px color-mix(in srgb,var(--c) 30%,transparent);color:#fff}
+.tagline{margin:22px auto 0;max-width:860px;color:var(--mut);font-size:.95rem;border-block:1px solid var(--bd);padding:13px 10px}
+.stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:26px}
+.stat{min-width:128px;padding:13px 20px;border-radius:16px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:.35s}
+.stat:hover{transform:translateY(-6px);border-color:var(--amb)}
+.stat b{display:block;font:400 2.3rem/1.1 'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--amb)}
+.stat span{font-size:.7rem;color:var(--mut);letter-spacing:.6px}
+.rtools{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.btn{padding:9px 15px;border-radius:12px;border:1px solid var(--bd);background:rgba(255,255,255,.05);font-size:.8rem;transition:.3s}
+.btn:hover,.btn.on,.btn[aria-pressed=true]{border-color:var(--amb);background:rgba(255,189,110,.14);transform:translateY(-2px)}
+.scope{max-width:860px;margin:18px auto 0;color:var(--dim);font-size:.76rem}
+.burst{position:fixed;z-index:700;pointer-events:none;font-size:1.4rem;animation:bst 1.1s ease-out forwards}
+@keyframes bst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.3) rotate(200deg);opacity:0}}
+
+/* ===== AUTEUR · CLAPPERBOARD ===== */
+.clap-wrap{position:relative;display:inline-block;margin-top:30px;animation:flt 6s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-7px)}}
+.clap-wrap::before{content:'';position:absolute;inset:-6px;border-radius:22px;background:conic-gradient(from var(--sweep),var(--red),var(--amb),var(--gld),var(--grn),var(--blu),var(--vio),var(--red));filter:blur(15px);opacity:.42;animation:sw 8s linear infinite;transition:opacity .4s}
+.clap-wrap:hover::before{opacity:.85}
+.clap{position:relative;display:block;text-align:left;width:min(440px,86vw);border:1.5px solid rgba(244,211,139,.55);border-radius:16px;background:linear-gradient(145deg,rgba(255,132,151,.16),rgba(8,10,22,.94) 48%,rgba(130,182,255,.15));box-shadow:0 14px 42px rgba(0,0,0,.55),inset 0 0 22px rgba(244,211,139,.1);transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .4s,border-color .4s;overflow:hidden;padding:0}
+.clap:hover{border-color:var(--gld);box-shadow:0 22px 56px rgba(255,132,151,.3)}
+.clap-arm{display:block;height:26px;background:repeating-linear-gradient(115deg,#f6efe2 0 22px,#14172b 22px 44px);transform-origin:left bottom;transition:transform .25s cubic-bezier(.3,1.6,.5,1);border-bottom:2px solid var(--gld)}
+.clap:hover .clap-arm,.clap:focus-visible .clap-arm{transform:rotate(-9deg)}
+.clap.clapping .clap-arm{animation:clapDown .38s ease-in}
+@keyframes clapDown{0%{transform:rotate(-16deg)}70%{transform:rotate(1.5deg)}100%{transform:rotate(0)}}
+.clap-body{display:block;padding:14px 22px 17px}
+.clap-tag{display:block;font:500 .66rem 'IBM Plex Mono',monospace;letter-spacing:6px;color:var(--cyn);text-shadow:0 0 10px rgba(120,228,234,.6)}
+.clap-name{display:block;font:400 clamp(1.7rem,5.4vw,2.7rem)/1.1 'Bebas Neue',sans-serif;letter-spacing:.12em;margin:2px 0 8px;--g1:#fff8ec;--g2:#ffd67a;--g3:#ff9a8a;--g4:#9ec9ff}
+.clap-grid{display:grid;grid-template-columns:repeat(4,auto);gap:4px 16px;justify-content:space-between;border-top:1px dashed rgba(255,255,255,.2);padding-top:9px;font:500 .56rem 'IBM Plex Mono',monospace;letter-spacing:2px;color:var(--dim)}
+.clap-grid b{display:block;color:var(--gld);font-size:.7rem;letter-spacing:.5px;margin-top:2px}
+
+/* ===== TICKER ===== */
+.reel{overflow:hidden;border-block:1px dashed rgba(255,255,255,.16);background:rgba(255,255,255,.025);padding:11px 0}
+.reel-track{display:flex;width:max-content;animation:tick 70s linear infinite}
+.reel:hover .reel-track{animation-play-state:paused}
+.reel-track span{font:500 .78rem 'IBM Plex Mono',monospace;color:var(--mut);padding:0 26px;white-space:nowrap}
+.reel-track span b{color:var(--amb)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ===== SECTIONS ===== */
+section.ch-sec{padding:92px 6vw;position:relative;isolation:isolate;overflow:hidden}
+.ch-sec::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 42% at 8% 0%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%),radial-gradient(ellipse 50% 40% at 100% 100%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 70%)}
+.ch-sec[data-scene]::before{content:attr(data-scene);position:absolute;right:3vw;top:30px;z-index:-1;font:400 clamp(5rem,16vw,13rem)/1 'Bebas Neue',sans-serif;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--accent) 30%,transparent);opacity:.5;pointer-events:none}
+.wrap{max-width:1240px;margin:auto}
+.kicker{display:inline-flex;gap:8px;font:500 .7rem 'IBM Plex Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:16px;box-shadow:0 0 14px color-mix(in srgb,var(--accent) 22%,transparent)}
+h2.title{font:700 clamp(1.8rem,4.3vw,3.2rem)/1.18 'Playfair Display',serif;color:var(--head);margin-bottom:12px}
+h2.title span{color:var(--accent)}
+h3.sub{font:700 1.3rem 'Playfair Display',serif;color:var(--accent);margin:34px 0 12px}
+h4.mini{color:var(--accent);margin:18px 0 6px;font-size:.96rem}
+.lede{color:var(--mut);max-width:980px;margin-bottom:26px;font-size:1.02rem}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s;animation:rvFail 0s 5s forwards}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes rvFail{to{opacity:1;transform:none}}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:24px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:24px;border-radius:18px;border:1px solid var(--bd);background:var(--card);backdrop-filter:blur(10px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 20px 44px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--accent) 22%,transparent)}
+.card:hover::before{opacity:.08}
+.card>*{position:relative}
+.card h3{color:var(--accent);font:700 1.1rem 'Playfair Display',serif;margin-bottom:9px}
+.card p,.card li{color:var(--mut);font-size:.92rem}.card p+p{margin-top:8px}
+.big{font:400 3rem/1 'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--accent)}
+.ribbon{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tag{padding:5px 12px;border:1px solid var(--accent);border-radius:20px;font-size:.77rem;color:var(--head);background:rgba(255,255,255,.04)}
+.tag b{color:var(--accent)}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:28px 0}
+.node{background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid var(--bd);border-radius:15px;padding:13px 17px;min-width:150px;max-width:290px;text-align:center;font-size:.85rem;color:var(--mut);box-shadow:0 6px 18px rgba(0,0,0,.35);transition:.35s}
+.node b{display:block;color:var(--accent);font-size:.92rem;margin-bottom:3px}
+.node:hover{transform:translateY(-7px) scale(1.04);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px color-mix(in srgb,var(--accent) 40%,transparent)}
+.arrow{font-size:1.4rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{0%,100%{opacity:.4}50%{opacity:1;transform:translateX(4px)}}
+
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 14px 14px 0;padding:15px 21px;margin:20px 0;font-size:.92rem;color:var(--mut);transition:.3s}
+.callout:hover{transform:translateX(6px);background:rgba(255,255,255,.07)}
+.callout b{color:var(--accent)}
+.callout.tip{--accent:var(--grn)}
+.trap{border:1.5px solid var(--red);border-radius:16px;padding:15px 21px;margin:20px 0;font-size:.92rem;color:#ffe0e6;background:linear-gradient(135deg,rgba(255,132,151,.12),rgba(255,189,110,.05))}
+.trap b{color:#ff9fb0}
+.quote{position:relative;margin:32px 0;padding:22px 28px;border:1px solid var(--bd);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 600 1.12rem/1.8 'Playfair Display',serif;color:#fff3e0}
+.quote small{display:block;margin-top:8px;font:400 .72rem 'DM Sans',sans-serif;color:var(--dim)}
+.mnemonic{margin:18px 0;padding:19px 22px;border:1px dashed var(--accent);border-radius:16px;background:linear-gradient(135deg,rgba(255,189,110,.09),rgba(130,182,255,.06));font:.84rem/1.95 'IBM Plex Mono',monospace;color:#fff0d8;transition:.35s}
+.mnemonic:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.4),0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.mnemonic b{color:var(--gld)}
+.mnemonic .lab{display:block;font-size:.64rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+
+.tw{overflow-x:auto;margin:22px 0;border:1px solid var(--bd);border-radius:16px;background:var(--card)}
+table{width:100%;min-width:660px;border-collapse:collapse;font-size:.86rem}
+caption{text-align:left;padding:14px 18px;font-weight:700;color:var(--head)}
+th,td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.07);color:var(--accent);font:600 .66rem 'IBM Plex Mono',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--mut)}td:first-child{color:var(--head);font-weight:600}
+tr:last-child td{border-bottom:0}tr:hover td{background:rgba(255,255,255,.05);color:#fff}
+
+/* dossiers */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px;border:1px solid var(--bd);border-radius:18px;background:rgba(10,14,28,.8);margin:22px 0}
+.tools input{flex:1;min-width:220px;padding:10px 14px;border-radius:12px;border:1px solid var(--bd);background:#0a1020;color:var(--ink);font:inherit}
+.qstat{width:100%;font-size:.78rem;color:var(--dim)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.jump a{font:600 .8rem 'IBM Plex Mono',monospace;color:var(--c,var(--gld));border:1px solid var(--bd);background:rgba(255,255,255,.04);padding:8px 14px;border-radius:10px;text-decoration:none;transition:.3s}
+.jump a:hover{transform:translateY(-4px);border-color:var(--c,var(--gld))}
+details.dos{margin:18px 0;border:1px solid var(--bd);border-left:5px solid var(--accent);border-radius:20px;background:linear-gradient(150deg,rgba(22,28,48,.92),rgba(11,15,28,.94));overflow:hidden;transition:box-shadow .3s}
+details.dos:hover{box-shadow:0 16px 44px rgba(0,0,0,.4),0 0 26px color-mix(in srgb,var(--accent) 16%,transparent)}
+details.dos>summary{list-style:none;display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer}
+details.dos>summary::-webkit-details-marker{display:none}
+details.dos>summary::after{content:'+';margin-left:auto;font-size:1.8rem;color:var(--accent)}
+details.dos[open]>summary::after{content:'−'}
+details.dos[open]>summary{border-bottom:1px solid var(--bd)}
+.anum{min-width:84px;padding-right:18px;border-right:1px solid var(--bd);font:400 2.4rem/1 'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--accent)}
+.anum small{display:block;font:500 .5rem 'IBM Plex Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.at b{display:block;font:700 1.15rem 'Playfair Display',serif;color:var(--head)}
+.at small{font-size:.72rem;color:var(--dim)}
+.dbody{padding:6px 26px 28px}
+.dbody>p{margin-top:14px;color:var(--mut)}
+.nores{display:none;text-align:center;padding:22px;color:var(--mut);border:1px dashed var(--bd);border-radius:14px}
+.nores.show{display:block}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 10px}
+.tab{padding:11px 20px;border-radius:14px;border:1px solid var(--bd);background:rgba(255,255,255,.04);font-weight:700;font-size:.86rem;transition:.3s}
+.tab:hover,.tab.on{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent);color:#fff;transform:translateY(-3px);box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 22%,transparent)}
+.panel{padding:22px;border:1px solid var(--accent);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 9%,transparent),rgba(255,255,255,.02))}
+.panel ul{margin-top:6px}
+
+/* calc */
+.calc label{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--mut);font-size:.9rem;margin:8px 0}
+.calc input{width:130px;padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:#0a1020;color:var(--ink);font:inherit}
+.calc output{display:block;margin-top:10px;color:var(--mut);font-size:.9rem}
+.calc output b{color:var(--accent)}
+.small{font-size:.76rem;color:var(--dim)}
+
+/* quiz / scenario / check */
+.quiz{margin:11px 0;padding:14px 18px;border:1px solid var(--bd);border-radius:14px;background:rgba(255,255,255,.035);transition:.3s}
+.quiz:hover{border-color:var(--accent)}
+.quiz summary{cursor:pointer;color:var(--head);font-weight:600}
+.quiz p{margin-top:10px;color:var(--mut);font-size:.92rem}
+.scn{border-radius:18px;padding:18px 20px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+.scn summary{list-style:none;cursor:pointer;color:var(--head);font-weight:600}
+.scn summary::-webkit-details-marker{display:none}
+.scn summary::before{content:'🎯 ';}
+.scn[open]{border-color:var(--accent)}
+.bar{height:8px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0 6px}
+.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--grn),var(--blu),var(--vio));transition:width .45s}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:18px 0}
+.ck{display:flex;gap:12px;align-items:flex-start;padding:12px 15px;border:1px solid var(--bd);border-radius:12px;background:rgba(255,255,255,.03);color:var(--mut);font-size:.84rem;cursor:pointer;transition:.3s}
+.ck:hover{border-color:var(--accent)}
+.ck input{margin-top:6px;width:17px;height:17px;accent-color:var(--grn);flex-shrink:0}
+.ck:has(input:checked){border-color:rgba(112,226,185,.5);background:rgba(112,226,185,.07)}
+.chip{display:inline-block;margin:.25rem;padding:.42rem .85rem;border:1px solid var(--accent);border-radius:999px;color:#fff;font-size:.82rem;text-decoration:none;transition:.3s}
+.chip:hover{transform:translateY(-4px);background:var(--accent);color:#0b0a14}
+
+/* timeline */
+.timeline{position:relative;margin:30px 0;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--blu),var(--amb),var(--red),var(--grn));background-size:100% 300%;animation:fl 7s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:26px;padding-left:22px;transition:transform .4s}
+.ti::before{content:'';position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(10px)}
+.ti .d{font:500 .82rem 'IBM Plex Mono',monospace;color:var(--accent)}
+.ti p{color:var(--mut);font-size:.92rem}
+
+/* footer */
+footer{padding:66px 6vw 88px;text-align:center;color:var(--mut);font-size:.86rem;border-top:1px solid var(--bd)}
+.final{font:italic 600 1.4rem 'Playfair Display',serif;color:#fff;margin-bottom:12px}
+.sig{font:400 1.7rem 'Bebas Neue',sans-serif;letter-spacing:.3em;color:var(--gld);margin:24px 0 4px}
+.tribute{max-width:580px;margin:28px auto 8px;padding:28px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(150deg,rgba(255,132,151,.1),rgba(130,182,255,.08),rgba(255,189,110,.07));display:flex;flex-direction:column;align-items:center;gap:8px}
+.heart{font-size:2rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,132,151,.7))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.t-en{font:italic 700 1.3rem 'Playfair Display',serif;color:#fff8ec}
+.t-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.6vw,2.1rem);background:linear-gradient(90deg,var(--red),var(--amb),var(--gld),var(--blu),var(--red));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite}
+.toTop{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:0;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;background:linear-gradient(135deg,var(--amb),var(--blu));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.3s;z-index:120}
+.toTop.show{opacity:1;pointer-events:auto}.toTop:hover{transform:translateY(-5px)}
+
+/* modes */
+body.focus .storm,body.focus .flash{animation:none}
+body.focus .scan,body.focus #embers,body.focus .vig,body.focus .flash,body.focus .radar{display:none}
+body.focus .split .ch{animation:none;background:none;color:var(--head);transform:none;filter:none}
+body.focus{--card:rgba(17,22,40,.95);--mut:#d8d5e4}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+body.paused .intro,body.paused .bars{display:none!important}
+body.paused .split .ch{transform:none!important;filter:none!important}
+
+@media(max-width:700px){
+ body{font-size:15px}section.ch-sec{padding:64px 5vw}
+ .grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+ details.dos>summary{padding:16px 14px;gap:12px}.anum{font-size:1.9rem;min-width:66px;padding-right:12px}
+ .dbody{padding:4px 14px 22px}.node{min-width:0;max-width:100%;width:100%}.arrow{transform:rotate(90deg)}
+ .vig{display:none}.clap-grid{grid-template-columns:repeat(2,auto)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
+ .intro,.bars,#embers,.flash{display:none!important}.js .reveal{opacity:1;transform:none}.split .ch{transform:none!important;filter:none!important}
+}
+@media print{
+ :root{--bg:#fff;--ink:#141414;--head:#111;--mut:#333;--dim:#555;--bd:#bbb;--card:#fff;--gld:#6b4800;--amb:#8a4a00;--red:#9a2a42;--blu:#1b4f8a;--grn:#12614a;--vio:#5b3d8c;--cyn:#14636a}
+ body{background:#fff;color:#111;font-size:10pt}
+ nav,.storm,.flash,.scan,#embers,.vig,.intro,.bars,.progress,.toTop,.tools,.rtools,.radar,.reel,.jump,.lamps,.stats,.bar,.skip{display:none!important}
+ .ch-sec{padding:20px 0;overflow:visible}.ch-sec::before,.ch-sec::after{display:none!important}
+ .hero{min-height:0;padding:16px 0}
+ .split .ch,.t-ta{background:none;color:#111;filter:none;transform:none}
+ .card,.node,.callout,.trap,.mnemonic,.quote,.quiz,details.dos,.panel,.clap,.tribute,.tw{background:#fff;box-shadow:none;backdrop-filter:none;color:#111;transform:none;border-color:#bbb}
+ .clap-arm{background:#ddd}
+ b,strong{color:#111}.card,.quiz,details.dos{break-inside:avoid}
+ .tw{overflow:visible}table{min-width:0;font-size:9pt}th,td{color:#111}
+ .hide{display:block!important}.js .reveal{opacity:1;transform:none}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#map">Skip intro and start studying</a>
+<div class="storm" aria-hidden="true"></div><div class="flash" aria-hidden="true"></div><div class="scan" aria-hidden="true"></div>
+<canvas id="embers" aria-hidden="true"></canvas><div class="vig" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="intro" aria-hidden="true"><div>
+  <div class="code">PART XVIII · ARTICLES 352–360</div>
+  <h2>WHEN THE REPUBLIC SOUNDS THE ALARM</h2>
+  <div class="lamps-intro"><i></i><i></i><i></i></div>
+  <p style="margin-top:18px;color:var(--mut)">⚖️ Power under pressure · Liberty under scrutiny</p>
+</div></div>
+<div class="bars" aria-hidden="true"></div>
+
+<nav aria-label="Chapter navigation">
+  <a href="#opening">🎬 Opening</a><a href="#map">🗺️ Map</a><a href="#articles">📜 Articles</a><a href="#rights">🕊️ Rights</a>
+  <a href="#compare">🎛️ Compare &amp; Tools</a><a href="#scenarios">🎯 Scenarios</a><a href="#history">🕰️ History</a><a href="#cases">⚖️ Cases</a>
+  <a href="#links">🔗 Connections</a><a href="#recall">🧠 Recall</a><a href="#ready">✅ Readiness</a><a href="#sources">🔎 Sources</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="opening">
+  <div class="radar" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="eyebrow"> Constitutional Crisis Architecture · Part XVIII</div>
+    <h1 aria-label="Emergency Provisions of the Indian Constitution">
+      <span class="split magic l1" data-split="EMERGENCY" aria-hidden="true"></span>
+      <span class="split magic l2" data-split="PROVISIONS" aria-hidden="true"></span>
+      <span class="split magic l3" data-split="OF   THE   INDIAN   CONSTITUTION" aria-hidden="true"></span>
+    </h1>
+    <div class="beam"></div>
+    <p class="subtitle">Extraordinary power — created by the Constitution, therefore bounded by it.</p>
+
+    <div class="clap-wrap">
+      <button class="clap tilt" id="clap" type="button" aria-label="Auteur: Piyush Parte. Activate for a clapperboard burst.">
+        <span class="clap-arm" aria-hidden="true"></span>
+        <span class="clap-body">
+          <span class="clap-tag">🎬 AUTEUR</span>
+          <span class="clap-name split" data-split="PIYUSH PARTE" aria-hidden="true"></span>
+          <span class="clap-grid"><span>PROD<b>Emergency Provisions</b></span><span>ROLL<b>XVIII</b></span><span>SCENE<b>352–360</b></span><span>TAKE<b id="take">1</b></span></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="lamps" aria-label="Jump to the three emergencies">
+      <a class="lamp" href="#a352" style="--c:var(--red)"><i></i>National · Art. 352</a>
+      <a class="lamp" href="#a356" style="--c:var(--amb)"><i></i>President’s Rule · Art. 356</a>
+      <a class="lamp" href="#a360" style="--c:var(--blu)"><i></i>Financial · Art. 360</a>
+    </div>
+
+    <p class="tagline">🗺️ Map → 📜 clause-accurate articles → 🕊️ rights under pressure → 🎛️ comparison &amp; calculators → 🎯 scenarios → 🕰️ history → ⚖️ judicial guardrails → 🧠 mnemonics &amp; recall.</p>
+    <div class="stats">
+      <div class="stat"><b>3</b><span>EMERGENCY TYPES</span></div>
+      <div class="stat"><b>9</b><span>OPERATIVE ARTICLES</span></div>
+      <div class="stat"><b>1–2–2</b><span>APPROVAL MONTHS</span></div>
+      <div class="stat"><b>44th</b><span>SAFEGUARD AMENDMENT</span></div>
+    </div>
+    <div class="rtools">
+      <button class="btn" id="focusBtn" type="button" aria-pressed="false">🌙 Focus reading</button>
+      <button class="btn" id="pauseBtn" type="button" aria-pressed="false">⏸️ Pause effects</button>
+      <button class="btn" id="printBtn" type="button">🖨️ Print / Save PDF</button>
+    </div>
+    <p class="scope">Scope: the general constitutional framework, essential history and leading judicial safeguards. Clause numbers follow the operative text; update-sensitive facts (for example “no Financial Emergency so far”) should be re-checked against official records before an examination.</p>
+  </div>
+</header>
+
+<div class="reel" aria-label="Key facts ticker"><div class="reel-track" id="reelTrack"></div></div>
+
+<main>
+
+<!-- ================= MAP ================= -->
+<section class="ch-sec" id="map" data-scene="XVIII" style="--accent:var(--gld)">
+<div class="wrap reveal">
+  <span class="kicker">🎬 Act I · The Constitutional Map</span>
+  <h2 class="title">Part XVIII — <span>Three Doors into the Storm</span></h2>
+  <p class="lede">Part XVIII (Articles 352–360) lets the Constitution itself respond to extreme situations. The three principal mechanisms solve <b>different problems</b>: Article 352 answers a <b>security</b> threat, Article 356 answers a <b>breakdown of constitutional government in a State</b>, and Article 360 answers a threat to <b>financial stability or credit</b>. They are exceptional powers — but never constitution-free zones.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--red)"><div class="big">352</div><h3>🚨 National Emergency</h3><p><b>War, external aggression or armed rebellion</b> threatens the security of India or any part of it.</p><p>Read with Arts. 353, 354, 358, 359, 250, 83(2), 172(1).</p></article>
+    <article class="card" style="--accent:var(--amb)"><div class="big">356</div><h3>🏛️ President’s Rule</h3><p>The government of a State <b>cannot be carried on in accordance with the Constitution</b>.</p><p>Read with Arts. 355, 357, 365. A Governor’s report is possible, not indispensable.</p></article>
+    <article class="card" style="--accent:var(--blu)"><div class="big">360</div><h3>💠 Financial Emergency</h3><p>The <b>financial stability or credit</b> of India or any part of its territory is threatened.</p><p>Enables financial-propriety directions, salary reductions and reservation of certain State Bills.</p></article>
+  </div>
+
+  <h3 class="sub">🌳 Classification tree</h3>
+  <div class="flow" style="--accent:var(--gld)">
+    <div class="node"><b>🇮🇳 Part XVIII</b>Emergency Provisions · Arts. 352–360</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--red)"><b>🚨 National</b>352 → 353 · 354 · 358 · 359</div>
+    <div class="node" style="--accent:var(--amb)"><b>🏛️ State</b>355 · 356 → 357 (+ 365 outside Part XVIII)</div>
+    <div class="node" style="--accent:var(--blu)"><b>💠 Financial</b>360</div>
+  </div>
+  <div class="callout trap" style="--accent:var(--red)">🚨 <b>Terminology:</b> “State Emergency” is a textbook label for President’s Rule — it is not the heading of Art. 356. Art. 355 is a <i>duty</i>; Art. 365 sits in Part XIX and is an <i>inference rule</i>. Neither is a fourth type of Emergency.</div>
+
+  <div class="tw"><table>
+    <caption>📑 Every article of Part XVIII</caption>
+    <thead><tr><th>Article</th><th>Subject</th><th>Study cue</th></tr></thead>
+    <tbody>
+      <tr><td>352</td><td>Proclamation of Emergency</td><td>🚨 Grounds · written Cabinet decision · approval · renewal · revocation</td></tr>
+      <tr><td>353</td><td>Effect of Proclamation of Emergency</td><td>📡 Union directions; conferral of Union powers and duties</td></tr>
+      <tr><td>354</td><td>Application of revenue-distribution provisions</td><td>💰 Presidential order modifying Arts. 268–279</td></tr>
+      <tr><td>355</td><td>Duty of the Union to protect States</td><td>🤝 Protection + constitutional government</td></tr>
+      <tr><td>356</td><td>Failure of constitutional machinery in States</td><td>🏛️ President’s Rule</td></tr>
+      <tr><td>357</td><td>Exercise of legislative powers under a 356 proclamation</td><td>🖋️ Delegation · Union powers · expenditure · surviving laws</td></tr>
+      <tr><td>358</td><td>Suspension of Art. 19 during emergencies</td><td>🕊️ War / external aggression only · recital</td></tr>
+      <tr><td>359</td><td>Suspension of enforcement of Part III rights</td><td>⚖️ Presidential order · Arts. 20–21 protected</td></tr>
+      <tr><td>359A</td><td>Former Punjab-specific provision — <b>omitted</b></td><td>🗃️ Inserted by the 59th; omitted by the 63rd (1989)</td></tr>
+      <tr><td>360</td><td>Provisions as to Financial Emergency</td><td>💠 Never proclaimed so far</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="mnemonic"><span class="lab">🧠 The nine-article memory corridor</span><b>Proclaim → Effects → Revenue → Protect → Rule → Laws → 19 → Remedies → Finance</b><br><b>352</b> proclaim · <b>353</b> effects · <b>354</b> revenue · <b>355</b> protect (duty) · <b>356</b> rule · <b>357</b> laws · <b>358</b> Art. 19 · <b>359</b> remedies · <b>360</b> finance.</div>
+
+  <h3 class="sub">🌍 Origins &amp; philosophy</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--vio)"><h3>📚 Borrowed designs</h3><p>Textbooks trace the national-emergency idea to <b>Art. 48 of the Weimar Constitution</b> and the State-level breakdown idea to <b>Section 93 of the Government of India Act, 1935</b>. These are influences, not substitutes for the present Indian text.</p></article>
+    <article class="card" style="--accent:var(--cyn)"><h3>🏛️ Ambedkar’s hope</h3><p>Introducing the draft provisions in the Constituent Assembly (1949), Dr. B. R. Ambedkar hoped such powers would remain a <b>“dead letter”</b>, and that, if ever used, the President would exercise proper care. Federal India is meant to flex toward the Union in crisis and flex back afterwards.</p></article>
+  </div>
+</div>
+</section>
+
+<!-- ================= ARTICLES ================= -->
+<section class="ch-sec" id="articles" data-scene="TEXT" style="--accent:var(--cyn)">
+<div class="wrap reveal">
+  <span class="kicker">📜 Act II · Article Dossiers</span>
+  <h2 class="title">Open the Article — <span>Understand the Mechanism</span></h2>
+  <p class="lede">Each dossier lists the operative clauses, the precision points examiners exploit, a flow diagram, traps and a mnemonic. Search filters the nine dossiers.</p>
+
+  <div class="jump" aria-label="Article shortcuts">
+    <a href="#a352" style="--c:var(--red)">352</a><a href="#a353" style="--c:var(--vio)">353</a><a href="#a354" style="--c:var(--gld)">354</a>
+    <a href="#a355" style="--c:var(--grn)">355</a><a href="#a356" style="--c:var(--amb)">356</a><a href="#a357" style="--c:var(--cyn)">357</a>
+    <a href="#a358" style="--c:var(--pnk)">358</a><a href="#a359" style="--c:var(--vio)">359</a><a href="#a360" style="--c:var(--blu)">360</a>
+  </div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="🔎 Try: Cabinet, one-tenth, High Court, revenue, recital, Bommai…" aria-label="Search article dossiers" autocomplete="off">
+    <button class="btn" id="openAll" type="button">＋ Open all</button><button class="btn" id="foldAll" type="button">− Fold all</button><button class="btn" id="clearSearch" type="button">↺ Clear</button>
+    <p class="qstat" id="searchStatus" role="status"></p>
+  </div>
+  <p class="nores" id="noRes">🔎 No matching dossier. Try a broader term or clear the search.</p>
+
+<!-- 352 -->
+<details class="dos" id="a352" open style="--accent:var(--red)">
+<summary><span class="anum"><small>ARTICLE</small>352</span><span class="at"><b>🚨 Proclamation of National Emergency</b><small>Security · written Cabinet decision · parliamentary control</small></span></summary>
+<div class="dbody">
+  <p>If the President is satisfied that a <b>grave emergency</b> exists whereby the security of India or any part of its territory is threatened by <b>war, external aggression or armed rebellion</b>, a Proclamation may be made for the whole of India or a specified part.</p>
+  <div class="ribbon"><span class="tag">📍 Whole <b>or part</b> of India</span><span class="tag">📝 Written <b>Union Cabinet</b> decision</span><span class="tag">🏛️ Approval: <b>1 month</b></span><span class="tag">🗳️ <b>Special majority</b></span><span class="tag">⏳ Renewal: <b>6 months</b></span></div>
+
+  <h3 class="sub">📜 Complete clause map — 352(1) to (9)</h3>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Rule</th><th>Precision point</th></tr></thead><tbody>
+    <tr><td>352(1)</td><td>Grounds, satisfaction and territorial scope.</td><td><b>Explanation:</b> a Proclamation may be made <i>before</i> actual occurrence if the President is satisfied that danger is imminent.</td></tr>
+    <tr><td>352(2)</td><td>A Proclamation may be varied or revoked by a later Proclamation.</td><td>Revocation needs no parliamentary approval.</td></tr>
+    <tr><td>352(3)</td><td>The President cannot issue (or vary) a Proclamation unless the <b>Union Cabinet’s</b> decision is communicated <b>in writing</b>.</td><td>“Union Cabinet” = PM and Cabinet-rank Ministers under Art. 75. Informal advice of the PM alone is insufficient.</td></tr>
+    <tr><td>352(4)</td><td>Laid before both Houses; <b>ceases after one month</b> unless both approve by resolution.</td><td>Proviso (Lok Sabha dissolved): if Rajya Sabha has approved, the Proclamation survives until <b>30 days after the Lok Sabha first sits</b>, unless it approves within that time.</td></tr>
+    <tr><td>352(5)</td><td>An approved Proclamation lasts <b>six months</b> from the date of the <b>second</b> approving resolution; further six-month continuations by resolution of both Houses.</td><td>Dissolution proviso again protects continuity if Rajya Sabha has approved continuance.</td></tr>
+    <tr><td>352(6)</td><td><b>Special majority</b> for resolutions under (4) and (5).</td><td>Majority of the <b>total membership</b> AND at least <b>two-thirds</b> of members present and voting — in each House.</td></tr>
+    <tr><td>352(7)</td><td>The President <b>must revoke</b> if the Lok Sabha passes a resolution disapproving the Proclamation or its continuance.</td><td>The (6) special majority does <b>not</b> apply to this disapproval resolution.</td></tr>
+    <tr><td>352(8)</td><td>Notice signed by <b>one-tenth</b> of Lok Sabha’s total membership of intent to move disapproval → <b>special sitting within 14 days</b>.</td><td>Notice goes to the Speaker if the House is in session, otherwise to the President.</td></tr>
+    <tr><td>352(9)</td><td>The President may issue <b>different Proclamations on different grounds</b> even if one is already in operation.</td><td>Concurrent emergencies are constitutionally possible.</td></tr>
+  </tbody></table></div>
+
+  <h3 class="sub">⚔️ The three grounds</h3>
+  <div class="grid">
+    <div class="card" style="--accent:var(--red)"><h3>⚔️ War</h3><p>A grave security threat arising from war. The Constitution gives no detailed definition, so avoid inventing a rigid “formal declaration” test.</p></div>
+    <div class="card" style="--accent:var(--amb)"><h3>🌍 External aggression</h3><p>A security threat from outside India. Imminent danger suffices — hostilities need not already have occurred.</p></div>
+    <div class="card" style="--accent:var(--vio)"><h3>🔥 Armed rebellion</h3><p>Substituted by the <b>44th Amendment</b> for the vaguer “internal disturbance”. Textbooks call war/aggression emergencies “external” and armed-rebellion ones “internal”.</p></div>
+  </div>
+
+  <h3 class="sub">🧾 Procedure flow</h3>
+  <div class="flow">
+    <div class="node"><b>① Grave threat</b>Actual or imminent</div><span class="arrow">→</span>
+    <div class="node"><b>② Written Cabinet decision</b>Art. 352(3)</div><span class="arrow">→</span>
+    <div class="node"><b>③ Proclamation</b>Whole or part of India</div><span class="arrow">→</span>
+    <div class="node"><b>④ Both Houses · 1 month</b>Special majority · no joint sitting</div><span class="arrow">→</span>
+    <div class="node"><b>⑤ 6-month renewals</b>Revocation always possible</div>
+  </div>
+  <p>There is <b>no fixed overall maximum</b> under Art. 352 so long as approvals continue. Both Houses act separately: Rajya Sabha is a co-equal partner in approval and renewal, while only the Lok Sabha has the express disapproval safeguard.</p>
+  <div class="callout">📖 <b>Why a written Cabinet decision?</b> In June 1975 the Proclamation was issued on the Prime Minister’s advice and the Cabinet was informed afterwards. The 44th Amendment turned that experience into a constitutional requirement.</div>
+  <div class="trap">🚨 <b>“One-tenth” is a notice threshold, not the vote that ends an Emergency.</b> It forces a special sitting; disapproval is then decided by the Lok Sabha’s ordinary voting rule, not the approval special majority.</div>
+
+  <h4 class="mini">🧭 What a National Emergency does <u>not</u> automatically do</h4>
+  <ul>
+    <li>It does <b>not</b> dismiss State governments or dissolve State legislatures.</li>
+    <li>It does <b>not</b> suspend every Fundamental Right — Arts. 358 and 359 are separate, conditional mechanisms.</li>
+    <li>It does <b>not</b> automatically extend legislative terms — Parliament must legislate under Arts. 83(2)/172(1).</li>
+    <li>It does <b>not</b> remove judicial review of legality.</li>
+  </ul>
+  <div class="mnemonic"><span class="lab">🧠 Access code · W–1–S–6–⅒–14</span><b>W</b>ritten Cabinet decision · <b>1</b> month approval · <b>S</b>pecial majority · <b>6</b>-month renewals · <b>one-tenth</b> notice · <b>14</b>-day special sitting.<br>Grounds: <b>W–E–A</b> = War · External aggression · Armed rebellion.</div>
+</div></details>
+
+<!-- 353 -->
+<details class="dos" id="a353" style="--accent:var(--vio)">
+<summary><span class="anum"><small>ARTICLE</small>353</span><span class="at"><b>📡 Effect of Proclamation of Emergency</b><small>Union directions · conferral of Union powers · territorial spillover</small></span></summary>
+<div class="dbody">
+  <p>While a Proclamation of Emergency is in operation, the federal balance tilts towards the Union — without replacing the State’s institutions.</p>
+  <div class="tw"><table><thead><tr><th>Provision</th><th>Exact function</th><th>Insight</th></tr></thead><tbody>
+    <tr><td>353(a)</td><td>Notwithstanding anything in the Constitution, the Union’s executive power extends to giving <b>directions to any State</b> on the manner of exercising its executive power.</td><td>Wider than ordinary directions under Arts. 256–257.</td></tr>
+    <tr><td>353(b)</td><td>Parliament’s power to legislate on any matter includes power to make laws <b>conferring powers and imposing duties on the Union or its officers and authorities</b>, even if the matter is not in the Union List.</td><td>More specific than “Parliament gets State List power”. The direct State-List power is <b>Art. 250</b>.</td></tr>
+    <tr><td>Proviso</td><td>If the Proclamation operates in only a <b>part</b> of India, (a) and (b) can extend to another State if security is threatened by activities in or in relation to that part.</td><td>Territorial spillover is conditional.</td></tr>
+  </tbody></table></div>
+
+  <h3 class="sub">🖋️ Companions: Arts. 250, 251, 83(2), 172(1)</h3>
+  <div class="grid">
+    <div class="card" style="--accent:var(--cyn)"><h3>250 · State List</h3><p>While an Emergency operates, Parliament may legislate for all or part of India on <b>State List matters</b> (the 101st Amendment also links Art. 250 with GST under Art. 246A). Such law, to the extent of the incompetence, <b>ceases six months after the Emergency ends</b>; things already done are saved.</p></div>
+    <div class="card" style="--accent:var(--amb)"><h3>251 · Conflict</h3><p>If a State law is inconsistent with a Union law made under Art. 250, the State law is inoperative to the extent of repugnancy while the Union law continues. State legislatures are <b>not abolished</b>.</p></div>
+    <div class="card" style="--accent:var(--grn)"><h3>83(2) &amp; 172(1) · Terms</h3><p>Parliament may by law extend the Lok Sabha / a State Assembly for <b>not more than one year at a time</b>, and never beyond <b>six months after the Emergency ceases</b>.</p></div>
+  </div>
+  <div class="callout tip">🧩 <b>Three-part split:</b> 353(a) = Union <i>directions</i>; 353(b) = <i>conferral</i> of Union powers/duties; 250 = Parliament’s <i>State List</i> competence.</div>
+  <div class="mnemonic"><span class="lab">🧠 Effects without erasing States</span><b>353 directs · 250 legislates · 251 resolves conflict · 83/172 stretch terms.</b></div>
+</div></details>
+
+<!-- 354 -->
+<details class="dos" id="a354" style="--accent:var(--gld)">
+<summary><span class="anum"><small>ARTICLE</small>354</span><span class="at"><b>💰 Revenue Distribution During Emergency</b><small>Arts. 268–279 · presidential order · financial-year limit</small></span></summary>
+<div class="dbody">
+  <p>While a Proclamation of Emergency is in operation the President may, by order, direct that <b>all or any of the provisions of Articles 268 to 279</b> (taxes shared between Union and States) have effect subject to specified exceptions or modifications.</p>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Rule</th><th>Precision</th></tr></thead><tbody>
+    <tr><td>354(1)</td><td>Exceptions or modifications for a stated period.</td><td>The period cannot extend <b>beyond the end of the financial year in which the Proclamation ceases to operate</b>.</td></tr>
+    <tr><td>354(2)</td><td>Every order must be <b>laid before each House</b> as soon as may be.</td><td>“Laid” ≠ a separate approval resolution.</td></tr>
+  </tbody></table></div>
+  <p>Context outside the express range: the <b>Finance Commission</b> (Art. 280) and its recommendations (Art. 281) are important fiscal background, but they lie <b>outside</b> “268–279”.</p>
+  <div class="trap">🚨 <b>Do not merge 354 and 360.</b> 354 operates during a <i>National</i> Emergency and touches revenue sharing; 360 needs its own Financial Emergency Proclamation and authorises propriety directions and salary/Bill measures.</div>
+  <div class="mnemonic"><span class="lab">🧠 354 in one line</span><b>“Tax-sharing 268→279 can bend, but only to the financial-year end.”</b></div>
+</div></details>
+
+<!-- 355 -->
+<details class="dos" id="a355" style="--accent:var(--grn)">
+<summary><span class="anum"><small>ARTICLE</small>355</span><span class="at"><b>🤝 The Union’s Duty Towards States</b><small>Protection · constitutional government · Art. 365 inference</small></span></summary>
+<div class="dbody">
+  <div class="quote">“It shall be the duty of the Union to protect every State against external aggression and internal disturbance and to ensure that the government of every State is carried on in accordance with the provisions of this Constitution.”<small>Article 355</small></div>
+  <ul><li><b>Protective duty:</b> against external aggression and internal disturbance.</li><li><b>Constitutional duty:</b> ensure State government runs according to the Constitution.</li></ul>
+  <p>Art. 355 is a <b>duty, not a proclamation</b> and not a free-standing licence for any coercive step; every measure still needs its own constitutional or statutory authority.</p>
+  <div class="callout">📌 <b>“Internal disturbance” still lives in Art. 355.</b> The 44th Amendment replaced it with “armed rebellion” only in Art. 352. A disturbance can call for assistance or lawful directions without meeting the Art. 352 or 356 threshold.</div>
+  <h4 class="mini">📨 Article 365 — the associated inference (Part XIX)</h4>
+  <p>Where a State fails to comply with or give effect to <b>directions given in exercise of the Union’s executive power</b> under the Constitution, it is <b>lawful for the President to hold</b> that the State government cannot be carried on in accordance with the Constitution. It is <b>not</b> an automatic command to impose President’s Rule; the direction must itself be valid and any Art. 356 proclamation remains reviewable.</p>
+  <div class="flow"><div class="node"><b>355 · Duty</b>Protect + ensure constitutional government</div><span class="arrow">→</span><div class="node"><b>Lawful directions</b>Arts. 256–257 etc.</div><span class="arrow">→</span><div class="node"><b>365 · Non-compliance</b>President may hold breakdown exists</div><span class="arrow">→</span><div class="node"><b>356 · Proclamation</b>Only if its own conditions are met</div></div>
+  <div class="mnemonic"><span class="lab">🧠 355 · 365 · 356</span><b>355 = duty · 365 = inference · 356 = device.</b></div>
+</div></details>
+
+<!-- 356 -->
+<details class="dos" id="a356" open style="--accent:var(--amb)">
+<summary><span class="anum"><small>ARTICLE</small>356</span><span class="at"><b>🏛️ President’s Rule in a State</b><small>Constitutional breakdown · two-month approval · federal safeguards</small></span></summary>
+<div class="dbody">
+  <p>If the President, <b>“on receipt of a report from the Governor of a State or otherwise”</b>, is satisfied that the government of the State cannot be carried on in accordance with the Constitution, the President may issue a Proclamation.</p>
+  <div class="ribbon"><span class="tag">📨 Governor’s report: <b>not mandatory</b></span><span class="tag">🏛️ Approval: <b>2 months</b></span><span class="tag">🗳️ <b>Ordinary majority</b></span><span class="tag">⏳ <b>6-month</b> periods</span><span class="tag">📏 General maximum: <b>3 years</b></span></div>
+
+  <h3 class="sub">📜 Clause map</h3>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Power / safeguard</th><th>Precision point</th></tr></thead><tbody>
+    <tr><td>356(1)(a)</td><td>President assumes all or any <b>functions of the State government</b> and powers of the Governor or any body/authority <b>other than the Legislature</b>.</td><td>Legislature excluded from this limb.</td></tr>
+    <tr><td>356(1)(b)</td><td>Declares that the <b>State Legislature’s powers</b> are exercisable by or under Parliament’s authority.</td><td>Legislative takeover mechanism; operated through Art. 357.</td></tr>
+    <tr><td>356(1)(c)</td><td>Incidental and consequential provisions, including suspending provisions relating to any body or authority in the State.</td><td>Controlled by the High Court proviso.</td></tr>
+    <tr><td>356(1) proviso</td><td>President <b>cannot</b> assume High Court powers or suspend constitutional provisions relating to High Courts.</td><td>Judicial independence is protected.</td></tr>
+    <tr><td>356(2)</td><td>Variation or revocation by later Proclamation.</td><td>Revocation can come any time.</td></tr>
+    <tr><td>356(3)</td><td>Laid before both Houses; <b>ceases after two months</b> unless approved by both.</td><td>Lok Sabha-dissolution proviso (30 days after first sitting, if Rajya Sabha has approved).</td></tr>
+    <tr><td>356(4)</td><td>Approved Proclamation lasts <b>six months from the date of issue</b>; renewable in six-month steps; <b>never more than three years</b>.</td><td>Third proviso: the Punjab 1987 Proclamation had a five-year limit — a historical exception.</td></tr>
+    <tr><td>356(5)</td><td>Continuance <b>beyond one year</b> needs both: (a) a National Emergency in operation (whole of India, or whole/any part of the State concerned) and (b) <b>Election Commission certification</b> of necessity due to difficulties in holding general elections to the Assembly.</td><td>Both conditions must be met when the resolution is passed.</td></tr>
+  </tbody></table></div>
+
+  <h3 class="sub">⏳ The duration ladder</h3>
+  <div class="flow">
+    <div class="node"><b>Issue</b>Parliament must approve within 2 months</div><span class="arrow">→</span>
+    <div class="node"><b>First period</b>6 months from <i>issue</i></div><span class="arrow">→</span>
+    <div class="node"><b>Renewals</b>Both Houses · 6 months each</div><span class="arrow">→</span>
+    <div class="node"><b>Beyond 1 year</b>Emergency + EC certificate</div><span class="arrow">→</span>
+    <div class="node"><b>Ceiling</b>3 years (general rule)</div>
+  </div>
+  <div class="trap">🚨 <b>Territorial and wording traps:</b> a National Emergency in some unrelated part of India does not satisfy 356(5)(a); and the EC certifies <i>difficulties</i> in holding elections — do not rewrite it as “elections are impossible”.</div>
+
+  <h3 class="sub">⚙️ What changes in the State?</h3>
+  <ul>
+    <li><b>Executive:</b> the ministry ordinarily ceases; administration runs on the President’s behalf, usually through the Governor.</li>
+    <li><b>Legislature:</b> suspended animation or lawful dissolution; powers exercised by or under Parliament.</li>
+    <li><b>High Court:</b> untouched. <b>Rights:</b> President’s Rule does not itself trigger Arts. 358–359.</li>
+  </ul>
+
+  <h3 class="sub">⚖️ Federal firewall: S. R. Bommai (1994, nine judges)</h3>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--grn)"><h3>🔍 Reviewable power</h3><p>The proclamation is subject to judicial review. Courts examine whether relevant material existed, mala fides and impermissible use; the Union must justify the material. A bare claim of “satisfaction” is not conclusive.</p></div>
+    <div class="card" style="--accent:var(--cyn)"><h3>🗳️ Floor test</h3><p>A ministry’s majority should be tested <b>on the floor of the House</b>, not by the Governor’s private assessment.</p></div>
+    <div class="card" style="--accent:var(--vio)"><h3>🛡️ No premature dissolution</h3><p>The Assembly should be kept in suspended animation until Parliament approves; if Parliament refuses, the Proclamation lapses and the Assembly revives.</p></div>
+    <div class="card" style="--accent:var(--pnk)"><h3>🌐 Federalism &amp; secularism</h3><p>Both are basic features. Courts may invalidate an unconstitutional proclamation and, where suitable, restore the dismissed government and Assembly.</p></div>
+  </div>
+  <div class="callout tip">🧭 <b>Breakdown ≠ bad politics.</b> Political disagreement, an unfavourable election result or ordinary maladministration do not by themselves show that constitutional government is impossible. The Sarkaria Commission recommended using Art. 356 only as a <b>last resort</b>, after alternatives and (ordinarily) a warning, on a reasoned Governor’s report.</div>
+  <div class="mnemonic"><span class="lab">🧠 2–6–1–3 ladder</span><b>2</b> months approval · <b>6</b>-month periods · after <b>1</b> year: <b>N + E</b> (National Emergency + Election Commission) · <b>3</b>-year ceiling.<br>Bommai anchors: <b>R-F-M-R-S</b> = Review · Floor test · Material · Restoration · Secularism.</div>
+</div></details>
+
+<!-- 357 -->
+<details class="dos" id="a357" style="--accent:var(--cyn)">
+<summary><span class="anum"><small>ARTICLE</small>357</span><span class="at"><b>🖋️ Legislative Powers Under a 356 Proclamation</b><small>Delegation · Union powers · expenditure · surviving laws</small></span></summary>
+<div class="dbody">
+  <p>Where a 356 Proclamation declares that the State Legislature’s powers are exercisable by or under Parliament, Art. 357 supplies the machinery.</p>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Actual subject</th><th>Insight</th></tr></thead><tbody>
+    <tr><td>357(1)(a)</td><td>Parliament may <b>confer the State Legislature’s law-making power on the President</b> and authorise delegation to another specified authority.</td><td>The delegation chain must rest on Parliament’s authorisation.</td></tr>
+    <tr><td>357(1)(b)</td><td>Parliament, or the President/authority holding the power, may make laws <b>conferring powers and imposing duties on the Union or its officers and authorities</b>.</td><td>This is <b>not</b> the expenditure clause.</td></tr>
+    <tr><td>357(1)(c)</td><td>When the <b>Lok Sabha is not in session</b>, the President may authorise <b>expenditure from the State Consolidated Fund</b> pending Parliament’s sanction.</td><td>Remember the “not in session” condition.</td></tr>
+    <tr><td>357(2)</td><td>Laws made under this power that the maker would not otherwise be competent to make <b>continue after the Proclamation ends</b> until altered, repealed or amended by a competent Legislature or authority.</td><td>No automatic six-month expiry.</td></tr>
+  </tbody></table></div>
+  <div class="trap">🚨 <b>Survival contrast:</b> Art. 250 laws lose their otherwise-unsupported effect <b>six months after</b> the National Emergency ends; Art. 357(2) laws <b>continue</b> until competent alteration. Different rules, different Emergencies.</div>
+  <p>Connect with State budget provisions (Arts. 202–204) and the Consolidated Funds (Art. 266).</p>
+  <div class="mnemonic"><span class="lab">🧠 A–B–C tools</span><b>A</b> = Authorise &amp; delegate · <b>B</b> = Burden/empower Union authorities · <b>C</b> = Consolidated Fund spending (Lok Sabha not in session).</div>
+</div></details>
+
+<!-- 358 -->
+<details class="dos" id="a358" style="--accent:var(--pnk)">
+<summary><span class="anum"><small>ARTICLE</small>358</span><span class="at"><b>🕊️ Article 19 During a Qualifying Emergency</b><small>War or external aggression only · recital · automatic operation</small></span></summary>
+<div class="dbody">
+  <p>While a Proclamation declaring a threat by <b>war or external aggression</b> is in operation, nothing in Art. 19 restricts the State’s power to make laws or take executive action that it would otherwise be competent to make or take. It does <b>not</b> operate for an Emergency based on armed rebellion alone.</p>
+  <div class="tw"><table><thead><tr><th>Provision</th><th>Rule</th><th>Meaning</th></tr></thead><tbody>
+    <tr><td>358(1)</td><td>Art. 19 does not restrict State power during the qualifying Emergency; a law so made ceases to have effect, to the extent of incompetence, when the Proclamation ceases — except for things done or omitted earlier.</td><td><b>Automatic</b> — no separate Presidential order.</td></tr>
+    <tr><td>358(1) proviso</td><td>For a Proclamation confined to part of India, measures in another State need the specified security link.</td><td>Conditional territorial spillover.</td></tr>
+    <tr><td>358(2)(a)</td><td>No protection for a law lacking a <b>recital</b> that it relates to the Emergency in operation.</td><td>Recital is essential.</td></tr>
+    <tr><td>358(2)(b)</td><td>No protection for executive action not taken under a law containing the recital.</td><td>No blanket executive immunity.</td></tr>
+  </tbody></table></div>
+  <p>“Automatic” never means “unlimited”: ground, recital, territory and executive-authority conditions matter, and Art. 358 does not touch other rights.</p>
+  <h4 class="mini">🗣️ The six freedoms of Art. 19(1)</h4>
+  <ol><li>(a) Speech and expression</li><li>(b) Peaceful assembly without arms</li><li>(c) Associations, unions, cooperative societies</li><li>(d) Free movement throughout India</li><li>(e) Residence and settlement</li><li>(g) Profession, occupation, trade or business</li></ol>
+  <div class="trap">🚨 <b>Why does the lettering skip (f)?</b> Art. 19(1)(f), the former right to property, was omitted by the 44th Amendment; property now sits in <b>Art. 300A</b> (Part XII).</div>
+  <div class="mnemonic"><span class="lab">🧠 S–A–A–M–R–P &amp; 358 key</span><b>S</b>peech · <b>A</b>ssembly · <b>A</b>ssociation · <b>M</b>ovement · <b>R</b>esidence · <b>P</b>rofession.<br><b>358 = Art. 19 + (War or External aggression) + recital.</b></div>
+</div></details>
+
+<!-- 359 -->
+<details class="dos" id="a359" style="--accent:var(--vio)">
+<summary><span class="anum"><small>ARTICLE</small>359</span><span class="at"><b>⚖️ Enforcement of Part III Rights</b><small>Presidential order · pending proceedings · Arts. 20 &amp; 21 protected</small></span></summary>
+<div class="dbody">
+  <p>While a Proclamation of Emergency is in operation, the President may by <b>order</b> declare that the right to move any court for enforcement of such Part III rights as are mentioned in the order — <b>except Articles 20 and 21</b> — and all pending proceedings for enforcing them, remain suspended for the Proclamation’s duration or a shorter specified period.</p>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Function</th><th>Precision</th></tr></thead><tbody>
+    <tr><td>359(1)</td><td>Order suspending the right to move courts for the named rights (including pending proceedings).</td><td>The exclusion of Arts. 20–21 is in the operative wording.</td></tr>
+    <tr><td>359(1A)</td><td>While the order operates, the named rights do not restrict the State’s law-making and executive power; laws cease to have effect to the extent of incompetence when the order ceases (things done are saved).</td><td>A limited <b>substantive</b> effect exists too (added by the 38th Amendment).</td></tr>
+    <tr><td>359(1A) proviso</td><td>Where the Proclamation is territorially limited, measures may apply elsewhere if the security link exists.</td><td>Parallels Arts. 353 and 358.</td></tr>
+    <tr><td>359(1B)</td><td>No protection for a law lacking the Emergency recital, or executive action not under such a law.</td><td>The recital safeguard.</td></tr>
+    <tr><td>359(2)</td><td>Order may extend to the whole or any part of India.</td><td>Extension to a non-Emergency part needs the security link.</td></tr>
+    <tr><td>359(3)</td><td>Every order must be <b>laid before each House</b> as soon as may be.</td><td>Not an approval requirement.</td></tr>
+  </tbody></table></div>
+  <div class="callout">🕰️ The order may last for the Emergency’s duration <i>or a shorter period</i>. It can follow <b>any</b> Art. 352 Emergency, including one based on armed rebellion. In <i>Makhan Singh</i> (1964) the Court held that only the named rights’ enforcement is suspended — challenges on other legal grounds are not automatically barred.</div>
+  <div class="trap">🚨 “Art. 359 suspends remedies, not rights” is a useful start but <b>incomplete</b> without 359(1A)–(1B).</div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--grn)"><h3>🛡️ Art. 20 · criminal-law protections</h3><p>No retrospective conviction or enhanced penalty; no double jeopardy; no compelled self-incrimination of an accused. Use the actual clauses — not a blanket slogan.</p></div>
+    <div class="card" style="--accent:var(--blu)"><h3>🕊️ Art. 21 · life &amp; personal liberty</h3><p>Deprivation only by procedure established by law (read with the fair, just and reasonable standard). Protects <b>persons</b>, not just citizens.</p></div>
+  </div>
+  <div class="mnemonic"><span class="lab">🧠 Order checklist · R–P–T–20/21</span>Named <b>R</b>ights · stated <b>P</b>eriod · defined <b>T</b>erritory · <b>20 &amp; 21 excluded</b>.<br><b>“358 remembers 19; 359 must spare 20 and 21.”</b></div>
+</div></details>
+
+<!-- 360 -->
+<details class="dos" id="a360" style="--accent:var(--blu)">
+<summary><span class="anum"><small>ARTICLE</small>360</span><span class="at"><b>💠 Financial Emergency</b><small>Stability or credit · propriety directions · no periodic renewal</small></span></summary>
+<div class="dbody">
+  <p>If the President is satisfied that a situation has arisen whereby the <b>financial stability or credit of India or any part of its territory</b> is threatened, a Proclamation may be made.</p>
+  <div class="ribbon"><span class="tag">🏛️ Approval: <b>2 months</b></span><span class="tag">🗳️ <b>Ordinary majority</b></span><span class="tag">🔁 No 6-month renewal</span><span class="tag">⌛ No express maximum</span></div>
+  <div class="tw"><table><thead><tr><th>Clause</th><th>Rule</th><th>Insight</th></tr></thead><tbody>
+    <tr><td>360(1)</td><td>Ground and satisfaction.</td><td>India or any part of its territory.</td></tr>
+    <tr><td>360(2)(a)</td><td>May be revoked or varied by a later Proclamation.</td><td>No approval needed for revocation.</td></tr>
+    <tr><td>360(2)(b)</td><td>Laid before each House.</td><td>Parliamentary scrutiny.</td></tr>
+    <tr><td>360(2)(c)</td><td>Ceases after two months unless both Houses approve (Lok Sabha-dissolution proviso).</td><td>Ordinary majority.</td></tr>
+    <tr><td>360(3)</td><td>The Union’s executive authority extends to directing States to observe specified <b>canons of financial propriety</b> and other necessary directions.</td><td>Supervision, not dismissal of State governments.</td></tr>
+    <tr><td>360(4)(a)(i)</td><td>Directions may require <b>reduction of salaries and allowances</b> of persons serving in connection with State affairs.</td><td>Directions-based, not automatic.</td></tr>
+    <tr><td>360(4)(a)(ii)</td><td>May require <b>Money Bills and other Bills to which Art. 207 applies</b> to be reserved for the President after State passage.</td><td>Do not widen to every State Bill.</td></tr>
+    <tr><td>360(4)(b)</td><td>President may direct salary reduction for persons serving the Union, <b>including Supreme Court and High Court judges</b>.</td><td>Judicial salaries expressly named.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li>It does <b>not</b> itself suspend Fundamental Rights (Arts. 358–359 link to Art. 352).</li>
+    <li>It does <b>not</b> require a prior National Emergency and does <b>not</b> automatically impose President’s Rule.</li>
+    <li>It is not synonymous with recession, inflation or a tight budget.</li>
+  </ul>
+  <div class="callout tip">📌 <b>Historical fact:</b> no Financial Emergency has been proclaimed in India — not even in the 1991 balance-of-payments crisis. For any “as of today” question, confirm against the latest official record.</div>
+  <div class="mnemonic"><span class="lab">🧠 Financial Emergency in four words</span><b>Threat → Propriety → Salaries → Bills.</b> Duration: <b>2 months to approve; no periodic renewal.</b></div>
+</div></details>
+
+<noscript><div class="callout">All dossiers stay readable without JavaScript; search, calculators, quizzes and saved progress need it.</div></noscript>
+</div>
+</section>
+
+<!-- ================= RIGHTS ================= -->
+<section class="ch-sec" id="rights" data-scene="19·20·21" style="--accent:var(--vio)">
+<div class="wrap reveal">
+  <span class="kicker">🕊️ Act III · Liberty Under Pressure</span>
+  <h2 class="title">Rights Do Not Vanish — <span>Read the Exact Mechanism</span></h2>
+  <p class="lede">The commonest error is treating Arts. 358 and 359 as identical or assuming every Emergency disables every right. They differ in trigger, instrument, rights affected and duration.</p>
+  <div class="tw"><table>
+    <caption>⚖️ Article 358 versus Article 359</caption>
+    <thead><tr><th>Question</th><th>Article 358</th><th>Article 359</th></tr></thead>
+    <tbody>
+      <tr><td>Subject</td><td>Art. 19 restrictions on State power</td><td>Right to move courts for named Part III rights, plus 359(1A) effect</td></tr>
+      <tr><td>Emergency ground</td><td>War or external aggression only</td><td>Any ground under Art. 352 (incl. armed rebellion)</td></tr>
+      <tr><td>Separate order?</td><td>No — operates automatically</td><td>Yes — Presidential order naming rights and period</td></tr>
+      <tr><td>Rights affected</td><td>Art. 19 only</td><td>Only those named; <b>never Arts. 20–21</b></td></tr>
+      <tr><td>Recital safeguard</td><td>358(2)</td><td>359(1B)</td></tr>
+      <tr><td>Duration</td><td>While the qualifying Emergency operates</td><td>Order’s period — may be shorter than the Emergency</td></tr>
+      <tr><td>Parliamentary step</td><td>None specific</td><td>Order laid before each House (359(3))</td></tr>
+      <tr><td>Territory</td><td>Whole qualifying Proclamation, with spillover proviso</td><td>Whole or any part of India (359(2))</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--red)"><h3>🚫 The inaccurate sentence</h3><p>“During Emergency the government can suspend all Fundamental Rights and courts cannot interfere.”</p></div>
+    <div class="card" style="--accent:var(--grn)"><h3>✅ The accurate replacement</h3><p>“During a National Emergency, Art. 358 may operate for war/external aggression; Art. 359 requires an order affecting enforcement of named rights and cannot include Arts. 20–21.”</p></div>
+  </div>
+  <h3 class="sub">🔍 Four-question test for any rights problem</h3>
+  <div class="flow">
+    <div class="node"><b>① Which Emergency?</b>352, 356 or 360</div><span class="arrow">→</span>
+    <div class="node"><b>② Which ground?</b>War · aggression · rebellion</div><span class="arrow">→</span>
+    <div class="node"><b>③ Which instrument?</b>Automatic rule or Presidential order</div><span class="arrow">→</span>
+    <div class="node"><b>④ Which claim?</b>Named right · other right · competence</div>
+  </div>
+  <div class="callout">⚖️ <b>Habeas corpus:</b> ask whether detention has lawful authority and which right is invoked. After the 44th Amendment, enforcement of Art. 21 cannot be suspended by an Art. 359 order. <i>ADM Jabalpur</i> (1976) is no longer good law.</div>
+  <div class="mnemonic"><span class="lab">🧠 Rights firewall</span><b>“358 remembers 19; 359 must spare 20 &amp; 21.”</b> Precision lock: <b>ground · order · recital · territory · period.</b></div>
+</div>
+</section>
+
+<!-- ================= COMPARE & TOOLS ================= -->
+<section class="ch-sec" id="compare" data-scene="1·2·2" style="--accent:var(--blu)">
+<div class="wrap reveal">
+  <span class="kicker">🎛️ Act IV · The Comparison Deck</span>
+  <h2 class="title">Three Alerts — <span>One Control Panel</span></h2>
+  <p class="lede">Memorise differences, not three disconnected descriptions. Choose an alert to see its dashboard.</p>
+
+  <div id="deck" style="--accent:var(--red)">
+    <div class="tabs" role="tablist" aria-label="Choose an emergency">
+      <button class="tab on" role="tab" aria-selected="true" data-t="p352" data-c="var(--red)">🚨 National · 352</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="p356" data-c="var(--amb)">🏛️ President’s Rule · 356</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="p360" data-c="var(--blu)">💠 Financial · 360</button>
+    </div>
+    <div class="panel" id="p352"><b>Trigger:</b> war, external aggression, armed rebellion.<ul><li>Written Cabinet decision (352(3)); one-month approval by <b>special majority</b>; six-month renewals; no fixed maximum.</li><li>Lok Sabha disapproval route: one-tenth notice → special sitting within 14 days → mandatory revocation if passed.</li><li>States not dismissed; Union powers expand (353, 250); Arts. 358/359 may apply; terms extendable (83(2), 172(1)).</li></ul></div>
+    <div class="panel hide" id="p356"><b>Trigger:</b> State government cannot be carried on per the Constitution.<ul><li>Governor’s report <i>or otherwise</i>; two-month approval by <b>ordinary majority</b>; six months from issue; three-year ceiling; extra tests beyond one year.</li><li>Ministry displaced; Legislature in suspended animation/dissolved; powers under Parliament (357); High Court untouched.</li><li>Reviewable (<i>Bommai</i>); floor test; no premature dissolution.</li></ul></div>
+    <div class="panel hide" id="p360"><b>Trigger:</b> financial stability or credit threatened.<ul><li>Two-month approval by <b>ordinary majority</b>; no six-month renewal; no express maximum.</li><li>Directions on financial propriety; salary reductions (including judges via 360(4)(b)); reservation of certain State Bills.</li><li>Never proclaimed; no automatic rights suspension.</li></ul></div>
+  </div>
+
+  <div class="tw"><table>
+    <caption>⚖️ Master comparison</caption>
+    <thead><tr><th>Basis</th><th>352 · National</th><th>356 · President’s Rule</th><th>360 · Financial</th></tr></thead>
+    <tbody>
+      <tr><td>Special written-Cabinet rule</td><td>Yes, 352(3)</td><td>No special clause (ordinary Art. 74 advice)</td><td>No special clause</td></tr>
+      <tr><td>Initial approval</td><td>1 month</td><td>2 months</td><td>2 months</td></tr>
+      <tr><td>Majority</td><td>Special (both tests)</td><td>Ordinary</td><td>Ordinary</td></tr>
+      <tr><td>First approved period</td><td>6 months from the <i>second approving resolution</i></td><td>6 months from <i>date of issue</i></td><td>Until revoked</td></tr>
+      <tr><td>Renewal</td><td>Every 6 months</td><td>Every 6 months; extra tests beyond 1 year</td><td>None prescribed</td></tr>
+      <tr><td>Maximum</td><td>None fixed</td><td>3 years (general rule)</td><td>None express</td></tr>
+      <tr><td>Lok Sabha dissolved</td><td>Rajya Sabha bridge; 30 days after first sitting</td><td>Corresponding proviso</td><td>Corresponding proviso</td></tr>
+      <tr><td>Lok Sabha disapproval route</td><td>352(7)–(8)</td><td>None identical</td><td>None identical</td></tr>
+      <tr><td>State ministry</td><td>Not dismissed</td><td>Ordinarily displaced</td><td>Not dismissed</td></tr>
+      <tr><td>Rights</td><td>Arts. 358–359 may apply</td><td>No automatic effect</td><td>No automatic effect</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid two">
+    <div class="card calc" style="--accent:var(--gld)">
+      <h3>🧮 Special-majority simulator (Art. 352(6))</h3>
+      <p>Enter the House’s total membership as parliamentary practice reckons it, and the members present and voting.</p>
+      <label>Total membership <input id="tm" type="number" min="1" max="1000" value="245"></label>
+      <label>Present and voting <input id="pv" type="number" min="1" max="1000" value="180"></label>
+      <output id="majOut" aria-live="polite"></output>
+      <p class="small">Worked example: ⌊245/2⌋+1 = 123 and ⌈2×180/3⌉ = 120 → need max(123, 120) = <b>123</b>. Abstentions are not votes cast.</p>
+    </div>
+    <div class="card calc" style="--accent:var(--amb)">
+      <h3>⏳ President’s Rule ladder checker</h3>
+      <p>How long has President’s Rule been in force?</p>
+      <label>Months since proclamation <input id="prm" type="number" min="1" max="60" value="14"></label>
+      <output id="prOut" aria-live="polite"></output>
+      <p class="small">Formula: periods = ⌈months ÷ 6⌉; continuation resolutions = periods − 1.</p>
+    </div>
+  </div>
+
+  <div class="grid two">
+    <div class="card" style="--accent:var(--cyn)"><h3>📅 Same six months, different clocks</h3><p><b>352:</b> from the second House’s approving resolution. <b>356:</b> from the date of <i>issue</i>, not approval. <b>360:</b> approval starts no recurring cycle.</p><div class="mnemonic"><span class="lab">🧠 1–2–2</span>Approval window: <b>National 1 · State 2 · Financial 2 months.</b></div></div>
+    <div class="card" style="--accent:var(--pnk)"><h3>🚫 Not State ratification</h3><p>None of these proclamation approvals needs ratification by half the States — that is an Art. 368 concept for specified amendments only.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ================= SCENARIOS ================= -->
+<section class="ch-sec" id="scenarios" data-scene="CASE?" style="--accent:var(--grn)">
+<div class="wrap reveal">
+  <span class="kicker">🎯 Act V · Scenario Lab</span>
+  <h2 class="title">Which Provision Applies? — <span>Think, Then Reveal</span></h2>
+  <p class="lede">Apply the articles to realistic situations. Say the article, clause and principle aloud before opening the answer.</p>
+  <div class="grid" id="scnList"></div>
+</div>
+</section>
+
+<!-- ================= HISTORY ================= -->
+<section class="ch-sec" id="history" data-scene="1975" style="--accent:var(--amb)">
+<div class="wrap reveal">
+  <span class="kicker">🕰️ Act VI · The Historical Record</span>
+  <h2 class="title">Powers Evolved — <span>So Did the Safeguards</span></h2>
+  <p class="lede">India has seen <b>three</b> National Emergency proclamations (two overlapped in the 1970s), but well over a hundred instances of President’s Rule. President’s Rule was first imposed in Punjab in 1951.</p>
+  <div class="timeline">
+    <div class="ti" style="--accent:var(--blu)"><div class="d">26 OCT 1962 → 10 JAN 1968</div><p><b>⚔️ First National Emergency</b> — ground: external aggression (India–China conflict). It was still in operation during the 1965 war with Pakistan.</p></div>
+    <div class="ti" style="--accent:var(--amb)"><div class="d">3 DEC 1971 → 21 MAR 1977</div><p><b>🛡️ Second National Emergency</b> — ground: external aggression (India–Pakistan conflict). It was still in force when the third was proclaimed.</p></div>
+    <div class="ti" style="--accent:var(--red)"><div class="d">25 JUN 1975 → 21 MAR 1977</div><p><b>🌑 Internal Emergency</b> — ground then available: <b>internal disturbance</b> (not “armed rebellion”, which came later). Announced publicly on 26 June.</p></div>
+    <div class="ti" style="--accent:var(--grn)"><div class="d">1977–79 · RECONSTRUCTION</div><p><b>🕊️ The 44th Amendment</b> — Act-title year 1978, assent 1979; provisions were notified at different dates.</p></div>
+  </div>
+
+  <div class="tw"><table>
+    <caption>🛠️ Amendment-by-amendment reconstruction</caption>
+    <thead><tr><th>Amendment</th><th>Emergency significance</th><th>Remember</th></tr></thead>
+    <tbody>
+      <tr><td>38th · 1975</td><td>Tried to make the President’s satisfaction final and unreviewable; inserted Art. 359(1A).</td><td>Finality clauses were later removed.</td></tr>
+      <tr><td>42nd · 1976</td><td>Allowed Art. 352 Proclamations for the whole <i>or part</i> of India; inserted Art. 257A (armed forces deployment); lengthened Art. 356 continuation periods.</td><td>Centralising; much reversed by the 44th.</td></tr>
+      <tr><td>44th · 1978</td><td>Armed rebellion; written Cabinet decision; one-month approval; special majority; six-month renewals; Lok Sabha disapproval (352(7)–(8)); Arts. 20–21 protected; Art. 358 narrowed; Art. 356 extension tests; Art. 257A omitted; Art. 19(1)(f) and Art. 31 omitted, Art. 300A inserted.</td><td>The principal safeguard amendment.</td></tr>
+      <tr><td>59th · 1988</td><td>Punjab-specific emergency arrangements; inserted Art. 359A.</td><td>Historical exception.</td></tr>
+      <tr><td>63rd · 1989</td><td>Reversed the 59th’s arrangements; omitted Art. 359A.</td><td>359A is not operative today.</td></tr>
+      <tr><td>64th, 67th, 68th</td><td>Stepwise extension of President’s Rule in Punjab beyond three years (to a five-year outer limit).</td><td>Do not generalise to other States.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid two">
+    <div class="card" style="--accent:var(--grn)"><h3>🏛️ 44th: control of the proclamation</h3><ul><li>Ground narrowed: internal disturbance → armed rebellion.</li><li>Collective responsibility: written Cabinet decision.</li><li>Faster scrutiny: one month (was two).</li><li>Stronger vote: special majority.</li><li>Continuing control: six-month renewals + Lok Sabha disapproval.</li></ul></div>
+    <div class="card" style="--accent:var(--blu)"><h3>🕊️ 44th: rights and federal safeguards</h3><ul><li>Arts. 20–21 excluded from Art. 359 orders.</li><li>Art. 358 limited to war/external aggression.</li><li>Recital and action-under-law conditions.</li><li>Art. 356: six-month periods restored; extension beyond one year constrained.</li></ul></div>
+  </div>
+  <div class="trap">🔒 <b>Art. 22 trap:</b> Section 3 of the 44th Amendment (shortening the Advisory Board review period for preventive detention) has <b>never been brought into force</b>. Do not claim the operative Art. 22 uses its two-month rule. See <i>A. K. Roy</i> (1982).</div>
+  <div class="mnemonic"><span class="lab">🧠 The safeguard story</span><b>38 shields satisfaction · 42 centralises · 44 safeguards · 59 Punjab exception · 63 removes it.</b></div>
+</div>
+</section>
+
+<!-- ================= CASES ================= -->
+<section class="ch-sec" id="cases" data-scene="LAW" style="--accent:var(--pnk)">
+<div class="wrap reveal">
+  <span class="kicker">⚖️ Act VII · Judicial Guardrails</span>
+  <h2 class="title">Courts and the Crisis — <span>Trigger, Test &amp; Outcome</span></h2>
+  <div class="tw"><table>
+    <caption>⚖️ Essential case matrix</caption>
+    <thead><tr><th>Case</th><th>Connection</th><th>Core learning</th></tr></thead>
+    <tbody>
+      <tr><td>Makhan Singh v. State of Punjab · 1964</td><td>Art. 359 and detention</td><td>Only the named rights’ enforcement is suspended; challenges on other legal grounds are not automatically barred.</td></tr>
+      <tr><td>State of Rajasthan v. Union of India · 1977</td><td>Art. 356 after the 1977 elections</td><td>Early, more deferential review; read with <i>Bommai</i>.</td></tr>
+      <tr><td>ADM Jabalpur v. Shivkant Shukla · 1976</td><td>Emergency detention, habeas corpus</td><td>4–1 majority took a highly restrictive view; Justice H. R. Khanna’s dissent is celebrated. The majority approach is repudiated.</td></tr>
+      <tr><td>Minerva Mills · 1980</td><td>42nd Amendment, basic structure</td><td>Context for post-Emergency limits on amending power — <b>not</b> a direct Art. 352 case.</td></tr>
+      <tr><td>A. K. Roy v. Union of India · 1982</td><td>Preventive detention; 44th Amendment</td><td>Enactment ≠ commencement (Art. 22 change not in force).</td></tr>
+      <tr><td>S. R. Bommai v. Union of India · 1994</td><td>Art. 356</td><td>Review, floor test, relevant material, restoration, secularism and federalism as basic features.</td></tr>
+      <tr><td>Rameshwar Prasad v. Union of India · 2006</td><td>Bihar Assembly dissolution</td><td>Dissolution unconstitutional; the Court did not restore the Assembly because fresh elections had since been held.</td></tr>
+      <tr><td>K. S. Putt
+      
+<tr>
+        <td>K. S. Puttaswamy v. Union of India · 2017</td>
+        <td>Privacy, dignity and the legacy of <i>ADM Jabalpur</i></td>
+        <td>The nine-judge Bench expressly overruled the <i>ADM Jabalpur</i> majority. Life and personal liberty are not concessions of the State; Justice H. R. Khanna’s dissent is vindicated.</td>
+      </tr>
+      <tr>
+        <td>Nabam Rebia v. Deputy Speaker · 2016</td>
+        <td>Governor’s discretion · connected Arunachal Pradesh episode</td>
+        <td>A <b>connected federalism case</b>, not a pure Art. 356 ruling. The Governor’s discretion under Art. 163 is narrow, and summoning or advancing a session is ordinarily on aid and advice. The Court set aside the impugned actions and restored the earlier position.</td>
+      </tr>
+      <tr>
+        <td>Subhash Desai v. Principal Secretary, Governor of Maharashtra · 2023</td>
+        <td>Governor’s call for a floor test</td>
+        <td>A floor-test direction needs <b>objective material</b> showing loss of confidence. Internal party disagreement alone is not enough. Thematic link to <i>Bommai</i>, not an Art. 356 decision.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">🎞️ How judicial attitude evolved</h3>
+  <div class="timeline">
+    <div class="ti" style="--accent:var(--blu)"><div class="d">1964 · MAKHAN SINGH</div><p>Art. 359 suspends only the <b>enforcement of named rights</b>. Other legal grounds are not automatically barred.</p></div>
+    <div class="ti" style="--accent:var(--red)"><div class="d">1976 · ADM JABALPUR</div><p>4–1 majority takes a highly restrictive view of habeas corpus. <b>Khanna, J.</b> dissents.</p></div>
+    <div class="ti" style="--accent:var(--amb)"><div class="d">1977 · RAJASTHAN</div><p>Early, more deferential approach to Art. 356 satisfaction.</p></div>
+    <div class="ti" style="--accent:var(--vio)"><div class="d">1980 · MINERVA MILLS</div><p>Limits on the amending power. Context for post-Emergency constitutional repair, not an Art. 352 case.</p></div>
+    <div class="ti" style="--accent:var(--grn)"><div class="d">1994 · BOMMAI</div><p>Art. 356 becomes <b>reviewable</b>: material, floor test, no premature dissolution, federalism and secularism.</p></div>
+    <div class="ti" style="--accent:var(--cyn)"><div class="d">2006 · RAMESHWAR PRASAD</div><p>Bihar dissolution held unconstitutional; the Assembly was not restored because fresh elections had since been held.</p></div>
+    <div class="ti" style="--accent:var(--pnk)"><div class="d">2016–2017 · NABAM REBIA · PUTTASWAMY</div><p>Governors cannot act as political arbiters, and <i>ADM Jabalpur</i> is formally overruled.</p></div>
+  </div>
+
+  <h3 class="sub">🧭 Three different judicial questions</h3>
+  <div class="flow">
+    <div class="node"><b>① Proclamation review</b>Were the constitutional conditions and relevant material present?</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>② Measure review</b>Was the particular law, detention or direction legally authorised?</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>③ Remedy review</b>Does a valid Art. 359 order affect this particular claim?</div>
+  </div>
+
+  <div class="trap">
+    🚨 <b>Do not transfer holdings blindly.</b> <i>Bommai</i> is principally about Art. 356. <i>Makhan Singh</i> is about Art. 359. <i>Minerva Mills</i> is about amendments and basic structure. <i>Subhash Desai</i> and <i>Nabam Rebia</i> are governor-power cases. They share a constitutional commitment but answer different legal questions. Label each as <b>direct</b> or <b>thematic</b> in an answer.
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🧠 Judicial memory chain</span>
+    <b>Makhan names the rights · Khanna defends liberty · Bommai protects federalism · Puttaswamy buries Jabalpur.</b>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONNECTIONS ================= -->
+<section class="ch-sec" id="links" data-scene="LINKS" style="--accent:var(--cyn)">
+<div class="wrap reveal">
+  <span class="kicker">🔗 Act VIII · The Constitutional Circuit</span>
+  <h2 class="title">Beyond Part XVIII — <span>Connect the Supporting Articles</span></h2>
+  <p class="lede">Emergency questions rarely stop at the proclamation. Follow the chain from executive advice to parliamentary scrutiny, legislative competence, public finance and judicial remedies. Extraordinary power operates <b>inside</b> the Constitution, never outside it.</p>
+
+  <div class="tw"><table>
+    <caption>🧩 Auxiliary articles grouped by function</caption>
+    <thead><tr><th>Circuit</th><th>Articles</th><th>Why they matter</th></tr></thead>
+    <tbody>
+      <tr><td>👑 Advice &amp; executive action</td><td>74, 75, 77; 163, 164, 166</td><td>Art. 352(3) adds its own rule of a written Union Cabinet decision. Under Art. 74 the President may seek reconsideration once; reconsidered advice binds.</td></tr>
+      <tr><td>🏛️ Parliamentary continuity</td><td>83(1), 83(2), 85, 100</td><td>Rajya Sabha is not subject to dissolution. Ordinary voting differs from the Art. 352(6) special majority. Prorogation or adjournment is not dissolution.</td></tr>
+      <tr><td>🗳️ State legislative institutions</td><td>168, 172(1), 174</td><td>Composition, Assembly duration and summoning, prorogation and dissolution. Emergency-linked term extension only by parliamentary law.</td></tr>
+      <tr><td>🗺️ Legislative competence</td><td>245, 246, 246A, 250, 251; Seventh Schedule</td><td>Normal competence, GST competence, temporary State List power in a National Emergency, and conflict with State law.</td></tr>
+      <tr><td>📨 Union–State directions</td><td>256, 257, 353, 355, 365</td><td>Distinguish ordinary directions, widened Emergency directions, the Union’s standing duty and the non-compliance inference.</td></tr>
+      <tr><td>💰 Public funds &amp; budgets</td><td>112–114, 202–204, 266</td><td>Annual statements, grants and appropriation. Art. 357(1)(c) supplies a specific interim expenditure mechanism.</td></tr>
+      <tr><td>🧾 Financial legislation</td><td>110, 199, 207, 360(4)(a)(ii)</td><td>Art. 360 covers State Money Bills and Bills to which Art. 207 applies, <b>not every State Bill</b>.</td></tr>
+      <tr><td>⚖️ Courts &amp; salaries</td><td>32, 125, 214, 221, 226</td><td>Remedies and High Courts. Art. 356 cannot take over High Court powers; Art. 360(4)(b) expressly allows judicial salary reductions.</td></tr>
+      <tr><td>🕊️ Rights architecture</td><td>13, 14, 19, 20, 21, 22, 300A</td><td>Identify the actual right invoked. Arts. 20–21 are immune from Art. 359 orders; Art. 300A lies outside Part III.</td></tr>
+      <tr><td>📊 Election machinery</td><td>324; 356(5)(b)</td><td>The Election Commission’s certificate is a condition for President’s Rule beyond one year.</td></tr>
+      <tr><td>📜 Constitutional change</td><td>368</td><td>A proclamation is not an amendment, and it needs no State ratification.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">⏳ Five sunset rules that must never be mixed</h3>
+  <div class="grid">
+    <article class="card" style="--accent:var(--red)"><h3>🖋️ Art. 250 laws</h3><p>The otherwise-unsupported effect ceases <b>six months after</b> the National Emergency ends. Things already done are saved.</p></article>
+    <article class="card" style="--accent:var(--amb)"><h3>🏛️ Art. 357(2) laws</h3><p>They <b>continue</b> until competently altered, repealed or amended. They do not expire automatically.</p></article>
+    <article class="card" style="--accent:var(--vio)"><h3>🕊️ Arts. 358 &amp; 359(1A)</h3><p>The extra State power ends with the qualifying proclamation (358) or the order (359). Things done earlier are saved.</p></article>
+    <article class="card" style="--accent:var(--gld)"><h3>💰 Art. 354 orders</h3><p>The stated period cannot go beyond the <b>end of the financial year</b> in which the Emergency ceases.</p></article>
+    <article class="card" style="--accent:var(--grn)"><h3>🗳️ Arts. 83(2) &amp; 172(1)</h3><p>Term extension is by law, <b>not more than one year at a time</b>, and never beyond six months after the Emergency ceases.</p></article>
+  </div>
+  <div class="mnemonic"><span class="lab">🧠 Sunset code · 6 · Stay · Stop · Fiscal · Term</span><b>250 → +6 months · 357 → stays · 358/359 → stop with proclamation/order · 354 → financial-year end · 83/172 → ≤1 year at a time.</b></div>
+
+  <h3 class="sub">📡 Rights Radar</h3>
+  <div class="grid two">
+    <div class="card calc" style="--accent:var(--vio)">
+      <h3>🎛️ Which mechanism touches this right?</h3>
+      <label>Ground of the Art. 352 Emergency
+        <select id="rrGround"><option value="war">War / external aggression</option><option value="rebel">Armed rebellion only</option></select></label>
+      <label>Right invoked
+        <select id="rrRight">
+          <option value="14">Art. 14 · Equality</option><option value="19" selected>Art. 19 · Six freedoms</option>
+          <option value="20">Art. 20 · Criminal-law protections</option><option value="21">Art. 21 · Life &amp; liberty</option>
+          <option value="22">Art. 22 · Arrest &amp; detention safeguards</option><option value="300A">Art. 300A · Property</option>
+        </select></label>
+      <output id="rrOut" aria-live="polite"></output>
+    </div>
+    <div class="card" style="--accent:var(--cyn)">
+      <h3>🧭 How to read the result</h3>
+      <p>Art. 358 is automatic but covers <b>only Art. 19</b> and only for war or external aggression. Art. 359 needs a <b>Presidential order naming rights</b> and can never name Arts. 20 or 21.</p>
+      <p>Whatever the answer, verify four things: <b>recital · territory · period · named rights</b>.</p>
+    </div>
+  </div>
+
+  <h3 class="sub">🧯 Last resort, not first response</h3>
+  <p>Ordinary policing, public-order law, lawful Union directions and legislative confidence tests are distinct from a proclamation under Art. 352 or 356. A serious problem does not automatically meet an Emergency threshold.</p>
+  <div class="flow">
+    <div class="node"><b>🔎 Identify the problem</b>Security, majority, administration or finance?</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>📜 Find the legal power</b>Do its actual conditions exist?</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🛡️ Apply safeguards</b>Procedure, reasons, scrutiny, review</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🔄 Restore normality</b>Exceptional stays exceptional</div>
+  </div>
+
+  <h3 class="sub">🏛️ Reform thinking: Article 356 as a last resort</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--amb)">
+      <h3>📚 Sarkaria Commission (1983–88)</h3>
+      <p>Recommended using Art. 356 very sparingly and only as a <b>last resort</b>. Alternatives should be tried first, and ordinarily a warning should be given to the State. The Governor’s report should be a reasoned, speaking document. The Assembly should not be dissolved before Parliament approves.</p>
+    </article>
+    <article class="card" style="--accent:var(--grn)">
+      <h3>📚 Punchhi Commission (2007–10) &amp; NCRWC (2002)</h3>
+      <p>Both stressed codifying the <i>Bommai</i> safeguards and a reasoned Governor’s report. The Punchhi Commission also floated a <b>time-limited localised emergency</b> for a district or part of a State as an alternative to dismissing a whole government. This idea has never been enacted.</p>
+    </article>
+  </div>
+  <div class="callout tip">📌 Commission recommendations are <b>advisory</b>. The binding law is the constitutional text plus <i>Bommai</i>. Verify the exact wording of the reports before quoting them in an examination.</div>
+
+  <div class="quote">The constitutional question is not merely “Is there a crisis?” It is “Which lawful power addresses this crisis, under which conditions, for how long, and subject to whose scrutiny?”</div>
+</div>
+</section>
+
+<!-- ================= RECALL ================= -->
+<section class="ch-sec" id="recall" data-scene="RECALL" style="--accent:var(--vio)">
+<div class="wrap reveal">
+  <span class="kicker">🧠 Act IX · Retrieval Studio</span>
+  <h2 class="title">Remember the Architecture — <span>Not Just the Numbers</span></h2>
+  <p class="lede">Attempt each question aloud before revealing the answer. For descriptive answers, combine the text with a safeguard, a judicial connection and a balanced evaluation of necessity versus misuse.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--red)"><h3>🚨 National access code</h3><p><b>W–1–S–6–⅒–14:</b> Written Cabinet decision · 1 month · Special majority · 6-month renewals · one-tenth notice · 14-day sitting.</p></article>
+    <article class="card" style="--accent:var(--amb)"><h3>🏛️ President’s Rule ladder</h3><p><b>2–6–1–3:</b> two-month approval · six-month periods · extra conditions after one year · three-year ceiling.</p></article>
+    <article class="card" style="--accent:var(--blu)"><h3>💠 Financial circuit</h3><p><b>T–P–S–B:</b> Threat to stability or credit · Propriety directions · Salary measures · specified Bills reserved.</p></article>
+    <article class="card" style="--accent:var(--grn)"><h3>🕊️ Rights firewall</h3><p><b>358 remembers 19; 359 spares 20 &amp; 21.</b> Always add ground, order, recital, territory and period.</p></article>
+    <article class="card" style="--accent:var(--vio)"><h3>⏱️ Approval windows</h3><p><b>1–2–2:</b> National 1 month · State 2 · Financial 2.</p></article>
+    <article class="card" style="--accent:var(--gld)"><h3>⚖️ Bommai anchors</h3><p><b>R-F-M-R-S:</b> Review · Floor test · Material · Restoration · Secularism &amp; federalism.</p></article>
+  </div>
+
+  <div class="rtools" style="justify-content:flex-start">
+    <button class="btn" id="revealAnswers" type="button">＋ Reveal all answers</button>
+    <button class="btn" id="hideAnswers" type="button">− Hide all answers</button>
+  </div>
+  <div id="quizList"></div>
+
+  <h3 class="sub">✍️ A strong Mains answer in five frames</h3>
+  <div class="flow">
+    <div class="node"><b>① Define</b>Article, threshold, purpose</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>② Explain</b>Procedure, effects, duration</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>③ Safeguard</b>Parliament, rights, federal checks</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>④ Evaluate</b>History, misuse, judicial limits</div><span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>⑤ Conclude</b>Necessity without constitutional abandonment</div>
+  </div>
+
+  <div class="mnemonic"><span class="lab">🎯 The complete number corridor</span><b>352</b> Proclaim · <b>353</b> Effects · <b>354</b> Revenue · <b>355</b> Protect · <b>356</b> Rule · <b>357</b> Laws · <b>358</b> Nineteen · <b>359</b> Remedies · <b>360</b> Finance.</div>
+  <div class="quote">Emergency provisions are constitutional shock absorbers. They take extraordinary pressure temporarily and must not permanently deform the democratic structure.</div>
+</div>
+</section>
+
+<!-- ================= READINESS ================= -->
+<section class="ch-sec" id="ready" data-scene="READY" style="--accent:var(--grn)">
+<div class="wrap reveal">
+  <span class="kicker">✅ Final Act · Your Control Room</span>
+  <h2 class="title">Revision Readiness — <span>Earn Every Green Light</span></h2>
+  <p class="lede">Tick a statement only when you can explain it without looking. Progress is saved in this browser when storage is available and is never sent to a server.</p>
+  <div class="bar" id="readinessProgress" role="progressbar" aria-label="Revision completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="checkBar"></span></div>
+  <p class="qstat" id="checkStatus" role="status"></p>
+  <div class="checklist" id="checkItems"></div>
+  <button class="btn" id="resetChecks" type="button">↺ Reset checklist</button>
+</div>
+</section>
+
+<!-- ================= SOURCES ================= -->
+<section class="ch-sec" id="sources" data-scene="VERIFY" style="--accent:var(--gld)">
+<div class="wrap reveal">
+  <span class="kicker">🔎 Source Discipline · Final Verification</span>
+  <h2 class="title">Read the Constitution First — <span>Then Trust the Summary</span></h2>
+  <p class="lede">These are revision notes, not a substitute for the operative Constitution, official notifications or the judgments themselves. Current facts (for example, “no Financial Emergency so far”) should be re-checked against official records before an examination. This page performs no live check.</p>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--gld)"><h3>📜 Constitutional text</h3><p>Verify clauses, provisos, omitted provisions and amendment footnotes in the current edition.</p><p><a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">Legislative Department · Constitution of India ↗</a></p></article>
+    <article class="card" style="--accent:var(--cyn)"><h3>⚖️ Judgments</h3><p>Read the actual holding, separate opinions and the difference between a rule of law and case-specific relief.</p><p><a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">Supreme Court of India ↗</a></p></article>
+    <article class="card" style="--accent:var(--red)"><h3>🗞️ Proclamations &amp; commencement</h3><p>Gazette records fix the exact text and dates of proclamations, revocations and commencement notifications.</p><p><a href="https://egazette.gov.in/" target="_blank" rel="noopener noreferrer">Gazette of India ↗</a></p></article>
+    <article class="card" style="--accent:var(--grn)"><h3>🏛️ Statutes, Parliament &amp; commissions</h3><p>Statutes show implementation; House records show approval resolutions; commission reports show reform proposals.</p><p><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">India Code ↗</a> · <a href="https://sansad.in/" target="_blank" rel="noopener noreferrer">Parliament of India ↗</a> · <a href="https://interstatecouncil.gov.in/" target="_blank" rel="noopener noreferrer">Inter-State Council ↗</a></p></article>
+  </div>
+
+  <div class="trap">🔍 <b>Final precision lock:</b> enactment ≠ commencement · laying ≠ approval · notice ≠ disapproval vote · constitutional breakdown ≠ ordinary maladministration · restriction of remedies ≠ disappearance of the Constitution.</div>
+
+  <div class="ribbon">
+    <a class="chip" href="#a352">🚨 National</a><a class="chip" href="#a356">🏛️ President’s Rule</a><a class="chip" href="#a360">💠 Financial</a>
+    <a class="chip" href="#rights">🕊️ Rights</a><a class="chip" href="#cases">⚖️ Cases</a><a class="chip" href="#recall">🧠 Recall</a>
+  </div>
+  <div class="mnemonic"><span class="lab">🎬 Final frame</span><b>Identify the threat. Follow the procedure. Respect the rights. Test the power. Restore democracy.</b></div>
+</div>
+</section>
+
+</main>
+
+<footer>
+  <p class="final">“The Constitution can confront a crisis without surrendering its soul.”</p>
+  <p>Emergency Provisions of the Indian Constitution · Part XVIII · Articles 352–360</p>
+
+  <p class="credit-tag">🎬 END CREDITS · AUTEUR</p>
+  <div class="sig split magic" data-split="PIYUSH PARTE" style="--g1:#fff8ec;--g2:#ffd67a;--g3:#ff9a8a;--g4:#9ec9ff"></div>
+  <p>A Constitutional Study Film · The Emergency Control Room</p>
+
+  <div class="tribute tilt">
+    <span class="heart" aria-hidden="true">❤️</span>
+    <span class="t-en">En Nenjil Kudiyirukkum</span>
+    <span class="t-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+
+  <p class="small" style="margin-top:20px">Designed for understanding, retrieval and revision. Verify update-sensitive facts before examination or professional use.</p>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<style>
+  .calc select{padding:9px 12px;border-radius:10px;border:1px solid var(--bd);background:#0a1020;color:var(--ink);font:inherit;max-width:100%}
+  .calc select:focus,.tools input:focus{border-color:var(--cyn)}
+  .scn{border:1px solid var(--bd)}
+  .scn p{margin-top:12px;color:var(--mut);font-size:.92rem}
+  .scn summary .small{display:block;margin-top:2px}
+  .credit-tag{font:500 .66rem 'IBM Plex Mono',monospace;letter-spacing:6px;color:var(--cyn);margin-top:26px}
+  footer .sig{display:block;margin:6px 0 4px;font-size:clamp(1.7rem,5vw,2.6rem)}
+  .tribute{transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease}
+  .panel{scroll-margin-top:100px}
+  .dos:target{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 55%,transparent)}
+  .clap:focus-visible{outline:2px solid var(--gld);outline-offset:7px}
+  [role="tab"]:focus-visible{outline-offset:5px}
+  body.paused .reveal{opacity:1!important;transform:none!important}
+  body.focus .clap-wrap,body.focus .reel-track,body.focus .heart{animation:none}
+  body.focus .clap-wrap::before{animation:none;opacity:.18}
+  body.focus .card:hover,body.focus .node:hover{transform:none}
+  @media print{
+    .tabs,#revealAnswers,#hideAnswers,#resetChecks{display:none!important}
+    .panel{margin:12px 0}
+    .clap-wrap::before{display:none!important}
+    .l1{font-size:42pt}.l2{font-size:32pt}.l3{font-size:10pt;letter-spacing:2px}
+    .final,.t-en,.sig,.at b,.scn summary{color:#111}
+    a{color:#222;text-decoration:underline}
+  }
+</style>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const motionPref = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  const canAnimate = () => !paused && !motionPref.matches && !document.body.classList.contains('focus');
+  const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  /* ---------- LETTER SPLITTING (hero, clapperboard, end credits) ---------- */
+
+  $$('[data-split]').forEach(el => {
+    const text = el.dataset.split || '';
+    el.textContent = '';
+    if (!el.hasAttribute('aria-hidden')) { el.setAttribute('role', 'img'); el.setAttribute('aria-label', text); }
+    let idx = 0;
+    text.split(' ').forEach((word, wi) => {
+      if (wi) { const sp = document.createElement('span'); sp.className = 'sp'; sp.setAttribute('aria-hidden', 'true'); el.append(sp); }
+      const w = document.createElement('span'); w.className = 'word'; w.setAttribute('aria-hidden', 'true');
+      [...word].forEach(ch => {
+        const s = document.createElement('span'); s.className = 'ch'; s.style.setProperty('--i', idx++); s.textContent = ch; w.append(s);
+      });
+      el.append(w);
+    });
+  });
+
+  /* ---------- HOVER MAGIC + TILT ---------- */
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+
+    $$('.magic').forEach(line => {
+      const letters = $$('.ch', line);
+      let frame = 0;
+      line.addEventListener('pointermove', e => {
+        if (!canAnimate()) return;
+        cancelAnimationFrame(frame);
+        const x = e.clientX;
+        frame = requestAnimationFrame(() => letters.forEach(l => {
+          const r = l.getBoundingClientRect();
+          const d = Math.abs(x - r.left - r.width / 2);
+          l.style.setProperty('--k', Math.max(0, 1 - d / 135).toFixed(3));
+        }));
+      });
+      line.addEventListener('pointerleave', () => { cancelAnimationFrame(frame); letters.forEach(l => l.style.setProperty('--k', '0')); });
+    });
+
+    $$('.tilt').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        if (!canAnimate()) return;
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.style.setProperty('--rx', ((.5 - y) * 7) + 'deg');
+        el.style.setProperty('--ry', ((x - .5) * 9) + 'deg');
+      });
+      el.addEventListener('pointerleave', () => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); });
+    });
+  }
+  const resetTransforms = () => {
+
+    $$('.ch').forEach(l => l.style.setProperty('--k', '0'));
+
+    $$('.tilt').forEach(el => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); });
+  };
+
+  /* ---------- TICKER ---------- */
+  const facts = [
+    ['🚨 352', 'War · External aggression · Armed rebellion'], ['📝 Cabinet', 'Written collective decision'],
+    ['🏛️ Approval', '1 · 2 · 2 months'], ['🗳️ 352', 'Special majority in each House'],
+    ['⏳ 356', 'Six months from issue'], ['🕊️ 358', 'Article 19 · War / external aggression only'],
+    ['🛡️ 359', 'Never include Articles 20 and 21'], ['⚖️ Bommai', 'Review · Floor test · Federalism'],
+    ['💠 360', 'No periodic renewal · never proclaimed'], ['📜 357', 'Laws survive until competent alteration']
+  ];
+  const tk = facts.map(([a, b]) => `<span><b>${esc(a)}</b> · ${esc(b)}</span>`).join('');
+  $('#reelTrack').innerHTML = `<div style="display:flex">${tk}</div><div style="display:flex" aria-hidden="true">${tk}</div>`;
+
+  /* ---------- DOSSIER SEARCH ---------- */
+  const dossiers = $$('details.dos');
+  const index = new Map(dossiers.map(d => [d, d.textContent.toLowerCase().replace(/\s+/g, ' ')]));
+  function filterDossiers() {
+    const terms = $('#search').value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let n = 0;
+    dossiers.forEach(d => { const ok = terms.every(t => index.get(d).includes(t)); d.classList.toggle('hide', !ok); if (ok) n++; });
+    $('#searchStatus').textContent = `${n} of ${dossiers.length} article dossiers shown.`;
+    $('#noRes').classList.toggle('show', n === 0);
+  }
+  $('#search').addEventListener('input', filterDossiers);
+  $('#clearSearch').addEventListener('click', () => { $('#search').value = ''; filterDossiers(); $('#search').focus(); });
+  $('#openAll').addEventListener('click', () => dossiers.filter(d => !d.classList.contains('hide')).forEach(d => d.open = true));
+  $('#foldAll').addEventListener('click', () => dossiers.filter(d => !d.classList.contains('hide')).forEach(d => d.open = false));
+  filterDossiers();
+
+  /* ---------- ACCESSIBLE COMPARISON TABS ---------- */
+  const tabs = $$('#deck [role="tab"]'), panels = $$('#deck .panel');
+  function activateTab(tab, focus = false) {
+    tabs.forEach(t => { const on = t === tab; t.classList.toggle('on', on); t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; });
+    panels.forEach(p => { const on = p.id === tab.dataset.t; p.classList.toggle('hide', !on); p.hidden = !on; });
+    $('#deck').style.setProperty('--accent', tab.dataset.c);
+    if (focus) tab.focus();
+  }
+  tabs.forEach((tab, i) => {
+    tab.id = 'emergency-tab-' + i;
+    tab.setAttribute('aria-controls', tab.dataset.t);
+    const p = document.getElementById(tab.dataset.t);
+    p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', tab.id); p.tabIndex = 0;
+    tab.addEventListener('click', () => activateTab(tab));
+    tab.addEventListener('keydown', e => {
+      let n;
+      if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End') n = tabs.length - 1;
+      if (n !== undefined) { e.preventDefault(); activateTab(tabs[n], true); }
+    });
+  });
+  activateTab(tabs[0]);
+
+  /* ---------- SPECIAL MAJORITY (Art. 352(6)) ---------- */
+  function calcMajority() {
+    const total = Number($('#tm').value), voting = Number($('#pv').value), out = $('#majOut');
+    if (!Number.isInteger(total) || total < 1 || total > 1000 || !Number.isInteger(voting) || voting < 1 || voting > total) {
+      out.textContent = 'Enter whole numbers: total 1–1,000; present and voting 1–total.'; return;
+    }
+    const whole = Math.floor(total / 2) + 1, twoThirds = Math.ceil(2 * voting / 3), need = Math.max(whole, twoThirds);
+    out.innerHTML = `Whole-House threshold: <b>${whole}</b>.<br>Two-thirds-of-voting threshold: <b>${twoThirds}</b>.<br>Minimum “Yes” votes: <b>${need}</b>.<br>` +
+      (need > voting ? '⚠️ Passage is impossible with this few members voting.' : '✅ This voting strength can satisfy both tests.');
+  }
+  ['tm', 'pv'].forEach(id => document.getElementById(id).addEventListener('input', calcMajority));
+  calcMajority();
+
+  /* ---------- PRESIDENT'S RULE LADDER ---------- */
+  function calcLadder() {
+    const m = Number($('#prm').value), out = $('#prOut');
+    if (!Number.isInteger(m) || m < 1 || m > 60) { out.textContent = 'Enter a whole number from 1 to 60.'; return; }
+    if (m > 36) {
+      out.innerHTML = '⛔ <b>Beyond the general three-year ceiling.</b> The historical Punjab-specific extension is not a general power to extend President’s Rule elsewhere.'; return;
+    }
+    const periods = Math.ceil(m / 6), renewals = periods - 1;
+    out.innerHTML = `Six-month period <b>${periods}</b>, with <b>${renewals}</b> continuation resolution${renewals === 1 ? '' : 's'} after initial approval.<br>` +
+      (m > 12 ? '🔒 Beyond one year: a qualifying National Emergency <i>and</i> an Election Commission certificate are both required when the resolution is passed.'
+        : m <= 2 ? '🏛️ Initial approval must come within two months; approval does not restart the six-month clock from issue.'
+        : '🏛️ Initial approval must already exist; each six-month continuation needs both Houses.') +
+      '<br><span class="small">A duration illustration, not a finding that any real proclamation is valid.</span>';
+  }
+  $('#prm').addEventListener('input', calcLadder);
+  calcLadder();
+
+  /* ---------- RIGHTS RADAR ---------- */
+  function radar() {
+    const war = $('#rrGround').value === 'war', r = $('#rrRight').value;
+    let t;
+    if (r === '20' || r === '21') {
+      t = `🛡️ <b>Art. ${r} is protected.</b> No Art. 359 order can include it, and Art. 358 concerns only Art. 19. Enforcement under Arts. 32 and 226 remains available. <i>ADM Jabalpur</i> is no longer good law.`;
+    } else if (r === '300A') {
+      t = '🏠 <b>Art. 300A lies in Part XII, not Part III.</b> Arts. 358–359 do not operate on it as a Fundamental Right. Deprivation still needs authority of law; the usual remedy is Art. 226.';
+    } else if (r === '19') {
+      t = war
+        ? '🕊️ <b>Art. 358 operates automatically.</b> While the war/external-aggression Emergency lasts, Art. 19 does not restrict State law-making or executive power, but only for laws carrying the Emergency recital (358(2)). An Art. 359 order may additionally name Art. 19 rights.'
+        : '🔥 <b>Art. 358 does not operate</b> for armed rebellion alone. Art. 19 continues to restrict State power unless a valid Art. 359 order names the right, in which case the right to move courts is suspended for the order’s period (with the 359(1A)–(1B) limits).';
+    } else {
+      t = `⚖️ <b>No automatic effect.</b> Art. 358 covers only Art. 19. This right is affected only if a valid <b>Art. 359 order names it</b>. Then the right to move courts is suspended for the stated period, with 359(1A)–(1B) conditions. Challenges on other legal grounds are not automatically barred (<i>Makhan Singh</i>).`;
+    }
+    $('#rrOut').innerHTML = t + '<br><span class="small">Checklist: recital · territory · period · named rights.</span>';
+  }
+  $('#rrGround').addEventListener('change', radar);
+  $('#rrRight').addEventListener('change', radar);
+  radar();
+
+  /* ---------- SCENARIO LAB ---------- */
+  const scenarios = [
+    ['🔥 Armed rebellion Emergency: does Article 19 automatically stop restricting State power?', 'No. Article 358 applies only to war or external aggression. An Article 359 order may affect enforcement of named rights, subject to its conditions and the absolute exclusion of Articles 20 and 21.'],
+    ['📨 The Governor sends no report. Is Article 356 unavailable?', 'No. Article 356 says “on receipt of a report from the Governor of the State or otherwise”. Relevant material and the breakdown threshold are still necessary and reviewable.'],
+    ['🏛️ President’s Rule is approved 40 days after issue. When does the first six-month period begin?', 'From the date of issue (Article 356(4)), not from approval. Contrast Article 352(5), where the first approved period runs from the second approving resolution.'],
+    ['🗳️ A party loses a parliamentary election. Must its State governments be dismissed?', 'No. An adverse election result elsewhere does not itself show that constitutional government in a State has broken down.'],
+    ['⚖️ Can the President assume a High Court’s powers during President’s Rule?', 'No. The proviso to Article 356(1) protects High Court powers and constitutional provisions relating to High Courts.'],
+    ['⏳ President’s Rule reaches month 18. Is an Emergency in an unrelated region enough?', 'No. Article 356(5)(a) needs a National Emergency in operation in the whole of India or in the whole or any part of the State concerned. The Election Commission certificate is also required.'],
+    ['🕊️ A Presidential order purports to suspend enforcement of Article 21. Valid?', 'No. Article 359 expressly excludes Articles 20 and 21.'],
+    ['💠 Does a Financial Emergency automatically cut every public salary?', 'No. Article 360 enables specified directions. Salary reductions require a direction given under that power.'],
+    ['📜 President’s Rule ends. Do laws made under Article 357 vanish after six months?', 'No. Article 357(2) laws continue until competently altered, repealed or amended. The six-month rule belongs to Article 250.'],
+    ['📝 One-tenth of Lok Sabha members sign a notice. Has the Emergency ended?', 'No. The notice triggers a special sitting within 14 days under Article 352(8). Revocation is mandatory only after the Lok Sabha actually passes a disapproval resolution under Article 352(7).'],
+    ['🔥 Violent street riots and arson occur in a State. Can a National Emergency be proclaimed on that ground?', 'Not merely for riots. After the 44th Amendment the grounds are war, external aggression or armed rebellion. The Union may still act through its Article 355 duty, lawful directions and ordinary law.'],
+    ['🏛️ A ministry is alleged to have lost its majority. What should happen first?', 'Ordinarily a floor test. Under Bommai and Subhash Desai the Governor’s private assessment is no substitute for legislative verification.']
+  ];
+  $('#scnList').innerHTML = scenarios.map(([q, a]) =>
+    `<details class="scn"><summary>${esc(q)}</summary><p><b>✅ Constitutional answer:</b> ${esc(a)}</p></details>`).join('');
+
+  /* ---------- RECALL QUESTIONS ---------- */
+  const questions = [
+    ['Can a National Emergency be proclaimed before actual hostilities?', 'Yes. The Explanation to Article 352(1) permits a proclamation if the President is satisfied that danger is imminent.'],
+    ['Which clauses of Article 352 contain the disapproval safeguards?', '352(7): mandatory revocation after Lok Sabha disapproval. 352(8): one-tenth notice and a special sitting within fourteen days.'],
+    ['Does the special majority govern the Lok Sabha disapproval resolution?', 'No. Article 352(6) applies to approval and continuation resolutions under clauses (4) and (5), not the disapproval resolution under (7).'],
+    ['Can several National Emergency proclamations operate together?', 'Yes. Article 352(9) allows different proclamations on different grounds even while an earlier one operates.'],
+    ['Which provision directly grants State List competence in a National Emergency?', 'Article 250. Article 353(b) concerns laws conferring powers and imposing duties on Union authorities.'],
+    ['Does Article 354 include Articles 280 and 281?', 'No. Its express range is Articles 268–279. The Finance Commission articles are connected context.'],
+    ['Does Article 365 make President’s Rule automatic?', 'No. It permits an inference after non-compliance with valid Union directions. Article 356’s own conditions and judicial review still apply.'],
+    ['What two requirements apply beyond one year of President’s Rule?', 'A qualifying National Emergency in operation, and an Election Commission certificate that continuation is necessary because of difficulties in holding Assembly elections.'],
+    ['Where is the Article 357 expenditure mechanism?', 'Article 357(1)(c): when the Lok Sabha is not in session, pending Parliament’s sanction. Not 357(1)(b).'],
+    ['What does the Emergency recital do?', 'Articles 358(2) and 359(1B) withhold protection from laws lacking the recital, and executive action must be taken under such a law. The recital does not cure every other illegality.'],
+    ['Is “Article 359 suspends remedies, not rights” a complete explanation?', 'No. Also mention the limited substantive effect in Article 359(1A) and the safeguards in 359(1B).'],
+    ['Can Parliament extend an Assembly’s term indefinitely in one law?', 'No. Article 172(1) allows extension by law for not more than one year at a time, and not beyond six months after the Emergency ceases.'],
+    ['Did the 44th Amendment’s two-month Advisory Board rule for Article 22 commence?', 'No. Section 3 has never been brought into force. Do not treat its proposed wording as operative Article 22 (A. K. Roy, 1982).'],
+    ['What is the approval-window mnemonic?', '1–2–2: National one month, President’s Rule two months, Financial Emergency two months. Remember the Lok Sabha-dissolution provisos.'],
+    ['Does a Financial Emergency need six-month renewals?', 'No. Article 360 prescribes initial approval within two months but no recurring renewal cycle and no express maximum.'],
+    ['Did the 1962 Emergency end right after the China conflict?', 'No. It continued until 10 January 1968 and was still in force during the 1965 war with Pakistan.'],
+    ['Was the 1975 Emergency proclaimed on “armed rebellion”?', 'No. The available ground was internal disturbance. The 44th Amendment later substituted armed rebellion.'],
+    ['Is Article 359A a tenth operative Emergency article?', 'No. It was a Punjab-specific provision inserted by the 59th Amendment and omitted by the 63rd. There are nine operative articles, 352–360.'],
+    ['Which case overruled the ADM Jabalpur majority?', 'K. S. Puttaswamy v. Union of India (2017), by a nine-judge Bench.'],
+    ['Are Nabam Rebia and Subhash Desai direct Article 356 judgments?', 'No. They are connected governor-power cases. Bommai is the principal Article 356 authority.']
+  ];
+  $('#quizList').innerHTML = questions.map(([q, a], i) =>
+    `<details class="quiz"><summary>${i + 1}. ${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
+  $('#revealAnswers').addEventListener('click', () => $$('#quizList details').forEach(d => d.open = true));
+  $('#hideAnswers').addEventListener('click', () => $$('#quizList details').forEach(d => d.open = false));
+
+  /* ---------- SAVED CHECKLIST ---------- */
+  const checks = [
+    'I can distinguish the three Emergency thresholds.',
+    'I know all nine operative articles and the omitted Article 359A.',
+    'I can explain every clause of Article 352, including (7)–(9).',
+    'I can calculate both special-majority thresholds.',
+    'I know the Lok Sabha-dissolution approval provisos.',
+    'I can distinguish the Article 352 and 356 six-month clocks.',
+    'I can separate Articles 353(b) and 250.',
+    'I know Article 354’s range and financial-year limit.',
+    'I can distinguish Article 355’s duty from Article 365’s inference.',
+    'I can explain Article 356’s powers and the High Court safeguard.',
+    'I know both conditions for continuation beyond one year.',
+    'I can explain the principal Bommai safeguards.',
+    'I know Article 357(1)(a), (b) and (c) correctly.',
+    'I can compare the survival of Article 250 and 357 laws.',
+    'I can distinguish Articles 358 and 359 precisely.',
+    'I know the recital and action-under-law conditions.',
+    'I can explain the protection of Articles 20 and 21.',
+    'I know the Article 22 non-commencement trap.',
+    'I can explain Article 360 directions, salaries and specified Bills.',
+    'I can recall the three National Emergency proclamations.',
+    'I can connect 38th → 42nd → 44th → 59th → 63rd.',
+    'I can separate direct judgments from thematic connections.'
+  ];
+  $('#checkItems').innerHTML = checks.map((t, i) =>
+    `<label class="ck"><input type="checkbox" data-index="${i}"><span>${esc(t)}</span></label>`).join('');
+  const boxes = $$('#checkItems input'), storeKey = 'emergency-control-room-checklist-v1';
+  try { const s = JSON.parse(localStorage.getItem(storeKey) || '[]'); if (Array.isArray(s)) boxes.forEach((b, i) => b.checked = s[i] === true); } catch (_) {}
+  function updateChecks() {
+    const done = boxes.filter(b => b.checked).length, pct = Math.round(done / boxes.length * 100);
+    $('#checkBar').style.width = pct + '%';
+    $('#readinessProgress').setAttribute('aria-valuenow', String(pct));
+    $('#checkStatus').textContent = `${done} / ${boxes.length} mastered · ${pct}%`;
+    try { localStorage.setItem(storeKey, JSON.stringify(boxes.map(b => b.checked))); } catch (_) {}
+  }
+  boxes.forEach(b => b.addEventListener('change', updateChecks));
+  $('#resetChecks').addEventListener('click', () => { boxes.forEach(b => b.checked = false); updateChecks(); });
+  updateChecks();
+
+  /* ---------- AUTEUR CLAPPERBOARD ---------- */
+  const clap = $('#clap');
+  let take = 1;
+  clap.addEventListener('click', () => {
+    take = take >= 99 ? 1 : take + 1;
+    $('#take').textContent = String(take);
+    if (!canAnimate()) return;
+    clap.classList.remove('clapping'); void clap.offsetWidth; clap.classList.add('clapping');
+    const r = clap.getBoundingClientRect(), sym = ['✦', '🎬', '⚖️', '📜', '✨', '🚨'];
+    for (let i = 0; i < 16; i++) {
+      const p = document.createElement('span');
+      p.className = 'burst'; p.setAttribute('aria-hidden', 'true'); p.textContent = sym[i % sym.length];
+      p.style.left = (r.left + r.width / 2) + 'px'; p.style.top = (r.top + r.height / 2) + 'px';
+      const a = Math.PI * 2 * i / 16, d = 80 + Math.random() * 130;
+      p.style.setProperty('--dx', Math.cos(a) * d + 'px'); p.style.setProperty('--dy', Math.sin(a) * d + 'px');
+      document.body.append(p); setTimeout(() => p.remove(), 1200);
+    }
+  });
+  clap.addEventListener('animationend', e => { if (e.animationName === 'clapDown') clap.classList.remove('clapping'); });
+
+  /* ---------- REVEALS ---------- */
+  if ('IntersectionObserver' in window) {
+    const ob = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ob.unobserve(e.target); } }), { threshold: .015 });
+
+    $$('.reveal').forEach(el => ob.observe(el));
+  } else $$('.reveal').forEach(el => el.classList.add('in'));
+
+  /* ---------- DEEP LINKS ---------- */
+  function revealHash(scroll = true) {
+    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    const dos = target.closest('details.dos');
+    if (dos && dos.classList.contains('hide')) { $('#search').value = ''; filterDossiers(); }
+    for (let a = target; a; a = a.parentElement) if (a.tagName === 'DETAILS') a.open = true;
+    const panel = target.closest('[role="tabpanel"]');
+    if (panel) { const t = tabs.find(x => x.dataset.t === panel.id); if (t) activateTab(t); }
+    const rv = target.closest('.reveal'); if (rv) rv.classList.add('in');
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({ behavior: canAnimate() ? 'smooth' : 'auto', block: 'start' }));
+  }
+  addEventListener('hashchange', () => revealHash());
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a && a.getAttribute('href') === location.hash) { e.preventDefault(); revealHash(); }
+  });
+  if (location.hash) setTimeout(() => revealHash(), 100);
+
+  /* ---------- SCROLL METER + ACTIVE CHAPTER ---------- */
+  const chapters = [$('#opening'), ...$$('main > section[id]')], navLinks = $$('nav a');
+  let pending = false;
+  function updateScroll() {
+    const avail = document.documentElement.scrollHeight - innerHeight;
+    $('#progress').style.width = (avail > 0 ? Math.max(0, Math.min(100, scrollY / avail * 100)) : 0) + '%';
+    $('#toTop').classList.toggle('show', scrollY > 650);
+    let cur = 'opening';
+    chapters.forEach(c => { if (c.getBoundingClientRect().top <= 165) cur = c.id; });
+    navLinks.forEach(l => {
+      const on = l.getAttribute('href') === '#' + cur;
+      l.classList.toggle('on', on);
+      if (on) l.setAttribute('aria-current', 'location'); else l.removeAttribute('aria-current');
+    });
+    pending = false;
+  }
+  addEventListener('scroll', () => { if (!pending) { pending = true; requestAnimationFrame(updateScroll); } }, { passive: true });
+  addEventListener('resize', updateScroll);
+  $('#toTop').addEventListener('click', () => scrollTo({ top: 0, behavior: canAnimate() ? 'smooth' : 'auto' }));
+  updateScroll();
+
+  /* ---------- FOCUS / PAUSE CONTROLS ---------- */
+  $('#focusBtn').addEventListener('click', () => {
+    const on = document.body.classList.toggle('focus');
+    $('#focusBtn').setAttribute('aria-pressed', String(on));
+    $('#focusBtn').textContent = on ? '✨ Restore atmosphere' : '🌙 Focus reading';
+    resetTransforms(); syncEmbers();
+  });
+  $('#pauseBtn').addEventListener('click', () => {
+    paused = !paused;
+    document.body.classList.toggle('paused', paused);
+    $('#pauseBtn').setAttribute('aria-pressed', String(paused));
+    $('#pauseBtn').textContent = paused ? '▶️ Resume effects' : '⏸️ Pause effects';
+    resetTransforms(); syncEmbers();
+  });
+
+  /* ---------- PRINT: EXPAND EVERYTHING, THEN RESTORE ---------- */
+  let snap = null;
+  addEventListener('beforeprint', () => {
+    if (snap) return;
+    snap = {
+      open: $$('details').map(el => ({ el, open: el.open })),
+      vis: $$('.hide,[hidden]').map(el => ({ el, hidden: el.hidden, cls: el.classList.contains('hide') }))
+    };
+
+    $$('details').forEach(el => el.open = true);
+    snap.vis.forEach(({ el }) => { el.hidden = false; el.classList.remove('hide'); });
+  });
+  addEventListener('afterprint', () => {
+    if (!snap) return;
+    snap.open.forEach(({ el, open }) => el.open = open);
+    snap.vis.forEach(({ el, hidden, cls }) => { el.hidden = hidden; el.classList.toggle('hide', cls); });
+    snap = null; updateScroll();
+  });
+  $('#printBtn').addEventListener('click', () => print());
+
+  /* ---------- AMBIENT EMBERS ---------- */
+  const canvas = $('#embers'), ctx = canvas.getContext('2d');
+  let W = 0, H = 0, parts = [], raf = 0, last = 0;
+  const embersOn = () => !!ctx && canAnimate() && !document.hidden;
+  function resizeEmbers() {
+    W = innerWidth; H = innerHeight;
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    if (!ctx) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    parts = Array.from({ length: W < 700 ? 16 : 36 }, () => ({
+      x: Math.random() * W, y: Math.random() * H, r: .4 + Math.random() * 1.3,
+      v: 5 + Math.random() * 11, ph: Math.random() * Math.PI * 2, a: .1 + Math.random() * .24, cool: Math.random() > .7
+    }));
+  }
+  function drawEmbers(t) {
+    raf = 0;
+    if (!embersOn()) return;
+    const dt = last ? Math.min((t - last) / 1000, .05) : 0; last = t;
+    ctx.clearRect(0, 0, W, H);
+    parts.forEach(p => {
+      p.y -= p.v * dt; p.x += Math.sin(t / 3500 + p.ph) * dt * 4;
+      if (p.y < -5) { p.y = H + 5; p.x = Math.random() * W; }
+      ctx.beginPath();
+      ctx.fillStyle = p.cool ? `rgba(130,182,255,${p.a})` : `rgba(255,189,110,${p.a})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    });
+    raf = requestAnimationFrame(drawEmbers);
+  }
+  function syncEmbers() {
+    cancelAnimationFrame(raf); raf = 0; last = 0;
+    if (ctx) ctx.clearRect(0, 0, W, H);
+    if (embersOn()) raf = requestAnimationFrame(drawEmbers);
+  }
+  addEventListener('resize', resizeEmbers);
+  document.addEventListener('visibilitychange', syncEmbers);
+  if (motionPref.addEventListener) motionPref.addEventListener('change', () => { resetTransforms(); syncEmbers(); });
+  resizeEmbers(); syncEmbers();
+})();
+</script>
+</body>
+</html>
