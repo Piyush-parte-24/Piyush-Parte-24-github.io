@@ -268,7 +268,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "The State Legislature of India.html",
-    icon: "🦚",
+    icon: "🐋",
     image: "",
     featured: true
   },
@@ -280,7 +280,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "The State Executive.html",
-    icon: "🐦‍🔥",
+    icon: "🦈",
     image: "",
     featured: true
   },
@@ -292,7 +292,7 @@ const archiveEntries = [
     status: "Documented",
     date: "FIELD SEASON I",
     file: "Indian Constitutional Amendments.html",
-    icon: "📰",
+    icon: "🎏",
     image: "",
     featured: true
   } 
