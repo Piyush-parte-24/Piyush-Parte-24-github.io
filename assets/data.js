@@ -295,12 +295,24 @@ const archiveEntries = [
     icon: "🎏",
     image: "",
     featured: true
+  },
+  {
+    number: "22",
+    title: "EMERGENCY PROVISIONS OF THE INDIAN CONSTITUTION",
+    category: "Political Science",
+    description: "Extraordinary power — created by the Constitution, therefore bounded by it •  Constitutional Crisis Architecture • Part XVIII",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "Emergency Provisions of Indian Constitution.html",
+    icon: "☣︎",
+    image: "",
+    featured: true
   } 
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
   ,{
-    number: "22",
+    number: "23",
     title: "Your New Note",
     category: "Category Name",
     description: "Short description of the note.",
