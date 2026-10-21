@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070810">
+<meta name="description" content="Cinematic, constitutionally precise study notes on the Election Commission of India: Part XV, Articles 324–329, appointments, powers, voters, parties, technology, case law and revision tools.">
+<title>The Election Commission of India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href=<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --sweep{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#070810;--ink:#e9e6f5;--head:#fff8ec;--soft:#c9c5dd;--dim:#9a96b5;
+  --line:rgba(205,200,240,.14);--glass:rgba(255,255,255,.05);
+  --violet:#a28bff;--saffron:#ffb766;--jade:#63ebbd;--sky:#7accff;--gold:#ffdb8e;--rose:#ff94b1;--paper:#f4ecd8;
+  --accent:var(--violet);--r:22px
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{background:var(--bg);color:var(--ink);font:15.5px/1.85 'Hanken Grotesk',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--saffron);color:#1b1004}
+::-webkit-scrollbar{width:9px;height:7px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--violet),var(--saffron),var(--jade));border-radius:9px}
+a{color:var(--sky)}a:hover{color:var(--gold)}
+b,strong{color:var(--head);font-weight:700}
+i,em{color:#ddd7f0}
+ul,ol{padding-left:22px}li{margin:6px 0}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+[hidden],.hide{display:none!important}
+.small{font-size:.78rem;color:var(--dim)}
+p+p{margin-top:10px}
+
+/* ===== ATMOSPHERE ===== */
+.sky{position:fixed;inset:0;z-index:-6;overflow:hidden;background:
+ radial-gradient(ellipse 70% 55% at 8% 0%,#1d1650 0,transparent 60%),
+ radial-gradient(ellipse 60% 50% at 96% 22%,#38202f 0,transparent 60%),
+ radial-gradient(ellipse 80% 60% at 50% 106%,#0f3a3a 0,transparent 65%),
+ linear-gradient(180deg,#05060d,#0a0c1c 55%,#0c0a16)}
+.bloom{position:absolute;border-radius:50%;filter:blur(90px);opacity:.26;animation:drift 40s ease-in-out infinite alternate}
+.b1{width:48vw;height:48vw;left:-12vw;top:-14vw;background:var(--violet)}
+.b2{width:40vw;height:40vw;right:-10vw;top:30vh;background:var(--saffron);opacity:.13;animation-duration:48s;animation-direction:alternate-reverse}
+.b3{width:44vw;height:44vw;left:25vw;bottom:-22vw;background:var(--jade);opacity:.12;animation-duration:54s}
+@keyframes drift{to{transform:translate(8vw,10vh) scale(1.15)}}
+.spot{position:fixed;inset:0;z-index:-4;pointer-events:none;background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),rgba(162,139,255,.1),transparent 62%)}
+#fx{position:fixed;inset:0;z-index:-3;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.7' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+.vig{position:fixed;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 170px rgba(0,0,0,.6)}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:500;background:linear-gradient(90deg,var(--violet),var(--saffron),var(--gold),var(--jade),var(--sky));box-shadow:0 0 16px var(--violet)}
+.skip{position:fixed;top:8px;left:12px;z-index:1200;transform:translateY(-170%);padding:10px 18px;border-radius:10px;background:var(--gold);color:#1b1004;font-weight:800;text-decoration:none}
+.skip:focus{transform:none}
+.ink{position:fixed;z-index:900;width:22px;height:22px;border-radius:50%;pointer-events:none;translate:-50% -50%;background:radial-gradient(circle,rgba(162,139,255,.6),rgba(162,139,255,0) 70%);animation:inkOut .9s ease-out forwards}
+@keyframes inkOut{to{transform:scale(9);opacity:0}}
+.burst{position:fixed;z-index:900;pointer-events:none;font-size:1.4rem;animation:bst 1.1s ease-out forwards}
+@keyframes bst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.3) rotate(200deg);opacity:0}}
+
+/* ===== INTRO: BALLOT DROP ===== */
+.intro{position:fixed;inset:0;z-index:800;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 40%,#171243,#04050b 75%);pointer-events:none;animation:introOut 3.8s ease forwards}
+.intro .code{font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:7px;color:var(--saffron)}
+.boxwrap{position:relative;width:140px;height:190px;margin:18px auto 6px}
+.slip{position:absolute;left:50%;top:0;width:54px;height:72px;margin-left:-27px;border-radius:5px;background:var(--paper);box-shadow:0 0 22px rgba(244,236,216,.4);z-index:1;opacity:0;animation:drop 1.7s .5s ease-in forwards}
+.slip::after{content:'✔';position:absolute;inset:0;display:grid;place-items:center;color:#4b2fd0;font-size:1.6rem}
+@keyframes drop{0%{transform:translateY(-10px) rotate(-8deg);opacity:0}20%{opacity:1}75%{transform:translateY(78px) rotate(0)}100%{transform:translateY(118px);opacity:1}}
+.ballotbox{position:absolute;left:0;right:0;bottom:0;height:98px;z-index:2;border-radius:12px;background:linear-gradient(160deg,#2a2370,#171243);border:1px solid rgba(162,139,255,.5);box-shadow:0 0 40px rgba(162,139,255,.3)}
+.ballotbox::before{content:'';position:absolute;top:12px;left:50%;width:76px;height:8px;margin-left:-38px;border-radius:6px;background:#04050b}
+.ballotbox::after{content:'𝗘𝗖𝗜';position:absolute;bottom:14px;left:0;right:0;font:800 1.1rem 'Syne',sans-serif;letter-spacing:6px;color:var(--gold)}
+.intro h2{font:800 clamp(1.6rem,5.2vw,3.4rem)/1.1 'Syne',sans-serif;letter-spacing:2px;margin:14px 12px 0;background:linear-gradient(90deg,var(--violet),var(--saffron),var(--jade));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro p.sub{margin-top:14px;color:var(--soft)}
+@keyframes introOut{0%,78%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:300;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:11px 16px;background:rgba(7,8,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(162,139,255,.25);scrollbar-width:thin}
+nav a{flex-shrink:0;color:var(--soft);text-decoration:none;font-size:.76rem;font-weight:700;padding:7px 14px;border-radius:20px;border:1px solid transparent;transition:.3s}
+nav a:hover,nav a.on{color:#fff;background:rgba(162,139,255,.14);border-color:rgba(162,139,255,.5);box-shadow:0 0 18px rgba(162,139,255,.25);transform:translateY(-2px)}
+
+/* ===== LETTER MAGIC ===== */
+.magic .word{display:inline-block;white-space:nowrap}
+.magic .sp{display:inline-block;width:.3em}
+.magic .ch{display:inline-block;background:linear-gradient(100deg,var(--g1,#a28bff),var(--g2,#ffb766),var(--g3,#63ebbd),var(--g4,#7accff),var(--g1,#a28bff));background-size:320% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 9s linear infinite;animation-delay:calc(var(--i)*-.28s);
+ transform:translateY(calc(var(--k,0)*-16px)) skewX(calc(var(--k,0)*-9deg)) scale(calc(1 + var(--k,0)*.2));
+ filter:drop-shadow(0 calc(var(--k,0)*12px) calc(var(--k,0)*14px) rgba(162,139,255,.85)) hue-rotate(calc(var(--k,0)*60deg));transition:transform .16s ease-out,filter .2s}
+@keyframes gm{to{background-position:320% 0}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:grid;align-items:center;padding:90px 6vw 60px}
+.chakra{position:absolute;right:-16%;top:46%;width:min(96vmin,900px);aspect-ratio:1;translate:0 -50%;border-radius:50%;pointer-events:none;opacity:.55;
+ background:repeating-conic-gradient(from 0deg,rgba(162,139,255,.26) 0 .7deg,transparent .7deg 15deg);
+ -webkit-mask:radial-gradient(circle,transparent 0 26%,#000 27% 56%,transparent 58%);mask:radial-gradient(circle,transparent 0 26%,#000 27% 56%,transparent 58%);animation:spin 150s linear infinite}
+.halo{position:absolute;right:-9%;top:46%;width:min(66vmin,620px);aspect-ratio:1;translate:0 -50%;border-radius:50%;border:1px dashed rgba(255,183,102,.3);pointer-events:none;animation:spin 90s linear infinite reverse}
+.halo::after{content:'';position:absolute;inset:12%;border-radius:50%;border:1px solid rgba(99,235,189,.25)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-in{position:relative;z-index:2;max-width:1300px;width:100%;margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:500 .72rem 'JetBrains Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:var(--jade)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--jade);box-shadow:0 0 0 6px rgba(99,235,189,.13);animation:br 3s infinite}
+@keyframes br{50%{box-shadow:0 0 0 12px rgba(99,235,189,.03)}}
+.hero h1{margin:20px 0 6px;font-family:'Syne',sans-serif;font-weight:800;line-height:.92;letter-spacing:-.045em}
+.hero h1 .ln{display:block}
+.l1{font-size:clamp(3.3rem,12.5vw,10.5rem)}
+.l2{font-size:clamp(2.6rem,9.8vw,8.2rem);--g1:#fff8ec;--g2:#c9bdff;--g3:#ffd89c;--g4:#8ee8ff}
+.l3{font:600 clamp(.72rem,2vw,1.25rem) 'JetBrains Mono',monospace;letter-spacing:.38em;margin-top:18px;--g1:#7accff;--g2:#63ebbd;--g3:#ffdb8e;--g4:#a28bff}
+.beam{width:min(560px,70%);height:3px;margin:18px 0 0;border-radius:9px;background:linear-gradient(90deg,var(--violet),var(--saffron),var(--jade),transparent);transform-origin:left;transform:scaleX(.45);transition:transform .8s}
+.hero:hover .beam{transform:scaleX(1)}
+.hero-sub{font:italic 400 clamp(1.3rem,3vw,2.1rem)/1.4 'Instrument Serif',serif;color:#efe4cf;max-width:780px;margin-top:20px}
+.hero-note{max-width:760px;color:var(--soft);margin-top:12px}
+.lamps{display:flex;flex-wrap:wrap;gap:11px;margin:24px 0 6px}
+.lamp{display:flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(10,12,28,.7);text-decoration:none;color:var(--ink);font-size:.8rem;font-weight:700;transition:.3s}
+.lamp i{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:0 0 14px var(--c);animation:bl 2.4s infinite}
+.lamp:nth-child(2) i{animation-delay:.5s}.lamp:nth-child(3) i{animation-delay:1s}.lamp:nth-child(4) i{animation-delay:1.5s}
+@keyframes bl{50%{opacity:.35}}
+.lamp:hover{transform:translateY(-5px);border-color:var(--c);box-shadow:0 10px 26px color-mix(in srgb,var(--c) 30%,transparent);color:#fff}
+.hero-bottom{display:grid;grid-template-columns:minmax(280px,470px) 1fr;gap:34px;align-items:center;margin-top:30px}
+
+/* AUTEUR: BALLOT SLIP */
+.auteur-wrap{position:relative;max-width:470px;animation:flt 7s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-7px)}}
+.auteur-wrap::before{content:'';position:absolute;inset:-5px;border-radius:26px;background:conic-gradient(from var(--sweep),var(--violet),var(--saffron),var(--gold),var(--jade),var(--sky),var(--violet));filter:blur(14px);opacity:.4;animation:sweep 9s linear infinite;transition:opacity .4s}
+.auteur-wrap:hover::before{opacity:.85}
+@keyframes sweep{to{--sweep:360deg}}
+.slipcard{position:relative;display:block;width:100%;text-align:left;border:1.5px solid rgba(255,219,142,.5);border-radius:20px;background:linear-gradient(150deg,rgba(162,139,255,.2),rgba(10,12,28,.96) 50%,rgba(255,183,102,.14));box-shadow:0 16px 46px rgba(0,0,0,.55),inset 0 0 24px rgba(255,219,142,.08);overflow:hidden;padding:0;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .4s,border-color .4s}
+.slipcard:hover{border-color:var(--gold);box-shadow:0 24px 58px rgba(162,139,255,.3)}
+.perf{display:block;height:14px;background:radial-gradient(circle at 8px 7px,#070810 4.5px,transparent 5px) 0 0/16px 14px repeat-x;border-bottom:1px dashed rgba(255,255,255,.25)}
+.slip-body{display:grid;grid-template-columns:1fr auto;gap:14px;padding:16px 22px 18px}
+.slip-tag{display:block;font:500 .64rem 'JetBrains Mono',monospace;letter-spacing:5px;color:var(--sky);text-shadow:0 0 10px rgba(122,204,255,.5)}
+.slip-name{display:block;font:800 clamp(1.5rem,4.4vw,2.35rem)/1.1 'Syne',sans-serif;letter-spacing:.04em;margin:4px 0 10px;--g1:#fff8ec;--g2:#ffdb8e;--g3:#ff94b1;--g4:#8ee8ff}
+.slip-meta{display:grid;grid-template-columns:repeat(2,auto);gap:4px 18px;border-top:1px dashed rgba(255,255,255,.2);padding-top:9px;font:500 .56rem 'JetBrains Mono',monospace;letter-spacing:2px;color:var(--dim)}
+.slip-meta b{display:block;color:var(--gold);font-size:.7rem;letter-spacing:.5px;margin-top:2px}
+.stamp-box{align-self:center;width:84px;height:106px;border:2px dashed var(--gold);border-radius:12px;display:grid;place-items:center;position:relative;background:rgba(255,255,255,.03)}
+.stamp-box small{position:absolute;bottom:5px;font:600 .46rem 'JetBrains Mono',monospace;letter-spacing:1.5px;color:var(--dim)}
+.finger{width:34px;height:54px;border-radius:50% 50% 46% 46%/58% 58% 42% 42%;background:repeating-radial-gradient(ellipse at 50% 72%,#7c5cff 0 2px,transparent 2px 5px);opacity:.22;transform:rotate(-12deg) scale(.9);transition:.3s}
+.slipcard:hover .finger{opacity:.5}
+.slipcard.stamped .finger{opacity:1;filter:drop-shadow(0 0 10px #7c5cff);animation:stampIn .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes stampIn{from{transform:rotate(-12deg) scale(1.9);opacity:0}to{transform:rotate(-12deg) scale(1);opacity:1}}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px}
+.hero-stat{border-left:2px solid rgba(162,139,255,.5);padding:6px 18px;background:linear-gradient(90deg,rgba(162,139,255,.08),transparent);transition:.3s}
+.hero-stat:hover{transform:translateX(6px);border-color:var(--saffron)}
+.hero-stat b{display:block;font:800 2rem/1.1 'Syne',sans-serif;color:var(--gold)}
+.hero-stat span{font:500 .6rem 'JetBrains Mono',monospace;color:var(--soft);letter-spacing:1px}
+.rtools{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.btn{padding:9px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:.79rem;font-weight:600;transition:.3s;text-decoration:none;color:var(--ink);display:inline-block}
+.btn:hover,.btn[aria-pressed=true]{border-color:var(--saffron);background:rgba(255,183,102,.14);transform:translateY(-2px);color:#fff}
+.scope{max-width:900px;margin-top:16px;font-size:.74rem;color:var(--dim)}
+
+/* TICKER */
+.reel{overflow:hidden;border-block:1px dashed rgba(255,255,255,.16);background:rgba(255,255,255,.025);padding:11px 0}
+.reel-track{display:flex;width:max-content;animation:tick 80s linear infinite}
+.reel:hover .reel-track{animation-play-state:paused}
+.reel-track span{font:500 .77rem 'JetBrains Mono',monospace;color:var(--soft);padding:0 26px;white-space:nowrap}
+.reel-track span b{color:var(--saffron)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ===== CHAPTERS ===== */
+section.ch{padding:92px 6vw;position:relative;isolation:isolate;overflow:hidden}
+.ch::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 42% at 6% 0%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%),radial-gradient(ellipse 50% 40% at 100% 100%,color-mix(in srgb,var(--accent) 7%,transparent),transparent 70%)}
+.ch[data-mark]::before{content:attr(data-mark);position:absolute;right:3vw;top:24px;z-index:-1;font:800 clamp(5rem,16vw,13rem)/1 'Syne',sans-serif;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--accent) 28%,transparent);opacity:.5;pointer-events:none}
+.wrap{max-width:1250px;margin:auto}
+.kicker{display:inline-flex;gap:8px;font:500 .7rem 'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:20px;margin-bottom:16px;box-shadow:0 0 14px color-mix(in srgb,var(--accent) 22%,transparent)}
+h2.title{font:800 clamp(1.9rem,4.4vw,3.3rem)/1.15 'Syne',sans-serif;letter-spacing:-.03em;color:var(--head);margin-bottom:12px}
+h2.title span{color:var(--accent)}
+h3.sub{font:700 clamp(1.2rem,2.4vw,1.55rem) 'Syne',sans-serif;color:var(--accent);margin:36px 0 12px}
+h4.mini{color:var(--accent);margin:18px 0 6px;font-size:.96rem}
+.lede{color:var(--soft);max-width:1000px;margin-bottom:26px;font-size:1.02rem}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s;animation:rvf 0s 4s forwards}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes rvf{to{opacity:1;transform:none}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:19px;margin:22px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:24px;border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(145deg,rgba(30,30,62,.62),rgba(12,14,30,.88));backdrop-filter:blur(8px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 65%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-8px);border-color:color-mix(in srgb,var(--accent) 60%,transparent);box-shadow:0 20px 46px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--accent) 20%,transparent)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font:700 1.14rem 'Syne',sans-serif;color:var(--accent);margin-bottom:9px}
+.card p,.card li{color:var(--soft);font-size:.92rem}
+.card .ic{font-size:1.8rem;display:block;margin-bottom:10px}
+.big{font:800 3.1rem/1 'Syne',sans-serif;color:var(--accent);letter-spacing:-.03em}
+.ribbon{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tag{padding:5px 12px;border:1px solid var(--accent);border-radius:20px;font-size:.76rem;color:var(--head);background:rgba(255,255,255,.04)}
+.tag b{color:var(--accent)}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:10px;margin:26px 0}
+.node{flex:1 1 160px;max-width:290px;padding:15px 16px;border-radius:16px;text-align:center;font-size:.84rem;color:var(--soft);background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.3);transition:.35s}
+.node b{display:block;color:var(--accent);font-size:.92rem;margin-bottom:3px}
+.node:hover{transform:translateY(-6px) scale(1.03);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4),0 0 22px color-mix(in srgb,var(--accent) 40%,transparent)}
+.arrow{align-self:center;font-size:1.35rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{0%,100%{opacity:.4}50%{opacity:1;transform:translateX(4px)}}
+.callout,.trap,.memory{padding:17px 22px;margin:20px 0;font-size:.92rem;color:var(--soft)}
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 15px 15px 0;transition:.3s}
+.callout:hover{transform:translateX(6px);background:rgba(255,255,255,.07)}
+.callout b{color:var(--accent)}
+.tip{--accent:var(--jade)}
+.trap{border:1.5px solid rgba(255,148,177,.55);border-radius:16px;background:linear-gradient(135deg,rgba(255,148,177,.1),rgba(255,183,102,.05));color:#ffe6ec}
+.trap b{color:#ff9fb7}
+.memory{border:1px dashed color-mix(in srgb,var(--accent) 60%,transparent);border-radius:16px;background:linear-gradient(135deg,rgba(255,219,142,.08),rgba(162,139,255,.07));font:.82rem/1.95 'JetBrains Mono',monospace;color:#fff1d8;transition:.35s}
+.memory:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 20px color-mix(in srgb,var(--accent) 30%,transparent)}
+.memory b{color:var(--gold)}
+.memory .lab{display:block;font-size:.62rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+.quote{margin:30px 0;padding:24px 28px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 400 clamp(1.25rem,2.4vw,1.7rem)/1.55 'Instrument Serif',serif;color:#fff1de}
+.quote small{display:block;margin-top:8px;font:400 .74rem 'Hanken Grotesk',sans-serif;color:var(--dim)}
+.tw{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:rgba(14,15,34,.82)}
+table{width:100%;min-width:680px;border-collapse:collapse;font-size:.86rem}
+caption{text-align:left;padding:15px 18px;font-weight:800;color:var(--head)}
+th,td{padding:13px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.06);color:var(--accent);font:600 .64rem 'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--soft)}td:first-child{color:var(--head);font-weight:700}
+tr:last-child td{border-bottom:0}tr:hover td{background:rgba(255,255,255,.04);color:#fff}
+.timeline{position:relative;margin:28px 0;padding-left:34px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--violet),var(--saffron),var(--jade),var(--sky));background-size:100% 300%;animation:fl 8s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:24px;padding-left:20px;transition:transform .4s}
+.ti::before{content:'';position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(10px)}
+.ti .d{font:500 .8rem 'JetBrains Mono',monospace;color:var(--accent)}
+.ti p{color:var(--soft);font-size:.92rem}
+
+/* dossiers */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:18px;background:rgba(10,12,28,.8);margin:20px 0}
+.tools input{flex:1;min-width:220px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:#090b1b;color:var(--ink)}
+.qstat{width:100%;font-size:.76rem;color:var(--dim)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.jump a{font:600 .8rem 'JetBrains Mono',monospace;color:var(--c,var(--gold));border:1px solid var(--line);background:rgba(255,255,255,.04);padding:8px 14px;border-radius:10px;text-decoration:none;transition:.3s}
+.jump a:hover{transform:translateY(-4px);border-color:var(--c,var(--gold))}
+details.dos{margin:18px 0;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:20px;background:linear-gradient(150deg,rgba(24,24,54,.9),rgba(10,12,26,.95));overflow:hidden;transition:box-shadow .3s}
+details.dos:hover{box-shadow:0 16px 44px rgba(0,0,0,.4),0 0 26px color-mix(in srgb,var(--accent) 16%,transparent)}
+details.dos>summary{list-style:none;display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer}
+details.dos>summary::-webkit-details-marker{display:none}
+details.dos>summary::after{content:'+';margin-left:auto;font-size:1.8rem;color:var(--accent)}
+details.dos[open]>summary::after{content:'−'}
+details.dos[open]>summary{border-bottom:1px solid var(--line)}
+.anum{min-width:84px;padding-right:18px;border-right:1px solid var(--line);font:800 2.4rem/1 'Syne',sans-serif;color:var(--accent)}
+.anum small{display:block;font:500 .5rem 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.at b{display:block;font:700 1.12rem 'Syne',sans-serif;color:var(--head)}
+.at small{font-size:.72rem;color:var(--dim)}
+.dbody{padding:6px 26px 28px}
+.dbody>p{margin-top:14px;color:var(--soft)}
+.nores{display:none;text-align:center;padding:20px;color:var(--soft);border:1px dashed var(--line);border-radius:14px}
+.nores.show{display:block}
+
+/* tabs / calc / quiz / checklist */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 10px}
+.tab{padding:11px 19px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;font-size:.85rem;transition:.3s}
+.tab:hover,.tab[aria-selected=true]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 17%,transparent);color:#fff;transform:translateY(-3px)}
+.panel{padding:22px;border:1px solid var(--accent);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 9%,transparent),rgba(255,255,255,.02))}
+.calc label{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--soft);font-size:.88rem;margin:8px 0}
+.calc input,.calc select{padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:#090b1b;color:var(--ink);max-width:100%}
+.calc input[type=number]{width:120px}
+.calc output{display:block;margin-top:12px;padding:11px 14px;border-radius:12px;background:rgba(0,0,0,.28);border-left:3px solid var(--accent);color:var(--soft);font-size:.9rem}
+.calc output b{color:var(--accent)}
+.quiz,.scn{margin:11px 0;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);transition:.3s}
+.quiz:hover,.scn:hover,.scn[open]{border-color:var(--accent)}
+.quiz summary,.scn summary{cursor:pointer;color:var(--head);font-weight:700}
+.scn summary::before{content:'🎯 '}
+.quiz p,.scn p{margin-top:10px;color:var(--soft);font-size:.92rem}
+.bar{height:9px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0 6px}
+.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--jade),var(--sky),var(--violet));transition:width .45s}
+.checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:18px 0}
+.ck{display:flex;gap:12px;align-items:flex-start;padding:12px 15px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);color:var(--soft);font-size:.84rem;cursor:pointer;transition:.3s}
+.ck:hover{border-color:var(--accent)}
+.ck input{margin-top:6px;width:17px;height:17px;accent-color:var(--jade);flex-shrink:0}
+.ck:has(input:checked){border-color:rgba(99,235,189,.5);background:rgba(99,235,189,.07);color:#fff}
+.chip{display:inline-block;margin:.25rem;padding:.42rem .85rem;border:1px solid var(--accent);border-radius:999px;color:#fff;font-size:.82rem;text-decoration:none;transition:.3s}
+.chip:hover{transform:translateY(-4px);background:var(--accent);color:#0b0a14}
+
+/* footer */
+footer{padding:66px 6vw 90px;text-align:center;color:var(--soft);font-size:.86rem;border-top:1px solid var(--line)}
+.final{font:italic 400 clamp(1.5rem,3vw,2.2rem)/1.3 'Instrument Serif',serif;color:#fff;margin-bottom:12px}
+.credit{font:500 .64rem 'JetBrains Mono',monospace;letter-spacing:6px;color:var(--sky);margin-top:28px}
+.sig{font:800 clamp(1.7rem,5vw,2.8rem) 'Syne',sans-serif;letter-spacing:.2em;margin:8px 0 4px;--g1:#fff8ec;--g2:#ffdb8e;--g3:#ff94b1;--g4:#8ee8ff}
+.tribute{max-width:600px;margin:28px auto 8px;padding:28px;border-radius:24px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(150deg,rgba(162,139,255,.13),rgba(255,183,102,.08),rgba(99,235,189,.09));display:flex;flex-direction:column;align-items:center;gap:8px;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s}
+.heart{font-size:2.1rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,148,177,.75))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.t-en{font:italic 400 1.7rem 'Instrument Serif',serif;color:#fff8ec}
+.t-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.6vw,2.1rem);background:linear-gradient(90deg,var(--violet),var(--saffron),var(--gold),var(--jade),var(--violet));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gm 7s linear infinite}
+.toTop{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:0;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;background:linear-gradient(135deg,var(--saffron),var(--violet));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.3s;z-index:350}
+.toTop.show{opacity:1;pointer-events:auto}.toTop:hover{transform:translateY(-5px)}
+
+/* modes */
+body.focus .sky .bloom,body.focus .chakra,body.focus .halo{animation:none}
+body.focus .spot,body.focus #fx,body.focus .grain,body.focus .vig,body.focus .chakra,body.focus .halo{display:none}
+body.focus .magic .ch{animation:none;background:none;color:var(--head);transform:none;filter:none}
+body.focus{--mut:#d8d5e4;--soft:#dcd9ea}
+body.focus .card:hover,body.focus .node:hover{transform:none}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+body.paused .intro{display:none!important}
+body.paused .magic .ch{transform:none!important;filter:none!important}
+body.paused .reveal{opacity:1!important;transform:none!important}
+
+@media(max-width:900px){.hero-bottom{grid-template-columns:1fr}.chakra{right:-50%}.halo{right:-30%}}
+@media(max-width:700px){
+ body{font-size:15px}section.ch{padding:64px 5vw}.grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+ details.dos>summary{padding:16px 14px;gap:12px}.anum{font-size:1.9rem;min-width:64px;padding-right:12px}
+ .dbody{padding:4px 14px 22px}.node{flex-basis:100%;max-width:100%}.arrow{width:100%;text-align:center;transform:rotate(90deg)}
+ .vig{display:none}.slip-body{grid-template-columns:1fr}.stamp-box{width:100%;height:70px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
+ .intro,#fx{display:none!important}.js .reveal{opacity:1;transform:none}.magic .ch{transform:none!important;filter:none!important}
+}
+@media print{
+ :root{--bg:#fff;--ink:#141414;--head:#111;--soft:#333;--dim:#555;--line:#bbb;--violet:#4b2fd0;--saffron:#8a4a00;--jade:#12614a;--sky:#1b4f8a;--gold:#6b4800;--rose:#9a2a42}
+ body{background:#fff;color:#111;font-size:10pt}
+ nav,.sky,.spot,#fx,.grain,.vig,.intro,.progress,.toTop,.tools,.rtools,.chakra,.halo,.reel,.jump,.lamps,.tabs,.skip,.bar,.hero-stats{display:none!important}
+ .ch{padding:20px 0;overflow:visible}.ch::before,.ch::after{display:none!important}
+ .hero{min-height:0;padding:16px 0}
+ .magic .ch,.t-ta{background:none;color:#111;filter:none;transform:none}
+ .card,.node,.callout,.trap,.memory,.quote,.quiz,.scn,details.dos,.panel,.slipcard,.tribute,.tw{background:#fff;box-shadow:none;backdrop-filter:none;color:#111;transform:none;border-color:#bbb}
+ b,strong{color:#111}.card,.quiz,details.dos{break-inside:avoid}
+ .tw{overflow:visible}table{min-width:0;font-size:9pt}th,td{color:#111}
+ .js .reveal{opacity:1;transform:none}*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+<style id="emergency-heading-typography">
+/* =========================================================
+   HEADING + MAIN-TITLE TYPOGRAPHY
+   Matches: Emergency Provisions of Indian Constitution.html
+   Only font family / weight / title sizing are changed.
+   Colours, layout, animations and content are untouched.
+   ========================================================= */
+
+/* ---- MAIN TITLE: "THE ELECTION COMMISSION OF INDIA" ---- */
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-weight:400;
+  line-height:.95;
+  letter-spacing:.04em;
+}
+.hero h1 .l1{                     /* THE ELECTION */
+  font-family:'Bebas Neue',sans-serif;
+  font-weight:400;
+  font-size:clamp(3.4rem,14vw,11rem);
+  letter-spacing:.04em;
+}
+.hero h1 .l2{                     /* COMMISSION OF INDIA */
+  font-family:'Bebas Neue',sans-serif;
+  font-weight:400;
+  font-size:clamp(2.4rem,9vw,7.6rem);
+  letter-spacing:.06em;
+}
+.hero h1 .l3{                     /* · THE SENTINEL OF THE BALLOT */
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:600;
+  font-size:clamp(.7rem,2.2vw,1.4rem);
+  letter-spacing:.45em;
+  margin-top:14px;
+}
+
+/* ---- OPENING SCREEN TITLE ---- */
+.intro h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-weight:400;
+  font-size:clamp(2rem,6vw,4rem);
+  line-height:1.05;
+  letter-spacing:5px;
+}
+
+/* ---- CHAPTER HEADINGS ---- */
+h2.title{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:clamp(1.8rem,4.3vw,3.2rem);
+  line-height:1.18;
+  letter-spacing:0;
+}
+
+/* ---- SUB-HEADINGS ---- */
+h3.sub{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:1.3rem;
+  letter-spacing:0;
+}
+h4.mini{
+  font-family:'DM Sans',system-ui,sans-serif;   /* same as reference: body face, bold */
+  font-weight:700;
+}
+
+/* ---- CARD HEADINGS + ARTICLE-DOSSIER TITLES ---- */
+.card h3{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:1.1rem;
+  letter-spacing:0;
+}
+.at b{
+  font-family:'Playfair Display',serif;
+  font-weight:700;
+  font-size:1.15rem;
+  letter-spacing:0;
+}
+
+/* ---- DISPLAY NUMERALS INSIDE HEADINGS (324, 325 … / 18) ---- */
+/* No font-size here, so the existing mobile size rule for .anum still applies */
+.anum,.big{
+  font-family:'Bebas Neue',sans-serif;
+  font-weight:400;
+  letter-spacing:2px;
+}
+
+/* ---- MOBILE (re-declared because the page's late block uses lower specificity) ---- */
+@media(max-width:480px){
+  .hero h1 .l1{font-size:clamp(3rem,15vw,4.4rem)}
+  .hero h1 .l2{font-size:clamp(2.2rem,9vw,3.4rem)}
+  .hero h1 .l3{letter-spacing:.2em;line-height:1.9}
+  .intro h2{letter-spacing:3px}
+}
+
+/* ---- PRINT (keeps the page's original fixed print sizes) ---- */
+@media print{
+  .hero h1 .l1{font-size:44pt}
+  .hero h1 .l2{font-size:34pt}
+  .hero h1 .l3{font-size:9pt;letter-spacing:1px}
+  .intro h2{font-size:inherit}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#map">Skip intro and start studying</a>
+<div class="sky" aria-hidden="true"><i class="bloom b1"></i><i class="bloom b2"></i><i class="bloom b3"></i></div>
+<div class="spot" id="spot" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div><div class="vig" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="intro" aria-hidden="true"><div>
+  <div class="code">PART XV · ARTICLES 324–329</div>
+  <div class="boxwrap"><div class="slip"></div><div class="ballotbox"></div></div>
+  <h2>𝐄𝐕𝐄𝐑𝐘 𝐕𝐎𝐓𝐄 𝐈𝐒 𝐀 𝐂𝐎𝐍𝐒𝐓𝐈𝐓𝐔𝐓𝐈𝐎𝐍𝐀𝐋 𝐏𝐑𝐎𝐌𝐈𝐒𝐄</h2>
+  <p class="sub">𝐅𝐫𝐞𝐞 · 𝐅𝐚𝐢𝐫 · 𝐏𝐞𝐫𝐢𝐨𝐝𝐢𝐜 · 𝐋𝐚𝐰𝐟𝐮𝐥</p>
+</div></div>
+
+<nav aria-label="Chapter navigation">
+  <a href="#opening">🎬 Opening</a><a href="#map">🗺️ Atlas</a><a href="#articles">📜 Articles</a><a href="#institution">🏛️ Institution</a>
+  <a href="#powers">⚙️ Powers</a><a href="#voter">🧑‍🤝‍🧑 Voter</a><a href="#parties">🚩 Parties &amp; Money</a><a href="#process">🔄 Process</a>
+  <a href="#tech">🔐 Technology</a><a href="#justice">⚖️ Justice</a><a href="#reform">🌱 Reforms</a><a href="#revise">🧠 Revision Lab</a><a href="#sources">🔎 Sources</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="opening">
+  <div class="chakra" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="eyebrow"><i class="dot"></i>Constitutional Study Film · Part XV · Articles 324–329</div>
+    <h1 aria-label="THE ELECTION COMMISSION OF INDIA · THE SENTINEL OF THE BALLOT">
+      <span class="ln l2 magic" data-letters="𝐓𝐇𝐄 𝐄𝐋𝐄𝐂𝐓𝐈𝐎𝐍" aria-hidden="true">𝐓𝐇𝐄 𝐄𝐋𝐄𝐂𝐓𝐈𝐎𝐍</span>
+      <span class="ln l2 magic" data-letters="𝐂𝐎𝐌𝐌𝐈𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐈𝐍𝐃𝐈𝐀" aria-hidden="true">𝐂𝐎𝐌𝐌𝐈𝐒𝐒𝐈𝐎𝐍 𝐎𝐅 𝐈𝐍𝐃𝐈𝐀</span>
+      <span class="ln l3 magic" data-letters="THE SENTINEL OF THE BALLOT" aria-hidden="true">THE SENTINEL OF THE BALLOT</span>
+    </h1>
+    <div class="beam"></div>
+    <p class="hero-sub">“The ballot is the citizen’s voice; the Commission keeps the rhythm of the Republic.”</p>
+   
+
+    <div class="lamps" aria-label="Jump to key articles">
+      <a class="lamp" href="#article324" style="--c:var(--gold)"><i></i>🏛️ Art. 324 · The Commission</a>
+      <a class="lamp" href="#article326" style="--c:var(--jade)"><i></i>🗳️ Art. 326 · Adult Suffrage</a>
+      <a class="lamp" href="#article329" style="--c:var(--rose)"><i></i>⚖️ Art. 329 · Court Bar</a>
+      <a class="lamp" href="#revise" style="--c:var(--sky)"><i></i>🧠 Revision Lab</a>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="auteur-wrap">
+        <button class="slipcard tilt" id="auteur" type="button" aria-label="Auteur: Piyush Parte. Activate to stamp the ballot and increase the vote counter.">
+          <span class="perf" aria-hidden="true"></span>
+          <span class="slip-body">
+            <span>
+              <span class="slip-tag">🗳️ AUTEUR · BALLOT SLIP</span>
+              <span class="slip-name magic" data-letters="PIYUSH PARTE" role="img" aria-label="Piyush Parte">PIYUSH PARTE</span>
+              <span class="slip-meta"><span>CONSTITUENCY<b>DEMOCRACY-001</b></span><span>PART<b>XV · 324–329</b></span><span>EDITION<b>STUDY FILM</b></span><span>VOTES CAST<b id="votes">001</b></span></span>
+            </span>
+            <span class="stamp-box" aria-hidden="true"><span class="finger"></span><small>TAP TO STAMP</small></span>
+          </span>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>25 JAN 1950</b><span>ECI ESTABLISHED</span></div>
+        <div class="hero-stat"><b>1 + 2</b><span>CEC + TWO ECs (ESTABLISHED MODEL)</span></div>
+        <div class="hero-stat"><b>18+</b><span>VOTING AGE · 61st AMENDMENT</span></div>
+        <div class="hero-stat"><b>45</b><span>DAYS · ELECTION PETITION LIMIT</span></div>
+      </div>
+    </div>
+
+    <div class="rtools">
+      <button class="btn" id="focusBtn" type="button" aria-pressed="false">🌙 Focus reading</button>
+      <button class="btn" id="pauseBtn" type="button" aria-pressed="false">⏸️ Pause effects</button>
+      <button class="btn" id="printBtn" type="button">🖨️ Print / Save PDF</button>
+      <a class="btn" href="#articles">📜 Open the Articles ↓</a>
+    </div>
+    <p class="scope">Accuracy note: these notes separate constitutional text, statute, court holdings and reform proposals. Update-sensitive items (office-holders, pending litigation, recognised-party lists, spending limits, EVM protocols, bill status) must be verified on official sources before an examination. This page performs no live checks.</p>
+  </div>
+</header>
+
+<div class="reel" aria-label="Key facts ticker"><div class="reel-track" id="reelTrack"></div></div>
+
+<main>
+
+<!-- ================= 1. ATLAS ================= -->
+<section class="ch" id="map" data-mark="XV" style="--accent:var(--gold)">
+<div class="wrap reveal">
+  <span class="kicker">🎬 Chapter 01 · The Constitutional Atlas</span>
+  <h2 class="title">One Part, Six Articles, <span>One Electoral Republic</span></h2>
+  <p class="lede">Part XV of the Constitution — <b>Elections</b> — contains Articles 324–329. (Art. 329A, inserted by the 39th Amendment in 1975, was omitted by the 44th Amendment in 1978.) Together the live articles create an administering institution, a common roll, adult suffrage, legislative competence at two levels, and a structured route for challenging elections.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--gold)"><div class="big">𝟑𝟐𝟒</div><h3>🏛️ The Commission</h3><p>Superintendence, direction and control of electoral rolls and of elections to Parliament, State Legislatures and the offices of President and Vice-President.</p></article>
+    <article class="card" style="--accent:var(--sky)"><div class="big">𝟑𝟐𝟓</div><h3>🤝 One Common Roll</h3><p>One general roll per territorial constituency; no exclusion “on grounds only of” religion, race, caste or sex.</p></article>
+    <article class="card" style="--accent:var(--jade)"><div class="big">𝟑𝟐𝟔</div><h3>🗳️ Adult Suffrage</h3><p>Lok Sabha and State Assembly elections rest on adult suffrage — Indian citizens aged 18+, unless lawfully disqualified.</p></article>
+    <article class="card" style="--accent:var(--violet)"><div class="big">𝟑𝟐𝟕</div><h3>📚 Parliament’s Power</h3><p>Parliament may legislate on rolls, delimitation and all matters connected with elections to Parliament and State Legislatures.</p></article>
+    <article class="card" style="--accent:var(--saffron)"><div class="big">𝟑𝟐𝟖</div><h3>🏢 State’s Gap-Filling</h3><p>A State Legislature may legislate for its own House(s) only in so far as Parliament has not made provision.</p></article>
+    <article class="card" style="--accent:var(--rose)"><div class="big">𝟑𝟐𝟗</div><h3>⚖️ Structured Challenge</h3><p>Delimitation laws are shielded; elections are challenged only by election petition before the designated authority.</p></article>
+  </div>
+
+  <h3 class="sub">🌳 The flow of the Part</h3>
+  <div class="flow">
+    <div class="node" style="--accent:var(--gold)"><b>Constitution</b>Part XV · Arts. 324–329</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--gold)"><b>🏛️ 324</b>Who administers</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--jade)"><b>🧑‍🤝‍🧑 325–326</b>Who may be on the roll &amp; vote</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--violet)"><b>📚 327–328</b>Which law governs</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--rose)"><b>⚖️ 329</b>How disputes are channelled</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--saffron)"><b>🗳️ Mandate</b>Legitimate government</div>
+  </div>
+
+  <div class="trap">🚨 <b>“ECI conducts all elections in India” is inaccurate.</b> Panchayat and municipal elections are run by <b>State Election Commissions</b> (Arts. 243K and 243ZA). Cooperative-society elections are also outside Art. 324. A State’s <b>Chief Electoral Officer</b> (part of the ECI machinery) is not the <b>State Election Commissioner</b>.</div>
+
+  <div class="tw"><table>
+    <caption>🧩 Four bodies students constantly confuse</caption>
+    <thead><tr><th>Body</th><th>Legal basis</th><th>Core role</th><th>Not the same as…</th></tr></thead>
+    <tbody>
+      <tr><td>Election Commission of India</td><td>Art. 324</td><td>Rolls and elections to Parliament, State Legislatures, President, Vice-President</td><td>A State Election Commission</td></tr>
+      <tr><td>State Election Commission</td><td>Arts. 243K, 243ZA</td><td>Panchayat and municipal elections; appointed by the Governor; removable like a High Court judge</td><td>A branch office of the ECI</td></tr>
+      <tr><td>Delimitation Commission</td><td>Arts. 82, 170 + Delimitation Act</td><td>Redraws constituency boundaries and seat allocation within the statutory mandate</td><td>The ECI acting alone</td></tr>
+      <tr><td>Chief Electoral Officer (State)</td><td>RPA 1950 s.13A</td><td>Officer designated for the State to supervise election work under ECI control</td><td>A State Election Commissioner</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="memory"><span class="lab">🧠 Atlas mnemonic · C-R-V-P-S-C</span><b>Commission → Roll → Vote → Parliament → State → Challenge</b> = 324 · 325 · 326 · 327 · 328 · 329.<br>Fun sentence: <b>“Crazy Rabbits Vote; Parliament Sets Chairs.”</b><br>Jurisdiction key <b>P-S-P-V</b>: Parliament · State legislatures · President · Vice-President. <b>Local bodies → State Election Commission.</b></div>
+</div>
+</section>
+
+<!-- ================= 2. ARTICLES ================= -->
+<section class="ch" id="articles" data-mark="TEXT" style="--accent:var(--sky)">
+<div class="wrap reveal">
+  <span class="kicker">📜 Chapter 02 · Article Dossiers</span>
+  <h2 class="title">Read the Clause — <span>Then the Consequence</span></h2>
+  <p class="lede">𝐄𝐚𝐜𝐡 𝐝𝐨𝐬𝐬𝐢𝐞𝐫 𝐠𝐢𝐯𝐞𝐬 𝐭𝐡𝐞 𝐨𝐩𝐞𝐫𝐚𝐭𝐢𝐯𝐞 𝐭𝐞𝐱𝐭, 𝐩𝐫𝐞𝐜𝐢𝐬𝐢𝐨𝐧 𝐩𝐨𝐢𝐧𝐭𝐬, 𝐭𝐫𝐚𝐩𝐬 𝐚𝐧𝐝 𝐦𝐞𝐦𝐨𝐫𝐲 𝐡𝐨𝐨𝐤𝐬. 𝐒𝐞𝐚𝐫𝐜𝐡 𝐟𝐢𝐥𝐭𝐞𝐫𝐬 𝐚𝐜𝐫𝐨𝐬𝐬 𝐚𝐥𝐥 𝐬𝐢𝐱</p>
+  <div class="jump" aria-label="Article shortcuts">
+    <a href="#article324" style="--c:var(--gold)">324</a><a href="#article325" style="--c:var(--sky)">325</a><a href="#article326" style="--c:var(--jade)">326</a>
+    <a href="#article327" style="--c:var(--violet)">327</a><a href="#article328" style="--c:var(--saffron)">328</a><a href="#article329" style="--c:var(--rose)">329</a>
+  </div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="🔎 Try: Regional Commissioners, removal, 61st, High Court, Meghraj Kothari…" aria-label="Search article dossiers" autocomplete="off">
+    <button class="btn" id="openAll" type="button">＋ Open all</button><button class="btn" id="foldAll" type="button">− Fold all</button><button class="btn" id="clearSearch" type="button">↺ Clear</button>
+    <p class="qstat" id="searchStatus" role="status"></p>
+  </div>
+  <p class="nores" id="noRes">🔎 No matching dossier. Try a broader term.</p>
+
+<!-- 324 -->
+<details class="dos" id="article324" open style="--accent:var(--gold)">
+<summary><span class="anum"><small>ARTICLE</small>324</span><span class="at"><b>🏛️ Superintendence, Direction &amp; Control</b><small>Composition · tenure · removal · staff · plenary gap-filling</small></span></summary>
+<div class="dbody">
+  <p>Article 324(1) vests the <b>superintendence, direction and control of the preparation of electoral rolls and the conduct of elections</b> to Parliament, the State Legislatures, and the offices of President and Vice-President in the Election Commission. It is a permanent constitutional body, not a ministry department.</p>
+  <div class="ribbon"><span class="tag">📍 <b>6</b> clauses</span><span class="tag">🛡️ CEC: judge-like removal</span><span class="tag">👥 Established model <b>1 + 2</b></span><span class="tag">⚡ Residual power, bounded by statute</span></div>
+
+  <div class="tw"><table>
+    <caption>📜 Article 324 — the six-clause map</caption>
+    <thead><tr><th>Clause</th><th>Rule</th><th>Precision point</th></tr></thead>
+    <tbody>
+      <tr><td>324(1)</td><td>Superintendence, direction and control of <b>preparation of rolls</b> and <b>conduct of elections</b> to Parliament, State Legislatures, President and Vice-President.</td><td>Local-body elections are outside the list.</td></tr>
+      <tr><td>324(2)</td><td>The Commission = the CEC + such number of other ECs as the President fixes from time to time; appointments by the President, subject to any law made by Parliament.</td><td>The Constitution does not fix “exactly three”; that is the established arrangement.</td></tr>
+      <tr><td>324(3)</td><td>When other ECs are appointed, the CEC acts as <b>Chairman</b>.</td><td>Chair ≠ veto. Decisions are collective.</td></tr>
+      <tr><td>324(4)</td><td>The President may appoint <b>Regional Commissioners</b>, after consulting the ECI, before general elections to the Lok Sabha and State Assemblies and before the first and each biennial election to Legislative Councils.</td><td>Occasion-specific appointment, not a permanent regional cadre.</td></tr>
+      <tr><td>324(5)</td><td>Service conditions and tenure are fixed by presidential rules subject to Parliament’s law. The <b>CEC</b> cannot be removed except like a Supreme Court judge and his service conditions cannot be varied to his disadvantage after appointment. <b>Other ECs / Regional Commissioners</b> cannot be removed except on the <b>CEC’s recommendation</b>.</td><td>Constitutional asymmetry in removal safeguards.</td></tr>
+      <tr><td>324(6)</td><td>The President or Governor must, when requested by the ECI, make available the staff necessary for its functions.</td><td>Election machinery is borrowed manpower under ECI control.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid">
+    <div class="card"><h3>🔭 Superintendence</h3><p>Overall oversight: planning, monitoring and coordinating electoral administration.</p></div>
+    <div class="card" style="--accent:var(--sky)"><h3>🧭 Direction</h3><p>Instructions and standards issued to implement constitutional and statutory duties.</p></div>
+    <div class="card" style="--accent:var(--jade)"><h3>🛡️ Control</h3><p>Ensuring lawful compliance and taking authorised corrective action to protect the poll.</p></div>
+  </div>
+  <div class="callout">⚡ <b>Plenary — but not unlimited.</b> In <i>Mohinder Singh Gill</i> (1978) the Supreme Court treated Art. 324 as a reservoir of power for situations the law leaves open, subject to fairness and natural justice. In <i>A. C. Jose v. Sivan Pillai</i> (1984) it held that the Commission cannot override an existing statutory rule — the EVM used in Parur (1982) without legal backing was the trigger; Parliament later inserted s.61A (1988) to permit voting machines.</div>
+  <div class="memory"><span class="lab">🧠 Six-clause ladder · V-C-C-R-S-S</span><b>V</b>est · <b>C</b>omposition · <b>C</b>hair · <b>R</b>egional · <b>S</b>afeguards · <b>S</b>taff.<br>Sentence: <b>“Very Cool Chairs Rule Strict Staff.”</b><br>Removal: <b>CEC = like a judge; EC = CEC says.</b></div>
+</div></details>
+
+<!-- 325 -->
+<details class="dos" id="article325" style="--accent:var(--sky)">
+<summary><span class="anum"><small>ARTICLE</small>325</span><span class="at"><b>🤝 One General Electoral Roll</b><small>No identity-based exclusion or special-roll claim</small></span></summary>
+<div class="dbody">
+  <div class="quote">“There shall be one general electoral roll for every territorial constituency… and no person shall be ineligible for inclusion in any such roll or claim to be included in any special electoral roll for any such constituency on grounds only of religion, race, caste, sex or any of them.”<small>Article 325 (condensed)</small></div>
+  <div class="grid two">
+    <div class="card"><h3>🕰️ Decolonising the ballot</h3><p>Colonial law fragmented the electorate: separate Muslim electorates (Morley–Minto, 1909), extension to other groups (Montagu–Chelmsford, 1919) and the Communal Award (1932, followed by the Poona Pact). Art. 325 closes that door: citizens appear on <b>one</b> territorial roll.</p></div>
+    <div class="card" style="--accent:var(--jade)"><h3>🗳️ Reserved seats ≠ separate electorates</h3><p>SC/ST reservation (Arts. 330 and 332) reserves <b>candidacy</b> in specified constituencies. All eligible electors of that constituency vote from the same common roll.</p></div>
+  </div>
+  <div class="callout">🔍 <b>“Grounds only of…”</b> — exclusion for other lawful reasons (non-citizenship, unsound mind declared by a court, statutory disqualification) is not barred. Art. 325 also does not mean every person is automatically a voter: registration conditions still apply.</div>
+  <div class="callout tip">🕰️ <b>Anglo-Indian nomination</b> ended in January 2020 (104th Amendment) while SC/ST seat reservation was extended; it was never a separate electoral roll.</div>
+  <div class="memory"><span class="lab">🧠 R-R-C-S</span><b>Religion · Race · Caste · Sex</b> — the four banned “sole grounds”.<br><b>Common roll + reserved seat can coexist.</b></div>
+</div></details>
+
+<!-- 326 -->
+<details class="dos" id="article326" style="--accent:var(--jade)">
+<summary><span class="anum"><small>ARTICLE</small>326</span><span class="at"><b>🗳️ Adult Suffrage</b><small>Lok Sabha &amp; State Assemblies · 18+ · lawful exclusions</small></span></summary>
+<div class="dbody">
+  <p>Elections to the <b>Lok Sabha and State Legislative Assemblies</b> are based on adult suffrage. Every citizen aged <b>18 or above on the qualifying date</b> is entitled to be registered, unless disqualified under the Constitution or an appropriate law on the ground of <b>non-residence, unsoundness of mind, crime, or corrupt or illegal practice</b>.</p>
+  <div class="grid two">
+    <div class="card"><h3>🎂 21 → 18</h3><p>The <b>61st Amendment Act, 1988</b> lowered the voting age from 21 to 18; it took effect on 28 March 1989. The earlier 21-year rule governed the 1951–52 elections.</p></div>
+    <div class="card" style="--accent:var(--rose)"><h3>🚫 Five constitutional grounds</h3><ol><li>Non-residence</li><li>Unsoundness of mind</li><li>Crime</li><li>Corrupt practice</li><li>Illegal practice</li></ol></div>
+  </div>
+  <div class="callout">📅 <b>Four qualifying dates.</b> Since the 2021 electoral-law amendment, eligibility can be reckoned on <b>1 January, 1 April, 1 July and 1 October</b>. “Only 1 January” is outdated.</div>
+  <div class="callout tip">⚖️ <b>Nature of the right.</b> The Court has described the <i>right to vote</i> as a statutory right (<i>Ponnuswami</i>; <i>Jyoti Basu</i>; <i>Kuldip Nayar</i>), while <i>PUCL</i> (2003) treated the <b>freedom of voting</b> — the act of expressing a choice — as a facet of free expression under Art. 19(1)(a). The voter’s right to know a candidate’s background is also grounded in Art. 19(1)(a) (<i>ADR</i>, 2002).</div>
+  <div class="trap">🚨 <b>Voter ≠ candidate.</b> Office of profit, anti-defection and conviction-based disqualification belong to the <i>candidate/member</i> framework, not to ordinary voter registration. Art. 326 does not create direct popular voting for the Rajya Sabha, Councils, President or Vice-President.</div>
+  <div class="memory"><span class="lab">🧠 N-U-C-C-I &amp; the calendar</span><b>N</b>on-residence · <b>U</b>nsound mind · <b>C</b>rime · <b>C</b>orrupt practice · <b>I</b>llegal practice.<br>Qualifying dates <b>JAN-APR-JUL-OCT</b> → every third month.<br>Formula: <b>Citizen + 18 + registered + not disqualified.</b></div>
+</div></details>
+
+<!-- 327 -->
+<details class="dos" id="article327" style="--accent:var(--violet)">
+<summary><span class="anum"><small>ARTICLE</small>327</span><span class="at"><b>📚 Parliament’s Power over Election Law</b><small>Rolls · delimitation · due constitution of Houses</small></span></summary>
+<div class="dbody">
+  <p>Subject to the Constitution, Parliament may legislate on <b>all matters relating to, or in connection with, elections</b> to either House of Parliament and to the House(s) of a State Legislature, including the preparation of electoral rolls, the delimitation of constituencies and all matters necessary for the due constitution of those Houses.</p>
+  <div class="tw"><table>
+    <caption>📚 The statutory bookshelf</caption>
+    <thead><tr><th>Instrument</th><th>Main subject</th><th>Study cue</th></tr></thead>
+    <tbody>
+      <tr><td>RPA 1950</td><td>Seat allocation framework, constituencies, electoral rolls, voter qualifications, CEO/DEO/ERO machinery</td><td>“Who gets on the roll?”</td></tr>
+      <tr><td>RPA 1951</td><td>Conduct of elections, candidate qualifications and disqualifications, party registration (s.29A), corrupt practices, offences, election petitions</td><td>“How is the contest run and challenged?”</td></tr>
+      <tr><td>Registration of Electors Rules 1960 · Conduct of Elections Rules 1961</td><td>Detailed procedures for rolls and for nomination–poll–count</td><td>Operational rulebooks</td></tr>
+      <tr><td>Election Symbols (Reservation and Allotment) Order 1968</td><td>Recognition, symbols, faction disputes (Para 15)</td><td>Recognition ≠ registration</td></tr>
+      <tr><td>Presidential and Vice-Presidential Elections Act 1952</td><td>Special framework for those offices (Arts. 54, 55, 66, 71)</td><td>Art. 71(3) is their express legislative basis</td></tr>
+      <tr><td>Delimitation Acts (1952, 1962, 1972, 2002)</td><td>Commission-based boundary drawing</td><td>Boundaries are not an ECI-only task</td></tr>
+      <tr><td>CEC &amp; Other ECs (Appointment, Conditions of Service and Term of Office) Act 2023</td><td>Appointments, service conditions, term</td><td>Replaced the 1991 service-conditions law</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">🧩 <b>Legislating ≠ administering.</b> Parliament builds the legal frame under Art. 327; the ECI administers inside it. Art. 327 is also not a licence to violate equality, free and fair elections or basic features.</div>
+  <div class="memory"><span class="lab">🧠 R-D-Q-C-D</span>Parliament legislates on <b>R</b>olls · <b>D</b>elimitation · <b>Q</b>ualifications · <b>C</b>onduct · <b>D</b>isputes.<br><b>1950 = roll law; 1951 = contest law.</b></div>
+</div></details>
+
+<!-- 328 -->
+<details class="dos" id="article328" style="--accent:var(--saffron)">
+<summary><span class="anum"><small>ARTICLE</small>328</span><span class="at"><b>🏢 State Legislature’s Election Law</b><small>Only where Parliament has not provided</small></span></summary>
+<div class="dbody">
+  <p>Subject to the Constitution, a State Legislature may legislate on elections to <b>its own House or Houses</b> — including rolls and matters necessary for their due constitution — <b>“in so far as provision in that behalf is not made by Parliament”</b>.</p>
+  <div class="tw"><table>
+    <thead><tr><th>State may…</th><th>State may not…</th></tr></thead>
+    <tbody>
+      <tr><td>Fill genuine gaps for its own Assembly/Council elections</td><td>Legislate for Lok Sabha, Rajya Sabha, President or Vice-President elections</td></tr>
+      <tr><td>Legislate where no parliamentary provision exists</td><td>Rewrite nomination, counting, roll or petition rules already covered by RPA 1950/1951</td></tr>
+    </tbody>
+  </table></div>
+  <div class="trap">🚨 <b>Wrong lens:</b> Art. 328 carries its own built-in limit; do not explain it through Art. 254 repugnancy (a Concurrent List doctrine). Also, Art. 328 does not govern Panchayat or municipal elections — Arts. 243K and 243ZA do. In practice the field is largely occupied by parliamentary law, so the operative space is narrow.</div>
+  <div class="memory"><span class="lab">🧠 328 in one breath</span><b>“State fills the legal gap — Parliament is the ceiling.”</b></div>
+</div></details>
+
+<!-- 329 -->
+<details class="dos" id="article329" style="--accent:var(--rose)">
+<summary><span class="anum"><small>ARTICLE</small>329</span><span class="at"><b>⚖️ Bar to Interference by Courts</b><small>Delimitation shield · election petitions · continuity</small></span></summary>
+<div class="dbody">
+  <div class="tw"><table>
+    <thead><tr><th>Limb</th><th>Rule</th><th>Qualification</th></tr></thead>
+    <tbody>
+      <tr><td>329(a)</td><td>The validity of any law relating to the <b>delimitation of constituencies or allotment of seats</b>, made or purporting to be made under Art. 327 or 328, cannot be questioned in any court.</td><td>Delimitation orders published in the Gazette carry the force of law (<i>Meghraj Kothari</i>, 1967). Don’t stretch it to every boundary-related executive act.</td></tr>
+      <tr><td>329(b)</td><td>No election to Parliament or a State Legislature can be called in question except by an <b>election petition</b> to the authority and in the manner provided by the appropriate legislature’s law.</td><td>Aim: channel challenges and avoid mid-process litigation; not abolish judicial role.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid">
+    <div class="card"><h3>🏛️ Forum</h3><p>Election petitions on <b>both parliamentary and State-legislature elections</b> are tried by the <b>High Court</b> (RPA 1951 s.80A). Presidential/Vice-Presidential disputes go to the <b>Supreme Court</b> (Art. 71).</p></div>
+    <div class="card" style="--accent:var(--sky)"><h3>⏱️ Limitation</h3><p><b>45 days</b> from, but not including, the date of election of the returned candidate (s.81).</p></div>
+    <div class="card" style="--accent:var(--jade)"><h3>📋 Grounds</h3><p>Section 100: disqualification, corrupt practice, improper acceptance/rejection of nomination, non-compliance — several grounds require a <b>material effect on the result</b>.</p></div>
+    <div class="card" style="--accent:var(--violet)"><h3>⬆️ Appeal</h3><p>To the Supreme Court under s.116A, ordinarily within <b>30 days</b> of the High Court’s order.</p></div>
+  </div>
+  <div class="callout">🔍 <b>Ponnuswami (1952):</b> “election” covers the whole process from notification to declaration; challenges should await the petition. <b>Ashok Kumar (2000):</b> obstructive or protracting intervention is barred, but limited orders that <i>facilitate</i> completion without questioning the election are not automatically barred. Timing, relief and effect matter.</div>
+  <div class="trap">🚨 <b>Two errors to avoid:</b> (1) “Lok Sabha election petitions start in the Supreme Court” — they start in the High Court. (2) “Art. 329 bans every court order during elections” — it channels, it does not abolish review.</div>
+  <div class="memory"><span class="lab">🧠 329 = Boundaries + Ballot challenge</span><b>(a)</b> Delimitation shield · <b>(b)</b> Petition route.<br><b>80A → High Court · 81 → 45 days · 100 → grounds · 116A → Supreme Court, 30 days.</b></div>
+</div></details>
+</div>
+</section>
+
+<!-- ================= 3. INSTITUTION ================= -->
+<section class="ch" id="institution" data-mark="ECI" style="--accent:var(--violet)">
+<div class="wrap reveal">
+  <span class="kicker">🏛️ Chapter 03 · People, Appointments &amp; Independence</span>
+  <h2 class="title">A Collective Body — <span>With Practical Independence at Stake</span></h2>
+  <p class="lede">The established structure is one Chief Election Commissioner and two Election Commissioners with equal voting weight. If unanimity fails, the majority decides; the CEC chairs but cannot overrule colleagues.</p>
+
+  <h3 class="sub">🕰️ How the Commission evolved</h3>
+  <div class="timeline">
+    <div class="ti" style="--accent:var(--violet)"><div class="d">25 JANUARY 1950</div><p>ECI established; <b>Sukumar Sen</b> was the first CEC. (Celebrated as National Voters’ Day since 2011.)</p></div>
+    <div class="ti" style="--accent:var(--sky)"><div class="d">OCT 1951 – FEB 1952</div><p>First general election under universal adult franchise, at unprecedented scale.</p></div>
+    <div class="ti" style="--accent:var(--saffron)"><div class="d">16 OCTOBER 1989</div><p>Two additional ECs appointed (S. S. Dhanoa and V. S. Seigell) — the first multi-member phase.</p></div>
+    <div class="ti" style="--accent:var(--rose)"><div class="d">JANUARY 1990</div><p>The additional posts were abolished; the Commission reverted to a single member. The abolition was upheld in <i>S. S. Dhanoa</i> (1991).</p></div>
+    <div class="ti" style="--accent:var(--jade)"><div class="d">1 OCTOBER 1993 →</div><p>Three-member body restored (ordinance, then the 1993 amendment): <b>1 CEC + 2 ECs</b>; upheld in <i>T. N. Seshan</i> (1995).</p></div>
+    <div class="ti" style="--accent:var(--gold)"><div class="d">2 MARCH 2023 → JANUARY 2024</div><p><i>Anoop Baranwal</i> sets an interim selection panel; Parliament enacts the 2023 appointments law, brought into force in January 2024.</p></div>
+  </div>
+  <div class="callout">🛠️ <b>Historical correction:</b> T. Swaminathan was CEC from 1973 to 1977 — not a “temporary second Election Commissioner in 1974”. Do not link the 1989 additional ECs causally to the voting-age change.</div>
+
+  <h3 class="sub">🧑‍⚖️ Appointment: text → interim judgment → statute</h3>
+  <div class="flow">
+    <div class="node"><b>📜 Art. 324(2)</b>President appoints, subject to a law of Parliament</div><span class="arrow">→</span>
+    <div class="node"><b>⚖️ Anoop Baranwal · 2023</b>Interim panel: PM + LoP + CJI until Parliament legislates</div><span class="arrow">→</span>
+    <div class="node"><b>📚 2023 Act</b>Selection Committee: PM + Union Cabinet Minister + LoP</div>
+  </div>
+  <div class="tw"><table>
+    <caption>⚖️ Pre-2023 vs. interim judgment vs. statute</caption>
+    <thead><tr><th>Feature</th><th>Earlier practice</th><th>Anoop Baranwal (interim)</th><th>2023 Act</th></tr></thead>
+    <tbody>
+      <tr><td>Who selects?</td><td>President, on Council of Ministers’ advice</td><td>PM + LoP (or largest opposition party leader) + CJI</td><td>PM (Chair) + Union Cabinet Minister nominated by PM + LoP in Lok Sabha (or leader of largest opposition party)</td></tr>
+      <tr><td>Search stage</td><td>None</td><td>—</td><td>Search Committee chaired by the Law Minister (two members of Secretary rank) prepares a panel of five; Selection Committee may consider others</td></tr>
+      <tr><td>Eligibility</td><td>Convention (senior civil servants)</td><td>Integrity and competence</td><td>Holder or former holder of a post equivalent to Secretary to the Government of India, with election-management experience</td></tr>
+      <tr><td>Term</td><td>1991 Act: six years or age 65</td><td>—</td><td>Six years or age 65, whichever is earlier; no reappointment; combined EC + CEC tenure cannot exceed six years</td></tr>
+      <tr><td>Salary</td><td>Equal to Supreme Court judge</td><td>—</td><td>Equal to a Supreme Court judge (the original Bill’s Cabinet-Secretary benchmark was changed)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="trap">🚨 The CJI is <b>not</b> in the statutory Selection Committee; he belonged to the court-directed interim panel. Challenges to the Act and later orders are update-sensitive — verify before an exam.</div>
+
+  <h3 class="sub">🛡️ Removal: the constitutional asymmetry</h3>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--jade)"><h3>Chief Election Commissioner</h3><p>Removed only “in like manner and on like grounds” as a Supreme Court judge: proved misbehaviour or incapacity, by an address of each House supported by a majority of its <b>total membership</b> and at least <b>two-thirds of members present and voting</b>, followed by the President’s order.</p></div>
+    <div class="card" style="--accent:var(--saffron)"><h3>Other ECs &amp; Regional Commissioners</h3><p>Cannot be removed except on the <b>CEC’s recommendation</b>. This is a safeguard, not a power of personal dismissal. The Constitution’s “no disadvantage” proviso is expressly about the CEC’s service conditions.</p></div>
+  </div>
+
+  <h3 class="sub">⚙️ The administrative chain</h3>
+  <div class="flow">
+    <div class="node"><b>🏛️ ECI</b>Policy, directions, supervision</div><span class="arrow">→</span>
+    <div class="node"><b>🗺️ CEO</b>State-level supervision</div><span class="arrow">→</span>
+    <div class="node"><b>🏙️ DEO</b>District coordination</div><span class="arrow">→</span>
+    <div class="node"><b>📝 RO / ERO</b>Conduct of election / roll registration</div><span class="arrow">→</span>
+    <div class="node"><b>🧑‍💼 BLO &amp; polling teams</b>Field verification and polling</div>
+  </div>
+  <div class="grid two">
+    <div class="card"><h3>🧾 Different officers, different jobs</h3><p>A <b>Returning Officer</b> runs the constituency election (nomination scrutiny, counting, declaration). An <b>Electoral Registration Officer</b> maintains the roll. A <b>Booth Level Officer</b> supports field-level roll work.</p></div>
+    <div class="card" style="--accent:var(--sky)"><h3>👁️ Control over borrowed staff</h3><p>Officers engaged in election duty are deemed on deputation to the ECI for the period (RPA 1950 s.13CC; RPA 1951 s.28A), subject to its control, supervision and discipline. Observers watch roll work, expenditure and polling.</p></div>
+  </div>
+  <div class="callout">⚖️ <b>Independence is not perfect insulation.</b> Debated issues: executive weight in selection, unequal removal protection, financial autonomy and secretariat independence, reliance on borrowed staff, and post-retirement expectations. Advisory proposals include the Dinesh Goswami Committee (1990), the Law Commission’s 255th Report (2015) and Baranwal’s call for an independent secretariat.</div>
+  <div class="memory"><span class="lab">🧠 The institutional five · A-T-V-R-S</span><b>A</b>ppointment · <b>T</b>enure · <b>V</b>oting equality · <b>R</b>emoval · <b>S</b>taff dependence.</div>
+</div>
+</section>
+
+<!-- ================= 4. POWERS ================= -->
+<section class="ch" id="powers" data-mark="POWER" style="--accent:var(--saffron)">
+<div class="wrap reveal">
+  <span class="kicker">⚙️ Chapter 04 · The Engine Room</span>
+  <h2 class="title">Many Powers — <span>Different Legal Sources</span></h2>
+  <p class="lede">Good answers name the <i>source</i> of each power — Article 324, a statute, rules, the Symbols Order or a judgment — rather than attributing everything to Art. 324.</p>
+  <div class="grid">
+    <article class="card" style="--accent:var(--sky)"><span class="ic">🛠️</span><h3>Administrative</h3><ul><li>Supervising roll preparation, revision and updating</li><li>Election programme; formal notifications issued by the competent authority on ECI recommendation</li><li>Appointing observers; monitoring expenditure</li><li>Adjourning, countermanding or re-polling in cases such as booth capturing or destruction of ballot material (RPA 1951 ss.57, 58, 58A)</li></ul></article>
+    <article class="card" style="--accent:var(--gold)"><span class="ic">🧑‍⚖️</span><h3>Advisory</h3><ul><li><b>Art. 103:</b> opinion on a sitting MP’s disqualification under Art. 102(1); the President acts according to it</li><li><b>Art. 192:</b> same for MLAs/MLCs, with the Governor</li><li><b>Art. 356(5)(b):</b> certification relevant to extending President’s Rule beyond one year</li></ul></article>
+    <article class="card" style="--accent:var(--violet)"><span class="ic">🏛️</span><h3>Quasi-judicial</h3><ul><li>Para 15, Symbols Order: disputes between rival groups of a recognised party (test of majority — <i>Sadiq Ali</i>)</li><li>s.10A RPA 1951: three-year disqualification for failing to lodge election expenses without good reason</li></ul></article>
+  </div>
+
+  <h3 class="sub">🧑‍⚖️ Disqualification: four tracks, four decision-makers</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Question</th><th>Decision-maker</th><th>ECI’s role</th></tr></thead>
+    <tbody>
+      <tr><td>Sitting MP — Art. 102(1) grounds</td><td>President (Art. 103)</td><td>Gives opinion; President acts according to it</td></tr>
+      <tr><td>Sitting State legislator — Art. 191(1) grounds</td><td>Governor (Art. 192)</td><td>Gives opinion; Governor acts according to it</td></tr>
+      <tr><td>Anti-defection (Tenth Schedule)</td><td>Speaker / Chairman, subject to judicial review</td><td>Not the Art. 103/192 route</td></tr>
+      <tr><td>Failure to lodge expense account</td><td>ECI under s.10A</td><td>Can impose 3-year disqualification</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">📐 Delimitation: what the ECI does — and does not do</h3>
+  <div class="grid two">
+    <div class="card"><h3>🗺️ Who draws the lines?</h3><p>Under the Delimitation Act 2002 the <b>Delimitation Commission</b> is the principal boundary-maker: chaired by a serving or retired Supreme Court judge, with the CEC (or an EC nominated by the CEC) and the relevant State Election Commissioner as members. Some statutes assign specific delimitation tasks to the ECI, so “ECI never delimits” is also too absolute.</p></div>
+    <div class="card" style="--accent:var(--rose)"><h3>🔒 The post-2026 freeze</h3><p>The 84th and 87th Amendments froze inter-State seat allocation until publication of the figures of the <b>first census taken after 2026</b>, and based readjustment on the 2001 census. Boundaries do not redraw themselves on 1 January 2026.</p></div>
+  </div>
+
+  <h3 class="sub">📜 Model Code of Conduct — the level-playing-field compact</h3>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--jade)"><h3>⏱️ Scope and timing</h3><p>The MCC applies from announcement of the election schedule until the process is complete. It evolved from a Kerala practice in 1960 into a code issued by the ECI over the following decades, covering rallies, polling-day conduct, observers, the party in power, official machinery and manifestos.</p></div>
+    <div class="card" style="--accent:var(--sky)"><h3>⚖️ Legal character</h3><p>The MCC is <b>not a single statute</b>. Some conduct violates both the Code and independent law (RPA 1951, criminal law); the ECI enforces the Code through directions, notices and censure, not imprisonment.</p></div>
+  </div>
+  <div class="trap">🚨 MCC ≠ a complete criminal code; Art. 324 power ≠ power contrary to Parliament’s legislation.</div>
+  <div class="memory"><span class="lab">🧠 Powers with limits</span><b>ECI administers · courts try petitions · Speakers decide defection · delimitation follows its own law.</b><br>Powers triangle: <b>A-A-Q</b> = Administrative · Advisory · Quasi-judicial.</div>
+</div>
+</section>
+
+<!-- ================= 5. VOTER ================= -->
+<section class="ch" id="voter" data-mark="VOTE" style="--accent:var(--jade)">
+<div class="wrap reveal">
+  <span class="kicker">🧑‍🤝‍🧑 Chapter 05 · The Citizen at the Centre</span>
+  <h2 class="title">A Voter Is Not a Number — <span>Registration Makes the Right Real</span></h2>
+  <p class="lede">Art. 326 is the foundation; statutes operationalise registration and voting. A voter ID card alone does not prove that a name is on the current roll.</p>
+
+  <div class="grid">
+    <article class="card"><div class="big">18</div><h3>🎂 Age</h3><p>Must be 18 on the applicable qualifying date; advance applications are allowed as per ECI instructions.</p></article>
+    <article class="card" style="--accent:var(--saffron)"><span class="ic">🇮🇳</span><h3>Citizenship</h3><p>Only Indian citizens may be registered (RPA 1950 s.16 disqualifies non-citizens).</p></article>
+    <article class="card" style="--accent:var(--sky)"><span class="ic">🏠</span><h3>Ordinary residence</h3><p>Registration follows ordinary residence in the constituency. Owning property is not required; temporary absence does not end residence.</p></article>
+  </div>
+
+  <h3 class="sub">📅 The registration calendar</h3>
+  <div class="flow">
+    <div class="node"><b>1 Jan</b>Qualifying date</div><span class="arrow">→</span><div class="node"><b>1 Apr</b>Qualifying date</div><span class="arrow">→</span>
+    <div class="node"><b>1 Jul</b>Qualifying date</div><span class="arrow">→</span><div class="node"><b>1 Oct</b>Qualifying date</div>
+  </div>
+  <p>Under s.23(3) RPA 1950, roll changes of the specified kind cannot be made after the <b>last date for nominations</b> until the election in that constituency is complete, even though updating is otherwise continuous.</p>
+
+  <div class="tw"><table>
+    <caption>📝 Common voter-service forms</caption>
+    <thead><tr><th>Form</th><th>Purpose</th><th>Clarification</th></tr></thead>
+    <tbody>
+      <tr><td>Form 6</td><td>New registration</td><td>Follow current supporting-document instructions.</td></tr>
+      <tr><td>Form 6A</td><td>Overseas Indian elector (s.20A)</td><td>Not for persons who acquired foreign citizenship.</td></tr>
+      <tr><td>Form 6B</td><td>Furnishing Aadhaar for roll authentication</td><td>Aadhaar ≠ proof of citizenship; inability to furnish for sufficient cause cannot justify denial or deletion.</td></tr>
+      <tr><td>Form 7</td><td>Objection to inclusion / deletion request</td><td>Deletion requires inquiry and due process.</td></tr>
+      <tr><td>Form 8</td><td>Shifting residence, correction, replacement EPIC, marking disability</td><td>Older split forms may be outdated.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid two">
+    <div class="card" style="--accent:var(--rose)"><h3>🚫 Registration disqualifications (s.16)</h3><p>Non-citizenship; unsoundness of mind declared by a <b>competent court</b>; disqualification under law relating to corrupt practices or election offences. A diagnosis or disability alone is not the court declaration.</p></div>
+    <div class="card" style="--accent:var(--violet)"><h3>🔒 Custody and voting (s.62(5))</h3><p>A person confined in prison or in police custody cannot vote, except a person under <b>preventive detention</b>. This voting bar is not identical to automatic deletion from the roll.</p></div>
+  </div>
+  <div class="trap">🚨 <b>Vote once.</b> Sections 17–18 RPA 1950 bar registration in more than one constituency or twice in the same constituency; multiple cards never mean multiple votes.</div>
+
+  <h3 class="sub">🌍 Overseas, service and special-category electors</h3>
+  <ul>
+    <li><b>Overseas Indian electors</b> register under s.20A, usually at the passport address, and vote in person with the prescribed ID — not online.</li>
+    <li><b>Service voters</b>: postal ballot / ETPBS for eligible categories; proxy voting only for the legally defined classified service voters.</li>
+    <li><b>Accessibility and home-voting</b> facilities exist for specified senior-citizen and disability categories; thresholds and categories are update-sensitive.</li>
+    <li><b>Students and homeless persons</b>: registration depends on lawfully established ordinary residence, not on owning a home.</li>
+  </ul>
+
+  <div class="grid two">
+    <div class="card" style="--accent:var(--gold)"><h3>🆔 EPIC vs roll</h3><p>EPIC is an identification card; the <b>electoral roll</b> decides who may vote. Check your roll entry, constituency and polling station before election day. Carry EPIC or another identification document permitted by the ECI for that election.</p></div>
+    <div class="card" style="--accent:var(--jade)"><h3>🤝 Inclusion without exclusion</h3><p>Accessible polling stations, ramps, signage, assistance permitted by law, large-print and braille information, and outreach help turn a formal franchise into meaningful participation. Disability is not a general disqualification from voting; only a <b>competent-court declaration of unsound mind</b> falls within the s.16 ground.</p><p>Home-voting and assisted-voting facilities for senior citizens above a notified age threshold and persons with benchmark disabilities have been used in recent elections. Thresholds and procedure are <b>update-sensitive</b>.</p></div>
+  </div>
+
+  <h3 class="sub">🗳️ NOTA — an expression, not a veto</h3>
+  <p>The <b>None of the Above</b> option protects the secrecy of a voter’s decision not to support any contesting candidate. Following <i>PUCL v. Union of India</i> (2013), it was introduced on EVMs. NOTA votes are <b>counted and recorded</b>, but they are not votes for a candidate. In parliamentary and State-legislature elections NOTA does <b>not</b> invalidate the election, trigger an automatic fresh poll or disqualify candidates. The candidate with the highest number of candidate votes wins, even if NOTA receives more selections.</p>
+  <div class="callout">⚖️ <b>Rajya Sabha distinction:</b> in <i>Shailesh Manubhai Parmar v. Election Commission of India</i> (2018) the Supreme Court held that NOTA is not available in Rajya Sabha elections. Do not carry the direct-election rule into indirect elections.</div>
+  <div class="memory"><span class="lab">🧠 The voter’s four checkpoints</span><b>C-A-R-D</b> = <b>C</b>itizen · <b>A</b>ge 18 on a qualifying date · <b>R</b>oll entry · no legal <b>D</b>isqualification.<br><b>EPIC identifies; the roll authorises participation; NOTA expresses rejection without cancelling the contest.</b></div>
+</div>
+</section>
+
+<!-- ================= 6. PARTIES & MONEY ================= -->
+<section class="ch" id="parties" data-mark="PARTY" style="--accent:var(--rose)">
+<div class="wrap reveal">
+  <span class="kicker">🚩 Chapter 06 · Parties, Symbols &amp; Political Finance</span>
+  <h2 class="title">The Contest Needs Choices — <span>And Transparent Rules</span></h2>
+  <p class="lede">A party may be <b>registered</b> without being <b>recognised</b>. Registration is a statutory entry process; recognition is an electoral-performance classification. Part XV does not define political parties. Their legal architecture comes from the RPA 1951 (Part IVA, s.29A onwards), the Election Symbols (Reservation and Allotment) Order 1968, and judicial decisions.</p>
+
+  <div class="flow">
+    <div class="node"><b>📝 Formation</b>Association of citizens</div><span class="arrow">→</span>
+    <div class="node"><b>📚 Registration</b>Section 29A, RPA 1951</div><span class="arrow">→</span>
+    <div class="node"><b>🗳️ Performance</b>Votes + seats under the Symbols Order</div><span class="arrow">→</span>
+    <div class="node"><b>🏅 Recognition</b>State party / national party</div>
+  </div>
+
+  <h3 class="sub">📝 Registration — Section 29A</h3>
+  <p>An association or body of individual Indian citizens that wants registration as a political party applies to the ECI within <b>30 days of its formation</b>. Its governing document must affirm faith and allegiance to the Constitution and to the principles of <b>socialism, secularism and democracy</b>, and undertake to uphold the sovereignty, unity and integrity of India. The ECI follows a prescribed application, publicity, objection and hearing process.</p>
+  <div class="grid two">
+    <article class="card"><h3>📌 Registered ≠ recognised</h3><p>A <b>registered unrecognised party</b> has statutory registration but does not (or no longer does) meet the recognition thresholds. Recognition brings additional privileges: reserved-symbol arrangements, free broadcast time on public media, free copies of electoral rolls and a larger star-campaigner list.</p></article>
+    <article class="card" style="--accent:var(--sky)"><h3>⚖️ Deregistration is limited</h3><p>In <i>Indian National Congress (I) v. Institute of Social Welfare</i> (2002) the Court held that the ECI has <b>no general power to review and cancel</b> a registration under s.29A. Narrow exceptions exist, such as registration obtained by fraud or a party being declared unlawful. <b>Withdrawal of recognition</b> and <b>deregistration</b> are different acts.</p></article>
+  </div>
+
+  <h3 class="sub">🏅 Recognition thresholds — alternative routes, not cumulative tests</h3>
+  <div class="tw"><table>
+    <caption>🚩 National-party recognition (Symbols Order, Para 6B): satisfy any one route</caption>
+    <thead><tr><th>Route</th><th>Requirement</th><th>Precision point</th></tr></thead>
+    <tbody>
+      <tr><td>Votes + Lok Sabha seats</td><td>At least 6% of valid votes in each of four or more States at a general election to the Lok Sabha or State Assembly, <b>and</b> at least four Lok Sabha members.</td><td>The vote test and the four-seat test belong together.</td></tr>
+      <tr><td>Lok Sabha seat share</td><td>At least 2% of total Lok Sabha seats, with members from at least three States.</td><td>For a 543-seat House, 2% means at least 11 seats.</td></tr>
+      <tr><td>State-party status</td><td>Recognised as a State party in at least four States.</td><td>A separate, independent route.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tw"><table>
+    <caption>🏢 State-party recognition (Para 6A): satisfy any one route in that State</caption>
+    <thead><tr><th>Route</th><th>Requirement</th></tr></thead>
+    <tbody>
+      <tr><td>Assembly votes + seats</td><td>At least 6% of valid votes at the Assembly general election and at least two Assembly members.</td></tr>
+      <tr><td>Lok Sabha votes + seat</td><td>At least 6% of valid votes at the Lok Sabha general election in that State and at least one Lok Sabha member from it.</td></tr>
+      <tr><td>Assembly seat share</td><td>At least 3% of total Assembly seats or three seats, whichever is greater.</td></tr>
+      <tr><td>Lok Sabha representation</td><td>At least one Lok Sabha member for every 25 members (or fraction) allotted to the State.</td></tr>
+      <tr><td>Vote-share-only route</td><td>At least 8% of valid votes at a Lok Sabha or Assembly general election in the State.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">🔎 <b>Use the operative Symbols Order.</b> Recognition and its continuation are judged under the Order’s detailed conditions. These thresholds are study rules, not a live list of currently recognised parties.</div>
+
+  <h3 class="sub">🎨 Symbols and faction disputes</h3>
+  <p>The Symbols Order separates <b>reserved symbols</b> (for recognised parties in their area) from <b>free symbols</b>. Registered unrecognised parties may seek a common-symbol concession on stated conditions, but registration alone never creates a permanently reserved symbol.</p>
+  <p>Under <b>Paragraph 15</b>, the ECI decides disputes between rival sections of a recognised party, each claiming to be that party. In <i>Sadiq Ali v. ECI</i> (1972) the Supreme Court upheld the framework. The Commission examines organisational support and legislative strength. A symbol decision is <b>not</b> a Tenth Schedule disqualification decision, which belongs to the Speaker or Chairman.</p>
+
+  <h3 class="sub">💰 Campaign finance — four separate accountability channels</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--gold)"><h3>🧾 Candidate expenditure</h3><p>Sections 77–78 require a separate, correct account of election expenses and its lodging within <b>30 days of the returned candidate’s election</b>. Rule 90 of the Conduct of Election Rules fixes constituency-category ceilings. Verify the currently notified figures.</p></article>
+    <article class="card" style="--accent:var(--jade)"><h3>⚖️ Failure to lodge</h3><p>Under <b>s.10A</b> the ECI may disqualify a person for <b>three years</b> if the required account was not lodged in time and manner and there was no good reason. This is distinct from an election-petition allegation of excess spending.</p></article>
+    <article class="card" style="--accent:var(--sky)"><h3>🏢 Party contributions</h3><p>Section 29B permits party contributions, subject to prohibitions such as government-company and foreign-source donations. Section 29C requires a report of contributions above <b>₹20,000</b> from one person in a financial year. That is a <b>disclosure</b> threshold, not a maximum donation limit. Tax law operates separately.</p></article>
+    <article class="card" style="--accent:var(--violet)"><h3>🔍 Monitoring ecosystem</h3><p>Expenditure observers, accounting teams, flying squads, static surveillance teams and media monitoring support enforcement. A seizure or a complaint is not proof of guilt; evidence and due process still decide the outcome.</p></article>
+  </div>
+  <div class="trap">🚨 <b>Candidate limit ≠ party spending limit.</b> Expenditure “incurred or authorised” on a candidate does not escape scrutiny merely because another person paid for it.</div>
+
+  <h3 class="sub">🌟 Star campaigners and paid news</h3>
+  <p>Under the s.77 framework a recognised party may notify up to <b>40</b> star campaigners and another registered party up to <b>20</b>, within the prescribed period. The travel-expense exclusion is conditional. It is not blanket immunity for every rally, advertisement or candidate-specific item.</p>
+  <p><b>Paid news</b> blurs the line between editorial content and advertising. ECI media-certification and monitoring committees examine suspect content, and the legal consequence depends on the facts and the attribution of expenditure. Do not describe “paid news” as one self-contained offence that covers every situation.</p>
+
+  <h3 class="sub">⚖️ Electoral bonds — the constitutional turning point</h3>
+  <p>In <i>Association for Democratic Reforms v. Union of India</i> (<b>15 February 2024</b>) a Constitution Bench struck down the Electoral Bond Scheme and the associated amendments. It held that anonymity infringed voters’ right to information under Art. 19(1)(a), and it invalidated the removal of the corporate-contribution cap as arbitrary. The Court also gave disclosure directions.</p>
+  <div class="callout">📌 <b>Accurate exam language:</b> “The Electoral Bond Scheme was struck down in 2024.” Do not write as if it is a current funding channel, and do not confuse the holding with proposals for a replacement system.</div>
+
+  <div class="memory"><span class="lab">🧠 Party-law compass</span><b>29A = Admission · 29B = Backing · 29C = Contribution disclosure.</b><br>National route key: <b>4 States as State party · 6% in 4 States + 4 LS seats · 2% LS seats from 3 States.</b><br><b>Register ≠ recognise ≠ reserve symbol ≠ decide defection.</b></div>
+</div>
+</section>
+
+<!-- ================= 7. PROCESS ================= -->
+<section class="ch" id="process" data-mark="POLL" style="--accent:var(--sky)">
+<div class="wrap reveal">
+  <span class="kicker">🔄 Chapter 07 · From Roll to Result</span>
+  <h2 class="title">An Election Is a Process — <span>Not Merely Polling Day</span></h2>
+  <p class="lede">“Conduct of elections” covers an organised chain of statutory steps. Separate the ECI’s announcement of the schedule from the formal notification, and identify the responsible officer at each stage.</p>
+
+  <div class="flow">
+    <div class="node"><b>① 📝 Rolls</b>Registration + revision</div><span class="arrow">→</span>
+    <div class="node"><b>② 📣 Programme</b>Schedule + MCC begins</div><span class="arrow">→</span>
+    <div class="node"><b>③ 📜 Notification</b>President / Governor under ss.14–15 RPA 1951</div><span class="arrow">→</span>
+    <div class="node"><b>④ 📂 Nominations</b>Filing · scrutiny · withdrawal</div><span class="arrow">→</span>
+    <div class="node"><b>⑤ 🗳️ Poll</b>Voting + safeguards</div><span class="arrow">→</span>
+    <div class="node"><b>⑥ 🧮 Count</b>Result + declaration</div><span class="arrow">→</span>
+    <div class="node"><b>⑦ ⚖️ Challenge</b>Election petition where warranted</div>
+  </div>
+
+  <h3 class="sub">📅 The statutory timetable</h3>
+  <div class="tw"><table>
+    <caption>⏱️ Ordinary timetable under s.30, RPA 1951</caption>
+    <thead><tr><th>Stage</th><th>Rule</th><th>Remember</th></tr></thead>
+    <tbody>
+      <tr><td>Last date for nominations</td><td>Seventh day after publication of the notification (public-holiday adjustment applies).</td><td>Formal notification starts this clock.</td></tr>
+      <tr><td>Scrutiny</td><td>The day immediately after the nomination deadline.</td><td>The Returning Officer examines legal validity.</td></tr>
+      <tr><td>Withdrawal</td><td>Second day after scrutiny.</td><td>Withdrawal is a formal statutory act.</td></tr>
+      <tr><td>Polling</td><td>Not earlier than the fourteenth day after the withdrawal deadline.</td><td>Do not say “14 days after notification”.</td></tr>
+      <tr><td>Completion</td><td>Date fixed by the ECI in the statutory notification.</td><td>Multi-phase elections still follow the legal programme.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">👤 Candidate eligibility — a separate constitutional lane</h3>
+  <div class="grid two">
+    <article class="card"><h3>🎂 Minimum ages</h3><p><b>Lok Sabha / Assembly:</b> 25 years. <b>Rajya Sabha / Legislative Council:</b> 30 years (Arts. 84 and 173, supplemented by the RPA). The voting age of 18 is <b>not</b> the minimum age for legislative candidacy.</p></article>
+    <article class="card" style="--accent:var(--rose)"><h3>⚖️ Disqualifications</h3><p>Arts. 102 and 191, the RPA 1951 and the Tenth Schedule address distinct grounds. Section 8 conviction-based disqualification has different categories; it is not one generic “two-year” rule.</p></article>
+  </div>
+  <p>In <i>Lily Thomas v. Union of India</i> (2013) the Supreme Court struck down s.8(4), which had temporarily protected sitting legislators after conviction. Filing an appeal does not itself suspend disqualification. A <b>stay of conviction</b> has different consequences from a stay of sentence alone.</p>
+
+  <h3 class="sub">📂 Nomination, proposers, disclosures and deposits</h3>
+  <p>A candidate set up by a recognised party ordinarily needs <b>one proposer</b>; other candidates need <b>ten electors</b> of the constituency as proposers. Candidates must file the prescribed affidavit on criminal antecedents, assets, liabilities and educational qualifications. In <i>Resurgence India v. ECI</i> (2013) the Court treated an affidavit with blank columns as defective. Voters’ right to know rests on <i>ADR</i> (2002) and Art. 19(1)(a).</p>
+  <div class="tw"><table>
+    <thead><tr><th>Election</th><th>Ordinary security deposit</th><th>SC/ST candidate</th></tr></thead>
+    <tbody>
+      <tr><td>Lok Sabha</td><td>₹25,000</td><td>₹12,500</td></tr>
+      <tr><td>State Assembly</td><td>₹10,000</td><td>₹5,000</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">🪙 <b>Forfeiture (s.158):</b> an unsuccessful candidate must receive <b>more than one-sixth</b> of the valid votes polled to keep the deposit. Exactly one-sixth is insufficient. How NOTA figures in the denominator is governed by ECI instructions, so check the current instruction.</div>
+
+  <h3 class="sub">🚨 When polling goes wrong — statutory safeguards</h3>
+  <div class="tw"><table>
+    <caption>🛡️ Adjournment, fresh poll and countermand</caption>
+    <thead><tr><th>Section (RPA 1951)</th><th>Trigger</th><th>Consequence</th></tr></thead>
+    <tbody>
+      <tr><td>s.57</td><td>Riot, open violence, natural calamity or other sufficient cause obstructing the poll.</td><td>The poll is adjourned and a fresh date is fixed under the Commission’s directions.</td></tr>
+      <tr><td>s.58</td><td>Ballot box or EVM taken away, destroyed, damaged or tampered with.</td><td>The ECI may declare the poll at that station void and appoint a day for a fresh poll.</td></tr>
+      <tr><td>s.58A</td><td>Booth capturing.</td><td>The ECI may adjourn the poll or countermand the election in the constituency.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">🤫 Campaign restrictions and integrity</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--violet)"><h3>⏳ The 48-hour period</h3><p>Section 126 restricts public meetings and election matter shown through cinematograph, television or similar apparatus during the <b>48 hours ending with the hour fixed for conclusion of poll</b> in the polling area. Do not turn this into an unqualified ban on every communication everywhere.</p></article>
+    <article class="card" style="--accent:var(--gold)"><h3>📊 Exit polls</h3><p>Section 126A restricts conducting and publishing exit-poll results during the notified period. Exit polls and pre-poll opinion surveys are different categories.</p></article>
+    <article class="card" style="--accent:var(--rose)"><h3>🚫 Corrupt practices</h3><p>Section 123 lists bribery, undue influence, prohibited appeals and similar conduct. Section 100 governs when an election may be declared void. A corrupt-practice finding and a criminal prosecution follow different routes.</p></article>
+    <article class="card" style="--accent:var(--jade)"><h3>🛡️ Polling safeguards</h3><p>Secrecy, identity checks, polling agents, mock polls, sealing, custody, observers and authorised re-polls support integrity.</p></article>
+  </div>
+
+  <h3 class="sub">🏆 Counting and electoral systems</h3>
+  <p>Lok Sabha and Assembly constituencies use <b>first-past-the-post</b>: the highest vote-getter wins, not necessarily a majority of all votes cast. Counting is supervised by the Returning Officer, with candidates’ counting agents present and prescribed recount-application procedures.</p>
+  <div class="grid two">
+    <article class="card"><h3>🏛️ Indirect elections differ</h3><p>Rajya Sabha members are elected by elected MLAs using <b>proportional representation by the single transferable vote</b>; the open-ballot rule for party MLAs was upheld in <i>Kuldip Nayar</i> (2006). The President and Vice-President are elected by distinct electoral colleges (Arts. 54–55 and 66).</p></article>
+    <article class="card" style="--accent:var(--saffron)"><h3>🔁 Bye-elections</h3><p>Section 151A generally requires vacancies to be filled within <b>six months</b>. Exceptions: the remainder of the term is under one year, or the ECI, in consultation with the Union government, certifies difficulty in holding the poll.</p></article>
+  </div>
+  <div class="memory"><span class="lab">🧠 The election conveyor</span><b>R-N-N-S-W-P-C-D</b> = Roll · Notification · Nomination · Scrutiny · Withdrawal · Poll · Count · Dispute.<br>Age key: <b>18 votes · 25 lower Houses · 30 upper Houses.</b></div>
+</div>
+</section>
+
+<!-- ================= 8. TECHNOLOGY ================= -->
+<section class="ch" id="tech" data-mark="TRUST" style="--accent:var(--violet)">
+<div class="wrap reveal">
+  <span class="kicker">🔐 Chapter 08 · Technology &amp; Verifiable Trust</span>
+  <h2 class="title">Machines Assist Democracy — <span>Procedures Make Them Accountable</span></h2>
+  <p class="lede">Explain election technology through its legal authority, physical design, verification procedures and institutional safeguards. Avoid both absolute reassurance and unsupported allegations.</p>
+
+  <div class="grid">
+    <article class="card"><span class="ic">🔘</span><h3>Balloting Unit</h3><p>Sits inside the voting compartment and displays candidate names and symbols with selection buttons. It is one part of the EVM system, not an internet terminal.</p></article>
+    <article class="card" style="--accent:var(--sky)"><span class="ic">🎛️</span><h3>Control Unit</h3><p>Kept with the Presiding Officer to enable voting and record electronic totals. ECI describes the machine as standalone, with a one-time-programmable chip and no ordinary wireless or internet connectivity.</p></article>
+    <article class="card" style="--accent:var(--jade)"><span class="ic">🧾</span><h3>VVPAT</h3><p>The Voter Verifiable Paper Audit Trail prints a slip showing the selected candidate’s serial number, name and symbol. It is visible through a window for about <b>seven seconds</b> and then drops into a sealed compartment. The voter does not take it away.</p></article>
+  </div>
+
+  <h3 class="sub">📚 Law and judicial milestones</h3>
+  <div class="timeline">
+    <div class="ti"><div class="d">1984 · A. C. JOSE</div><p>ECI instructions cannot override existing statutory voting rules. Article 324 is not a substitute for legal authority.</p></div>
+    <div class="ti" style="--accent:var(--saffron)"><div class="d">1988 · SECTION 61A</div><p>Parliament inserted express statutory authority for voting machines in the RPA 1951.</p></div>
+    <div class="ti" style="--accent:var(--jade)"><div class="d">2013 · SUBRAMANIAN SWAMY</div><p>The Court recognised the paper trail as essential to confidence in free and fair elections and directed phased introduction of VVPAT.</p></div>
+    <div class="ti" style="--accent:var(--sky)"><div class="d">2019 · N. CHANDRABABU NAIDU</div><p>Mandatory random VVPAT verification increased to <b>five polling stations per Assembly constituency or Assembly segment</b>.</p></div>
+    <div class="ti" style="--accent:var(--rose)"><div class="d">26 APRIL 2024 · ADR v. ECI</div><p>The Court rejected a return to paper ballots and universal slip-counting, while issuing additional safeguards on symbol-loading units and a procedure for specified candidates to request technical verification of machine memory.</p></div>
+  </div>
+  <div class="callout">🧭 <b>Protocol update warning:</b> later orders and ECI technical instructions may refine verification arrangements. Verify the latest procedure instead of treating a 2024 operational description as permanent.</div>
+
+  <h3 class="sub">🛡️ The chain of custody</h3>
+  <div class="flow">
+    <div class="node"><b>🔧 First-level checking</b>Authorised technical checks, with party representatives invited</div><span class="arrow">→</span>
+    <div class="node"><b>🎲 Randomisation</b>Allocation to constituency, then to polling stations</div><span class="arrow">→</span>
+    <div class="node"><b>🖋️ Candidate setting</b>Symbols loaded; agents observe</div><span class="arrow">→</span>
+    <div class="node"><b>✅ Mock poll</b>At least 50 votes before the actual poll, agents present</div><span class="arrow">→</span>
+    <div class="node"><b>🔒 Seal + custody</b>Seals, records and strong-room security</div><span class="arrow">→</span>
+    <div class="node"><b>🧮 Count + audit</b>Statutory checks and random slip verification</div>
+  </div>
+  <div class="grid two">
+    <article class="card"><h3>🌐 Standalone ≠ online voting</h3><p>ECI machines are designed without ordinary internet or wireless connectivity. Security also depends on manufacturing controls, firmware design, physical custody and transparent procedures.</p></article>
+    <article class="card" style="--accent:var(--gold)"><h3>🧠 Three separate questions</h3><p><b>Design security</b> asks how the system works. <b>Operational integrity</b> asks how equipment is handled. <b>Public verifiability</b> asks how stakeholders can check the process. A sound evaluation addresses all three.</p></article>
+  </div>
+
+  <h3 class="sub">📱 Digital public services</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Tool / programme</th><th>Purpose</th><th>Limit</th></tr></thead>
+    <tbody>
+      <tr><td>Voters’ Service Portal / voter apps</td><td>Registration services, tracking and roll search.</td><td>An application does not guarantee inclusion without a decision.</td></tr>
+      <tr><td>cVIGIL</td><td>Reporting specified MCC or expenditure-related violations with supporting material.</td><td>A report starts verification; it is not a finding of guilt.</td></tr>
+      <tr><td>SUVIDHA-type systems</td><td>Permissions and administrative facilitation.</td><td>Digital submission does not displace applicable law.</td></tr>
+      <tr><td>ETPBS</td><td>Electronic transmission of postal-ballot material to eligible service electors.</td><td>Not ordinary internet voting.</td></tr>
+      <tr><td>SVEEP</td><td>Systematic Voters’ Education and Electoral Participation.</td><td>Voter education, not partisan mobilisation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">🧬 New risks: deepfakes, privacy and remote voting</h3>
+  <p>AI-generated impersonation, deceptive advertising, coordinated misinformation and misuse of personal data threaten informed voting. A balanced response combines quick correction, lawful platform action, disclosure, evidence preservation and proportionate enforcement, without treating all political criticism as misinformation.</p>
+  <p>Remote-voting prototypes must be distinguished from enacted voting entitlements. Eligibility, secrecy, auditability, consensus and legal authority all remain open questions. <b>A demonstration is not implementation.</b></p>
+  <div class="memory"><span class="lab">🧠 Technology trust triangle</span><b>D-P-V</b> = secure <b>D</b>esign · disciplined <b>P</b>rocedure · meaningful <b>V</b>erification.<br><b>EVM records · VVPAT leaves a paper trail · law defines the verification route.</b></div>
+</div>
+</section>
+
+<!-- ================= 9. JUSTICE ================= -->
+<section class="ch" id="justice" data-mark="LAW" style="--accent:var(--rose)">
+<div class="wrap reveal">
+  <span class="kicker">⚖️ Chapter 09 · Judicial Guardrails</span>
+  <h2 class="title">Independent Does Not Mean Unreviewable — <span>Power Meets Principle</span></h2>
+  <p class="lede">The legal framework balances uninterrupted elections with accountability. Learn each case through the question it answered; do not turn every judgment into a general statement about all election disputes.</p>
+
+  <div class="tw"><table>
+    <caption>⚖️ Essential case matrix</caption>
+    <thead><tr><th>Case</th><th>Core issue</th><th>Exam-ready principle</th></tr></thead>
+    <tbody>
+      <tr><td>N. P. Ponnuswami · 1952</td><td>Challenge to rejection of nomination</td><td>“Election” covers the whole process; challenges ordinarily await the statutory election petition.</td></tr>
+      <tr><td>Meghraj Kothari · 1967</td><td>Delimitation orders</td><td>Published delimitation orders carry the force of law; Art. 329(a) protects the statutory delimitation framework.</td></tr>
+      <tr><td>Sadiq Ali · 1972</td><td>Party split and symbol</td><td>Upholds the Symbols Order framework and the Commission’s adjudicatory role.</td></tr>
+      <tr><td>Indira Nehru Gandhi v. Raj Narain · 1975</td><td>Art. 329A(4)</td><td>Free and fair elections are part of the basic structure; the special insulation of one election could not stand.</td></tr>
+      <tr><td>Mohinder Singh Gill · 1978</td><td>Cancellation and fresh poll; Art. 324</td><td>Residual power exists where law leaves a gap, subject to fairness and constitutional limits.</td></tr>
+      <tr><td>Jyoti Basu · 1982</td><td>Election-petition rights</td><td>Election rights and remedies are statutory, not an unrestricted common-law action.</td></tr>
+      <tr><td>A. C. Jose · 1984</td><td>Voting machines without rules</td><td>The ECI may supplement the law, not supplant it.</td></tr>
+      <tr><td>S. S. Dhanoa · 1991</td><td>Abolition of additional EC posts</td><td>The 1990 abolition was upheld in its legal and factual setting.</td></tr>
+      <tr><td>T. N. Seshan · 1995</td><td>Multi-member Commission</td><td>Collective functioning is valid; the CEC chairs but does not hold an overriding veto.</td></tr>
+      <tr><td>ECI v. Ashok Kumar · 2000</td><td>Judicial orders during elections</td><td>Obstructive intervention differs from a limited order facilitating completion.</td></tr>
+      <tr><td>Union of India v. ADR · 2002</td><td>Candidate disclosures</td><td>The voter’s right to know is grounded in Art. 19(1)(a).</td></tr>
+      <tr><td>INC (I) v. Institute of Social Welfare · 2002</td><td>Party deregistration</td><td>No general ECI power to cancel an existing s.29A registration; narrow exceptions only.</td></tr>
+      <tr><td>PUCL · 2003</td><td>Candidate information and voting expression</td><td>Protects informed choice and the freedom involved in expressing a vote.</td></tr>
+      <tr><td>Kuldip Nayar · 2006</td><td>Rajya Sabha changes</td><td>Upheld open ballot and residence-related changes; distinguish indirect elections.</td></tr>
+      <tr><td>Lily Thomas · 2013</td><td>Convicted sitting legislators</td><td>Struck down the protective exception in s.8(4).</td></tr>
+      <tr><td>PUCL · 2013</td><td>NOTA and secrecy</td><td>Protects the secrecy of the choice not to support any candidate.</td></tr>
+      <tr><td>Subramanian Swamy · 2013</td><td>VVPAT</td><td>Paper-trail verification supports confidence in free and fair elections.</td></tr>
+      <tr><td>Resurgence India · 2013</td><td>Blank affidavit columns</td><td>An incomplete affidavit is a defect of substance; voters are entitled to complete information.</td></tr>
+      <tr><td>Public Interest Foundation · 2018</td><td>Criminalisation of politics</td><td>Directed wider disclosure; the Court did not itself create a disqualification on framing of charges.</td></tr>
+      <tr><td>Anoop Baranwal · 2023</td><td>Appointment independence</td><td>Created an interim PM–LoP–CJI committee until Parliament made a law.</td></tr>
+      <tr><td>ADR · 15 Feb 2024</td><td>Electoral bonds</td><td>Struck down the scheme and associated changes; political-funding transparency protects informed choice.</td></tr>
+      <tr><td>ADR v. ECI · 26 Apr 2024</td><td>EVM–VVPAT demands</td><td>Rejected universal slip-counting and paper-ballot demands, while adding safeguards.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">🧭 Which court, which route?</h3>
+  <div class="flow">
+    <div class="node"><b>🗳️ Parliament / State Legislature</b>Election petition → High Court (s.80A)</div><span class="arrow">→</span>
+    <div class="node"><b>⬆️ Statutory appeal</b>Supreme Court under s.116A</div>
+  </div>
+  <div class="flow">
+    <div class="node"><b>👑 President / Vice-President</b>Election dispute</div><span class="arrow">→</span>
+    <div class="node"><b>⚖️ Article 71</b>Supreme Court</div>
+  </div>
+  <div class="trap">🔎 <b>Delimitation caution:</b> describe Art. 329(a) accurately, but do not say that every action involving boundaries is forever immune from constitutional scrutiny. The character of the measure and the precise challenge matter.</div>
+
+  <h3 class="sub">📂 Election-petition essentials</h3>
+  <p>Under s.81, a candidate or an elector of the constituency may present an election petition within <b>45 days</b>. Pleadings, necessary parties, security for costs, affidavits and corrupt-practice allegations have strict requirements. Section 100 separates grounds that operate directly from those requiring proof that the result, so far as it concerns the returned candidate, was <b>materially affected</b>. Improper rejection and improper acceptance of a nomination do not carry identical tests.</p>
+  <div class="memory"><span class="lab">🧠 Seven judicial anchors</span><b>Ponnuswami channels · Gill fills gaps · Jose limits · Seshan equalises · ADR informs · PUCL protects choice · Baranwal scrutinises appointments.</b></div>
+</div>
+</section>
+
+<!-- ================= 10. REFORMS ================= -->
+<section class="ch" id="reform" data-mark="NEXT" style="--accent:var(--jade)">
+<div class="wrap reveal">
+  <span class="kicker">🌱 Chapter 10 · Challenges &amp; Reform Design</span>
+  <h2 class="title">Protect the Referee — <span>Improve the Playing Field</span></h2>
+  <p class="lede">A strong evaluation credits the ECI’s achievements without treating independence, political finance or inclusion as finished projects. Always separate binding law from recommendations.</p>
+
+  <div class="tw"><table>
+    <caption>🌱 Challenge → reform direction → constitutional caution</caption>
+    <thead><tr><th>Challenge</th><th>Reform direction</th><th>Caution</th></tr></thead>
+    <tbody>
+      <tr><td>Appointment independence</td><td>Transparent criteria, meaningful deliberation, credible selection.</td><td>Separate the operative 2023 Act from proposals and pending litigation.</td></tr>
+      <tr><td>Unequal removal safeguards</td><td>Equivalent protection for ECs and the CEC.</td><td>A proposal, not the current text of Art. 324(5).</td></tr>
+      <tr><td>Secretariat and funding</td><td>Independent staffing and stronger financial safeguards.</td><td>Do not claim all ECI expenditure is already charged on the Consolidated Fund.</td></tr>
+      <tr><td>Opaque political finance</td><td>Timely, usable disclosure and effective audit.</td><td>Balance transparency with legitimate privacy.</td></tr>
+      <tr><td>Criminalisation</td><td>Faster trials, disclosure and carefully designed eligibility reform.</td><td>Presumption of innocence and risk of motivated prosecutions.</td></tr>
+      <tr><td>MCC consistency</td><td>Reasoned, timely, even-handed decisions.</td><td>Criminal penalties need a legal source; the MCC is not a penal statute.</td></tr>
+      <tr><td>Voter exclusion</td><td>Accurate rolls, notice, hearings, accessibility, migrant-friendly solutions.</td><td>Cleaning rolls must not become arbitrary deletion.</td></tr>
+      <tr><td>Digital manipulation</td><td>Ad transparency, prompt correction, traceable evidence, voter literacy.</td><td>Protect legitimate political debate.</td></tr>
+      <tr><td>Election-petition delay</td><td>Dedicated case management and faster adjudication.</td><td>Speed must preserve fairness.</td></tr>
+      <tr><td>Internal party democracy</td><td>Transparent membership, internal elections and financial governance.</td><td>The ECI’s present statutory powers are limited.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sub">🏛️ Chronology of reform reports</h3>
+  <div class="timeline">
+    <div class="ti" style="--accent:var(--saffron)"><div class="d">1974–75 · TARKUNDE COMMITTEE</div><p>A citizens’ committee formed under J. P. Narayan’s initiative; an early reference on electoral reform and Commission independence.</p></div>
+    <div class="ti" style="--accent:var(--gold)"><div class="d">1990 · DINESH GOSWAMI COMMITTEE</div><p>Examined election administration, expenditure and appointments; a major source on in-kind support and institutional reform.</p></div>
+    <div class="ti" style="--accent:var(--rose)"><div class="d">1993 · VOHRA COMMITTEE</div><p>Highlighted the nexus between criminal networks, politicians and officials.</p></div>
+    <div class="ti" style="--accent:var(--sky)"><div class="d">1998 · INDRAJIT GUPTA COMMITTEE</div><p>Supported State funding of elections in principle, with conditions and emphasis on support in kind. It created no enforceable entitlement.</p></div>
+    <div class="ti" style="--accent:var(--violet)"><div class="d">1999 &amp; 2015 · LAW COMMISSION (170th, 255th)</div><p>Addressed disqualification of persons facing serious charges, party regulation, finance and Commission independence. Recommendations are not enacted law.</p></div>
+    <div class="ti" style="--accent:var(--jade)"><div class="d">2002 · NCRWC</div><p>The Constitution-review commission also dealt with electoral reform and appointments.</p></div>
+    <div class="ti" style="--accent:var(--cyn)"><div class="d">2024 · HIGH-LEVEL COMMITTEE ON SIMULTANEOUS ELECTIONS</div><p>Chaired by Ram Nath Kovind; recommended phased synchronisation requiring constitutional amendments. A related Constitution Amendment Bill was introduced and referred to a Joint Parliamentary Committee. <b>Verify current status.</b></p></div>
+  </div>
+
+  <h3 class="sub">🗓️ Simultaneous elections — analysis, not a slogan</h3>
+  <p>Synchronisation raises questions about legislative terms, premature dissolution, confidence motions, federalism, logistics, accountability and ECI capacity. A committee report or bill is not operative law. Check the current amendment status.</p>
+
+  <h3 class="sub">👩 Women’s legislative representation</h3>
+  <p>The <b>106th Constitutional Amendment Act, 2023</b> reserves one-third of seats for women in the Lok Sabha, State Legislative Assemblies and the Delhi Assembly, including within SC/ST-reserved seats. Its operation is linked to the <b>first census after commencement and the consequent delimitation exercise</b>. Enactment is not immediate implementation.</p>
+  <div class="callout">🧩 <b>Connect the articles:</b> Arts. 330A, 332A and 334A belong in this discussion. Do not confuse women’s reservation with separate rolls or with reservation in the Rajya Sabha.</div>
+  <div class="quote">A credible Election Commission needs legal authority, institutional distance, transparent reasoning and public trust. None is a substitute for the others.</div>
+  <div class="memory"><span class="lab">🧠 Reform compass · I-F-I-T</span><b>I</b>ndependence · clean <b>F</b>inance · meaningful <b>I</b>nclusion · verifiable <b>T</b>rust.</div>
+</div>
+</section>
+
+<!-- ================= 11. REVISION LAB ================= -->
+<section class="ch" id="revise" data-mark="RECALL" style="--accent:var(--gold)">
+<div class="wrap reveal">
+  <span class="kicker">🧠 Chapter 11 · The Active-Recall Studio</span>
+  <h2 class="title">Turn Reading into Retrieval — <span>Make Every Article Stick</span></h2>
+  <p class="lede">Use these tools to test concepts, not merely to recognise familiar words. The calculators illustrate legal rules; they do not replace official eligibility decisions or the statutory computation of limitation.</p>
+
+  <div class="grid two">
+    <article class="card calc" style="--accent:var(--jade)">
+      <h3>🎂 Qualifying-date navigator</h3>
+      <p>Find the first ordinary qualifying date on or after the date you turn 18.</p>
+      <label>Date of birth <input id="dob" type="date" value="2005-05-24"></label>
+      <output id="ageOut" aria-live="polite"></output>
+      <p class="small">Illustration only. Citizenship, ordinary residence, registration and disqualifications still matter.</p>
+    </article>
+    <article class="card calc" style="--accent:var(--violet)">
+      <h3>🛡️ CEC removal-majority simulator</h3>
+      <label>Total House membership <input id="totalHouse" type="number" min="1" max="1000" value="245"></label>
+      <label>Present and voting <input id="votingHouse" type="number" min="1" max="1000" value="180"></label>
+      <output id="majorityOut" aria-live="polite"></output>
+      <p class="small">Each House must satisfy both tests separately. Proved misbehaviour or incapacity, the prescribed process and the President’s order are also required.</p>
+    </article>
+    <article class="card calc" style="--accent:var(--saffron)">
+      <h3>🪙 Deposit-retention threshold</h3>
+      <label>Valid votes (denominator) <input id="validVotes" type="number" min="1" max="100000000" value="600000"></label>
+      <label>Unsuccessful candidate’s votes <input id="candidateVotes" type="number" min="0" max="100000000" value="100000"></label>
+      <output id="depositOut" aria-live="polite"></output>
+      <p class="small">Enter the denominator as defined by the current ECI instruction on NOTA. Withdrawal, rejection and death have separate rules.</p>
+    </article>
+    <article class="card calc" style="--accent:var(--sky)">
+      <h3>⏱️ Election-petition deadline</h3>
+      <label>Date of election of returned candidate <input id="declDate" type="date" value="2024-06-04"></label>
+      <output id="petitionOut" aria-live="polite"></output>
+      <p class="small">Day 1 is the day after the date of election. Limitation Act s.4 can help only when the court is closed on the last day; s.5 condonation is not available.</p>
+    </article>
+  </div>
+  <div class="card" style="--accent:var(--cyan)"><h3>🧭 The six-article corridor</h3>
+    <div class="memory"><span class="lab">C-R-V-P-S-C</span><b>324 Commission · 325 Roll · 326 Vote · 327 Parliament · 328 State · 329 Challenge</b></div>
+    <p>Ask six questions: <b>Who runs? Who is listed? Who votes? Who legislates? What may States add? How is the election challenged?</b></p>
+  </div>
+
+  <h3 class="sub">🎯 Scenario theatre — decide before revealing</h3>
+  <div class="grid two" id="scenarioList"></div>
+
+  <h3 class="sub">⚡ Rapid recall — retrieve the rule</h3>
+  <div class="rtools" style="margin:12px 0">
+    <button class="btn" id="showAnswers" type="button">＋ Reveal answers</button>
+    <button class="btn" id="hideAnswers" type="button">− Hide answers</button>
+  </div>
+  <div id="quizList"></div>
+
+  <h3 class="sub">✍️ A strong descriptive answer in six frames</h3>
+  <div class="flow">
+    <div class="node"><b>① 📜 Locate</b>Part XV + Art. 324</div><span class="arrow">→</span>
+    <div class="node"><b>② 🏛️ Explain</b>Composition + appointment + safeguards</div><span class="arrow">→</span>
+    <div class="node"><b>③ ⚙️ Classify</b>Administrative + advisory + quasi-judicial</div><span class="arrow">→</span>
+    <div class="node"><b>④ ⚖️ Bound</b>Statute + fairness + judicial review</div><span class="arrow">→</span>
+    <div class="node"><b>⑤ 🔍 Evaluate</b>Independence + money + inclusion</div><span class="arrow">→</span>
+    <div class="node"><b>⑥ 🌱 Conclude</b>Credible referee + informed citizen</div>
+  </div>
+
+  <h3 class="sub">✅ Mastery tracker — earn each green light</h3>
+  <p>Tick only what you can explain without looking. Progress is stored locally in this browser when storage is available; nothing is sent to a server.</p>
+  <div class="bar" id="masteryProgress" role="progressbar" aria-label="ECI revision mastery" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="masteryBar"></span></div>
+  <p class="qstat" id="masteryStatus" role="status"></p>
+  <div class="checklist" id="masteryList"></div>
+  <button class="btn" id="resetMastery" type="button">↺ Reset tracker</button>
+
+  <div class="trap">🔒 <b>Final exam traps:</b> ECI ≠ SEC · registration ≠ recognition · EPIC ≠ roll entry · voter ≠ candidate · CEC chair ≠ veto · s.29A ≠ unlimited deregistration · Art. 324 ≠ power above statute · NOTA ≠ automatic re-election · proposal ≠ operative law.</div>
+</div>
+</section>
+
+<!-- ================= 12. SOURCES ================= -->
+<section class="ch" id="sources" data-mark="VERIFY" style="--accent:var(--sky)">
+<div class="wrap reveal">
+  <span class="kicker">🔎 Chapter 12 · The Verification Desk</span>
+  <h2 class="title">Trust the Source — <span>Then Trust the Summary</span></h2>
+  <p class="lede">These notes consolidate constitutional text, established statutory principles and leading decisions. They are educational material, not legal advice or a live legal-status service. Read the current official text for amendment-, notification- and litigation-sensitive questions.</p>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--gold)"><h3>📜 Constitution and amendments</h3><p>Check Part XV, Arts. 82, 102–103, 170, 191–192, 243K, 243ZA and the amendment footnotes.</p><p><a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">Legislative Department · Constitution of India ↗</a></p></article>
+    <article class="card"><h3>🏛️ Election Commission of India</h3><p>Use current orders, the Symbols Order, manuals, recognition notifications and election-specific instructions.</p><p><a href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer">Election Commission of India ↗</a></p></article>
+    <article class="card" style="--accent:var(--jade)"><h3>📚 Statutes and rules</h3><p>Verify the RPA 1950, RPA 1951, the 2023 appointments Act, the Registration of Electors Rules 1960 and the Conduct of Election Rules 1961.</p><p><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">India Code ↗</a></p></article>
+    <article class="card" style="--accent:var(--rose)"><h3>⚖️ Judgments and notifications</h3><p>Read the actual holding and later orders. Gazette notifications fix commencement dates.</p><p><a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">Supreme Court of India ↗</a> · <a href="https://egazette.gov.in/" target="_blank" rel="noopener noreferrer">Gazette of India ↗</a></p></article>
+  </div>
+
+  <h3 class="sub">🛰️ Update-sensitive checklist</h3>
+  <ul>
+    <li><b>Appointments and litigation:</b> office-holders, vacancies and orders on the 2023 appointments law.</li>
+    <li><b>Recognition and finance:</b> recognised-party lists, reporting requirements, spending ceilings, funding developments.</li>
+    <li><b>Technology and access:</b> EVM–VVPAT protocols, home-voting categories, forms and app names.</li>
+    <li><b>Implementation:</b> census, delimitation, women’s reservation and simultaneous-election status.</li>
+  </ul>
+  <div class="ribbon">
+    <a class="chip" href="#article324">🏛️ Article 324</a><a class="chip" href="#article326">🗳️ Article 326</a><a class="chip" href="#article329">⚖️ Article 329</a>
+    <a class="chip" href="#parties">🚩 Parties</a><a class="chip" href="#tech">🔐 Trust</a><a class="chip" href="#revise">🧠 Recall</a>
+  </div>
+  <div class="memory"><span class="lab">🎬 The final frame</span><b>Protect the roll. Inform the voter. Regulate the contest. Verify the process. Respect the verdict. Preserve the lawful challenge.</b></div>
+</div>
+</section>
+
+</main>
+
+<!-- ================= END CREDITS ================= -->
+<footer>
+  <p class="final">“A free election is not just a counted ballot — it is a citizen who can choose without fear.”</p>
+  <p>𝗘𝗹𝗲𝗰𝘁𝗶𝗼𝗻 𝗖𝗼𝗺𝗺𝗶𝘀𝘀𝗶𝗼𝗻 𝗼𝗳 𝗜𝗻𝗱𝗶𝗮 · 𝗣𝗮𝗿𝘁 𝗫𝗩 · 𝗔𝗿𝘁𝗶𝗰𝗹𝗲𝘀 𝟑𝟐𝟒–𝟑𝟐𝟗</p>
+
+  <p class="credit">🎬 END CREDITS · AUTEUR</p>
+  <div class="sig magic" data-letters="PIYUSH PARTE" role="img" aria-label="Piyush Parte">PIYUSH PARTE</div>
+  <p>𝐀 𝐂𝐨𝐧𝐬𝐭𝐢𝐭𝐮𝐭𝐢𝐨𝐧𝐚𝐥 𝐒𝐭𝐮𝐝𝐲 𝐅𝐢𝐥𝐦</p>
+
+  <div class="tribute tilt">
+    <span class="heart" aria-hidden="true">❤️</span>
+    <span class="t-en">En Nenjil Kudiyirukkum</span>
+    <span class="t-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+
+  <p class="small" style="max-width:820px;margin:22px auto 0">Built for understanding, active recall & thoughtful revision. Verify current official law & instructions before examination, litigation or professional reliance</p>
+  <p class="small" id="localDate" style="margin-top:8px"></p>
+</footer>
+
+<button class="toTop" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<noscript>
+  <div class="callout" style="margin:20px">📖 The article notes remain readable without JavaScript. Search, calculators, generated recall questions and saved progress need JavaScript.</div>
+</noscript>
+
+<!-- ================= FINISHING LAYER ================= -->
+<style>
+  .hero::after{content:"";position:absolute;width:38vw;height:38vw;right:-16vw;bottom:-24vw;border-radius:50%;border:1px solid rgba(162,139,255,.25);box-shadow:0 0 0 35px rgba(162,139,255,.025),0 0 0 95px rgba(255,183,102,.018);pointer-events:none}
+  .dos:target{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 32%,transparent),0 18px 60px rgba(0,0,0,.35)}
+  .card,.node,.slipcard{touch-action:manipulation}
+  .card h3,.at b,.node b{overflow-wrap:anywhere}
+  .dbody,.card,.panel,.wrap{min-width:0}
+  .tools input{min-width:min(220px,100%)}
+  .calc input[type=date]{color-scheme:dark}
+  .scn{height:fit-content}
+  .scn[open]{background:linear-gradient(145deg,rgba(99,235,189,.08),rgba(162,139,255,.055))}
+  .scn summary,.quiz summary{line-height:1.65}
+  .quiz[open]{border-color:color-mix(in srgb,var(--accent) 48%,transparent)}
+  .quiz[open] summary{color:var(--gold)}
+  .formula-line{display:block;margin-top:7px;font:.76rem/1.8 'JetBrains Mono',monospace;color:var(--dim)}
+  .mastery-complete{box-shadow:0 0 24px rgba(99,235,189,.2)}
+  body.focus .auteur-wrap,body.focus .auteur-wrap::before,body.focus .reel-track,body.focus .heart,body.focus .dot,body.focus .lamp i,body.focus .arrow,body.focus .timeline::before{animation:none!important}
+  body.focus .intro{display:none}
+  body.focus .auteur-wrap::before{opacity:.16}
+  body.focus .card{background:#111628}
+  body.focus .reveal{opacity:1;transform:none}
+  body.focus .tilt,body.paused .tilt{transform:none!important}
+  body.paused .ink,body.paused .burst{display:none!important}
+  @media(max-width:480px){
+    .hero{padding-inline:5vw}.hero h1{letter-spacing:-.06em}
+    .l1{font-size:clamp(2.7rem,12.5vw,4rem)}.l2{font-size:clamp(2.1rem,10vw,3.4rem)}.l3{letter-spacing:.13em;line-height:1.9}
+    .eyebrow{font-size:.6rem;letter-spacing:1.4px}.hero-stat{padding-inline:12px}.hero-stat b{font-size:1.6rem}
+    .card{padding:20px}.slip-name{font-size:1.6rem}.checklist{grid-template-columns:minmax(0,1fr)}.tools .btn{flex:1 1 auto}
+  }
+  @media print{
+    [hidden],.hide{display:block!important}
+    .auteur-wrap::before,.hero::after{display:none!important}
+    .sig,.final,.t-en,.at b,.scn summary,.quiz summary{color:#111}
+    .l1{font-size:44pt}.l2{font-size:34pt}.l3{font-size:9pt;letter-spacing:1px}
+    .hero-bottom{display:block}.slipcard{max-width:420px;margin:15px 0}
+    #showAnswers,#hideAnswers,#resetMastery{display:none}
+    .calc input{border:1px solid #999;background:#fff;color:#111}.calc output{background:#fff}
+    .stamp-box small,.slip-meta,.slip-tag{color:#444}
+    thead{display:table-header-group}tr{break-inside:avoid}
+    a{color:#222;text-decoration:underline}
+  }
+</style>
+
+<!-- ================= INTERACTION ENGINE ================= -->
+<script>
+(() => {
+  "use strict";
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const motion = matchMedia("(prefers-reduced-motion: reduce)");
+  const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
+  const esc = v => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  let paused = false;
+  const animate = () => !paused && !motion.matches && !document.body.classList.contains("focus");
+
+  /* ---------- LETTER-BY-LETTER TITLE CHOREOGRAPHY ---------- */
+
+  $$("[data-letters]").forEach(el => {
+    const text = el.dataset.letters || el.textContent;
+    el.textContent = "";
+    if (!el.hasAttribute("aria-hidden") && !el.hasAttribute("aria-label")) { el.setAttribute("role", "img"); el.setAttribute("aria-label", text); }
+    let idx = 0;
+    text.split(" ").forEach((word, wi) => {
+      if (wi) { const sp = document.createElement("span"); sp.className = "sp"; sp.setAttribute("aria-hidden", "true"); el.append(sp); }
+      const w = document.createElement("span"); w.className = "word"; w.setAttribute("aria-hidden", "true");
+      Array.from(word).forEach(ch => { const s = document.createElement("span"); s.className = "ch"; s.style.setProperty("--i", idx++); s.textContent = ch; w.append(s); });
+      el.append(w);
+    });
+  });
+  const resetMotion = () => {
+
+    $$(".magic .ch").forEach(l => l.style.setProperty("--k", "0"));
+
+    $$(".tilt").forEach(el => { el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); });
+  };
+  if (finePointer.matches) {
+
+    $$(".magic").forEach(line => {
+      const letters = $$(".ch", line); let frame = 0;
+      line.addEventListener("pointermove", e => {
+        if (!animate()) return;
+        const x = e.clientX; cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => letters.forEach(l => {
+          const r = l.getBoundingClientRect();
+          l.style.setProperty("--k", Math.max(0, 1 - Math.abs(x - r.left - r.width / 2) / 130).toFixed(3));
+        }));
+      });
+      line.addEventListener("pointerleave", () => { cancelAnimationFrame(frame); letters.forEach(l => l.style.setProperty("--k", "0")); });
+    });
+
+    $$(".tilt").forEach(el => {
+      el.addEventListener("pointermove", e => {
+        if (!animate()) return;
+        const r = el.getBoundingClientRect();
+        el.style.setProperty("--rx", ((0.5 - (e.clientY - r.top) / r.height) * 7) + "deg");
+        el.style.setProperty("--ry", (((e.clientX - r.left) / r.width - 0.5) * 9) + "deg");
+      });
+      el.addEventListener("pointerleave", () => { el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); });
+    });
+    let sf = 0;
+    document.addEventListener("pointermove", e => {
+      if (!animate()) return;
+      cancelAnimationFrame(sf);
+      sf = requestAnimationFrame(() => { const s = $("#spot"); if (s) { s.style.setProperty("--mx", e.clientX + "px"); s.style.setProperty("--my", e.clientY + "px"); } });
+    }, { passive: true });
+  }
+
+  /* ---------- FACT REEL ---------- */
+  const reelFacts = [
+    ["🏛️ 324", "Commission · rolls · conduct of elections"], ["🤝 325", "One general electoral roll"],
+    ["🗳️ 326", "Adult suffrage · 18 years"], ["📚 327", "Parliament’s election-law power"],
+    ["🏢 328", "State law only where Parliament has not provided"], ["⚖️ 329", "Delimitation shield · election-petition route"],
+    ["📅 Qualifying dates", "Jan · Apr · Jul · Oct"], ["🧑‍⚖️ Petitions", "High Court · 45 days"],
+    ["🔐 Rule", "Supplement the law · never supplant it"], ["🚩 Parties", "Registration is not recognition"],
+    ["🧠 Local bodies", "State Election Commission"]
+  ];
+  const reelHTML = reelFacts.map(([a, b]) => `<span><b>${esc(a)}</b> · ${esc(b)}</span>`).join("");
+  $("#reelTrack").innerHTML = `<div style="display:flex">${reelHTML}</div><div style="display:flex" aria-hidden="true">${reelHTML}</div>`;
+
+  /* ---------- ARTICLE SEARCH ---------- */
+  const dossiers = $$("details.dos");
+  const dossierIndex = new Map(dossiers.map(d => [d, d.textContent.toLowerCase().replace(/\s+/g, " ")]));
+  function filterArticles() {
+    const terms = $("#search").value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let n = 0;
+    dossiers.forEach(d => { const ok = terms.every(t => dossierIndex.get(d).includes(t)); d.classList.toggle("hide", !ok); if (ok) n++; });
+    $("#searchStatus").textContent = `${n} of ${dossiers.length} article dossiers shown.`;
+    $("#noRes").classList.toggle("show", n === 0);
+  }
+  $("#search").addEventListener("input", filterArticles);
+  $("#clearSearch").addEventListener("click", () => { $("#search").value = ""; filterArticles(); $("#search").focus(); });
+  $("#openAll").addEventListener("click", () => dossiers.filter(d => !d.classList.contains("hide")).forEach(d => { d.open = true; }));
+  $("#foldAll").addEventListener("click", () => dossiers.filter(d => !d.classList.contains("hide")).forEach(d => { d.open = false; }));
+  filterArticles();
+
+  /* ---------- QUALIFYING-DATE NAVIGATOR ---------- */
+  const fmtDate = d => new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(d);
+  function calcAge() {
+    const v = $("#dob").value, out = $("#ageOut");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) { out.textContent = "Enter a valid date of birth."; return; }
+    const [y, m, d] = v.split("-").map(Number);
+    const birth = new Date(Date.UTC(y, m - 1, d));
+    if (y < 1900 || birth.getUTCFullYear() !== y || birth.getUTCMonth() !== m - 1 || birth.getUTCDate() !== d || birth > new Date()) {
+      out.textContent = "Enter a valid past date of birth from 1900 onwards."; return;
+    }
+    if (m === 2 && d === 29) { out.innerHTML = "📅 <b>Leap-day birth:</b> ask the ERO for the applicable age-computation guidance; this simplified tool does not decide it."; return; }
+    const eighteenth = new Date(Date.UTC(y + 18, m - 1, d));
+    const dates = [0, 3, 6, 9].map(q => new Date(Date.UTC(y + 18, q, 1)));
+    const qualifying = dates.find(x => x >= eighteenth) || new Date(Date.UTC(y + 19, 0, 1));
+    out.innerHTML = `🎂 Turns 18: <b>${fmtDate(eighteenth)}</b>.<br>📅 First ordinary qualifying date: <b>${fmtDate(qualifying)}</b>.<br><span class="small">Meeting the age test does not itself place a name on the roll.</span>`;
+  }
+  $("#dob").addEventListener("input", calcAge); calcAge();
+
+  /* ---------- REMOVAL-MAJORITY SIMULATOR ---------- */
+  function calcMajority() {
+    const total = Number($("#totalHouse").value), voting = Number($("#votingHouse").value), out = $("#majorityOut");
+    if (!Number.isInteger(total) || total < 1 || total > 1000 || !Number.isInteger(voting) || voting < 1 || voting > total) {
+      out.textContent = "Use whole numbers: total 1–1,000; present and voting 1–total."; return;
+    }
+    const whole = Math.floor(total / 2) + 1, twoThirds = Math.ceil(2 * voting / 3), need = Math.max(whole, twoThirds);
+    out.innerHTML = `🏛️ Majority of total membership: <b>${whole}</b>.<br>🗳️ Two-thirds of present and voting: <b>${twoThirds}</b>.<br>✅ Minimum affirmative votes: <b>${need}</b>.<br>` +
+      (need > voting ? "⚠️ Passage is impossible with this few members voting." : "Both numerical tests can be met with this voting strength.");
+  }
+  ["totalHouse", "votingHouse"].forEach(id => document.getElementById(id).addEventListener("input", calcMajority)); calcMajority();
+
+  /* ---------- DEPOSIT THRESHOLD ---------- */
+  function calcDeposit() {
+    const total = Number($("#validVotes").value), cand = Number($("#candidateVotes").value), out = $("#depositOut");
+    if (!Number.isInteger(total) || total < 1 || total > 100000000 || !Number.isInteger(cand) || cand < 0 || cand > total) {
+      out.textContent = "Enter whole numbers; candidate votes cannot exceed the denominator."; return;
+    }
+    const minimum = Math.floor(total / 6) + 1, retained = cand * 6 > total;
+    out.innerHTML = `🪙 Minimum votes needed: <b>${minimum.toLocaleString("en-IN")}</b>.<br>📊 Candidate’s share: <b>${(cand / total * 100).toFixed(3)}%</b>.<br>` +
+      (retained ? "✅ The candidate clears the more-than-one-sixth threshold." : "⚠️ The candidate does not clear the more-than-one-sixth threshold.") +
+      `<span class="formula-line">Test: candidate votes × 6 &gt; denominator. Exactly one-sixth fails.</span>`;
+  }
+  ["validVotes", "candidateVotes"].forEach(id => document.getElementById(id).addEventListener("input", calcDeposit)); calcDeposit();
+
+  /* ---------- ELECTION-PETITION DEADLINE ---------- */
+  function calcPetition() {
+    const v = $("#declDate").value, out = $("#petitionOut");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) { out.textContent = "Choose the date of election of the returned candidate."; return; }
+    const [y, m, d] = v.split("-").map(Number);
+    const start = new Date(Date.UTC(y, m - 1, d));
+    if (start.getUTCFullYear() !== y || start.getUTCMonth() !== m - 1 || start.getUTCDate() !== d) { out.textContent = "Choose a valid date."; return; }
+    const last = new Date(start.getTime() + 45 * 86400000);
+    out.innerHTML = `📅 Last day to present the petition: <b>${fmtDate(last)}</b>.<br>Forum: <b>High Court</b> (s.80A) · limit: <b>45 days</b> (s.81).<span class="formula-line">Counting starts the day after the date of election.</span>`;
+  }
+  $("#declDate").addEventListener("input", calcPetition); calcPetition();
+
+  /* ---------- SCENARIO THEATRE ---------- */
+  const scenarios = [
+    ["🏘️ A municipal election is delayed. Is Article 324 the primary source of election supervision?", "No. Municipal elections fall under the State Election Commission (Arts. 243ZA and 243K). Do not confuse the SEC with the State’s Chief Electoral Officer."],
+    ["🆔 A person has an EPIC but no entry in the current constituency roll. Can the card alone secure a vote?", "No. EPIC identifies the person; entitlement to vote requires an entry in the applicable roll and compliance with the law."],
+    ["⚖️ A Lok Sabha result is challenged. Does the petition begin in the Supreme Court?", "No. Parliamentary and State-legislature election petitions begin in the High Court under s.80A. Presidential and Vice-Presidential disputes go to the Supreme Court under Art. 71."],
+    ["🏛️ The CEC disagrees with both Election Commissioners. Does chairmanship give a veto?", "No. The Commission functions collectively; the majority prevails if unanimity is unavailable."],
+    ["📜 An ECI instruction conflicts with an express statutory rule. Which governs?", "The statute or valid statutory rule. Under A. C. Jose, Art. 324 supplements gaps; it does not override the law."],
+    ["🚩 A registered party has never won a seat. Must it automatically be deregistered?", "No. Registration and recognition are distinct, and the ECI has no general power to cancel registration for poor performance."],
+    ["🗳️ NOTA receives more selections than every candidate. Is a fresh Lok Sabha election automatic?", "No. The candidate with the highest candidate-vote total wins."],
+    ["🪙 An unsuccessful candidate gets exactly one-sixth of the relevant valid votes. Is the deposit retained?", "No. The candidate needs more than one-sixth; equality is insufficient."],
+    ["👩 A women’s-reservation amendment has been enacted. Does that alone reserve seats at the next election?", "No. The census and delimitation trigger in the constitutional framework must be satisfied. Enactment and implementation differ."],
+    ["🧑‍⚖️ Can every mid-election court order be rejected by citing Article 329?", "No. Ashok Kumar distinguishes obstructive intervention from limited orders that facilitate lawful completion."],
+    ["📅 Someone turns 18 on 10 May. Must registration wait until the next January?", "No. The quarterly framework includes 1 July. Processing and all other registration conditions still apply."],
+    ["🔐 Does ETPBS mean ordinary online voting exists?", "No. It electronically transmits postal-ballot material for legally eligible service electors; it is not a general internet-voting entitlement."]
+  ];
+  $("#scenarioList").innerHTML = scenarios.map(([q, a]) => `<details class="scn"><summary>${esc(q)}</summary><p><b>✅ Answer:</b> ${esc(a)}</p></details>`).join("");
+
+  /* ---------- RAPID RECALL ---------- */
+  const questions = [
+    ["What does Article 324(1) cover besides conducting elections?", "Superintendence, direction and control of the preparation of electoral rolls."],
+    ["Does the Constitution prescribe exactly three ECI members?", "No. It provides for the CEC and such number of other ECs as the President fixes from time to time."],
+    ["What are the six clause cues for Article 324?", "Vest · Composition · Chair · Regional Commissioners · Safeguards · Staff."],
+    ["How is the CEC removed?", "In like manner and on like grounds as a Supreme Court judge: proved misbehaviour or incapacity, an address of each House by the special majority, and the President’s order."],
+    ["How are other ECs removed?", "Only on the CEC’s recommendation (Art. 324(5))."],
+    ["What are Article 325’s four grounds?", "Religion, race, caste and sex. Exclusion or a special-roll claim on those grounds alone is prohibited."],
+    ["Which elections rest on adult suffrage under Article 326?", "Lok Sabha and State Legislative Assembly elections."],
+    ["Which amendment lowered the voting age?", "The 61st Amendment, 1988; it took effect in 1989."],
+    ["What are the four qualifying dates?", "1 January, 1 April, 1 July and 1 October."],
+    ["Does Article 328 depend on Article 254?", "No. Article 328 itself limits the State to matters for which Parliament has not made provision."],
+    ["What are the two limbs of Article 329?", "329(a): the shield for delimitation and seat-allotment laws. 329(b): the election-petition route."],
+    ["Where are parliamentary election petitions tried?", "In the High Court under s.80A of the RPA 1951."],
+    ["What are the petition and appeal periods?", "Petition: 45 days (s.81). Appeal to the Supreme Court: ordinarily 30 days (s.116A)."],
+    ["What did Anoop Baranwal create, and how does the 2023 Act differ?", "An interim PM–LoP–CJI committee pending legislation. The 2023 Act’s Selection Committee is the PM, a Union Cabinet Minister nominated by the PM, and the Leader of Opposition in the Lok Sabha (or the largest opposition party’s leader)."],
+    ["What does section 29A concern?", "Registration of political parties."],
+    ["How do symbol disputes differ from defection?", "The ECI decides rival-group disputes under Para 15 of the Symbols Order; the Speaker or Chairman decides Tenth Schedule disqualification, subject to judicial review."],
+    ["What does section 10A permit?", "Three-year disqualification for failure to lodge an election-expense account without good reason."],
+    ["Does a pending case automatically disqualify every candidate?", "No. Mere pendency is not a universal statutory disqualification; apply the current s.8 categories."],
+    ["What happened to electoral bonds?", "A Constitution Bench struck down the scheme on 15 February 2024."],
+    ["Does NOTA force a fresh parliamentary election?", "No."],
+    ["Who normally draws constituency boundaries?", "The Delimitation Commission. The ECI participates but is not the sole general boundary-maker."],
+    ["What does the post-2026 freeze refer to?", "Publication of the figures of the first census taken after 2026, not an automatic redraw on 1 January 2026."],
+    ["What is the central Article 324 limitation?", "The Commission can fill legal gaps but cannot override the Constitution, statutes or valid statutory rules."],
+    ["What are the three dimensions of election-technology trust?", "Secure design, disciplined procedure and meaningful verification."]
+  ];
+  $("#quizList").innerHTML = questions.map(([q, a], i) => `<details class="quiz"><summary>${i + 1}. ${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+  $("#showAnswers").addEventListener("click", () => $$("#quizList details").forEach(d => { d.open = true; }));
+  $("#hideAnswers").addEventListener("click", () => $$("#quizList details").forEach(d => { d.open = false; }));
+
+  /* ---------- MASTERY TRACKER ---------- */
+  const items = [
+    "I can explain Articles 324–329 in sequence.", "I can distinguish the ECI, SEC, CEO and Delimitation Commission.",
+    "I know the six clauses of Article 324.", "I can explain CEC and EC removal safeguards precisely.",
+    "I can separate Baranwal’s interim panel from the 2023 Act.", "I know the tenure and combined EC–CEC term rule.",
+    "I can distinguish a common roll from reserved seats.", "I know the four qualifying dates and registration conditions.",
+    "I can distinguish voter and candidate disqualifications.", "I can explain Article 328 without misusing Article 254.",
+    "I know the High Court election-petition route and limitation.", "I can explain statutory and residual ECI powers.",
+    "I can distinguish defection from party-symbol disputes.", "I know national- and State-party recognition routes.",
+    "I can explain political-finance reporting and candidate accounts.", "I understand the 2024 electoral-bonds holding.",
+    "I can explain nomination, scrutiny, withdrawal and poll stages.", "I can explain NOTA and deposit forfeiture correctly.",
+    "I can distinguish EVM, VVPAT, ETPBS and online voting.", "I know the principal election-law cases and their limits.",
+    "I can explain the census–delimitation trigger accurately.", "I can distinguish enacted women’s reservation from implementation.",
+    "I can evaluate reform proposals without calling them law.", "I know which facts need a fresh official-source check."
+  ];
+  $("#masteryList").innerHTML = items.map((t, i) => `<label class="ck"><input type="checkbox" data-mastery="${i}"><span>${esc(t)}</span></label>`).join("");
+  const boxes = $$("#masteryList input"), storeKey = "eci-indelible-ink-mastery-v1";
+  try { const s = JSON.parse(localStorage.getItem(storeKey) || "[]"); if (Array.isArray(s)) boxes.forEach((b, i) => { b.checked = s[i] === true; }); } catch (_) {}
+  function updateMastery() {
+    const done = boxes.filter(b => b.checked).length, pct = Math.round(done / boxes.length * 100);
+    $("#masteryBar").style.width = pct + "%";
+    $("#masteryProgress").setAttribute("aria-valuenow", String(pct));
+    $("#masteryStatus").textContent = `${done} / ${boxes.length} mastered · ${pct}%` + (done === boxes.length ? " · 🏆 All green lights earned!" : "");
+    $("#masteryProgress").classList.toggle("mastery-complete", done === boxes.length);
+    try { localStorage.setItem(storeKey, JSON.stringify(boxes.map(b => b.checked))); } catch (_) {}
+  }
+  boxes.forEach(b => b.addEventListener("change", updateMastery));
+  $("#resetMastery").addEventListener("click", () => { boxes.forEach(b => { b.checked = false; }); updateMastery(); });
+  updateMastery();
+
+  /* ---------- AUTEUR BALLOT STAMP ---------- */
+  const auteur = $("#auteur"); let votes = 1;
+  auteur.addEventListener("click", e => {
+    votes = votes >= 999 ? 1 : votes + 1;
+    $("#votes").textContent = String(votes).padStart(3, "0");
+    auteur.classList.remove("stamped"); void auteur.offsetWidth; auteur.classList.add("stamped");
+    if (!animate()) return;
+    const b = auteur.getBoundingClientRect(), sym = ["✦", "🗳️", "✨", "📜", "💜", "⚖️"], col = ["#a28bff", "#ffb766", "#63ebbd", "#7accff"];
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement("span");
+      p.className = "burst"; p.setAttribute("aria-hidden", "true"); p.textContent = sym[i % sym.length]; p.style.color = col[i % col.length];
+      p.style.left = (b.left + b.width / 2) + "px"; p.style.top = (b.top + b.height / 2) + "px";
+      const a = i / 18 * Math.PI * 2, d = 70 + Math.random() * 140;
+      p.style.setProperty("--dx", Math.cos(a) * d + "px"); p.style.setProperty("--dy", Math.sin(a) * d + "px");
+      document.body.append(p); setTimeout(() => p.remove(), 1200);
+    }
+    const ink = document.createElement("span"); ink.className = "ink";
+    ink.style.left = (e.clientX || b.left + b.width / 2) + "px"; ink.style.top = (e.clientY || b.top + b.height / 2) + "px";
+    document.body.append(ink); setTimeout(() => ink.remove(), 900);
+  });
+
+  /* ---------- REVEALS ---------- */
+  if ("IntersectionObserver" in window) {
+    const ob = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); ob.unobserve(en.target); } }), { threshold: 0.01 });
+
+    $$(".reveal").forEach(el => ob.observe(el));
+  } else $$(".reveal").forEach(el => el.classList.add("in"));
+
+  /* ---------- DEEP LINKS ---------- */
+  function revealHash(scroll = true) {
+    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    const target = id ? document.getElementById(id) : null; if (!target) return;
+    const dos = target.closest("details.dos");
+    if (dos && dos.classList.contains("hide")) { $("#search").value = ""; filterArticles(); }
+    for (let p = target; p; p = p.parentElement) if (p.tagName === "DETAILS") p.open = true;
+    const rv = target.closest(".reveal"); if (rv) rv.classList.add("in");
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({ behavior: animate() ? "smooth" : "auto", block: "start" }));
+  }
+  addEventListener("hashchange", () => revealHash());
+  document.addEventListener("click", e => { const a = e.target.closest('a[href^="#"]'); if (a && a.getAttribute("href") === location.hash) { e.preventDefault(); revealHash(); } });
+  if (location.hash) setTimeout(() => revealHash(), 80);
+
+  /* ---------- SCROLL METER + ACTIVE CHAPTER ---------- */
+  const chapters = [$("#opening"), ...$$("main > section[id]")], navLinks = $$("nav a");
+  let pending = false;
+  function updateScroll() {
+    const avail = document.documentElement.scrollHeight - innerHeight;
+    $("#progress").style.width = (avail > 0 ? Math.max(0, Math.min(100, scrollY / avail * 100)) : 0) + "%";
+    $("#toTop").classList.toggle("show", scrollY > 650);
+    let cur = "opening";
+    chapters.forEach(c => { if (c && c.getBoundingClientRect().top <= 170) cur = c.id; });
+    navLinks.forEach(l => {
+      const on = l.getAttribute("href") === "#" + cur;
+      l.classList.toggle("on", on);
+      if (on) l.setAttribute("aria-current", "location"); else l.removeAttribute("aria-current");
+    });
+    pending = false;
+  }
+  addEventListener("scroll", () => { if (!pending) { pending = true; requestAnimationFrame(updateScroll); } }, { passive: true });
+  addEventListener("resize", updateScroll);
+  document.addEventListener("toggle", e => { if (e.target instanceof HTMLDetailsElement) requestAnimationFrame(updateScroll); }, true);
+  $("#toTop").addEventListener("click", () => scrollTo({ top: 0, behavior: animate() ? "smooth" : "auto" }));
+  updateScroll();
+
+  /* ---------- PRINT: EXPAND ALL, THEN RESTORE ---------- */
+  let snap = null, printing = false;
+  addEventListener("beforeprint", () => {
+    if (snap) return; printing = true; syncParticles();
+    snap = { open: $$("details").map(el => ({ el, open: el.open })), vis: $$(".hide,[hidden]").map(el => ({ el, hidden: el.hidden, cls: el.classList.contains("hide") })) };
+
+    $$("details").forEach(el => { el.open = true; });
+    snap.vis.forEach(({ el }) => { el.hidden = false; el.classList.remove("hide"); });
+  });
+  addEventListener("afterprint", () => {
+    if (!snap) return;
+    snap.open.forEach(({ el, open }) => { el.open = open; });
+    snap.vis.forEach(({ el, hidden, cls }) => { el.hidden = hidden; el.classList.toggle("hide", cls); });
+    snap = null; printing = false; syncParticles(); updateScroll();
+  });
+  $("#printBtn").addEventListener("click", () => print());
+
+  /* ---------- FOCUS / PAUSE ---------- */
+  $("#focusBtn").addEventListener("click", () => {
+    const on = document.body.classList.toggle("focus");
+    $("#focusBtn").setAttribute("aria-pressed", String(on));
+    $("#focusBtn").textContent = on ? "✨ Restore cinema" : "🌙 Focus reading";
+    resetMotion(); syncParticles();
+  });
+  $("#pauseBtn").addEventListener("click", () => {
+    paused = !paused; document.body.classList.toggle("paused", paused);
+    $("#pauseBtn").setAttribute("aria-pressed", String(paused));
+    $("#pauseBtn").textContent = paused ? "▶️ Resume effects" : "⏸️ Pause effects";
+    resetMotion(); syncParticles();
+  });
+
+  /* ---------- AMBIENT CONSTELLATION CANVAS ---------- */
+  const canvas = $("#fx"), ctx = canvas.getContext("2d");
+  let W = 0, H = 0, parts = [], raf = 0, last = 0;
+  const particlesOn = () => Boolean(ctx) && animate() && !document.hidden && !printing;
+  function resizeParticles() {
+    W = innerWidth; H = innerHeight;
+    const r = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(W * r); canvas.height = Math.round(H * r);
+    canvas.style.width = W + "px"; canvas.style.height = H + "px";
+    if (!ctx) return;
+    ctx.setTransform(r, 0, 0, r, 0, 0);
+    parts = Array.from({ length: W < 700 ? 22 : 46 }, () => ({
+      x: Math.random() * W, y: Math.random() * H, r: 0.5 + Math.random() * 1.4,
+      vx: (Math.random() - 0.5) * 5, vy: -3 - Math.random() * 8, ph: Math.random() * Math.PI * 2,
+      a: 0.12 + Math.random() * 0.24, hue: [258, 35, 158, 200][Math.floor(Math.random() * 4)]
+    }));
+  }
+  function render(t) {
+    raf = 0; if (!particlesOn()) return;
+    const dt = last ? Math.min((t - last) / 1000, 0.05) : 0; last = t;
+    ctx.clearRect(0, 0, W, H);
+    parts.forEach(p => {
+      p.x += (p.vx + Math.sin(t / 4500 + p.ph) * 3) * dt; p.y += p.vy * dt;
+      if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+      if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10;
+      ctx.beginPath(); ctx.fillStyle = `hsla(${p.hue},85%,77%,${p.a * (0.7 + Math.sin(t / 1800 + p.ph) * 0.3)})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+    });
+    if (W >= 900) {
+      for (let i = 0; i < parts.length; i++) for (let j = i + 1; j < parts.length; j++) {
+        const a = parts[i], b = parts[j], dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy;
+        if (d2 < 10000) {
+          ctx.strokeStyle = `rgba(162,139,255,${(1 - Math.sqrt(d2) / 100) * 0.035})`; ctx.lineWidth = 0.6;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+    }
+    raf = requestAnimationFrame(render);
+  }
+  function syncParticles() {
+    cancelAnimationFrame(raf); raf = 0; last = 0;
+    if (ctx) ctx.clearRect(0, 0, W, H);
+    if (particlesOn()) raf = requestAnimationFrame(render);
+  }
+  addEventListener("resize", () => { resizeParticles(); syncParticles(); });
+  document.addEventListener("visibilitychange", syncParticles);
+  const onMotion = () => { resetMotion(); syncParticles(); };
+  if (motion.addEventListener) motion.addEventListener("change", onMotion); else if (motion.addListener) motion.addListener(onMotion);
+  resizeParticles(); syncParticles();
+
+  $("#localDate").textContent = "Opened on " + new Intl.DateTimeFormat("en-IN", { day: "numeric", month: "long", year: "numeric" }).format(new Date()) + " · Display date only; not a legal verification timestamp";
+})();
+</script>
+
+</body>
+</html>
