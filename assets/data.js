@@ -339,7 +339,7 @@ const archiveEntries = [
     description: "LEGISLATIVE · ADMINISTRATIVE · FINANCIAL - One Union Many Governments · A shared constitutional horizon",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "CENTRE–STATE RELATIONS.html",
+    file: "CENTRE-STATE RELATIONS.html",
     icon: "🎋",
     image: "",
     featured: true
