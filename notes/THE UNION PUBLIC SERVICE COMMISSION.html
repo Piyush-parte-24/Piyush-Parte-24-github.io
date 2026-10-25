@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050917">
+<meta name="description" content="The Sentinel of Merit: a cinematic, accuracy-checked study atlas of the Union Public Service Commission, State Public Service Commissions and MPPSC under Articles 315–323 of the Constitution of India.">
+<title>The Union Public Service Commission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Tamil:wght@700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@property --w{syntax:'<number>';inherits:false;initial-value:0}
+@property --spin{syntax:'<angle>';inherits:false;initial-value:0deg}
+:root{
+  --bg:#050917;--ink:#d3dbee;--mut:#b4c0d8;--dim:#8a98b8;--head:#fff4de;
+  --line:rgba(190,208,240,.15);--glass:rgba(14,22,44,.78);
+  --saf:#ffb877;--jade:#74e6c4;--sap:#86b6ff;--ame:#c8aaff;--ros:#ff9fb7;--gld:#f4d68c;--cya:#7fe3ee;--lim:#cbe58f;
+  --accent:var(--gld);--r:22px
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:15.5px/1.85 'Outfit',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--saf);color:#1a1005}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--saf),var(--jade),var(--sap));border-radius:9px}
+a{color:var(--sap)}a:hover{color:var(--gld)}
+b,strong{color:var(--head);font-weight:700}
+em,i{color:#e3dbf0}
+ul,ol{padding-left:22px}li{margin:6px 0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gld);outline-offset:4px}
+[hidden]{display:none!important}
+.small{font-size:.78rem;color:var(--dim)}
+.skip{position:fixed;top:8px;left:12px;z-index:1000;transform:translateY(-180%);background:var(--gld);color:#150e04;padding:10px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{transform:none}
+
+/* ===== CINEMATIC LAYERS ===== */
+.sky{position:fixed;inset:0;z-index:-7;pointer-events:none;background:
+ radial-gradient(ellipse 60% 50% at 8% 6%,rgba(116,230,196,.15),transparent 62%),
+ radial-gradient(ellipse 55% 50% at 94% 12%,rgba(200,170,255,.13),transparent 62%),
+ radial-gradient(ellipse 70% 55% at 50% 104%,rgba(255,184,119,.14),transparent 66%),
+ linear-gradient(170deg,#040714,#0a1130 55%,#0e0a1c)}
+.chakra{position:fixed;left:50%;top:50%;width:min(130vmin,1100px);aspect-ratio:1;translate:-50% -50%;z-index:-6;pointer-events:none;opacity:.07;animation:turn 240s linear infinite}
+.chakra svg{width:100%;height:100%}
+@keyframes turn{to{rotate:360deg}}
+#stars{position:fixed;inset:0;z-index:-5;pointer-events:none}
+.leak{position:fixed;inset:-20%;z-index:-4;pointer-events:none;background:conic-gradient(from var(--spin) at 50% 50%,transparent 0 30%,rgba(255,184,119,.06) 38%,transparent 46% 70%,rgba(116,230,196,.05) 78%,transparent 86%);filter:blur(50px);animation:spinLeak 70s linear infinite}
+@keyframes spinLeak{to{--spin:360deg}}
+.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vig{position:fixed;inset:0;z-index:80;pointer-events:none;box-shadow:inset 0 0 170px rgba(0,0,0,.66)}
+.bar{position:fixed;top:0;left:0;height:4px;width:0;z-index:300;background:linear-gradient(90deg,var(--saf),var(--gld),var(--jade),var(--sap),var(--ame));box-shadow:0 0 14px var(--saf)}
+
+/* intro (never blocks input) */
+.intro{position:fixed;inset:0;z-index:600;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#0c1330,#020410 75%);pointer-events:none;animation:introOut 4s ease forwards}
+.intro .c{font:500 .7rem 'JetBrains Mono',monospace;letter-spacing:8px;color:var(--saf)}
+.intro h2{font:700 clamp(1.5rem,5.5vw,3.6rem)/1.15 'Cinzel',serif;letter-spacing:.14em;margin:14px 0;background:linear-gradient(90deg,var(--saf),var(--gld),var(--jade));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro p{color:var(--mut);font-size:.85rem;letter-spacing:3px}
+@keyframes introOut{0%,78%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.lb::before,.lb::after{content:'';position:fixed;left:0;right:0;height:10vh;background:#000;z-index:590;pointer-events:none;animation:lbOut 1.2s 3s cubic-bezier(.7,0,.2,1) forwards}
+.lb::before{top:0}.lb::after{bottom:0}
+@keyframes lbOut{to{height:0}}
+
+/* ===== NAV ===== */
+nav{position:sticky;top:0;z-index:100;display:flex;gap:6px;overflow-x:auto;white-space:nowrap;padding:11px 16px;background:rgba(5,9,23,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,184,119,.2);scrollbar-width:thin}
+nav .brand{font:700 .75rem 'Cinzel',serif;letter-spacing:3px;color:var(--saf);padding:7px 12px 7px 0}
+nav a{flex:0 0 auto;color:var(--mut);text-decoration:none;font-size:.74rem;font-weight:600;padding:7px 13px;border-radius:20px;border:1px solid transparent;transition:.3s}
+nav a:hover,nav a[aria-current=location]{color:#fff;background:rgba(255,184,119,.1);border-color:rgba(255,184,119,.4);transform:translateY(-2px);box-shadow:0 0 16px rgba(255,184,119,.18)}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:84px 18px 56px;position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle 340px at var(--sx,50%) var(--sy,40%),rgba(255,184,119,.13),transparent 70%);transition:background .15s}
+.rings{position:absolute;left:50%;top:46%;width:min(92vmin,860px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:1px solid rgba(255,184,119,.18);z-index:-1;pointer-events:none}
+.rings::before,.rings::after{content:'';position:absolute;border-radius:50%;border:1px dashed rgba(116,230,196,.16)}
+.rings::before{inset:9%;animation:turn 120s linear infinite reverse}
+.rings::after{inset:20%;border-style:solid;border-color:rgba(134,182,255,.14);animation:turn 160s linear infinite}
+.hero-in{position:relative;max-width:1150px;width:100%}
+.eyebrow{display:inline-block;font:500 .7rem 'JetBrains Mono',monospace;letter-spacing:5px;text-transform:uppercase;color:var(--jade);border:1px solid rgba(116,230,196,.3);padding:8px 18px;border-radius:30px;background:rgba(116,230,196,.05)}
+.hero h1{margin:22px 0 8px;font-family:'Cinzel',serif;font-weight:800;line-height:.98;perspective:900px}
+.hero h1 .split{display:block}
+.t1{font-size:clamp(3.6rem,15vw,11.5rem);letter-spacing:.06em}
+.t2{font-size:clamp(2rem,8.4vw,6.4rem);letter-spacing:.05em}
+.t3{font-size:clamp(2rem,8.4vw,6.4rem);letter-spacing:.05em}
+.split .word{display:inline-block;white-space:nowrap}
+.split .sp{display:inline-block;width:.28em}
+.split .ch{display:inline-block;transform-origin:50% 85%;
+ background-image:linear-gradient(180deg,#fffaf0 0%,hsl(calc(34 + var(--i)*6),92%,76%) 52%,hsl(calc(190 + var(--i)*4),80%,66%) 100%);
+ -webkit-background-clip:text;background-clip:text;color:transparent;
+ animation:wave 5s ease-in-out infinite;animation-delay:calc(var(--i)*-.22s);
+ transform:translateY(calc((var(--k,0) + var(--w))*-24px)) scale(calc(1 + var(--k,0)*.3)) rotateX(calc(var(--k,0)*-30deg));
+ filter:drop-shadow(0 0 calc(var(--k,0)*18px) hsla(calc(28 + var(--i)*9),100%,70%,.95));
+ transition:transform .16s ease-out,filter .2s}
+@keyframes wave{0%,100%{--w:0}50%{--w:.1}}
+.tag-rot{height:1.7em;margin:8px 0 2px;font:500 .8rem 'JetBrains Mono',monospace;letter-spacing:.5em;color:var(--saf);text-transform:uppercase}
+.tag-rot span{display:inline-block;animation:fadeWord .6s ease both}
+@keyframes fadeWord{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.beam{width:min(620px,78%);height:2px;margin:12px auto 0;background:linear-gradient(90deg,transparent,var(--saf),var(--gld),var(--jade),transparent);box-shadow:0 0 18px rgba(255,184,119,.5)}
+.sub1{font:italic 500 clamp(1.05rem,2.5vw,1.55rem) 'Outfit',serif;color:#ecdcc3;margin:20px auto 0;max-width:820px}
+.hero-desc{max-width:780px;margin:12px auto 0;color:var(--mut);font-size:.93rem}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:24px 0 6px}
+.chips a{text-decoration:none;color:var(--ink);font-size:.78rem;padding:8px 15px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.04);transition:.3s}
+.chips a:hover{transform:translateY(-5px);border-color:var(--saf);box-shadow:0 10px 26px rgba(255,184,119,.15)}
+.stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:22px}
+.stat{min-width:130px;padding:13px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.045);backdrop-filter:blur(8px);transition:.35s}
+.stat:hover{transform:translateY(-6px);border-color:var(--jade)}
+.stat b{display:block;font:700 1.9rem/1.1 'Cinzel',serif;color:var(--saf)}
+.stat span{font-size:.68rem;color:var(--dim);letter-spacing:1px}
+.ctrls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.btn{padding:9px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:.78rem;transition:.3s}
+.btn:hover,.btn[aria-pressed=true]{border-color:var(--saf);background:rgba(255,184,119,.12);transform:translateY(-2px)}
+
+/* ===== AUTEUR HOLO SEAL ===== */
+.auteur{position:relative;display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:center;text-align:left;width:min(520px,92vw);margin:30px auto 8px;padding:20px 24px;border-radius:20px;cursor:pointer;overflow:hidden;isolation:isolate;
+ background:linear-gradient(135deg,rgba(255,184,119,.1),rgba(8,12,30,.94) 50%,rgba(116,230,196,.08));
+ border:1px solid rgba(244,214,140,.45);box-shadow:0 20px 56px rgba(0,0,0,.5);
+ transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .4s,border-color .4s}
+.auteur::before{content:'';position:absolute;inset:-60%;z-index:-2;background:conic-gradient(from var(--spin),transparent 0 40%,rgba(255,184,119,.35) 48%,rgba(116,230,196,.3) 52%,transparent 60%);animation:spinLeak 9s linear infinite}
+.auteur::after{content:'';position:absolute;inset:1.5px;z-index:-1;border-radius:19px;background:linear-gradient(135deg,#0b1230,#070b1d)}
+.auteur .gloss{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle 160px at var(--gx,30%) var(--gy,0%),rgba(255,255,255,.1),transparent 70%)}
+.auteur:hover{border-color:var(--gld);box-shadow:0 26px 70px rgba(255,184,119,.22)}
+.seal{position:relative;width:104px;height:104px;display:grid;place-items:center;z-index:1}
+.seal svg{position:absolute;inset:0;width:100%;height:100%;animation:turn 26s linear infinite}
+.seal text{fill:var(--gld);font:600 8.4px 'JetBrains Mono',monospace;letter-spacing:.5px}
+.seal span{font:700 1.9rem 'Cinzel',serif;color:var(--gld);width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(244,214,140,.5);background:radial-gradient(circle,rgba(244,214,140,.15),transparent 70%)}
+.a-body{position:relative;z-index:1}
+.slate{height:15px;border-radius:4px;margin-bottom:9px;background:repeating-linear-gradient(115deg,#f6efe2 0 16px,#141a33 16px 32px);transform-origin:left bottom;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.auteur:hover .slate{transform:rotate(-7deg)}
+.auteur.clap .slate{animation:clapDown .4s ease-in}
+@keyframes clapDown{0%{transform:rotate(-16deg)}70%{transform:rotate(1.5deg)}100%{transform:rotate(0)}}
+.a-body small{display:block;font:500 .58rem 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--cya)}
+.a-name{font:800 clamp(1.7rem,5.2vw,2.5rem)/1.1 'Cinzel',serif;letter-spacing:.1em;margin:3px 0 7px}
+.a-grid{display:grid;grid-template-columns:repeat(3,auto);gap:4px 14px;justify-content:space-between;border-top:1px dashed rgba(255,255,255,.2);padding-top:8px;font:500 .55rem 'JetBrains Mono',monospace;letter-spacing:2px;color:var(--dim)}
+.a-grid b{display:block;color:var(--gld);font-size:.7rem;letter-spacing:.4px}
+.a-cta{margin-top:8px;font:500 .62rem 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--saf)}
+.toast{position:fixed;left:50%;bottom:90px;translate:-50% 0;z-index:700;padding:12px 22px;border-radius:14px;background:rgba(10,15,36,.95);border:1px solid var(--gld);color:var(--head);font:500 .85rem 'JetBrains Mono',monospace;box-shadow:0 14px 40px rgba(0,0,0,.5);animation:toast 2.4s ease forwards;pointer-events:none}
+@keyframes toast{0%{opacity:0;transform:translateY(14px)}12%,80%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-8px)}}
+.burst{position:fixed;z-index:700;pointer-events:none;font-size:1.3rem;animation:bst 1.1s ease-out forwards}
+@keyframes bst{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.2) rotate(180deg);opacity:0}}
+
+/* ===== REEL ===== */
+.reel{overflow:hidden;border-block:1px dashed var(--line);background:rgba(255,255,255,.02);padding:10px 0}
+.reel-t{display:flex;width:max-content;animation:tick 80s linear infinite}
+.reel:hover .reel-t{animation-play-state:paused}
+.reel-t span{font:500 .76rem 'JetBrains Mono',monospace;color:var(--mut);padding:0 26px;white-space:nowrap}
+.reel-t span b{color:var(--saf)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ===== CONTENT SYSTEM ===== */
+.chapter{padding:90px 6vw;position:relative;isolation:isolate;overflow:hidden;border-top:1px solid rgba(190,208,240,.06)}
+.chapter::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 60% 40% at 6% 0%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%)}
+.chapter[data-scene]::before{content:attr(data-scene);position:absolute;right:3vw;top:24px;z-index:-1;font:700 clamp(5rem,15vw,12rem)/1 'Cinzel',serif;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--accent) 24%,transparent);opacity:.5;pointer-events:none}
+.wrap{max-width:1240px;margin:auto}
+.kicker{display:inline-block;font:500 .68rem 'JetBrains Mono',monospace;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:6px 14px;border-radius:30px;margin-bottom:16px}
+.title{font:700 clamp(1.8rem,4.2vw,3.1rem)/1.18 'Cinzel',serif;color:var(--head);max-width:1000px}
+.title span{color:var(--accent)}
+.lede{max-width:960px;margin-top:14px;color:var(--mut);font-size:1rem}
+.sub{font:600 1.3rem 'Cinzel',serif;color:var(--accent);margin:36px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:24px 0}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{position:relative;overflow:hidden;padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.card::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(circle 220px at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%)}
+.card:hover{transform:translateY(-7px);border-color:color-mix(in srgb,var(--accent) 55%,transparent);box-shadow:0 20px 46px rgba(0,0,0,.45),0 0 24px color-mix(in srgb,var(--accent) 18%,transparent)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font:700 1.08rem 'Cinzel',serif;color:var(--accent);margin-bottom:9px}
+.card p,.card li{color:var(--mut);font-size:.9rem}.card p+p{margin-top:8px}
+.ic{font-size:1.7rem;display:block;margin-bottom:10px}
+.big{font:800 2.6rem/1 'Cinzel',serif;color:var(--accent);display:block;margin-bottom:6px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.pill{padding:5px 12px;border:1px solid var(--accent);border-radius:30px;font-size:.76rem;color:var(--head);background:rgba(255,255,255,.04)}
+.pill b{color:var(--accent)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:28px 0}
+.node{flex:1;min-width:150px;max-width:270px;padding:14px 16px;text-align:center;font-size:.82rem;color:var(--mut);border:1px solid var(--line);border-radius:15px;background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.015));box-shadow:0 6px 18px rgba(0,0,0,.3);transition:.35s}
+.node b{display:block;color:var(--accent);font-size:.9rem;margin-bottom:3px}
+.node:hover{transform:translateY(-7px) scale(1.04);border-color:var(--accent);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.arrow{font-size:1.4rem;color:var(--accent);animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{50%{transform:translateX(5px);opacity:.5}}
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 14px 14px 0;padding:15px 21px;margin:20px 0;font-size:.9rem;color:var(--mut);transition:.3s}
+.callout:hover{transform:translateX(6px)}
+.callout b{color:var(--accent)}
+.trap{--accent:var(--ros);border:1px solid rgba(255,159,183,.32);border-left:4px solid var(--ros);border-radius:0 15px 15px 0;padding:15px 21px;margin:20px 0;font-size:.9rem;color:#fbdfe6;background:linear-gradient(135deg,rgba(255,159,183,.1),rgba(255,184,119,.04))}
+.trap b{color:#ffb5c6}
+.mnemonic{margin:20px 0;padding:19px 22px;border:1px dashed var(--accent);border-radius:16px;background:linear-gradient(135deg,rgba(255,184,119,.08),rgba(134,182,255,.05));font:.82rem/1.95 'JetBrains Mono',monospace;color:#fff0d6;transition:.35s}
+.mnemonic:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.4)}
+.mnemonic b{color:var(--gld)}
+.mnemonic .lab{display:block;font-size:.62rem;letter-spacing:2px;color:var(--accent);margin-bottom:5px;text-transform:uppercase}
+.quote{margin:30px 0;padding:22px 28px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.06),transparent);font:italic 500 1.12rem/1.8 'Outfit',serif;color:#fff3df}
+.quote small{display:block;margin-top:8px;font-size:.72rem;color:var(--dim);font-style:normal}
+.tw{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:16px;background:rgba(10,16,36,.7)}
+table{width:100%;min-width:660px;border-collapse:collapse;font-size:.84rem}
+caption{text-align:left;padding:14px 18px;font-weight:700;color:var(--head)}
+th,td{padding:12px 16px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.07)}
+th{background:rgba(255,255,255,.06);color:var(--accent);font:600 .64rem 'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase}
+td{color:var(--mut)}td:first-child{color:var(--head);font-weight:600}
+tr:last-child td{border-bottom:0}tr:hover td{background:rgba(255,255,255,.04);color:#fff}
+.timeline{position:relative;margin:30px 0;padding-left:36px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:3px;border-radius:4px;background:linear-gradient(var(--sap),var(--jade),var(--saf),var(--ros));background-size:100% 300%;animation:fl 8s linear infinite}
+@keyframes fl{to{background-position:0 100%}}
+.ti{position:relative;margin-bottom:24px;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.04);transition:.35s}
+.ti::before{content:'';position:absolute;left:-36px;top:20px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 12px var(--accent)}
+.ti:hover{transform:translateX(9px);border-color:var(--accent)}
+.ti .d{font:600 .78rem 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:4px}
+.ti p{font-size:.9rem;color:var(--mut)}
+
+/* dossiers */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(10,16,36,.85);margin:22px 0}
+.tools input[type=search]{flex:1;min-width:220px;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:#091126;color:var(--ink);font:inherit}
+.tools .qs{flex-basis:100%;font-size:.76rem;color:var(--dim)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.jump a{font:600 .78rem 'JetBrains Mono',monospace;text-decoration:none;color:var(--c,var(--gld));border:1px solid var(--line);padding:8px 14px;border-radius:10px;background:rgba(255,255,255,.035);transition:.3s}
+.jump a:hover{transform:translateY(-4px);border-color:var(--c,var(--gld))}
+details.dos{margin:18px 0;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:20px;background:linear-gradient(150deg,rgba(20,30,56,.92),rgba(9,14,32,.95));overflow:hidden}
+details.dos:hover{box-shadow:0 16px 44px rgba(0,0,0,.4),0 0 24px color-mix(in srgb,var(--accent) 14%,transparent)}
+details.dos>summary{list-style:none;display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer}
+details.dos>summary::-webkit-details-marker{display:none}
+details.dos>summary::after{content:'+';margin-left:auto;font-size:1.8rem;color:var(--accent)}
+details.dos[open]>summary::after{content:'−'}
+details.dos[open]>summary{border-bottom:1px solid var(--line)}
+.anum{min-width:84px;padding-right:16px;border-right:1px solid var(--line);font:800 2.2rem/1 'Cinzel',serif;color:var(--accent)}
+.anum small{display:block;font:500 .5rem 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--dim)}
+.at b{display:block;font:700 1.12rem 'Cinzel',serif;color:var(--head)}
+.at small{font-size:.72rem;color:var(--dim)}
+.dbody{padding:6px 26px 28px}
+.dbody>p{margin-top:14px;color:var(--mut)}
+.essence{margin:20px 0;padding:18px 22px;border-radius:15px;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);background:color-mix(in srgb,var(--accent) 5%,transparent)}
+.essence .lab{display:block;font:600 .6rem 'JetBrains Mono',monospace;letter-spacing:2px;color:var(--accent);margin-bottom:6px}
+.essence p{font:italic 500 1.12rem/1.6 'Outfit',serif;color:#f1e9d6}
+.nores{display:none;text-align:center;padding:22px;border:1px dashed var(--line);border-radius:14px;color:var(--mut)}
+.nores.show{display:block}
+
+/* tools */
+.lab-card label{display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--mut);font-size:.88rem;margin:10px 0}
+.lab-card input[type=number],.lab-card select{padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:#091126;color:var(--ink);font:inherit;max-width:100%}
+.lab-card output{display:block;margin-top:12px;color:var(--mut);font-size:.88rem;min-height:44px}
+.lab-card output b{color:var(--accent)}
+.quiz{margin:10px 0;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03);transition:.3s}
+.quiz:hover,.quiz[open]{border-color:var(--accent)}
+.quiz summary{cursor:pointer;color:var(--head);font-weight:600;font-size:.9rem}
+.quiz p{margin-top:10px;color:var(--mut);font-size:.88rem}
+.pbar{height:8px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;margin:16px 0 6px}
+.pbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--saf),var(--jade),var(--sap));transition:width .45s}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:18px 0}
+.ck{display:flex;gap:12px;align-items:flex-start;padding:12px 15px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);color:var(--mut);font-size:.83rem;cursor:pointer;transition:.3s}
+.ck:hover{border-color:var(--accent)}
+.ck input{margin-top:6px;width:17px;height:17px;accent-color:var(--jade);flex-shrink:0}
+.ck:has(input:checked){border-color:rgba(116,230,196,.5);background:rgba(116,230,196,.07)}
+dl.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 28px}
+dl.gl div{padding:14px 0;border-bottom:1px solid var(--line)}
+dl.gl dt{color:var(--accent);font-weight:700;font-size:.86rem}
+dl.gl dd{color:var(--mut);font-size:.82rem}
+
+/* footer / credits */
+footer{padding:70px 6vw 90px;text-align:center;border-top:1px solid var(--line);color:var(--mut);font-size:.86rem}
+.credits{position:relative;max-width:560px;height:340px;margin:10px auto 30px;overflow:hidden;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,#02040c,#080d22 50%,#02040c);-webkit-mask:linear-gradient(transparent,#000 18%,#000 82%,transparent);mask:linear-gradient(transparent,#000 18%,#000 82%,transparent)}
+.roll{position:absolute;left:0;right:0;top:100%;text-align:center;animation:roll 34s linear infinite}
+.credits:hover .roll{animation-play-state:paused}
+@keyframes roll{to{top:-120%}}
+.roll p{margin:0 0 16px;font:500 .78rem 'JetBrains Mono',monospace;letter-spacing:4px;color:var(--dim)}
+.roll h4{margin:0 0 22px;font:800 clamp(1.6rem,5vw,2.4rem) 'Cinzel',serif;letter-spacing:.14em;color:var(--gld)}
+.fin{font:italic 500 1.35rem 'Outfit',serif;color:#fff;margin-bottom:12px}
+.tribute{max-width:600px;margin:26px auto 10px;padding:28px;border-radius:24px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(150deg,rgba(255,159,183,.1),rgba(134,182,255,.08),rgba(255,184,119,.08));display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s}
+.heart{font-size:2.1rem;animation:hb 1.8s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(255,159,183,.8))}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.28)}28%{transform:scale(1)}42%{transform:scale(1.18)}60%{transform:scale(1)}}
+.t-en{font:italic 700 1.3rem 'Cinzel',serif;color:#fff8ec;letter-spacing:.04em}
+.t-ta{font-family:'Noto Sans Tamil',sans-serif;font-weight:800;font-size:clamp(1.35rem,3.8vw,2.1rem);background:linear-gradient(90deg,var(--ros),var(--saf),var(--gld),var(--jade),var(--sap),var(--ros));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:tg 7s linear infinite}
+@keyframes tg{to{background-position:300% 0}}
+.totop{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;border:0;display:grid;place-items:center;font-size:1.2rem;color:#0b0a14;background:linear-gradient(135deg,var(--saf),var(--gld));box-shadow:0 6px 22px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.3s;z-index:120}
+.totop.show{opacity:1;pointer-events:auto}.totop:hover{transform:translateY(-5px)}
+
+/* reveal with failsafe */
+.js .reveal.waiting{opacity:.2;transform:translateY(22px)}
+.reveal{transition:opacity .7s,transform .7s}
+
+/* modes */
+body.reading{--ink:#e4e9f4;--mut:#cdd6e6;--dim:#a8b6cc;--glass:rgba(14,22,42,.98)}
+body.reading .sky,body.reading .chakra,body.reading #stars,body.reading .leak,body.reading .grain,body.reading .vig,body.reading .rings{display:none}
+body.reading .card:hover,body.reading .node:hover{transform:none}
+body.reading .split .ch{animation:none;background:none;color:var(--head);transform:none!important;filter:none!important}
+body.still *,body.still *::before,body.still *::after{animation-play-state:paused!important}
+body.still .intro,body.still .lb{display:none!important}
+body.still .split .ch{transform:none!important;filter:none!important}
+body.still .reveal.waiting{opacity:1!important;transform:none!important}
+
+@media(max-width:700px){
+ body{font-size:15px}.chapter{padding:64px 5vw}
+ .grid,.grid.two{grid-template-columns:minmax(0,1fr)}
+ details.dos>summary{padding:16px 14px;gap:12px}.anum{font-size:1.8rem;min-width:64px;padding-right:12px}
+ .dbody{padding:4px 14px 22px}.node{min-width:100%;max-width:none}.arrow{transform:rotate(90deg)}
+ .auteur{grid-template-columns:78px 1fr;padding:16px;gap:12px}.seal{width:78px;height:78px}.seal span{width:42px;height:42px;font-size:1.4rem}
+ .vig{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}
+ .intro,.lb{display:none!important}.js .reveal.waiting{opacity:1;transform:none}.split .ch{transform:none!important;filter:none!important}
+ .roll{position:static;animation:none}.credits{height:auto;-webkit-mask:none;mask:none}
+}
+@media print{
+ :root{--bg:#fff;--ink:#222;--head:#111;--mut:#333;--dim:#555;--line:#bbb;--glass:#fff;--gld:#6b4800;--saf:#8a4a00;--jade:#12614a;--sap:#1b4f8a;--ame:#5b3d8c;--ros:#9a2a42;--cya:#14636a;--lim:#4e631f}
+ body{background:#fff;color:#222;font-size:10pt}
+ .sky,.chakra,#stars,.leak,.grain,.vig,.bar,.intro,.lb,nav,.totop,.tools,.ctrls,.reel,.jump,.chips,.stats,.rings,.skip,.toast,.lab-card output.noprint{display:none!important}
+ .chapter{padding:18px 0;overflow:visible}.chapter::before,.chapter::after{display:none!important}
+ .hero{min-height:0;padding:14px 0}
+ .split .ch,.t-ta{background:none;color:#111;filter:none;transform:none!important}
+ .card,.node,.callout,.trap,.mnemonic,.quote,.quiz,details.dos,.auteur,.tribute,.tw{background:#fff;box-shadow:none;backdrop-filter:none;color:#222;transform:none;border-color:#bbb}
+ .auteur::before,.auteur::after{display:none}
+ b,strong{color:#111}.card,.quiz,details.dos{break-inside:avoid}
+ .tw{overflow:visible}table{min-width:0;font-size:8.5pt}th,td{color:#222}
+ .credits{height:auto;-webkit-mask:none;mask:none}.roll{position:static;animation:none}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#foundation">Skip intro and start studying</a>
+<div class="sky" aria-hidden="true"></div>
+<div class="chakra" id="chakra" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="leak" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><div class="vig" aria-hidden="true"></div>
+<div class="bar" id="bar" aria-hidden="true"></div>
+
+<div class="intro" aria-hidden="true"><div>
+  <div class="c">PART XIV · CHAPTER II · ARTICLES 315–323</div>
+  <h2>𝐔𝐍𝐈𝐎𝐍 𝐏𝐔𝐁𝐋𝐈𝐂 𝐒𝐄𝐑𝐕𝐈𝐂𝐄 𝐂𝐎𝐌𝐌𝐈𝐒𝐒𝐈𝐎𝐍</h2>
+  <p>A CONSTITUTIONAL STUDY FILM</p>
+</div></div>
+<div class="lb" aria-hidden="true"></div>
+
+<nav aria-label="Chapter navigation">
+  <span class="brand">⚖ SENTINEL</span>
+  <a href="#opening">🎬 Opening</a><a href="#foundation">🧭 Foundation</a><a href="#history">🕰️ History</a>
+  <a href="#articles">📜 315–323</a><a href="#working">⚙️ Working</a><a href="#independence">🛡️ Independence</a>
+  <a href="#compare">⚖️ Compare</a><a href="#mppsc">🌳 MPPSC</a><a href="#cases">🏛️ Cases</a>
+  <a href="#reforms">🔭 Reforms</a><a href="#revision">🧠 Revision</a><a href="#sources">🔎 Sources</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="opening">
+  <div class="rings" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="eyebrow">Part XIV · Services under the Union and the States</div>
+    <h1 aria-label="Union Public Service Commission">
+      <span class="split magic t1" data-split="UNION" aria-hidden="true"></span>
+      <span class="split magic t2" data-split="PUBLIC SERVICE" aria-hidden="true"></span>
+      <span class="split magic t3" data-split="COMMISSION" aria-hidden="true"></span>
+    </h1>
+    <div class="tag-rot" id="tagRot" aria-hidden="true"></div>
+    <div class="beam"></div>
+    <p class="sub1">The constitutional sentinel of merit — independent in function, accountable in democracy</p>
+    
+
+    <div class="auteur tilt" id="auteur" role="button" tabindex="0" aria-label="Auteur: Piyush Parte. Activate for a clapperboard burst through the nine articles.">
+      <div class="gloss" aria-hidden="true"></div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="ringPath" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs>
+        <text><textPath href="#ringPath" textLength="292" lengthAdjust="spacing">AUTEUR ✦ PIYUSH PARTE ✦ AUTEUR ✦ PIYUSH PARTE ✦</textPath></text></svg>
+        <span>PP</span>
+      </div>
+      <div class="a-body">
+        <div class="slate" aria-hidden="true"></div>
+        <small>🎬 AUTEUR · WRITER · DIRECTOR · EDITOR</small>
+        <div class="a-name split magic" data-split="PIYUSH PARTE"></div>
+        <div class="a-grid"><span>FILM<b>The Sentinel of Merit</b></span><span>SCENE<b id="sceneNo">315</b></span><span>TAKE<b id="takeNo">1</b></span></div>
+        <div class="a-cta">▶ CLICK FOR “ACTION!”</div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <a href="#art315">📜 Articles 315–323</a><a href="#art319">🔐 Post-tenure bar</a>
+      <a href="#art320">⚙️ Functions &amp; consultation</a><a href="#mppsc">🌳 Complete MPPSC</a><a href="#revision">🧠 Mnemonics &amp; recall</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>9</b><span>ARTICLES · 315–323</span></div>
+      <div class="stat"><b>1926</b><span>FIRST STANDING PSC</span></div>
+      <div class="stat"><b>1950</b><span>CONSTITUTIONAL UPSC</span></div>
+      <div class="stat"><b>3</b><span>UNION · STATE · JOINT</span></div>
+    </div>
+    <div class="ctrls">
+      <button class="btn" id="readBtn" type="button" aria-pressed="false">📖 Reading mode</button>
+      <button class="btn" id="stillBtn" type="button" aria-pressed="false">⏸️ Pause effects</button>
+      <button class="btn" id="printBtn" type="button">🖨️ Print / Save PDF</button>
+    </div>
+  </div>
+</header>
+
+<div class="reel" aria-label="Key facts ticker"><div class="reel-t" id="reel"></div></div>
+
+<main>
+
+<!-- ================= FOUNDATION ================= -->
+<section class="chapter" id="foundation" data-scene="01" style="--accent:var(--gld)">
+<div class="wrap reveal">
+  <span class="kicker">🧭 Act I · The Constitutional Map</span>
+  <h2 class="title">Merit is the purpose. <span>Independence is the method.</span></h2>
+  <p class="lede">The Union Public Service Commission is an <b>independent constitutional body</b>. Its core work is impartial selection and expert advice on public services. It is not the government's general personnel department, not a court, and not the appointing authority for the posts it recruits to.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--gld)"><span class="ic">📖</span><span class="big">XIV</span><h3>Part XIV · “Services under the Union and the States”</h3><p><b>Chapter I</b> (Arts. 308–314) deals with the services. <b>Chapter II</b> (Arts. 315–323) deals with Public Service Commissions.</p></article>
+    <article class="card" style="--accent:var(--jade)"><span class="ic">🏛️</span><span class="big">315</span><h3>The constitutional anchor</h3><p>Provides for a Union PSC, a PSC for each State, a <b>Joint State PSC</b> by agreement, and UPSC service to a State on request.</p></article>
+    <article class="card" style="--accent:var(--sap)"><span class="ic">🕰️</span><span class="big">1926</span><h3>Origins</h3><p>First standing PSC: <b>1 October 1926</b>. Constitutional UPSC from <b>26 January 1950</b>, with continuity under <b>Article 378</b>.</p></article>
+    <article class="card" style="--accent:var(--ame)"><span class="ic">📍</span><span class="big">DELHI</span><h3>Headquarters</h3><p><b>Dholpur House, New Delhi.</b> Strength, office-holders, pay and exam statistics are update-sensitive — verify on the official site.</p></article>
+  </div>
+
+  <h3 class="sub">🧩 The ecosystem around Articles 315–323</h3>
+  <div class="flow">
+    <div class="node" style="--accent:var(--saf)"><b>⚖️ Arts. 14 &amp; 16</b>Equality · equal opportunity</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--jade)"><b>📜 Arts. 309–311</b>Recruitment rules · pleasure · safeguards</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--sap)"><b>🇮🇳 Art. 312</b>All India Services</div><span class="arrow">→</span>
+    <div class="node" style="--accent:var(--gld)"><b>🏛️ Arts. 315–323</b>Independent recruitment &amp; advice</div>
+  </div>
+
+  <div class="tw"><table>
+    <caption>📑 The nine articles at a glance</caption>
+    <thead><tr><th>Article</th><th>Theme</th><th>One-line cue</th></tr></thead>
+    <tbody>
+      <tr><td>315</td><td>Establishment</td><td>🏛️ Union · State · Joint · UPSC assists a State</td></tr>
+      <tr><td>316</td><td>Appointment &amp; term</td><td>👥 President/Governor · one-half experienced · 6 yrs / 65–62 · no same-office reappointment</td></tr>
+      <tr><td>317</td><td>Removal &amp; suspension</td><td>⚖️ President removes · Supreme Court inquiry for misbehaviour</td></tr>
+      <tr><td>318</td><td>Regulations</td><td>📋 Number of members &amp; staff · conditions · no disadvantage</td></tr>
+      <tr><td>319</td><td>After tenure</td><td>🔐 Bar on further government employment · limited PSC routes</td></tr>
+      <tr><td>320</td><td>Functions</td><td>⚙️ Exams · joint schemes · consultation · exemptions</td></tr>
+      <tr><td>321</td><td>Extension</td><td>🌐 More functions — by law only</td></tr>
+      <tr><td>322</td><td>Expenses</td><td>💰 Charged on the Consolidated Fund</td></tr>
+      <tr><td>323</td><td>Reports</td><td>📊 Annual report + memorandum on non-acceptance</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)"><h3>🛡️ Why constitutional status matters</h3><p>The Commission's existence, core functions and safeguards come from the Constitution, not an executive resolution. Governments must work within that framework.</p><p>Yet constitutional status is not unlimited power: the Commission is not immune from judicial review, from audit, or from the law.</p></article>
+    <article class="card" style="--accent:var(--sap)"><h3>🐕‍🦺 “Watchdog of the merit system”</h3><p>A popular textbook phrase — <b>not constitutional text</b> and not a grant of general supervisory power. Merit operates alongside lawful reservation and equal opportunity.</p></article>
+  </div>
+
+  <div class="trap">🚨 <b>Three distinctions:</b> <b>selection ≠ appointment</b> (the competent authority appoints) · <b>advice on discipline ≠ imposing a penalty</b> · <b>conducting examinations ≠ managing the whole service afterwards</b>.</div>
+
+  <div class="mnemonic"><span class="lab">🧠 The nine-room palace (315 → 323)</span><b>Establish · Appoint · Remove · Regulate · Restrict · Function · Extend · Finance · Report.</b><br>Sentence: <b>“Every Appointee Remains Regulated &amp; Restricted; Functions Extend; Finance Reported.”</b> → E-A-R-R-R-F-E-F-R.</div>
+</div>
+</section>
+
+<!-- ================= HISTORY ================= -->
+<section class="chapter" id="history" data-scene="02" style="--accent:var(--saf)">
+<div class="wrap reveal">
+  <span class="kicker">🕰️ Act II · The Historical Corridor</span>
+  <h2 class="title">From colonial competition <span>to constitutional public service.</span></h2>
+  <p class="lede">Two strands run together: the idea of <b>competitive recruitment</b> and the creation of a <b>standing commission</b>. Do not mix up the commissions that carry similar names.</p>
+  <div class="timeline">
+    <div class="ti" style="--accent:var(--gld)"><div class="d">1854 · MACAULAY COMMITTEE</div><p>Recommended open competitive examinations instead of patronage for the civil service. Competitive ICS examinations began in London in 1855.</p></div>
+    <div class="ti" style="--accent:var(--jade)"><div class="d">1886–87 · AITCHISON COMMISSION</div><p>The “Public Service Commission” under Sir Charles Aitchison reviewed service classification and Indian participation. <b>It was not the standing PSC of 1926.</b></p></div>
+    <div class="ti" style="--accent:var(--sap)"><div class="d">1912 · ISLINGTON COMMISSION</div><p>The Royal Commission on the Public Services in India. Remembered for proposing roughly <b>25% of higher posts for Indians</b>.</p></div>
+    <div class="ti" style="--accent:var(--ame)"><div class="d">1919 · GOVERNMENT OF INDIA ACT (s. 96C)</div><p>Provided a legal basis for a Public Service Commission. Statutory provision and actual establishment are <b>different events</b>.</p></div>
+    <div class="ti" style="--accent:var(--cya)"><div class="d">1922 · ICS EXAMINATION IN INDIA</div><p>The ICS examination began to be held in India as well as in London, widening access within colonial limits.</p></div>
+    <div class="ti" style="--accent:var(--ros)"><div class="d">1923–24 · LEE COMMISSION</div><p>The Royal Commission on the Superior Civil Services urged the early establishment of a Public Service Commission. <b>Lee belongs to the 1920s, not 1919.</b></p></div>
+    <div class="ti" style="--accent:var(--gld)"><div class="d">1 OCTOBER 1926 · FIRST STANDING PSC</div><p>Established with <b>Sir Ross Barker</b> as Chairman. Its role was limited and largely advisory.</p></div>
+    <div class="ti" style="--accent:var(--jade)"><div class="d">1935 ACT → 1937 · FEDERAL &amp; PROVINCIAL PSCs</div><p>The Government of India Act, 1935 provided for a Federal PSC and Provincial PSCs. The Federal Public Service Commission began functioning in <b>1937</b>.</p></div>
+    <div class="ti" style="--accent:var(--sap)"><div class="d">26 JANUARY 1950 · UPSC UNDER THE CONSTITUTION</div><p>Articles 315–323 came into force; <b>Article 378</b> continued the Federal PSC as the UPSC. H. K. Kripalani is commonly listed as the first Chairman under the Constitution.</p></div>
+    <div class="ti" style="--accent:var(--ame)"><div class="d">1 NOVEMBER 1956 · MPPSC</div><p>The Madhya Pradesh PSC began with the reorganisation of States; headquarters at <b>Indore</b>.</p></div>
+    <div class="ti" style="--accent:var(--saf)"><div class="d">1976 · KOTHARI REPORT &amp; 41ST AMENDMENT</div><p>The Kothari Committee proposed a three-stage civil services scheme (Prelims → Mains → Interview), adopted from 1979. The <b>41st Amendment (1976)</b> raised the State/Joint PSC age ceiling from 60 to 62.</p></div>
+    <div class="ti" style="--accent:var(--cya)"><div class="d">2011 → 2015 · CSAT</div><p>CSAT (Paper II) was introduced in 2011 and made <b>qualifying only</b> from 2015. Always confirm current scheme details in the notification.</p></div>
+  </div>
+  <div class="trap">🧯 <b>Historical repair:</b> Aitchison <b>1886</b> · Islington <b>1912</b> · Lee <b>1924</b>. Earlier notes that placed Aitchison in 1935 or Islington in 1886 were wrong.</div>
+  <div class="mnemonic"><span class="lab">🧠 History as a sequence</span><b>Macaulay → Aitchison → Islington → Lee → Barker → Constitution</b><br><b>1854 → 1886 → 1912 → 1924 → 1926 → 1950</b></div>
+</div>
+</section>
+
+<!-- ================= ARTICLES ================= -->
+<section class="chapter" id="articles" data-scene="03" style="--accent:var(--cya)">
+<div class="wrap reveal">
+  <span class="kicker">📜 Act III · Article Dossiers</span>
+  <h2 class="title">Nine articles. <span>One balanced institution.</span></h2>
+  <p class="lede">Each dossier gives the operative rule, clause precision, a flow diagram, an exam trap and a mnemonic. These are explanatory notes, not verbatim reproductions — consult the official text for exact wording.</p>
+
+  <div class="jump" aria-label="Article shortcuts">
+    <a href="#art315" style="--c:var(--sap)">315</a><a href="#art316" style="--c:var(--ame)">316</a><a href="#art317" style="--c:var(--ros)">317</a>
+    <a href="#art318" style="--c:var(--gld)">318</a><a href="#art319" style="--c:var(--saf)">319</a><a href="#art320" style="--c:var(--jade)">320</a>
+    <a href="#art321" style="--c:var(--cya)">321</a><a href="#art322" style="--c:var(--lim)">322</a><a href="#art323" style="--c:var(--ros)">323</a>
+  </div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="🔎 Try: reappointment, suspension, Joint, charged, 16(4), memorandum…" aria-label="Search article dossiers" autocomplete="off">
+    <button class="btn" id="openAll" type="button">＋ Open all</button><button class="btn" id="foldAll" type="button">− Fold all</button><button class="btn" id="clrSearch" type="button">↺ Clear</button>
+    <p class="qs" id="sStat" role="status"></p>
+  </div>
+  <p class="nores" id="noRes">🔎 No matching dossier. Try a broader word.</p>
+
+<!-- 315 -->
+<details class="dos" id="art315" open style="--accent:var(--sap)">
+<summary><span class="anum"><small>ARTICLE</small>315</span><span class="at"><b>🏛️ Establishment &amp; Federal Architecture</b><small>Union · State · Joint State Commission · UPSC assisting a State</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">STARTING POINT</span><p>There shall be a Public Service Commission for the Union and a Public Service Commission for each State — subject to the arrangements this article permits.</p></div>
+  <div class="tw"><table><caption>📜 Article 315 clause map</caption><thead><tr><th>Clause</th><th>Rule</th><th>Precision point</th></tr></thead><tbody>
+    <tr><td>315(1)</td><td>A PSC for the Union and one for each State.</td><td>Both Union and State commissions have a constitutional footing.</td></tr>
+    <tr><td>315(2)</td><td>Two or more States may agree on a <b>Joint State PSC</b>; a resolution must be passed by <b>each House of each State Legislature</b>; Parliament may then provide for it <b>by law</b>.</td><td>Where a State has two Houses, an Assembly resolution alone is not enough.</td></tr>
+    <tr><td>315(3)</td><td>The law may contain incidental and consequential provisions.</td><td>Machinery is created by statute, not by a joint announcement.</td></tr>
+    <tr><td>315(4)</td><td>The UPSC may serve all or any needs of a State if the <b>Governor requests</b> and the <b>President approves</b>.</td><td>A State's request alone is incomplete.</td></tr>
+    <tr><td>315(5)</td><td>References to “Union” or “State” Commission mean the commission serving the relevant need.</td><td>Handles Joint Commissions and UPSC service arrangements.</td></tr>
+  </tbody></table></div>
+  <div class="grid">
+    <div class="card" style="--accent:var(--sap)"><span class="ic">🇮🇳</span><h3>Union PSC</h3><p>Serves the Union: All India Services, Central services and referred advisory matters.</p></div>
+    <div class="card" style="--accent:var(--jade)"><span class="ic">🌳</span><h3>State PSC</h3><p>Serves State requirements. It is <b>not a branch of the UPSC</b>.</p></div>
+    <div class="card" style="--accent:var(--ame)"><span class="ic">🤝</span><h3>Joint State PSC</h3><p>Created by <b>Parliament's law</b> after State resolutions; textbooks therefore call it <b>statutory</b> rather than directly constitutional.</p></div>
+  </div>
+  <div class="flow">
+    <div class="node"><b>🤝 States agree</b>Two or more States</div><span class="arrow">→</span>
+    <div class="node"><b>🏛️ Resolutions</b>Each House of each State</div><span class="arrow">→</span>
+    <div class="node"><b>📜 Parliamentary law</b>Machinery &amp; incidental provisions</div><span class="arrow">→</span>
+    <div class="node"><b>🌐 Joint PSC</b>Shared recruitment body</div>
+  </div>
+  <div class="trap">🚨 <b>Trap:</b> Joint PSCs are rare — verify any claimed example (such as “Assam–Meghalaya in the 1960s”) before quoting it. And do not confuse 315(4) (State's own request via Governor + President) with 320(2) (two or more States, special-qualification schemes).</div>
+  <div class="mnemonic"><span class="lab">🧠 Article 315</span><b>“U-S-J-A” = Union · State · Joint · Assistance.</b> Joint PSC: <b>Agree → Resolve → Legislate.</b></div>
+</div></details>
+
+<!-- 316 -->
+<details class="dos" id="art316" style="--accent:var(--ame)">
+<summary><span class="anum"><small>ARTICLE</small>316</span><span class="at"><b>👥 Appointment, Qualification &amp; Tenure</b><small>Appointing authority · one-half rule · 6 years / 65–62 · no same-office reappointment</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">THE EXACT EXPRESSION</span><p>“As nearly as may be one-half” of the members must, at the date of appointment, have held office for at least ten years under the Government of India or a State Government.</p></div>
+  <div class="tw"><table><caption>👤 Three arrangements side by side</caption><thead><tr><th>Aspect</th><th>UPSC</th><th>State PSC</th><th>Joint State PSC</th></tr></thead><tbody>
+    <tr><td>Appointed by</td><td>President</td><td>Governor</td><td>President</td></tr>
+    <tr><td>Term</td><td>6 yrs or age 65, earlier</td><td>6 yrs or age 62, earlier</td><td>6 yrs or age 62, earlier</td></tr>
+    <tr><td>Resigns to</td><td>President</td><td>Governor</td><td>President</td></tr>
+    <tr><td>Acting Chairman named by</td><td>President</td><td>Governor</td><td>President</td></tr>
+  </tbody></table></div>
+  <h4 style="color:var(--accent);margin:18px 0 6px">🎓 What does the Constitution prescribe?</h4>
+  <ul>
+    <li>No degree, exam or minimum age. The only composition rule is the <b>ten-years-service proviso for about half</b> the members; pre-Constitution service under the Crown or an Indian State counts.</li>
+    <li>It does <b>not</b> prescribe a “50% bureaucrats / 50% outsiders” quota, and it fixes <b>no total number</b> of members — that is set by regulations under Article 318.</li>
+    <li>No oath for PSC members is prescribed in the Third Schedule — do not invent a “constitutional oath by the President or Governor”.</li>
+  </ul>
+  <h4 style="color:var(--accent);margin:18px 0 6px">⏳ Clauses to know</h4>
+  <ul>
+    <li><b>316(1A):</b> if the Chairman's office is vacant, or he is absent or unable to act, <b>one of the other members</b> (appointed by the President/Governor) performs the duties. There is no constitutional “six-month maximum” and no “senior-most” rule.</li>
+    <li><b>316(2):</b> the term runs from entering office; resignation is in writing to the appropriate authority; removal is only under Article 317.</li>
+    <li><b>316(3):</b> a person who has held the office is <b>ineligible for reappointment to that office</b>. “Reappointment is permissible but rare” is wrong. Movement to a <i>different</i> PSC office is governed by Article 319.</li>
+  </ul>
+  <div class="flow">
+    <div class="node"><b>Vacancy / inability</b>Chairman absent or office vacant</div><span class="arrow">→</span>
+    <div class="node"><b>Member designated</b>President or Governor</div><span class="arrow">→</span>
+    <div class="node"><b>Continuity</b>Until new Chairman or return</div>
+  </div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--gld)"><h3>🧮 UPSC member joins at 61</h3><p>Age 65 comes before six years: tenure ≈ min(6, 65−61) = <b>4 years</b>.</p></div>
+    <div class="card" style="--accent:var(--jade)"><h3>🧮 SPSC member joins at 54</h3><p>Six years end at 60, before 62: tenure = min(6, 62−54) = <b>6 years</b>, ending near age 60.</p></div>
+  </div>
+  <div class="mnemonic"><span class="lab">🧠 Article 316</span><b>“Union 65 · State &amp; Joint 62 · six years is the other door.”</b><br>Appoint: <b>President → Union + Joint; Governor → State.</b> One-half rule: <b>“as nearly as may be”.</b></div>
+</div></details>
+
+<!-- 317 -->
+<details class="dos" id="art317" style="--accent:var(--ros)">
+<summary><span class="anum"><small>ARTICLE</small>317</span><span class="at"><b>⚖️ Removal &amp; Suspension</b><small>President removes · Supreme Court inquiry for misbehaviour · Governor may suspend an SPSC member</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">THE CENTRAL SAFEGUARD</span><p>Removal of a Union, State or Joint PSC member is by the <b>President</b>. For misbehaviour, only after the Supreme Court — on a Presidential reference — has inquired and reported that removal is warranted.</p></div>
+  <div class="tw"><table><caption>🧭 Article 317 structure</caption><thead><tr><th>Clause</th><th>Meaning</th><th>Guardrail</th></tr></thead><tbody>
+    <tr><td>317(1)</td><td>Removal for <b>misbehaviour</b> by Presidential order, after a Supreme Court inquiry (procedure under Art. 145).</td><td>A Court report that the person ought to be removed is a precondition.</td></tr>
+    <tr><td>317(2)</td><td>Suspension pending the President's orders on the report.</td><td><b>President</b>: UPSC/Joint · <b>Governor</b>: State PSC.</td></tr>
+    <tr><td>317(3)</td><td>President may remove, without the 317(1) route, for <b>insolvency</b>, <b>paid employment outside duties</b>, or <b>infirmity of mind/body</b>.</td><td>“In the President's opinion” applies to infirmity.</td></tr>
+    <tr><td>317(4)</td><td>Being concerned or interested in a government contract, or sharing its benefit, is <b>deemed misbehaviour</b>.</td><td>Exception: being a member, in common with others, of an incorporated company.</td></tr>
+  </tbody></table></div>
+  <div class="grid">
+    <div class="card" style="--accent:var(--ros)"><span class="ic">💸</span><h3>Adjudged insolvent</h3><p>A legal adjudication — not mere debt. Removal still needs the President's order.</p></div>
+    <div class="card" style="--accent:var(--saf)"><span class="ic">💼</span><h3>Outside paid employment</h3><p>Paid work outside the duties of the office during the term.</p></div>
+    <div class="card" style="--accent:var(--ame)"><span class="ic">🩺</span><h3>Infirmity of mind or body</h3><p>Unfitness in the <b>President's</b> opinion — not the Governor's.</p></div>
+  </div>
+  <div class="flow">
+    <div class="node"><b>🔎 Allegation</b>Misbehaviour alleged</div><span class="arrow">→</span>
+    <div class="node"><b>📨 Reference</b>President → Supreme Court</div><span class="arrow">→</span>
+    <div class="node"><b>🛑 Suspension?</b>President (Union/Joint) or Governor (State)</div><span class="arrow">→</span>
+    <div class="node"><b>⚖️ Inquiry &amp; report</b>Art. 145 procedure</div><span class="arrow">→</span>
+    <div class="node"><b>🖋️ Order</b>President removes if warranted</div>
+  </div>
+  <div class="callout">🧠 <b>Precise wording:</b> textbooks say the Court's advice is “binding”. Strictly, the Constitution makes a favourable Court report a <b>precondition</b> for removal on this ground. No “fixed deadline” or “mandatory five-judge bench” is specified in the text.</div>
+  <div class="trap">🚨 <b>Classic SPSC trap:</b> the <b>Governor appoints</b> an SPSC member and may <b>suspend</b>, but only the <b>President removes</b>.</div>
+  <div class="mnemonic"><span class="lab">🧠 I-P-I + M</span><b>Insolvency · Paid employment · Infirmity</b> = clause (3) grounds. <b>Misbehaviour → Supreme Court route.</b><br><b>“Governor appoints &amp; suspends; President alone removes.”</b></div>
+</div></details>
+
+<!-- 318 -->
+<details class="dos" id="art318" style="--accent:var(--gld)">
+<summary><span class="anum"><small>ARTICLE</small>318</span><span class="at"><b>📋 Composition, Staff &amp; Service Conditions</b><small>Regulations by President/Governor · no disadvantage after appointment</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">PROTECTED CONDITIONS</span><p>The conditions of service of a member shall not be varied to his disadvantage after his appointment.</p></div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--gld)"><h3>👥 Membership</h3><p>The President (Union/Joint) or Governor (State) may make regulations fixing the <b>number of members</b> and their conditions of service.</p></div>
+    <div class="card" style="--accent:var(--sap)"><h3>🏢 Staff</h3><p>The same authority regulates the <b>number of staff</b> and their conditions — the power lies with the President/Governor, not exclusively with the Commission.</p></div>
+  </div>
+  <div class="flow">
+    <div class="node"><b>UPSC / Joint PSC</b>President regulates</div><span class="arrow">↔</span>
+    <div class="node"><b>State PSC</b>Governor regulates</div><span class="arrow">→</span>
+    <div class="node"><b>Serving member</b>No adverse change</div>
+  </div>
+  <div class="callout">🔒 The proviso protects a <i>serving</i> member from indirect pressure through worsened terms. It does not freeze terms for all future appointees. Quote salaries only from current, official regulations.</div>
+  <div class="mnemonic"><span class="lab">🧠 Article 318</span><b>“Number · Members · Staff · No disadvantage.”</b></div>
+</div></details>
+
+<!-- 319 -->
+<details class="dos" id="art319" open style="--accent:var(--saf)">
+<summary><span class="anum"><small>ARTICLE</small>319</span><span class="at"><b>🔐 Post-tenure Employment Restrictions</b><small>The corrected eligibility matrix · a permanent bar, not a short cooling-off</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">THE IDEA</span><p>A decision taken today must not be shaped by the promise of a government job tomorrow. The Constitution closes most doors and leaves a few named PSC doors open.</p></div>
+  <div class="tw"><table><caption>🔐 Article 319 — correct matrix</caption><thead><tr><th>On ceasing to hold office as…</th><th>Eligible for (PSC offices only)</th><th>Any other employment under Union/State</th></tr></thead><tbody>
+    <tr><td>UPSC Chairman · 319(a)</td><td>Nothing further</td><td>❌ Ineligible</td></tr>
+    <tr><td>SPSC Chairman · 319(b)</td><td>UPSC Chairman or member; Chairman of <b>any other</b> State PSC</td><td>❌ Ineligible</td></tr>
+    <tr><td>UPSC member (not Chairman) · 319(c)</td><td>UPSC Chairman; Chairman of a State PSC</td><td>❌ Ineligible</td></tr>
+    <tr><td>SPSC member (not Chairman) · 319(d)</td><td>UPSC Chairman or member; Chairman of <b>that or any other</b> State PSC</td><td>❌ Ineligible</td></tr>
+  </tbody></table></div>
+  <div class="flow">
+    <div class="node"><b>SPSC member</b>→ SPSC Chairman · UPSC member/Chairman</div><span class="arrow">→</span>
+    <div class="node"><b>SPSC Chairman</b>→ UPSC member/Chairman · other SPSC Chairman</div><span class="arrow">→</span>
+    <div class="node"><b>UPSC member</b>→ UPSC Chairman · SPSC Chairman</div><span class="arrow">→</span>
+    <div class="node"><b>UPSC Chairman</b>🚫 End of the road</div>
+  </div>
+  <div class="trap">🚨 <b>Corrections to common notes:</b> an SPSC Chairman <b>can</b> go to the UPSC; an SPSC member <b>can</b> chair the <i>same</i> SPSC; a UPSC member <b>cannot</b> simply become an ordinary SPSC member. The bar is <b>not</b> a five-year or two-year cooling-off, and it is expressed as a bar on employment <i>under government</i>, not a general bar on private work (other laws and ethics still apply).</div>
+  <ul>
+    <li><b>Acting Chairman</b> (316(1A)) is not a substantive Chairmanship — do not treat them as identical.</li>
+    <li>Article 316(3) still applies: Article 319's permitted offices are <i>different</i> offices, not routine reappointment to the same one.</li>
+  </ul>
+  <div class="mnemonic"><span class="lab">🧠 U-C / S-C / U-M / S-M</span><b>Union Chair: stop.</b> · <b>State Chair: Union chair/member or another State chair.</b> · <b>Union Member: chairs only.</b> · <b>State Member: Union chair/member, or State chair.</b><br>Try the 🔐 <a href="#revision">Article 319 pathfinder</a>.</div>
+</div></details>
+
+<!-- 320 -->
+<details class="dos" id="art320" open style="--accent:var(--jade)">
+<summary><span class="anum"><small>ARTICLE</small>320</span><span class="at"><b>⚙️ Functions, Consultation &amp; Exceptions</b><small>Exams · joint schemes · advisory heads · exemption regulations</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">THE OPERATIONAL CORE</span><p>Commissions conduct examinations and give expert advice on specified service matters. The advice is recommendatory — but the duty to consult, and the reporting of non-acceptance, are real.</p></div>
+  <div class="tw"><table><caption>📜 Correct clause map</caption><thead><tr><th>Clause</th><th>Subject</th><th>Essential detail</th></tr></thead><tbody>
+    <tr><td>320(1)</td><td>Examinations</td><td>Union and State PSCs conduct exams for appointments to Union / State services.</td></tr>
+    <tr><td>320(2)</td><td>Joint recruitment assistance</td><td>UPSC assists two or more requesting States to frame and run joint schemes for services needing <b>special qualifications</b>.</td></tr>
+    <tr><td>320(3)(a)</td><td>Methods of recruitment</td><td>Civil services and civil posts.</td></tr>
+    <tr><td>320(3)(b)</td><td>Principles &amp; suitability</td><td>Appointments, promotions, transfers between services, suitability of candidates.</td></tr>
+    <tr><td>320(3)(c)</td><td>Disciplinary matters</td><td>Civil-capacity employees, including memorials/petitions.</td></tr>
+    <tr><td>320(3)(d)</td><td>Legal-defence costs</td><td>Claims to have costs of defending official-duty proceedings paid from the Consolidated Fund.</td></tr>
+    <tr><td>320(3)(e)</td><td>Injury pensions</td><td>Pension awards for service injuries and their amount.</td></tr>
+    <tr><td>Closing words</td><td>Referred matters</td><td>Duty to advise on matters referred, including others the President/Governor refers.</td></tr>
+    <tr><td>Proviso to 320(3)</td><td>Exemptions</td><td>President/Governor may make regulations naming matters where consultation is unnecessary.</td></tr>
+    <tr><td>320(4)</td><td>Express exclusions</td><td>No consultation on the manner of making provision under <b>Art. 16(4)</b> or giving effect to <b>Art. 335</b>.</td></tr>
+    <tr><td>320(5)</td><td>Laying of regulations</td><td>Exemption regulations laid before the House(s) for <b>not less than 14 days</b>; subject to modification or repeal.</td></tr>
+  </tbody></table></div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--jade)"><h3>📝 Examples of UPSC processes</h3><p>Civil Services, Indian Forest Service, Engineering Services, Combined Medical Services, Economic/Statistical Services, CAPF (AC), NDA &amp; NA and CDS written examinations, plus recruitment by selection for notified posts. Each is governed by its own rules and notification.</p></div>
+    <div class="card" style="--accent:var(--sap)"><h3>🌲 IFS ambiguity</h3><p>The three All India Services are <b>IAS, IPS and the Indian Forest Service</b>. The <b>Indian Foreign Service</b> is a Central service.</p></div>
+  </div>
+  <h4 style="color:var(--accent);margin:18px 0 6px">💬 Consultation ≠ concurrence</h4>
+  <p>The Supreme Court (<i>Manbodhan Lal Srivastava, 1957</i>) treated the consultation provision as <b>directory in the relevant sense</b>: non-consultation does not by itself automatically invalidate an action. Yet statutory rules, natural justice and the ban on arbitrary action still apply, and Article 323 requires non-acceptance to be explained to the Legislature.</p>
+  <ul>
+    <li><b>Union exemptions:</b> the UPSC (Exemption from Consultation) Regulations, 1958, as amended. States have their own Governor-made regulations — never assume one State's list applies to another.</li>
+    <li>“All appointments under one year are automatically exempt” and “emergencies are an unlimited exemption” are <b>too broad</b>. Check the actual regulation and its conditions.</li>
+    <li>Article 320 is <b>not</b> a rule that every pay, leave or ordinary pension decision must be referred.</li>
+  </ul>
+  <div class="flow">
+    <div class="node"><b>📂 Government matter</b>Recruitment · promotion · discipline · claim</div><span class="arrow">→</span>
+    <div class="node"><b>🔎 Check</b>Art. 320 + regulations + 320(4)</div><span class="arrow">→</span>
+    <div class="node"><b>💬 Commission advice</b>Expert recommendation</div><span class="arrow">→</span>
+    <div class="node"><b>🏛️ Decision</b>Lawful reasons · Art. 323 accountability</div>
+  </div>
+  <div class="trap">📌 <b>Clause repairs:</b> 320(2) is <i>not</i> direct recruitment · 320(4) is <i>not</i> the regulation-making proviso · 320(5) is <i>not</i> annual reports (that is Article 323).</div>
+  <div class="mnemonic"><span class="lab">🧠 320: E-J-A-X-L</span><b>Exams · Joint schemes · Advice · eXclusions (16(4), 335) · Laying (14 days).</b><br>Five advisory heads <b>M-P-D-L-I</b> = <b>M</b>ethods · <b>P</b>rinciples/suitability · <b>D</b>iscipline · <b>L</b>egal costs · <b>I</b>njury pension.</div>
+</div></details>
+
+<!-- 321 -->
+<details class="dos" id="art321" style="--accent:var(--cya)">
+<summary><span class="anum"><small>ARTICLE</small>321</span><span class="at"><b>🌐 Extension of Functions</b><small>By law · services of local authorities, statutory bodies, public institutions</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">ADAPTABILITY THROUGH LAW</span><p>An Act of Parliament, or of a State Legislature, may give the UPSC or State PSC additional functions regarding the services of the Union or State, and of any local authority, body corporate constituted by law, or public institution.</p></div>
+  <div class="flow">
+    <div class="node"><b>🌱 Need</b>New body or service</div><span class="arrow">→</span>
+    <div class="node"><b>📜 Competent legislature</b>Passes an Article 321 law</div><span class="arrow">→</span>
+    <div class="node"><b>⚙️ Defined functions</b>Commission acts under that law</div>
+  </div>
+  <div class="trap">🚨 <b>Do not overclaim:</b> an executive order cannot permanently extend functions. Nor does Article 321 automatically put every university, undertaking or municipality under the PSC — cite the specific enabling law. The extended function is not necessarily only “advisory”; the law decides.</div>
+  <div class="mnemonic"><span class="lab">🧠 320 vs 321</span><b>“320 defines the core; 321 lets law add more.”</b></div>
+</div></details>
+
+<!-- 322 -->
+<details class="dos" id="art322" style="--accent:var(--lim)">
+<summary><span class="anum"><small>ARTICLE</small>322</span><span class="at"><b>💰 Expenses &amp; Financial Protection</b><small>Charged expenditure · appropriation · audit</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">ESSENCE</span><p>The expenses of the Union or a State PSC — including salaries, allowances and pensions of members and staff — are charged on the Consolidated Fund of India or, as the case may be, of the State.</p></div>
+  <div class="grid two">
+    <div class="card" style="--accent:var(--lim)"><span class="ic">🇮🇳</span><h3>UPSC</h3><p>Charged on the <b>Consolidated Fund of India</b>.</p></div>
+    <div class="card" style="--accent:var(--jade)"><span class="ic">🌳</span><h3>State PSC (e.g. MPPSC)</h3><p>Charged on the <b>Consolidated Fund of the State</b>. A Joint PSC's funding follows the establishing law and the shared-State arrangement.</p></div>
+  </div>
+  <div class="tw"><table><caption>💡 “Charged” — the correct reading</caption><thead><tr><th>Question</th><th>Answer</th></tr></thead><tbody>
+    <tr><td>Voted as a demand for grant?</td><td>No — charged expenditure is not put to the vote.</td></tr>
+    <tr><td>Can the Legislature discuss it?</td><td>Yes.</td></tr>
+    <tr><td>Part of the budget framework?</td><td>Yes — shown in the financial statement.</td></tr>
+    <tr><td>Appropriation needed?</td><td>Yes — withdrawal from the Consolidated Fund needs appropriation by law.</td></tr>
+    <tr><td>Automatic, unlimited funding?</td><td>No — budgeting, financial rules and audit continue.</td></tr>
+  </tbody></table></div>
+  <div class="flow">
+    <div class="node"><b>📊 Estimates</b>Needs assessed</div><span class="arrow">→</span>
+    <div class="node"><b>🏛️ Statement</b>Charged item shown</div><span class="arrow">→</span>
+    <div class="node"><b>📜 Appropriation</b>No vote on that item</div><span class="arrow">→</span>
+    <div class="node"><b>🔎 Audit</b>Accountability continues</div>
+  </div>
+  <p>Read with Arts. <b>112–114</b> (Union budget), <b>202–204</b> (State budget) and <b>266</b> (Consolidated Funds). CAG audit works under the constitutional and statutory framework — not because Article 322 itself says so.</p>
+  <div class="trap">🚨 Replace <i>“no vote = automatic allocation and no executive financial control”</i> with: <b>“charged status protects the item from the vote on demands, while budgeting, appropriation and audit continue.”</b></div>
+  <div class="mnemonic"><span class="lab">🧠 Charged expenditure</span><b>“Discussed, not voted · appropriated, not unlimited.”</b></div>
+</div></details>
+
+<!-- 323 -->
+<details class="dos" id="art323" style="--accent:var(--ros)">
+<summary><span class="anum"><small>ARTICLE</small>323</span><span class="at"><b>📊 Annual Reports &amp; Accountability</b><small>Report → memorandum on non-acceptance → Legislature</small></span></summary>
+<div class="dbody">
+  <div class="essence"><span class="lab">THE ACCOUNTABILITY BRIDGE</span><p>The Commission reports annually. The report is laid before the Legislature together with a memorandum explaining why its advice was not accepted in the relevant cases.</p></div>
+  <div class="tw"><table><caption>📨 Where the report goes</caption><thead><tr><th>Commission</th><th>Presented to</th><th>Laid before</th></tr></thead><tbody>
+    <tr><td>UPSC · 323(1)</td><td>President</td><td>Each House of Parliament + memorandum</td></tr>
+    <tr><td>State PSC · 323(2)</td><td>Governor</td><td>State Legislature + memorandum</td></tr>
+    <tr><td>Joint State PSC · 323(2)</td><td>Governor of each State served</td><td>That State's Legislature, for work relating to that State</td></tr>
+  </tbody></table></div>
+  <div class="flow">
+    <div class="node"><b>📚 Work done</b>Exams · recruitment · advice</div><span class="arrow">→</span>
+    <div class="node"><b>📄 Annual report</b>To President / Governor</div><span class="arrow">→</span>
+    <div class="node"><b>📝 Memorandum</b>Reasons for non-acceptance</div><span class="arrow">→</span>
+    <div class="node"><b>🏛️ Scrutiny</b>Transparency &amp; political accountability</div>
+  </div>
+  <p>The Constitution prescribes <b>annual reporting</b>, not a universal July–August deadline, a six-month laying deadline, a “three copies” rule, or a mandatory Action Taken Report — committee practice may add follow-up. The memorandum is the <b>government's</b> explanation, not an independent finding of the Commission.</p>
+  <div class="trap">📌 The annual report is <b>not</b> a statutory audit report, and Article 323 does not itself create a general “special report” procedure identical to the annual one.</div>
+  <div class="mnemonic"><span class="lab">🧠 Article 323: R-M-L</span><b>Report → Memorandum → Legislature.</b> Union: <b>UPSC → President → Parliament.</b> State: <b>SPSC → Governor → Legislature.</b></div>
+</div></details>
+
+<noscript><div class="callout">All dossiers stay readable without JavaScript. Search, tools, quiz and saved progress need it.</div></noscript>
+</div>
+</section>
+
+<!-- ================= WORKING ================= -->
+<section class="chapter" id="working" data-scene="04" style="--accent:var(--jade)">
+<div class="wrap reveal">
+  <span class="kicker">⚙️ Act IV · Inside the Recruitment Engine</span>
+  <h2 class="title">What UPSC does — <span>and what happens after it recommends.</span></h2>
+  <p class="lede">These conceptual maps show how the constitutional provisions play out in a real file. The exact steps for any examination come from its own notification and rules.</p>
+
+  <h3 class="sub">📝 A typical competitive recruitment pathway</h3>
+  <div class="flow">
+    <div class="node"><b>① Vacancies &amp; rules</b>Government identifies needs</div><span class="arrow">→</span>
+    <div class="node"><b>② Notification</b>Eligibility · stages · conditions</div><span class="arrow">→</span>
+    <div class="node"><b>③ Selection</b>Exam / interview as notified</div><span class="arrow">→</span>
+    <div class="node"><b>④ Recommendation</b>Results &amp; recommended list</div><span class="arrow">→</span>
+    <div class="node"><b>⑤ Appointment</b>Competent authority completes checks</div>
+  </div>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)"><h3>🎯 Civil Services Examination</h3><p>Structure: <b>Preliminary → Main → Personality Test</b>. The Preliminary stage is a screening test; final ranking follows the notified scheme. Attempts, age limits, modes and vacancies must be read from the current notice.</p></article>
+    <article class="card" style="--accent:var(--gld)"><h3>🌲 Indian Forest Service</h3><p>Uses the Civil Services Preliminary as screening under the notified arrangement, then its own Main examination and interview. It is not the Indian Foreign Service route.</p></article>
+    <article class="card" style="--accent:var(--sap)"><h3>💼 Recruitment by selection</h3><p>Specialised posts may use shortlisting, tests or interviews as stated in the recruitment process. Read the rules and advertisement — it is not a separate clause of Article 320.</p></article>
+    <article class="card" style="--accent:var(--ame)"><h3>🪜 Promotion &amp; service matters</h3><p>UPSC advises on promotion suitability and takes part in specified processes under rules (for example, promotion from State services to All India Services). Not every State promotion is a UPSC matter.</p></article>
+  </div>
+
+  <h3 class="sub">⚖️ A disciplinary-consultation pathway</h3>
+  <div class="flow">
+    <div class="node"><b>Departmental proceedings</b>Charges · evidence · hearing</div><span class="arrow">→</span>
+    <div class="node"><b>Consultation check</b>Rules &amp; exemptions</div><span class="arrow">→</span>
+    <div class="node"><b>UPSC / SPSC advice</b>If consultation applies</div><span class="arrow">→</span>
+    <div class="node"><b>Competent authority</b>Lawful, fair decision</div>
+  </div>
+  <div class="callout">🛡️ <b>Natural justice:</b> where Commission advice is relied on against an employee, disclosure and an opportunity to respond must be assessed under the applicable law (see <i>S. K. Kapoor</i>). “Advice is non-binding” does not erase fair-hearing duties.</div>
+  <div class="grid">
+    <article class="card" style="--accent:var(--jade)"><h3>📌 Selection ≠ guaranteed appointment</h3><p>Being in a select list ordinarily gives no indefeasible right to appointment, but the State cannot act arbitrarily.</p></article>
+    <article class="card" style="--accent:var(--gld)"><h3>🔍 Verification is a separate stage</h3><p>Eligibility, documents and medical standards may still be checked after recommendation.</p></article>
+    <article class="card" style="--accent:var(--sap)"><h3>📜 Rules control the process</h3><p>Advertisements must stay consistent with recruitment rules, equality and lawful reservation.</p></article>
+  </div>
+  <div class="mnemonic"><span class="lab">🧠 Institutional boundary</span><b>“UPSC selects and advises; the competent government authority appoints and administers.”</b></div>
+</div>
+</section>
+
+<!-- ================= INDEPENDENCE ================= -->
+<section class="chapter" id="independence" data-scene="05" style="--accent:var(--ame)">
+<div class="wrap reveal">
+  <span class="kicker">🛡️ Act V · The Independence Architecture</span>
+  <h2 class="title">Protected from pressure. <span>Not protected from accountability.</span></h2>
+  <div class="grid">
+    <article class="card" style="--accent:var(--gld)"><span class="ic">🏛️</span><h3>Constitutional existence · 315</h3><p>A lasting framework, not an executive preference.</p></article>
+    <article class="card" style="--accent:var(--jade)"><span class="ic">⌛</span><h3>Defined tenure · 316</h3><p>A fixed term and age ceiling; no same-office reappointment limits renewal incentives.</p></article>
+    <article class="card" style="--accent:var(--ros)"><span class="ic">⚖️</span><h3>Protected removal · 317</h3><p>Presidential removal, with a Supreme Court inquiry for misbehaviour.</p></article>
+    <article class="card" style="--accent:var(--cya)"><span class="ic">📋</span><h3>Service security · 318</h3><p>Conditions cannot be worsened after appointment.</p></article>
+    <article class="card" style="--accent:var(--saf)"><span class="ic">🔐</span><h3>Future-job restriction · 319</h3><p>Curbs trading present decisions for later posts.</p></article>
+    <article class="card" style="--accent:var(--lim)"><span class="ic">💰</span><h3>Charged expenditure · 322</h3><p>Expenses are not voted — yet remain appropriated and audited.</p></article>
+  </div>
+  <div class="flow">
+    <div class="node"><b>📜 Defined duties</b>Scope &amp; procedure</div><span class="arrow">+</span>
+    <div class="node"><b>📊 Annual report</b>Article 323</div><span class="arrow">+</span>
+    <div class="node"><b>🏛️ Judicial review</b>Legality &amp; fairness</div><span class="arrow">+</span>
+    <div class="node"><b>🔎 Audit</b>Financial scrutiny</div>
+  </div>
+  <div class="trap">🚨 <b>Not powers of a constitutional body by default:</b> court-like contempt power, blanket immunity from legal proceedings, unlimited rule-making, an unrestricted appointing power, or control over every recruiting agency.</div>
+  <blockquote class="quote">Institutional independence is not the absence of law. It is the freedom to perform lawful duties without improper pressure.<small>Study synthesis — not a quotation from any judgment or person.</small></blockquote>
+  <div class="mnemonic"><span class="lab">🧠 Independence cluster</span><b>316 Tenure · 317 Removal · 318 Conditions · 319 Future jobs · 322 Finance</b> — add <b>323 Reporting</b> so independence and accountability travel together.</div>
+</div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section class="chapter" id="compare" data-scene="06" style="--accent:var(--sap)">
+<div class="wrap reveal">
+  <span class="kicker">⚖️ Act VI · The Comparison Gallery</span>
+  <h2 class="title">Similar institutions. <span>Different coordinates.</span></h2>
+  <div class="tw"><table><caption>🏛️ UPSC · SPSC · Joint State PSC</caption><thead><tr><th>Basis</th><th>UPSC</th><th>SPSC</th><th>Joint State PSC</th></tr></thead><tbody>
+    <tr><td>Creation</td><td>Constitution · 315(1)</td><td>Constitution · 315(1)</td><td>Parliament's law under 315(2)</td></tr>
+    <tr><td>Nature (textbook)</td><td>Constitutional</td><td>Constitutional</td><td>Statutory</td></tr>
+    <tr><td>Appointed by</td><td>President</td><td>Governor</td><td>President</td></tr>
+    <tr><td>Term / age</td><td>6 yrs / 65</td><td>6 yrs / 62</td><td>6 yrs / 62</td></tr>
+    <tr><td>Removal</td><td>President</td><td>President</td><td>President</td></tr>
+    <tr><td>Suspension (317(2))</td><td>President</td><td>Governor</td><td>President</td></tr>
+    <tr><td>Regulations (318)</td><td>President</td><td>Governor</td><td>President</td></tr>
+    <tr><td>Annual report</td><td>President → Parliament</td><td>Governor → State Legislature</td><td>Each served State's Governor → Legislature</td></tr>
+    <tr><td>Relationship</td><td>Not superior to every SPSC</td><td>Not a UPSC regional office</td><td>A shared arrangement, not an appellate tier</td></tr>
+  </tbody></table></div>
+  <div class="tw"><table><caption>⚙️ UPSC · Staff Selection Commission · Central Vigilance Commission</caption><thead><tr><th>Aspect</th><th>UPSC</th><th>SSC</th><th>CVC</th></tr></thead><tbody>
+    <tr><td>Basis</td><td>Constitutional · 315–323</td><td>Non-constitutional; set up by government resolution</td><td>Statutory · CVC Act, 2003 (first set up by resolution, 1964)</td></tr>
+    <tr><td>Main focus</td><td>Notified exams, recruitment and service advice</td><td>Recruitment to specified Union posts</td><td>Vigilance and anti-corruption oversight/advice</td></tr>
+    <tr><td>Article 320 role</td><td>Yes</td><td>No equivalent</td><td>Distinct statutory/administrative role</td></tr>
+    <tr><td>Relation to UPSC</td><td>—</td><td>Different remit</td><td>Not “subordinate to UPSC”</td></tr>
+  </tbody></table></div>
+  <div class="trap">🧯 <b>Correction:</b> there is no general rule that “UPSC prevails over CVC”. In a disciplinary case, look at the applicable consultation rules, vigilance instructions and who the competent decision-maker is.</div>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)"><h3>🗳️ State Election Commissioner</h3><p>Under Art. 243K the State Election Commissioner can be removed in the manner and on the grounds applicable to a <b>High Court judge</b>. Do not write “removed by the Governor”.</p></article>
+    <article class="card" style="--accent:var(--gld)"><h3>🏛️ State-level constitutional bodies</h3><p>Examples: State PSC (Art. 315), State Election Commission (Art. 243K), State Finance Commission (Art. 243I), Advocate General (Art. 165).</p></article>
+  </div>
+  <div class="mnemonic"><span class="lab">🧠 The comparison lock</span><b>“Appoint? Remove? Suspend? Retire? Report?”</b> — ask these five before memorising any table.</div>
+</div>
+</section>
+
+<!-- ================= MPPSC ================= -->
+<section class="chapter" id="mppsc" data-scene="07" style="--accent:var(--jade)">
+<div class="wrap reveal">
+  <span class="kicker">🌳 Act VII · Madhya Pradesh Public Service Commission</span>
+  <h2 class="title">MPPSC — the State chapter <span>inside the national atlas.</span></h2>
+  <p class="lede">The MPPSC applies the State-PSC framework to Madhya Pradesh. Appointment, retirement age, suspension, reporting and funding must each be mapped to the <b>State</b> — not copied from the UPSC.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--jade)"><span class="ic">🗓️</span><span class="big">1956</span><h3>Constituted</h3><p><b>1 November 1956</b>, with the reorganisation of States (areas of old Madhya Pradesh, Madhya Bharat, Vindhya Pradesh and Bhopal).</p></article>
+    <article class="card" style="--accent:var(--gld)"><span class="ic">📍</span><span class="big">INDORE</span><h3>Headquarters</h3><p>Verify office details on the official site. Do not assume unverified regional offices.</p></article>
+    <article class="card" style="--accent:var(--sap)"><span class="ic">⏳</span><span class="big">6 / 62</span><h3>Tenure</h3><p>Six years or age <b>62</b>, whichever is earlier — Chairman and members.</p></article>
+    <article class="card" style="--accent:var(--ame)"><span class="ic">🏛️</span><span class="big">315</span><h3>Anchor</h3><p>A State constitutional commission — not a government department.</p></article>
+  </div>
+
+  <h3 class="sub">🧭 MPPSC’s constitutional coordinates</h3>
+  <div class="tw">
+    <table>
+      <caption>🌳 Apply the State-PSC rules correctly to Madhya Pradesh</caption>
+      <thead>
+        <tr><th>Question</th><th>MPPSC answer</th><th>Constitutional anchor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Who appoints?</td><td>The Governor of Madhya Pradesh appoints the Chairman and other members.</td><td>316(1)</td></tr>
+        <tr><td>What is the composition requirement?</td><td>As nearly as may be one-half must have held government office for at least ten years at appointment.</td><td>Proviso to 316(1)</td></tr>
+        <tr><td>How long is the term?</td><td>Six years from entering office or age 62, whichever is earlier.</td><td>316(2)</td></tr>
+        <tr><td>To whom is resignation addressed?</td><td>The Governor of Madhya Pradesh, in writing.</td><td>316(2)(a)</td></tr>
+        <tr><td>Who designates an Acting Chairman?</td><td>The Governor designates one of the other members.</td><td>316(1A)</td></tr>
+        <tr><td>Who removes?</td><td>The President of India — not the Governor.</td><td>317</td></tr>
+        <tr><td>Who may suspend under the inquiry mechanism?</td><td>The Governor, after a reference concerning that member has been made to the Supreme Court under 317(1).</td><td>317(2)</td></tr>
+        <tr><td>Who makes Article 318 regulations?</td><td>The Governor; serving members’ conditions cannot be varied to their disadvantage.</td><td>318</td></tr>
+        <tr><td>Where are expenses charged?</td><td>The Consolidated Fund of Madhya Pradesh.</td><td>322</td></tr>
+        <tr><td>Where does the annual report go?</td><td>To the Governor, who causes it and the non-acceptance memorandum to be laid before the State Legislature.</td><td>323(2)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🧠 MPPSC’s five-coordinate lock</span>
+    <b>“Governor brings · President removes · Governor may suspend · State Fund pays · Assembly scrutinises.”</b><br>
+    Age door: <b>62</b>. Time door: <b>6 years</b>. Whichever opens first ends the term.
+  </div>
+
+  <h3 class="sub">🗺️ History, territory &amp; institutional continuity</h3>
+  <p class="lede">MPPSC was constituted on <b>1 November 1956</b> in the setting of the States Reorganisation Act, 1956. The reorganised State brought together territories from the former Madhya Pradesh, Madhya Bharat, Vindhya Pradesh and Bhopal arrangements. Its headquarters is at <b>Indore</b>. Later territorial reorganisation, including the creation of Chhattisgarh in 2000, must be understood through the relevant reorganisation law rather than by assuming that today’s boundaries existed in 1956.</p>
+
+  <div class="callout">
+    🏛️ <b>Constitutional permanence needs careful wording:</b> a State executive cannot simply abolish the constitutional PSC framework. But Article 315 itself permits a Joint Commission or a UPSC service arrangement, and reorganisation legislation can make consequential institutional arrangements. So “a State commission can only ever be changed by constitutional amendment” is too absolute.
+  </div>
+
+  <h3 class="sub">⚙️ What MPPSC actually does</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)">
+      <span class="ic">📝</span>
+      <h3>Competitive examinations</h3>
+      <p>Conducts notified examinations for State services and other posts assigned to it. The <b>State Service Examination</b> is a major route, but MPPSC’s work is not confined to that examination.</p>
+      <p>Other examinations or selections — such as the State Forest Service or specialist recruitment — must be read through their own advertisements, service rules and current schemes.</p>
+    </article>
+    <article class="card" style="--accent:var(--sap)">
+      <span class="ic">🔬</span>
+      <h3>Recruitment by selection</h3>
+      <p>Notified specialist, teaching, medical, technical or other posts may use shortlisting, written tests, interviews or combinations prescribed by the applicable rules.</p>
+      <p>Do not assume that every post follows the State Service Examination pattern or that an interview is constitutionally compulsory for every recruitment.</p>
+    </article>
+    <article class="card" style="--accent:var(--gld)">
+      <span class="ic">💬</span>
+      <h3>Service advice</h3>
+      <p>Advises on recruitment methods, principles of appointment and promotion, suitability, disciplinary matters, legal-defence cost claims and injury-pension claims within Article 320 and the applicable exemption framework.</p>
+    </article>
+    <article class="card" style="--accent:var(--ame)">
+      <span class="ic">🌐</span>
+      <h3>Additional statutory functions</h3>
+      <p>Additional responsibilities may be conferred by law under Article 321. A particular university, corporation or local body is covered only where the relevant legal arrangement actually provides for it.</p>
+    </article>
+  </div>
+
+  <div class="trap">
+    🚨 <b>Not MPPSC’s general job:</b> maintaining every employee’s service book, training the entire State civil service, deciding every transfer, imposing every disciplinary penalty, or controlling every State recruiting agency. These belong to the competent departments and authorities unless a specific law or rule provides otherwise.
+  </div>
+
+  <h3 class="sub">🎯 State Service Examination: understand the architecture</h3>
+  <p class="lede">The familiar pathway is <b>Preliminary examination → Main examination → Interview/personality assessment</b>, followed by recommendation and the competent government authority’s appointment process. Exact papers, marks, qualifying standards, category relaxations, eligibility dates and ranking rules are notification-sensitive.</p>
+
+  <div class="flow">
+    <div class="node"><b>① Read the notification</b>Posts · rules · dates · eligibility</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>② Preliminary stage</b>Screening under the notified scheme</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>③ Main stage</b>Assessment under current rules</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>④ Interview</b>Where the scheme prescribes it</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>⑤ Recommendation</b>Then lawful appointment checks</div>
+  </div>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--cya)">
+      <h3>📋 Before applying: a document audit</h3>
+      <ul>
+        <li><b>Eligibility:</b> check the qualification, recognition, age cut-off and post-specific conditions.</li>
+        <li><b>Category claims:</b> use the prescribed certificates, validity periods and issuing authorities.</li>
+        <li><b>Residence and benefits:</b> distinguish eligibility to compete from eligibility for particular State benefits or reservation.</li>
+        <li><b>Special standards:</b> verify physical, medical, professional-registration and experience requirements where applicable.</li>
+        <li><b>Corrections:</b> read corrigenda, revised calendars and official clarifications — not only the original advertisement.</li>
+      </ul>
+    </article>
+    <article class="card" style="--accent:var(--ros)">
+      <h3>⚖️ Reservation, litigation &amp; result interpretation</h3>
+      <p>Reservation operates through the Constitution, applicable legislation, rules and binding judicial orders. A result may contain provisional categories, withheld recommendations or other qualifications arising from ongoing proceedings.</p>
+      <p>Never convert an interim order or a temporary result formula into a permanent statement of constitutional law. Read the operative order and the notification governing that particular recruitment.</p>
+    </article>
+  </div>
+
+  <h3 class="sub">🔐 MPPSC after tenure: the two essential routes</h3>
+  <div class="tw">
+    <table>
+      <caption>🚪 Article 319 applied to MPPSC</caption>
+      <thead><tr><th>Former office</th><th>Permitted PSC destinations</th><th>Important limit</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>MPPSC Chairman</td>
+          <td>UPSC Chairman or member; Chairman of another State PSC.</td>
+          <td>Not ordinary government employment; not another term as Chairman of the same commission.</td>
+        </tr>
+        <tr>
+          <td>MPPSC member other than Chairman</td>
+          <td>UPSC Chairman or member; Chairman of MPPSC or another State PSC.</td>
+          <td>Not routine reappointment as an ordinary member of the same commission.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    ⚖️ <b>“Employment under government” is a legal expression:</b> Article 319 should not be paraphrased as a ban on every conceivable constitutional, elective or public office. The nature of the proposed office matters. Equally, the absence of an Article 319 prohibition does not override other disqualifications, professional rules or conflict-of-interest duties.
+  </div>
+
+  <h3 class="sub">💰 Finance &amp; 📊 reporting in Madhya Pradesh</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--lim)">
+      <h3>💰 Charged, but still accountable</h3>
+      <p>MPPSC’s expenses are charged on the State Consolidated Fund. They are not put to the Assembly’s vote as a demand for grant, but may be discussed and must remain within the budget, appropriation and financial-rule framework.</p>
+      <p><b>Charged ≠ automatically released, unlimited or unaudited.</b></p>
+    </article>
+    <article class="card" style="--accent:var(--gld)">
+      <h3>📊 Report plus reasons</h3>
+      <p>The annual report goes to the Governor. It is laid before the State Legislature together with a memorandum explaining relevant cases in which the Commission’s advice was not accepted.</p>
+      <p>Article 323 does not prescribe a universal July–August submission date.</p>
+    </article>
+  </div>
+
+  <h3 class="sub">🧯 Repairing the older MPPSC notes</h3>
+  <div class="tw">
+    <table>
+      <caption>❌ Unsafe statement → ✅ accurate replacement</caption>
+      <thead><tr><th>Unsafe statement</th><th>Accurate replacement</th></tr></thead>
+      <tbody>
+        <tr><td>“Exactly 50% bureaucrats and 50% outside experts.”</td><td>“As nearly as may be one-half” with ten years’ government office; no mandatory outsider quota.</td></tr>
+        <tr><td>“Members may be reappointed within a total six-year limit.”</td><td>Article 316(3) bars reappointment to that office; Article 319 permits specified different PSC offices.</td></tr>
+        <tr><td>“Only the President can suspend an MPPSC member.”</td><td>The Governor has the Article 317(2) suspension power for a State Commission.</td></tr>
+        <tr><td>“A former MPPSC Chairman can never join the UPSC.”</td><td>Article 319(b) expressly permits UPSC Chairmanship or membership.</td></tr>
+        <tr><td>“Every temporary appointment below one year is exempt.”</td><td>Check the actual State exemption regulation and its conditions.</td></tr>
+        <tr><td>“Charged expenses mean automatic funding.”</td><td>No vote on the charged item; budgeting, appropriation, lawful release and audit continue.</td></tr>
+        <tr><td>“Regional offices and annual statistics are fixed facts.”</td><td>Use the current official contact directory and the relevant annual report.</td></tr>
+        <tr><td>“All State universities and PSUs recruit through MPPSC.”</td><td>Coverage requires the applicable law, rules or lawful recruitment arrangement.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🧠 MPPSC in one breath</span>
+    <b>“1956 · Indore · Governor appoints · 6/62 · President removes · State Fund · Governor-to-Legislature.”</b>
+  </div>
+
+  <div class="callout">
+    🔎 <b>Official starting point:</b>
+    <a href="https://mppsc.mp.gov.in/" target="_blank" rel="noopener noreferrer">Madhya Pradesh Public Service Commission ↗</a>.
+    Consult its current advertisements, syllabus, examination scheme, corrigenda, results, annual reports and official contact details.
+  </div>
+</div>
+</section>
+
+<!-- ================= CASES ================= -->
+<section class="chapter" id="cases" data-scene="08" style="--accent:var(--ros)">
+<div class="wrap reveal">
+  <span class="kicker">🏛️ Act VIII · The Judicial Guardrails</span>
+  <h2 class="title">Independent selection. <span>Constitutionally reviewable decisions.</span></h2>
+  <p class="lede">The courts protect institutional independence without treating recruitment as a law-free zone. Separate three questions: <b>was the Commission properly constituted; was the selection fair; and was the final governmental decision lawful?</b> A judgment on one question does not automatically answer the others.</p>
+
+  <div class="tw">
+    <table>
+      <caption>⚖️ Essential case matrix: issue → principle → careful use</caption>
+      <thead><tr><th>Case</th><th>Issue</th><th>Core principle</th><th>Use carefully</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>State of U.P. v. Manbodhan Lal Srivastava · 1957</td>
+          <td>Article 320(3)(c) consultation.</td>
+          <td>The consultation requirement was treated as directory in the relevant sense; non-consultation did not by itself invalidate the disciplinary action.</td>
+          <td>Not permission to disregard statutory rules, fair procedure or Article 323 accountability.</td>
+        </tr>
+        <tr>
+          <td>Ashok Kumar Yadav v. State of Haryana · 1985</td>
+          <td>Selection, interviews and relationships involving selection-body members.</td>
+          <td>Fairness and avoidance of a reasonable apprehension of bias are essential. A member related to a candidate must not participate in interviewing that candidate.</td>
+          <td>Read the institutional context; do not infer that every selection is automatically void.</td>
+        </tr>
+        <tr>
+          <td>Shankarsan Dash v. Union of India · 1991</td>
+          <td>Rights of a candidate on a select list.</td>
+          <td>Selection ordinarily creates no indefeasible right to appointment; the State nevertheless cannot act arbitrarily.</td>
+          <td>A general public-employment principle, not a clause-specific PSC judgment.</td>
+        </tr>
+        <tr>
+          <td>Union of India v. S. K. Kapoor · 2011</td>
+          <td>UPSC advice in disciplinary proceedings.</td>
+          <td>Where advice is relied upon against the employee, natural justice requires a meaningful opportunity to respond to it.</td>
+          <td>Read with the applicable disciplinary rules; non-binding advice can still affect fair-hearing duties.</td>
+        </tr>
+        <tr>
+          <td>State of Punjab v. Salil Sabhlok · 2013</td>
+          <td>Appointment of a State PSC Chairman.</td>
+          <td>Constitutional responsibility demands attention to integrity, competence and institutional purpose; the appointment process is not beyond judicial review.</td>
+          <td>Judicial review does not make courts the ordinary appointing authority or create a universal new qualification.</td>
+        </tr>
+        <tr>
+          <td>Tej Prakash Pathak v. Rajasthan High Court · 2024</td>
+          <td>Changes to recruitment criteria during a selection process.</td>
+          <td>Recruitment must follow the governing rules and Article 14. Mid-process changes to notified eligibility or selection conditions face strict legal constraints.</td>
+          <td>Check whether the governing rules or advertisement permit the change and whether it is non-arbitrary; avoid an exceptionless slogan.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub">🧩 Four recurring recruitment disputes</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--ros)">
+      <span class="ic">🪞</span><h3>Bias &amp; conflict of interest</h3>
+      <p>Actual dishonesty is not the only concern. Participation, relationships, access to confidential material and the reasonable apprehension of bias may matter. Recusal must be effective, documented and appropriate to the process.</p>
+    </article>
+    <article class="card" style="--accent:var(--sap)">
+      <span class="ic">🧾</span><h3>Eligibility &amp; prescribed dates</h3>
+      <p>Qualifications, age, experience and certificates must be assessed against the governing rules and their cut-off dates. A mandatory rule cannot be casually waived.</p>
+    </article>
+    <article class="card" style="--accent:var(--jade)">
+      <span class="ic">📝</span><h3>Evaluation &amp; expert assessment</h3>
+      <p>Courts ordinarily respect expert academic and selection judgments rather than re-marking answers. Intervention depends on recognised grounds such as rule violation, demonstrable error, mala fides or an arbitrary process.</p>
+    </article>
+    <article class="card" style="--accent:var(--gld)">
+      <span class="ic">📣</span><h3>Transparency &amp; disclosure</h3>
+      <p>Disclosure involves the RTI framework, privacy, examination integrity and the stage of recruitment. “Everything is secret” and “everything must be disclosed immediately” are both unreliable absolutes.</p>
+    </article>
+  </div>
+
+  <h3 class="sub">⚖️ The review pathway</h3>
+  <div class="flow">
+    <div class="node"><b>📜 Identify the rule</b>Constitution · statute · recruitment rules</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🔎 Identify the defect</b>Bias · ineligibility · arbitrariness · unfair hearing</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🧾 Identify the evidence</b>Notice · record · reasons · relevant orders</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🏛️ Appropriate remedy</b>Competent forum · limitation · suitable relief</div>
+  </div>
+
+  <div class="callout">
+    🏛️ <b>Forum precision:</b> High Courts exercise judicial review under Article 226; Article 32 concerns enforcement of Fundamental Rights. Service tribunals may have jurisdiction under the applicable legislation. A PSC itself is not a court of appeal against every employment decision.
+  </div>
+
+  <div class="trap">
+    🚨 <b>Avoid invented holdings:</b> do not attribute a universal “record reasons for every disagreement” rule to an unrelated case. Anchor consultation to <i>Manbodhan Lal</i>, fair disclosure to <i>S. K. Kapoor</i>, select-list rights to <i>Shankarsan Dash</i>, and institutional appointments to <i>Salil Sabhlok</i>.
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🧠 The case chain</span>
+    <b>Manbodhan = consultation · Ashok = bias · Shankarsan = no automatic appointment · Kapoor = fair response · Salil = institutional integrity.</b>
+  </div>
+</div>
+</section>
+
+<!-- ================= REFORMS ================= -->
+<section class="chapter" id="reforms" data-scene="09" style="--accent:var(--cya)">
+<div class="wrap reveal">
+  <span class="kicker">🔭 Act IX · The Institution Tomorrow</span>
+  <h2 class="title">Protect the examination. <span>Improve the institution.</span></h2>
+  <p class="lede">A sound reform agenda preserves impartiality while improving speed, accessibility and public trust. Distinguish <b>existing law</b>, <b>documented practice</b> and <b>proposals</b>. A futuristic interface is not evidence that a particular recruitment has already adopted online prelims, remote interviews or AI evaluation.</p>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)">
+      <span class="ic">🧭</span>
+      <h3>Appointments with institutional purpose</h3>
+      <p>Transparent consideration of integrity, competence, experience and conflicts can strengthen confidence in PSC leadership. A structured selection process and a reasoned institutional record are reform ideas consistent with constitutional responsibility.</p>
+      <p>Do not present a proposed search committee or public hearing as an existing requirement of Article 316.</p>
+    </article>
+    <article class="card" style="--accent:var(--sap)">
+      <span class="ic">⏱️</span>
+      <h3>Predictable recruitment calendars</h3>
+      <p>Better vacancy planning, timely requisitions, realistic schedules and stage-wise updates reduce uncertainty. Departments must supply clear rules and vacancy data; delay is not always attributable to the Commission alone.</p>
+    </article>
+    <article class="card" style="--accent:var(--ros)">
+      <span class="ic">🔐</span>
+      <h3>Examination integrity</h3>
+      <p>Secure question-setting, controlled printing and transport, vendor accountability, access logs, incident response and protection against impersonation are essential. Technology should support auditable safeguards, not merely create an appearance of security.</p>
+    </article>
+    <article class="card" style="--accent:var(--gld)">
+      <span class="ic">♿</span>
+      <h3>Accessible and inclusive assessment</h3>
+      <p>Reasonable accommodation, accessible centres, clear scribe rules, usable digital forms and lawful language options turn formal equality into real opportunity. Apply the disability-rights framework and current examination instructions.</p>
+    </article>
+    <article class="card" style="--accent:var(--ame)">
+      <span class="ic">🧪</span>
+      <h3>Assessment quality</h3>
+      <p>Questions should test the competencies a service requires. Clear rubrics, trained evaluators, careful moderation and validated interview methods improve consistency without reducing selection to an opaque algorithm.</p>
+    </article>
+    <article class="card" style="--accent:var(--cya)">
+      <span class="ic">📊</span>
+      <h3>Better public reporting</h3>
+      <p>Annual reports can make cycle times, vacancies, accessibility measures, litigation trends and advice deviations easier to understand. Publish defined datasets with the year, denominator and methodology attached.</p>
+    </article>
+  </div>
+
+  <h3 class="sub">🛡️ Public Examinations Act, 2024: the correct connection</h3>
+  <p class="lede">The <b>Public Examinations (Prevention of Unfair Means) Act, 2024</b> creates a statutory framework against specified unfair means and organised malpractice in the public examinations it covers. UPSC is among the authorities listed in its Schedule. Its coverage is not the same as automatic application to every State examination merely because that examination is public.</p>
+  <div class="callout">
+    📜 <b>Legal precision:</b> read the Act, its Rules, commencement notifications and Schedule. For an MPPSC examination, separately identify the applicable State and other relevant laws; do not assume the central Act supplies the entire State examination framework.
+  </div>
+
+  <h3 class="sub">🤖 Digital reform: useful, but not magical</h3>
+  <div class="flow">
+    <div class="node"><b>📥 Reliable applications</b>Accessible forms · clear validation</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🔐 Secure processing</b>Least privilege · verified vendors</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🧾 Auditable decisions</b>Logs · reasons · human responsibility</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>🛡️ Candidate safeguards</b>Privacy · correction · grievance route</div>
+  </div>
+
+  <div class="trap">
+    🚫 <b>Do not recycle unsupported “current facts”:</b> fixed urban–rural success ratios, universal overseas examination centres, two-stage CSE interviews, fully computer-based CSE prelims, permanent salary figures, or fixed annual application totals. Every such claim needs a dated, official source.
+  </div>
+
+  <h3 class="sub">✍️ Mains lens: independence without isolation</h3>
+  <div class="grid two">
+    <article class="card" style="--accent:var(--jade)">
+      <h3>✅ What deserves protection</h3>
+      <p>Security of tenure, fair assessment, necessary confidentiality, reasoned professional advice and insulation from patronage. Lawful reservation is not the opposite of merit; recruitment operates within the equality framework.</p>
+    </article>
+    <article class="card" style="--accent:var(--gld)">
+      <h3>🔎 What deserves scrutiny</h3>
+      <p>Unexplained delays, conflicts of interest, poor communication, opaque procurement, inaccessible procedures and arbitrary departures from notified rules. Independence is a reason for higher institutional standards — not immunity from them.</p>
+    </article>
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🧠 Reform compass · I-N-T-E-G-R-I-T-Y</span>
+    <b>I</b>mpartial appointments · <b>N</b>otified timelines · <b>T</b>ransparent reporting ·
+    <b>E</b>qual access · <b>G</b>ood assessment · <b>R</b>esponsible technology ·
+    <b>I</b>ntegrity controls · <b>T</b>raceable decisions · <b>Y</b>early review.
+  </div>
+</div>
+</section>
+
+<!-- ================= REVISION ================= -->
+<section class="chapter" id="revision" data-scene="10" style="--accent:var(--ame)">
+<div class="wrap reveal">
+  <span class="kicker">🧠 Act X · The Retrieval Observatory</span>
+  <h2 class="title">Make the knowledge move. <span>Then make it stay.</span></h2>
+  <p class="lede">Start with the article corridor, test the difficult distinctions, then use the simulators. The tools are explanatory illustrations — not legal opinions about a particular appointment or recruitment.</p>
+
+  <div class="grid">
+    <article class="card" style="--accent:var(--gld)">
+      <h3>🏛️ The nine-room palace</h3>
+      <p><b>315</b> Establish · <b>316</b> Appoint · <b>317</b> Remove · <b>318</b> Regulate · <b>319</b> Restrict · <b>320</b> Function · <b>321</b> Extend · <b>322</b> Finance · <b>323</b> Report.</p>
+    </article>
+    <article class="card" style="--accent:var(--sap)">
+      <h3>⏳ The tenure lock</h3>
+      <p><b>Six years</b> is the time ceiling. <b>65</b> is the UPSC age ceiling. <b>62</b> is the State/Joint age ceiling. The earlier event governs.</p>
+    </article>
+    <article class="card" style="--accent:var(--ros)">
+      <h3>⚖️ The State removal trap</h3>
+      <p><b>Governor appoints; Governor may suspend after reference; President removes.</b> The Supreme Court inquiry belongs to the misbehaviour route.</p>
+    </article>
+    <article class="card" style="--accent:var(--jade)">
+      <h3>💬 The consultation lock</h3>
+      <p><b>320</b> sets functions and consultation. <b>323</b> supplies report-and-memorandum accountability. Consultation does not mean concurrence.</p>
+    </article>
+  </div>
+
+  <h3 class="sub">🧪 Constitutional tools laboratory</h3>
+  <div class="grid two">
+    <article class="card lab-card" style="--accent:var(--gld)">
+      <h3>⏳ Tenure illustrator</h3>
+      <p>Use whole years of age for a simplified illustration. Actual cessation dates need the date of birth, the date of entering office and the legal computation.</p>
+      <label for="tenureBody">Commission
+        <select id="tenureBody">
+          <option value="union">UPSC · age ceiling 65</option>
+          <option value="state">State PSC / MPPSC · age ceiling 62</option>
+          <option value="joint">Joint State PSC · age ceiling 62</option>
+        </select>
+      </label>
+      <label for="joinAge">Illustrative age on entering office
+        <input id="joinAge" type="number" min="18" max="80" step="1" value="60">
+      </label>
+      <output id="tenureOut" aria-live="polite"></output>
+      <p class="small">Simplified rule: the shorter of six years and the time remaining to the age ceiling, i.e. min(6, ceiling − age).</p>
+    </article>
+
+    <article class="card lab-card" style="--accent:var(--saf)">
+      <h3>🔐 Article 319 pathfinder</h3>
+      <p>Select the former substantive office. Read the permitted PSC destinations alongside the continuing bar on other government employment.</p>
+      <label for="formerOffice">Former office
+        <select id="formerOffice">
+          <option value="uc">UPSC Chairman</option>
+          <option value="um">UPSC member other than Chairman</option>
+          <option value="sc">State PSC Chairman</option>
+          <option value="sm">State PSC member other than Chairman</option>
+        </select>
+      </label>
+      <output id="pathOut" aria-live="polite"></output>
+      <p class="small">This summarises the named PSC routes. Whether a particular office counts as “employment under government” may need legal analysis.</p>
+    </article>
+
+    <article class="card lab-card" style="--accent:var(--ros)">
+      <h3>⚖️ Removal-route navigator</h3>
+      <label for="removalBody">Commission
+        <select id="removalBody">
+          <option value="union">UPSC</option>
+          <option value="state">State PSC / MPPSC</option>
+          <option value="joint">Joint State PSC</option>
+        </select>
+      </label>
+      <label for="removalGround">Ground
+        <select id="removalGround">
+          <option value="misbehaviour">Misbehaviour</option>
+          <option value="contract">Government-contract interest under 317(4)</option>
+          <option value="insolvent">Adjudged insolvent</option>
+          <option value="paid">Outside paid employment during tenure</option>
+          <option value="infirmity">Infirmity of mind or body</option>
+        </select>
+      </label>
+      <output id="removalOut" aria-live="polite"></output>
+    </article>
+
+    <article class="card lab-card" style="--accent:var(--jade)">
+      <h3>🧩 Which article handles this?</h3>
+      <label for="articleProblem">Choose a constitutional problem
+        <select id="articleProblem">
+          <option value="joint">Two States want a shared commission</option>
+          <option value="assist">One State wants UPSC to serve its needs</option>
+          <option value="scheme">Two States need a special-qualification recruitment scheme</option>
+          <option value="members">Number of members needs regulation</option>
+          <option value="exempt">Government wants a lawful consultation exemption</option>
+          <option value="extra">Local-authority service functions are to be added</option>
+          <option value="finance">Whether commission expenses are voted</option>
+          <option value="report">Advice was not accepted: legislative accountability</option>
+        </select>
+      </label>
+      <output id="articleOut" aria-live="polite"></output>
+    </article>
+  </div>
+
+  <noscript>
+    <div class="callout">📖 The tools need JavaScript. Their underlying rules are fully explained in the article dossiers and comparison tables.</div>
+  </noscript>
+
+  <h3 class="sub">🎯 Scenario cards: decide before revealing</h3>
+  <div class="grid two">
+    <details class="quiz">
+      <summary>🌳 An MPPSC member is accused of misconduct. Can the Governor remove the member?</summary>
+      <p><b>No.</b> Removal is by the President under Article 317. For misbehaviour, the Supreme Court inquiry and a report that removal is warranted are required. After the Presidential reference, the Governor may suspend under 317(2).</p>
+    </details>
+    <details class="quiz">
+      <summary>🔐 A former MPPSC member is offered the Chairmanship of MPPSC itself. Is it barred?</summary>
+      <p><b>Not by Article 319(d).</b> It expressly permits Chairmanship of that or another State PSC. This is a different office, not ordinary reappointment as a member.</p>
+    </details>
+    <details class="quiz">
+      <summary>💰 The Assembly does not vote on MPPSC’s charged expenses. Are appropriation and audit unnecessary?</summary>
+      <p><b>No.</b> Charged status removes the vote on that expenditure as a demand for grant; it does not remove the budget, appropriation, financial-rule or audit framework.</p>
+    </details>
+    <details class="quiz">
+      <summary>📝 A candidate appears on a PSC select list. Has the PSC appointed the candidate?</summary>
+      <p><b>No.</b> Recommendation and appointment are distinct. The competent authority appoints, subject to the governing rules and non-arbitrariness.</p>
+    </details>
+    <details class="quiz">
+      <summary>🤝 In a bicameral State, the Assembly alone approves a Joint PSC proposal. Is the Article 315 process complete?</summary>
+      <p><b>No.</b> Each House of each participating State Legislature must pass the resolution. Parliament may then provide for the Joint Commission by law.</p>
+    </details>
+    <details class="quiz">
+      <summary>💬 An officer says every disciplinary order made without PSC consultation is automatically void. Correct?</summary>
+      <p><b>No.</b> Check the consultation framework, exemptions, governing rules and natural justice. <i>Manbodhan Lal</i> rejects automatic invalidity on the bare constitutional non-consultation argument.</p>
+    </details>
+    <details class="quiz">
+      <summary>📋 A government wants to reduce an existing member’s service benefits to express displeasure. Permissible?</summary>
+      <p><b>No.</b> Article 318 protects against disadvantageous variation after appointment. The safeguard prevents indirect pressure through worsened service conditions.</p>
+    </details>
+    <details class="quiz">
+      <summary>🌐 An executive announcement says every municipal post is now recruited through the PSC. Is Article 321 satisfied?</summary>
+      <p><b>Not by that announcement.</b> Article 321 requires an Act of the competent Legislature to confer the additional functions. Check whether another applicable law already supplies the authority.</p>
+    </details>
+  </div>
+
+  <h3 class="sub">⚡ Rapid recall: the precision round</h3>
+  <div class="ctrls" style="justify-content:flex-start">
+    <button class="btn" id="revealAnswers" type="button">＋ Reveal revision answers</button>
+    <button class="btn" id="hideAnswers" type="button">− Hide revision answers</button>
+  </div>
+
+  <div id="recallList">
+    <details class="quiz"><summary>1. Which Part and Chapter contain the PSC provisions?</summary><p><b>Part XIV, Chapter II, Articles 315–323.</b> The Part is titled “Services under the Union and the States”.</p></details>
+    <details class="quiz"><summary>2. What is the exact composition expression in Article 316?</summary><p><b>“As nearly as may be one-half”.</b> Those members must have held government office for at least ten years at their respective appointment dates.</p></details>
+    <details class="quiz"><summary>3. Is a fixed membership strength stated in the Constitution?</summary><p><b>No.</b> Article 318 permits regulations determining the number of members and staff.</p></details>
+    <details class="quiz"><summary>4. Is reappointment to the same PSC office ordinarily permitted?</summary><p><b>No.</b> Article 316(3) bars reappointment to that office. Specified different-office routes appear in Article 319.</p></details>
+    <details class="quiz"><summary>5. Must an Acting Chairman be the senior-most member?</summary><p><b>No constitutional rule says so.</b> Under 316(1A), the appropriate authority appoints one of the other members to perform the duties.</p></details>
+    <details class="quiz"><summary>6. Which three Article 317(3) grounds avoid the 317(1) inquiry route?</summary><p><b>Adjudged insolvency, outside paid employment during tenure, and infirmity of mind or body.</b> The President still makes the removal order.</p></details>
+    <details class="quiz"><summary>7. Where is government-contract interest treated as deemed misbehaviour?</summary><p><b>Article 317(4)</b>, with its incorporated-company exception.</p></details>
+    <details class="quiz"><summary>8. Can an SPSC Chairman later become an ordinary UPSC member?</summary><p><b>Yes.</b> Article 319(b) permits UPSC Chairmanship or membership and Chairmanship of another State PSC.</p></details>
+    <details class="quiz"><summary>9. Can a UPSC member become an ordinary SPSC member under Article 319(c)?</summary><p><b>No.</b> The named routes are UPSC Chairman or State PSC Chairman.</p></details>
+    <details class="quiz"><summary>10. Distinguish Article 315(4) from Article 320(2).</summary><p><b>315(4):</b> the Governor requests UPSC service for a State, with Presidential approval. <b>320(2):</b> UPSC assists two or more requesting States with joint recruitment schemes for services requiring special qualifications.</p></details>
+    <details class="quiz"><summary>11. What are Article 320’s five advisory heads?</summary><p><b>Methods; principles and suitability; discipline; legal-defence cost claims; injury-pension claims.</b> The article also covers matters referred to the Commission.</p></details>
+    <details class="quiz"><summary>12. What does Article 320(4) expressly exclude from consultation?</summary><p>The manner of making provision under <b>Article 16(4)</b> and giving effect to <b>Article 335</b>.</p></details>
+    <details class="quiz"><summary>13. What is the minimum laying period in Article 320(5)?</summary><p><b>Not less than fourteen days</b> for exemption regulations, subject to modification or repeal by the legislature.</p></details>
+    <details class="quiz"><summary>14. Does Article 321 itself cover every public institution automatically?</summary><p><b>No.</b> The additional function must be provided for by the competent Legislature’s Act.</p></details>
+    <details class="quiz"><summary>15. What accompanies an Article 323 annual report?</summary><p>A <b>memorandum explaining the reasons for non-acceptance</b> in the relevant cases where the Commission’s advice was not accepted.</p></details>
+    <details class="quiz"><summary>16. Is UPSC the administrative superior of all State PSCs?</summary><p><b>No.</b> State PSCs are not UPSC regional offices, and the Joint Commission is not an appellate tier.</p></details>
+    <details class="quiz"><summary>17. Which 1976 amendment raised the State/Joint PSC retirement age?</summary><p>The <b>41st Constitutional Amendment</b> raised it from 60 to 62. UPSC’s ceiling is 65.</p></details>
+    <details class="quiz"><summary>18. Which “IFS” is an All India Service?</summary><p>The <b>Indian Forest Service</b>. The Indian Foreign Service is a Central service.</p></details>
+    <details class="quiz"><summary>19. Is a Third Schedule oath prescribed for PSC members?</summary><p><b>No.</b> Do not invent a constitutional oath for these offices.</p></details>
+    <details class="quiz"><summary>20. What are MPPSC’s core historical coordinates?</summary><p><b>1 November 1956; headquarters at Indore.</b> Verify current office-holders, strength, addresses and statistics from official records.</p></details>
+  </div>
+
+  <h3 class="sub">✍️ Mains answer studio</h3>
+  <p class="lede">A strong answer connects constitutional design with practical purpose. Begin with status and mandate, explain the safeguards, acknowledge the advisory limits, then assess transparency and recruitment integrity. Avoid claiming that independence means immunity from every governmental or judicial check.</p>
+
+  <div class="flow">
+    <div class="node"><b>① Locate</b>Part XIV · Chapter II · 315–323</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>② Explain</b>Recruitment and expert service advice</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>③ Protect</b>316 · 317 · 318 · 319 · 322</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>④ Balance</b>323 · review · audit · lawful rules</div>
+    <span class="arrow" aria-hidden="true">→</span>
+    <div class="node"><b>⑤ Improve</b>Integrity · accessibility · timeliness</div>
+  </div>
+
+  <blockquote class="quote">
+    Public Service Commissions translate equal opportunity into an institutional process: impartial selection, expert advice and protected judgment, accompanied by legislative explanation and judicial scrutiny.
+    <small>Suggested answer synthesis — not a quotation attributed to any person or court.</small>
+  </blockquote>
+
+  <h3 class="sub">📚 A compact constitutional glossary</h3>
+  <dl class="gl">
+    <div><dt>🏛️ Constitutional body</dt><dd>An institution whose essential existence or framework is provided by the Constitution; its actual powers still depend on the relevant provisions.</dd></div>
+    <div><dt>📜 Statutory body</dt><dd>An institution created by legislation. A Joint State PSC is created by Parliamentary law under the enabling constitutional provision.</dd></div>
+    <div><dt>💬 Consultation</dt><dd>Seeking and considering the relevant expert advice; not the same as requiring agreement or concurrence.</dd></div>
+    <div><dt>🖋️ Appointment</dt><dd>The legally effective act of the competent appointing authority; not identical to a Commission’s recommendation.</dd></div>
+    <div><dt>🔐 Reappointment</dt><dd>A fresh appointment to the same office; distinguish it from appointment to a different PSC office expressly permitted by Article 319.</dd></div>
+    <div><dt>🛑 Suspension</dt><dd>Temporary exclusion from office under the applicable legal power; it is not removal or a final finding of wrongdoing.</dd></div>
+    <div><dt>💰 Charged expenditure</dt><dd>Expenditure not put to the legislative vote as a demand for grant; budgeting, appropriation and scrutiny still matter.</dd></div>
+    <div><dt>📝 Memorandum</dt><dd>Under Article 323, the explanation accompanying the annual report concerning relevant non-acceptance of Commission advice.</dd></div>
+    <div><dt>⚖️ Judicial review</dt><dd>Judicial examination of legality, constitutional compliance and recognised review grounds — not routine substitution of the court’s preferred candidate.</dd></div>
+    <div><dt>🧭 Directory provision</dt><dd>A provision whose breach does not necessarily carry automatic invalidity in the relevant context; it does not simply mean “optional”.</dd></div>
+  </dl>
+
+  <h3 class="sub">✅ Mastery checklist</h3>
+  <p class="lede">Tick an item only when you can explain it without looking. Progress is stored locally in this browser when storage is available; nothing is sent to a server.</p>
+
+  <div class="pbar" id="masteryProgress" role="progressbar" aria-label="Study mastery completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span id="masteryBar"></span>
+  </div>
+  <p class="small" id="masteryStatus" role="status"></p>
+
+  <div class="checks" id="masteryChecks">
+    <label class="ck"><input type="checkbox"><span>I can name all nine articles in order and explain their purposes.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can distinguish Union, State and Joint Commissions without inventing a hierarchy.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know the Joint PSC resolutions and Parliamentary-law requirements.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can distinguish Article 315(4) assistance from Article 320(2) joint schemes.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can state the precise one-half experience rule.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know 6 years / 65 for UPSC and 6 years / 62 for State and Joint PSCs.</span></label>
+    <label class="ck"><input type="checkbox"><span>I understand same-office reappointment and different-office eligibility.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can explain the Acting Chairman provision without a seniority or six-month myth.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know who appoints, suspends and removes an MPPSC member.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can separate Article 317’s misbehaviour inquiry from its other grounds.</span></label>
+    <label class="ck"><input type="checkbox"><span>I remember Article 317(4)’s contract-interest rule and exception.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can reproduce all four Article 319 routes accurately.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know Article 320’s clause map, advisory heads and fourteen-day laying rule.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can distinguish non-binding advice from absence of legal duties.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know Article 321 requires law, not merely an executive announcement.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can explain charged expenditure without claiming automatic funding.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know the Article 323 report, memorandum and legislative route.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can recall the main PSC history dates and the 41st Amendment.</span></label>
+    <label class="ck"><input type="checkbox"><span>I know MPPSC’s establishment, headquarters and constitutional coordinates.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can use the leading cases without transferring their holdings blindly.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can separate established law, current notifications and reform proposals.</span></label>
+    <label class="ck"><input type="checkbox"><span>I can write a balanced answer on independence with accountability.</span></label>
+  </div>
+  <button class="btn" id="resetMastery" type="button">↺ Reset mastery checklist</button>
+</div>
+</section>
+
+<!-- ================= SOURCES ================= -->
+<section class="chapter" id="sources" data-scene="11" style="--accent:var(--gld)">
+<div class="wrap reveal">
+  <span class="kicker">🔎 Final Act · Source Discipline</span>
+  <h2 class="title">Read the Constitution first. <span>Then trust the summary.</span></h2>
+  <p class="lede">This atlas consolidates the supplied PSC material while correcting contradictory clauses, unsupported statistics and misleading absolutes. It is a study resource, not an official reproduction, a live legal database or legal advice. The page makes no live verification request.</p>
+
+  <div class="grid two">
+    <article class="card" style="--accent:var(--gld)">
+      <span class="ic">📜</span>
+      <h3>Constitutional text</h3>
+      <p>Verify Articles 315–323, Article 378, the 41st Amendment and connected provisions in the current official Constitution. Read provisos and amendment footnotes, not only headings.</p>
+      <p><a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">Legislative Department · Constitution of India ↗</a></p>
+    </article>
+    <article class="card" style="--accent:var(--sap)">
+      <span class="ic">🇮🇳</span>
+      <h3>UPSC records</h3>
+      <p>Use official history, membership details, annual reports, recruitment rules, examination notifications, calendars and results. Attach a year to every statistical claim.</p>
+      <p><a href="https://upsc.gov.in/" target="_blank" rel="noopener noreferrer">Union Public Service Commission ↗</a></p>
+    </article>
+    <article class="card" style="--accent:var(--jade)">
+      <span class="ic">🌳</span>
+      <h3>MPPSC records</h3>
+      <p>Check the current examination scheme, syllabus, advertisements, corrigenda, eligibility conditions, results and official contact directory. State-specific rules must not be replaced by Union rules.</p>
+      <p><a href="https://mppsc.mp.gov.in/" target="_blank" rel="noopener noreferrer">Madhya Pradesh Public Service Commission ↗</a></p>
+    </article>
+    <article class="card" style="--accent:var(--ros)">
+      <span class="ic">⚖️</span>
+      <h3>Judgments</h3>
+      <p>Read the actual issue, holding and relief. Check separate opinions and subsequent treatment. A memorable textbook line may be narrower than the judgment’s legal rule.</p>
+      <p><a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">Supreme Court of India ↗</a></p>
+    </article>
+    <article class="card" style="--accent:var(--cya)">
+      <span class="ic">🗞️</span>
+      <h3>Regulations &amp; Gazette notifications</h3>
+      <p>Membership strength, service conditions, consultation exemptions and commencement dates depend on the relevant current instrument. Union and State Gazettes serve different jurisdictions.</p>
+      <p><a href="https://egazette.gov.in/" target="_blank" rel="noopener noreferrer">Gazette of India ↗</a></p>
+    </article>
+    <article class="card" style="--accent:var(--ame)">
+      <span class="ic">🏛️</span>
+      <h3>Statutes &amp; legislative records</h3>
+      <p>Use legislation for additional functions and examination-integrity law; use parliamentary and State legislative records for laying, discussion and follow-up.</p>
+      <p><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">India Code ↗</a> · <a href="https://sansad.in/" target="_blank" rel="noopener noreferrer">Parliament of India ↗</a></p>
+    </article>
+  </div>
+
+  <h3 class="sub">🧾 Final accuracy ledger</h3>
+  <div class="tw">
+    <table>
+      <caption>🔐 Keep these distinctions intact</caption>
+      <thead><tr><th>Do not confuse</th><th>With</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Recommendation</td><td>Appointment</td><td>The competent authority legally appoints.</td></tr>
+        <tr><td>Consultation</td><td>Concurrence</td><td>Expert advice does not invariably bind the final decision.</td></tr>
+        <tr><td>Directory interpretation</td><td>No institutional duty</td><td>No automatic invalidity does not mean unrestricted disregard.</td></tr>
+        <tr><td>Suspension</td><td>Removal</td><td>Different powers, consequences and constitutional conditions.</td></tr>
+        <tr><td>Same-office reappointment</td><td>Permitted different PSC office</td><td>Articles 316(3) and 319 must be read together.</td></tr>
+        <tr><td>Charged expenditure</td><td>Unlimited automatic allocation</td><td>Budgeting, appropriation and audit continue.</td></tr>
+        <tr><td>Article 320(5)</td><td>Article 323</td><td>Exemption-regulation laying versus annual reporting.</td></tr>
+        <tr><td>Constitutional independence</td><td>Blanket immunity</td><td>Law, judicial review and public accountability remain.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="trap">
+    🚨 <b>Never memorise a contradiction:</b> if an older note says “reappointment permitted”, “Governor removes”, “SPSC Chairman cannot join UPSC”, “320(2) means direct recruitment”, or “charged means automatic funds”, return to the operative constitutional text.
+  </div>
+
+  <div class="chips">
+    <a href="#foundation">🧭 Foundation</a>
+    <a href="#articles">📜 Article dossiers</a>
+    <a href="#art319">🔐 Article 319</a>
+    <a href="#mppsc">🌳 MPPSC</a>
+    <a href="#cases">⚖️ Cases</a>
+    <a href="#revision">🧠 Revision</a>
+  </div>
+
+  <div class="mnemonic">
+    <span class="lab">🎬 The final frame</span>
+    <b>Establish the body. Protect its judgment. Define its work. Fund it lawfully. Explain its advice. Preserve public trust.</b>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- ================= END CREDITS ================= -->
+<footer>
+  <p class="fin">Merit needs a process. Public trust needs an institution.</p>
+  <p>The Sentinel of Merit · Union Public Service Commission</p>
+  <p>State PSCs · Joint Commissions · MPPSC · Articles 315–323</p>
+
+  <div class="credits" aria-hidden="true">
+    <div class="roll">
+      <p>A CONSTITUTIONAL STUDY FILM</p>
+      <h4>THE SENTINEL<br>OF MERIT</h4>
+      <p>AUTEUR · CREATIVE SIGNATURE</p>
+      <h4>PIYUSH PARTE</h4>
+      <p>THE CONSTITUTIONAL CORRIDOR</p>
+      <h4>315 — 323</h4>
+      <p>UNION · STATE · JOINT</p>
+      <h4>ONE PUBLIC TRUST</h4>
+      <p>THE MADHYA PRADESH CHAPTER</p>
+      <h4>MPPSC · INDORE</h4>
+      <p>INDEPENDENCE WITH ACCOUNTABILITY</p>
+      <h4>MERIT · FAIRNESS<br>INTEGRITY</h4>
+    </div>
+  </div>
+
+  <div class="footer-signature">
+    <span class="footer-credit">🎬 AUTEUR</span>
+    <div class="split magic footer-name" data-split="PIYUSH PARTE"></div>
+    <p>Constitutional notes · A cinematic learning experience</p>
+  </div>
+
+  <button class="tribute tilt" id="tribute" type="button" aria-label="En Nenjil Kudiyirukkum. Activate for a heart constellation.">
+    <span class="heart" aria-hidden="true">❤️</span>
+    <span class="t-en">En Nenjil Kudiyirukkum</span>
+    <span class="t-ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+    <span class="small">A little warmth beyond the final frame</span>
+  </button>
+
+  <p class="small" style="max-width:780px;margin:24px auto 0">
+    Educational synthesis. Verify current rules, notifications, judgments and update-sensitive facts before examination or professional use</p>
+</footer>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top">↑</button>
+<div class="sr-only" id="liveNotice" role="status" aria-live="polite"></div>
+
+<!-- ================= CONTINUATION POLISH ================= -->
+<style>
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .footer-credit{display:block;font:500 .65rem 'JetBrains Mono',monospace;letter-spacing:6px;color:var(--cya)}
+  .footer-name{margin:8px auto;font:800 clamp(1.8rem,5vw,3rem)/1.3 'Cinzel',serif;letter-spacing:.12em}
+  .footer-signature{margin:24px auto}
+  .tribute{font:inherit;color:inherit;width:100%;text-align:center}
+  .lab-card select{width:100%}
+  .lab-card label{display:block}
+  .lab-card label select,.lab-card label input{display:block;margin-top:6px}
+  .lab-card output{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.16)}
+  .dos:target{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 55%,transparent),0 16px 50px rgba(0,0,0,.35)}
+  .auteur:focus-visible{outline-offset:7px}
+  .card,.node,.quiz,.ck{overflow-wrap:anywhere}
+  .chapter .lede+p{margin-top:14px}
+  .noscript-note{margin:20px auto;padding:15px;max-width:900px;border:1px solid var(--line);border-radius:12px;color:var(--mut)}
+
+  body.reading .intro,body.reading .lb,body.reading .hero::before,body.reading .auteur::before{display:none}
+  body.reading .reel-t,body.reading .seal svg,body.reading .roll,body.reading .heart,body.reading .t-ta,body.reading .arrow{animation:none}
+  body.reading .credits{height:auto;-webkit-mask:none;mask:none}
+  body.reading .roll{position:static;padding:22px}
+  body.reading .tilt{transform:none!important}
+  body.reading .card,body.reading .node{backdrop-filter:none}
+
+  body.still{scroll-behavior:auto}
+  body.still .tilt{transform:none!important}
+  body.still .credits{height:auto;-webkit-mask:none;mask:none}
+  body.still .roll{position:static;padding:22px}
+
+  @media(max-width:480px){
+    .eyebrow{font-size:.58rem;letter-spacing:2px;padding:8px 12px}
+    .tag-rot{font-size:.62rem;letter-spacing:.2em}
+    .intro .c{font-size:.52rem;letter-spacing:3px}
+    .intro p{letter-spacing:1px;padding-inline:14px}
+    .a-name{font-size:1.45rem;letter-spacing:.04em}
+    .a-grid{grid-template-columns:1fr;gap:6px}
+    .a-grid b{display:inline;margin-left:8px}
+    .stat{min-width:116px;padding:12px}
+    .tools input[type=search]{min-width:0;width:100%}
+    .checks{grid-template-columns:minmax(0,1fr)}
+    dl.gl{grid-template-columns:minmax(0,1fr)}
+    .card{padding:20px}
+    .dbody .tw{margin-inline:0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .sky,.leak{filter:none}
+    .tilt{transform:none!important}
+    .credits{height:auto;-webkit-mask:none;mask:none}
+    .roll{position:static;padding:22px}
+  }
+  @media print{
+    .footer-name{color:#111}
+    .footer-credit,.fin,.t-en,.lab-card output{color:#222}
+    .split .ch{color:#111!important}
+    .reveal,.js .reveal.waiting{opacity:1!important;transform:none!important}
+    .checks{display:block}
+    .ck{margin:6px 0}
+    .pbar,#masteryStatus,#resetMastery,#revealAnswers,#hideAnswers,.credits,.a-cta{display:none!important}
+    .tribute{width:100%;break-inside:avoid}
+    .hero .t1{font-size:52pt}
+    .hero .t2,.hero .t3{font-size:30pt}
+    .hero h1{line-height:1.1}
+    .lab-card output{background:#fff;border:1px solid #bbb}
+    a{color:#222}
+    details[hidden]{display:block!important}
+  }
+</style>
+
+<!-- ================= COMPLETE PAGE ENGINE ================= -->
+<script>
+(() => {
+  'use strict';
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+  const body = document.body;
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let paused = false;
+
+  const canAnimate = () => !paused && !motionQuery.matches && !body.classList.contains('reading');
+
+  const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[character]));
+
+  function announce(message) {
+    const live = $('#liveNotice');
+    if (live) live.textContent = message;
+  }
+
+  /* 01 · SPLIT TYPOGRAPHY — accessible label stays intact */
+  $$('[data-split]').forEach(element => {
+    const text = element.dataset.split || '';
+    const fragment = document.createDocumentFragment();
+    let letterIndex = 0;
+
+    if (!element.hasAttribute('aria-hidden')) {
+      element.setAttribute('role', 'img');
+      element.setAttribute('aria-label', text);
+    }
+
+    text.split(' ').forEach((word, wordIndex) => {
+      if (wordIndex > 0) {
+        const space = document.createElement('span');
+        space.className = 'sp';
+        space.setAttribute('aria-hidden', 'true');
+        fragment.append(space);
+      }
+      const wordElement = document.createElement('span');
+      wordElement.className = 'word';
+      wordElement.setAttribute('aria-hidden', 'true');
+
+      Array.from(word).forEach(character => {
+        const letter = document.createElement('span');
+        letter.className = 'ch';
+        letter.textContent = character;
+        letter.style.setProperty('--i', String(letterIndex++));
+        wordElement.append(letter);
+      });
+      fragment.append(wordElement);
+    });
+    element.replaceChildren(fragment);
+  });
+
+  /* 02 · DECORATIVE WHEEL (decorative geometry only; not an official emblem) */
+  const chakra = $('#chakra');
+  if (chakra) {
+    let spokes = '';
+    for (let index = 0; index < 24; index++) {
+      const angle = index * 15 * Math.PI / 180;
+      const x = 300 + Math.cos(angle) * 255;
+      const y = 300 + Math.sin(angle) * 255;
+      spokes += `<line x1="300" y1="300" x2="${x.toFixed(2)}" y2="${y.toFixed(2)}" stroke="currentColor" stroke-width="2"/>`;
+    }
+    chakra.innerHTML = `
+      <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" fill="none" style="color:#a5bbef">
+        <circle cx="300" cy="300" r="274" stroke="currentColor" stroke-width="3"/>
+        <circle cx="300" cy="300" r="255" stroke="currentColor" stroke-width="2"/>
+        ${spokes}
+        <circle cx="300" cy="300" r="32" fill="#050917" stroke="currentColor" stroke-width="3"/>
+        <circle cx="300" cy="300" r="9" fill="currentColor"/>
+      </svg>`;
+  }
+
+  /* 03 · POINTER LIGHT / LETTER MAGNETISM / HOLOGRAPHIC TILT */
+  const pendingPointerFrames = new Map();
+
+  function schedulePointer(element, callback) {
+    const oldFrame = pendingPointerFrames.get(element);
+    if (oldFrame) cancelAnimationFrame(oldFrame);
+    const frame = requestAnimationFrame(() => {
+      pendingPointerFrames.delete(element);
+      if (canAnimate()) callback();
+    });
+    pendingPointerFrames.set(element, frame);
+  }
+
+  function resetTransforms() {
+    pendingPointerFrames.forEach(frame => cancelAnimationFrame(frame));
+    pendingPointerFrames.clear();
+    $$('.ch').forEach(letter => letter.style.setProperty('--k', '0'));
+    $$('.tilt').forEach(element => {
+      element.style.setProperty('--rx', '0deg');
+      element.style.setProperty('--ry', '0deg');
+    });
+  }
+
+  if (finePointer.matches) {
+    $$('.magic').forEach(line => {
+      const letters = $$('.ch', line);
+      line.addEventListener('pointermove', event => {
+        if (!canAnimate()) return;
+        const pointerX = event.clientX;
+        schedulePointer(line, () => {
+          letters.forEach(letter => {
+            const rect = letter.getBoundingClientRect();
+            const distance = Math.abs(pointerX - rect.left - rect.width / 2);
+            letter.style.setProperty('--k', Math.max(0, 1 - distance / 140).toFixed(3));
+          });
+        });
+      });
+      line.addEventListener('pointerleave', () => {
+        const frame = pendingPointerFrames.get(line);
+        if (frame) cancelAnimationFrame(frame);
+        pendingPointerFrames.delete(line);
+        letters.forEach(letter => letter.style.setProperty('--k', '0'));
+      });
+    });
+
+    $$('.tilt').forEach(element => {
+      element.addEventListener('pointermove', event => {
+        if (!canAnimate()) return;
+        const x = event.clientX, y = event.clientY;
+        schedulePointer(element, () => {
+          const rect = element.getBoundingClientRect();
+          if (!rect.width || !rect.height) return;
+          const relativeX = (x - rect.left) / rect.width;
+          const relativeY = (y - rect.top) / rect.height;
+          element.style.setProperty('--rx', ((0.5 - relativeY) * 7).toFixed(2) + 'deg');
+          element.style.setProperty('--ry', ((relativeX - 0.5) * 9).toFixed(2) + 'deg');
+          element.style.setProperty('--gx', relativeX * 100 + '%');
+          element.style.setProperty('--gy', relativeY * 100 + '%');
+        });
+      });
+      element.addEventListener('pointerleave', () => {
+        const frame = pendingPointerFrames.get(element);
+        if (frame) cancelAnimationFrame(frame);
+        pendingPointerFrames.delete(element);
+        element.style.setProperty('--rx', '0deg');
+        element.style.setProperty('--ry', '0deg');
+      });
+    });
+
+    $$('.card').forEach(card => {
+      card.addEventListener('pointermove', event => {
+        if (!canAnimate()) return;
+        const x = event.clientX, y = event.clientY;
+        schedulePointer(card, () => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mx', x - rect.left + 'px');
+          card.style.setProperty('--my', y - rect.top + 'px');
+        });
+      });
+    });
+
+    const hero = $('#opening');
+    if (hero) {
+      hero.addEventListener('pointermove', event => {
+        if (!canAnimate()) return;
+        const x = event.clientX, y = event.clientY;
+        schedulePointer(hero, () => {
+          const rect = hero.getBoundingClientRect();
+          hero.style.setProperty('--sx', x - rect.left + 'px');
+          hero.style.setProperty('--sy', y - rect.top + 'px');
+        });
+      });
+    }
+  }
+
+  /* 04 · HERO WORD ROTATION — static meaningful text survives paused/reduced motion */
+  const rotatingWords = [
+    'MERIT · INTEGRITY · PUBLIC TRUST',
+    'INDEPENDENCE WITH ACCOUNTABILITY',
+    'UNION · STATE · JOINT',
+    'ARTICLES 315–323',
+    'SELECT FAIRLY · ADVISE FEARLESSLY'
+  ];
+  const tagRot = $('#tagRot');
+  let wordPosition = 0;
+
+  function showHeroWord() {
+    if (!tagRot) return;
+    const span = document.createElement('span');
+    span.textContent = rotatingWords[wordPosition];
+    tagRot.replaceChildren(span);
+  }
+  showHeroWord();
+  window.setInterval(() => {
+    if (!canAnimate() || document.hidden) return;
+    wordPosition = (wordPosition + 1) % rotatingWords.length;
+    showHeroWord();
+  }, 3900);
+
+  /* 05 · FACT REEL — duplicate copy hidden from assistive technology */
+  const facts = [
+    ['🏛️ 315', 'Union · State · Joint · UPSC assistance'],
+    ['👥 316', 'As nearly as may be one-half · ten years'],
+    ['⏳ Tenure', 'Six years · UPSC 65 · State/Joint 62'],
+    ['⚖️ 317', 'President removes · Supreme Court inquiry for misbehaviour'],
+    ['🌳 State PSC', 'Governor appoints · may suspend after reference'],
+    ['🔐 319', 'Named PSC routes · no ordinary government job'],
+    ['⚙️ 320', 'Exams · joint schemes · consultation'],
+    ['📋 320(5)', 'Exemption regulations · at least fourteen days'],
+    ['💰 322', 'Charged · not unlimited · still appropriated'],
+    ['📊 323', 'Report · memorandum · Legislature'],
+    ['🌳 MPPSC', '1 November 1956 · Indore'],
+    ['🧠 Core distinction', 'Selection is not appointment']
+  ];
+  const reel = $('#reel');
+  if (reel) {
+    const markup = facts.map(([label, text]) =>
+      `<span><b>${escapeHTML(label)}</b> · ${escapeHTML(text)}</span>`).join('');
+    reel.innerHTML = `<div style="display:flex">${markup}</div><div style="display:flex" aria-hidden="true">${markup}</div>`;
+  }
+
+  /* 06 · ARTICLE SEARCH — AND-matched terms; original open states restored on clear */
+  const dossiers = $$('details.dos');
+  const search = $('#search');
+  const searchStatus = $('#sStat');
+  const noResults = $('#noRes');
+  const dossierIndex = new Map(dossiers.map(d => [d, d.textContent.toLowerCase().replace(/\s+/g, ' ')]));
+  let searchSnapshot = null;
+  let scrollPending = false;
+
+  function filterDossiers() {
+    if (!search) return;
+    const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+
+    if (terms.length && searchSnapshot === null) {
+      searchSnapshot = new Map(dossiers.map(d => [d, d.open]));
+    }
+
+    let visibleCount = 0;
+    dossiers.forEach(dossier => {
+      const text = dossierIndex.get(dossier) || '';
+      const matches = terms.every(term => text.includes(term));
+      dossier.hidden = !matches;
+      if (matches) {
+        visibleCount++;
+        if (terms.length) dossier.open = true;
+      }
+    });
+
+    if (!terms.length && searchSnapshot) {
+      searchSnapshot.forEach((wasOpen, dossier) => { dossier.open = wasOpen; });
+      searchSnapshot = null;
+    }
+
+    if (searchStatus) {
+      searchStatus.textContent = `${visibleCount} of ${dossiers.length} article dossiers shown.` +
+        (terms.length ? ' Matching dossiers are expanded.' : '');
+    }
+    if (noResults) noResults.classList.toggle('show', visibleCount === 0);
+    queueScrollUpdate();
+  }
+
+  if (search) search.addEventListener('input', filterDossiers);
+
+  $('#clrSearch')?.addEventListener('click', () => {
+    search.value = '';
+    filterDossiers();
+    search.focus();
+  });
+  $('#openAll')?.addEventListener('click', () => {
+    dossiers.filter(d => !d.hidden).forEach(d => d.open = true);
+    queueScrollUpdate();
+  });
+  $('#foldAll')?.addEventListener('click', () => {
+    dossiers.filter(d => !d.hidden).forEach(d => d.open = false);
+    queueScrollUpdate();
+  });
+  dossiers.forEach(d => d.addEventListener('toggle', () => queueScrollUpdate()));
+
+  /* 07 · TENURE ILLUSTRATOR — years = min(6, ceiling − age) */
+  function calculateTenure() {
+    const ageInput = $('#joinAge');
+    const out = $('#tenureOut');
+    if (!ageInput || !out) return;
+
+    const age = Number(ageInput.value);
+    const ceiling = $('#tenureBody').value === 'union' ? 65 : 62;
+
+    if (ageInput.value.trim() === '' || !Number.isInteger(age) || age < 18 || age > 80) {
+      out.textContent = 'Enter an illustrative whole-number age between 18 and 80.';
+      return;
+    }
+    if (age >= ceiling) {
+      out.innerHTML = `⛔ At or above the <b>${ceiling}</b> age ceiling, this illustration leaves no positive constitutional tenure.`;
+      return;
+    }
+
+    const remaining = ceiling - age;
+    const years = Math.min(6, remaining);
+    const tie = remaining === 6;
+    const timeControls = remaining > 6;
+
+    out.innerHTML =
+      `⏳ Illustrative tenure: <b>${years} year${years === 1 ? '' : 's'}</b>.` +
+      `<br>Approximate ending age: <b>${age + years}</b>.<br>` +
+      (tie ? 'The six-year term and the age ceiling coincide in this simplified example.'
+        : timeControls ? 'The six-year term ends before the age ceiling.'
+        : 'The age ceiling arrives before the six-year term ends.') +
+      '<br><span class="small">Whole-year illustration only; actual dates govern.</span>';
+  }
+  $('#joinAge')?.addEventListener('input', calculateTenure);
+  $('#tenureBody')?.addEventListener('change', calculateTenure);
+  calculateTenure();
+
+  /* 08 · ARTICLE 319 PATHFINDER */
+  const postTenurePaths = {
+    uc: { clause: '319(a)', text: 'No further PSC destination is permitted by this clause. The former UPSC Chairman is ineligible for further employment under the Union or a State Government.' },
+    um: { clause: '319(c)', text: 'Eligible for UPSC Chairman or Chairman of a State PSC. Not eligible for other employment under the Union or a State Government.' },
+    sc: { clause: '319(b)', text: 'Eligible for UPSC Chairman or member, or Chairman of any other State PSC. Not eligible for other employment under the Union or a State Government.' },
+    sm: { clause: '319(d)', text: 'Eligible for UPSC Chairman or member, or Chairman of that or any other State PSC. Not eligible for other employment under the Union or a State Government.' }
+  };
+  function updatePathfinder() {
+    const select = $('#formerOffice');
+    const out = $('#pathOut');
+    if (!select || !out) return;
+    const path = postTenurePaths[select.value];
+    out.innerHTML = `<b>🔐 Article ${path.clause}</b><br>${escapeHTML(path.text)}` +
+      '<br><span class="small">Also read Article 316(3). Private work is not generally prohibited by Article 319 itself, but other laws and conflicts may matter.</span>';
+  }
+  $('#formerOffice')?.addEventListener('change', updatePathfinder);
+  updatePathfinder();
+
+  /* 09 · REMOVAL NAVIGATOR */
+  function updateRemovalNavigator() {
+    const commission = $('#removalBody');
+    const groundSelect = $('#removalGround');
+    const out = $('#removalOut');
+    if (!commission || !groundSelect || !out) return;
+
+    const ground = groundSelect.value;
+    const suspensionAuthority = commission.value === 'state' ? 'Governor' : 'President';
+
+    if (ground === 'misbehaviour' || ground === 'contract') {
+      out.innerHTML =
+        '<b>⚖️ Article 317(1): Presidential removal after the Supreme Court route.</b><br>' +
+        (ground === 'contract'
+          ? 'Article 317(4) treats the specified government-contract interest as deemed misbehaviour, subject to its incorporated-company exception.<br>' : '') +
+        'President makes the reference → Supreme Court inquires → Court reports that removal is warranted → Presidential removal order.' +
+        `<br>🛑 After the reference, the <b>${suspensionAuthority}</b> may suspend under Article 317(2), pending the President’s orders on the report.`;
+      return;
+    }
+
+    const descriptions = {
+      insolvent: 'Adjudged insolvency falls under Article 317(3)(a).',
+      paid: 'Outside paid employment during the term falls under Article 317(3)(b).',
+      infirmity: 'Unfitness through infirmity of mind or body, in the President’s opinion, falls under Article 317(3)(c).'
+    };
+    out.innerHTML = '<b>🖋️ Article 317(3): removal by the President.</b><br>' +
+      escapeHTML(descriptions[ground]) +
+      '<br>The 317(1) Supreme Court inquiry is not a constitutional prerequisite for this route. Removal is not automatic; a Presidential order is still required.';
+  }
+  $('#removalBody')?.addEventListener('change', updateRemovalNavigator);
+  $('#removalGround')?.addEventListener('change', updateRemovalNavigator);
+  updateRemovalNavigator();
+
+  /* 10 · ARTICLE MATCHER */
+  const constitutionalProblems = {
+    joint: ['315(2)–(3)', 'States agree; each House of each participating State Legislature passes the resolution; Parliament may provide for the Joint Commission by law.'],
+    assist: ['315(4)', 'The Governor requests; with the President’s approval, UPSC may agree to serve all or any of the State’s needs.'],
+    scheme: ['320(2)', 'UPSC assists two or more requesting States with framing and operating joint recruitment schemes for services requiring special qualifications.'],
+    members: ['318', 'The President for Union/Joint, or the Governor for State, regulates membership strength, staff numbers and service conditions, subject to the protection proviso.'],
+    exempt: ['Proviso to 320(3), read with 320(5)', 'The appropriate constitutional authority may make exemption regulations. They are subject to the legislative laying and modification/repeal framework.'],
+    extra: ['321', 'An Act of the competent Legislature may confer additional service-related functions, including regarding local authorities and specified public bodies or institutions.'],
+    finance: ['322', 'Commission expenses are charged on the relevant Consolidated Fund. No vote on that charged item, but budgeting, appropriation and audit continue.'],
+    report: ['323', 'Annual report plus a memorandum explaining relevant non-acceptance of advice is laid before the appropriate Legislature through the President or Governor.']
+  };
+  function updateArticleMatcher() {
+    const select = $('#articleProblem');
+    const out = $('#articleOut');
+    if (!select || !out) return;
+    const [article, explanation] = constitutionalProblems[select.value];
+    out.innerHTML = `<b>📜 Article ${escapeHTML(article)}</b><br>${escapeHTML(explanation)}`;
+  }
+  $('#articleProblem')?.addEventListener('change', updateArticleMatcher);
+  updateArticleMatcher();
+
+  /* 11 · RECALL CONTROLS */
+  const revisionAnswers = $$('#revision details.quiz');
+  $('#revealAnswers')?.addEventListener('click', () => { revisionAnswers.forEach(d => d.open = true); queueScrollUpdate(); });
+  $('#hideAnswers')?.addEventListener('click', () => { revisionAnswers.forEach(d => d.open = false); queueScrollUpdate(); });
+
+  /* 12 · LOCAL MASTERY CHECKLIST — no network request */
+  const checkboxes = $$('#masteryChecks input[type=checkbox]');
+  const storageKey = 'sentinel-of-merit-mastery-v1';
+  let storageAvailable = true;
+
+  try {
+    const stored = JSON.parse(localStorage.getItem(storageKey) || 'null');
+    if (stored && stored.version === 1 && Array.isArray(stored.values)) {
+      checkboxes.forEach((checkbox, index) => { checkbox.checked = stored.values[index] === true; });
+    }
+  } catch (_) { storageAvailable = false; }
+
+  function updateMastery(save = true) {
+    const completed = checkboxes.filter(c => c.checked).length;
+    const percentage = checkboxes.length ? Math.round(completed / checkboxes.length * 100) : 0;
+    const progress = $('#masteryProgress');
+    const bar = $('#masteryBar');
+    const status = $('#masteryStatus');
+
+    if (bar) bar.style.width = percentage + '%';
+    if (progress) {
+      progress.setAttribute('aria-valuenow', String(percentage));
+      progress.setAttribute('aria-valuetext', `${completed} of ${checkboxes.length} topics mastered`);
+    }
+    if (save) {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify({ version: 1, values: checkboxes.map(c => c.checked) }));
+        storageAvailable = true;
+      } catch (_) { storageAvailable = false; }
+    }
+    if (status) {
+      status.textContent = `${completed} / ${checkboxes.length} mastered · ${percentage}%` +
+        (storageAvailable ? ' · Saved locally in this browser.' : ' · Browser storage unavailable; progress lasts for this page session.');
+    }
+  }
+  checkboxes.forEach(c => c.addEventListener('change', () => updateMastery()));
+  $('#resetMastery')?.addEventListener('click', () => {
+    checkboxes.forEach(c => c.checked = false);
+    updateMastery();
+    announce('Mastery checklist reset.');
+  });
+  updateMastery(false);
+
+  /* 13 · AUTEUR CLAPPERBOARD + HEART CONSTELLATION — no audio, no input-blocking overlay */
+  let take = 1;
+  let sceneIndex = 0;
+  const scenes = [
+    [315, '🏛️ Establish the institution.'],
+    [316, '👥 Appoint with constitutional responsibility.'],
+    [317, '⚖️ Protect independence through lawful removal.'],
+    [318, '📋 Preserve fair service conditions.'],
+    [319, '🔐 Keep future rewards away from present judgment.'],
+    [320, '⚙️ Select impartially. Advise expertly.'],
+    [321, '🌐 Let law extend the mission.'],
+    [322, '💰 Fund lawfully. Audit responsibly.'],
+    [323, '📊 Report the work. Explain the disagreement.']
+  ];
+
+  let currentToast = null;
+  let toastTimer = 0;
+
+  function showToast(message) {
+    announce(message);
+    if (!canAnimate()) return;
+    if (currentToast) currentToast.remove();
+    clearTimeout(toastTimer);
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    toast.setAttribute('aria-hidden', 'true');
+    document.body.append(toast);
+    currentToast = toast;
+    toastTimer = window.setTimeout(() => {
+      toast.remove();
+      if (currentToast === toast) currentToast = null;
+    }, 2500);
+  }
+
+  function burstAt(element, symbols, count = 18) {
+    if (!canAnimate() || document.hidden) return;
+    const rect = element.getBoundingClientRect();
+    const originX = rect.left + rect.width / 2;
+    const originY = rect.top + rect.height / 2;
+    for (let index = 0; index < count; index++) {
+      const particle = document.createElement('span');
+      particle.className = 'burst';
+      particle.setAttribute('aria-hidden', 'true');
+      particle.textContent = symbols[index % symbols.length];
+      const angle = index * Math.PI * 2 / count;
+      const distance = 75 + Math.random() * 145;
+      particle.style.left = originX + 'px';
+      particle.style.top = originY + 'px';
+      particle.style.setProperty('--dx', Math.cos(angle) * distance + 'px');
+      particle.style.setProperty('--dy', Math.sin(angle) * distance + 'px');
+      document.body.append(particle);
+      window.setTimeout(() => particle.remove(), 1200);
+    }
+  }
+
+  const auteur = $('#auteur');
+  function activateAuteur() {
+    if (!auteur) return;
+    const [scene, message] = scenes[sceneIndex];
+    $('#sceneNo').textContent = String(scene);
+    take = take >= 99 ? 1 : take + 1;
+    $('#takeNo').textContent = String(take);
+    sceneIndex = (sceneIndex + 1) % scenes.length;
+
+    if (canAnimate()) {
+      auteur.classList.remove('clap');
+      void auteur.offsetWidth;
+      auteur.classList.add('clap');
+      burstAt(auteur, ['✦', '🎬', '⚖️', '📜', '✨']);
+    }
+    showToast(`ACTION! ${scene} · ${message}`);
+  }
+  auteur?.addEventListener('click', activateAuteur);
+  auteur?.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activateAuteur(); }
+  });
+  auteur?.addEventListener('animationend', event => {
+    if (event.animationName === 'clapDown') auteur.classList.remove('clap');
+  });
+  $('#tribute')?.addEventListener('click', event => {
+    burstAt(event.currentTarget, ['❤️', '✦', '💛', '✨', '💗'], 20);
+    showToast('En Nenjil Kudiyirukkum ❤️');
+  });
+
+  /* 14 · REVEAL SYSTEM WITH A FAILSAFE */
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('waiting');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.01, rootMargin: '0px 0px 80px 0px' });
+
+    reveals.forEach(element => {
+      element.classList.add('waiting');
+      revealObserver.observe(element);
+    });
+    window.setTimeout(() => {
+      reveals.forEach(element => element.classList.remove('waiting'));
+      revealObserver.disconnect();
+    }, 7000);
+  }
+
+  /* 15 · DEEP LINKS — open containing dossiers; clear filters if necessary */
+  function revealHash(shouldScroll = true) {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const dossier = target.closest('details.dos');
+    if (dossier && dossier.hidden && search) { search.value = ''; filterDossiers(); }
+
+    for (let ancestor = target; ancestor; ancestor = ancestor.parentElement) {
+      if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+      if (ancestor.classList && ancestor.classList.contains('reveal')) ancestor.classList.remove('waiting');
+    }
+    if (shouldScroll) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: canAnimate() ? 'smooth' : 'auto', block: 'start' });
+      });
+    }
+    queueScrollUpdate();
+  }
+  window.addEventListener('hashchange', () => revealHash());
+  document.addEventListener('click', event => {
+    if (!(event.target instanceof Element)) return;
+    const anchor = event.target.closest('a[href^="#"]');
+    if (!anchor) return;
+    const href = anchor.getAttribute('href');
+    if (href && href.length > 1 && href === location.hash) { event.preventDefault(); revealHash(); }
+  });
+  if (location.hash) window.setTimeout(() => revealHash(), 120);
+
+  /* 16 · SCROLL PROGRESS + ACTIVE NAVIGATION — one update per frame */
+  const chapters = [$('#opening'), ...$$('main > section[id]')].filter(Boolean);
+  const navigationLinks = $$('nav a[href^="#"]');
+
+  function updateScroll() {
+    const total = document.documentElement.scrollHeight - innerHeight;
+    const percentage = total > 0 ? Math.max(0, Math.min(100, scrollY / total * 100)) : 0;
+    const bar = $('#bar');
+    if (bar) bar.style.width = percentage + '%';
+    $('#toTop')?.classList.toggle('show', scrollY > 650);
+
+    let activeId = 'opening';
+    chapters.forEach(chapter => {
+      if (chapter.getBoundingClientRect().top <= 170) activeId = chapter.id;
+    });
+    navigationLinks.forEach(link => {
+      const active = link.getAttribute('href') === '#' + activeId;
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    scrollPending = false;
+  }
+  function queueScrollUpdate() {
+    if (scrollPending) return;
+    scrollPending = true;
+    requestAnimationFrame(updateScroll);
+  }
+  window.addEventListener('scroll', queueScrollUpdate, { passive: true });
+  window.addEventListener('resize', queueScrollUpdate);
+  $('#toTop')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: canAnimate() ? 'smooth' : 'auto' });
+  });
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(queueScrollUpdate).observe(document.body);
+  }
+
+  /* 17 · READING / PAUSE MODES */
+  $('#readBtn')?.addEventListener('click', () => {
+    const reading = body.classList.toggle('reading');
+    const button = $('#readBtn');
+    button.setAttribute('aria-pressed', String(reading));
+    button.textContent = reading ? '✨ Restore cinematic mode' : '📖 Reading mode';
+    resetTransforms();
+    syncStars();
+    queueScrollUpdate();
+  });
+  $('#stillBtn')?.addEventListener('click', () => {
+    paused = !paused;
+    body.classList.toggle('still', paused);
+    const button = $('#stillBtn');
+    button.setAttribute('aria-pressed', String(paused));
+    button.textContent = paused ? '▶️ Resume effects' : '⏸️ Pause effects';
+    document.documentElement.style.scrollBehavior = canAnimate() ? '' : 'auto';
+    resetTransforms();
+    syncStars();
+    queueScrollUpdate();
+  });
+
+  /* 18 · PRINT / SAVE PDF — expand and unfilter, then restore the screen state */
+  let printSnapshot = null;
+  function preparePrint() {
+    if (printSnapshot) return;
+    printSnapshot = {
+      details: $$('details').map(element => ({ element, open: element.open })),
+      hidden: $$('[hidden]').map(element => ({ element, hidden: element.hidden })),
+      waiting: $$('.reveal.waiting')
+    };
+    $$('details').forEach(element => element.open = true);
+    printSnapshot.hidden.forEach(({ element }) => { element.hidden = false; });
+    reveals.forEach(element => element.classList.remove('waiting'));
+  }
+  function restoreAfterPrint() {
+    if (!printSnapshot) return;
+    printSnapshot.details.forEach(({ element, open }) => { element.open = open; });
+    printSnapshot.hidden.forEach(({ element, hidden }) => { element.hidden = hidden; });
+    printSnapshot.waiting.forEach(element => element.classList.add('waiting'));
+    printSnapshot = null;
+    queueScrollUpdate();
+  }
+  window.addEventListener('beforeprint', preparePrint);
+  window.addEventListener('afterprint', restoreAfterPrint);
+  $('#printBtn')?.addEventListener('click', () => window.print());
+
+  /* 19 · CONSTELLATION CANVAS — gentle drift; stops when hidden, reading or paused */
+  const canvas = $('#stars');
+  const context = canvas ? canvas.getContext('2d') : null;
+  let width = 0, height = 0, particles = [], animationFrame = 0, previousTime = 0;
+
+  function starsEnabled() { return Boolean(context) && canAnimate() && !document.hidden; }
+
+  function resizeStars() {
+    if (!canvas) return;
+    width = innerWidth;
+    height = innerHeight;
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    if (!context) return;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    const count = width < 700 ? 28 : 64;
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: 0.45 + Math.random() * 1.2,
+      speed: 2 + Math.random() * 5,
+      phase: Math.random() * Math.PI * 2,
+      opacity: 0.15 + Math.random() * 0.3,
+      hue: [36, 160, 214, 270][Math.floor(Math.random() * 4)]
+    }));
+    syncStars();
+  }
+
+  function drawStars(time) {
+    animationFrame = 0;
+    if (!starsEnabled()) return;
+    const delta = previousTime ? Math.min((time - previousTime) / 1000, 0.05) : 0;
+    previousTime = time;
+    context.clearRect(0, 0, width, height);
+
+    particles.forEach(p => {
+      p.y -= p.speed * delta;
+      p.x += Math.sin(time / 6000 + p.phase) * delta * 2;
+      if (p.y < -8) { p.y = height + 8; p.x = Math.random() * width; }
+      if (p.x < -8) p.x = width + 8;
+      if (p.x > width + 8) p.x = -8;
+      const twinkle = 0.75 + 0.25 * Math.sin(time / 2200 + p.phase);
+      context.beginPath();
+      context.fillStyle = `hsla(${p.hue},85%,82%,${p.opacity * twinkle})`;
+      context.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+
+    if (width >= 700) {
+      context.lineWidth = 0.5;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const a = particles[i], b = particles[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const d2 = dx * dx + dy * dy;
+          const limit = 105;
+          if (d2 >= limit * limit) continue;
+          const opacity = (1 - Math.sqrt(d2) / limit) * 0.065;
+          context.strokeStyle = `rgba(160,190,235,${opacity})`;
+          context.beginPath();
+          context.moveTo(a.x, a.y);
+          context.lineTo(b.x, b.y);
+          context.stroke();
+        }
+      }
+    }
+    animationFrame = requestAnimationFrame(drawStars);
+  }
+
+  function syncStars() {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+    previousTime = 0;
+    if (context) context.clearRect(0, 0, width, height);
+    if (starsEnabled()) animationFrame = requestAnimationFrame(drawStars);
+  }
+
+  window.addEventListener('resize', resizeStars, { passive: true });
+  document.addEventListener('visibilitychange', syncStars);
+
+  const motionChanged = () => {
+    resetTransforms();
+    document.documentElement.style.scrollBehavior = canAnimate() ? '' : 'auto';
+    syncStars();
+  };
+  if (motionQuery.addEventListener) motionQuery.addEventListener('change', motionChanged);
+  else if (motionQuery.addListener) motionQuery.addListener(motionChanged);
+
+  /* 20 · STARTUP */
+  filterDossiers();
+  resizeStars();
+  updateScroll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(queueScrollUpdate);
+})();
+</script>
+
+<noscript>
+  <style>
+    [data-split]::before{content:attr(data-split);color:var(--head)}
+    .ctrls,.tools,#revealAnswers,#hideAnswers,#resetMastery,.lab-card,#masteryProgress,#masteryStatus,#masteryChecks,#toTop,.a-cta{display:none!important}
+    .intro,.lb{display:none!important}
+    .reveal{opacity:1!important;transform:none!important}
+  </style>
+  <p class="noscript-note">
+    📖 JavaScript is disabled. The article notes, comparison tables, MPPSC section, source links and manually expandable recall answers remain available. Interactive simulators, search, saved progress and cinematic pointer effects require JavaScript.
+  </p>
+</noscript>
+
+</body>
+</html>

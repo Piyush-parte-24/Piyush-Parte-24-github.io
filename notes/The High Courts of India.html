@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04090f">
+<title>The High Courts of India</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════════════════
+   🌙 HIGH COURTS OF INDIA — "MOONLIT DAWN OVER THE COURT"
+   Colour grade: ink-teal night · jade · antique brass · copper horizon
+   ════════════════════════════════════════════════════════════ */
+:root{
+  --ink:#04090f; --ink2:#08141b;
+  --panel:rgba(7,19,26,.82); --panel2:rgba(12,30,39,.62);
+  --jade:#35d6b9; --sea:#58b4d6; --brass:#ecc681; --copper:#f2a273;
+  --rose:#f29bb0; --lilac:#bba9f4; --moss:#b0e48f;
+  --ivory:#f3eee2; --text:#d5e2df; --mute:#a3b8b5;
+  --line:rgba(190,230,222,.15); --edge:rgba(236,198,129,.28);
+  --shadow:0 26px 70px rgba(0,0,0,.55); --r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Outfit',system-ui,sans-serif;font-size:16px;line-height:1.8;color:var(--text);background:var(--ink);overflow-x:hidden;font-weight:400;letter-spacing:.1px}
+a{color:var(--jade)} a:hover{color:var(--brass)}
+strong,b{color:var(--ivory);font-weight:600}
+em{color:#f0dcae}
+p{margin-bottom:12px} p:last-child{margin-bottom:0}
+ul,ol{margin:10px 0 14px 22px} li{margin:6px 0}
+small{font-size:.84rem;color:var(--mute)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+::selection{background:rgba(53,214,185,.3);color:#fff}
+button{font:inherit;color:inherit;cursor:pointer}
+[hidden]{display:none!important}
+
+/* ═════════ CINEMATIC STAGE ═════════ */
+.stage{position:fixed;inset:0;z-index:-10;overflow:hidden;background:#03070c;transition:opacity .6s}
+.stage>*{position:absolute}
+.sky{inset:-8%;background:radial-gradient(120% 70% at 50% 108%,#c4784f 0,#7a4a58 11%,#2c4a62 29%,#10303b 47%,#081a24 68%,#03070c 100%);animation:breathe 24s ease-in-out infinite alternate}
+@keyframes breathe{to{filter:saturate(1.3) brightness(1.12)}}
+.stars{inset:0;opacity:.8;mask-image:linear-gradient(#000 0,#000 45%,transparent 72%);animation:tw 7s ease-in-out infinite alternate;
+ background-image:radial-gradient(1.5px 1.5px at 8% 14%,#fff,transparent),radial-gradient(1px 1px at 17% 32%,#cfe9ff,transparent),radial-gradient(1.6px 1.6px at 28% 9%,#fff,transparent),radial-gradient(1px 1px at 37% 26%,#ffe9c4,transparent),radial-gradient(1.4px 1.4px at 49% 17%,#fff,transparent),radial-gradient(1px 1px at 58% 6%,#cfe9ff,transparent),radial-gradient(1.5px 1.5px at 66% 29%,#fff,transparent),radial-gradient(1px 1px at 76% 12%,#ffe9c4,transparent),radial-gradient(1.3px 1.3px at 84% 36%,#fff,transparent),radial-gradient(1px 1px at 93% 20%,#cfe9ff,transparent),radial-gradient(1.2px 1.2px at 22% 44%,#fff,transparent),radial-gradient(1px 1px at 71% 47%,#fff,transparent)}
+@keyframes tw{from{opacity:.35}to{opacity:.95}}
+.rays{width:160vw;height:160vw;right:-62vw;top:-96vw;opacity:.34;animation:rays 42s ease-in-out infinite alternate;
+ background:conic-gradient(from 200deg,transparent 0 10deg,rgba(236,198,129,.14) 14deg 20deg,transparent 26deg 40deg,rgba(53,214,185,.14) 46deg 54deg,transparent 60deg 80deg,rgba(242,162,115,.12) 84deg 90deg,transparent 96deg 360deg)}
+@keyframes rays{to{transform:rotate(18deg)}}
+.moon{right:9%;top:9%;width:104px;height:104px}
+.moon i{display:block;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 36% 34%,#fffdf2,#f6e3b0 55%,#d9b574);box-shadow:0 0 50px 18px rgba(236,198,129,.35),0 0 160px 70px rgba(88,180,214,.18);animation:moonP 8s ease-in-out infinite alternate}
+@keyframes moonP{to{box-shadow:0 0 70px 26px rgba(236,198,129,.5),0 0 200px 90px rgba(88,180,214,.26)}}
+.aur{border-radius:50%;filter:blur(95px);mix-blend-mode:screen;opacity:.42}
+.a1{width:60vw;height:60vw;left:-18vw;top:-20vw;background:radial-gradient(circle,#0f9d8a,transparent 68%);animation:d1 34s ease-in-out infinite alternate}
+.a2{width:52vw;height:52vw;right:-12vw;top:6vh;background:radial-gradient(circle,#2f78b0,transparent 66%);animation:d2 40s ease-in-out infinite alternate}
+.a3{width:70vw;height:40vw;left:16vw;bottom:-16vw;background:radial-gradient(circle,#e0834f,transparent 70%);animation:d3 36s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(14vw,10vh) scale(1.18)}}
+@keyframes d2{to{transform:translate(-12vw,12vh) scale(1.1)}}
+@keyframes d3{to{transform:translate(-9vw,-7vh) scale(1.2)}}
+.bird{font-size:18px;opacity:.42;left:-6%;filter:blur(.4px);animation:fly 46s linear infinite}
+.bird:nth-of-type(1){top:16%} .bird:nth-of-type(2){top:24%;font-size:13px;animation-duration:58s;animation-delay:-20s} .bird:nth-of-type(3){top:11%;font-size:15px;animation-duration:66s;animation-delay:-40s}
+@keyframes fly{to{transform:translate(112vw,-40px)}}
+.far{left:0;bottom:7vh;width:100%;height:30vh;opacity:.55}
+.court{left:50%;bottom:-2px;width:max(1100px,100vw);height:46vh;margin-left:calc(max(1100px,100vw)/-2);opacity:.9}
+.lit rect{fill:#f3c77a;animation:flick 4.5s ease-in-out infinite alternate}
+.lit rect:nth-child(3n){animation-delay:-1.2s} .lit rect:nth-child(3n+1){animation-delay:-2.6s}
+@keyframes flick{0%{opacity:.25}40%{opacity:.8}100%{opacity:.45}}
+.fog{left:0;width:200%;height:36vh;bottom:0;filter:blur(18px);background:linear-gradient(to top,rgba(242,162,115,.16),rgba(88,180,214,.05) 55%,transparent);animation:fog 60s linear infinite}
+.fog.f2{opacity:.55;animation-duration:90s;animation-direction:reverse;height:26vh}
+@keyframes fog{to{transform:translateX(-50%)}}
+#dust{inset:0;width:100%;height:100%}
+.grain{inset:-200px;opacity:.05;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='.7'/></svg>");animation:gr .6s steps(3) infinite}
+@keyframes gr{33%{transform:translate(-12px,8px)}66%{transform:translate(10px,-11px)}}
+.vig{inset:0;background:radial-gradient(120% 90% at 50% 45%,transparent 38%,rgba(0,0,0,.5) 82%,rgba(0,0,0,.85))}
+.spot{position:fixed;inset:0;z-index:-5;pointer-events:none;background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),rgba(236,198,129,.09),transparent 62%)}
+.rbar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);z-index:500;background:linear-gradient(90deg,var(--jade),var(--brass),var(--copper));box-shadow:0 0 14px rgba(53,214,185,.6)}
+body.focus .stage{opacity:.22} body.focus .spot{display:none}
+body.still *,body.still *::before,body.still *::after{animation-play-state:paused!important}
+
+/* ═════════ LAYOUT ═════════ */
+.wrap{max-width:1320px;margin:0 auto;padding:18px 22px 60px}
+.tools{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:8px 2px 4px;font:.7rem 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.tools .tb{display:flex;gap:8px;flex-wrap:wrap}
+.tbtn{padding:8px 13px;border-radius:11px;border:1px solid var(--line);background:rgba(10,28,36,.8);font:.76rem 'Outfit';letter-spacing:.03em;text-transform:none;transition:.25s}
+.tbtn:hover{border-color:var(--brass);transform:translateY(-2px)}
+
+/* ═════════ HERO ═════════ */
+.hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;margin:10px 0 26px;padding:78px 26px 40px;border-radius:32px;border:1px solid var(--edge);
+ background:linear-gradient(160deg,rgba(6,20,28,.78),rgba(14,30,40,.55) 50%,rgba(34,26,24,.5));box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.07);backdrop-filter:blur(14px) saturate(1.25)}
+.hero::before{content:'';position:absolute;inset:-60%;z-index:-1;background:conic-gradient(from 0deg,transparent 0 12%,rgba(236,198,129,.13) 20%,transparent 30% 62%,rgba(53,214,185,.12) 72%,transparent 82%);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero::after{content:'';position:absolute;left:-60%;top:0;width:40%;height:100%;z-index:-1;background:linear-gradient(105deg,transparent,rgba(255,255,255,.08),transparent);animation:sweep 9s ease-in-out infinite}
+@keyframes sweep{0%{left:-60%}55%,100%{left:130%}}
+.lbx{position:absolute;left:0;width:100%;height:0;background:#000;z-index:3;animation:lbx 1.6s .2s cubic-bezier(.7,0,.2,1) forwards}
+.lbx.t{top:0} .lbx.b{bottom:0}
+.js .lbx{height:42px} @keyframes lbx{to{height:0}}
+.crest{display:inline-block;font-size:3rem;filter:drop-shadow(0 0 22px rgba(236,198,129,.65));animation:cf 4.6s ease-in-out infinite;cursor:pointer}
+.crest:hover{animation-duration:1s}
+@keyframes cf{50%{transform:translateY(-11px) rotate(5deg)}}
+.kicker{font:.7rem/1.9 'JetBrains Mono',monospace;letter-spacing:.34em;text-transform:uppercase;color:var(--brass);margin:6px 0 14px}
+h1.mega{font-family:'Cinzel',serif;font-weight:900;line-height:1.02;letter-spacing:2px;perspective:900px;margin:6px auto}
+h1.mega .ln{display:block}
+h1.mega .ln:first-child{font-size:clamp(2.6rem,9vw,7rem)}
+h1.mega .ln.sm{font-size:clamp(1.3rem,3.6vw,2.6rem);letter-spacing:.5em;margin-top:6px;padding-left:.5em}
+.l{display:inline-block;--d:0;cursor:default;background:linear-gradient(180deg,#fff7e0 0,var(--brass) 45%,var(--copper) 74%,#b8644a);-webkit-background-clip:text;background-clip:text;color:transparent;
+ transform:translateY(calc(var(--d)*-16px)) scale(calc(1 + var(--d)*.3)) rotateX(calc(var(--d)*18deg));
+ filter:brightness(calc(1 + var(--d)*.35)) drop-shadow(0 calc(var(--d)*10px) calc(var(--d)*16px) rgba(242,162,115,calc(var(--d)*.8)));
+ transition:transform .22s cubic-bezier(.2,1.5,.4,1),filter .22s;animation:lin .9s cubic-bezier(.2,1.4,.3,1) backwards;animation-delay:calc(var(--i)*55ms + .5s)}
+.sm .l{background:linear-gradient(180deg,#e9fff9,var(--jade) 60%,#2a8fa0);-webkit-background-clip:text;background-clip:text}
+.l.sp{width:.3em}
+@keyframes lin{from{opacity:0;transform:translateY(40px) rotateX(-70deg) scale(.7);filter:blur(8px)}}
+.rule{width:min(580px,84%);height:1px;margin:20px auto 12px;background:linear-gradient(90deg,transparent,var(--brass),var(--jade),transparent);box-shadow:0 0 18px rgba(236,198,129,.5)}
+.tag{font:italic 500 clamp(1.05rem,2.1vw,1.4rem)/1.6 'Cormorant Garamond',serif;color:var(--ivory);max-width:880px;margin:0 auto}
+.tag b{color:var(--jade);font-style:normal}
+.tag u{text-decoration-color:var(--copper);text-underline-offset:5px}
+
+/* 🎬 AUTEUR */
+.auteur{position:relative;overflow:hidden;max-width:760px;margin:34px auto 8px;border:1px solid rgba(236,198,129,.3);border-radius:18px;background:linear-gradient(145deg,rgba(4,12,18,.75),rgba(18,36,44,.45))}
+.auteur::after{content:'';position:absolute;top:-120%;left:-30%;width:170px;height:340%;transform:rotate(10deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);filter:blur(12px);animation:spot 7s ease-in-out infinite;pointer-events:none}
+@keyframes spot{0%,100%{left:-30%}50%{left:115%}}
+.clap{height:26px;display:flex;transform-origin:0 100%;transition:transform .45s cubic-bezier(.3,1.8,.5,1);background:repeating-linear-gradient(115deg,#0c161c 0 26px,var(--brass) 26px 52px);border-bottom:2px solid #000}
+.auteur:hover .clap{transform:rotate(-7deg)}
+.a-in{padding:22px 18px 20px}
+.a-lab{font:.64rem 'JetBrains Mono',monospace;letter-spacing:.6em;text-transform:uppercase;color:var(--jade)}
+.a-name{font:700 clamp(1.7rem,5vw,3.2rem)/1.3 'Cinzel',serif;letter-spacing:.24em;margin:8px 0 2px;background:linear-gradient(92deg,#fff 0,var(--brass) 30%,#fff6df 50%,var(--copper) 72%,#fff);background-size:260% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5.5s linear infinite;transition:letter-spacing .8s cubic-bezier(.2,.9,.2,1),filter .5s;filter:drop-shadow(0 0 14px rgba(236,198,129,.3))}
+.auteur:hover .a-name{letter-spacing:.4em;filter:drop-shadow(0 0 30px rgba(242,162,115,.8)) brightness(1.15)}
+@keyframes shine{to{background-position:260% center}}
+.a-roles{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.a-roles span{font:.72rem 'JetBrains Mono',monospace;padding:3px 11px;border-radius:99px;border:1px solid rgba(236,198,129,.3);color:var(--ivory);background:rgba(236,198,129,.07);transition:.3s}
+.a-roles span:hover{transform:translateY(-3px);background:rgba(236,198,129,.2)}
+.spr{display:flex;justify-content:center;gap:9px;margin-top:14px}
+.spr i{width:13px;height:9px;border-radius:2px;background:rgba(236,198,129,.25);animation:sp 1.7s infinite}
+.spr i:nth-child(2){animation-delay:.2s}.spr i:nth-child(3){animation-delay:.4s}.spr i:nth-child(4){animation-delay:.6s}.spr i:nth-child(5){animation-delay:.8s}.spr i:nth-child(6){animation-delay:1s}.spr i:nth-child(7){animation-delay:1.2s}
+@keyframes sp{50%{background:var(--brass);box-shadow:0 0 12px var(--brass)}}
+
+.stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px}
+.stat{min-width:150px;padding:16px 14px;border-radius:18px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));transition:transform .4s cubic-bezier(.2,1.4,.4,1),border-color .4s,box-shadow .4s}
+.stat:hover{transform:translateY(-8px) scale(1.05);border-color:var(--brass);box-shadow:0 18px 40px rgba(236,198,129,.2)}
+.stat b{display:block;font:900 2rem/1.1 'Cinzel',serif;background:linear-gradient(92deg,var(--brass),var(--jade));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.74rem;color:var(--mute);letter-spacing:.07em;text-transform:uppercase}
+
+/* ═════════ NAV ═════════ */
+.nav{position:sticky;top:10px;z-index:200;display:flex;gap:7px;overflow-x:auto;padding:10px;margin:0 0 30px;border-radius:18px;background:rgba(5,15,21,.86);border:1px solid var(--edge);backdrop-filter:blur(18px);box-shadow:0 14px 40px rgba(0,0,0,.5);scrollbar-width:thin}
+.nav a{flex:0 0 auto;text-decoration:none;padding:9px 13px;border-radius:11px;color:var(--text);font-size:.8rem;border:1px solid transparent;transition:.25s}
+.nav a:hover,.nav a.on{color:#fff;border-color:var(--brass);background:rgba(236,198,129,.1);transform:translateY(-2px)}
+
+/* ═════════ CHAPTERS ═════════ */
+.ch{--ac:var(--jade);position:relative;overflow:hidden;margin-bottom:38px;padding:40px 34px;border-radius:var(--r);background:linear-gradient(150deg,var(--panel),rgba(10,26,34,.72));border:1px solid rgba(255,255,255,.08);border-left:5px solid var(--ac);box-shadow:var(--shadow);backdrop-filter:blur(12px) saturate(1.2);transition:box-shadow .5s,border-color .5s}
+.ch::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--ac),transparent 75%)}
+.ch::after{content:'';position:absolute;right:-10%;top:-30%;width:46%;height:80%;background:radial-gradient(circle,var(--ac),transparent 68%);opacity:.07;filter:blur(50px);pointer-events:none}
+.ch:hover{box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 60px color-mix(in srgb,var(--ac) 14%,transparent)}
+.ch-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--line);position:relative}
+.ch-head::after{content:'';position:absolute;bottom:-1px;left:0;width:120px;height:2px;background:var(--ac);box-shadow:0 0 14px var(--ac)}
+.ch-no{font:900 2.6rem/1 'Cinzel',serif;color:transparent;-webkit-text-stroke:1.5px var(--ac);opacity:.8;min-width:62px}
+.ch-k{font:.66rem 'JetBrains Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:var(--ac)}
+h2{font:700 clamp(1.3rem,2.9vw,2.05rem)/1.3 'Cinzel',serif;color:var(--ivory)}
+h2 .ico{display:inline-block;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 0 12px var(--ac))}
+@keyframes bob{50%{transform:translateY(-6px) rotate(5deg)}}
+h3{font:600 1.08rem/1.45 'Outfit',sans-serif;color:var(--ac);margin:0 0 8px}
+h3.sec{font:600 clamp(1.05rem,2.1vw,1.38rem)/1.4 'Cinzel',serif;margin:32px 0 14px;padding-left:13px;border-left:3px solid var(--ac);transition:padding-left .3s}
+h3.sec:hover{padding-left:21px}
+.lead{font-size:1.06rem;color:#dbe8e4}
+.hl{color:var(--brass);font-weight:600}
+
+.g{display:grid;gap:18px;margin:20px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{--rx:0deg;--ry:0deg;--ty:0px;position:relative;overflow:hidden;padding:22px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+ transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--ty));transition:transform .25s ease-out,border-color .35s,box-shadow .35s}
+.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--ac),var(--brass));transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.card:hover{--ty:-7px;border-color:color-mix(in srgb,var(--ac) 60%,transparent);box-shadow:0 20px 44px rgba(0,0,0,.42)}
+.card:hover::before{transform:scaleX(1)}
+.card .big{font-size:2rem;display:block;margin-bottom:6px;filter:drop-shadow(0 0 12px var(--ac))}
+.card p{font-size:.95rem}
+.tagc{display:inline-block;margin:0 6px 8px 0;padding:2px 10px;border-radius:8px;font:.72rem 'JetBrains Mono',monospace;color:var(--ac);border:1px solid color-mix(in srgb,var(--ac) 40%,transparent);background:color-mix(in srgb,var(--ac) 9%,transparent)}
+
+.co{margin:22px 0;padding:18px 22px;border-radius:5px 16px 16px 5px;border:1px solid rgba(236,198,129,.25);border-left:4px solid var(--brass);background:rgba(236,198,129,.07)}
+.co>b:first-child{display:block;color:var(--brass);margin-bottom:4px}
+.co.info{border-color:rgba(53,214,185,.3);border-left-color:var(--jade);background:rgba(53,214,185,.06)} .co.info>b:first-child{color:var(--jade)}
+.co.warn{border-color:rgba(242,162,115,.35);border-left-color:var(--copper);background:rgba(242,162,115,.07)} .co.warn>b:first-child{color:var(--copper)}
+.co.trap{border-color:rgba(242,155,176,.35);border-left-color:var(--rose);background:rgba(242,155,176,.07)} .co.trap>b:first-child{color:var(--rose)}
+.quote{margin:24px 0;padding:22px 28px;border-block:1px solid var(--edge);font:italic 500 1.25rem/1.7 'Cormorant Garamond',serif;color:var(--brass)}
+.quote cite{display:block;margin-top:8px;font:normal .8rem 'Outfit';color:var(--mute)}
+
+/* 🧠 MNEMONICS */
+.mn{margin:24px 0;padding:20px 22px;border-radius:18px;border:1.5px dashed rgba(187,169,244,.55);background:linear-gradient(110deg,rgba(187,169,244,.1),rgba(53,214,185,.05))}
+.mn-t{font:600 .78rem 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac);margin-bottom:12px}
+.mn-row{display:flex;flex-wrap:wrap;gap:10px}
+.ml{flex:1 1 112px;min-width:104px;padding:12px 10px;border-radius:14px;text-align:center;background:rgba(5,15,21,.55);border:1px solid rgba(187,169,244,.28);transition:transform .35s cubic-bezier(.2,1.5,.4,1),border-color .3s,box-shadow .3s}
+.ml:hover{transform:translateY(-8px) scale(1.06);border-color:var(--brass);box-shadow:0 14px 30px rgba(236,198,129,.2)}
+.ml b{display:block;font:900 2rem/1.1 'Cinzel',serif;color:var(--brass)}
+.ml span{font-size:.78rem;color:var(--text);line-height:1.35;display:block;margin-top:3px}
+.mn-n{margin-top:12px;font-size:.92rem;color:var(--mute)}
+
+/* FLOWS */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;justify-content:center;margin:22px 0;padding:22px;border-radius:20px;border:1px dashed rgba(53,214,185,.4);background:rgba(4,14,19,.5)}
+.nd{flex:1 1 150px;max-width:260px;padding:14px;border-radius:13px;text-align:center;font-size:.9rem;color:var(--ivory);border:1px solid rgba(53,214,185,.35);background:linear-gradient(140deg,rgba(26,60,66,.9),rgba(12,30,38,.9));transition:transform .35s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.nd::before{content:'';position:absolute;top:0;left:-120%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);transition:left .7s}
+.nd:hover::before{left:130%} .nd:hover{transform:translateY(-6px);border-color:var(--brass);box-shadow:0 14px 30px rgba(236,198,129,.2)}
+.nd b{display:block;color:var(--jade);margin-bottom:3px}
+.nd small{display:block;font-size:.78rem}
+.ar{align-self:center;color:var(--brass);font-size:1.4rem;font-style:normal;animation:pa 1.8s ease-in-out infinite}
+@keyframes pa{50%{opacity:.35;transform:translateX(5px)}}
+.flow.v{flex-direction:column;align-items:center;max-width:820px;margin-inline:auto}
+.flow.v .nd{max-width:none;width:100%}
+.flow.v .ar{transform:rotate(90deg);animation:pv 1.8s infinite} @keyframes pv{50%{opacity:.35;transform:rotate(90deg) translateX(5px)}}
+
+/* PYRAMID */
+.pyr{width:min(700px,100%);margin:24px auto;text-align:center}
+.pyr div{padding:15px;margin:9px auto;border-radius:14px;border:1px solid var(--line);background:linear-gradient(120deg,rgba(53,214,185,.1),rgba(236,198,129,.08));transition:transform .35s,border-color .3s}
+.pyr div:hover{transform:scale(1.03);border-color:var(--brass)}
+.pyr div:nth-child(1){width:56%} .pyr div:nth-child(2){width:78%;border-color:rgba(236,198,129,.5)} .pyr div:nth-child(3){width:100%}
+.pyr small{display:block}
+
+/* TIMELINE */
+.tl{position:relative;margin:24px 0}
+.tl::before{content:'';position:absolute;left:79px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--sea),var(--lilac),var(--rose),var(--copper),var(--brass),var(--jade));box-shadow:0 0 16px rgba(53,214,185,.3)}
+.ev{--c:var(--sea);position:relative;display:grid;grid-template-columns:70px 1fr;gap:34px;margin:0 0 20px;transition:transform .35s}
+.ev:hover{transform:translateX(8px)}
+.ev::before{content:'';position:absolute;left:72px;top:18px;width:15px;height:15px;border-radius:50%;background:var(--c);border:3px solid #061018;box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 30%,transparent),0 0 18px var(--c)}
+.ev time{padding-top:14px;font:600 .9rem 'JetBrains Mono',monospace;color:var(--c);text-align:center}
+.ev .card{padding:16px 20px;border-color:color-mix(in srgb,var(--c) 32%,transparent)} .ev h3{color:var(--c);margin-bottom:5px}
+
+/* TABLES */
+.tw{overflow-x:auto;margin:20px 0;border-radius:16px;border:1px solid var(--line);background:rgba(4,14,19,.45)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:660px}
+caption{text-align:left;padding:13px 16px;font-weight:600;color:var(--ivory)}
+th{padding:13px 15px;text-align:left;font:600 .86rem 'Cinzel',serif;letter-spacing:.04em;color:var(--brass);background:linear-gradient(140deg,rgba(236,198,129,.17),rgba(88,180,214,.1));border-bottom:1px solid var(--line)}
+td{padding:12px 15px;vertical-align:top;border-top:1px solid rgba(190,230,222,.08)}
+tbody tr{transition:background .25s} tbody tr:hover{background:rgba(53,214,185,.08)} tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
+td small{display:block}
+.dir{min-width:900px}
+
+/* DIRECTORY CONTROLS */
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 6px}
+.sf{flex:1 1 280px;display:flex;gap:8px;align-items:center;padding:0 14px;border-radius:12px;border:1px solid rgba(53,214,185,.35);background:#06151b}
+.sf:focus-within{border-color:var(--brass)}
+.sf input{width:100%;padding:12px 0;border:0;outline:0;background:transparent;color:var(--ivory);font:inherit}
+.fch{padding:8px 13px;border-radius:99px;border:1px solid var(--line);background:rgba(10,28,36,.7);font-size:.8rem;transition:.25s}
+.fch:hover,.fch.on{border-color:var(--jade);background:rgba(53,214,185,.15);color:#fff}
+.cnt{font-size:.82rem;color:var(--mute);margin-bottom:6px}
+
+/* WRIT MATCHMAKER, FLASHCARDS, QUIZ */
+.scn{display:flex;flex-direction:column;gap:10px}
+.scn .rv2{margin-top:6px;font-weight:600;color:var(--jade);min-height:1.6em}
+.btn{padding:8px 14px;border-radius:10px;border:1px solid rgba(236,198,129,.4);background:rgba(236,198,129,.08);color:var(--ivory);font-size:.84rem;transition:.25s;align-self:flex-start}
+.btn:hover{background:rgba(236,198,129,.22);transform:translateY(-2px)}
+.fc{perspective:900px;height:170px;border:0;background:none;text-align:left}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+@media(hover:hover){.fc:hover .fc-in{transform:rotateY(180deg)}}
+.fc .f{position:absolute;inset:0;padding:18px;border-radius:16px;backface-visibility:hidden;display:flex;align-items:center;font-size:.93rem;border:1px solid var(--line)}
+.fc .fr{background:linear-gradient(150deg,rgba(53,214,185,.14),rgba(10,28,36,.9))}
+.fc .bk{background:linear-gradient(150deg,rgba(236,198,129,.2),rgba(10,28,36,.95));transform:rotateY(180deg);color:var(--ivory);border-color:var(--edge)}
+.quiz{padding:24px;border-radius:20px;border:1px solid var(--edge);background:rgba(4,14,19,.55)}
+.qbar{height:7px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:16px}
+.qbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sea),var(--jade),var(--brass));transition:width .5s}
+.qq{font:600 1.1rem/1.5 'Outfit';color:var(--ivory);margin-bottom:14px}
+.opts{display:grid;gap:9px}
+.opt{text-align:left;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.035);transition:.25s}
+.opt:hover:not(:disabled){border-color:var(--brass);transform:translateX(5px)}
+.opt.ok{border-color:var(--jade);background:rgba(53,214,185,.18)} .opt.bad{border-color:var(--rose);background:rgba(242,155,176,.15)}
+.qx{margin-top:14px;font-size:.92rem;color:var(--mute);min-height:2.4em}
+.qs{font:900 3rem 'Cinzel',serif;background:linear-gradient(92deg,var(--brass),var(--jade));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* FOOTER */
+footer{position:relative;overflow:hidden;text-align:center;padding:54px 24px 42px;margin-top:44px;border-radius:28px;border:1px solid var(--edge);background:linear-gradient(160deg,rgba(6,20,28,.82),rgba(30,26,24,.55));box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--sea),var(--brass),var(--rose),var(--jade))}
+.fq{font:italic 500 clamp(1.05rem,2.3vw,1.45rem)/1.7 'Cormorant Garamond',serif;color:var(--ivory);max-width:860px;margin:0 auto 18px}
+.sign{margin-top:30px;padding-top:24px;border-top:1px solid rgba(236,198,129,.25)}
+.sign span{display:block;background:linear-gradient(92deg,var(--brass),#fff,var(--copper),var(--jade),var(--brass));background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite;transition:letter-spacing .7s}
+.sign .en{font:700 clamp(1.15rem,3.2vw,2rem)/1.5 'Cinzel',serif;letter-spacing:.18em}
+.sign .ta{font:600 clamp(1.1rem,3vw,1.8rem)/1.8 'Noto Sans Tamil','Nirmala UI','Latha',sans-serif;margin-top:4px}
+.sign:hover .en{letter-spacing:.32em}
+.btt{position:fixed;right:22px;bottom:22px;z-index:300;width:48px;height:48px;border-radius:50%;border:0;background:linear-gradient(140deg,var(--brass),var(--copper));color:#10161a;font-size:1.2rem;box-shadow:0 12px 30px rgba(236,198,129,.4);opacity:0;transform:translateY(22px);transition:.4s;pointer-events:none}
+.btt.on{opacity:1;transform:none;pointer-events:auto} .btt:hover{transform:translateY(-6px) rotate(-8deg)}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+ .wrap{padding:12px 12px 50px}.ch{padding:26px 16px}.hero{padding:56px 14px 28px}
+ .nav{top:4px}.tl::before{left:52px}.ev{grid-template-columns:44px 1fr;gap:26px}.ev::before{left:45px}.ev time{font-size:.72rem}
+ .flow{flex-direction:column;padding:16px}.flow .ar{transform:rotate(90deg);animation:none}.nd{max-width:none}
+ .a-name{letter-spacing:.12em}.ch-no{font-size:1.8rem;min-width:44px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- 🎬 CINEMATIC STAGE -->
+<div class="stage" aria-hidden="true">
+  <div class="sky" data-par=".04"></div>
+  <div class="stars"></div>
+  <div class="rays"></div>
+  <div class="moon" data-par=".1"><i></i></div>
+  <div class="aur a1"></div><div class="aur a2"></div><div class="aur a3"></div>
+  <span class="bird">🕊️</span><span class="bird">🕊️</span><span class="bird">🕊️</span>
+  <svg class="far" data-par=".22" viewBox="0 0 1600 240" preserveAspectRatio="none">
+    <path fill="#0a1d26" d="M0 240V170h60v-30h40v30h50v-60h30v60h70v-40l30-30 30 30v40h80v-50h40v50h60V120h24v50h90v-30h50v30h70v-80l20-24 20 24v80h90v-40h60v40h80v-60h40v60h70v-30h40v30h60V110h30v60h90v-40h50v40h80v240z"/>
+  </svg>
+  <svg class="court" data-par=".36" viewBox="0 -30 1600 450" preserveAspectRatio="xMidYMax meet">
+    <defs>
+      <linearGradient id="wl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2029"/><stop offset="1" stop-color="#03070b"/></linearGradient>
+      <radialGradient id="gl" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#f0c27c" stop-opacity=".32"/><stop offset="1" stop-color="#f0c27c" stop-opacity="0"/></radialGradient>
+    </defs>
+    <ellipse cx="800" cy="200" rx="460" ry="210" fill="url(#gl)"/>
+    <g fill="url(#wl)">
+      <rect x="0" y="384" width="1600" height="40"/>
+      <rect x="170" y="290" width="340" height="100"/><rect x="1090" y="290" width="340" height="100"/>
+      <rect x="510" y="236" width="580" height="154"/>
+      <polygon points="556,236 640,146 724,236"/><polygon points="876,236 960,146 1044,236"/>
+      <rect x="748" y="86" width="104" height="160"/><polygon points="738,86 800,4 862,86"/><rect x="796" y="-26" width="8" height="34"/>
+      <rect x="516" y="184" width="38" height="60"/><polygon points="510,184 535,132 560,184"/>
+      <rect x="1046" y="184" width="38" height="60"/><polygon points="1040,184 1065,132 1090,184"/>
+      <rect x="440" y="270" width="70" height="120"/><rect x="1090" y="270" width="70" height="120"/>
+      <polygon points="432,270 475,226 518,270"/><polygon points="1082,270 1125,226 1168,270"/>
+    </g>
+    <line x1="170" y1="282" x2="510" y2="282" stroke="#0d2029" stroke-width="14" stroke-dasharray="16 16"/>
+    <line x1="1090" y1="282" x2="1430" y2="282" stroke="#0d2029" stroke-width="14" stroke-dasharray="16 16"/>
+    <circle cx="800" cy="128" r="26" fill="#f0c27c" opacity=".55"/><circle cx="800" cy="128" r="26" fill="none" stroke="#051018" stroke-width="3"/><path d="M800 128V110M800 128l12 6" stroke="#051018" stroke-width="3"/>
+    <g fill="#02060a">
+      <path d="M560 390v-62a22 22 0 0 1 44 0v62zM640 390v-62a22 22 0 0 1 44 0v62zM716 390v-62a22 22 0 0 1 44 0v62zM840 390v-62a22 22 0 0 1 44 0v62zM916 390v-62a22 22 0 0 1 44 0v62zM996 390v-62a22 22 0 0 1 44 0v62z"/>
+      <path d="M770 390v-70a30 30 0 0 1 60 0v70z"/>
+    </g>
+    <g class="lit">
+      <rect x="578" y="262" width="8" height="18"/><rect x="658" y="262" width="8" height="18"/><rect x="734" y="262" width="8" height="18"/>
+      <rect x="858" y="262" width="8" height="18"/><rect x="934" y="262" width="8" height="18"/><rect x="1014" y="262" width="8" height="18"/>
+      <rect x="776" y="70" width="8" height="16"/><rect x="816" y="70" width="8" height="16"/><rect x="530" y="200" width="8" height="16"/><rect x="1060" y="200" width="8" height="16"/>
+      <rect x="220" y="320" width="8" height="14"/><rect x="300" y="320" width="8" height="14"/><rect x="390" y="320" width="8" height="14"/><rect x="1200" y="320" width="8" height="14"/><rect x="1290" y="320" width="8" height="14"/><rect x="1370" y="320" width="8" height="14"/>
+    </g>
+    <rect x="520" y="384" width="560" height="6" fill="#050c11"/>
+  </svg>
+  <div class="fog"></div><div class="fog f2"></div>
+  <canvas id="dust"></canvas>
+  <div class="grain"></div><div class="vig"></div>
+</div>
+<div class="spot" id="spot" aria-hidden="true"></div>
+<div class="rbar" id="rbar" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<div class="tools">
+  <span>The Bedrock of Constitutional Supremacy · Shield of the Citizen</span>
+  <div class="tb">
+    <button class="tbtn" id="bFocus" aria-pressed="false">📖 Focus mode</button>
+    <button class="tbtn" id="bMotion" aria-pressed="false">⏸ Pause motion</button>
+  </div>
+</div>
+
+<!-- ═════════ HERO ═════════ -->
+<header class="hero" id="top">
+  <div class="lbx t"></div><div class="lbx b"></div>
+  <span class="crest" id="crest" title="Strike the gavel!">⚖️</span>
+  <div class="kicker">The Constitution of India · Part VI · Chapter V (Arts. 214–231) &amp; Chapter VI (Arts. 233–237)</div>
+  <h1 class="mega" aria-label="The High Courts of India">
+    <span class="ln" data-split>THE HIGH COURTS</span>
+    <span class="ln sm" data-split>OF   INDIA</span>
+  </h1>
+  <div class="rule"></div>
+  <p class="tag"><b>The first constitutional door of justice</b> — guardians of liberty, supervisors of every lower court, and, in the quiet dread of many a file-sitting officer, the Nightmare of the Bureaucrats</p>
+
+  <div class="auteur">
+    <div class="clap" aria-hidden="true"></div>
+    <div class="a-in">
+      <div class="a-lab">A Constitutional Codex · Auteur</div>
+      <div class="a-name">PIYUSH&nbsp;PARTE</div>
+      <div class="a-roles"><span>🎬 Directed</span><span>✍️ Written</span><span>🔬 Researched</span><span>🎨 Designed</span></div>
+      <div class="spr" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b class="num" data-n="25">25</b><span>🏛️ High Courts</span></div>
+    <div class="stat"><b class="num" data-n="62">62</b><span>🎂 Retirement age</span></div>
+    <div class="stat"><b>Art. 226</b><span>📜 Wider writ power</span></div>
+    <div class="stat"><b class="num" data-n="1862">1862</b><span>🕰️ First three HCs</span></div>
+    <div class="stat"><b class="num" data-n="10">10</b><span>⏳ Years: bench or bar</span></div>
+  </div>
+</header>
+
+<nav class="nav" id="nav" aria-label="Chapters">
+  <a href="#found">🌐 Big Picture</a><a href="#history">🕰️ Evolution</a><a href="#atlas">🗺️ 25 Courts</a><a href="#judges">👩‍⚖️ Judges</a>
+  <a href="#appoint">🤝 Appointment</a><a href="#service">💰 Service</a><a href="#removal">⚖️ Removal</a><a href="#independence">🛡️ Independence</a>
+  <a href="#powers">🔍 Powers &amp; Writs</a><a href="#lower">🌳 Subordinate</a><a href="#articles">🧩 Articles</a><a href="#cases">🌟 Cases</a>
+  <a href="#vs">⚔️ SC vs HC</a><a href="#reform">🛠️ Reforms</a><a href="#revise">🧠 Revision</a>
+</nav>
+
+<div class="co warn rv"><b>🧭 Read this codex correctly</b>
+Constitutional text, judicial interpretation, statutes and administrative practice are marked separately. Time-sensitive facts (vacancies, pendency, new benches, live removal proceedings) change — check the official sources named in chapter 14 before quoting them as current.</div>
+
+<!-- ═════════ 01 ═════════ -->
+<section class="ch rv" id="found" style="--ac:var(--jade)">
+  <div class="ch-head"><div class="ch-no">01</div><div><div class="ch-k">The constitutional architecture</div><h2><span class="ico">🏛️</span> What exactly is a High Court?</h2></div></div>
+  <p class="lead">A High Court is a <strong>constitutional court</strong> at the head of the ordinary judicial hierarchy of a State (or group of States / Union Territories). It sits directly beneath the Supreme Court in India's <em>integrated</em> judiciary, yet it is <strong>not administratively controlled by the Supreme Court</strong> — it controls the courts below it. And it is older: the first three High Courts opened in 1862, the Supreme Court in 1950 — High Courts predate it by <span class="hl">1950 − 1862 = 88 years</span>.</p>
+
+  <div class="pyr" aria-label="Judicial hierarchy">
+    <div>🇮🇳 <strong>Supreme Court</strong><small>Apex court · Arts. 124–147</small></div>
+    <div>🏛️ <strong>25 High Courts</strong><small>Constitutional courts · Arts. 214–231 · control below via Art. 235</small></div>
+    <div>⚖️ <strong>District &amp; subordinate courts</strong><small>Where most litigation begins · Arts. 233–237</small></div>
+  </div>
+
+  <div class="g g2">
+    <article class="card"><span class="tagc">Art. 214</span><h3>🏠 A High Court for each State</h3><p>There shall be a High Court for each State. This guarantees a constitutional High Court for every State — but not an <em>exclusive</em> one: a common High Court is allowed.</p></article>
+    <article class="card"><span class="tagc">Art. 231</span><h3>🤝 One court, many States</h3><p>Parliament may by law establish a common High Court for <strong>two or more States, or for States and a Union Territory</strong> (e.g. Punjab &amp; Haryana + Chandigarh; Bombay for Maharashtra, Goa and a UT).</p></article>
+    <article class="card"><span class="tagc">Art. 230</span><h3>🧭 Reach into Union Territories</h3><p>Parliament may <strong>extend</strong> a High Court's jurisdiction to a UT, or <strong>exclude</strong> it from a UT. (Kerala ➜ Lakshadweep; Madras ➜ Puducherry.)</p></article>
+    <article class="card"><span class="tagc">Art. 241</span><h3>🏙️ High Courts for UTs</h3><p>Parliament may constitute a High Court for a UT or declare an existing court to be one. <strong>Delhi</strong> has its own High Court (1966); J&amp;K and Ladakh share one.</p></article>
+  </div>
+
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · SWORD-A — the High Court's six weapons</div>
+    <div class="mn-row">
+      <div class="ml"><b>S</b><span>Supervision<br>Art. 227</span></div>
+      <div class="ml"><b>W</b><span>Writs<br>Art. 226</span></div>
+      <div class="ml"><b>O</b><span>Original side<br>suits, elections</span></div>
+      <div class="ml"><b>R</b><span>Record &amp; contempt<br>Art. 215</span></div>
+      <div class="ml"><b>D</b><span>Discipline of lower courts<br>Art. 235</span></div>
+      <div class="ml"><b>A</b><span>Appeals<br>civil · criminal</span></div>
+    </div>
+    <p class="mn-n">Judicial review runs through <strong>W</strong> and <strong>S</strong>. Route to chapter-memory: <strong>214 Home · 230 Territory · 231 Together</strong>.</p>
+  </div>
+
+  <div class="co info"><b>💡 Independence ≠ isolation</b>The Supreme Court's declared law binds every High Court (Art. 141) and its decisions can be appealed (Arts. 132–136) — but a High Court's powers come straight from the Constitution, not from a Supreme Court delegation.</div>
+</section>
+
+<!-- ═════════ 02 ═════════ -->
+<section class="ch rv" id="history" style="--ac:var(--copper)">
+  <div class="ch-head"><div class="ch-no">02</div><div><div class="ch-k">From Crown charters to constitutional courts</div><h2><span class="ico">🕰️</span> Origin &amp; evolution</h2></div></div>
+  <p>Two colonial judicial streams — the Crown's <em>Supreme Courts</em> in the Presidency towns and the Company's <em>Sadar Adalats</em> — were merged by the <strong>Indian High Courts Act, 1861</strong>, which authorised High Courts created by Letters Patent. That architecture still stands today.</p>
+
+  <div class="flow">
+    <div class="nd"><b>1726</b>Mayor's Courts</div><i class="ar">➜</i>
+    <div class="nd"><b>1774–1823</b>Supreme Courts (Calcutta, Madras, Bombay)</div><i class="ar">➜</i>
+    <div class="nd"><b>1861–62</b>Act + first 3 High Courts</div><i class="ar">➜</i>
+    <div class="nd"><b>1950</b>Constitutional High Courts</div><i class="ar">➜</i>
+    <div class="nd"><b>1956 →</b>Reorganised &amp; common courts</div><i class="ar">➜</i>
+    <div class="nd"><b>2000–2019</b>New State courts</div>
+  </div>
+
+  <div class="tl">
+    <div class="ev" style="--c:var(--sea)"><time>1726</time><div class="card"><h3>⚓ Mayor's Courts</h3><p>Royal Charter of 1726 set up Mayor's Courts at Madras, Bombay and Calcutta — the first courts drawing authority from the Crown.</p></div></div>
+    <div class="ev" style="--c:#8fb8ee"><time>1774</time><div class="card"><h3>🏛️ Supreme Courts</h3><p>Regulating Act 1773 → Supreme Court at Calcutta (1774); later Madras (1801) and Bombay (1823). A <em>dual</em> system with the Company's Sadar Adalats caused friction.</p></div></div>
+    <div class="ev" style="--c:var(--lilac)"><time>1861</time><div class="card"><h3>📜 Indian High Courts Act</h3><p>Abolished the Supreme Courts and Sadar Adalats in the Presidencies and authorised High Courts under Letters Patent.</p></div></div>
+    <div class="ev" style="--c:var(--rose)"><time>1862</time><div class="card"><h3>🏛️ Calcutta · Bombay · Madras</h3><p>Calcutta (2 July), Bombay (14 Aug), Madras (15 Aug). Calcutta is the oldest High Court in India.</p></div></div>
+    <div class="ev" style="--c:var(--copper)"><time>1866</time><div class="card"><h3>🌉 Allahabad</h3><p>Established 1866 at Agra for the North-Western Provinces; moved to Allahabad (now Prayagraj) in 1869.</p></div></div>
+    <div class="ev" style="--c:var(--brass)"><time>1916</time><div class="card"><h3>🌾 Patna</h3><p>High Court for Bihar &amp; Orissa; Orissa got its own High Court in 1948.</p></div></div>
+    <div class="ev" style="--c:var(--moss)"><time>1935</time><div class="card"><h3>📘 Government of India Act</h3><p>Detailed constitutional framework for High Courts and created the Federal Court (1937). It <em>regulated</em> — it did not originate — High Courts.</p></div></div>
+    <div class="ev" style="--c:var(--jade)"><time>1950</time><div class="card"><h3>🇮🇳 Constitution</h3><p>High Courts become constitutional courts (Art. 214). <strong>Art. 225</strong> preserves existing jurisdiction and powers, subject to the Constitution and competent law.</p></div></div>
+    <div class="ev" style="--c:var(--sea)"><time>1956</time><div class="card"><h3>🗺️ States Reorganisation &amp; 7th Amendment</h3><p>New State map; common High Court provision restructured (Arts. 230–231); old Art. 232 omitted. Kerala and Madhya Pradesh High Courts take present form.</p></div></div>
+    <div class="ev" style="--c:var(--lilac)"><time>1963</time><div class="card"><h3>🎂 15th Amendment</h3><p>Retirement age raised <strong>60 ➜ 62</strong>; Art. 224A (retired judges) added; Art. 226 extended by the cause-of-action rule (now Art. 226(2)).</p></div></div>
+    <div class="ev" style="--c:var(--rose)"><time>1966–75</time><div class="card"><h3>🏙️ Delhi, Punjab &amp; Haryana, HP, Sikkim</h3><p>Delhi HC and the Punjab &amp; Haryana HC (1966), Himachal Pradesh (1971), Sikkim (1975).</p></div></div>
+    <div class="ev" style="--c:var(--copper)"><time>1976–78</time><div class="card"><h3>🔁 42nd → 43rd → 44th</h3><p>42nd Amendment inserted Arts. 226A and 228A to curb High Court review; the 43rd omitted them; the 44th restored Art. 226 safeguards (incl. the interim-order rule in 226(3)).</p></div></div>
+    <div class="ev" style="--c:var(--brass)"><time>2000–19</time><div class="card"><h3>🌱 New States, new courts</h3><p>Chhattisgarh, Uttarakhand, Jharkhand (2000) · Meghalaya, Manipur, Tripura (2013) · Andhra Pradesh &amp; Telangana separate (2019) · J&amp;K and Ladakh court after the 2019 reorganisation.</p></div></div>
+  </div>
+  <div class="co"><b>🎯 Exam angle</b>“Established” can mean the predecessor court, the present name, or a newly separate court. Always read the year with its lineage note.</div>
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · "6-1-2-6-6"</div>
+    <p><strong>1861</strong> Act → <strong>1862</strong> trio (Calcutta · Bombay · Madras, i.e. C-B-M) → <strong>1866</strong> Allahabad → <strong>1950</strong> Constitution → <strong>1956</strong> reorganisation → <strong>1963</strong> age 62. Say it as “<em>Act, Trio, Agra, Republic, Redraw, Retire-62</em>”.</p></div>
+</section>
+
+<!-- ═════════ 03 ═════════ -->
+<section class="ch rv" id="atlas" style="--ac:var(--sea)">
+  <div class="ch-head"><div class="ch-no">03</div><div><div class="ch-k">The judicial map</div><h2><span class="ico">🗺️</span> The 25 High Courts — seats, territory &amp; benches</h2></div></div>
+  <p>A <strong>bench</strong> is part of the same High Court, not a separate court. Names such as Bombay, Calcutta, Madras, Gauhati, Allahabad and Orissa remain official even where the city name has changed. Search by court, State, city, bench or year.</p>
+
+  <div class="bar">
+    <label class="sf"><span aria-hidden="true">🔎</span><input id="q" type="search" placeholder="Try: Goa · Lucknow · 1862 · Lakshadweep · Madurai…" aria-label="Search High Courts"></label>
+    <button class="fch on" data-f="all">All</button><button class="fch" data-f="shared">🤝 Shared jurisdiction</button><button class="fch" data-f="orig">👑 Original 3 (1862)</button>
+    <button class="fch" data-f="new">🌱 2000 onwards</button><button class="fch" data-f="bench">🪑 Has benches</button><button class="fch" data-f="ut">🏙️ Covers a UT</button>
+  </div>
+  <div class="cnt" id="cnt" role="status" aria-live="polite">25 of 25 High Courts shown.</div>
+
+  <div class="tw"><table class="dir" id="dir">
+    <caption>The High Courts of India</caption>
+    <thead><tr><th>No.</th><th>High Court</th><th>Year</th><th>Territorial jurisdiction</th><th>Principal seat</th><th>Benches / other seats</th></tr></thead>
+    <tbody>
+      <tr data-g="bench"><td>1</td><td><strong>Allahabad</strong></td><td>1866</td><td>Uttar Pradesh</td><td>Prayagraj</td><td>Lucknow Bench</td></tr>
+      <tr data-g="new"><td>2</td><td><strong>Andhra Pradesh</strong></td><td>2019<small>separate court</small></td><td>Andhra Pradesh</td><td>Amaravati</td><td>—</td></tr>
+      <tr data-g="shared orig ut bench"><td>3</td><td><strong>Bombay</strong></td><td>1862</td><td>Maharashtra · Goa · Dadra &amp; Nagar Haveli and Daman &amp; Diu</td><td>Mumbai</td><td>Nagpur · Aurangabad (Chhatrapati Sambhajinagar) · Panaji (Goa) · Kolhapur circuit bench<small>Kolhapur began in 2025 — verify</small></td></tr>
+      <tr data-g="shared orig ut bench"><td>4</td><td><strong>Calcutta</strong></td><td>1862<small>oldest HC</small></td><td>West Bengal · Andaman &amp; Nicobar Islands</td><td>Kolkata</td><td>Port Blair circuit bench · Jalpaiguri circuit bench</td></tr>
+      <tr data-g="new"><td>5</td><td><strong>Chhattisgarh</strong></td><td>2000</td><td>Chhattisgarh</td><td>Bilaspur</td><td>—</td></tr>
+      <tr data-g="ut"><td>6</td><td><strong>Delhi</strong></td><td>1966</td><td>NCT of Delhi</td><td>New Delhi</td><td>—</td></tr>
+      <tr data-g="shared bench"><td>7</td><td><strong>Gauhati</strong></td><td>1948</td><td>Assam · Nagaland · Mizoram · Arunachal Pradesh</td><td>Guwahati</td><td>Kohima · Aizawl · Itanagar (at Naharlagun)</td></tr>
+      <tr data-g=""><td>8</td><td><strong>Gujarat</strong></td><td>1960</td><td>Gujarat</td><td>Ahmedabad</td><td>—</td></tr>
+      <tr data-g=""><td>9</td><td><strong>Himachal Pradesh</strong></td><td>1971</td><td>Himachal Pradesh</td><td>Shimla</td><td>—</td></tr>
+      <tr data-g="shared ut"><td>10</td><td><strong>Jammu &amp; Kashmir and Ladakh</strong></td><td>1928<small>historic lineage</small></td><td>UT of Jammu &amp; Kashmir · UT of Ladakh</td><td>Srinagar &amp; Jammu</td><td>Two seats (seasonal)</td></tr>
+      <tr data-g="new"><td>11</td><td><strong>Jharkhand</strong></td><td>2000</td><td>Jharkhand</td><td>Ranchi</td><td>—</td></tr>
+      <tr data-g="bench"><td>12</td><td><strong>Karnataka</strong></td><td>1884<small>Mysore lineage</small></td><td>Karnataka</td><td>Bengaluru</td><td>Dharwad · Kalaburagi</td></tr>
+      <tr data-g="shared ut"><td>13</td><td><strong>Kerala</strong></td><td>1956</td><td>Kerala · Lakshadweep</td><td>Kochi (Ernakulam)</td><td>—</td></tr>
+      <tr data-g="bench"><td>14</td><td><strong>Madhya Pradesh</strong></td><td>1956<small>Nagpur HC lineage 1936</small></td><td>Madhya Pradesh</td><td>Jabalpur</td><td>Indore · Gwalior</td></tr>
+      <tr data-g="shared orig ut bench"><td>15</td><td><strong>Madras</strong></td><td>1862</td><td>Tamil Nadu · Puducherry</td><td>Chennai</td><td>Madurai Bench</td></tr>
+      <tr data-g="new"><td>16</td><td><strong>Manipur</strong></td><td>2013</td><td>Manipur</td><td>Imphal</td><td>—</td></tr>
+      <tr data-g="new"><td>17</td><td><strong>Meghalaya</strong></td><td>2013</td><td>Meghalaya</td><td>Shillong</td><td>—</td></tr>
+      <tr data-g=""><td>18</td><td><strong>Orissa</strong></td><td>1948</td><td>Odisha</td><td>Cuttack</td><td>—</td></tr>
+      <tr data-g=""><td>19</td><td><strong>Patna</strong></td><td>1916</td><td>Bihar</td><td>Patna</td><td>—</td></tr>
+      <tr data-g="shared ut"><td>20</td><td><strong>Punjab and Haryana</strong></td><td>1966<small>common court</small></td><td>Punjab · Haryana · Chandigarh</td><td>Chandigarh</td><td>—</td></tr>
+      <tr data-g="bench"><td>21</td><td><strong>Rajasthan</strong></td><td>1949</td><td>Rajasthan</td><td>Jodhpur</td><td>Jaipur Bench</td></tr>
+      <tr data-g=""><td>22</td><td><strong>Sikkim</strong></td><td>1975</td><td>Sikkim</td><td>Gangtok</td><td>—</td></tr>
+      <tr data-g="new"><td>23</td><td><strong>Telangana</strong></td><td>2019<small>separate court</small></td><td>Telangana</td><td>Hyderabad</td><td>—</td></tr>
+      <tr data-g="new"><td>24</td><td><strong>Tripura</strong></td><td>2013</td><td>Tripura</td><td>Agartala</td><td>—</td></tr>
+      <tr data-g="new"><td>25</td><td><strong>Uttarakhand</strong></td><td>2000</td><td>Uttarakhand</td><td>Nainital</td><td>—</td></tr>
+    </tbody></table></div>
+  <p id="none" hidden class="co trap">No matching High Court. Try another State, city or year.</p>
+  <div class="co warn"><b>📍 Verification note</b>Benches, circuit sittings and proposed seat changes are administrative and change by notification. A demand or announcement is <em>not</em> an operational bench.</div>
+
+  <h3 class="sec">🏙️ Which High Court serves which Union Territory?</h3>
+  <div class="g g4">
+    <div class="card"><span class="big">🏝️</span><h3>Andaman &amp; Nicobar</h3><p>➜ <strong>Calcutta</strong></p></div>
+    <div class="card"><span class="big">🏝️</span><h3>Lakshadweep</h3><p>➜ <strong>Kerala</strong></p></div>
+    <div class="card"><span class="big">🌴</span><h3>Puducherry</h3><p>➜ <strong>Madras</strong></p></div>
+    <div class="card"><span class="big">🏙️</span><h3>Chandigarh</h3><p>➜ <strong>Punjab &amp; Haryana</strong></p></div>
+    <div class="card"><span class="big">🐚</span><h3>Dadra &amp; Nagar Haveli and Daman &amp; Diu</h3><p>➜ <strong>Bombay</strong></p></div>
+    <div class="card"><span class="big">🏛️</span><h3>Delhi (NCT)</h3><p>➜ <strong>Delhi</strong> (own court)</p></div>
+    <div class="card"><span class="big">🏔️</span><h3>Jammu &amp; Kashmir · Ladakh</h3><p>➜ <strong>J&amp;K and Ladakh</strong></p></div>
+  </div>
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · "K-L · M-P · C-A · B-D · P-C"</div>
+    <div class="mn-row">
+      <div class="ml"><b>K–L</b><span>Kerala – Lakshadweep</span></div><div class="ml"><b>M–P</b><span>Madras – Puducherry</span></div>
+      <div class="ml"><b>C–A</b><span>Calcutta – Andaman</span></div><div class="ml"><b>B–D</b><span>Bombay – Dadra/Daman/Goa</span></div>
+      <div class="ml"><b>P–C</b><span>Punjab-Haryana – Chandigarh</span></div><div class="ml"><b>ANMA</b><span>Gauhati: Assam, Nagaland, Mizoram, Arunachal</span></div>
+    </div>
+    <p class="mn-n">Meghalaya, Manipur and Tripura left Gauhati in 2013. Three-State sharing: <strong>Gauhati (4 States)</strong>; State + UT sharing: Bombay, Calcutta, Kerala, Madras, Punjab &amp; Haryana.</p></div>
+</section>
+
+<!-- ═════════ 04 ═════════ -->
+<section class="ch rv" id="judges" style="--ac:var(--lilac)">
+  <div class="ch-head"><div class="ch-no">04</div><div><div class="ch-k">People, offices and temporary arrangements</div><h2><span class="ico">👩‍⚖️</span> Composition, qualifications &amp; types of judges</h2></div></div>
+  <div class="co info"><b>🏗️ Art. 216 — flexible strength</b>A High Court consists of a Chief Justice and such other judges as the <strong>President</strong> deems necessary from time to time. No uniform number is fixed by the Constitution. <em>Sanctioned</em> strength ≠ <em>working</em> strength (vacancies are the gap). Contrast the Supreme Court, whose maximum is fixed by Parliament (Art. 124(1)).</div>
+
+  <h3 class="sec">🎓 Qualifications — Art. 217(2)</h3>
+  <div class="g g3">
+    <article class="card"><span class="big">🇮🇳</span><h3>Citizen of India</h3><p>Residence in the State is <em>not</em> a constitutional qualification.</p></article>
+    <article class="card"><span class="big">⚖️</span><h3>10 years of judicial office</h3><p>Held a judicial office in the territory of India for at least ten years — <strong>OR</strong>…</p></article>
+    <article class="card"><span class="big">📚</span><h3>10 years as HC advocate</h3><p>Advocate of a High Court (or two or more in succession) for at least ten years. The Explanation counts certain related periods.</p></article>
+  </div>
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · C-10-10</div>
+    <p><strong>C</strong>itizen + <strong>10</strong> years on the Bench <em>or</em> <strong>10</strong> years at the Bar. <strong>No</strong> minimum age. <strong>No</strong> “distinguished jurist” route — that exists only for the Supreme Court (Art. 124(3)(c)).</p></div>
+
+  <h3 class="sec">📋 Types of judges</h3>
+  <div class="tw"><table><thead><tr><th>Type</th><th>Provision</th><th>Purpose &amp; limits</th></tr></thead><tbody>
+    <tr><td><strong>Permanent judge</strong></td><td>Art. 217</td><td>Regular strength; holds office till <strong>62</strong>.</td></tr>
+    <tr><td><strong>Acting Chief Justice</strong></td><td>Art. 223</td><td>Chief Justice's office vacant, or CJ absent / unable to perform duties — President appoints another judge to perform them.</td></tr>
+    <tr><td><strong>Additional judge</strong></td><td>Art. 224(1)</td><td>Temporary rise in business or arrears; <strong>not exceeding two years</strong> at a time. In practice most are later made permanent.</td></tr>
+    <tr><td><strong>Acting judge</strong></td><td>Art. 224(2)</td><td>When a judge (other than the CJ) is absent / unable, or is acting as CJ.</td></tr>
+    <tr><td><strong>Age ceiling</strong></td><td>Art. 224(3)</td><td>No additional / acting judge holds office after <strong>62</strong>.</td></tr>
+    <tr><td><strong>Retired judge sitting again</strong></td><td>Art. 224A</td><td>Chief Justice of the HC may, with the President's <strong>previous consent</strong>, request a former HC judge to sit and act — the <strong>person's consent</strong> is also needed. Revived to beat arrears (<em>Lok Prahari</em>, 2021).</td></tr>
+  </tbody></table></div>
+
+  <div class="flow" aria-label="Article 224A">
+    <div class="nd"><b>🏛️ HC Chief Justice</b>Identifies need, requests</div><i class="ar">➜</i>
+    <div class="nd"><b>🇮🇳 President</b>Previous consent</div><i class="ar">➜</i>
+    <div class="nd"><b>🤝 Retired judge</b>Must agree</div><i class="ar">➜</i>
+    <div class="nd"><b>⚖️ Sits &amp; acts</b>Same powers while sitting; not otherwise deemed a judge</div>
+  </div>
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · "223 Chief · 224 Relief · 224A Recall"</div>
+    <p><strong>223</strong> = Acting <em>Chief</em>; <strong>224</strong> = additional/acting judges for <em>relief</em> from workload; <strong>224A</strong> = <em>recall</em> of retired judges (3 consents: CJ requests, President permits, judge agrees).</p></div>
+</section>
+
+<!-- ═════════ 05 ═════════ -->
+<section class="ch rv" id="appoint" style="--ac:var(--brass)">
+  <div class="ch-head"><div class="ch-no">05</div><div><div class="ch-k">Constitutional text + judicial interpretation</div><h2><span class="ico">🤝</span> Appointment, collegium &amp; transfer</h2></div></div>
+  <p class="lead">Art. 217(1): the <strong>President</strong> appoints, by warrant under hand and seal, after consulting the <strong>Chief Justice of India</strong>, the <strong>Governor</strong> and — for a judge other than the Chief Justice — the <strong>Chief Justice of the High Court</strong>. In practice, “consultation” was interpreted into a <strong>collegium</strong> of judges who form the recommendation.</p>
+
+  <h3 class="sec">📚 The four Judges Cases</h3>
+  <div class="tw"><table><thead><tr><th>Case</th><th>Year</th><th>Holding</th></tr></thead><tbody>
+    <tr><td><strong>1st — S.P. Gupta v. UoI</strong></td><td>1981<small>reported AIR 1982</small></td><td>Executive primacy; “consultation” ≠ concurrence.</td></tr>
+    <tr><td><strong>2nd — SCAORA v. UoI</strong></td><td>1993</td><td>Judicial primacy; consultation ⇒ concurrence; collegium born; CJI's view = institutional, collective opinion.</td></tr>
+    <tr><td><strong>3rd — Special Reference No. 1 of 1998</strong></td><td>1998</td><td>Fixed collegium sizes (see below) and the requirement of collective consultation.</td></tr>
+    <tr><td><strong>4th — NJAC case (SCAORA v. UoI)</strong></td><td>2015</td><td>99th Amendment + NJAC Act struck down <strong>4:1</strong> (Chelameswar J. dissenting); judicial primacy / independence part of basic structure; collegium revived.</td></tr>
+  </tbody></table></div>
+
+  <div class="tw"><table><thead><tr><th>Decision</th><th>Who forms the collegium</th><th>Size</th></tr></thead><tbody>
+    <tr><td>Initiation: High Court judge appointment</td><td>HC Chief Justice + 2 senior-most HC judges</td><td>3</td></tr>
+    <tr><td>SC-level: <strong>High Court judge</strong> appointment</td><td>CJI + 2 senior-most SC judges</td><td><strong>3</strong></td></tr>
+    <tr><td>SC-level: <strong>Supreme Court judge</strong> appointment</td><td>CJI + 4 senior-most SC judges</td><td>5</td></tr>
+    <tr><td>SC-level: <strong>High Court judge transfer</strong> (Art. 222)</td><td>CJI + 4 senior-most SC judges (+ CJs of both HCs consulted)</td><td>5</td></tr>
+  </tbody></table></div>
+
+  <div class="flow v" aria-label="HC appointment pipeline">
+    <div class="nd"><b>1️⃣ Vacancy &amp; initiation</b>HC Chief Justice, consulting the 2 senior-most colleagues, proposes names.</div><i class="ar">➜</i>
+    <div class="nd"><b>2️⃣ State processing</b>Governor / Chief Minister channel; State inputs; Intelligence Bureau inputs gathered by the Union.</div><i class="ar">➜</i>
+    <div class="nd"><b>3️⃣ Union Law Ministry</b>Scrutiny and forwarding to the Supreme Court.</div><i class="ar">➜</i>
+    <div class="nd"><b>4️⃣ SC collegium (CJI + 2)</b>Assesses merit, integrity, seniority, diversity; consults SC judges familiar with the High Court.</div><i class="ar">➜</i>
+    <div class="nd"><b>5️⃣ Executive processing</b>Government may seek reconsideration; a <em>reiterated</em> recommendation binds.</div><i class="ar">➜</i>
+    <div class="nd"><b>6️⃣ President's warrant &amp; oath (Art. 219)</b>Notification, then oath before the Governor.</div>
+  </div>
+
+  <div class="co trap"><b>🚨 The “CJI + 4” trap</b>CJI + 4 is for <strong>Supreme Court appointments</strong> and for <strong>High Court transfers</strong>. Ordinary <strong>High Court appointments</strong> go to the CJI + <strong>2</strong>. Collegium size depends on the decision.</div>
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · "HC-in 3 · SC-in 5 · HC-move 5"</div>
+    <div class="mn-row"><div class="ml"><b>3</b><span>CJI + 2 → HC appointment</span></div><div class="ml"><b>5</b><span>CJI + 4 → SC appointment</span></div><div class="ml"><b>5</b><span>CJI + 4 → HC transfer</span></div></div>
+    <p class="mn-n">Judges Cases timeline: <strong>“Gupta ’81 → SCAORA ’93 → Reference ’98 → NJAC ’15”</strong> = <em>Executive → Judicial → Fixed sizes → NJAC killed</em>.</p></div>
+
+  <h3 class="sec">👑 Chief Justices</h3>
+  <p>The President appoints a High Court Chief Justice after the same consultative process (CJI + 2 senior-most). Appointing Chief Justices from <em>outside</em> the State is a long-standing <strong>convention</strong>, not an eligibility condition in Art. 217. The senior-most judge has no automatic right to become permanent Chief Justice.</p>
+
+  <h3 class="sec">🔄 Art. 222 — Transfer of judges</h3>
+  <div class="g g2">
+    <article class="card"><h3>⚙️ The rule</h3><p>The President may transfer a judge (including a Chief Justice) from one High Court to another <strong>after consulting the CJI</strong>. Art. 222(2): a compensatory allowance is payable.</p></article>
+    <article class="card"><h3>⚖️ The safeguards</h3><p>Transfer must serve <strong>public interest</strong> (better administration of justice) and not be punitive. The judge's <strong>consent is not constitutionally required</strong> (<em>Sankalchand Sheth</em>, 1977). Judicial review is narrow and process-focused.</p></article>
+  </div>
+</section>
+
+<!-- ═════════ 06 ═════════ -->
+<section class="ch rv" id="service" style="--ac:var(--moss)">
+  <div class="ch-head"><div class="ch-no">06</div><div><div class="ch-k">Conditions that protect the office</div><h2><span class="ico">💰</span> Oath, tenure, pay &amp; practice restrictions</h2></div></div>
+  <div class="g g2">
+    <article class="card"><span class="tagc">Art. 219</span><h3>🤚 Oath or affirmation</h3><p>Made and subscribed before the <strong>Governor or a person appointed by the Governor</strong>, in the Third Schedule form: true faith and allegiance to the Constitution, upholding India's sovereignty and integrity, duties performed without fear or favour, affection or ill-will.</p></article>
+    <article class="card"><span class="tagc">Art. 217(1), (3)</span><h3>🎂 Tenure</h3><p>Till <strong>62</strong>. Office is vacated on: (a) <strong>resignation</strong> in writing to the <strong>President</strong>; (b) <strong>removal</strong> by the Art. 124(4) route; (c) <strong>appointment as a Supreme Court judge</strong> or <strong>transfer</strong> to another High Court (Art. 217(1)(c)). Any question about a judge's age is decided by the <strong>President after consulting the CJI</strong>, and that decision is final (Art. 217(3), inserted in 1963).</p></article>
+  </div>
+
+  <h3 class="sec">💰 Who fixes the pay — and which fund actually pays?</h3>
+  <p><strong>Article 221</strong> separates <em>salary</em> from <em>allowances, leave and pension rights</em>. Parliament fixes salaries by law. Allowances and rights in respect of leave and pension are determined by or under parliamentary law, and the <strong>proviso</strong> protects those allowances and rights from being varied to the judge's disadvantage after appointment. Keep the <em>source of the law</em> (Art. 221) separate from the <em>source of payment</em> (Arts. 202 and 112).</p>
+
+  <div class="tw"><table>
+    <caption>Financial architecture of a High Court judge</caption>
+    <thead><tr><th>Component</th><th>Basis</th><th>Payment / charge</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Chief Justice — basic salary</strong></td><td>High Court Judges (Salaries and Conditions of Service) Act, 1954, as amended in 2018</td><td><strong>₹2,50,000 per month</strong> under that statutory scale</td></tr>
+      <tr><td><strong>Other judge — basic salary</strong></td><td>Same Act</td><td><strong>₹2,25,000 per month</strong> under that scale</td></tr>
+      <tr><td><strong>Judges' salaries and allowances</strong></td><td>Art. 202(3)(d)</td><td>Charged on the <strong>Consolidated Fund of the State</strong> (ordinary State-HC framework)</td></tr>
+      <tr><td><strong>Judges' pensions</strong></td><td>Art. 112(3)(d)(iii)</td><td>Charged on the <strong>Consolidated Fund of India</strong></td></tr>
+      <tr><td><strong>HC administrative expenses</strong></td><td>Art. 229(3)</td><td>Charged on the State fund, including salaries, allowances and pensions of <em>officers and servants</em> of the court</td></tr>
+      <tr><td><strong>Common courts / UT arrangements</strong></td><td>Arts. 231 and 241 with reorganisation and financial laws</td><td>Read the applicable allocation provisions; do not assume the ordinary State pattern answers every case</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="co info"><b>🧾 “Charged” does not mean “beyond scrutiny”</b>Charged expenditure is <strong>not submitted to the vote</strong> of the legislature, though it may be discussed. It removes an annual voting lever over the judiciary. It does not exempt the court from lawful financial administration.</div>
+
+  <div class="mn">
+    <div class="mn-t">🧠 Mnemonic · “State pays Service, India pays Pension”</div>
+    <p><strong>S–S, I–P:</strong> <strong>S</strong>tate funds <strong>S</strong>alary and allowances; <strong>I</strong>ndia funds judges' <strong>P</strong>ensions. The pension of <em>registry staff</em> is a different matter, under Art. 229.</p>
+  </div>
+
+  <h3 class="sec">🚨 Financial Emergency — Art. 360</h3>
+  <p>During a Financial Emergency, the President may direct reductions in the salaries and allowances of persons serving the Union, <strong>including Supreme Court and High Court judges</strong>. This is an exceptional constitutional power, not an ordinary executive power to cut judicial pay.</p>
+
+  <h3 class="sec">🚪 Article 220 — what may a former permanent judge practise?</h3>
+  <div class="g g2">
+    <article class="card"><span class="big">✅</span><h3>Permitted forums</h3><p>A person who has held office as a <strong>permanent High Court judge</strong> may plead or act in the <strong>Supreme Court</strong> and in <strong>other High Courts</strong>, subject to professional rules.</p></article>
+    <article class="card"><span class="big">⛔</span><h3>Closed forums</h3><p>The person may not plead or act in their <strong>own former High Court</strong>, in subordinate courts, or before other authorities in India. Describing this as “no practice anywhere” is wrong.</p></article>
+  </div>
+  <div class="co trap"><b>🎯 HC ≠ SC after retirement</b><strong>Art. 220:</strong> former permanent HC judge → Supreme Court + other High Courts allowed. <strong>Art. 124(7):</strong> former SC judge → may not plead or act before <em>any</em> court or authority in India. Neither provision is a blanket rule on post-retirement public offices.</div>
+</section>
+
+<!-- ═════════ 07 · REMOVAL ═════════ -->
+<section class="ch rv" id="removal" style="--ac:var(--rose)">
+  <div class="ch-head"><div class="ch-no">07</div><div><div class="ch-k">Accountability without executive dismissal</div><h2><span class="ico">⚖️</span> Removal, inquiry &amp; accountability</h2></div></div>
+
+  <p class="lead">No Governor, Cabinet, Chief Justice or CJI can dismiss a High Court judge. <strong>Art. 217(1)(b)</strong>, read with <strong>Art. 218</strong>, applies the removal framework of <strong>Art. 124(4) and (5)</strong>. The only grounds are <strong>proved misbehaviour</strong> and <strong>incapacity</strong>.</p>
+
+  <div class="flow v" aria-label="Removal pipeline">
+    <div class="nd"><b>1️⃣ Notice of motion</b>Signed by at least <strong>100 Lok Sabha</strong> or <strong>50 Rajya Sabha</strong> members.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>2️⃣ Admission</b>Speaker or Chairman may admit or refuse the notice under the Judges (Inquiry) Act, 1968.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>3️⃣ Three-member committee</b>A Supreme Court judge, a High Court Chief Justice, and a distinguished jurist.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>4️⃣ Inquiry with a fair hearing</b>If misbehaviour or incapacity is not found proved, the motion does not proceed.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>5️⃣ Address by each House</b>Majority of <em>total membership</em> AND two-thirds of members <em>present and voting</em>, in the <strong>same session</strong>.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>6️⃣ President's order</b>Removal takes effect only through the presidential order that follows both addresses.</div>
+  </div>
+
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · 100–50 → 3 → Double majority → President</div>
+    <p><strong>100 LS / 50 RS</strong> start it; <strong>3</strong> investigate; <strong>both Houses</strong> need the two-part special majority; the <strong>President</strong> removes. A committee report is <em>not</em> itself a removal.</p>
+  </div>
+
+  <h3 class="sec">🕵️ In-house inquiry is not parliamentary removal</h3>
+  <p>The judiciary's <strong>in-house procedure</strong> examines allegations of misconduct internally. Its outcomes can include advice to resign, a change in judicial work allocation, or forwarding material for constitutional action. It <strong>does not empower the CJI to remove</strong> a constitutional judge. Criminal investigation, contempt and parliamentary removal are separate processes. Judicial independence is not a general immunity from criminal law, but the safeguards on starting proceedings against superior-court judges must be read with <em>K. Veeraswami v. Union of India</em> (1991).</p>
+
+  <div class="g g3">
+    <article class="card"><h3>📚 V. Ramaswami · 1993</h3><p>The Lok Sabha motion did not gain the required majority. He was a Supreme Court judge when the motion was voted on.</p></article>
+    <article class="card"><h3>📚 Soumitra Sen · 2011</h3><p>The Rajya Sabha adopted the motion concerning the Calcutta High Court judge. He resigned before the Lok Sabha completed the process.</p></article>
+    <article class="card"><h3>🧭 Live proceedings</h3><p>Notices, committee reports, resignations and court challenges change quickly. A notice or news report is not proof that removal has happened. Check dated official records.</p></article>
+  </div>
+
+  <div class="co warn"><b>🗣️ Terminology matters</b>“Impeachment of a judge” is common shorthand. The Constitution speaks of <strong>removal</strong>. Impeachment strictly belongs to the President (Art. 61). As far as the verified record goes, no High Court judge has been removed through the completed procedure. Resignation, lapse and refusal of a notice are not the same as removal.</div>
+</section>
+
+<!-- ═════════ 08 · INDEPENDENCE ═════════ -->
+<section class="ch rv" id="independence" style="--ac:var(--jade)">
+  <div class="ch-head"><div class="ch-no">08</div><div><div class="ch-k">An institutional guarantee to the litigant</div><h2><span class="ico">🛡️</span> Independence — structural, financial &amp; functional</h2></div></div>
+
+  <p class="lead">Independence protects a court's ability to decide against powerful parties, including the government. It is <strong>not personal immunity from criticism or accountability</strong>. Independence and reasoned, transparent adjudication strengthen each other.</p>
+
+  <div class="g g3">
+    <article class="card"><span class="big">🏰</span><h3>Structural safeguards</h3><p><strong>Arts. 217–218:</strong> protected tenure and difficult removal. Collegium jurisprudence limits executive primacy in appointments. Transfers under Art. 222 need consultation with the CJI.</p></article>
+    <article class="card"><span class="big">💰</span><h3>Financial safeguards</h3><p><strong>Arts. 221, 202, 112:</strong> parliamentary pay-setting, protected leave and pension rights, and charged (non-votable) expenditure. Financial Emergency is the express exception.</p></article>
+    <article class="card"><span class="big">🎛️</span><h3>Administrative autonomy</h3><p><strong>Art. 229:</strong> appointments to the court's establishment rest with the Chief Justice or an authorised judge or officer. Service rules on salary, allowances, leave and pension need the Governor's approval.</p></article>
+    <article class="card"><span class="big">🌳</span><h3>Protection below</h3><p><strong>Art. 235:</strong> High Court control over district and subordinate courts shields the judicial service from day-to-day executive control.</p></article>
+    <article class="card"><span class="big">📜</span><h3>Constitutional review</h3><p><strong>Arts. 226–227:</strong> judicial review cannot be wholly displaced by ordinary legislation creating alternative forums (<em>L. Chandra Kumar</em>).</p></article>
+    <article class="card"><span class="big">⚖️</span><h3>Authority of the court</h3><p><strong>Art. 215:</strong> court-of-record status and contempt power support the administration of justice. Fair criticism is not automatically contempt.</p></article>
+  </div>
+
+  <h3 class="sec">🗣️ Articles 121 and 211 — a useful asymmetry</h3>
+  <p><strong>Art. 121</strong> bars discussion in <em>Parliament</em> on the conduct of a Supreme Court or High Court judge in discharging duties, <em>except on a motion for an address praying for removal</em>. <strong>Art. 211</strong> imposes the same bar on <em>State Legislatures</em> and has <strong>no removal exception</strong>, because State Legislatures play no part in removing superior-court judges.</p>
+
+  <h3 class="sec">🔓 Accountability that coexists with independence</h3>
+  <p>Reasoned judgments, open hearings, appeal and review, recusal where appropriate, judicial ethics, lawful asset-disclosure arrangements, statutory access to information, and the removal framework all contribute to accountability. An open court does not mean every case may be broadcast without restriction. Privacy, safety and court rules still apply.</p>
+
+  <div class="quote">The office is independent so that the citizen need not be helpless.<cite>✦ Editorial reflection — not an attributed judicial quotation.</cite></div>
+
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · STAIR</div>
+    <div class="mn-row">
+      <div class="ml"><b>S</b><span>Security of tenure</span></div>
+      <div class="ml"><b>T</b><span>Terms protected</span></div>
+      <div class="ml"><b>A</b><span>Administrative autonomy</span></div>
+      <div class="ml"><b>I</b><span>Independent review</span></div>
+      <div class="ml"><b>R</b><span>Removal safeguards</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 09 · POWERS ═════════ -->
+<section class="ch rv" id="powers" style="--ac:var(--sea)">
+  <div class="ch-head"><div class="ch-no">09</div><div><div class="ch-k">The working toolkit of constitutional justice</div><h2><span class="ico">🔍</span> Jurisdiction, judicial review &amp; the five writs</h2></div></div>
+
+  <p class="lead">High Courts combine constitutional remedies with ordinary civil and criminal adjudication. Their ordinary jurisdiction depends on the <strong>Constitution, Letters Patent where applicable, central and State statutes, and rules of court</strong>. Not every High Court has the same original civil jurisdiction.</p>
+
+  <h3 class="sec">🏛️ 9.1 Original jurisdiction — where proceedings begin</h3>
+  <div class="g g2">
+    <article class="card"><h3>🕊️ Constitutional petitions</h3><p>Petitions under Art. 226 begin in the High Court. They may challenge unlawful detention, administrative action, legislation, or failure to perform a public duty, within limits of maintainability and territorial jurisdiction.</p></article>
+    <article class="card"><h3>🗳️ Election petitions</h3><p>Disputes over elections to Parliament and State legislatures go to High Courts under the <strong>Representation of the People Act, 1951</strong> (s.80A). Presidential and Vice-Presidential disputes go to the Supreme Court (Art. 71).</p></article>
+    <article class="card"><h3>💼 Ordinary original civil side</h3><p>Some courts — Bombay, Calcutta, Madras and Delhi among them — exercise ordinary original civil jurisdiction within statutory limits. It is wrong to say every high-value suit anywhere begins in a High Court.</p></article>
+    <article class="card"><h3>⚓ Special statutory jurisdiction</h3><p>Admiralty, commercial, arbitration and company-related matters depend on specific legislation. Tribunal reallocations mean “all company cases go to the HC” is no longer reliable.</p></article>
+  </div>
+
+  <h3 class="sec">📜 9.2 Article 226 — Fundamental Rights and “any other purpose”</h3>
+  <p>A High Court may issue <strong>directions, orders or writs</strong>, including the five named writs, to any person or authority and, in suitable cases, to a government. It covers <strong>Part III rights and other legally enforceable rights</strong>. “Any other purpose” does not allow adjudication of purely moral complaints with no legal foundation.</p>
+
+  <div class="flow">
+    <div class="nd"><b>⚠️ Unlawful act / omission</b>Identify the legal right or public duty.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🧭 Jurisdiction</b>Territory, cause of action, proper forum.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>⚖️ Maintainability</b>Standing, alternative remedy, public-law character.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🛠️ Tailored relief</b>Writ, direction, declaration or order.</div>
+  </div>
+
+  <div class="tw"><table>
+    <caption>The five writs — meaning, target and limit</caption>
+    <thead><tr><th>Writ</th><th>Core function</th><th>Illustration</th><th>Remember the limit</th></tr></thead>
+    <tbody>
+      <tr><td><strong>🔓 Habeas corpus</strong><small>“Produce the body”</small></td><td>Tests whether a detention is lawful; frees the person if it is not.</td><td>A person is confined without legal authority; a relative approaches the court.</td><td>Reaches <strong>private detention</strong> too. Not a routine substitute for appeal against a valid judicial custody order.</td></tr>
+      <tr><td><strong>📢 Mandamus</strong><small>“We command”</small></td><td>Compels performance of a legally enforceable public duty.</td><td>An authority refuses to decide an application it is bound to consider.</td><td>Compels a <em>lawful decision</em>, not necessarily the applicant's preferred outcome. Not for purely private contractual duties.</td></tr>
+      <tr><td><strong>✋ Prohibition</strong><small>“Stop exceeding jurisdiction”</small></td><td>Prevents a judicial or quasi-judicial body from proceeding beyond its jurisdiction.</td><td>A tribunal starts hearing a matter outside its statute.</td><td>Preventive. It is not an appeal against every interim error.</td></tr>
+      <tr><td><strong>📄 Certiorari</strong><small>“Bring up for examination”</small></td><td>Quashes a legally defective decision of a court or tribunal on recognised grounds.</td><td>A tribunal decides without jurisdiction or breaches natural justice.</td><td><strong>Judicial orders of civil courts are not challenged by Art. 226 certiorari</strong>: <em>Radhey Shyam</em> (2015).</td></tr>
+      <tr><td><strong>❓ Quo warranto</strong><small>“By what authority?”</small></td><td>Tests a person's legal entitlement to a substantive public office.</td><td>An office-holder lacks a mandatory statutory qualification.</td><td>Concerns legal eligibility, not whether another candidate is better.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · H–M–P–C–Q</div>
+    <div class="mn-row">
+      <div class="ml"><b>H</b><span>Help the detained</span></div>
+      <div class="ml"><b>M</b><span>Make duty happen</span></div>
+      <div class="ml"><b>P</b><span>Prevent excess</span></div>
+      <div class="ml"><b>C</b><span>Cancel a defective order</span></div>
+      <div class="ml"><b>Q</b><span>Question the office-holder</span></div>
+    </div>
+    <p class="mn-n">These are memory cues, not legal tests. Art. 226 also allows “directions” and “orders”, so a High Court's remedial power is not confined to the old technical writs.</p>
+  </div>
+
+  <h3 class="sec">🧭 9.3 Territorial reach — Art. 226(2)</h3>
+  <p>A High Court may act where the <strong>cause of action arises wholly or in part within its territory</strong>, even if the authority is seated elsewhere. The territorial facts must be <em>material</em> to the dispute. Residence, or an incidental communication received in the State, does not by itself create jurisdiction (<em>Kusum Ingots</em>, 2004).</p>
+  <div class="co info"><b>🗺️ Example</b>An authority outside State A takes a decision whose legally relevant effect arises in State A. Depending on the material facts, State A's High Court may have jurisdiction. The respondent's headquarters alone does not settle it.</div>
+
+  <h3 class="sec">🚧 9.4 Alternative remedies, delay and public-law character</h3>
+  <p>Art. 226 is an extraordinary and discretionary jurisdiction. Courts ordinarily expect an effective statutory remedy to be used first, but that is a rule of <strong>self-restraint, not an absolute bar</strong>. Recognised exceptions include a Fundamental Rights issue, a breach of natural justice, proceedings wholly without jurisdiction, and a challenge to the vires of legislation: <em>Whirlpool</em> (1998); <em>Radha Krishan Industries</em> (2021). Delay, suppression of facts, disputed questions of evidence and the public-law character of the duty also matter (<em>Andi Mukta</em>, 1989).</p>
+
+  <h3 class="sec">⏱️ 9.5 Ex parte interim orders — the exact Art. 226(3) rule</h3>
+  <p>Suppose an interim order is made against a party without giving that party the petition and supporting documents and without a hearing. That party may apply to vacate it and furnish a copy to the beneficiary or their counsel. The court must dispose of the application within <strong>two weeks from receipt or from furnishing the copy, whichever is later</strong> (with a court-closure qualification). If it does not, the interim order stands <strong>vacated</strong>.</p>
+  <div class="co trap"><b>🚨 Not “every stay ends in two weeks”</b>Art. 226(3) applies only to its stated <strong>ex parte order + vacation application + service</strong> situation. It is not a general two-week sunset for every writ stay.</div>
+
+  <h3 class="sec">🤲 9.6 PIL and public-law compensation</h3>
+  <p>Public Interest Litigation relaxes traditional standing for genuine public injury, especially where affected people cannot approach the court themselves. Good faith and credible material remain essential. Service disputes and private rivalries cannot ordinarily be repackaged as PIL. High Courts may award <strong>public-law compensation</strong> for established rights violations such as unlawful detention or custodial abuse (<em>Rudul Sah</em>, 1983; <em>Nilabati Behera</em>, 1993; <em>D.K. Basu</em>, 1997). That is distinct from a full private-law damages trial.</p>
+
+  <h3 class="sec">🌳 9.7 Article 227 — superintendence, not a second appeal</h3>
+  <p>Every High Court has superintendence over courts and tribunals throughout its territorial jurisdiction, <strong>except those under laws relating to the Armed Forces</strong>. It also covers calling for returns, making rules and prescribing forms for practice and proceedings. Such rules and fee tables must be consistent with law and need the <strong>Governor's previous approval</strong>. The power is meant to keep subordinate adjudication within lawful bounds and is exercised sparingly (<em>Waryam Singh</em>, 1954; <em>Shalini Shyam Shetty</em>, 2010).</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Point</th><th>Art. 226</th><th>Art. 227</th></tr></thead>
+    <tbody>
+      <tr><td>Central function</td><td>Original constitutional remedy against unlawful public action and for enforceable rights.</td><td>Supervisory correction and superintendence over courts and tribunals.</td></tr>
+      <tr><td>Typical target</td><td>Government, public authority, or a person or body discharging a public duty.</td><td>Subordinate adjudicatory institutions and their proceedings.</td></tr>
+      <tr><td>Civil-court judicial orders</td><td>Not amenable to Art. 226 certiorari (<em>Radhey Shyam</em>).</td><td>May attract limited supervisory jurisdiction, subject to restraint and statutory remedies.</td></tr>
+      <tr><td>Nature</td><td>Discretionary, with a wide remedial range.</td><td>Both judicial and administrative; used sparingly, not as a rehearing.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sec">🧩 9.8 Article 228 — constitutional questions in lower courts</h3>
+  <p>If a case pending in a subordinate court involves a <strong>substantial question of law as to the interpretation of the Constitution</strong>, and its determination is <strong>necessary for disposing of the case</strong>, the High Court <strong>shall withdraw</strong> it. It may decide the whole case itself, or decide the constitutional question and return the case to the lower court with its judgment.</p>
+  <div class="co trap"><b>🎯 “Shall”, but only once the conditions are met</b>Art. 228 is not a general power to withdraw any interesting case. The constitutional question must be substantial and necessary for disposal.</div>
+
+  <h3 class="sec">📈 9.9 Appellate, revisional and review powers</h3>
+  <div class="g g2">
+    <article class="card"><h3>💼 Civil appeals</h3><p>A first appeal ordinarily allows examination of fact and law under the governing statute. A <strong>second appeal under CPC s.100 needs a substantial question of law</strong> — “only law” is too loose. Intra-court appeals depend on the governing law or Letters Patent.</p></article>
+    <article class="card"><h3>🔒 Criminal appeals and death references</h3><p>Appellate and revisional routes are statutory. A Sessions Court's death sentence needs <strong>High Court confirmation</strong>, which is separate from the accused's appeal. The BNSS, 2023 replaced the CrPC from 1 July 2024, subject to transitional provisions.</p></article>
+    <article class="card"><h3>🛠️ Revision</h3><p>Revision examines jurisdictional or other specified serious legal defects within statutory limits. It is narrower than a regular appeal and is not a licence to reassess all the evidence.</p></article>
+    <article class="card"><h3>🔄 Review</h3><p>Review is different from appeal. Availability depends on the jurisdiction exercised and the governing law. Final criminal orders are subject to strict statutory limits.</p></article>
+  </div>
+
+  <h3 class="sec">📚 9.10 Court of record, contempt and precedent</h3>
+  <p><strong>Art. 215</strong> makes every High Court a court of record with power to punish for contempt of itself. Under the Contempt of Courts Act, 1971, High Courts also deal with contempt of subordinate courts. <strong>Civil contempt</strong> concerns wilful disobedience or breach of an undertaking; <strong>criminal contempt</strong> concerns the statutorily defined scandalising of the court, prejudice to proceedings, or obstruction of justice. Fair reporting and fair criticism are protected, and truth can be a defence in public interest (s.13, as amended in 2006). Contempt is therefore <strong>not simply “saying something negative about a judge”</strong>.</p>
+  <p>A High Court's declared law binds subordinate courts in its territory. Another High Court's decision is ordinarily <strong>persuasive, not binding</strong>. Within a High Court, a larger bench prevails over a smaller one. Every High Court is bound by the Supreme Court under Art. 141.</p>
+
+  <h3 class="sec">🧪 Writ laboratory — pick the instrument</h3>
+  <p>Read each scenario, decide the most suitable remedy, then reveal the answer. Real outcomes depend on the record and the governing law.</p>
+  <div class="g g3" id="writLab">
+    <article class="card scn"><h3>🔒 Secret confinement</h3><p>A person is held in a private building without legal authority.</p><button class="btn" type="button" data-answer="🔓 Habeas corpus — tests the legality of detention, including private detention.">Reveal remedy</button><p class="rv2" aria-live="polite"></p></article>
+    <article class="card scn"><h3>📁 The undecided licence</h3><p>A statutory authority refuses to consider an application despite a legal duty to decide.</p><button class="btn" type="button" data-answer="📢 Mandamus — compels a lawful decision, not necessarily grant of the licence.">Reveal remedy</button><p class="rv2" aria-live="polite"></p></article>
+    <article class="card scn"><h3>🪑 The ineligible office-holder</h3><p>The holder of a statutory public office lacks a mandatory legal qualification.</p><button class="btn" type="button" data-answer="❓ Quo warranto — tests legal entitlement to the public office.">Reveal remedy</button><p class="rv2" aria-live="polite"></p></article>
+    <article class="card scn"><h3>✋ Tribunal overreach</h3><p>A tribunal is about to hear a dispute that the statute places outside its jurisdiction.</p><button class="btn" type="button" data-answer="✋ Prohibition — stops the unauthorised proceeding.">Reveal remedy</button><p class="rv2" aria-live="polite"></p></article>
+    <article class="card scn"><h3>📄 The unheard party</h3><p>A quasi-judicial tribunal finally decides against someone without the legally required hearing.</p><button class="btn" type="button" data-answer="📄 Certiorari may quash the decision; the availability of an alternative remedy still matters.">Reveal remedy</button><p class="rv2" aria-live="polite"></p></article>
+    <article class="card scn"><h3>⚖️ A civil-court order</h3><p>A litigant wants to challenge a subordinate civil court's judicial order.</p><button class="btn" type="button" data-answer="🌳 Look to statutory appeal or revision and, exceptionally, Art. 227 — not Art. 226 certiorari (Radhey Shyam, 2015).">Reveal route</button><p class="rv2" aria-live="polite"></p></article>
+  </div>
+</section>
+
+<!-- ═════════ 10 · SUBORDINATE JUDICIARY ═════════ -->
+<section class="ch rv" id="lower" style="--ac:var(--moss)">
+  <div class="ch-head"><div class="ch-no">10</div><div><div class="ch-k">Part VI · Chapter VI · Articles 233–237</div><h2><span class="ico">🌳</span> The subordinate judiciary — independence at the roots</h2></div></div>
+
+  <p class="lead">Most people meet justice first in a district court. Articles 233–237 protect this foundation by dividing roles among the <strong>Governor, the High Court and the State Public Service Commission</strong>.</p>
+
+  <div class="g g2">
+    <article class="card"><span class="tagc">Art. 233(1)</span><h3>👩‍⚖️ District judges</h3><p>Appointment, posting and promotion of district judges are made by the <strong>Governor in consultation with the High Court</strong>. The consultation must be real and effective.</p></article>
+    <article class="card"><span class="tagc">Art. 233(2)</span><h3>📚 Direct entry from the Bar</h3><p>A person not already in Union or State service is eligible only if an <strong>advocate or pleader for at least seven years</strong> and recommended by the High Court. A serving judicial officer cannot use this quota (<em>Dheeraj Mor</em>, 2020).</p></article>
+    <article class="card"><span class="tagc">Art. 234</span><h3>🧑‍💼 Judicial service below district judge</h3><p>The Governor appoints under rules made after consulting the <strong>State Public Service Commission and the High Court</strong>.</p></article>
+    <article class="card"><span class="tagc">Art. 235</span><h3>🛡️ Control</h3><p>Control over district courts and subordinate courts is vested in the <strong>High Court</strong>, including posting, promotion and leave for posts below district judge. It also covers disciplinary control (<em>State of W.B. v. Nripendra Nath Bagchi</em>, 1966), subject to service-law safeguards.</p></article>
+  </div>
+
+  <div class="co info"><b>🔄 Appointment versus control</b>The Governor's formal role does not make the subordinate judiciary an executive department. Equally, High Court control does not erase the Governor's formal role where the Constitution or service law reserves the final order to that authority.</div>
+
+  <h3 class="sec">📖 Articles 233A, 236 and 237</h3>
+  <p><strong>Art. 233A</strong> (20th Amendment, 1966) validates specified past appointments and acts after <em>Chandra Mohan v. State of U.P.</em> (1966). It is not a permanent excuse for skipping consultation. <strong>Art. 236</strong> defines “district judge” inclusively (including additional district judges, sessions judges, assistant sessions judges and other listed equivalents) and “judicial service” as a service made up exclusively of persons meant to fill the post of district judge and other civil judicial posts inferior to it. <strong>Art. 237</strong> lets the Governor, by public notification, apply this Chapter and its rules to specified classes of magistrates, with modifications.</p>
+
+  <div class="flow">
+    <div class="nd"><b>233 · District judges</b>Governor + HC</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>234 · Other judicial service</b>Governor + HC + SPSC</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>235 · Control</b>High Court</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>236–237</b>Define + extend</div>
+  </div>
+
+  <div class="mn"><div class="mn-t">🧠 Mnemonic · Appoint · Recruit · Control · Define · Extend</div>
+    <p><strong>233</strong> appoint district judges → <strong>234</strong> recruit the rest → <strong>235</strong> control → <strong>236</strong> define → <strong>237</strong> extend to magistrates.</p></div>
+
+  <h3 class="sec">🇮🇳 All India Judicial Service — a framework, not an existing cadre</h3>
+  <p><strong>Art. 312</strong> allows an All India Judicial Service through a Rajya Sabha resolution and parliamentary law. Under Art. 312(3) it cannot include any post inferior to district judge as defined in Art. 236. Proposals for it should not be presented as an operational replacement for State judicial services. <strong>Art. 50</strong>, the Directive Principle on separating the judiciary from the executive, explains why judicial-service control is not ordinary civil-service management.</p>
+</section>
+
+<!-- ═════════ 11 · ARTICLE MAP ═════════ -->
+<section class="ch rv" id="articles" style="--ac:var(--lilac)">
+  <div class="ch-head"><div class="ch-no">11</div><div><div class="ch-k">The constitutional index — active and omitted provisions</div><h2><span class="ico">🧩</span> Articles 214–237 — the complete reference map</h2></div></div>
+
+  <p><strong>Chapter V (High Courts): Arts. 214–231.</strong> <strong>Chapter VI (Subordinate Courts): Arts. 233–237.</strong> Art. 232 is omitted. Lettered articles (224A, 226A, 228A, 233A) mean that counting integers alone does not give the full inventory.</p>
+
+  <div class="bar">
+    <label class="sf"><span aria-hidden="true">🔎</span><input id="articleSearch" type="search" placeholder="Find: 226 · oath · pension · omitted · district…" aria-label="Search the article reference"></label>
+    <span class="cnt" id="articleCount" role="status" aria-live="polite"></span>
+  </div>
+
+  <div class="tw"><table id="articleTable">
+    <caption>Constitutional article reference — searchable</caption>
+    <thead><tr><th>Article</th><th>Subject</th><th>Precise takeaway</th></tr></thead>
+    <tbody>
+      <tr><td><strong>214</strong></td><td>High Courts for States</td><td>There shall be a High Court for each State; read with the common-court provision.</td></tr>
+      <tr><td><strong>215</strong></td><td>Court of record</td><td>Every HC is a court of record, including power to punish for contempt of itself.</td></tr>
+      <tr><td><strong>216</strong></td><td>Composition</td><td>Chief Justice + other judges the President deems necessary; no uniform constitutional strength.</td></tr>
+      <tr><td><strong>217</strong></td><td>Appointment and conditions</td><td>President appoints after prescribed consultation; citizen + 10 years' judicial office or HC advocacy; office until 62; resignation, removal, vacating, age disputes.</td></tr>
+      <tr><td><strong>218</strong></td><td>Application of SC removal provisions</td><td>Arts. 124(4) and 124(5) apply to HC judges with necessary changes.</td></tr>
+      <tr><td><strong>219</strong></td><td>Oath or affirmation</td><td>Third Schedule form; before the Governor or a person appointed by the Governor.</td></tr>
+      <tr><td><strong>220</strong></td><td>Practice restriction</td><td>Former permanent HC judge may plead or act only in the Supreme Court and other High Courts.</td></tr>
+      <tr><td><strong>221</strong></td><td>Salaries, allowances, pension rights</td><td>Parliament fixes salaries; proviso protects allowances and leave/pension rights from adverse variation after appointment.</td></tr>
+      <tr><td><strong>222</strong></td><td>Transfer</td><td>President transfers after consulting the CJI; compensatory allowance (222(2)).</td></tr>
+      <tr><td><strong>223</strong></td><td>Acting Chief Justice</td><td>President appoints another HC judge to perform CJ duties on vacancy, absence or inability.</td></tr>
+      <tr><td><strong>224</strong></td><td>Additional and acting judges</td><td>Additional judges up to two years at a time; acting arrangements; age ceiling 62.</td></tr>
+      <tr><td><strong>224A</strong></td><td>Retired judges sitting again</td><td>HC CJ requests a former judge, with the President's previous consent and the judge's own consent.</td></tr>
+      <tr><td><strong>225</strong></td><td>Existing jurisdiction</td><td>Preserves pre-Constitution jurisdiction and powers, subject to the Constitution and competent legislation.</td></tr>
+      <tr><td><strong>226</strong></td><td>Writs, directions, orders</td><td>Fundamental Rights + any other purpose; cause-of-action reach (226(2)); ex parte interim-order rule (226(3)); Art. 32 not derogated (226(4)).</td></tr>
+      <tr><td><strong>226A</strong></td><td>Omitted</td><td>Inserted by the 42nd Amendment (limits on reviewing Central laws); omitted by the 43rd.</td></tr>
+      <tr><td><strong>227</strong></td><td>Superintendence</td><td>Courts and tribunals within territory; Armed Forces exception; judicial and administrative dimensions.</td></tr>
+      <tr><td><strong>228</strong></td><td>Withdrawal of constitutional cases</td><td>HC shall withdraw a subordinate-court case once the substantial constitutional question is necessary for disposal.</td></tr>
+      <tr><td><strong>228A</strong></td><td>Omitted</td><td>Inserted by the 42nd Amendment (special rules on State-law validity); omitted by the 43rd.</td></tr>
+      <tr><td><strong>229</strong></td><td>Officers, servants, expenses</td><td>CJ-led establishment; pay/leave/pension rules need Governor's approval; expenses charged on State fund.</td></tr>
+      <tr><td><strong>230</strong></td><td>Jurisdiction over UTs</td><td>Parliament may extend a HC's jurisdiction to, or exclude it from, a Union Territory.</td></tr>
+      <tr><td><strong>231</strong></td><td>Common High Court</td><td>One HC for two or more States, or two or more States and a UT.</td></tr>
+      <tr><td><strong>232</strong></td><td>Omitted</td><td>Former interpretation provision; omitted by the 7th Amendment, 1956.</td></tr>
+      <tr><td><strong>233</strong></td><td>District judges</td><td>Governor + HC consultation; Bar route needs seven years and HC recommendation.</td></tr>
+      <tr><td><strong>233A</strong></td><td>Validation</td><td>20th Amendment validation of specified past appointments and acts; not general permission.</td></tr>
+      <tr><td><strong>234</strong></td><td>Other judicial recruitment</td><td>Governor's appointments under rules framed after consulting SPSC and HC.</td></tr>
+      <tr><td><strong>235</strong></td><td>Control over subordinate courts</td><td>Vested in the HC, including disciplinary control, subject to service-law safeguards.</td></tr>
+      <tr><td><strong>236</strong></td><td>Interpretation</td><td>Inclusive definition of district judge; definition of judicial service.</td></tr>
+      <tr><td><strong>237</strong></td><td>Application to magistrates</td><td>Governor may apply the Chapter and rules to specified classes of magistrates.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sec">🔗 Companion provisions to learn together</h3>
+  <div class="g g3">
+    <article class="card"><h3>🕊️ Rights &amp; review</h3><p><strong>13:</strong> inconsistent laws. <strong>32:</strong> SC rights remedy. <strong>50:</strong> separation of judiciary. <strong>141:</strong> binding SC law.</p></article>
+    <article class="card"><h3>💰 Finance &amp; restraint</h3><p><strong>112:</strong> HC judges' pensions on CFI. <strong>121 / 211:</strong> conduct-discussion bars. <strong>202:</strong> State charged expenditure. <strong>360:</strong> Financial Emergency.</p></article>
+    <article class="card"><h3>🧭 Territory &amp; appeals</h3><p><strong>132–136, 134A:</strong> appeals and certificates. <strong>241:</strong> UT High Courts. <strong>312:</strong> All India Judicial Service.</p></article>
+  </div>
+
+  <div class="mn"><div class="mn-t">🧠 Article walk · Home → People → Powers → Territory → Roots</div>
+    <p><strong>214–216:</strong> home, record, composition. <strong>217–224A:</strong> judges and service. <strong>225–228:</strong> jurisdiction, writs, supervision, withdrawal. <strong>229–231:</strong> registry and territory. <strong>233–237:</strong> the subordinate roots.</p></div>
+</section>
+
+<!-- ═════════ 12 · CASES ═════════ -->
+<section class="ch rv" id="cases" style="--ac:var(--copper)">
+  <div class="ch-head"><div class="ch-no">12</div><div><div class="ch-k">Case law as a map, not a list of names</div><h2><span class="ico">🌟</span> Landmark decisions &amp; doctrinal anchors</h2></div></div>
+
+  <p>Learn each case as <strong>issue → principle → practical use</strong>. Most are Supreme Court decisions that bind High Courts.</p>
+
+  <div class="tw"><table>
+    <caption>Core authorities for High Court and subordinate-court questions</caption>
+    <thead><tr><th>Decision</th><th>Principle</th><th>Use it for</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Waryam Singh v. Amarnath</strong><small>1954</small></td><td>Superintendence keeps subordinate courts within their bounds; used sparingly.</td><td>Art. 227 is supervision, not a factual appeal.</td></tr>
+      <tr><td><strong>T.C. Basappa v. T. Nagappa</strong><small>1954</small></td><td>Constitutional certiorari and its relation to traditional writ principles.</td><td>Nature of writs; flexible remedies.</td></tr>
+      <tr><td><strong>Hari Vishnu Kamath v. Ahmad Ishaque</strong><small>1955</small></td><td>Classic statement on certiorari, jurisdiction and error apparent.</td><td>Quashing without turning the writ into an appeal.</td></tr>
+      <tr><td><strong>Chandra Mohan v. State of U.P.</strong><small>1966</small></td><td>District-judge recruitment must respect the judicial-service framework.</td><td>Arts. 233–236; origin of Art. 233A.</td></tr>
+      <tr><td><strong>State of W.B. v. Nripendra Nath Bagchi</strong><small>1966</small></td><td>Art. 235 “control” includes disciplinary control.</td><td>Subordinate-judiciary independence.</td></tr>
+      <tr><td><strong>Union of India v. Sankalchand Sheth</strong><small>1977</small></td><td>Judge's consent not required for Art. 222 transfer; public interest and consultation required.</td><td>Transfers are not a punitive tool.</td></tr>
+      <tr><td><strong>S.P. Gupta v. Union of India</strong><small>1981</small></td><td>First Judges Case: executive primacy; later displaced.</td><td>History of appointments.</td></tr>
+      <tr><td><strong>SCAORA v. Union of India</strong><small>1993</small></td><td>Second Judges Case: judicial primacy; collegium emerges.</td><td>Arts. 124 and 217 appointments.</td></tr>
+      <tr><td><strong>L. Chandra Kumar v. Union of India</strong><small>1997 · seven judges</small></td><td>Review under Arts. 226/227 and 32 is basic structure; tribunal decisions remain open to HC scrutiny.</td><td>Tribunals supplement, not replace, constitutional courts.</td></tr>
+      <tr><td><strong>Special Reference No. 1 of 1998</strong><small>Third Judges Case</small></td><td>Collective consultation; collegium sizes for appointments and transfers.</td><td>HC appointment: CJI + 2. HC transfer / SC appointment: CJI + 4.</td></tr>
+      <tr><td><strong>Whirlpool v. Registrar of Trade Marks</strong><small>1998</small></td><td>Alternative remedy is not an absolute bar; recognised exceptions.</td><td>Maintainability of Art. 226 petitions.</td></tr>
+      <tr><td><strong>Andi Mukta v. V.R. Rudani</strong><small>1989</small></td><td>Mandamus can reach bodies discharging a public duty.</td><td>Why “private body” is not an automatic defence.</td></tr>
+      <tr><td><strong>Kusum Ingots v. Union of India</strong><small>2004</small></td><td>Material cause-of-action facts decide territorial jurisdiction.</td><td>Art. 226(2).</td></tr>
+      <tr><td><strong>Radhey Shyam v. Chhabi Nath</strong><small>2015 · three judges</small></td><td>Civil-court judicial orders are not amenable to Art. 226 certiorari; Art. 227 is distinct.</td><td>The civil-court writ trap.</td></tr>
+      <tr><td><strong>SCAORA v. Union of India (NJAC)</strong><small>2015 · 4:1</small></td><td>99th Amendment and NJAC Act invalidated; judicial independence is basic structure.</td><td>Why the collegium remains.</td></tr>
+      <tr><td><strong>Dheeraj Mor v. High Court of Delhi</strong><small>2020</small></td><td>Serving judicial officers cannot use the Art. 233(2) Bar quota.</td><td>Keep Bar-entry and promotion streams separate.</td></tr>
+      <tr><td><strong>Lok Prahari v. Union of India</strong><small>2021</small></td><td>Operationalised Art. 224A to address arrears, with safeguards.</td><td>Retired judges sitting again. Check later orders.</td></tr>
+      <tr><td><strong>Radha Krishan Industries v. State of H.P.</strong><small>2021</small></td><td>Consolidates principles on alternative remedies in writs.</td><td>Structured maintainability answers.</td></tr>
+      <tr><td><strong>High Court Bar Association, Allahabad v. State of U.P.</strong><small>2024 · Constitution Bench</small></td><td>No blanket rule of automatic vacation of stays after six months.</td><td>Do not confuse with the specific Art. 226(3) rule.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 class="sec">🏛️ High Courts as constitutional laboratories</h3>
+  <div class="g g2">
+    <article class="card"><h3>🏳️‍🌈 Naz Foundation · Delhi HC · 2009</h3><p>The Delhi High Court read down IPC s.377 for consensual adult same-sex conduct. The Supreme Court reversed it in <em>Koushal</em> (2013), and the Constitution Bench in <em>Navtej Singh Johar</em> (2018) overruled <em>Koushal</em>. Always cite the later history.</p></article>
+    <article class="card"><h3>⛓️ Habeas corpus in the Emergency</h3><p>Several High Courts held that detention could still be examined. The Supreme Court majority in <em>ADM Jabalpur</em> (1976) took the opposite view, later expressly repudiated in <em>Puttaswamy</em> (2017).</p></article>
+  </div>
+
+  <div class="co"><b>✍️ Answer-writing formula</b><strong>Provision → test → leading case → qualification → conclusion.</strong> Example: “Under Art. 226 an alternative remedy ordinarily counsels restraint, but it is not an absolute bar; <em>Whirlpool</em> recognises exceptions, including natural-justice violations.”</div>
+</section>
+
+<!-- ═════════ 13 · SC vs HC ═════════ -->
+<section class="ch rv" id="vs" style="--ac:var(--brass)">
+  <div class="ch-head"><div class="ch-no">13</div><div><div class="ch-k">One integrated judiciary · distinct constitutional offices</div><h2><span class="ico">⚔️</span> Supreme Court versus High Courts</h2></div></div>
+
+  <p>“Higher” does not mean “the same powers, only more”. A High Court has territorial supervisory and service-control functions that the Supreme Court does not have as a general power. The Supreme Court has apex appellate and other unique jurisdictions.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Feature</th><th>Supreme Court 🇮🇳</th><th>High Court 🏛️</th></tr></thead>
+    <tbody>
+      <tr><td>Constitutional location</td><td>Part V, Chapter IV; Arts. 124–147.</td><td>Part VI, Chapter V; Arts. 214–231.</td></tr>
+      <tr><td>Retirement</td><td><strong>65</strong></td><td><strong>62</strong></td></tr>
+      <tr><td>Qualification routes</td><td>Citizen + 5 years HC judge, 10 years HC advocate, or distinguished jurist.</td><td>Citizen + 10 years judicial office or 10 years HC advocacy; no jurist route.</td></tr>
+      <tr><td>Writ purpose</td><td>Art. 32: enforcement of Fundamental Rights.</td><td>Art. 226: Fundamental Rights + any other purpose.</td></tr>
+      <tr><td>Nature of the remedy</td><td>Art. 32 remedy is itself a Fundamental Right.</td><td>Art. 226 is a constitutional power, not placed in Part III.</td></tr>
+      <tr><td>Court of record</td><td>Art. 129</td><td>Art. 215</td></tr>
+      <tr><td>Superintendence</td><td>No equivalent general Art. 227 power.</td><td>Art. 227 over courts and tribunals in territory.</td></tr>
+      <tr><td>Subordinate service</td><td>No counterpart to Art. 235.</td><td>Art. 235 control over district and subordinate courts.</td></tr>
+      <tr><td>Federal original disputes</td><td>Art. 131 within its conditions.</td><td>No equivalent.</td></tr>
+      <tr><td>Advisory reference</td><td>Art. 143.</td><td>No general advisory jurisdiction.</td></tr>
+      <tr><td>Complete justice</td><td>Art. 142.</td><td>No identical power.</td></tr>
+      <tr><td>Precedent</td><td>Binds all courts (Art. 141).</td><td>Binds subordinate courts in its territory; persuasive for other HCs.</td></tr>
+      <tr><td>Former judge's practice</td><td>Art. 124(7): none before any court or authority.</td><td>Art. 220: SC and other HCs permitted.</td></tr>
+      <tr><td>Age dispute</td><td>Art. 124(2A): as Parliament provides.</td><td>Art. 217(3): President after consulting the CJI.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="co trap"><b>🧠 What “wider” really means</b><strong>Art. 226 is wider in the <em>purposes</em> for which relief may be given.</strong> It does not make a High Court superior to the Supreme Court, nor give it nationwide superintendence, nor free it from Art. 141.</div>
+
+  <h3 class="sec">🪜 How does a High Court case reach the Supreme Court?</h3>
+  <div class="flow">
+    <div class="nd"><b>📘 Art. 132</b>Constitutional-interpretation certificate</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>💼 Art. 133</b>Civil certificate route</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🔒 Art. 134</b>Specified criminal routes</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🎯 Art. 136</b>Discretionary special leave</div>
+  </div>
+  <p>These are <strong>alternative doors, not successive stages</strong>. Art. 134A allows the High Court to consider a certificate on its own motion or on oral application right after judgment. Special leave under Art. 136 is discretionary, not an automatic further appeal.</p>
+</section>
+
+<!-- ═════════ 14 · REFORMS & SOURCES ═════════ -->
+<section class="ch rv" id="reform" style="--ac:var(--rose)">
+  <div class="ch-head"><div class="ch-no">14</div><div><div class="ch-k">Capacity, credibility and access</div><h2><span class="ico">🛠️</span> Challenges, reforms &amp; the verification desk</h2></div></div>
+
+  <p class="lead">More judges help, but delay comes from a whole chain: vacancies, registry processes, service of notice, incomplete records, adjournments, government litigation, tribunal design, infrastructure, and weak enforcement. A strong answer addresses the entire chain.</p>
+
+  <div class="g g2">
+    <article class="card"><span class="big">⏳</span><h3>Vacancies &amp; workload</h3><p>Track sanctioned strength, working strength and vacancies separately. Timely initiation of recommendations and predictable processing help. Raw cases-per-judge averages hide differences in complexity.</p></article>
+    <article class="card"><span class="big">🗂️</span><h3>Case management</h3><p>Early issue-framing, realistic scheduling, disciplined adjournments, reliable service and effective registry scrutiny cut avoidable delay without sacrificing a fair hearing.</p></article>
+    <article class="card"><span class="big">🧑‍🤝‍🧑</span><h3>Diversity &amp; transparency</h3><p>Gender, social background, professional experience and regional representation affect institutional legitimacy. Published criteria and reasoned procedures can build trust while protecting legitimate confidentiality.</p></article>
+    <article class="card"><span class="big">🗺️</span><h3>Distance, language &amp; cost</h3><p>Benches, circuit sittings, legal aid, translation and hybrid hearings widen access. A bench also needs staff, infrastructure and a lawful allocation. An announcement is not an operational bench.</p></article>
+    <article class="card"><span class="big">💻</span><h3>eCourts &amp; technology</h3><p>E-filing, searchable orders, electronic records, video hearings and data dashboards help administration. Accessibility, cybersecurity, digital exclusion and translation accuracy must be handled. AI output needs human verification.</p></article>
+    <article class="card"><span class="big">🤝</span><h3>ADR &amp; better governance</h3><p>Mediation, Lok Adalats and settlement suit appropriate disputes. Rights-sensitive matters need safeguards. Better government decision-making can prevent litigation.</p></article>
+    <article class="card"><span class="big">👴</span><h3>Art. 224A capacity</h3><p>Retired judges can help with arrears, but they should supplement, not replace, timely regular appointments. Apply the latest Supreme Court directions, not an outdated threshold.</p></article>
+    <article class="card"><span class="big">🛡️</span><h3>Accountability with independence</h3><p>Ethical standards, reasoned orders, credible complaint processes and recusal practice must coexist with protection against retaliatory pressure.</p></article>
+  </div>
+
+  <h3 class="sec">📊 Read judicial statistics intelligently</h3>
+  <p><strong>Pendency</strong> is the stock of unresolved cases on a date. <strong>Institution</strong> counts new cases in a period and <strong>disposal</strong> counts resolved ones. Disposal above institution can reduce the stock, but transfers, restoration and reporting scope affect comparisons. Always record the <strong>court level, date, case type and source</strong>, and never mix one High Court's figures with all-court totals.</p>
+
+  <h3 class="sec">🔗 Official-source reading room</h3>
+  <p>These notes deliberately avoid undated vacancy figures, pendency counts and live proceedings. The links below are official starting points. This page does not claim to have checked them live.</p>
+
+  <div class="g g3">
+    <article class="card"><h3>📜 Constitution</h3><p><a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener noreferrer">Legislative Department ↗</a></p><p>Check operative wording and amendment footnotes.</p></article>
+    <article class="card"><h3>⚖️ Statutes</h3><p><a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener noreferrer">India Code ↗</a></p><p>Judges (Inquiry) Act, 1968; Contempt of Courts Act, 1971; HC Judges Act, 1954; CPC; BNSS; election law.</p></article>
+    <article class="card"><h3>👩‍⚖️ Appointments &amp; strength</h3><p><a href="https://doj.gov.in/" target="_blank" rel="noopener noreferrer">Department of Justice ↗</a></p><p>Use dated notifications; distinguish recommendation from appointment.</p></article>
+    <article class="card"><h3>📊 Judicial data</h3><p><a href="https://njdg.ecourts.gov.in/" target="_blank" rel="noopener noreferrer">National Judicial Data Grid ↗</a></p><p>Choose the right dashboard; keep the retrieval date.</p></article>
+    <article class="card"><h3>🌟 Judgments &amp; collegium</h3><p><a href="https://www.sci.gov.in/" target="_blank" rel="noopener noreferrer">Supreme Court of India ↗</a></p><p>Read full judgments and published collegium resolutions, not just headnotes.</p></article>
+    <article class="card"><h3>💻 eCourts</h3><p><a href="https://ecourts.gov.in/" target="_blank" rel="noopener noreferrer">eCourts Services ↗</a></p><p>Seats and benches: confirm on the relevant High Court's own site and in Gazette notifications.</p></article>
+  </div>
+
+  <div class="co warn"><b>🧭 Directory accuracy note</b>The 25-court directory is a reference map, not a live roster. An establishment year can mean a predecessor or a separate present court. Newer benches and circuit sittings must be checked against the operative notification.</div>
+
+  <details class="reading-note">
+    <summary>🔬 Content audit — corrections made to the older source drafts</summary>
+    <div>
+      <p><strong>Appointments:</strong> ordinary HC appointments use CJI + two senior-most SC judges. The five-member collegium applies to SC appointments and HC transfers.</p>
+      <p><strong>Finance:</strong> judges' salaries and allowances are charged on the State fund (Art. 202); their pensions on the Union fund (Art. 112). Registry-staff pensions fall under Art. 229.</p>
+      <p><strong>Art. 218:</strong> it applies the Art. 124(4)–(5) removal framework. It is not a rule about “restriction on practice” (that is Art. 220).</p>
+      <p><strong>Art. 220:</strong> permits practice in the Supreme Court and other High Courts, unlike the total bar in Art. 124(7).</p>
+      <p><strong>Art. 228:</strong> “shall” withdraw once the conditions are met. <strong>Art. 229:</strong> staff are appointed by the Chief Justice, and expenses are charged on the State fund. <strong>Art. 232</strong> is an omitted article.</p>
+      <p><strong>Art. 224A:</strong> the High Court Chief Justice requests; the President's previous consent and the retired judge's consent are both needed.</p>
+      <p><strong>Writ jurisdiction:</strong> L. Chandra Kumar concerns judicial review as basic structure, not “writs generally”.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ═════════ 15 · REVISION ═════════ -->
+<section class="ch rv" id="revise" style="--ac:var(--brass)">
+  <div class="ch-head"><div class="ch-no">15</div><div><div class="ch-k">Recall → distinguish → apply</div><h2><span class="ico">🧠</span> The revision chamber</h2></div></div>
+
+  <h3 class="sec">⚡ The one-minute constitutional reel</h3>
+  <div class="g g3">
+    <article class="card"><h3>🏠 Institution</h3><p><strong>214</strong> home · <strong>215</strong> record · <strong>216</strong> composition · <strong>217</strong> judges · <strong>218</strong> removal link.</p></article>
+    <article class="card"><h3>👩‍⚖️ Judicial office</h3><p><strong>219</strong> oath · <strong>220</strong> practice · <strong>221</strong> pay · <strong>222</strong> transfer · <strong>223</strong> acting CJ · <strong>224 / 224A</strong> temporary capacity.</p></article>
+    <article class="card"><h3>⚔️ Powers &amp; territory</h3><p><strong>225</strong> continuity · <strong>226</strong> writs · <strong>227</strong> supervision · <strong>228</strong> withdrawal · <strong>229</strong> staff · <strong>230 / 231</strong> territory.</p></article>
+  </div>
+
+  <h3 class="sec">🃏 Tap-to-flip memory cards</h3>
+  <p>Click or tap a card, or focus it and press Enter or Space.</p>
+  <div class="g g3" id="flashcards">
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">🎓 HC qualification — what is C–10–10?</span><span class="f bk">Citizen of India + ten years' judicial office OR ten years as HC advocate. No distinguished-jurist route.</span></span></button>
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">🤝 Which SC collegium handles an ordinary HC appointment?</span><span class="f bk">CJI + two senior-most SC judges. HC transfers use CJI + four.</span></span></button>
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">💰 HC judge: salary versus pension — which fund?</span><span class="f bk">Salary and allowances → State fund (Art. 202). Judges' pensions → Consolidated Fund of India (Art. 112).</span></span></button>
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">🚪 Can a former permanent HC judge practise?</span><span class="f bk">Yes, in the Supreme Court and other High Courts, but not in their former HC or lower courts (Art. 220).</span></span></button>
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">🧩 Art. 228 — “may” or “shall” withdraw?</span><span class="f bk">Shall withdraw, once satisfied that a necessary substantial constitutional-interpretation question exists.</span></span></button>
+    <button class="fc" type="button" aria-pressed="false"><span class="fc-in"><span class="f fr">⚖️ Art. 226 against a civil court's judicial order?</span><span class="f bk">No. Use statutory remedies and limited Art. 227 supervision — Radhey Shyam (2015).</span></span></button>
+  </div>
+
+  <h3 class="sec">🎯 Twelve-question constitutional challenge</h3>
+  <div class="quiz" id="quiz">
+    <div class="quiz-meta"><span id="quizPosition">Ready for the challenge?</span><span id="quizScore">Score: 0</span></div>
+    <div class="qbar" aria-hidden="true"><i id="quizProgress"></i></div>
+    <h3 class="qq" id="quizQuestion">Start your High Courts revision.</h3>
+    <div class="opts" id="quizOptions"></div>
+    <p class="qx" id="quizExplanation" role="status" aria-live="polite">Explanations appear after you choose an answer.</p>
+    <button class="btn" id="quizNext" type="button">Start challenge →</button>
+  </div>
+  <noscript><p class="co info">The quiz needs JavaScript. All notes and tables remain readable without it.</p></noscript>
+
+  <h3 class="sec">✍️ Build a full answer — High Court independence</h3>
+  <div class="flow v">
+    <div class="nd"><b>🌱 Opening</b>High Courts are independent constitutional courts within an integrated judiciary.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🏗️ Design</b>Appointment, tenure, removal, finance, registry autonomy, subordinate-court control.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>⚖️ Interpretation</b>Judges Cases, L. Chandra Kumar, Nripendra Nath Bagchi.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🛠️ Evaluation</b>Vacancies, transparency, access, diversity, accountability.</div><i class="ar" aria-hidden="true">➜</i>
+    <div class="nd"><b>🕊️ Conclusion</b>Independence matters when remedies are accessible, reasoned and effective.</div>
+  </div>
+
+  <div class="co info"><b>🏁 Final synthesis</b>Remember the High Court in three roles: <strong>constitutional protector (Art. 226)</strong>, <strong>supervisory institution (Art. 227)</strong>, and <strong>guardian of the subordinate judicial service (Art. 235)</strong>. That is why it is far more than an intermediate appellate court.</div>
+</section>
+
+<!-- ═════════ END CREDITS ═════════ -->
+<footer id="end">
+  <div class="end-crest" aria-hidden="true">⚖️</div>
+  <div class="kicker">The High Courts of India</div>
+  <p class="fq">“Between the authority of the State and the liberty of the individual stands a court — not to govern in place of the Constitution, but to make the Constitution govern.”</p>
+  <p class="editorial-credit">Original editorial reflection · not an attributed judicial quotation.</p>
+
+  <div class="footer-values"><span>🕊️ Liberty</span><span>⚖️ Rule of law</span><span>🛡️ Independence</span><span>🤝 Access to justice</span></div>
+
+  <div class="final-auteur">
+    <span class="a-lab">Concept · Curation · Constitutional storytelling</span>
+    <div class="a-name">PIYUSH&nbsp;PARTE</div>
+    <p>A study atlas for the mind. A constitutional promise for the citizen.</p>
+  </div>
+
+  <div class="sign">
+    <span class="en">En Nenjil Kudiyirukkum</span>
+    <span class="ta" lang="ta">என் நெஞ்சில் குடியிருக்கும்</span>
+  </div>
+
+  <p class="edition-note">Consolidated educational edition. Constitutional text, statutes, case law and administrative practice are kept distinct. Not legal advice or a live official database; verify current notifications, amendments and case status before professional or examination use.</p>
+  <a class="end-link" href="#top">Return to the opening frame ↑</a>
+</footer>
+
+</div><!-- /.wrap -->
+
+<button class="btt" id="btt" type="button" aria-label="Back to top" title="Back to top" tabindex="-1">↑</button>
+<div class="sr-only" id="uiStatus" role="status" aria-live="polite"></div>
+
+<!-- ═════════ CONTINUATION STYLES ═════════ -->
+<style>
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.g>*{min-width:0}
+.ch,.card,.co{overflow-wrap:break-word}
+input{min-width:0}
+.stage,.rbar{pointer-events:none}
+.ch{scroll-margin-top:96px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:fixed;left:16px;top:12px;z-index:1000;padding:10px 16px;background:var(--ivory);color:var(--ink);border-radius:10px;transform:translateY(-160%);text-decoration:none}
+.skip-link:focus{transform:none;color:var(--ink)}
+.tw:focus-visible{outline:3px solid var(--brass);outline-offset:5px}
+
+/* safe reveal: content stays visible unless the observer is installed */
+.js .rv{opacity:1;transform:none}
+.js.reveal-ready .rv{opacity:0;transform:translateY(26px)}
+.js.reveal-ready .rv.in{opacity:1;transform:none}
+
+/* flashcards: explicit click/keyboard flip */
+.fc{display:block;width:100%;height:195px}
+.fc-in{display:block}
+.fc .f{line-height:1.6}
+.fc .fr{font-weight:500}
+.fc .bk{font-size:.91rem}
+.fc:focus-visible{border-radius:16px;outline-offset:6px}
+.fc:not(.flip):hover .fc-in{transform:translateY(-5px)}
+
+/* quiz */
+.quiz-meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:.76rem/1.7 'JetBrains Mono',monospace;color:var(--brass);margin-bottom:12px}
+.quiz .qq{margin:0 0 16px;color:var(--ivory)}
+.quiz .btn{margin-top:12px}
+.opt:disabled{opacity:1;cursor:default}
+.answer-letter{display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;margin-right:9px;border:1px solid var(--line);border-radius:8px;font:.78rem 'JetBrains Mono',monospace}
+.quiz-review{margin-top:20px}
+.quiz-review details{border-top:1px solid var(--line);padding:11px 0}
+.quiz-review summary{cursor:pointer;color:var(--ivory)}
+.quiz-review p{margin-top:8px;font-size:.91rem}
+.review-state{font-size:.8rem;color:var(--brass)}
+
+.reading-note{margin-top:24px;border:1px solid var(--edge);border-radius:16px;background:rgba(4,14,19,.55)}
+.reading-note summary{cursor:pointer;padding:17px 20px;color:var(--brass);font-weight:600}
+.reading-note>div{padding:0 20px 20px}
+.reading-note[open] summary{border-bottom:1px solid var(--line);margin-bottom:16px}
+.reading-note p{font-size:.94rem}
+
+/* footer extras */
+.footer-values{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:24px 0}
+.footer-values span{padding:6px 13px;border:1px solid var(--line);border-radius:99px;font-size:.8rem;background:rgba(255,255,255,.035);transition:transform .3s,border-color .3s}
+.footer-values span:hover{transform:translateY(-4px);border-color:var(--brass)}
+.end-crest{font-size:3rem;filter:drop-shadow(0 0 22px rgba(236,198,129,.4));margin-bottom:12px}
+.editorial-credit{font-size:.76rem;color:var(--mute)}
+.final-auteur{margin:30px auto 0;max-width:760px;padding:24px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.final-auteur .a-lab{display:block}
+.final-auteur .a-name{font-size:clamp(1.4rem,4.5vw,2.6rem)}
+.final-auteur p{font:italic 1.08rem 'Cormorant Garamond',serif;color:var(--mute)}
+.edition-note{max-width:860px;margin:18px auto 0;font-size:.77rem;color:var(--mute)}
+.end-link{display:inline-block;margin-top:22px;font-size:.84rem;text-underline-offset:5px}
+body.focus .ch{background:rgba(5,16,22,.97)}
+body.focus .hero,body.focus footer{background:rgba(5,16,22,.96)}
+
+@media(max-width:600px){
+ .hero h1 .ln:first-child{font-size:clamp(1.85rem,8.6vw,3.4rem);letter-spacing:0}
+ .hero h1 .ln.sm{letter-spacing:.28em;padding-left:.28em}
+ .hero{border-radius:24px}
+ .auteur .a-name{font-size:clamp(1.3rem,6.5vw,2rem);letter-spacing:.1em}
+ .auteur:hover .a-name{letter-spacing:.14em}
+ .a-lab{letter-spacing:.23em}
+ .stat{min-width:130px;flex:1 1 130px}
+ .stat b{font-size:1.6rem}
+ .ml{min-width:90px;flex-basis:90px}
+ .flow .nd{flex:auto}
+ .moon{width:65px;height:65px}
+ .grain{display:none}
+ .sign .en{letter-spacing:.09em}
+}
+@media print{
+ html{scroll-behavior:auto}
+ body{background:#fff!important;color:#202020;font-size:10.5pt;line-height:1.55}
+ .stage,.spot,.rbar,.tools,.nav,.btt,.skip-link,.lbx,.bar,#quiz,.scn .btn,.end-link{display:none!important}
+ .wrap{max-width:none;padding:0}
+ .hero,.ch,footer,.card,.co,.mn,.tw,.flow,.nd,.auteur{background:#fff!important;box-shadow:none!important;backdrop-filter:none!important;color:#202020!important;border-color:#bbb!important}
+ h1.mega .l,.a-name,.stat b,.sign span{background:none!important;color:#111!important;-webkit-text-fill-color:#111!important}
+ h2,h3,strong,b,em{color:#111!important}
+ .js .rv,.js.reveal-ready .rv{opacity:1!important;transform:none!important}
+ .tw{overflow:visible}
+ table,.dir{min-width:0!important;font-size:8.6pt}
+ th,td{padding:6px;border:1px solid #ccc}
+ .g{display:block}.card{margin:10px 0;break-inside:avoid}
+ .fc{height:auto}.fc-in{transform:none!important}
+ .fc .f{position:static;transform:none!important;backface-visibility:visible;padding:10px}
+}
+</style>
+
+<!-- ═════════ INTERACTION ENGINE · NO LIBRARIES ═════════ -->
+<script>
+(function () {
+  'use strict';
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const root = document.documentElement, body = document.body;
+  const mq = matchMedia('(prefers-reduced-motion: reduce)');
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  const live = $('#uiStatus');
+  let paused = false, focusOn = false, raf = 0, px = 0, py = 0;
+  const motionOK = () => !paused && !mq.matches;
+  const say = t => { if (live) live.textContent = t; };
+
+  /* 1. Accessibility helpers */
+  const skip = document.createElement('a');
+  skip.className = 'skip-link'; skip.href = '#found'; skip.textContent = 'Skip to the study notes';
+  body.prepend(skip);
+  const tb = $('.tools .tb');
+  if (tb) {
+    const pb = document.createElement('button');
+    pb.type = 'button'; pb.className = 'tbtn'; pb.textContent = '🖨️ Print notes';
+    pb.addEventListener('click', () => window.print());
+    tb.append(pb);
+  }
+  $$('.tw').forEach((w, i) => {
+    w.tabIndex = 0; w.setAttribute('role', 'region');
+    const c = $('caption', w);
+    if (c) { if (!c.id) c.id = 'cap-' + i; w.setAttribute('aria-labelledby', c.id); }
+    else w.setAttribute('aria-label', 'Scrollable reference table');
+  });
+  $$('th').forEach(th => { if (!th.hasAttribute('scope')) th.scope = 'col'; });
+
+  /* 2. Correct one ambiguous sentence from the earlier Atlas chapter */
+  const atlasNote = $('#atlas .mn-n');
+  if (atlasNote) atlasNote.textContent =
+    'Meghalaya, Manipur and Tripura received their own High Courts in 2013. Gauhati serves four States; Bombay serves two States and a UT; Punjab & Haryana serves two States and a UT; Calcutta, Kerala and Madras each serve a State and a UT; J&K and Ladakh serves two UTs.';
+
+  /* 3. Cinematic split title with proximity hover */
+  let li = 0;
+  $$('[data-split]').forEach(line => {
+    const text = line.textContent; line.textContent = ''; line.setAttribute('aria-hidden', 'true');
+    [...text].forEach(ch => {
+      const s = document.createElement('span');
+      s.className = ch === ' ' ? 'l sp' : 'l';
+      s.textContent = ch === ' ' ? '\u00a0' : ch;
+      s.style.setProperty('--i', String(li++));
+      line.append(s);
+    });
+  });
+  const title = $('h1.mega'), letters = title ? $$('.l:not(.sp)', title) : [];
+  const calm = () => letters.forEach(l => l.style.setProperty('--d', '0'));
+  if (title) {
+    title.addEventListener('pointermove', e => {
+      if (!fine.matches || !motionOK()) return;
+      letters.forEach(l => {
+        const b = l.getBoundingClientRect();
+        const d = Math.hypot(e.clientX - (b.left + b.width / 2), e.clientY - (b.top + b.height / 2));
+        l.style.setProperty('--d', Math.max(0, 1 - d / 130).toFixed(3));
+      });
+    });
+    title.addEventListener('pointerleave', calm);
+  }
+
+  /* 4. Gavel crest */
+  const crest = $('#crest');
+  if (crest) {
+    crest.setAttribute('role', 'button'); crest.tabIndex = 0;
+    crest.setAttribute('aria-label', 'Strike the visual gavel');
+    const strike = () => {
+      say('⚖️ Let the Constitution speak.');
+      if (motionOK() && crest.animate) crest.animate(
+        [{transform:'rotate(0) scale(1)'},{transform:'rotate(-20deg) scale(1.15)'},{transform:'rotate(12deg) scale(.95)'},{transform:'rotate(0) scale(1)'}],
+        {duration: 550, easing: 'ease-out'});
+    };
+    crest.addEventListener('click', strike);
+    crest.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); strike(); } });
+  }
+
+  /* 5. Count-up statistics */
+  const nums = $$('.num[data-n]');
+  if ('IntersectionObserver' in window && !mq.matches) {
+    const co = new IntersectionObserver(es => es.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target, end = parseInt(el.dataset.n, 10), t0 = performance.now();
+      const tick = t => {
+        const k = Math.min(1, (t - t0) / 900);
+        el.textContent = String(Math.round(end * (1 - Math.pow(1 - k, 3))));
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick); co.unobserve(el);
+    }), {threshold: .5});
+    nums.forEach(n => co.observe(n));
+  }
+
+  /* 6. Court directory: search + category filter */
+  const rows = $$('#dir tbody tr');
+  const q = $('#q'), cnt = $('#cnt'), none = $('#none'), chips = $$('.fch[data-f]');
+  let af = 'all';
+  const norm = v => v.normalize('NFKD').toLowerCase().replace(/[’'.,;:()&/–—-]+/g, ' ').replace(/\s+/g, ' ').trim();
+  const alias = {
+    'Allahabad':'prayagraj uttar pradesh lucknow',
+    'Bombay':'mumbai maharashtra goa panaji sambhajinagar aurangabad kolhapur nagpur dadra nagar haveli daman diu',
+    'Calcutta':'kolkata west bengal andaman nicobar port blair jalpaiguri',
+    'Gauhati':'guwahati assam nagaland mizoram arunachal itanagar naharlagun',
+    'Madras':'chennai tamil nadu puducherry pondicherry madurai',
+    'Orissa':'odisha cuttack','Kerala':'lakshadweep kochi cochin ernakulam',
+    'Jammu & Kashmir and Ladakh':'jammu kashmir ladakh srinagar leh',
+    'Uttarakhand':'uttaranchal nainital'
+  };
+  rows.forEach(r => {
+    const name = ($('td:nth-child(2) strong', r) || {}).textContent || '';
+    r.dataset.s = norm(r.textContent + ' ' + (alias[name.trim()] || ''));
+  });
+  function filterDir() {
+    const toks = norm(q ? q.value : '').split(' ').filter(Boolean);
+    let v = 0;
+    rows.forEach(r => {
+      const g = (r.dataset.g || '').split(/\s+/);
+      const show = (af === 'all' || g.includes(af)) && toks.every(t => r.dataset.s.includes(t));
+      r.hidden = !show; if (show) v++;
+    });
+    if (cnt) cnt.textContent = v + ' of ' + rows.length + ' High Courts shown.';
+    if (none) none.hidden = v !== 0;
+  }
+  if (q) q.addEventListener('input', filterDir);
+  chips.forEach(b => {
+    b.type = 'button';
+    b.addEventListener('click', () => {
+      af = b.dataset.f;
+      chips.forEach(o => o.classList.toggle('on', o === b));
+      filterDir();
+    });
+  });
+  filterDir();
+
+  /* 7. Article index search */
+  const as = $('#articleSearch'), ar = $$('#articleTable tbody tr'), ac = $('#articleCount');
+  function filterArt() {
+    const toks = norm(as ? as.value : '').split(' ').filter(Boolean);
+    let v = 0;
+    ar.forEach(r => { const t = norm(r.textContent); r.hidden = !toks.every(k => t.includes(k)); if (!r.hidden) v++; });
+    if (ac) ac.textContent = v + ' / ' + ar.length + ' entries';
+  }
+  if (as) as.addEventListener('input', filterArt);
+  filterArt();
+
+  /* 8. Writ laboratory */
+  $$('#writLab [data-answer]').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    const label = b.textContent;
+    b.addEventListener('click', () => {
+      const out = $('.rv2', b.closest('.scn'));
+      const open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', String(!open));
+      if (out) out.textContent = open ? '' : b.dataset.answer;
+      b.textContent = open ? label : 'Hide explanation';
+    });
+  });
+
+  /* 9. Flashcards */
+  $$('.fc').forEach(c => {
+    $('.bk', c).setAttribute('aria-hidden', 'true');
+    c.addEventListener('click', () => {
+      const f = c.classList.toggle('flip');
+      c.setAttribute('aria-pressed', String(f));
+      $('.fr', c).setAttribute('aria-hidden', String(f));
+      $('.bk', c).setAttribute('aria-hidden', String(!f));
+    });
+  });
+
+  /* 10. Quiz */
+  const Q = [
+    {q:'Which SC-level collegium ordinarily considers an appointment as a High Court judge?', o:['CJI alone','CJI + two senior-most SC judges','CJI + four senior-most SC judges','Governor + Chief Minister'], a:1, w:'Ordinary HC appointments use CJI + 2. SC appointments and HC transfers use the five-member collegium.'},
+    {q:'Which statement on the ordinary State-HC financial framework is correct?', o:['Salary and pension both charge the Union fund','Salary and pension both charge the State fund','Judges’ salary/allowances charge the State fund; judges’ pensions charge the Union fund','The Chief Justice chooses the fund'], a:2, w:'Read Art. 202(3)(d) with Art. 112(3)(d)(iii). Registry-staff pensions are an Art. 229 matter.'},
+    {q:'Under Art. 220, a former permanent HC judge may plead or act in:', o:['Every Indian court','Only their former High Court','No court or authority in India','The Supreme Court and other High Courts'], a:3, w:'Art. 220 allows the Supreme Court and other High Courts. The total bar is the SC-judge rule in Art. 124(7).'},
+    {q:'Art. 226 is wider than Art. 32 mainly because it covers:', o:['Fundamental Rights and other legal purposes','Every political grievance without a legal right','Automatic appeals from all SC judgments','Worldwide jurisdiction'], a:0, w:'Art. 226 goes beyond Fundamental Rights, but a legal or public-duty foundation and territorial jurisdiction still matter.'},
+    {q:'A subordinate civil court’s judicial order is ordinarily challenged through:', o:['Art. 226 certiorari as the universal route','A complaint to the Governor','Statutory remedies and, exceptionally, Art. 227','An Art. 143 reference'], a:2, w:'Radhey Shyam (2015) excludes civil-court judicial orders from Art. 226 certiorari; limited Art. 227 supervision is distinct.'},
+    {q:'Which writ tests legal entitlement to a substantive public office?', o:['Habeas corpus','Quo warranto','Prohibition','Mandamus'], a:1, w:'Quo warranto asks “By what authority?”'},
+    {q:'Art. 228 requires withdrawal of a subordinate-court case when:', o:['A party mentions the Constitution','A factual dispute is difficult','A minister asks for it','The HC is satisfied a necessary substantial constitutional-interpretation question exists'], a:3, w:'Once the conditions are met the HC “shall” withdraw; it may decide the whole case or the question and return the case.'},
+    {q:'An additional HC judge under Art. 224(1) may be appointed for:', o:['Not exceeding two years at a time','Exactly five years','Until age 65','Life'], a:0, w:'The period cannot exceed two years, and Art. 224(3) also sets the age ceiling of 62.'},
+    {q:'Who decides an HC judge’s age dispute under Art. 217(3)?', o:['The Governor alone','The President after consulting the CJI','The HC registry','The State Public Service Commission'], a:1, w:'Art. 217(3) assigns it to the President after consulting the CJI; the decision is final.'},
+    {q:'Which statement on Art. 226(3) is accurate?', o:['Every writ stay expires after two weeks','It abolishes interim relief','It covers a specified ex parte-order vacation application, with a two-week disposal rule','It is the same as a universal six-month stay rule'], a:2, w:'It applies only to the specified ex parte situation after a vacation application is made and furnished.'},
+    {q:'Control over district and subordinate courts is vested in the HC by:', o:['Art. 220','Art. 230','Art. 234 alone','Art. 235'], a:3, w:'Art. 235 is the control provision. Art. 233 concerns district-judge appointments; Art. 234 other judicial recruitment.'},
+    {q:'The core of L. Chandra Kumar (1997) is that:', o:['Tribunals permanently replace all HC review','Judicial review under Arts. 226/227 and 32 is basic structure','HCs cannot examine tribunal decisions','Only the executive may review tribunals'], a:1, w:'Tribunals supplement constitutional courts. The constitutional core of judicial review cannot be wholly ousted.'}
+  ];
+  const quiz = $('#quiz');
+  if (quiz) {
+    const qq = $('#quizQuestion'), qo = $('#quizOptions'), qx = $('#quizExplanation'),
+          qn = $('#quizNext'), qp = $('#quizPosition'), qs = $('#quizScore'), qb = $('#quizProgress');
+    let idx = -1, score = 0, answered = false, done = false, resp = [];
+    const meta = () => {
+      qs.textContent = 'Score: ' + score;
+      const c = done ? Q.length : Math.max(0, idx + (answered ? 1 : 0));
+      qb.style.width = (c / Q.length * 100) + '%';
+    };
+    function show() {
+      const it = Q[idx]; answered = false;
+      qp.textContent = 'Question ' + (idx + 1) + ' / ' + Q.length;
+      qq.textContent = it.q; qo.replaceChildren();
+      qx.textContent = 'Select the best answer.'; qn.hidden = true;
+      it.o.forEach((t, i) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'opt';
+        const l = document.createElement('span');
+        l.className = 'answer-letter'; l.setAttribute('aria-hidden', 'true'); l.textContent = String.fromCharCode(65 + i);
+        b.append(l, document.createTextNode(t));
+        b.addEventListener('click', () => pick(i));
+        qo.append(b);
+      });
+      qq.tabIndex = -1; qq.focus({preventScroll: true}); meta();
+    }
+    function pick(c) {
+      if (answered) return;
+      const it = Q[idx], ok = c === it.a;
+      answered = true; resp.push(c); if (ok) score++;
+      $$('.opt', qo).forEach((b, i) => { b.disabled = true; if (i === it.a) b.classList.add('ok'); if (i === c && !ok) b.classList.add('bad'); });
+      qx.textContent = (ok ? '✅ Correct. ' : '🧭 Revisit this. ') + it.w;
+      qn.hidden = false; qn.textContent = idx === Q.length - 1 ? 'See results →' : 'Next question →';
+      meta();
+    }
+    function finish() {
+      done = true; qp.textContent = 'Challenge complete';
+      qq.textContent = 'Your constitutional recall report'; qo.replaceChildren();
+      const sc = document.createElement('div'); sc.className = 'qs'; sc.textContent = score + ' / ' + Q.length;
+      const msg = document.createElement('p');
+      msg.textContent = score === Q.length ? '🏆 Excellent recall. Now apply these rules to unfamiliar facts.'
+        : score >= 9 ? '🌟 Strong foundations. Review the distinctions below to sharpen precision.'
+        : '🌱 Good revision starts with finding the gaps. Review the explanations and try again.';
+      qo.append(sc, msg);
+      const rev = document.createElement('div'); rev.className = 'quiz-review';
+      Q.forEach((it, i) => {
+        const d = document.createElement('details'), s = document.createElement('summary');
+        s.textContent = (resp[i] === it.a ? '✅ ' : '🔁 ') + (i + 1) + '. ' + it.q;
+        const p1 = document.createElement('p'); p1.className = 'review-state'; p1.textContent = 'Your answer: ' + it.o[resp[i]];
+        const p2 = document.createElement('p'); p2.textContent = 'Correct answer: ' + it.o[it.a];
+        const p3 = document.createElement('p'); p3.textContent = it.w;
+        d.append(s, p1, p2, p3); rev.append(d);
+      });
+      qo.append(rev);
+      qx.textContent = 'Open any question to review the reasoning.';
+      qn.textContent = 'Restart challenge ↻'; qn.hidden = false; meta();
+    }
+    qn.addEventListener('click', () => {
+      if (done) { done = false; score = 0; idx = 0; resp = []; show(); }
+      else if (idx === -1) { idx = 0; show(); }
+      else if (answered) { if (idx === Q.length - 1) finish(); else { idx++; show(); } }
+    });
+  }
+
+  /* 11. Safe reveal on scroll */
+  if ('IntersectionObserver' in window && !mq.matches) {
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), {threshold: .025, rootMargin: '0px 0px 30px 0px'});
+    root.classList.add('reveal-ready');
+    $$('.rv').forEach(el => el.getBoundingClientRect().top < innerHeight ? el.classList.add('in') : io.observe(el));
+  } else $$('.rv').forEach(el => el.classList.add('in'));
+  addEventListener('beforeprint', () => $$('.rv').forEach(el => el.classList.add('in')));
+
+  /* 12. Card tilt (fine pointers, motion allowed) */
+  let tilted = null;
+  document.addEventListener('pointermove', e => {
+    if (!fine.matches || !motionOK() || focusOn) return;
+    const c = e.target.closest ? e.target.closest('.card') : null;
+    if (tilted && tilted !== c) { tilted.style.setProperty('--rx', '0deg'); tilted.style.setProperty('--ry', '0deg'); }
+    tilted = c;
+    if (c) {
+      const b = c.getBoundingClientRect();
+      c.style.setProperty('--rx', (-((e.clientY - b.top) / b.height - .5) * 3).toFixed(2) + 'deg');
+      c.style.setProperty('--ry', (((e.clientX - b.left) / b.width - .5) * 4).toFixed(2) + 'deg');
+    }
+  }, {passive: true});
+
+  /* 13. Reading bar, chapter highlighting, back-to-top, parallax, cursor light */
+  const bar = $('#rbar'), btt = $('#btt'), spot = $('#spot');
+  const links = $$('#nav a[href^="#"]');
+  const chapters = links.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+  const layers = $$('.stage [data-par]');
+  let activeId = '';
+  function paint() {
+    raf = 0;
+    const y = scrollY, range = Math.max(1, root.scrollHeight - innerHeight);
+    if (bar) bar.style.transform = 'scaleX(' + Math.min(1, y / range) + ')';
+    if (btt) { const s = y > 500; btt.classList.toggle('on', s); btt.tabIndex = s ? 0 : -1; }
+    let cur = chapters[0] ? chapters[0].id : '';
+    for (const c of chapters) { if (c.getBoundingClientRect().top <= 170) cur = c.id; else break; }
+    if (cur !== activeId) {
+      activeId = cur;
+      links.forEach(a => {
+        const on = a.getAttribute('href') === '#' + cur;
+        a.classList.toggle('on', on);
+        on ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current');
+      });
+    }
+    if (motionOK() && !focusOn) {
+      const by = Math.min(y, 750);
+      layers.forEach(l => {
+        const d = Number(l.dataset.par) || 0;
+        l.style.transform = 'translate3d(' + (px * d * 20).toFixed(2) + 'px,' + (-by * d * .13 + py * d * 12).toFixed(2) + 'px,0)';
+      });
+    }
+  }
+  const sched = () => { if (!raf) raf = requestAnimationFrame(paint); };
+  addEventListener('scroll', sched, {passive: true});
+  addEventListener('resize', sched, {passive: true});
+  addEventListener('pointermove', e => {
+    if (!fine.matches || !motionOK() || focusOn) return;
+    px = e.clientX / innerWidth - .5; py = e.clientY / innerHeight - .5;
+    if (spot) { spot.style.setProperty('--mx', e.clientX + 'px'); spot.style.setProperty('--my', e.clientY + 'px'); }
+    sched();
+  }, {passive: true});
+  if (btt) btt.addEventListener('click', () => {
+    scrollTo({top: 0, behavior: motionOK() ? 'smooth' : 'auto'});
+    const top = $('#top'); if (top) { top.setAttribute('tabindex', '-1'); top.focus({preventScroll: true}); }
+  });
+
+  /* 14. Floating dust (capped, paused when hidden or motion is off) */
+  const cv = $('#dust'); let cx = null;
+  try { cx = cv ? cv.getContext('2d') : null; } catch (_) {}
+  let parts = [], W = innerWidth, H = innerHeight, dfr = 0, last = 0;
+  function sizeDust() {
+    if (!cv || !cx) return;
+    W = innerWidth; H = innerHeight;
+    const r = Math.min(devicePixelRatio || 1, 1.5);
+    cv.width = Math.round(W * r); cv.height = Math.round(H * r);
+    cx.setTransform(r, 0, 0, r, 0, 0);
+    parts = Array.from({length: Math.min(58, Math.max(18, Math.floor(W / 24)))}, () => ({
+      x: Math.random() * W, y: Math.random() * H, r: .5 + Math.random() * 1.4,
+      s: .12 + Math.random() * .3, d: (Math.random() - .5) * .2, o: .12 + Math.random() * .36, p: Math.random() * 6.28
+    }));
+    drawDust(0, 0);
+  }
+  function drawDust(t, k) {
+    if (!cx) return;
+    cx.clearRect(0, 0, W, H);
+    parts.forEach(p => {
+      p.y -= p.s * k; p.x += p.d * k;
+      if (p.y < -5) { p.y = H + 5; p.x = Math.random() * W; }
+      if (p.x < -5) p.x = W + 5; if (p.x > W + 5) p.x = -5;
+      cx.beginPath();
+      cx.fillStyle = 'rgba(236,198,129,' + (p.o * (.72 + Math.sin(t / 2400 + p.p) * .28)) + ')';
+      cx.arc(p.x, p.y, p.r, 0, 6.2832); cx.fill();
+    });
+  }
+  function loopDust(t) {
+    if (!motionOK() || focusOn || document.hidden || !cx) { dfr = 0; return; }
+    const el = t - last;
+    if (el >= 33) { last = t; drawDust(t, Math.min(3, el / 16.67)); }
+    dfr = requestAnimationFrame(loopDust);
+  }
+  function syncDust() {
+    if (dfr) cancelAnimationFrame(dfr); dfr = 0; last = performance.now();
+    if (motionOK() && !focusOn && !document.hidden && cx) dfr = requestAnimationFrame(loopDust);
+  }
+  addEventListener('resize', sizeDust, {passive: true});
+  document.addEventListener('visibilitychange', syncDust);
+  sizeDust();
+
+  /* 15. Focus mode and motion toggle */
+  const bF = $('#bFocus'), bM = $('#bMotion');
+  function syncMotion() {
+    const stillNow = !motionOK();
+    body.classList.toggle('still', stillNow);
+    if (bM) {
+      bM.setAttribute('aria-pressed', String(stillNow));
+      bM.textContent = mq.matches ? '🌿 Reduced motion active' : paused ? '▶ Resume motion' : '⏸ Pause motion';
+    }
+    if (stillNow) { calm(); $$('.card').forEach(c => { c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); }); }
+    syncDust(); sched();
+  }
+  if (bF) bF.addEventListener('click', () => {
+    focusOn = !focusOn; body.classList.toggle('focus', focusOn);
+    bF.setAttribute('aria-pressed', String(focusOn));
+    bF.textContent = focusOn ? '🎬 Cinematic mode' : '📖 Focus mode';
+    say(focusOn ? 'Focus mode enabled.' : 'Cinematic background restored.');
+    syncDust(); sched();
+  });
+  if (bM) bM.addEventListener('click', () => {
+    if (mq.matches) { say('Your device requests reduced motion; that preference is respected.'); return; }
+    paused = !paused; syncMotion(); say(paused ? 'Decorative motion paused.' : 'Decorative motion resumed.');
+  });
+  mq.addEventListener ? mq.addEventListener('change', syncMotion) : mq.addListener(syncMotion);
+
+  /* 16. Smooth in-page navigation that respects the motion setting */
+  $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const h = a.getAttribute('href');
+    if (!h || h === '#' || a.classList.contains('skip-link')) return;
+    const t = document.getElementById(h.slice(1)); if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({behavior: motionOK() ? 'smooth' : 'auto', block: 'start'});
+    try { history.replaceState(null, '', h); } catch (_) {}
+  }));
+  if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.classList.add('in'); }
+
+  syncMotion(); paint();
+})();
+</script>
+
+</body>
+</html>
