@@ -238,6 +238,18 @@ const archiveEntries = [
   },
   {
     number: "17",
+    title: "THE HIGH COURTS OF INDIA",
+    category: "Political Science",
+    description: "The first constitutional door of justice — guardians of liberty, supervisors of every lower court, & in the quiet dread of many a file-sitting officer",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "The High Courts of India.html",
+    icon: "🎎",
+    image: "",
+    featured: true
+  },
+  {
+    number: "18",
     title: "THE CONSTITUTION OF INDIA",
     category: "Political Science",
     description: "'Justice, Liberty, Equality, & Fraternity' — the eternal promise of the Preamble, now walked through Articles 1 to 14",
@@ -249,7 +261,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "18",
+    number: "19",
     title: "THE STATE LEGISLATURE OF INDIA",
     category: "Political Science",
     description: "The Constitutional Architecture of the States • Part VI · Chapter III · Articles 168–212",
@@ -261,7 +273,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "19",
+    number: "20",
     title: "THE STATE EXECUTIVE",
     category: "Political Science",
     description: "Constitutional form. Democratic substance. Accountable power • Part VI · Chapter II — Articles 153 to 167",
@@ -273,7 +285,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "20",
+    number: "21",
     title: "INDIAN CONSTITUTIONAL AMENDMENTS",
     category: "Political Science",
     description: "The power to rewrite provisions — not to destroy the Constitution •  Article 368",
@@ -285,7 +297,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "21",
+    number: "22",
     title: "EMERGENCY PROVISIONS OF THE INDIAN CONSTITUTION",
     category: "Political Science",
     description: "Extraordinary power — created by the Constitution, therefore bounded by it •  Constitutional Crisis Architecture • Part XVIII",
@@ -297,7 +309,7 @@ const archiveEntries = [
     featured: true
   },
   {
-    number: "22",
+    number: "23",
     title: "THE ELECTION COMMISSION OF INDIA",
     category: "Political Science",
     description: "India's Constitutional Guardian of the Electoral Process & The World's Largest Electoral Institution, Entrusted With Ensuring Free, Fair and Periodic Elections",
@@ -307,7 +319,32 @@ const archiveEntries = [
     icon: "🗳️",
     image: "",
     featured: true
+  },
+  {
+    number: "24",
+    title: "THE UNION PUBLIC SERVICE COMMISSION",
+    category: "Political Science",
+    description: "The constitutional sentinel of merit — independent in function, accountable in democracy",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "THE UNION PUBLIC SERVICE COMMISSION.html",
+    icon: "🌟",
+    image: "",
+    featured: true
+  },
+  {
+    number: "25",
+    title: "CENTRE–STATE RELATIONS",
+    category: "Political Science",
+    description: "LEGISLATIVE · ADMINISTRATIVE · FINANCIAL - One Union Many Governments · A shared constitutional horizon",
+    status: "Documented",
+    date: "FIELD SEASON I",
+    file: "CENTRE–STATE RELATIONS.html",
+    icon: "🎋",
+    image: "",
+    featured: true
   } 
+
    
 
   /* ── ADD NEW NOTES BELOW. Copy this block, keep the comma before it: ──
