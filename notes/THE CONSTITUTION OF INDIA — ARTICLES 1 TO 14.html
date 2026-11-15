@@ -291,6 +291,266 @@ nav a:hover::after{width:60%;}
   .auteur-credit{padding:16px 24px;}
   .heart-tribute{padding:24px 18px;}
 }
+
+/* ===== ARTICLES 1–4 REVISION NOTES ===== */
+#a14-revision {
+  --a14-border: rgba(255, 255, 255, 0.12);
+  --a14-muted: #bcb9c4;
+  --a14-text: #f1eee8;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 38px auto;
+  padding: clamp(16px, 3vw, 32px);
+  border: 1px solid var(--a14-border);
+  border-radius: 20px;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  color: var(--a14-text);
+  line-height: 1.7;
+}
+
+#a14-revision *,
+#a14-revision *::before,
+#a14-revision *::after {
+  box-sizing: border-box;
+}
+
+#a14-revision .a14-header {
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid var(--a14-border);
+  border-radius: 16px;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 154, 60, 0.18),
+    rgba(63, 140, 255, 0.16)
+  );
+}
+
+#a14-revision .a14-eyebrow {
+  margin: 0 0 8px;
+  color: #e8c257;
+  font-family: "Fira Code", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+#a14-revision .a14-header h3 {
+  margin: 0 0 10px;
+  color: #fff8ec;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+#a14-revision p {
+  margin: 10px 0;
+  color: var(--a14-muted);
+  font-size: 0.94rem;
+}
+
+#a14-revision .a14-header p:last-child {
+  margin-bottom: 0;
+  color: #e8e4df;
+}
+
+#a14-revision .a14-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+#a14-revision .a14-card {
+  min-width: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--a14-border);
+  border-top: 3px solid #ff9a3c;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+#a14-revision .a14-card h5 {
+  margin: 0 0 6px;
+  color: #ffb35c;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#a14-revision .a14-card p {
+  margin: 0;
+}
+
+#a14-revision .a14-section {
+  margin-top: 30px;
+}
+
+#a14-revision .a14-section > h4 {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-left: 4px solid #ff9a3c;
+  border-radius: 6px;
+  background: rgba(255, 154, 60, 0.1);
+  color: #fff8ec;
+  font-family: "Playfair Display", serif;
+  font-size: 1.18rem;
+  line-height: 1.4;
+}
+
+#a14-revision strong {
+  color: #ffd18c;
+}
+
+#a14-revision .a14-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 14px 0 18px;
+  overflow-x: auto;
+  border: 1px solid var(--a14-border);
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+#a14-revision .a14-table-wrap:focus-visible {
+  outline: 2px solid #ffb35c;
+  outline-offset: 3px;
+}
+
+#a14-revision table {
+  width: 100%;
+  min-width: 580px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--a14-text);
+  font-size: 0.9rem;
+}
+
+#a14-revision th,
+#a14-revision td {
+  padding: 11px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--a14-text);
+  text-align: left;
+  vertical-align: top;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#a14-revision thead th {
+  background: rgba(255, 154, 60, 0.16);
+  color: #ffcc91;
+  font-size: 0.85rem;
+}
+
+#a14-revision tbody th {
+  background: transparent;
+  color: #e8c257;
+  font-size: 0.9rem;
+}
+
+#a14-revision tbody td {
+  color: #d0cdd4;
+}
+
+#a14-revision tbody tr:hover th,
+#a14-revision tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.055);
+}
+
+#a14-revision tbody tr:last-child th,
+#a14-revision tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+#a14-revision .a14-note,
+#a14-revision .a14-tip {
+  margin: 14px 0;
+  padding: 13px 16px;
+  border-radius: 0 12px 12px 0;
+  color: #e0dce0;
+  font-size: 0.92rem;
+}
+
+#a14-revision .a14-note {
+  border-left: 4px solid #e8c257;
+  background: rgba(232, 194, 87, 0.09);
+}
+
+#a14-revision .a14-tip {
+  border-left: 4px solid #2fbf71;
+  background: rgba(47, 191, 113, 0.1);
+}
+
+#a14-revision .a14-timeline {
+  margin: 18px 0 18px 7px;
+  padding: 0 0 0 24px;
+  border-left: 3px solid #3f8cff;
+  list-style: none;
+}
+
+#a14-revision .a14-timeline li {
+  position: relative;
+  margin: 0 0 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--a14-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #d0cdd4;
+  font-size: 0.92rem;
+}
+
+#a14-revision .a14-timeline li::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: -33px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #05060d;
+  border-radius: 50%;
+  background: #3f8cff;
+  box-shadow: 0 0 10px rgba(63, 140, 255, 0.8);
+}
+
+#a14-revision .a14-memory {
+  padding: 20px 22px;
+  border: 1px dashed #ff9a3c;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 154, 60, 0.09),
+    rgba(63, 140, 255, 0.06)
+  );
+}
+
+#a14-revision .a14-memory ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+#a14-revision .a14-memory li {
+  margin: 8px 0;
+  color: #f1eee8;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 600px) {
+  #a14-revision {
+    padding: 16px;
+  }
+
+  #a14-revision .a14-header {
+    padding: 18px;
+  }
+}
 </style>
 </head>
 <body>
@@ -377,10 +637,10 @@ nav a:hover::after{width:60%;}
       <div class="flow-node">🔒 <b>INDESTRUCTIBLE UNION</b>built of ✂️ destructible, reorganisable States</div>
     </div>
     <p style="color:var(--text-dim);">Dr. B. R. Ambedkar deliberately chose <b>"Union"</b> over <b>"Federation"</b> to signal these two ideas. Internal State boundaries remain freely alterable by Parliament under Article 3 — a deliberate design choice favouring adaptability over rigidity. 🔧</p>
-   
-    <br><div class="card"><b><i>Article 1(2):</i></b>‎ The <b>States & their territories</b> are specified in the <b>First Schedule</b> of the Indian Constitution.
+
+<br><div class="card"><b><i>Article 1(2):</i></b>‎ The <b>States & their territories</b> are specified in the <b>First Schedule</b> of the Indian Constitution.
 <br>In short, it simply points to the <b>First Schedule as the official list</b> where the names and territorial boundaries of all Indian states are recorded.</div>
-    
+
     <h3 style="color:var(--accent);margin:30px 0 10px;">🌍 Article 1(3) — Three Components of "Territory of India"</h3>
     <div class="hub">
       <div class="flow-node"><b>🌏 TERRITORY OF INDIA</b>(wider than "Union of India")</div>
@@ -411,7 +671,7 @@ nav a:hover::after{width:60%;}
         <h3>Article 2 — Admission or Establishment of New States 🆕</h3>
         <p>"Parliament may by law admit into the Union, or <b>establish</b>, new States on such terms and conditions as it thinks fit."</p>
         <div class="flow" style="margin:14px 0;">
-           <div class="flow-node">🟢 <b>ADMIT</b> <b><i>An already existing political entity is integrated into the Indian Union.</i></b><p><br>╰> Pondicherry (1954) - French settlements merged with India.</br><br>╰> Dadra and Nagar Haveli - Integrated into India in 1961</br><br>╰> Sikkim (1975) - Became the 22nd State of India.</br></div>
+          <div class="flow-node">🟢 <b>ADMIT</b> <b><i>An already existing political entity is integrated into the Indian Union.</i></b><p><br>╰> Pondicherry (1954) - French settlements merged with India.</br><br>╰> Dadra and Nagar Haveli - Integrated into India in 1961</br><br>╰> Sikkim (1975) - Became the 22nd State of India.</br></div>
           <div class="flow-node">🟣 <b>ESTABLISH</b> <b><i>An acquired external territory is constituted as a new State rather than being merged into an existing State. In short, a brand-new State from scratch</i></b><br><p><br>╰> Goa (1987) - Became a separate State after being acquired from Portuguese rule in 1961.</br></div>
         </div>
 <p><b>Constitutional clarification:</b> These are conceptual examples, not necessarily cases where Article 2 alone was directly invoked. Sikkim's integration involved the 35th and 36th Amendments; Goa's statehood came through the Goa, Daman and Diu Reorganisation Act, 1987.</p>
@@ -432,9 +692,926 @@ nav a:hover::after{width:60%;}
         <div class="num-badge">4️⃣</div>
         <h3>Article 4 — Supplemental & Consequential Provisions ⚙️</h3>
         <p><b>Art. 4(1):</b> Any law made under <b>Art. 2 or 3</b> must include provisions to amend the <b>First & Fourth Schedule</b> as needed, and may also include supplemental, incidental, and consequential provisions (such as changes to parliamentary or state legislative representation).</p>
-        <div class="callout">⭐ <b>Golden Rule — Art. 4(2):</b> Such a law is <b>NOT</b> deemed an amendment under Article 368 → passed by <b>simple majority</b>, no State ratification needed! ✂️</div>
+
+<br><p><b>Supplemental:</b> Additions needed to fill gaps in the main law (e.g., adjusting schedules).<br>‎ </br>
+<b>Incidental:</b> Secondary changes naturally arising from the main change (e.g., updating official names or boundaries).<br> </br>
+<b>Consequential:</b> Follow-up adjustments required as a direct result (e.g., reallocating Lok Sabha or Rajya Sabha seats).</p>
+
+      <div class="callout">⭐ <b>Golden Rule — Art. 4(2):</b> Such a law is <b>NOT</b> deemed an amendment under Article 368 → passed by <b>simple majority</b>, no State ratification needed! ✂️</div>
       </div>
     </div>
+
+
+<!-- ===== ARTICLES 1–4 REVISION NOTES: START ===== -->
+<div id="a14-revision" role="region" aria-labelledby="a14-revision-title">
+
+  <header class="a14-header">
+    <p class="a14-eyebrow">Insight</p>
+    <h3 id="a14-revision-title">
+      Articles 1–4: Admission, Establishment and Formation of States
+    </h3>
+    <p>
+      Separate a territory’s historical identity from the constitutional
+      process through which it became an Indian State.
+    </p>
+  </header>
+
+  <div class="a14-grid">
+    <div class="a14-card">
+      <h5>1. The historical question</h5>
+      <p>
+        What was the territory’s political status before integration:
+        a colony, a princely state or a kingdom?
+      </p>
+    </div>
+
+    <div class="a14-card">
+      <h5>2. The constitutional question</h5>
+      <p>
+        How did it become an Indian State? Was it brought into the Union
+        or formed from territory already within India?
+      </p>
+    </div>
+  </div>
+
+  <!-- 1. HISTORICAL STATUS -->
+  <div class="a14-section">
+    <h4>1. Colony vs. Sovereign or Autonomous Entity</h4>
+
+    <p>
+      A territory’s earlier political status explains its history. It does
+      not, by itself, determine the constitutional provision used to make
+      it an Indian State.
+    </p>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Comparison of colonial and autonomous territories"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Basis</th>
+            <th scope="col">Colony or externally ruled territory</th>
+            <th scope="col">Sovereign or autonomous entity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Control</th>
+            <td>
+              Ruled by an external power; major authority lies with
+              that power.
+            </td>
+            <td>
+              Has its own government or ruler and a distinct political
+              identity. The degree of independence varies.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Examples</th>
+            <td>
+              <strong>Goa</strong> under Portugal;
+              <strong>Puducherry</strong> under France.
+            </td>
+            <td>
+              <strong>Hyderabad</strong> under the Nizam;
+              <strong>Sikkim</strong> under the Chogyal.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Administration</th>
+            <td>
+              Has colonial administrative institutions, but is subordinate
+              to the external power.
+            </td>
+            <td>
+              Has its own political and administrative institutions,
+              although another authority may restrict its powers.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Relevance to India</th>
+            <td>
+              A former colony may become Indian territory without
+              immediately becoming an Indian State.
+            </td>
+            <td>
+              An existing political entity may be integrated into India,
+              but its particular historical route must be examined.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      <strong>Sovereignty and autonomy are different.</strong>
+      A fully sovereign State is independent in its external affairs;
+      an autonomous entity has some self-government but may remain
+      subject to another power.
+    </p>
+
+    <p>
+      Hyderabad was subject to <strong>British paramountcy</strong>
+      before 1947, while Sikkim was an <strong>Indian protectorate</strong>
+      before becoming an Indian State. Neither should be treated as
+      fully sovereign throughout its history.
+    </p>
+
+    <p>
+      <strong>Goa’s position:</strong> Goa was under Portuguese colonial
+      rule; Portugal described it as an overseas province. Goa was not a
+      princely state with its own monarch. It came under Indian control
+      in 1961, but did <strong>not immediately become an Indian State</strong>.
+    </p>
+
+    <div class="a14-note">
+      <strong>Important:</strong> Colonial or princely status explains
+      historical background. It does not automatically decide which
+      constitutional provision is used to form or admit a State.
+    </div>
+  </div>
+
+  <!-- 2. ADMISSION, ESTABLISHMENT AND FORMATION -->
+  <div class="a14-section">
+    <h4>2. Admission vs. Establishment vs. Formation</h4>
+
+    <p>
+      Article 2 says Parliament may
+      <strong>“admit into the Union, or establish, new States.”</strong>
+      Article 3 separately deals with the formation and reorganisation
+      of States.
+    </p>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Admission, establishment and formation comparison"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Term</th>
+            <th scope="col">Simple meaning</th>
+            <th scope="col">Illustration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Admission</th>
+            <td>
+              Bringing an existing political entity into the Indian Union
+              as a State.
+            </td>
+            <td>
+              <strong>Sikkim</strong> is commonly described as an
+              admission in 1975, subject to the amendment caveat below.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Establishment</th>
+            <td>
+              Creating a new State; this is one of the terms used in
+              <strong>Article 2</strong>.
+            </td>
+            <td>
+              Conceptually, the emphasis is on creating a new State
+              rather than receiving an existing one.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Formation</th>
+            <td>
+              Creating a new State through reorganisation of existing
+              Indian territory under <strong>Article 3</strong>.
+            </td>
+            <td>
+              <strong>Goa</strong> was formed from a Union Territory in
+              1987; <strong>Telangana</strong> was formed from Andhra
+              Pradesh in 2014.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      <strong>Core difference:</strong> Admission emphasises the entry
+      of an existing political entity; establishment emphasises the
+      creation of a new State. Formation under Article 3 describes the
+      creation of Goa and Telangana from territory already within India.
+    </p>
+
+    <div class="a14-note">
+      <strong>Exam caution:</strong> The Constitution does not define
+      admission and establishment through a rigid rule requiring a
+      particular previous status. The word “established” can also
+      describe a State’s creation generally; it does not automatically
+      mean that Article 2 was used.
+    </div>
+  </div>
+
+  <!-- 3. CONSTITUTIONAL FRAMEWORK -->
+  <div class="a14-section">
+    <h4>3. Constitutional Framework: Articles 1–4</h4>
+
+    <div class="a14-grid">
+      <div class="a14-card">
+        <h5>Article 1(3)(c) · Acquired territories</h5>
+        <p>
+          India’s territory may include territories that are acquired.
+          This clause does not itself prescribe how acquisition occurs.
+        </p>
+      </div>
+
+      <div class="a14-card">
+        <h5>Article 2 · Admission or establishment</h5>
+        <p>
+          Parliament may admit into the Union, or establish, new States
+          on terms and conditions it thinks fit.
+        </p>
+      </div>
+
+      <div class="a14-card">
+        <h5>Article 3 · Formation and reorganisation</h5>
+        <p>
+          Parliament may form new States and alter existing States’
+          areas, boundaries or names. A State can also be formed from
+          a Union Territory.
+        </p>
+      </div>
+
+      <div class="a14-card">
+        <h5>Article 4 · Consequential changes</h5>
+        <p>
+          Laws under Articles 2 and 3 can make necessary changes to the
+          <strong>First and Fourth Schedules</strong> without being
+          treated as constitutional amendments under Article 368.
+        </p>
+      </div>
+    </div>
+
+    <div class="a14-note">
+      <strong>Article 3 procedure:</strong> A Bill requires the
+      President’s recommendation. If it affects a State’s area,
+      boundaries or name, the President refers it to that State’s
+      legislature for its views within a specified period. Those views
+      are not binding on Parliament.
+    </div>
+
+    <p>
+      <strong>Article 4 mechanism:</strong> A law under Articles 2 or 3
+      follows the ordinary legislative process. The consequential
+      changes covered by Article 4 do not require the special amendment
+      procedure under Article 368.
+    </p>
+  </div>
+
+  <!-- 4. GOA -->
+  <div class="a14-section">
+    <h4>4. Goa: Colony → Union Territory → State</h4>
+
+    <ol class="a14-timeline">
+      <li>
+        <strong>Before 1961 — Portuguese rule:</strong>
+        Goa was under Portuguese colonial administration.
+      </li>
+      <li>
+        <strong>December 1961 — Indian control:</strong>
+        Indian forces took control of Goa, Daman and Diu.
+      </li>
+      <li>
+        <strong>1962 — Union Territory:</strong>
+        The <strong>12th Constitutional Amendment</strong> provided for
+        the Union Territory of <strong>Goa, Daman and Diu</strong>.
+      </li>
+      <li>
+        <strong>1963 — Elected legislature:</strong>
+        The Union Territory gained an elected legislature but remained
+        a Union Territory rather than a State.
+      </li>
+      <li>
+        <strong>30 May 1987 — Statehood:</strong>
+        The <em>Goa, Daman and Diu Reorganisation Act, 1987</em> formed
+        the <strong>State of Goa</strong>. Daman and Diu remained a
+        Union Territory.
+      </li>
+    </ol>
+
+    <p>
+      <strong>Why is Goa’s 1987 change called formation?</strong>
+      Goa was already part of India as a Union Territory. Parliament
+      created the State of Goa from that existing Indian territory.
+      Formation under Article 3 is therefore the clearest description.
+    </p>
+
+    <div class="a14-note">
+      Goa’s previous colonial status explains its historical background.
+      It does not mean that a former colony could never be made a State
+      through another constitutional arrangement.
+    </div>
+  </div>
+
+
+<!-- 4A. GOA: ADMISSION VS. ESTABLISHMENT -->
+<div class="a14-section">
+  <h4>4A. Goa: Admission vs. Establishment (Article 2)</h4>
+
+  <p>
+    Under <strong>Article 2</strong> of the Indian Constitution,
+    Parliament holds two distinct powers: to
+    <strong>admit</strong> new States into the Union of India, or to
+    <strong>establish</strong> new States. Goa is classified as an
+    <strong>establishment</strong>.
+  </p>
+
+  <div class="a14-grid">
+    <div class="a14-card">
+      <h5>Why Goa Is <u>NOT‎</u>  an “Admission”</h5>
+
+      <p>
+        <strong>Constitutional meaning:</strong> Admission applies
+        strictly when Parliament brings an already-existing, organised,
+        self-governing State into the Union of India.
+      </p>
+
+      <p>
+        <strong>Goa’s pre-1987 status:</strong> Goa never existed as an
+        independent or constituent State before 1987. It was a foreign
+        colonial possession ruled externally from Lisbon during
+        <strong>1510–1961</strong>, and subsequently a centrally
+        governed Indian territory during <strong>1962–1987</strong>.
+        Because it lacked statehood, there was no existing “State”
+        to admit.
+      </p>
+
+      <p>
+        <strong>Textbook contrast:</strong> Sikkim in 1975 is the
+        classic example of admission because it was already an
+        organised, self-governing Himalayan kingdom before joining India
+        through the <strong>36th Constitutional Amendment Act</strong>.
+      </p>
+    </div>
+
+    <div class="a14-card">
+      <h5>Why Goa <u>IS</u> an “Establishment”</h5>
+
+      <p>
+        <strong>Constitutional meaning:</strong> Establishment refers
+        to creating a brand-new State out of a territory where no
+        statehood previously existed.
+      </p>
+
+      <p>
+        <strong>Goa’s transition:</strong> Goa had no statehood during
+        its 25 years as a Union Territory. Parliament therefore had to
+        constitute and create a brand-new State government and
+        legislature from scratch through the
+        <em>Goa, Daman and Diu Reorganisation Act, 1987</em>, making
+        Goa the <strong>25th State of India</strong>.
+      </p>
+    </div>
+  </div>
+
+  <h5>Goa’s Transition: Acquisition to Statehood</h5>
+
+  <ol class="a14-timeline">
+    <li>
+      <strong>1961 — Acquisition:</strong> Goa was liberated from
+      Portuguese rule through <strong>Operation Vijay</strong> and
+      absorbed as an acquired territory under
+      <strong>Article 1(3)(c)</strong>.
+    </li>
+    <li>
+      <strong>1962 — Union Territory:</strong> Goa was incorporated
+      into India as a centrally administered Union Territory, alongside
+      Daman and Diu, through the
+      <strong>12th Constitutional Amendment Act, 1962</strong>.
+    </li>
+    <li>
+      <strong>1987 — Statehood:</strong> Parliament created the State
+      of Goa through the
+      <em>Goa, Daman and Diu Reorganisation Act, 1987</em>, making Goa
+      the <strong>25th State of India</strong>.
+    </li>
+  </ol>
+
+  <div class="a14-note">
+    <strong>Exam nuance — Article 2 vs. Article 3:</strong>
+    Whenever a question contrasts admission and establishment under
+    Article 2, <strong>Sikkim = Admission</strong> and
+    <strong>Goa = Establishment</strong>.
+
+    <p>
+      Goa was carved out of an existing Union Territory listed in the
+      First Schedule. Explanation I to Article 3 clarifies that
+      “State” includes a Union Territory. Its elevation to statehood
+      therefore also involves <strong>Article 3 alongside Article 2</strong>,
+      executed through an ordinary law under <strong>Article 4</strong>.
+    </p>
+  </div>
+</div>
+<!-- END: GOA: ADMISSION VS. ESTABLISHMENT -->
+
+
+<!-- ADDITIONAL CONSTITUTIONAL CLASSIFICATION: START -->
+<div class="a14-section">
+  <h4>Constitutional Classification: Admission vs. Establishment (Article 2)</h4>
+
+  <div
+    class="a14-table-wrap"
+    role="region"
+    aria-label="Constitutional Classification: Admission vs. Establishment (Article 2)"
+    tabindex="0"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Territory / State</th>
+          <th scope="col">Category &amp; Year</th>
+          <th scope="col">Constitutional Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Sikkim</th>
+          <td>Admission (1975)</td>
+          <td>Art. 2; 35th &amp; 36th Amendments</td>
+        </tr>
+        <tr>
+          <th scope="row">Hyderabad</th>
+          <td>Admission (Conceptual, 1948/50)</td>
+          <td>Instrument of Accession; Part B (1950)</td>
+        </tr>
+        <tr>
+          <th scope="row">Goa</th>
+          <td>Establishment (1987)</td>
+          <td>Art. 1(3)(c), 2, 3, 4; 12th Amend.; 1987 Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Himachal Pradesh</th>
+          <td>Establishment (1971)</td>
+          <td>Art. 2, 3, 4; 7th Amend.; 1970 Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Manipur</th>
+          <td>Establishment (1972)</td>
+          <td>Art. 2, 3, 4; 7th Amend.; 1971 NE Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Tripura</th>
+          <td>Establishment (1972)</td>
+          <td>Art. 2, 3, 4; 7th Amend.; 1971 NE Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Mizoram</th>
+          <td>Establishment (1987)</td>
+          <td>Art. 2, 3, 4; 27th Amend.; 1986 Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Arunachal Pradesh</th>
+          <td>Establishment (1987)</td>
+          <td>Art. 2, 3, 4; 27th Amend.; 1986 Act</td>
+        </tr>
+        <tr>
+          <th scope="row">Puducherry, Daman &amp; Diu</th>
+          <td>Neither (Acquired UTs)</td>
+          <td>Art. 1(3)(c), 239A; 12th &amp; 14th Amendments</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Core Explanations &amp; Precise Constitutional Details</h4><br>
+
+  <ul>
+    <li>
+      <strong><u>Sikkim</u> — Pure Article 2 "Admission" (22nd State):</strong>
+      <ul>
+        <li>
+          <strong>Pre-1975 Status:</strong> An external Himalayan monarchy and Indian protectorate with its own Chogyal (monarch) and internal governance.
+        </li>
+        <li>
+          <strong>Mechanism:</strong> First made an "Associate State" via the 35th Constitutional Amendment Act, 1974 (inserting Art. 2A and the 10th Schedule, later repealed), and then admitted as a full constituent State via the 36th Constitutional Amendment Act, 1975 (inserting Art. 371F). Because it entered directly as an already-organized State without becoming a UT first, it is the textbook example of Admission.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Hyderabad</u> — Conceptual "Admission" (Pre-1950 Integration):</strong>
+      <ul>
+        <li>
+          <strong>Pre-1950 Status:</strong> A fully functioning, organized princely state ruled by the Nizam.
+        </li>
+        <li>
+          <strong>Mechanism:</strong> Integrated into the Dominion of India in September 1948 (Operation Polo) via an Instrument of Accession, before the Constitution came into force on January 26, 1950. It entered the original First Schedule directly as a Part B State. Conceptually, it represents Admission of an existing state rather than creating one from scratch.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Goa</u> — "Establishment" from Colonial Enclave to UT to State (25th State):</strong>
+      <ul>
+        <li>
+          <strong>Pre-1987 Status:</strong> A Portuguese overseas colony (1510–1961), liberated via Operation Vijay (Dec 19, 1961) as an acquired territory under Article 1(3)(c), and incorporated as a centrally governed Union Territory via the 12th Constitutional Amendment Act, 1962.
+        </li>
+        <li>
+          <strong>Mechanism:</strong> Because Goa held no statehood during its 25 years as a UT, Parliament established a brand-new State via the Goa, Daman and Diu Reorganisation Act, 1987 (effective May 30, 1987), separating Goa as a State while retaining Daman and Diu as a UT.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Himachal Pradesh (18th State), Manipur (19th State) &amp; Tripura (20th State)</u> — "Establishment" from Part C / UTs:</strong>
+      <ul>
+        <li>
+          <strong>Pre-Statehood Status:</strong> Merged princely states (1948–49) \rightarrow Centrally administered Part C States (1950) \rightarrow Converted into Union Territories on November 1, 1956 by the States Reorganisation Act, 1956 and 7th Constitutional Amendment Act.
+        </li>
+        <li>
+          <strong>Mechanism:</strong> Elevated to full statehood via ordinary parliamentary statutes—the State of Himachal Pradesh Act, 1970 (effective Jan 25, 1971) and the North-Eastern Areas (Reorganisation) Act, 1971 (effective Jan 21, 1972).
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Mizoram (23rd State) &amp; Arunachal Pradesh (24th State)</u> — "Establishment" from Carved-Out UTs:</strong>
+      <ul>
+        <li>
+          <strong>Pre-Statehood Status:</strong> Originally tribal districts/NEFA within Assam, they were first separated and constituted as Union Territories in 1972 via the North-Eastern Areas (Reorganisation) Act, 1971 and the 27th Constitutional Amendment Act, 1971.
+        </li>
+        <li>
+          <strong>Mechanism:</strong> Because they lacked statehood as UTs, Parliament subsequently established them as full-fledged States in February 1987 via the State of Mizoram Act, 1986 and the State of Arunachal Pradesh Act, 1986.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h5>Auxiliary Constitutional Insights for Exams</h5>
+
+  <ul>
+    <br><br><li>
+      <strong><u>Why UT-to-State Elevations Trigger Both Article 2 and Article 3:</u></strong>
+      <ul>
+        <li>
+          <strong>Article 2 ("Establish"):</strong> A Union Territory is a non-state federal unit under direct Union administration (Part VIII, Art. 239). Granting statehood creates a new constituent State legislature and executive where none existed.
+        </li>
+        <li>
+          <strong>Article 3(a) &amp; Explanation I:</strong> Because UTs are already part of the territory of India listed in the First Schedule, and Explanation I to Article 3 explicitly defines "State" in clauses (a)–(e) to include a Union Territory, altering a UT's status also operates under Article 3.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>The Article 4 Shortcut (Simple Majority):</u></strong>
+      <ul>
+        <li>
+          Under Article 4(2), laws passed under Articles 2 and 3 are not treated as Constitutional Amendments under Article 368. Parliament passes them by a simple majority (more than 50% of members present and voting) to amend the First Schedule (territories) and Fourth Schedule (Rajya Sabha seats).
+        </li>
+        <li>
+          <strong>Exception (Sikkim, 1975):</strong> The 36th Amendment used Article 368 only because Parliament simultaneously inserted Article 371F (special constitutional provisions for Sikkim), not merely to admit the territory.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Acquired Foreign Territories That Remained UTs (Article 1(3)(c)):</u></strong>
+      <ul>
+        <li>
+          Dadra &amp; Nagar Haveli (liberated 1954; 10th Amendment, 1961), Goa, Daman &amp; Diu (12th Amendment, 1962), and Puducherry (ceded by France in 1954, ratified 1962; 14th Amendment, 1962) all entered India first as Union Territories, never directly as States. Only Goa later graduated to statehood in 1987.
+        </li>
+      </ul>
+    </li>
+    <br><br><li>
+      <strong><u>Pure Article 3 Internal Splits (Neither Article 2 Admission nor Establishment):</u></strong>
+      <ul>
+        <li>
+          States carved out of existing full-fledged States—such as Maharashtra &amp; Gujarat (1960), Nagaland (1963), Haryana (1966), Meghalaya (1972), Chhattisgarh, Uttarakhand &amp; Jharkhand (2000), and Telangana (2014)—are pure Article 3 internal reorganizations, not Article 2 admissions or establishments.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<!-- ADDITIONAL CONSTITUTIONAL CLASSIFICATION: END -->
+
+
+
+  <!-- 5. COMPARISON -->
+  <div class="a14-section">
+    <h4>5. Sikkim and Hyderabad: Comparison with Goa</h4>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Comparison of Sikkim, Hyderabad and Goa"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Territory</th>
+            <th scope="col">Earlier status</th>
+            <th scope="col">Integration or statehood</th>
+            <th scope="col">Best description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Sikkim</th>
+            <td>
+              A kingdom under an Indian protectorate; the Chogyal was
+              its monarch.
+            </td>
+            <td>
+              Became India’s <strong>22nd State in 1975</strong> through
+              the <strong>36th Constitutional Amendment</strong>.
+            </td>
+            <td>Commonly described as admission.</td>
+          </tr>
+          <tr>
+            <th scope="row">Hyderabad</th>
+            <td>A princely state ruled by the Nizam.</td>
+            <td>
+              Came under Indian control in <strong>1948</strong> and
+              became a constituent State when the Constitution
+              commenced in <strong>1950</strong>.
+            </td>
+            <td>Pre-Constitution integration, not an Article 2 admission.</td>
+          </tr>
+          <tr>
+            <th scope="row">Goa</th>
+            <td>A Portuguese colonial territory.</td>
+            <td>
+              Came under Indian control in <strong>1961</strong>, became
+              part of a Union Territory and became a State in
+              <strong>1987</strong>.
+            </td>
+            <td>Formation from a Union Territory under Article 3.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="a14-note">
+      <strong>Sikkim caution:</strong> Sikkim is useful for understanding
+      admission, but its statehood was brought about through the
+      <strong>36th Constitutional Amendment</strong>, not simply through
+      an ordinary law under Article 2.
+    </div>
+  </div>
+
+  <!-- 6. STATEHOOD PATHS -->
+  <div class="a14-section">
+    <h4>6. Himachal Pradesh, Manipur and Tripura: Path to Statehood</h4>
+
+    <ol class="a14-timeline">
+      <li>
+        <strong>1948–49:</strong> Himachal Pradesh was formed in 1948
+        from a group of hill princely states. Manipur and Tripura merged
+        with India in 1949.
+      </li>
+      <li>
+        <strong>1950–56:</strong> All three were
+        <strong>Part C States</strong>, under substantial central control.
+      </li>
+      <li>
+        <strong>1956:</strong> Following the
+        <strong>7th Constitutional Amendment</strong> and reorganisation,
+        all three became Union Territories on 1 November.
+      </li>
+      <li>
+        <strong>1971–72:</strong> Parliament formed them into States
+        from existing Indian territory.
+      </li>
+    </ol>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Statehood dates and legislation"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col">Date of statehood</th>
+            <th scope="col">Legislation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Himachal Pradesh</th>
+            <td>25 January 1971</td>
+            <td><em>State of Himachal Pradesh Act, 1970</em></td>
+          </tr>
+          <tr>
+            <th scope="row">Manipur</th>
+            <td>21 January 1972</td>
+            <td><em>North-Eastern Areas (Reorganisation) Act, 1971</em></td>
+          </tr>
+          <tr>
+            <th scope="row">Tripura</th>
+            <td>21 January 1972</td>
+            <td><em>North-Eastern Areas (Reorganisation) Act, 1971</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="a14-tip">
+      <strong>Key point:</strong> These territories were already within
+      India as Union Territories before becoming States. Their change
+      to statehood is best understood as internal formation, not admission
+      from outside India.
+    </div>
+  </div>
+
+  <!-- 7. OTHER EXAMPLES -->
+  <div class="a14-section">
+    <h4>7. Other Examples of Internal State Formation</h4>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Examples of internal State formation"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">New State or States</th>
+            <th scope="col">Year</th>
+            <th scope="col">Formed from</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Maharashtra and Gujarat</th>
+            <td>1960</td>
+            <td>Bombay State</td>
+          </tr>
+          <tr>
+            <th scope="row">Nagaland</th>
+            <td>1963</td>
+            <td>The Naga Hills–Tuensang Area</td>
+          </tr>
+          <tr>
+            <th scope="row">Haryana</th>
+            <td>1966</td>
+            <td>Punjab</td>
+          </tr>
+          <tr>
+            <th scope="row">Meghalaya</th>
+            <td>1972</td>
+            <td>
+              Assam; it first became an autonomous State within Assam
+              in 1970.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Mizoram and Arunachal Pradesh</th>
+            <td>1987</td>
+            <td>Existing Union Territories</td>
+          </tr>
+          <tr>
+            <th scope="row">Chhattisgarh, Uttarakhand and Jharkhand</th>
+            <td>2000</td>
+            <td>
+              Madhya Pradesh, Uttar Pradesh and Bihar, respectively.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Telangana</th>
+            <td>2014</td>
+            <td>Andhra Pradesh</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      These are examples of internal formation or reorganisation under
+      Article 3. A Union Territory becoming a State does not automatically
+      require both Articles 2 and 3.
+    </p>
+  </div>
+
+  <!-- 8. QUICK CLASSIFICATION -->
+  <div class="a14-section">
+    <h4>8. Classification at a Glance</h4>
+
+    <div
+      class="a14-table-wrap"
+      role="region"
+      aria-label="Territorial classification at a glance"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Territory</th>
+            <th scope="col">Historical change</th>
+            <th scope="col">Constitutional description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Sikkim</th>
+            <td>Kingdom/protectorate → Indian State in 1975</td>
+            <td>
+              Commonly described as admission; effected through the
+              36th Amendment.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Hyderabad</th>
+            <td>
+              Princely state → integration in 1948 → constituent State
+              in 1950
+            </td>
+            <td>Pre-Constitution integration, not Article 2 admission.</td>
+          </tr>
+          <tr>
+            <th scope="row">Goa</th>
+            <td>Portuguese territory → Union Territory → State in 1987</td>
+            <td>Formation from a Union Territory under Article 3.</td>
+          </tr>
+          <tr>
+            <th scope="row">Himachal Pradesh</th>
+            <td>
+              Princely territories → Part C State → Union Territory →
+              State in 1971
+            </td>
+            <td>Internal formation.</td>
+          </tr>
+          <tr>
+            <th scope="row">Manipur and Tripura</th>
+            <td>
+              Princely states → Part C States → Union Territories →
+              States in 1972
+            </td>
+            <td>Internal formation.</td>
+          </tr>
+          <tr>
+            <th scope="row">Telangana</th>
+            <td>Part of Andhra Pradesh → State in 2014</td>
+            <td>Formation by internal reorganisation under Article 3.</td>
+          </tr>
+          <tr>
+            <th scope="row">Puducherry</th>
+            <td>Former French territory → Union Territory</td>
+            <td>Remains a Union Territory, not a State.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="a14-note">
+      <strong>Current Union Territory note:</strong> Daman and Diu forms
+      part of the combined Union Territory of
+      <strong>Dadra and Nagar Haveli and Daman and Diu</strong>.
+    </div>
+  </div>
+
+  <!-- 9. MEMORY AID -->
+  <div class="a14-section">
+    <h4>9. Quick Revision and Memory Aid</h4>
+
+    <div class="a14-memory">
+      <ul>
+        <li>
+          <strong>Colony:</strong> Ruled by an external power —
+          Goa before 1961.
+        </li>
+        <li>
+          <strong>Autonomous entity:</strong> Has its own government or
+          ruler, but is not necessarily fully sovereign — Sikkim and
+          Hyderabad.
+        </li>
+        <li>
+          <strong>Admission:</strong> Entry of an existing political
+          entity into the Union. Sikkim is commonly cited, subject to
+          the 36th Amendment caveat.
+        </li>
+        <li>
+          <strong>Establishment:</strong> Creation of a new State; the
+          word appears in Article 2.
+        </li>
+        <li>
+          <strong>Formation:</strong> Creation of a State through
+          internal reorganisation under Article 3 — Goa and Telangana.
+        </li>
+        <li>
+          <strong>Article 4:</strong> Allows consequential changes
+          through a law under Article 2 or 3.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- ===== ARTICLES 1–4 REVISION NOTES: END ===== -->
+
+
+
 
     <h3 style="color:var(--accent);margin:20px 0 10px;">🏛️ Procedure Under Article 3</h3>
     <div class="flow vertical">
@@ -801,10 +1978,23 @@ nav a:hover::after{width:60%;}
     document.documentElement.style.setProperty('--my', e.clientY + 'px');
   });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
-  }, {threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0 });
+
+  revealElements.forEach((element) => observer.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add('in-view'));
+}
+
 
   /* Pointer-reactive glow for the special AUTEUR and TRIBUTE panels */
   document.querySelectorAll('.auteur-credit, .heart-tribute').forEach(panel => {
