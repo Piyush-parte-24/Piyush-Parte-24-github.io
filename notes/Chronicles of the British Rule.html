@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Governors-General & Viceroys of British India</title>
+<style>
+  /* ================= FONT IMPORTS ================= */
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Rozha+One&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+
+  /* ================= ROOT VARIABLES ================= */
+  :root{
+    --amber:#ffb627;
+    --amber-deep:#e8890c;
+    --amber-glow:#ffd77a;
+    --jungle:#0c1a0e;
+    --jungle-mid:#14301a;
+    --jungle-light:#1f4a29;
+    --bone:#f4e9d0;
+    --sap:#3a2410;
+    --danger:#c1440e;
+    --gold:#d4af37;
+  }
+
+  /* ================= RESET ================= */
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Spectral',serif;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(31,74,41,.55), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(232,137,12,.18), transparent 45%),
+      linear-gradient(160deg,#050a06 0%, #0c1a0e 40%, #08130a 100%);
+    color:var(--bone);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+
+  /* ================= ANIMATED JUNGLE FOG ================= */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse at 30% 90%, rgba(255,182,39,.06), transparent 60%),
+      radial-gradient(ellipse at 70% 20%, rgba(45,120,60,.10), transparent 60%);
+    animation:fogDrift 18s ease-in-out infinite alternate;
+  }
+  @keyframes fogDrift{
+    0%{transform:translateX(-3%) scale(1);}
+    100%{transform:translateX(3%) scale(1.08);}
+  }
+
+  /* Floating amber embers / spores */
+  .ember{
+    position:fixed;bottom:-20px;z-index:1;pointer-events:none;
+    width:6px;height:6px;border-radius:50%;
+    background:radial-gradient(circle,var(--amber-glow),var(--amber-deep));
+    box-shadow:0 0 10px var(--amber);
+    opacity:.7;
+    animation:rise linear infinite;
+  }
+  @keyframes rise{
+    0%{transform:translateY(0) translateX(0);opacity:0;}
+    10%{opacity:.8;}
+    90%{opacity:.6;}
+    100%{transform:translateY(-105vh) translateX(40px);opacity:0;}
+  }
+
+  /* ================= HERO ================= */
+  header.hero{
+    position:relative;z-index:2;
+    min-height:100vh;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;padding:40px 20px;
+    overflow:hidden;
+  }
+
+  /* Rotating mandala backdrop */
+  .mandala{
+    position:absolute;top:50%;left:50%;
+    width:min(90vw,720px);height:min(90vw,720px);
+    transform:translate(-50%,-50%);
+    opacity:.14;z-index:-1;
+    animation:spin 60s linear infinite;
+  }
+  .mandala::before,.mandala::after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    border:2px dashed var(--amber);
+  }
+  .mandala::after{inset:12%;border-style:solid;border-color:var(--gold);opacity:.6;}
+  .mandala-inner{
+    position:absolute;inset:24%;border-radius:50%;
+    border:3px double var(--amber-glow);
+    box-shadow:0 0 60px rgba(255,182,39,.4) inset;
+    animation:spin 40s linear infinite reverse;
+  }
+  .mandala-inner::before{
+    content:"🐯";position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    font-size:8rem;color:var(--amber);
+    text-shadow:0 0 30px var(--amber-deep);
+  }
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+  .hero .warning-tag{
+    font-family:'Cinzel',serif;letter-spacing:6px;
+    font-size:.8rem;color:var(--danger);
+    border:1px solid var(--danger);
+    padding:6px 18px;border-radius:2px;
+    margin-bottom:26px;
+    text-transform:uppercase;
+    background:rgba(193,68,14,.08);
+    box-shadow:0 0 20px rgba(193,68,14,.3);
+    animation:flicker 4s infinite;
+  }
+  @keyframes flicker{
+    0%,97%,100%{opacity:1;}
+    98%{opacity:.3;}
+    99%{opacity:.7;}
+  }
+
+  .hero h1{
+    font-family:'Cinzel Decorative',serif;
+    font-size:clamp(2.4rem,7vw,6rem);
+    font-weight:900;
+    line-height:1.05;
+    background:linear-gradient(180deg,var(--amber-glow),var(--amber),var(--amber-deep));
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:0 0 50px rgba(255,182,39,.35);
+    filter:drop-shadow(2px 4px 6px rgba(0,0,0,.6));
+    animation:titleGlow 5s ease-in-out infinite alternate;
+  }
+  @keyframes titleGlow{
+    from{filter:drop-shadow(2px 4px 6px rgba(0,0,0,.6)) brightness(1);}
+    to{filter:drop-shadow(2px 4px 14px rgba(255,182,39,.5)) brightness(1.12);}
+  }
+  .hero .sub{
+    font-family:'Rozha One',serif;
+    font-size:clamp(1.1rem,3vw,1.9rem);
+    color:var(--bone);
+    margin-top:14px;letter-spacing:2px;
+  }
+  .hero .years{
+    margin-top:8px;font-family:'Cinzel',serif;
+    letter-spacing:8px;color:var(--gold);font-size:1rem;
+  }
+
+  .scroll-cue{
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+    font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:4px;
+    color:var(--amber);opacity:.8;
+    animation:bob 2s ease-in-out infinite;
+  }
+  @keyframes bob{50%{transform:translate(-50%,10px);}}
+
+  /* ================= SECTION HEADINGS ================= */
+  section{position:relative;z-index:2;padding:70px 20px 40px;max-width:1200px;margin:0 auto;}
+  .sec-title{
+    text-align:center;margin-bottom:50px;
+  }
+  .sec-title .era{
+    display:inline-block;
+    font-family:'Cinzel Decorative',serif;
+    font-size:clamp(1.6rem,4vw,2.8rem);
+    color:var(--amber);
+    padding-bottom:12px;
+    position:relative;
+  }
+  .sec-title .era::after{
+    content:"°‧ 𓆝 𓆟 𓆞 ·。";
+    display:block;
+    font-size:.9rem;color:var(--gold);letter-spacing:12px;
+    margin-top:14px;
+    animation:pulse 3s ease-in-out infinite;
+  }
+  @keyframes pulse{50%{opacity:.4;letter-spacing:16px;}}
+  .sec-title .range{
+    display:block;margin-top:6px;
+    font-family:'Cinzel',serif;letter-spacing:5px;
+    color:var(--bone);opacity:.7;font-size:.95rem;
+  }
+
+  /* ================= CARD GRID ================= */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:28px;
+  }
+
+  /* AMBER FOSSIL CARD */
+  .card{
+    position:relative;
+    background:
+      linear-gradient(155deg, rgba(255,182,39,.12), rgba(232,137,12,.05) 40%, rgba(12,26,14,.85));
+    border:1px solid rgba(255,182,39,.25);
+    border-radius:14px;
+    padding:26px 24px 24px;
+    overflow:hidden;
+    backdrop-filter:blur(4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.5), inset 0 0 40px rgba(255,182,39,.05);
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s, border-color .5s;
+    transform-style:preserve-3d;
+  }
+  /* animated shimmering amber sweep */
+  .card::before{
+    content:"";position:absolute;top:0;left:-120%;
+    width:70%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,215,122,.28),transparent);
+    transform:skewX(-20deg);
+    transition:left .8s ease;
+  }
+  .card:hover::before{left:130%;}
+  .card:hover{
+    transform:translateY(-14px) scale(1.02);
+    border-color:var(--amber);
+    box-shadow:0 25px 55px rgba(0,0,0,.65), 0 0 40px rgba(255,182,39,.35), inset 0 0 60px rgba(255,182,39,.12);
+  }
+  /* trapped "mosquito" fossil dot */
+  .card::after{
+    content:"";position:absolute;top:16px;right:16px;
+    width:10px;height:10px;border-radius:50%;
+    background:radial-gradient(circle,var(--sap),#1a0d04);
+    box-shadow:0 0 0 4px rgba(255,182,39,.15), 0 0 14px rgba(0,0,0,.6);
+    transition:transform .5s, box-shadow .5s;
+  }
+  .card:hover::after{transform:scale(1.5);box-shadow:0 0 0 6px rgba(255,182,39,.3), 0 0 20px var(--amber);}
+
+  .card .num{
+    position:absolute;top:-8px;left:-6px;
+    font-family:'Cinzel Decorative',serif;
+    font-size:4.5rem;font-weight:900;
+    color:rgba(255,182,39,.08);
+    line-height:1;pointer-events:none;
+  }
+  .card h3{
+    font-family:'Rozha One',serif;
+    font-size:1.55rem;color:var(--amber-glow);
+    letter-spacing:.5px;
+    position:relative;z-index:1;
+  }
+  .card .tenure{
+    display:inline-block;margin:6px 0 16px;
+    font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:2px;
+    color:var(--jungle);background:var(--amber);
+    padding:3px 12px;border-radius:20px;font-weight:600;
+    box-shadow:0 0 14px rgba(255,182,39,.4);
+  }
+  .card .block{margin-bottom:12px;position:relative;z-index:1;}
+  .card .label{
+    font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:2px;
+    text-transform:uppercase;display:block;margin-bottom:3px;
+  }
+  .label.events{color:var(--gold);}
+  .label.pro{color:#7fd67f;}
+  .label.con{color:#e57373;}
+  .card .txt{font-size:.94rem;color:var(--bone);opacity:.92;}
+  .card .txt.pro{border-left:2px solid #4caf50;padding-left:10px;}
+  .card .txt.con{border-left:2px solid var(--danger);padding-left:10px;}
+
+  /* ================= REVEAL ON SCROLL ================= */
+  .reveal{opacity:0;transform:translateY(50px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);}
+  .reveal.show{opacity:1;transform:none;}
+
+  /* ================= EXAM SECTION (STONE TABLET) ================= */
+  .exam-wrap{
+    background:
+      linear-gradient(rgba(12,26,14,.7),rgba(12,26,14,.85)),
+      repeating-linear-gradient(45deg,rgba(212,175,55,.03) 0 12px,transparent 12px 24px);
+    border:2px solid var(--gold);
+    border-radius:16px;
+    padding:36px 26px;
+    box-shadow:0 0 50px rgba(212,175,55,.12) inset, 0 20px 50px rgba(0,0,0,.5);
+    position:relative;
+  }
+  .exam-wrap h2{
+    text-align:center;font-family:'Cinzel Decorative',serif;
+    color:var(--gold);font-size:clamp(1.5rem,4vw,2.4rem);
+    margin-bottom:8px;
+  }
+  .exam-wrap .note{text-align:center;color:var(--bone);opacity:.7;margin-bottom:30px;font-style:italic;}
+  .exam-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;
+  }
+  .relic{
+    display:flex;align-items:center;gap:14px;
+    background:linear-gradient(135deg,rgba(255,182,39,.08),rgba(12,26,14,.6));
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:10px;padding:14px 16px;
+    transition:all .4s ease;cursor:default;
+  }
+  .relic:hover{
+    transform:translateX(8px);
+    border-color:var(--amber);
+    background:linear-gradient(135deg,rgba(255,182,39,.18),rgba(31,74,41,.4));
+    box-shadow:-6px 0 20px rgba(255,182,39,.25);
+  }
+  .relic .star{font-size:1.4rem;filter:drop-shadow(0 0 6px var(--amber));transition:transform .4s;}
+  .relic:hover .star{transform:rotate(72deg) scale(1.25);}
+  .relic .r-name{font-family:'Rozha One',serif;color:var(--amber-glow);font-size:1.05rem;}
+  .relic .r-point{font-size:.85rem;color:var(--bone);opacity:.88;display:block;margin-top:2px;}
+
+  /* ================= FOOTER ================= */
+  footer{
+    position:relative;z-index:2;text-align:center;
+    padding:50px 20px 40px;margin-top:40px;
+    border-top:1px solid rgba(255,182,39,.2);
+  }
+  footer .roar{
+    font-family:'Cinzel Decorative',serif;font-size:1.3rem;
+    color:var(--amber);letter-spacing:3px;
+    animation:titleGlow 4s ease-in-out infinite alternate;
+  }
+  footer p{opacity:.6;font-size:.85rem;margin-top:10px;}
+  footer .dna{font-size:1.6rem;letter-spacing:6px;color:var(--gold);opacity:.5;margin-top:14px;}
+
+  /* scrollbar */
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--jungle);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--amber),var(--amber-deep));border-radius:10px;}
+</style>
+</head>
+<body>
+
+<!-- ===== FLOATING EMBERS ===== -->
+<div class="ember" style="left:10%;animation-duration:9s;"></div>
+<div class="ember" style="left:25%;animation-duration:13s;animation-delay:2s;"></div>
+<div class="ember" style="left:45%;animation-duration:11s;animation-delay:1s;"></div>
+<div class="ember" style="left:65%;animation-duration:15s;animation-delay:4s;"></div>
+<div class="ember" style="left:80%;animation-duration:10s;animation-delay:3s;"></div>
+<div class="ember" style="left:92%;animation-duration:14s;animation-delay:5s;"></div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="mandala"><div class="mandala-inner"></div></div>
+  <span class="warning-tag"><b>⚠ Empire Containment Zone · Est. 1773</b></span>
+  <h1>Chronicles of<br>the British Rule</h1>
+  <p class="sub"><b>AUTEUR: PIYUSH PARTE</b></p>
+<p class="sub">Governors-General & Viceroys of British India</p>
+<div class=><h1>𓀗</h1></div>
+  <p class="years">1773 — 1947</p>
+  <div class="scroll-cue">▼ ENTER THE ARCHIVE ▼</div>
+</header>
+
+
+<!-- ===== SECTION 1 : GOVERNORS-GENERAL OF BENGAL ===== -->
+<section>
+  <div class="sec-title reveal">
+    <span class="era">Governors-General of Bengal</span>
+    <span class="range">1773 – 1833</span>
+  </div>
+  <div class="grid">
+
+    <div class="card reveal"><span class="num">01</span>
+      <h3>Warren Hastings</h3><span class="tenure">1773 – 1785</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Regulating Act (1773), Rohilla War, First Anglo-Maratha War, Second Anglo-Mysore War, Supreme Court at Calcutta (1774), Pitt's India Act (1784)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative reforms; strengthened Company rule</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Accused of corruption; impeachment in Britain</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">02</span>
+      <h3>Lord Cornwallis</h3><span class="tenure">1786 – 1793</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Permanent Settlement (1793), Cornwallis Code, judicial reforms</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Modern civil services; judicial reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Permanent Settlement harmed peasants</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">03</span>
+      <h3>Sir John Shore</h3><span class="tenure">1793 – 1798</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Policy of Non-Intervention</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Avoided unnecessary wars</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Allowed rival powers to grow</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">04</span>
+      <h3>Lord Wellesley</h3><span class="tenure">1798 – 1805</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Subsidiary Alliance, Fourth Anglo-Mysore War (1799), Second Anglo-Maratha War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Expanded British Empire rapidly</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Aggressive expansion increased costs</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">05</span>
+      <h3>Lord Minto I</h3><span class="tenure">1807 – 1813</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Treaty of Amritsar (1809) with Ranjit Singh</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Protected north-west frontier</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Limited internal reforms</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">06</span>
+      <h3>Lord Hastings</h3><span class="tenure">1813 – 1823</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Anglo-Nepal War, Gurkha recruitment, Third Anglo-Maratha War (1817–18)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Ended Maratha power</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Expansion through warfare</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">07</span>
+      <h3>Lord Amherst</h3><span class="tenure">1823 – 1828</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">First Anglo-Burmese War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Territorial gains</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Very expensive war</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">08</span>
+      <h3>Lord William Bentinck</h3><span class="tenure">1828 – 1835</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Abolition of Sati (1829), English Education (1835), Charter Act (1833)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Social reforms; education reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Criticized for promoting English over Indian languages</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 2 : GOVERNORS-GENERAL OF INDIA ===== -->
+<section>
+  <div class="sec-title reveal">
+    <span class="era">Governors-General of India</span>
+    <span class="range">1833 – 1858</span>
+  </div>
+  <div class="grid">
+
+    <div class="card reveal"><span class="num">01</span>
+      <h3>Lord William Bentinck</h3><span class="tenure">1833 – 1835</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Charter Act 1833</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Centralized authority</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">02</span>
+      <h3>Lord Auckland</h3><span class="tenure">1836 – 1842</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">First Anglo-Afghan War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Tried to secure frontier</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Afghan policy failed</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">03</span>
+      <h3>Lord Ellenborough</h3><span class="tenure">1842 – 1844</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">End of Afghan War, Annexation of Sind (1843)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Territorial expansion</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Militaristic policy</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">04</span>
+      <h3>Lord Hardinge I</h3><span class="tenure">1844 – 1848</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">First Anglo-Sikh War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Military success</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Increased tensions</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">05</span>
+      <h3>Lord Dalhousie</h3><span class="tenure">1848 – 1856</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Doctrine of Lapse, Railways (1853), Telegraph, Postal System, Public Works, Second Anglo-Sikh War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Modern infrastructure</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Annexations led to Revolt of 1857</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">06</span>
+      <h3>Lord Canning</h3><span class="tenure">1856 – 1862</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Revolt of 1857, Government of India Act 1858</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Reorganized administration</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Faced severe rebellion</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 3 : VICEROYS OF INDIA ===== -->
+<section>
+  <div class="sec-title reveal">
+    <span class="era">Viceroys of India</span>
+    <span class="range">1858 – 1947</span>
+  </div>
+  <div class="grid">
+
+    <div class="card reveal"><span class="num">01</span>
+      <h3>Lord Canning</h3><span class="tenure">1858 – 1862</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">End of Company Rule</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative transition</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Aftermath of revolt</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">02</span>
+      <h3>Lord Mayo</h3><span class="tenure">1869 – 1872</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Mayo College, Financial decentralization</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Assassinated in office</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">03</span>
+      <h3>Lord Lytton</h3><span class="tenure">1876 – 1880</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Delhi Durbar (1877), Vernacular Press Act (1878), Second Afghan War</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Imperial expansion</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Famine mismanagement; press restrictions</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">04</span>
+      <h3>Lord Ripon</h3><span class="tenure">1880 – 1884</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Local Self-Government, Repeal of Vernacular Press Act, Hunter Commission</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">"Father of Local Self-Government"</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Ilbert Bill controversy</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">05</span>
+      <h3>Lord Dufferin</h3><span class="tenure">1884 – 1888</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Indian National Congress founded (1885)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Political developments</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Rising nationalism</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">06</span>
+      <h3>Lord Lansdowne</h3><span class="tenure">1888 – 1894</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Indian Councils Act (1892), Durand Line</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Limited representation</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">07</span>
+      <h3>Lord Elgin II</h3><span class="tenure">1894 – 1899</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Plague, famine</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Relief efforts</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Administrative criticism</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">08</span>
+      <h3>Lord Curzon</h3><span class="tenure">1899 – 1905</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Partition of Bengal (1905), Indian Universities Act, Ancient Monuments Preservation Act</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative efficiency; heritage conservation</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Partition triggered Swadeshi Movement</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">09</span>
+      <h3>Lord Minto II</h3><span class="tenure">1905 – 1910</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Morley–Minto Reforms (1909), Separate Electorates</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Constitutional reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Encouraged communal politics</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">10</span>
+      <h3>Lord Hardinge II</h3><span class="tenure">1910 – 1916</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Capital shifted to Delhi (1911), Bengal Partition annulled</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative reorganization</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Revolutionary attacks</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">11</span>
+      <h3>Lord Chelmsford</h3><span class="tenure">1916 – 1921</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Montagu-Chelmsford Reforms, Government of India Act (1919), Rowlatt Act, Jallianwala Bagh Massacre</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Constitutional reforms</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Repressive policies</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">12</span>
+      <h3>Lord Reading</h3><span class="tenure">1921 – 1926</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Non-Cooperation aftermath, Chauri Chaura</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Negotiation attempts</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Political unrest</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">13</span>
+      <h3>Lord Irwin</h3><span class="tenure">1926 – 1931</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Lahore Session (Poorna Swaraj), Dandi March, Gandhi-Irwin Pact</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Negotiated with nationalists</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Civil disobedience intensified</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">14</span>
+      <h3>Lord Willingdon</h3><span class="tenure">1931 – 1936</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Civil Disobedience suppression</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Administrative firmness</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Repression of freedom movement</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">15</span>
+      <h3>Lord Linlithgow</h3><span class="tenure">1936 – 1943</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Government of India Act (1935) implemented, World War II, August Offer (1940), Quit India Movement (1942)</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Provincial autonomy</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Wartime repression</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">16</span>
+      <h3>Lord Wavell</h3><span class="tenure">1943 – 1947</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Bengal Famine, Wavell Plan, Simla Conference</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Tried political compromise</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Failed negotiations</span></div>
+    </div>
+
+    <div class="card reveal"><span class="num">17</span>
+      <h3>Lord Mountbatten</h3><span class="tenure">1947</span>
+      <div class="block"><span class="label events">⛏ Major Events</span><span class="txt">Indian Independence Act (1947), Partition of India</span></div>
+      <div class="block"><span class="label pro">▲ Pros</span><span class="txt pro">Oversaw transfer of power</span></div>
+      <div class="block"><span class="label con">▼ Cons</span><span class="txt con">Partition violence</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== EXAM MUST-REMEMBER ===== -->
+<section>
+  <div class="exam-wrap reveal">
+    <h2>⭐ Fossilised Facts — Must Remember</h2>
+    <p class="note">The DNA of every exam — one-line memory points preserved in amber.</p>
+    <div class="exam-grid">
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Warren Hastings</span><span class="r-point">First Governor-General of Bengal</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Cornwallis</span><span class="r-point">Permanent Settlement (1793)</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Wellesley</span><span class="r-point">Subsidiary Alliance</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">William Bentinck</span><span class="r-point">Abolition of Sati; First G-G of India</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Dalhousie</span><span class="r-point">Doctrine of Lapse, Railways, Telegraph</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Canning</span><span class="r-point">Revolt of 1857; First Viceroy</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Ripon</span><span class="r-point">Father of Local Self-Government</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Curzon</span><span class="r-point">Partition of Bengal (1905)</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Minto II</span><span class="r-point">Separate Electorates (1909)</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Hardinge II</span><span class="r-point">Capital shifted to Delhi (1911)</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Chelmsford</span><span class="r-point">Jallianwala Bagh; GoI Act 1919</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Irwin</span><span class="r-point">Gandhi-Irwin Pact</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Linlithgow</span><span class="r-point">Quit India Movement</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Wavell</span><span class="r-point">Wavell Plan</span></div></div>
+      <div class="relic"><span class="star">🌟</span><div><span class="r-name">Mountbatten</span><span class="r-point">Independence &amp; Partition (1947)</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p class="roar">॥ History Finds a Way ॥</p>
+<p><h2>🟠⚪🟢</h2></p>
+  <p>Chronicles of the British Rule · Governors-General &amp; Viceroys of India · 1773 – 1947</p>
+  <p class="dna"><h1>🦚</h1></p>
+</footer>
+
+<section><div class="scroll-cue"><h1><b>  ‎  ‎ ‎ ‎ ‎En Nenjil Kudiyirukkum<p>என் நெஞ்சில் குடியிருக்கும்</b></h1></div></section>
+
+<script>
+  /* Scroll-reveal with stagger */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('show'), (i%6)*90);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* 3D tilt on cards */
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5;
+      const y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`translateY(-14px) scale(1.02) rotateX(${-y*7}deg) rotateY(${x*7}deg)`;
+    });
+    card.addEventListener('mouseleave',()=>{card.style.transform='';});
+  });
+</script>
+
+</body>
+</html>
