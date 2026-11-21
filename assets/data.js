@@ -262,7 +262,7 @@ const archiveEntries = [
   },
   {
     number: "19",
-    title: "THE STATE LEGISLATURE OF INDIA",
+    title: "THE STATE LEGISLATURE",
     category: "Political Science",
     description: "The Constitutional Architecture of the States • Part VI · Chapter III · Articles 168–212",
     status: "Documented",
