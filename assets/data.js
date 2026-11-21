@@ -50,7 +50,7 @@ const archiveEntries = [
     description: "European Advent to Independence — Battles, Governance, The Freedom Struggle, Reform Movements and The Leaders Who Shaped a Nation.",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "modern-indian-history.html",
+    file: "Modern Indian History.html",
     icon: "🗺",
     image: "",
     featured: true
