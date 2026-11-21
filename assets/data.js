@@ -62,7 +62,7 @@ const archiveEntries = [
     description: "From the Renaissance to the Fall of the Soviet Union — Revolutions, World Wars, the Cold War and the Making of the Modern World.",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "world-history.html",
+    file: "World History.html",
     icon: "🌍",
     image: "",
     featured: true
@@ -74,7 +74,7 @@ const archiveEntries = [
     description: "The Oceanic Journey From Wave to Ocean — A Study of Non-Dual Consciousness and The Nature of the Self.",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "advaita-vedanta.html",
+    file: "Advaita Vedanta.html",
     icon: "🌊",
     image: "",
     featured: true
@@ -86,7 +86,7 @@ const archiveEntries = [
     description: "From Utopian Dreams to Scientific Revolutions ",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Socialism 2.0.html",
+    file: "Socialism.html",
     icon: "🌹",
     image: "",
     featured: true
@@ -98,7 +98,7 @@ const archiveEntries = [
     description: "The Philosophers Have Only Interpreted The World, In Various Ways; The Point is to Change it",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Marxism 2.0.html",
+    file: "Marxism.html",
     icon: "☭",
     image: "",
     featured: true
@@ -110,7 +110,7 @@ const archiveEntries = [
     description: "‎A State Without The Means of Some Change is Without The Means of its Conservation",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Conservatism 2.0.html",
+    file: "Conservatism.html",
     icon: "🛡️",
     image: "",
     featured: true
@@ -122,7 +122,7 @@ const archiveEntries = [
     description: "The Philosophy of Freedom — Where the Individual Becomes Sovereign",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Liberalism 3.0.html",
+    file: "Liberalism.html",
     icon: "🗽",
     image: "",
     featured: true
@@ -134,7 +134,7 @@ const archiveEntries = [
     description: "Truth · Non-Violence · Self-Rule · Universal Uplift",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Gandhism 3.0.html",
+    file: "Gandhism.html",
     icon: "𓀗",
     image: "",
     featured: true
@@ -146,7 +146,7 @@ const archiveEntries = [
     description: "Governors-General & Viceroys of British India — The Raj's Twilight",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Governors-General & Viceroys of British India.html",
+    file: "Chronicles of the British Rule.html",
     icon: "♕",
     image: "",
     featured: true
@@ -158,7 +158,7 @@ const archiveEntries = [
     description: "Presidents & Prime Ministers of India — From The Raj's Twilight to The Republic's Dawn",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Presidents & Prime Ministers of India.html",
+    file: "The Royal Ledger of Bhārat.html",
     icon: "🏛",
     image: "",
     featured: true
@@ -170,7 +170,7 @@ const archiveEntries = [
     description: "Political Science - Definition, Nature & Scope",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Political Science - defination, nature & scope.html",
+    file: "Political Science.html",
     icon: "📜",
     image: "",
     featured: true
@@ -183,7 +183,7 @@ const archiveEntries = [
     description: "Rights • Duties • DPSP • Human Rights • Union of Trinity",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Citizenship Rights - Rights & Duties, DPSP, Human Rights, Liberty, Equality, Justices.html",
+    file: "Citizenship Rights.html",
     icon: "🛂",
     image: "",
     featured: true
@@ -195,7 +195,7 @@ const archiveEntries = [
     description: "Where a Billion Voices Become One Deliberating Chamber — The Institutional Heartbeat of Indian Democracy",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Parliament.html",
+    file: "The Parliament of India.html",
     icon: "🏛️",
     image: "",
     featured: true
@@ -207,7 +207,7 @@ const archiveEntries = [
     description: "Supreme Audit Institution of India & Guardian of Public Treasury & Independent Constitutional Watchdog",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "CAG🏦.html",
+    file: "The Comptroller & Auditor General of India.html",
     icon: "🏦",
     image: "",
     featured: true
@@ -219,7 +219,7 @@ const archiveEntries = [
     description: "President  •  Vice-President  •  Prime Minister  •  Council of Ministers  •  Attorney General",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "THE UNION EXECUTIVE — President, PM & Union Government.html",
+    file: "The Union Executive.html",
     icon: "🔰",
     image: "",
     featured: true
@@ -231,7 +231,7 @@ const archiveEntries = [
     description: "The Sentinel on the Qui Vive — Guardian of the Constitution · Final Interpreter of the Law · Protector of Fundamental Rights",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "THE SUPREME COURT OF INDIA.html",
+    file: "The Supreme Court of India.html",
     icon: "🎓",
     image: "",
     featured: true
@@ -255,7 +255,7 @@ const archiveEntries = [
     description: "'Justice, Liberty, Equality, & Fraternity' — the eternal promise of the Preamble, now walked through Articles 1 to 14",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "THE CONSTITUTION OF INDIA — ARTICLES 1 TO 14.html",
+    file: "The Constitution of India.html",
     icon: "🪶",
     image: "",
     featured: true
@@ -267,7 +267,7 @@ const archiveEntries = [
     description: "The Constitutional Architecture of the States • Part VI · Chapter III · Articles 168–212",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "The State Legislature of India.html",
+    file: "The State Legislature.html",
     icon: "🐋",
     image: "",
     featured: true
@@ -303,7 +303,7 @@ const archiveEntries = [
     description: "Extraordinary power — created by the Constitution, therefore bounded by it •  Constitutional Crisis Architecture • Part XVIII",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "Emergency Provisions of Indian Constitution.html",
+    file: "Emergency Provisions of The Indian Constitution.html",
     icon: "☣︎",
     image: "",
     featured: true
@@ -327,7 +327,7 @@ const archiveEntries = [
     description: "The constitutional sentinel of merit — independent in function, accountable in democracy",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "THE UNION PUBLIC SERVICE COMMISSION.html",
+    file: "The Union Public Service Commission.html",
     icon: "🌟",
     image: "",
     featured: true
@@ -339,7 +339,7 @@ const archiveEntries = [
     description: "LEGISLATIVE · ADMINISTRATIVE · FINANCIAL - One Union Many Governments · A shared constitutional horizon",
     status: "Documented",
     date: "FIELD SEASON I",
-    file: "CENTRE-STATE RELATIONS.html",
+    file: "Centre-State Relations.html",
     icon: "🎋",
     image: "",
     featured: true
