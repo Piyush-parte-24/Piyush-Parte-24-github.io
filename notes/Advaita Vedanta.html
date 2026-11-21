@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌊 The Oceanic Journey: From Wave to Ocean | Advaita Vedanta 🫧</title>
+    <meta name="description" content="An interactive artistic journey through the wave-and-ocean analogy of Advaita Vedanta.">
+    <meta name="theme-color" content="#020510">
+    <meta name="color-scheme" content="dark">
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap">
+    <style>
+        /* 🌊 REALISTIC OCEAN PALETTE */
+        :root {
+            --abyssal-black: #020510;
+            --midnight-navy: #0a1a2a;
+            --deep-sapphire: #1a3b5a;
+            --ocean-emerald: #2a6b7a;
+            --aqua-cyan: #0ff5e3;
+            --phosphorus-teal: #00ffc8;
+            --moonlight-silver: #c2f0ff;
+            --coral-glow: #ff4d8d;
+            --sunrise-gold: #ffcc00;
+            --starlight-white: #f0fbff;
+            --biolum-blue: #00a8ff;
+            --gradient-abyss: linear-gradient(180deg, #020510 0%, #0a1a2a 30%, #1a3b5a 60%, #2a6b7a 100%);
+            --gradient-biolum: linear-gradient(90deg, #00ffc8, #0ff5e3, #00a8ff);
+            --gradient-sunset: linear-gradient(135deg, #ff4d8d, #ffcc00, #0ff5e3);
+            --gradient-cosmic: radial-gradient(circle at center, rgba(0, 168, 255, 0.1) 0%, transparent 70%);
+            --transition-magical: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            --transition-float: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: var(--moonlight-silver);
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+            font-weight: 300;
+        }
+
+        /* 🌌 HYPER-REALISTIC OCEAN BACKGROUND */
+        .ocean-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+            background: 
+                /* Deep ocean gradient */
+                linear-gradient(180deg, 
+                    rgba(2, 12, 30, 0.9) 0%,
+                    rgba(5, 25, 50, 0.95) 20%,
+                    rgba(10, 40, 70, 0.98) 40%,
+                    rgba(15, 60, 90, 1) 60%,
+                    rgba(20, 80, 110, 1) 80%,
+                    rgba(25, 100, 130, 1) 100%
+                );
+        }
+
+        /* Realistic light rays from surface */
+        .light-rays {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.1) 0%, transparent 45%),
+                radial-gradient(circle at 40% 5%, rgba(255, 255, 255, 0.12) 0%, transparent 40%);
+            animation: lightRays 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes lightRays {
+            0% { opacity: 0.4; transform: translateY(0) scale(1); }
+            100% { opacity: 0.7; transform: translateY(20px) scale(1.1); }
+        }
+
+        /* Particle system for underwater particulate matter */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFloat 20s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(-100px) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(100vh) translateX(calc(var(--sway) * 100px)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Realistic caustic light patterns on ocean floor */
+        .caustics {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 400px;
+            background: 
+                repeating-radial-gradient(
+                    circle at 25% 30%,
+                    rgba(15, 245, 227, 0.15) 0px,
+                    rgba(15, 245, 227, 0.15) 2px,
+                    transparent 2px,
+                    transparent 20px
+                ),
+                repeating-radial-gradient(
+                    circle at 75% 60%,
+                    rgba(0, 255, 200, 0.12) 0px,
+                    rgba(0, 255, 200, 0.12) 3px,
+                    transparent 3px,
+                    transparent 25px
+                );
+            opacity: 0.3;
+            animation: causticsMove 25s infinite linear;
+            filter: blur(1px);
+        }
+
+        @keyframes causticsMove {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+
+        /* Volume fog for depth perception */
+        .volume-fog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 40%, transparent 30%, rgba(10, 40, 70, 0.6) 70%),
+                radial-gradient(circle at 70% 60%, transparent 40%, rgba(5, 25, 50, 0.7) 80%);
+            pointer-events: none;
+            animation: fogDrift 40s infinite alternate ease-in-out;
+        }
+
+        @keyframes fogDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, -30px) scale(1.1); }
+        }
+
+        /* Realistic water surface simulation */
+        .water-surface {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: 
+                linear-gradient(180deg, 
+                    rgba(255, 255, 255, 0.3) 0%,
+                    rgba(255, 255, 255, 0.15) 30%,
+                    rgba(255, 255, 255, 0.05) 60%,
+                    transparent 100%
+                );
+            filter: blur(2px);
+            animation: surfaceWaves 8s infinite ease-in-out;
+            opacity: 0.4;
+        }
+
+        @keyframes surfaceWaves {
+            0%, 100% { transform: translateY(0) scaleY(1); }
+            50% { transform: translateY(-10px) scaleY(1.2); }
+        }
+
+        /* Realistic depth layers */
+        .depth-layer-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(42, 107, 122, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(26, 59, 90, 0.4) 0%, transparent 50%);
+            opacity: 0.6;
+        }
+
+        .depth-layer-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 60% 40%, rgba(10, 26, 42, 0.5) 0%, transparent 60%),
+                radial-gradient(circle at 40% 60%, rgba(2, 5, 16, 0.6) 0%, transparent 60%);
+            opacity: 0.8;
+        }
+
+        /* Subtle current flow lines */
+        .currents {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, 
+                    transparent 0%, 
+                    rgba(15, 245, 227, 0.03) 20%, 
+                    transparent 40%,
+                    rgba(0, 168, 255, 0.02) 60%,
+                    transparent 80%,
+                    rgba(0, 255, 200, 0.03) 100%
+                );
+            animation: currentFlow 30s infinite linear;
+            opacity: 0.4;
+        }
+
+        @keyframes currentFlow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* 🌟 REALISTIC MARINE LIFE */
+        .marine-life {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+            font-size: 2.5rem;
+            opacity: 0;
+            animation: marineSwim 25s infinite linear;
+            filter: blur(0.5px);
+            text-shadow: 
+                0 0 10px rgba(15, 245, 227, 0.3),
+                0 0 20px rgba(15, 245, 227, 0.2);
+        }
+
+        @keyframes marineSwim {
+            0% { 
+                transform: translateY(100vh) translateX(0) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+            10% { 
+                opacity: 0.7;
+                transform: translateY(90vh) translateX(20px) rotate(5deg) scale(1);
+            }
+            90% { 
+                opacity: 0.4;
+                transform: translateY(10vh) translateX(-30px) rotate(-5deg) scale(0.9);
+            }
+            100% { 
+                transform: translateY(-100px) translateX(0) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* Subtle bioluminescent sparkles */
+        .biolum-sparkles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--aqua-cyan);
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: sparkleFade 4s infinite;
+        }
+
+        @keyframes sparkleFade {
+            0%, 100% { 
+                opacity: 0; 
+                transform: scale(0.5); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.5); 
+            }
+        }
+
+        /* Everything below this line remains EXACTLY THE SAME as original */
+        /* 🌀 ABSOLUTE TITLE VORTEX */
+        .vortex-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cosmic-vortex {
+            position: absolute;
+            width: 150vmin;
+            height: 150vmin;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                var(--aqua-cyan) 90deg,
+                transparent 180deg,
+                var(--biolum-blue) 270deg,
+                transparent 360deg
+            );
+            border-radius: 50%;
+            animation: vortexSpin 20s linear infinite;
+            filter: blur(40px);
+            opacity: 0.1;
+        }
+
+        @keyframes vortexSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .absolute-title {
+            font-family: 'Cinzel', serif;
+            font-size: 7rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, 
+                var(--starlight-white) 0%, 
+                var(--aqua-cyan) 25%, 
+                var(--phosphorus-teal) 50%, 
+                var(--sunrise-gold) 75%, 
+                var(--coral-glow) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 0 80px rgba(15, 245, 227, 0.6),
+                0 0 160px rgba(0, 168, 255, 0.3);
+            position: relative;
+            opacity: 0;
+            animation: absoluteReveal 3s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes absoluteReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.5);
+                filter: blur(30px);
+                letter-spacing: 50px;
+            }
+            60% {
+                opacity: 0.8;
+                filter: blur(10px);
+                letter-spacing: 10px;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+                letter-spacing: 2px;
+            }
+        }
+
+        .title-emojis {
+            font-size: 5rem;
+            display: inline-block;
+            margin: 0 2rem;
+            animation: emojiDance 4s ease-in-out infinite;
+        }
+
+        @keyframes emojiDance {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg) scale(1);
+                filter: brightness(1) drop-shadow(0 0 20px currentColor);
+            }
+            25% { 
+                transform: translateY(-30px) rotate(10deg) scale(1.3);
+                filter: brightness(1.5) drop-shadow(0 0 40px currentColor);
+            }
+            50% { 
+                transform: translateY(10px) rotate(-5deg) scale(0.9);
+                filter: brightness(0.8) drop-shadow(0 0 10px currentColor);
+            }
+            75% { 
+                transform: translateY(-15px) rotate(5deg) scale(1.1);
+                filter: brightness(1.2) drop-shadow(0 0 30px currentColor);
+            }
+        }
+
+        .oceanic-subtitle {
+            font-family: 'Philosopher', sans-serif;
+            font-size: 2.2rem;
+            color: var(--moonlight-silver);
+            margin: 2rem 0 4rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            position: relative;
+            opacity: 0;
+            animation: subtitleFlow 2s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes subtitleFlow {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+                text-shadow: 0 0 0 transparent;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                text-shadow: 
+                    0 0 40px rgba(15, 245, 227, 0.7),
+                    0 0 80px rgba(0, 255, 200, 0.3);
+            }
+        }
+
+        .subtitle-wave {
+            position: relative;
+            display: inline-block;
+        }
+
+        .subtitle-wave::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-biolum);
+            border-radius: 3px;
+            animation: waveLine 3s ease-in-out infinite;
+        }
+
+        @keyframes waveLine {
+            0%, 100% { transform: scaleX(1); opacity: 1; }
+            50% { transform: scaleX(0.8); opacity: 0.5; }
+        }
+
+        /* 🌊 INTERACTIVE OCEAN DEPTH SIMULATOR */
+        .depth-simulator {
+            width: 100%;
+            height: 700px;
+            position: relative;
+            margin: 6rem auto;
+            border-radius: 40px;
+            overflow: hidden;
+            background: linear-gradient(
+                180deg,
+                rgba(42, 107, 122, 0.9) 0%,     /* Sunlight Zone */
+                rgba(26, 59, 90, 0.85) 30%,     /* Twilight Zone */
+                rgba(10, 26, 42, 0.9) 60%,      /* Midnight Zone */
+                rgba(2, 5, 16, 0.95) 85%,       /* Abyssal Zone */
+                rgba(0, 0, 0, 1) 100%           /* Hadal Zone */
+            );
+            border: 3px solid rgba(15, 245, 227, 0.3);
+            box-shadow: 
+                0 0 100px rgba(15, 245, 227, 0.2),
+                inset 0 0 150px rgba(0, 0, 0, 0.6);
+        }
+
+        .depth-zone {
+            position: absolute;
+            width: 100%;
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: var(--transition-magical);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .depth-zone:hover {
+            background: rgba(15, 245, 227, 0.1);
+            transform: scale(1.02);
+            box-shadow: 
+                inset 0 0 100px rgba(15, 245, 227, 0.05),
+                0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .zone-0 { top: 5%; height: 15%; }
+        .zone-1 { top: 25%; height: 15%; }
+        .zone-2 { top: 45%; height: 15%; }
+        .zone-3 { top: 65%; height: 15%; }
+        .zone-4 { top: 85%; height: 15%; border-bottom: none; }
+
+        .zone-icon {
+            font-size: 3.5rem;
+            margin-right: 25px;
+            filter: drop-shadow(0 0 15px currentColor);
+            animation: zonePulse 4s infinite;
+        }
+
+        @keyframes zonePulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        .zone-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--aqua-cyan);
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .zone-description {
+            width: 60%;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: var(--moonlight-silver);
+            padding: 1.5rem;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(15, 245, 227, 0.2);
+            transition: var(--transition-magical);
+        }
+
+        .zone-description:hover {
+            background: rgba(15, 245, 227, 0.1);
+            transform: translateX(15px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 🎨 ARTISTIC MANUSCRIPT SECTIONS */
+        .artistic-manuscript {
+            background: rgba(10, 26, 42, 0.7);
+            backdrop-filter: blur(25px);
+            border-radius: 35px;
+            padding: 5rem;
+            margin: 7rem 0;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-float);
+            transform-style: preserve-3d;
+        }
+
+        .manuscript-glow {
+            position: absolute;
+            inset: -3px;
+            background: var(--gradient-sunset);
+            border-radius: 38px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            filter: blur(25px);
+        }
+
+        .artistic-manuscript:hover {
+            border-color: var(--aqua-cyan);
+            transform: translateY(-20px) rotateX(2deg) rotateY(1deg);
+            box-shadow: 
+                0 40px 80px rgba(0, 0, 0, 0.5),
+                0 0 200px rgba(15, 245, 227, 0.15),
+                inset 0 0 80px rgba(15, 245, 227, 0.05);
+        }
+
+        .artistic-manuscript:hover .manuscript-glow {
+            opacity: 0.4;
+        }
+
+        .manuscript-header {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--sunrise-gold);
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .manuscript-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+            height: 4px;
+            background: var(--gradient-biolum);
+            border-radius: 4px;
+            transition: width 1s ease;
+            box-shadow: 0 0 20px rgba(15, 245, 227, 0.5);
+        }
+
+        .artistic-manuscript:hover .manuscript-header::after {
+            width: 300px;
+        }
+
+        .header-emoji {
+            font-size: 4rem;
+            animation: headerFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes headerFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* 🌈 ARTISTIC CONTENT BLOCKS */
+        .artistic-content {
+            font-size: 1.4rem;
+            line-height: 2;
+            color: var(--moonlight-silver);
+            padding: 3rem;
+            background: rgba(26, 59, 90, 0.4);
+            border-radius: 25px;
+            position: relative;
+            z-index: 2;
+            transition: var(--transition-magical);
+            border: 1px solid rgba(15, 245, 227, 0.1);
+        }
+
+        .artistic-content:hover {
+            background: rgba(26, 59, 90, 0.6);
+            transform: translateY(-10px);
+            border-color: rgba(15, 245, 227, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                inset 0 0 50px rgba(15, 245, 227, 0.05);
+        }
+
+        .philosophical-insight {
+            background: linear-gradient(145deg, 
+                transparent 0%, 
+                rgba(15, 245, 227, 0.15) 30%, 
+                transparent 100%);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 0 25px 25px 0;
+            border-left: 5px solid var(--coral-glow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-magical);
+        }
+
+        .philosophical-insight:hover {
+            border-left-color: var(--phosphorus-teal);
+            transform: translateX(20px);
+            box-shadow: 
+                0 15px 50px rgba(255, 77, 141, 0.1),
+                inset 0 0 100px rgba(15, 245, 227, 0.05);
+        }
+
+        .insight-title {
+            font-size: 1.8rem;
+            color: var(--coral-glow);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .insight-emoji {
+            font-size: 2.5rem;
+            animation: insightSparkle 2s infinite;
+        }
+
+        @keyframes insightSparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.3) rotate(15deg); }
+        }
+
+        /* 🌀 COSMIC FLOW DIAGRAM */
+        .cosmic-flow {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            margin: 8rem auto;
+            border-radius: 50px;
+            background: radial-gradient(circle at center, 
+                rgba(15, 245, 227, 0.1) 0%, 
+                transparent 70%);
+            border: 3px solid rgba(15, 245, 227, 0.2);
+            overflow: hidden;
+        }
+
+        .flow-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: var(--gradient-biolum);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 
+                0 0 80px rgba(15, 245, 227, 0.6),
+                0 0 160px rgba(0, 255, 200, 0.3);
+            animation: flowPulse 5s infinite;
+            z-index: 10;
+        }
+
+        @keyframes flowPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        .flow-node {
+            position: absolute;
+            width: 220px;
+            padding: 2rem;
+            background: rgba(10, 26, 42, 0.9);
+            border-radius: 25px;
+            border: 2px solid rgba(15, 245, 227, 0.3);
+            transition: var(--transition-magical);
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .flow-node:hover {
+            background: rgba(10, 26, 42, 0.95);
+            border-color: var(--phosphorus-teal);
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 100px rgba(15, 245, 227, 0.2);
+            z-index: 20;
+        }
+
+        .node-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+            text-align: center;
+            animation: nodeFloat 2s infinite alternate;
+        }
+
+        @keyframes nodeFloat {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-15px) scale(1.1); }
+        }
+
+        .node-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--aqua-cyan);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* 🌊 WAVE JOURNEY TIMELINE */
+        .wave-timeline {
+            position: relative;
+            margin: 8rem 0;
+            padding-left: 120px;
+        }
+
+        .timeline-ocean {
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(to bottom, 
+                var(--coral-glow), 
+                var(--sunrise-gold), 
+                var(--phosphorus-teal), 
+                var(--aqua-cyan),
+                var(--biolum-blue));
+            border-radius: 3px;
+            box-shadow: 
+                0 0 30px rgba(15, 245, 227, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-wave {
+            margin-bottom: 5rem;
+            padding: 3.5rem;
+            background: rgba(26, 59, 90, 0.7);
+            border-radius: 30px;
+            border: 2px solid transparent;
+            position: relative;
+            transition: var(--transition-float);
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-wave:hover {
+            transform: translateX(40px) scale(1.03);
+            border-color: var(--phosphorus-teal);
+            background: rgba(26, 59, 90, 0.9);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.5),
+                0 0 120px rgba(15, 245, 227, 0.15);
+        }
+
+        .wave-marker {
+            position: absolute;
+            left: -90px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-sunset);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--midnight-navy);
+            box-shadow: 
+                0 0 40px rgba(255, 77, 141, 0.6),
+                0 0 80px rgba(255, 204, 0, 0.3);
+            transition: var(--transition-magical);
+            z-index: 5;
+        }
+
+        .timeline-wave:hover .wave-marker {
+            transform: translateY(-50%) scale(1.4) rotate(20deg);
+            box-shadow: 
+                0 0 60px rgba(15, 245, 227, 0.8),
+                0 0 120px rgba(0, 255, 200, 0.4);
+        }
+
+        .wave-emoji {
+            font-size: 3rem;
+            margin-right: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            animation: waveBounce 1.5s infinite alternate;
+        }
+
+        @keyframes waveBounce {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* ✨ ABSOLUTE REALIZATION PORTAL */
+        .realization-portal {
+            text-align: center;
+            padding: 6rem;
+            margin: 10rem 0;
+            border-radius: 50px;
+            background: radial-gradient(circle at center, 
+                rgba(15, 245, 227, 0.15) 0%, 
+                transparent 70%);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-float);
+        }
+
+        .portal-glow {
+            position: absolute;
+            inset: -3px;
+            background: var(--gradient-sunset);
+            border-radius: 53px;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            filter: blur(30px);
+            z-index: -1;
+        }
+
+        .realization-portal:hover {
+            transform: translateY(-25px);
+            border-color: var(--phosphorus-teal);
+        }
+
+        .realization-portal:hover .portal-glow {
+            opacity: 0.5;
+        }
+
+        .portal-title {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            margin-bottom: 3rem;
+            background: var(--gradient-sunset);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .portal-emojis {
+            font-size: 5rem;
+            animation: portalOrbit 8s linear infinite;
+        }
+
+        @keyframes portalOrbit {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.3); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .cosmic-mantra {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--sunrise-gold);
+            margin: 4rem 0;
+            padding: 3rem;
+            border-radius: 30px;
+            background: rgba(255, 204, 0, 0.08);
+            border: 2px solid rgba(255, 204, 0, 0.3);
+            transition: var(--transition-magical);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Philosopher', serif;
+        }
+
+        .cosmic-mantra:hover {
+            background: rgba(255, 204, 0, 0.15);
+            transform: scale(1.08);
+            box-shadow: 
+                0 30px 100px rgba(255, 204, 0, 0.3),
+                inset 0 0 150px rgba(255, 204, 0, 0.1);
+            border-color: rgba(255, 204, 0, 0.6);
+        }
+
+        .mantra-glow {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: left 1s ease;
+        }
+
+        .cosmic-mantra:hover .mantra-glow {
+            left: 100%;
+        }
+
+        /* 🌊 OCEANIC FOOTER */
+        .oceanic-footer {
+            text-align: center;
+            padding: 8rem 2rem 5rem;
+            margin-top: 12rem;
+            border-top: 2px solid rgba(15, 245, 227, 0.3);
+            color: var(--moonlight-silver);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-ocean {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(transparent, rgba(2, 5, 16, 0.98));
+            z-index: -1;
+        }
+
+        .wisdom-ocean {
+            font-size: 2.5rem;
+            line-height: 1.6;
+            margin: 4rem auto;
+            color: var(--aqua-cyan);
+            max-width: 1000px;
+            padding: 4rem;
+            border-radius: 40px;
+            background: rgba(15, 245, 227, 0.08);
+            border: 2px solid rgba(15, 245, 227, 0.2);
+            position: relative;
+            transition: var(--transition-magical);
+            font-style: italic;
+            font-family: 'Philosopher', serif;
+        }
+
+        .wisdom-ocean:hover {
+            background: rgba(15, 245, 227, 0.15);
+            transform: translateY(-15px);
+            box-shadow: 
+                0 30px 100px rgba(15, 245, 227, 0.2),
+                inset 0 0 100px rgba(15, 245, 227, 0.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .absolute-title { font-size: 5rem; }
+            .manuscript-header { font-size: 2.8rem; }
+            .depth-simulator { height: 800px; }
+        }
+
+        @media (max-width: 768px) {
+            .absolute-title { font-size: 3.5rem; }
+            .oceanic-subtitle { font-size: 1.5rem; letter-spacing: 4px; }
+            .manuscript-header { font-size: 2.2rem; flex-direction: column; gap: 15px; }
+            .depth-simulator { height: 1000px; }
+            .depth-zone { flex-direction: column; align-items: flex-start; }
+            .zone-description { width: 100%; margin-top: 1rem; }
+            .wave-timeline { padding-left: 80px; }
+            .timeline-ocean { left: 40px; }
+            .wave-marker { left: -60px; width: 50px; height: 50px; font-size: 1.5rem; }
+        }
+
+        /* ================= CORRECTIONS & SMOOTHNESS LAYER ================= */
+        :root {
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --transition-magical: transform .5s var(--ease), background-color .4s ease, border-color .4s ease, box-shadow .4s ease;
+            --transition-float: transform .6s var(--ease), background-color .4s ease, border-color .4s ease, box-shadow .4s ease;
+        }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { min-height: 100vh; min-height: 100dvh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 clamp(14px, 4vw, 40px); position: relative; z-index: 1; }
+
+        /* background: no edge gaps from parallax, cheaper effects */
+        .ocean-background { inset: -24px; width: auto; height: auto; transform: translate3d(var(--px, 0px), var(--py, 0px), 0); will-change: transform; }
+        .biolum-sparkles { position: absolute; inset: 0; }
+        .particles { inset: 0; }
+        .particle, .marine-life { top: 0; animation-fill-mode: both; will-change: transform; }
+        .marine-life { filter: none; }
+        .sparkle { filter: none; box-shadow: 0 0 6px 1px currentColor; color: var(--aqua-cyan); animation-fill-mode: both; }
+        .water-surface { filter: none; }
+        .caustics { filter: none; background-size: 50% 100%; background-repeat: repeat-x; will-change: transform; }
+        @keyframes causticsMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .cosmic-vortex { filter: none; opacity: .14; -webkit-mask-image: radial-gradient(circle, #000 25%, transparent 68%); mask-image: radial-gradient(circle, #000 25%, transparent 68%); will-change: transform; }
+        @keyframes marineSwim {
+            0% { transform: translate3d(0, 100vh, 0) scale(.8); opacity: 0; }
+            10% { opacity: .7; }
+            50% { transform: translate3d(25px, 50vh, 0) scale(1); }
+            90% { opacity: .4; }
+            100% { transform: translate3d(-25px, -120px, 0) scale(.8); opacity: 0; }
+        }
+        @keyframes particleFloat {
+            0% { transform: translate3d(0, -100px, 0); opacity: 0; }
+            10% { opacity: .6; }
+            90% { opacity: .3; }
+            100% { transform: translate3d(calc(var(--sway) * 100px), 100vh, 0); opacity: 0; }
+        }
+        @keyframes emojiDance {
+            0%, 100% { transform: translateY(0) rotate(0) scale(1); }
+            25% { transform: translateY(-24px) rotate(8deg) scale(1.2); }
+            50% { transform: translateY(8px) rotate(-5deg) scale(.95); }
+            75% { transform: translateY(-12px) rotate(4deg) scale(1.08); }
+        }
+        .immersion-flash { position: fixed; inset: 0; z-index: 900; pointer-events: none; opacity: 0; background: radial-gradient(circle at center, rgba(15,245,227,.35), rgba(0,168,255,.12) 60%, transparent 80%); }
+        .immersion-flash.on { animation: immersion 1.8s ease; }
+        @keyframes immersion { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+
+        /* title: gradient only on the text, emojis stay visible */
+        .absolute-title { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .25rem 1rem; font-size: clamp(2.6rem, 9vw, 7rem); line-height: 1.15; background: none; color: inherit; text-shadow: none; animation-name: absoluteReveal; }
+        .title-text { background: linear-gradient(45deg, var(--starlight-white) 0%, var(--aqua-cyan) 25%, var(--phosphorus-teal) 50%, var(--sunrise-gold) 75%, var(--coral-glow) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; padding: 0 .05em; }
+        .title-emojis { font-size: .7em; margin: 0; }
+        @keyframes absoluteReveal {
+            0% { opacity: 0; transform: translateY(80px) scale(.6); filter: blur(24px) drop-shadow(0 0 0 rgba(15,245,227,0)); letter-spacing: .3em; }
+            60% { opacity: .8; filter: blur(8px) drop-shadow(0 0 20px rgba(15,245,227,.3)); letter-spacing: .08em; }
+            100% { opacity: 1; transform: none; filter: blur(0) drop-shadow(0 0 30px rgba(15,245,227,.45)); letter-spacing: .02em; }
+        }
+        .oceanic-subtitle { font-size: clamp(1.1rem, 3.2vw, 2.2rem); letter-spacing: clamp(2px, .8vw, 8px); margin: 2rem 0 3rem; }
+        .vortex-container { min-height: 100vh; min-height: 100dvh; }
+
+        /* depth simulator: auto-height, nothing overlaps or overflows */
+        .depth-simulator { height: auto; display: flex; flex-direction: column; margin: 2rem auto 1rem; padding: .5rem 0; }
+        .depth-zone, .zone-0, .zone-1, .zone-2, .zone-3, .zone-4 { position: relative; top: auto; height: auto; flex-wrap: wrap; gap: 1rem 1.5rem; padding: 1.6rem clamp(1rem, 3vw, 2.5rem); backdrop-filter: none; overflow: hidden; outline-offset: -3px; }
+        .depth-zone:hover, .depth-zone:focus-visible { transform: scale(1.01); z-index: 2; background: rgba(15,245,227,.1); }
+        .zone-icon { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-right: 0; animation-name: zonePulse; }
+        .zone-title { font-size: clamp(1.1rem, 2.4vw, 2rem); min-width: 240px; gap: 14px; }
+        .zone-description { width: auto; flex: 1 1 340px; font-size: clamp(1rem, 1.8vw, 1.3rem); padding: 1.2rem; }
+        .zone-description:hover { transform: translateX(6px); }
+        .zone-ripple { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 50%; background: radial-gradient(circle, rgba(15,245,227,.45), transparent 70%); pointer-events: none; transform: scale(0); animation: zoneRipple 1s ease-out forwards; }
+        @keyframes zoneRipple { to { transform: scale(30); opacity: 0; } }
+        .sim-caption { text-align: center; font-style: italic; opacity: .85; margin-bottom: 4rem; }
+
+        /* content: paragraph spacing, calmer hovers, larger-text safety */
+        .artistic-content p + p { margin-top: 1rem; }
+        .artistic-manuscript { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transform-style: flat; isolation: isolate; margin: 5rem 0; padding: clamp(1.2rem, 4vw, 5rem); }
+        .manuscript-header { font-size: clamp(1.6rem, 4vw, 3.5rem); flex-wrap: wrap; gap: 14px 24px; }
+        .header-emoji { font-size: clamp(2rem, 4vw, 4rem); }
+        .artistic-content { font-size: clamp(1.02rem, 1.7vw, 1.4rem); padding: clamp(1rem, 3vw, 3rem); }
+        .philosophical-insight { padding: clamp(1.2rem, 3vw, 2.5rem); }
+        .insight-title { font-size: clamp(1.2rem, 2.2vw, 1.8rem); gap: 14px; }
+        .timeline-wave h3 { font-family: 'Cinzel', serif; color: var(--sunrise-gold); font-size: clamp(1.15rem, 2.4vw, 1.7rem); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 12px; }
+        .wave-emoji { font-size: 2.2rem; margin-right: 0; }
+        .wave-timeline { --dot: 80px; --gutter: 120px; padding-left: var(--gutter); margin: 4rem 0; }
+        .timeline-ocean { left: calc(var(--gutter) - var(--dot) / 2 - 13px); }
+        .wave-marker { left: calc(var(--dot) * -1 - 10px); width: var(--dot); height: var(--dot); }
+        .timeline-wave { padding: clamp(1rem, 3vw, 3.5rem); margin-bottom: 3rem; backdrop-filter: blur(6px); }
+        .realization-portal { margin: 6rem 0; padding: clamp(1.5rem, 5vw, 6rem); isolation: isolate; }
+        .portal-title { font-size: clamp(1.8rem, 5.5vw, 5rem); flex-wrap: wrap; gap: 12px 30px; background: none; color: inherit; }
+        .portal-text { background: var(--gradient-sunset); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+        .portal-emojis { font-size: .8em; }
+        .portal-lead { font-size: clamp(1.2rem, 2.6vw, 1.8rem); margin-bottom: 2rem; }
+        .portal-close { font-size: clamp(1.1rem, 2.2vw, 1.6rem); margin-top: 3rem; color: var(--phosphorus-teal); }
+        .cosmic-mantra { font-weight: 700; font-size: clamp(1.4rem, 4vw, 3rem); padding: clamp(1.2rem, 3vw, 3rem); margin: 3rem 0; }
+        .cosmic-mantra:focus-visible, .flow-node:focus-visible, .depth-zone:focus-visible { outline: 2px solid var(--phosphorus-teal); }
+        .wisdom-ocean { font-size: clamp(1.1rem, 2.6vw, 2.5rem); padding: clamp(1.2rem, 4vw, 4rem); }
+        .oceanic-footer { margin-top: 6rem; padding: 5rem 1rem 3rem; }
+
+        /* flow diagram: grid, no overlaps, numbered, responsive */
+        .cosmic-flow { height: auto; margin: 5rem auto; padding: 2rem; display: grid; grid-template-columns: 1fr 170px 1fr; gap: 1.5rem; align-items: center; counter-reset: step; }
+        .flow-center { position: relative; top: auto; left: auto; transform: none; grid-column: 2; grid-row: 1 / 4; justify-self: center; align-self: center; }
+        .flow-center::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--aqua-cyan); opacity: 0; pointer-events: none; }
+        .flow-center.pulse::after { animation: centerRing .9s ease-out; }
+        @keyframes centerRing { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: scale(2.2); } }
+        @keyframes flowPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        .flow-node { position: relative; width: auto; padding: 1.6rem 1.2rem 1.2rem; text-align: center; backdrop-filter: blur(6px); }
+        .flow-node::before { counter-increment: step; content: counter(step); position: absolute; top: 10px; left: 14px; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; font-size: .9rem; font-weight: 700; color: var(--midnight-navy); background: var(--gradient-sunset); }
+        .flow-node p { font-size: 1rem; line-height: 1.5; }
+        .flow-node:hover, .flow-node:focus-visible { transform: scale(1.05); }
+        .n1 { grid-column: 1; grid-row: 1; } .n2 { grid-column: 1; grid-row: 2; } .n3 { grid-column: 1; grid-row: 3; }
+        .n4 { grid-column: 3; grid-row: 1; } .n5 { grid-column: 3; grid-row: 2; } .n6 { grid-column: 3; grid-row: 3; }
+        .flow-line { position: absolute; height: 3px; border-radius: 3px; background: var(--gradient-biolum); transform-origin: 0 50%; pointer-events: none; z-index: 5; transform: rotate(var(--a)) scaleX(0); animation: flowLine 1s ease-out forwards; }
+        @keyframes flowLine { 0% { transform: rotate(var(--a)) scaleX(0); opacity: 1; } 60% { transform: rotate(var(--a)) scaleX(1); opacity: 1; } 100% { transform: rotate(var(--a)) scaleX(1); opacity: 0; } }
+
+        /* scroll reveal (only when JS is running) */
+        .js .artistic-manuscript, .js .timeline-wave, .js .flow-node, .js .realization-portal { opacity: 0; transform: translateY(40px); transition: opacity .9s ease, transform .9s var(--ease), background-color .4s ease, border-color .4s ease, box-shadow .4s ease; }
+        .js .element-visible { opacity: 1; transform: none; }
+
+        /* calmer hover motion; none on touch screens */
+        .artistic-manuscript:hover { transform: translateY(-6px); }
+        .artistic-content:hover { transform: translateY(-4px); }
+        .philosophical-insight:hover { transform: translateX(8px); }
+        .timeline-wave:hover { transform: translateX(10px); }
+        .realization-portal:hover { transform: translateY(-8px); }
+        .cosmic-mantra:hover { transform: scale(1.03); }
+        .wisdom-ocean:hover { transform: translateY(-6px); }
+        @media (hover: none) {
+            .artistic-manuscript:hover, .artistic-content:hover, .philosophical-insight:hover, .timeline-wave:hover, .realization-portal:hover,
+            .cosmic-mantra:hover, .wisdom-ocean:hover, .flow-node:hover, .depth-zone:hover, .zone-description:hover { transform: none; }
+        }
+
+        @media (max-width: 900px) {
+            .cosmic-flow { grid-template-columns: 1fr; padding: 1.2rem; }
+            .flow-center { grid-column: 1; grid-row: 1; margin-bottom: .5rem; }
+            .n1, .n2, .n3, .n4, .n5, .n6 { grid-column: 1; grid-row: auto; }
+        }
+        @media (max-width: 768px) {
+            .wave-timeline { --dot: 46px; --gutter: 66px; }
+            .wave-marker { font-size: 1.3rem; }
+            .depth-simulator { height: auto; border-radius: 28px; }
+            .depth-zone { flex-direction: row; align-items: center; }
+            .zone-description { width: auto; margin-top: 0; }
+            .absolute-title { letter-spacing: .02em; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+            .js .artistic-manuscript, .js .timeline-wave, .js .flow-node, .js .realization-portal { opacity: 1; transform: none; }
+            .particle, .marine-life, .sparkle { display: none; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="immersion-flash" aria-hidden="true"></div>
+    <!-- 🌌 Hyper-Realistic Ocean Background -->
+    <div class="ocean-background" aria-hidden="true">
+        <div class="light-rays"></div>
+        <div class="particles" id="particles-container"></div>
+        <div class="caustics"></div>
+        <div class="volume-fog"></div>
+        <div class="water-surface"></div>
+        <div class="depth-layer-1"></div>
+        <div class="depth-layer-2"></div>
+        <div class="currents"></div>
+        <div class="biolum-sparkles" id="biolum-container"></div>
+    </div>
+
+    <!-- 🌟 Floating Marine Life -->
+    <div id="marine-life-container" aria-hidden="true"></div>
+
+    <!-- 🌀 Absolute Title Vortex -->
+    <header class="vortex-container">
+        <div class="cosmic-vortex"></div>
+        
+        <h1 class="absolute-title">
+            <span class="title-emojis" aria-hidden="true">🫧</span><span class="title-text">Oceanic Journey</span><span class="title-emojis" aria-hidden="true">🫧</span>
+        </h1>
+        
+        <div class="oceanic-subtitle">
+            <span class="subtitle-wave">THE OCEAN OF CONSCIOUSNESS</span>
+        </div>
+
+    </header>
+
+    <main class="container">
+        <!-- 🌊 Interactive Ocean Depth Simulator -->
+        <section class="depth-simulator" aria-label="Ocean depth and states of consciousness">
+            <div tabindex="0" class="depth-zone zone-0">
+                <span class="zone-icon">🌊</span>
+                <div class="zone-title">SURFACE WAVES • INDIVIDUAL SELF</div>
+                <div class="zone-description">
+                    Where waves appear separate, fighting for existence, unaware they're made of the same water. 
+                    <strong>Human Parallel:</strong> Ahaṅkāra, ego identification, the sense of separation.
+                </div>
+            </div>
+            
+            <div tabindex="0" class="depth-zone zone-1">
+                <span class="zone-icon">🌀</span>
+                <div class="zone-title">SUBSURFACE CURRENTS • SUBCONSCIOUS</div>
+                <div class="zone-description">
+                    Deeper patterns flow beneath surface waves—memories, conditioning, subtle tendencies.
+                    <strong>Human Parallel:</strong> Subconscious mind, saṁskāras, vāsanās, habitual patterns.
+                </div>
+            </div>
+            
+            <div tabindex="0" class="depth-zone zone-2">
+                <span class="zone-icon">💎</span>
+                <div class="zone-title">DEEP WATERS • THE WITNESS</div>
+                <div class="zone-description">
+                    Still, silent waters untouched by surface storms. Pure awareness witnessing all activity.
+                    <strong>Human Parallel:</strong> Sākṣī, the witness consciousness.
+                </div>
+            </div>
+            
+            <div tabindex="0" class="depth-zone zone-3">
+                <span class="zone-icon">🌌</span>
+                <div class="zone-title">OCEAN FLOOR • TURĪYA</div>
+                <div class="zone-description">
+                    The ever-present ground of waking, dream and deep sleep. Not a fourth state among states, but the Self underlying them.
+                    <strong>Human Parallel:</strong> Turīya, the "Fourth", pure Self.
+                </div>
+            </div>
+            
+            <div tabindex="0" class="depth-zone zone-4">
+                <span class="zone-icon">✨</span>
+                <div class="zone-title">THE ABYSS • BRAHMAN</div>
+                <div class="zone-description">
+                    Nameless, formless and without attributes. Turīya and Brahman are not two, so no deeper place remains to reach.
+                    <strong>Human Parallel:</strong> Nirguṇa Brahman, the Self beyond all description.
+                </div>
+            </div>
+        </section>
+        <p class="sim-caption">Depth is only a metaphor: there is one water throughout, and nowhere to travel to.</p>
+
+        <!-- 📜 Artistic Manuscript: The Complete Analogy -->
+        <section class="artistic-manuscript">
+            <div class="manuscript-glow"></div>
+            <h2 class="manuscript-header">
+                <span class="header-emoji">📜</span>
+                THE COMPLETE OCEANIC ANALOGY
+            </h2>
+            
+            <div class="artistic-content">
+                <p>The ocean-wave analogy is a classic map from apparent separation to non-duality, and its elements correspond closely to states of consciousness. Like every analogy it has limits: water is inert, whereas Brahman is itself conscious.</p>
+                
+                <div class="philosophical-insight">
+                    <div class="insight-title">
+                        <span class="insight-emoji">🌊</span> THE WAVE'S ILLUSION
+                    </div>
+                    <p><strong>Wave's Belief:</strong> "I am this temporary form, born from wind, living briefly, dying on shore. I'm separate from other waves, competing for space."</p>
+                    <p><strong>Human Parallel:</strong> "I am this body-mind, born from parents, living briefly, dying eventually. I'm separate from others, competing for resources."</p>
+                    <p><strong>The Truth:</strong> Both are temporary patterns of eternal substance.</p>
+                </div>
+                
+                <div class="philosophical-insight">
+                    <div class="insight-title">
+                        <span class="insight-emoji">💧</span> THE WATER DISCOVERY
+                    </div>
+                    <p><strong>Wave's Realization:</strong> "When I look past my form, I find I'm 100% water! My wave-ness is temporary, but my water-ness is eternal and identical to all water."</p>
+                    <p><strong>Human Realization:</strong> "When I look past my personality, I find I'm 100% consciousness! My person-ness is temporary, but my awareness is eternal and identical to all awareness."</p>
+                    <p><strong>The Mahāvākya:</strong> "Ahaṃ Brahmāsmi" (Bṛhadāraṇyaka Upaniṣad) - I am Brahman.</p>
+                </div>
+                
+                <div class="philosophical-insight">
+                    <div class="insight-title">
+                        <span class="insight-emoji">🌌</span> THE OCEANIC UNDERSTANDING
+                    </div>
+                    <p><strong>Complete Understanding:</strong> "Not only am I water, but there's only one ocean! All apparent waves are just temporary patterns on one continuous ocean."</p>
+                    <p><strong>Non-Dual Realization:</strong> "Not only am I consciousness, but there's only one consciousness! All apparent beings are just temporary expressions of one universal awareness."</p>
+                    <p><strong>The Ultimate:</strong> "Tat Tvam Asi" (Chāndogya Upaniṣad) - Thou art That.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌀 Cosmic Flow Diagram -->
+        <section class="cosmic-flow" aria-label="Six stages from separation to realization">
+            <div class="flow-center">🕉️</div>
+            
+            <div class="flow-node n1" tabindex="0">
+                <span class="node-emoji">🌊</span>
+                <div class="node-title">Separation</div>
+                <p>Wave sees itself as separate entity</p>
+            </div>
+            
+            <div class="flow-node n4" tabindex="0">
+                <span class="node-emoji">🤔</span>
+                <div class="node-title">Inquiry</div>
+                <p>"Who am I really?"</p>
+            </div>
+            
+            <div class="flow-node n2" tabindex="0">
+                <span class="node-emoji">🔍</span>
+                <div class="node-title">Examination</div>
+                <p>Looking beyond form to substance</p>
+            </div>
+            
+            <div class="flow-node n5" tabindex="0">
+                <span class="node-emoji">💡</span>
+                <div class="node-title">Recognition</div>
+                <p>"I am water/consciousness!"</p>
+            </div>
+            
+            <div class="flow-node n3" tabindex="0">
+                <span class="node-emoji">🌌</span>
+                <div class="node-title">Expansion</div>
+                <p>"All is water/consciousness"</p>
+            </div>
+            
+            <div class="flow-node n6" tabindex="0">
+                <span class="node-emoji">✨</span>
+                <div class="node-title">Realization</div>
+                <p>"I am the Ocean/Brahman"</p>
+            </div>
+        </section>
+
+        <!-- 🌊 The Wave's Complete Journey -->
+        <section class="artistic-manuscript">
+            <div class="manuscript-glow"></div>
+            <h2 class="manuscript-header">
+                <span class="header-emoji">🌊</span>
+                THE WAVE'S COMPLETE JOURNEY HOME
+            </h2>
+            
+            <div class="wave-timeline">
+                <div class="timeline-ocean"></div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">1</div>
+                    <h3><span class="wave-emoji">👶</span> BIRTH OF SEPARATION</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> Wind creates wave pattern on ocean surface. Wave believes it's a separate entity with its own life story.</p>
+                        <p><strong>Human:</strong> Avidyā (ignorance) and karma give rise to a body-mind pattern appearing in consciousness. Human believes they're a separate self with personal history.</p>
+                        <p><strong>The Mistake:</strong> Identifying with the pattern instead of the substance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">2</div>
+                    <h3><span class="wave-emoji">🌪️</span> STORMS OF SUFFERING</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> Wave experiences storms, conflicts with other waves, fear of crashing, clinging to existence.</p>
+                        <p><strong>Human:</strong> We experience emotional turmoil, conflicts with others, fear of death, clinging to life.</p>
+                        <p><strong>The Cause:</strong> Avidyā, taking separateness to be real, underlies all suffering.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">3</div>
+                    <h3><span class="wave-emoji">🧘</span> THE GREAT CALMING</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> Wind ceases, wave settles. In stillness, it begins to see its true nature beyond the form.</p>
+                        <p><strong>Human:</strong> Meditation stills the mind. In silence, we glimpse awareness beyond thoughts.</p>
+                        <p><strong>The Method:</strong> Stillness prepares the mind; knowledge of one's nature removes ignorance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">4</div>
+                    <h3><span class="wave-emoji">🔬</span> DEEP INVESTIGATION</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> Wave examines itself: "Am I the foam? No. The shape? No. The movement? No. Then what remains?"</p>
+                        <p><strong>Human:</strong> Self-inquiry: "Am I the body? No. Thoughts? No. Emotions? No. Then who am I?"</p>
+                        <p><strong>The Process:</strong> Neti neti - Not this, not this.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">5</div>
+                    <h3><span class="wave-emoji">💎</span> DIRECT REALIZATION</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> "Aha! I'm not a wave containing water—I'm water appearing as wave! My essence is eternal ocean!"</p>
+                        <p><strong>Human:</strong> "Aha! I'm not a body having consciousness—I'm consciousness appearing as body! My essence is eternal Brahman!"</p>
+                        <p><strong>The Recognition:</strong> Essence recognized behind appearance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-wave">
+                    <div class="wave-marker">6</div>
+                    <h3><span class="wave-emoji">🕊️</span> LIVING LIBERATION</h3>
+                    <div class="artistic-content">
+                        <p><strong>Ocean:</strong> Wave continues waving but without fear or identification. It enjoys being wave while knowing it's ocean.</p>
+                        <p><strong>Human:</strong> Sage continues living but without suffering or ego. They enjoy life while knowing they're consciousness.</p>
+                        <p><strong>The State:</strong> Jīvanmukti - liberation while living.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ✨ Absolute Realization Portal -->
+        <div class="realization-portal">
+            <div class="portal-glow"></div>
+            <h2 class="portal-title">
+                <span class="portal-emojis" aria-hidden="true">🌌</span>
+                <span class="portal-text">ABSOLUTE REALIZATION</span>
+                <span class="portal-emojis" aria-hidden="true">🌀</span>
+            </h2>
+            
+            <div class="artistic-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <p class="portal-lead">
+                    The journey isn't from here to there.<br>
+                    It's from <strong>"I am wave"</strong> to <strong>"I am Ocean"</strong>.<br>
+                    From <strong>"I am separate"</strong> to <strong>"I am All"</strong>.
+                </p>
+                
+                <div class="philosophical-insight" style="text-align: left; margin: 3rem auto;">
+                    <div class="insight-title">
+                        <span class="insight-emoji">🎭</span> THE DIVINE PLAY (LĪLĀ)
+                    </div>
+                    <p>The ocean doesn't need waves but enjoys manifesting as them. Brahman doesn't need the universe but joyfully appears as it.</p>
+                    <p>Your life is not a problem to solve but a play to enjoy—once you know you're the Player, not just the character.</p>
+                </div>
+                
+                <div class="cosmic-mantra" role="button" tabindex="0" aria-label="Aham Brahmasmi: activate for a celebration">
+                    <div class="mantra-glow"></div>
+                    "AHAṂ BRAHMĀSMI"<br>
+                    I AM BRAHMAN 🌊
+                </div>
+                
+                <p class="portal-close">
+                    The wave doesn't become ocean.<br>
+                    It realizes it never wasn't ocean.<br>
+                    You don't become enlightened.<br>
+                    You realize you were never unenlightened.
+                </p>
+            </div>
+        </div>
+
+        <!-- 🌊 Oceanic Wisdom Footer -->
+        <footer class="oceanic-footer">
+            <div class="footer-ocean"></div>
+            
+            <div class="wisdom-ocean">
+                "The ocean was never improved by creating waves,<br>
+                nor diminished by their dissolution.<br>
+                Brahman is never improved by creation,<br>
+                nor diminished by dissolution.<br>
+                You are that Brahman—<br>
+                whole, complete, perfect, now and always."
+            </div>
+            
+            <p style="font-size: 1.5rem; margin: 3rem 0; color: var(--aqua-cyan);">
+                🌊 DIVE DEEP, DEAR SEEKER • THE SURFACE IS JUST THE BEGINNING 🫧
+            </p>
+            
+            <p style="font-size: 1rem; letter-spacing: 4px; color: var(--moonlight-silver); opacity: 0.8;">
+                THE FORM IS TEMPORARY • THE ESSENCE IS ETERNAL • ALL IS ONE • YOU ARE THAT
+            </p>
+            
+            
+        </footer>
+    </main>
+
+    <script>
+        (function () {
+            'use strict';
+            const $ = (sel, root = document) => root.querySelector(sel);
+            const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+            const rand = (min, max) => Math.random() * (max - min) + min;
+            const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const small = window.matchMedia('(max-width: 768px)').matches;
+
+            // Build background effects in one DOM write each (counts scaled to the device)
+            function fill(id, count, make) {
+                const container = document.getElementById(id);
+                if (!container) return;
+                const frag = document.createDocumentFragment();
+                for (let i = 0; i < count; i++) frag.appendChild(make());
+                container.appendChild(frag);
+            }
+
+            function createParticles() {
+                const colors = ['rgba(255,255,255,.8)', 'rgba(200,230,255,.7)', 'rgba(150,200,255,.6)', 'rgba(100,180,255,.5)'];
+                fill('particles-container', small ? 30 : 70, () => {
+                    const p = document.createElement('div');
+                    const size = rand(1, 4);
+                    p.className = 'particle';
+                    p.style.cssText = `width:${size}px;height:${size}px;left:${rand(0, 100)}%;background:${pick(colors)};` +
+                        `animation-delay:-${rand(0, 20)}s;animation-duration:${rand(14, 28)}s;--sway:${rand(-1, 1)}`;
+                    return p;
+                });
+            }
+
+            function createBiolumSparkles() {
+                const colors = ['#0ff5e3', '#00ffc8', '#00a8ff', '#5cffd9'];
+                fill('biolum-container', small ? 12 : 28, () => {
+                    const sp = document.createElement('div');
+                    sp.className = 'sparkle';
+                    sp.style.cssText = `left:${rand(0, 100)}%;top:${rand(0, 100)}%;color:${pick(colors)};background:currentColor;` +
+                        `animation-delay:-${rand(0, 4)}s;animation-duration:${rand(2.5, 5.5)}s`;
+                    return sp;
+                });
+            }
+
+            function createMarineLife() {
+                const emojis = ['🐠', '🐡', '🐙', '🦑', '🦐', '🦀', '🐬', '🐋', '🦈'];
+                const colors = ['rgba(255,255,255,.9)', 'rgba(100,200,255,.8)', 'rgba(50,150,200,.7)', 'rgba(200,255,255,.8)'];
+                fill('marine-life-container', small ? 4 : 8, () => {
+                    const m = document.createElement('div');
+                    m.className = 'marine-life';
+                    m.textContent = pick(emojis);
+                    m.style.cssText = `left:${rand(2, 94)}%;font-size:${rand(1.5, 3)}rem;color:${pick(colors)};` +
+                        `animation-delay:-${rand(0, 20)}s;animation-duration:${rand(20, 34)}s`;
+                    return m;
+                });
+            }
+
+            // Depth zones: ripple from the pointer / tap position, clipped inside the zone
+            function setupDepthInteractions() {
+                $$('.depth-zone').forEach(zone => {
+                    const ripple = e => {
+                        const r = zone.getBoundingClientRect();
+                        const x = e.clientX !== undefined && e.clientX ? e.clientX - r.left : r.width / 2;
+                        const y = e.clientY !== undefined && e.clientY ? e.clientY - r.top : r.height / 2;
+                        const el = document.createElement('span');
+                        el.className = 'zone-ripple';
+                        el.style.left = x + 'px';
+                        el.style.top = y + 'px';
+                        zone.appendChild(el);
+                        setTimeout(() => el.remove(), 1000);
+                    };
+                    zone.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') ripple(e); });
+                    zone.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') ripple(e); });
+                    zone.addEventListener('focus', () => ripple({}));
+                });
+            }
+
+            // Flow nodes: a line travels from the node to the centre (positioned inside the diagram)
+            function setupFlowInteractions() {
+                const flow = $('.cosmic-flow'), center = $('.flow-center');
+                if (!flow || !center) return;
+                const fire = node => {
+                    const cx = center.offsetLeft + center.offsetWidth / 2, cy = center.offsetTop + center.offsetHeight / 2;
+                    const nx = node.offsetLeft + node.offsetWidth / 2, ny = node.offsetTop + node.offsetHeight / 2;
+                    const dx = cx - nx, dy = cy - ny;
+                    const line = document.createElement('div');
+                    line.className = 'flow-line';
+                    line.style.cssText = `left:${nx}px;top:${ny}px;width:${Math.hypot(dx, dy)}px;--a:${Math.atan2(dy, dx)}rad`;
+                    flow.appendChild(line);
+                    setTimeout(() => line.remove(), 1000);
+                    center.classList.remove('pulse');
+                    void center.offsetWidth;
+                    center.classList.add('pulse');
+                };
+                $$('.flow-node').forEach(node => {
+                    node.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') fire(node); });
+                    node.addEventListener('click', () => fire(node));
+                    node.addEventListener('focus', () => fire(node));
+                });
+            }
+
+            // Mantra: each emoji gets its own flight path from the mantra itself
+            function setupMantraInteraction() {
+                const mantra = $('.cosmic-mantra');
+                if (!mantra) return;
+                let busy = false;
+                const burst = () => {
+                    if (busy) return;
+                    busy = true;
+                    setTimeout(() => { busy = false; }, 900);
+                    const r = mantra.getBoundingClientRect();
+                    const ox = r.left + r.width / 2, oy = r.top + r.height / 2;
+                    const emojis = ['🌊', '🫧', '💧', '🌀', '✨', '🌌', '💎', '🕉️', '☯️', '🌟'];
+                    const frag = document.createDocumentFragment();
+                    for (let i = 0; i < 18; i++) {
+                        const el = document.createElement('div');
+                        const angle = rand(0, Math.PI * 2), dist = rand(120, 360);
+                        el.textContent = pick(emojis);
+                        el.style.cssText = `position:fixed;left:${ox}px;top:${oy}px;font-size:2.4rem;z-index:1000;pointer-events:none;`;
+                        el.animate([
+                            { transform: 'translate(-50%,-50%) scale(0) rotate(0deg)', opacity: 0 },
+                            { transform: 'translate(-50%,-50%) scale(1.6) rotate(180deg)', opacity: 1, offset: .3 },
+                            { transform: `translate(calc(-50% + ${Math.cos(angle) * dist}px), calc(-50% + ${Math.sin(angle) * dist}px)) scale(1) rotate(360deg)`, opacity: 0 }
+                        ], { duration: 2000, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' }).onfinish = () => el.remove();
+                        frag.appendChild(el);
+                    }
+                    document.body.appendChild(frag);
+                    const ring = document.createElement('div');
+                    ring.style.cssText = `position:fixed;left:${ox}px;top:${oy}px;width:100vmax;height:100vmax;border-radius:50%;border:4px solid #0ff5e3;z-index:999;pointer-events:none;`;
+                    ring.animate([
+                        { transform: 'translate(-50%,-50%) scale(0)', opacity: .7 },
+                        { transform: 'translate(-50%,-50%) scale(1.6)', opacity: 0 }
+                    ], { duration: 1500, easing: 'ease-out', fill: 'forwards' }).onfinish = () => ring.remove();
+                    document.body.appendChild(ring);
+                };
+                mantra.addEventListener('click', burst);
+                mantra.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); burst(); }
+                });
+            }
+
+            // Scroll reveal via IntersectionObserver (no per-scroll layout reads)
+            function setupReveal() {
+                const items = $$('.artistic-manuscript, .timeline-wave, .flow-node, .realization-portal');
+                if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('element-visible')); return; }
+                const io = new IntersectionObserver(entries => {
+                    entries.forEach(en => {
+                        if (en.isIntersecting) { en.target.classList.add('element-visible'); io.unobserve(en.target); }
+                    });
+                }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+                items.forEach(el => io.observe(el));
+            }
+
+            // Space = ocean immersion pulse (never hijacks buttons/inputs; page still scrolls normally)
+            function setupImmersion() {
+                const flash = $('.immersion-flash');
+                if (!flash) return;
+                document.addEventListener('keydown', e => {
+                    if (e.key !== ' ' || e.repeat) return;
+                    if (e.target.closest('button, a, input, textarea, select, [role="button"], [tabindex]')) return;
+                    flash.classList.remove('on');
+                    void flash.offsetWidth;
+                    flash.classList.add('on');
+                });
+            }
+
+            // Parallax: throttled with requestAnimationFrame, fine pointers only
+            function setupParallax() {
+                if (reduceMotion || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+                const bg = $('.ocean-background');
+                let ticking = false, x = 0, y = 0;
+                document.addEventListener('mousemove', e => {
+                    x = (e.clientX / window.innerWidth - .5) * 16;
+                    y = (e.clientY / window.innerHeight - .5) * 16;
+                    if (!ticking) {
+                        ticking = true;
+                        requestAnimationFrame(() => {
+                            bg.style.setProperty('--px', x.toFixed(1) + 'px');
+                            bg.style.setProperty('--py', y.toFixed(1) + 'px');
+                            ticking = false;
+                        });
+                    }
+                }, { passive: true });
+            }
+
+            function init() {
+                setupReveal();
+                setupDepthInteractions();
+                setupFlowInteractions();
+                setupMantraInteraction();
+                setupImmersion();
+                setupParallax();
+                if (!reduceMotion) { createParticles(); createBiolumSparkles(); createMarineLife(); }
+            }
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+        })();
+    </script>
+</body>
+</html>
